@@ -41,7 +41,7 @@ Download CODESYS directly from the [CODESYS Store](https://store.codesys.com/eng
 
 If you are not yet registered, you have to create an account.
 
-### 2. install CODESYS 
+### 2. Install CODESYS 
 
 Follow the guided CODESYS installation.
 
@@ -52,7 +52,7 @@ Follow the guided CODESYS installation.
 Choose a download method from the Download table above to download the product HVAC Building & Process Automation.
 ![alt HVAC Building and process Automation download](https://www.hvac-automation.com/files/inhalte/hvac/Landingpage%20HVAC/HVAC%20Produkt.PNG)
 
-### 4. install HVAC Building & Process Automation SL 
+### 4. Install HVAC Building & Process Automation SL 
 
 As soon as the download is completed, you can start the guided installation.
 
@@ -105,6 +105,6 @@ All visualisation elements can be easily selected from an available pool of macr
 
 All functional components can be parameterised in a user-friendly manner with the assistance of the parameter window. Thus, all parameters in the program are persistent and will be retained after restarting a controller.
 
-## Support & Contect
+## Support & Contact
 
 If you have any questions, so please feel free to contact us via our [contact form.](https://www.hvac-automation.com/#contact)
