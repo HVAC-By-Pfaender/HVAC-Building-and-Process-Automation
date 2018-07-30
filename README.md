@@ -38,11 +38,13 @@ The HVAC Building & Process Automation product requires a license, which can be 
 
 Download CODESYS directly from the [CODESYS Store](https://store.codesys.com/engineering/codesys.html).
 ![alt Download CODESYS](https://www.hvac-automation.com/files/inhalte/hvac/Landingpage%20HVAC/CDS.PNG)
+
 If you are not yet registered, you have to create an account.
 
 ### 2. install CODESYS 
 
-Follow the guided CODESYS installation. 
+Follow the guided CODESYS installation.
+
 ![alt CODESYS installation](https://www.hvac-automation.com/files/inhalte/hvac/Landingpage%20HVAC/Installation%20CODESYS.PNG)
 
 ### 3. HVAC Building & Process Automation SL download
