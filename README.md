@@ -105,6 +105,6 @@ All visualisation elements can be easily selected from an available pool of macr
 
 All functional components can be parameterised in a user-friendly manner with the assistance of the parameter window. Thus, all parameters in the program are persistent and will be retained after restarting a controller.
 
-## Support
+## Support & Contect
 
 If you have any questions, so please feel free to contact us via our [contact form.](https://www.hvac-automation.com/#contact)
