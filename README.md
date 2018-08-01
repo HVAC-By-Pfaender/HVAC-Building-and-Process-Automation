@@ -1,6 +1,6 @@
 # HVAC Building & Process Automation SL
 
-We offer a complete and immediately ready to use software extension for the cost-free CODESYS development environment. And never having heard of CODESYS is not a reason for you to stop here. Our product contains function modules and macros which are specially developed for the sector and which can be used easily and with little learning effort.
+We offer a complete and immediately ready to use software extension for the cost-free CODESYS development environment. And never having heard of CODESYS is not a reason for you to stop here. Our product contains function modules and macros which are specially developed for the sector and which can be used efficiently and with little learning effort.
 
 The library product HVAC Building & Process Automation SL for CODESYS contains functional components and HTML5 system macros for the creation of, e.g. heating and ventilation systems, but also for room automation and other industrial system technology.
 
@@ -89,15 +89,15 @@ All manual overrides can be reset at a central overall control unit.
 
 ![alt vacation functionality](https://www.hvac-automation.com/files/inhalte/hvac/Landingpage%20HVAC/holidayfunction.gif)
 
-Finished system for vacation days / works holidays, as well as public holidays and special times can be specified. 
+Finished system for vacation days/works holidays, as well as public holidays and special times,  can be specified. 
 
-With this macro, the user can intuitively define "exception times" that have an influence on the control of their system. But even you, as a programmer, benefit from this macro, as you can use the settings in a recurring manner and simply via an interface in the program.
+With this macro, the user can intuitively define "exception times" that influence the control of their system. But even you, as a programmer, benefit from this macro, as you can use the settings in a recurring manner and simply via an interface in the program.
 
 ### Placing of elements via drag and drop
 
 ![alt placing elements](https://www.hvac-automation.com/files/inhalte/hvac/Landingpage%20HVAC/DragNDrop.gif)
 
-All visualisation elements can be easily selected from an available pool of macros and placed via drag and drop
+All visualisation elements can be easily selected from an available pool of macros and placed via drag and drop.
 
 ### User-friendly parameterisation of the functional components
 
