@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Clock &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Clock7d1Ch (FB)" href="clock7d1ch.html" />
+    <link rel="prev" title="ButtonToggle.mCentralOn (METH)" href="../CI1ME6j9uGUcYb7ZXQs1PVlnYWM/mcentralon.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Clock</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="clock7d1ch.html">Clock7d1Ch (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clock7d2ch.html">Clock7d2Ch (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="holiday.html">Holiday (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="publicholiday.html">PublicHoliday (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="switchtimes.html">SwitchTimeS (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timeread.html">TimeRead (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+      <li>Clock</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="clock">
+<span id="id1"></span><span id="fld-hvac-library-fld-hvac-functions-fld-clock"></span><h1>Clock<a class="headerlink" href="#clock" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="clock7d1ch.html">Clock7d1Ch (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="clock7d1ch.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d1ch.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d1ch.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d1ch.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#allgemeines">Allgemeines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#wochentage-1-7-montag-sonntag-xxx-mon-tue-wed-thu-fri-sat-sun">Wochentage 1 - 7 ( Montag ... Sonntag, XXX = Mon, Tue, Wed, Thu, Fri, Sat, Sun )</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#einschaltperiode">Einschaltperiode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#ausschaltperiode">Ausschaltperiode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#freigabeeingang-xen">Freigabeeingang <em>xEn</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#anzeigeausgang-xactive">Anzeigeausgang <em>xActive</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#einschaltzeitpunkt-der-schaltperiode-des-aktuellen-wochentags-todactivatedfrom">Einschaltzeitpunkt der Schaltperiode des aktuellen Wochentags <em>todActivatedFrom</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d1ch.html#ausschaltzeitpunkt-der-schaltperiode-des-aktuellen-wochentags-todactivatedto">Ausschaltzeitpunkt der Schaltperiode des aktuellen Wochentags <em>todActivatedTo</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d1ch.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d1ch.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d1ch.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="clock7d2ch.html">Clock7d2Ch (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="clock7d2ch.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d2ch.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d2ch.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d2ch.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#allgemeines">Allgemeines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#wochentage-1-7-montag-sonntag-xxx-mon-tue-wed-thu-fri-sat-sun">Wochentage 1 - 7 ( Montag ... Sonntag, XXX = Mon, Tue, Wed, Thu, Fri, Sat, Sun )</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#einschaltperioden">Einschaltperioden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#ausschaltperioden">Ausschaltperioden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#freigabeeingang-xen">Freigabeeingang <em>xEn</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#anzeigeausgang-xactive">Anzeigeausgang <em>xActive</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#einschaltzeitpunkt-der-schaltperioden-des-aktuellen-wochentags-todactivatedfrom">Einschaltzeitpunkt der Schaltperioden des aktuellen Wochentags <em>todActivatedFrom</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock7d2ch.html#ausschaltzeitpunkt-der-schaltperioden-des-aktuellen-wochentags-todactivatedto">Ausschaltzeitpunkt der Schaltperioden des aktuellen Wochentags <em>todActivatedTo</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d2ch.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d2ch.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clock7d2ch.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="holiday.html">Holiday (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="holiday.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="holiday.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="holiday.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="holiday.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="holiday.html#ausgange">Ausgänge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="holiday.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="holiday.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="holiday.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="holiday.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="holiday.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publicholiday.html">PublicHoliday (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="publicholiday.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publicholiday.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publicholiday.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="publicholiday.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="publicholiday.html#ausgange">Ausgänge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="publicholiday.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="publicholiday.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="publicholiday.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publicholiday.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publicholiday.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="switchtimes.html">SwitchTimeS (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="switchtimes.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="switchtimes.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="switchtimes.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="switchtimes.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="switchtimes.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="switchtimes.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="switchtimes.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="switchtimes.html#allgemeines">Allgemeines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="switchtimes.html#freigabeeingang-xen">Freigabeeingang <em>xEn</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="switchtimes.html#anzeigeausgang-xactive">Anzeigeausgang <em>xActive</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="switchtimes.html#einschaltzeitpunkt-der-letzten-aktiven-zeitperiode-des-aktuellen-tags-todactivatedfrom">Einschaltzeitpunkt der letzten aktiven Zeitperiode des aktuellen Tags <em>todActivatedFrom</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="switchtimes.html#ausschaltzeitpunkt-der-letzten-aktiven-zeitperiode-des-aktuellen-tags-todactivatedto">Ausschaltzeitpunkt der letzten aktiven Zeitperiode des aktuellen Tags <em>todActivatedTo</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="switchtimes.html#zeitperioden-1-5-x-1-5">Zeitperioden 1 - 5 ( X = 1 .. 5 )</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="switchtimes.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="switchtimes.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="switchtimes.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="timeread.html">TimeRead (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="timeread.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeread.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeread.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="timeread.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timeread.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timeread.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="timeread.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="timeread.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="timeread.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeread.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeread.html#codesys">Codesys</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="clock7d1ch.html" class="btn btn-neutral float-right" title="Clock7d1Ch (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../CI1ME6j9uGUcYb7ZXQs1PVlnYWM/mcentralon.html" class="btn btn-neutral" title="ButtonToggle.mCentralOn (METH)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'de',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

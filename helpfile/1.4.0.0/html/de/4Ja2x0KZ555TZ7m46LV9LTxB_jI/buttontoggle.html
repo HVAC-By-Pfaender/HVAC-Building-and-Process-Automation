@@ -1,0 +1,533 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ButtonToggle (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="ButtonToggle.mCentralOff (METH)" href="../CI1ME6j9uGUcYb7ZXQs1PVlnYWM/mcentraloff.html" />
+    <link rel="prev" title="Button4 (FB)" href="button4.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Button.html">Button</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="button4.html">Button4 (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ButtonToggle (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Button.html">Button</a> &raquo;</li>
+        
+      <li>ButtonToggle (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-button-buttontoggle"></span><div class="section" id="buttontoggle-fb">
+<span id="buttontoggle"></span><span id="index-0"></span><h1>ButtonToggle (FB)<a class="headerlink" href="#buttontoggle-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK ButtonToggle</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Schaltelement mit Taste und Zentralbedienung</div>
+<div class="line">Typischer Einsatz: Lichttaster und Lichtausgang</div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/ButtonToggle_FB.png" src="../_images/ButtonToggle_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xButton</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Eingang - Bedientaste</td>
+</tr>
+<tr class="row-odd"><td><em>xCentralOn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Zentrale Einschaltung</td>
+</tr>
+<tr class="row-even"><td><em>xCentralOff</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Zentrale Ausschaltung</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xLightHB</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe - Ausgang</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der Funktionsbaustein dient grundsätzlich zur unmittelbaren Steuerung des Freigabe - Ausgangs <em>xQ</em> in Abhängigkeit von den ansteigenden Flanken</div>
+<div class="line">an den Eingängen <em>xButton</em> ( = Bedientaste ), <em>xCentralOn</em> ( = Zentrale Einschaltung ) und <em>xCentralOff</em> ( = Zentrale Ausschaltung ). Jede ansteigende</div>
+<div class="line">Flanke am Eingang - Bedientaste <em>xButton</em> schaltet den Ausgang <em>xQ</em> in den entgegengesetzten Zustand, sofern keine Zentralbedienung stattfindet.</div>
+<div class="line">Werden keine ansteigenden Flanken erkannt, so verändert sich der Zustand des Freigabe - Ausgangs <em>xQ</em> nicht.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="funktionstabelle">
+<h3>Funktionstabelle<a class="headerlink" href="#funktionstabelle" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xButton</em></th>
+<th class="head"><em>xCentralOn</em></th>
+<th class="head"><em>xCentralOff</em></th>
+<th class="head"><em>xQ</em></th>
+<th class="head">Hinweis</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE, TRUE, H/L</td>
+<td>FALSE, TRUE, H/L</td>
+<td>FALSE, TRUE, H/L</td>
+<td>unverändert</td>
+<td>Eingänge nicht aktiv</td>
+</tr>
+<tr class="row-odd"><td>L/H</td>
+<td>FALSE, TRUE, H/L</td>
+<td>FALSE, TRUE, H/L</td>
+<td>FALSE &gt; TRUE, TRUE &gt; FALSE</td>
+<td>Zustandswechsel am Ausgang</td>
+</tr>
+<tr class="row-even"><td>FALSE, TRUE, H/L</td>
+<td>L/H</td>
+<td>FALSE, TRUE, H/L</td>
+<td>TRUE</td>
+<td>Zentrale Einschaltung</td>
+</tr>
+<tr class="row-odd"><td>FALSE, TRUE, H/L</td>
+<td>FALSE, TRUE, H/L</td>
+<td>L/H</td>
+<td>FALSE</td>
+<td>Zentrale Ausschaltung</td>
+</tr>
+<tr class="row-even"><td>L/H</td>
+<td>L/H</td>
+<td>FALSE, TRUE, H/L</td>
+<td>TRUE</td>
+<td>Zentrale Einschaltung ( höhere Priorität )</td>
+</tr>
+<tr class="row-odd"><td>L/H</td>
+<td>L/H</td>
+<td>L/H</td>
+<td>FALSE</td>
+<td>Zentrale Ausschaltung ( höchste Priorität )</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: L/H ... ansteigende Flanke, H/L ... abfallende Flanke</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head">Autoren</th>
+<th class="head">Datum</th>
+<th class="head">Version</th>
+<th class="head">Anmerkungen</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Funktion</td>
+<td>Adam Bartod</td>
+<td>09.2016</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-odd"><td>Programmierung</td>
+<td>Adam Bartod</td>
+<td>09.2016</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Jochen Reu</td>
+<td>09.2017</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-odd"><td>Dokumentation</td>
+<td>Jochen Reu</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="16%" />
+<col width="26%" />
+<col width="12%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="3">Input</td>
+<td>xButton</td>
+<td>BOOL</td>
+<td>Eingang - Bedientaste</td>
+</tr>
+<tr class="row-odd"><td>xCentralOn</td>
+<td>BOOL</td>
+<td>Zentrale Einschaltung</td>
+</tr>
+<tr class="row-even"><td>xCentralOff</td>
+<td>BOOL</td>
+<td>Zentrale Ausschaltung</td>
+</tr>
+<tr class="row-odd"><td>Output</td>
+<td>xOut</td>
+<td>BOOL</td>
+<td>Freigabe - Ausgang</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CI1ME6j9uGUcYb7ZXQs1PVlnYWM/mcentraloff.html">ButtonToggle.mCentralOff (METH)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../CI1ME6j9uGUcYb7ZXQs1PVlnYWM/mcentraloff.html#kurzbeschreibung-methode-mcentraloff">Kurzbeschreibung Methode (mCentralOff)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../CI1ME6j9uGUcYb7ZXQs1PVlnYWM/mcentralon.html">ButtonToggle.mCentralOn (METH)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../CI1ME6j9uGUcYb7ZXQs1PVlnYWM/mcentralon.html#kurzbeschreibung-methode-mcentralon">Kurzbeschreibung Methode (mCentralOn)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../CI1ME6j9uGUcYb7ZXQs1PVlnYWM/mcentraloff.html" class="btn btn-neutral float-right" title="ButtonToggle.mCentralOff (METH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="button4.html" class="btn btn-neutral" title="Button4 (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'de',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,686 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AverageCh (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Limiter (FB)" href="limiter.html" />
+    <link rel="prev" title="AbsA.mEx (METH)" href="../LNz7bB6Y2WpCYRIjOh4YpMjG7m8/mex.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Numeric.html">Numeric</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="absa.html">AbsA (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AverageCh (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="limiter.html">Limiter (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mannum.html">ManNum (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="max8fun.html">Max8Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="min8fun.html">Min8Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="moveenfun.html">MoveEnFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="movestore.html">MoveStore (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxbin2fun.html">MuxBin2Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxbin5fun.html">MuxBin5Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="offset.html">Offset (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="offsetfun.html">OffsetFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="twopoint.html">TwoPoint (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Numeric.html">Numeric</a> &raquo;</li>
+        
+      <li>AverageCh (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-numeric-averagech"></span><div class="section" id="averagech-fb">
+<span id="averagech"></span><span id="index-0"></span><h1>AverageCh (FB)<a class="headerlink" href="#averagech-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK AverageCh</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Bildung eines Mittelwerts aus bis zu sechs gewichteten numerischen Eingangsgrößen</div>
+<div class="line"><br /></div>
+<div class="line">Typische Anwendung: Bildung eines Raumtemperaturmittelwerts aus verschiedenen Fühlern</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/AverageCh_FB.png" src="../_images/AverageCh_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rIn1</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 1</td>
+</tr>
+<tr class="row-odd"><td><em>rIn2</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 2</td>
+</tr>
+<tr class="row-even"><td><em>rIn3</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 3</td>
+</tr>
+<tr class="row-odd"><td><em>rIn4</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 4</td>
+</tr>
+<tr class="row-even"><td><em>rIn5</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 5</td>
+</tr>
+<tr class="row-odd"><td><em>rIn6</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 6</td>
+</tr>
+<tr class="row-even"><td><em>xEn1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 1</td>
+</tr>
+<tr class="row-odd"><td><em>xEn2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 2</td>
+</tr>
+<tr class="row-even"><td><em>xEn3</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 3</td>
+</tr>
+<tr class="row-odd"><td><em>xEn4</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 4</td>
+</tr>
+<tr class="row-even"><td><em>xEn5</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 5</td>
+</tr>
+<tr class="row-odd"><td><em>xEn6</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 6</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rOut</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Mittelwert</td>
+</tr>
+<tr class="row-odd"><td><em>xErr</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sammelstörung</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>iLoading6</strong></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 6</td>
+</tr>
+<tr class="row-odd"><td><strong>iLoading5</strong></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 5</td>
+</tr>
+<tr class="row-even"><td><strong>iLoading4</strong></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 4</td>
+</tr>
+<tr class="row-odd"><td><strong>iLoading3</strong></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 3</td>
+</tr>
+<tr class="row-even"><td><strong>iLoading2</strong></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 2</td>
+</tr>
+<tr class="row-odd"><td><strong>iLoading1</strong></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 1</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="mittelwert-rout">
+<h3>Mittelwert <em>rOut</em><a class="headerlink" href="#mittelwert-rout" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der Mittelwert wird gebildet, in dem die Analogwerteingänge <em>rInX</em> mit ihrer individuellen Gewichtung <strong>iLoadingX</strong> multipliziert und</div>
+<div class="line">anschließend alle Produkte aufaddiert werden ( Divident ).</div>
+<div class="line">Die Summe der Gewichtungen wird durch die Addition der individuellen Gewichtungen gebildet ( = Divisor ).</div>
+<div class="line">Der sich so ergebende Quotient steht abschließend als Mittelwert <em>rOut</em> zur Verfügung.</div>
+<div class="line"><br /></div>
+<div class="line">Die individuelle Gewichtung eines Analogwerteingangs X hat stets den Wert 0.0, solange die Freigabe des Analogwerteingangs X <em>xEnX</em> gesperrt ist ( = FALSE ).</div>
+<div class="line">Ist die Summe der Gewichtungen ( Divisor ) = Null, so wird am Ausgang <em>rOut</em> konstant der Wert 0.0 ausgegeben.</div>
+<div class="line"><br /></div>
+<div class="line">Legende: X = 1 bis 6</div>
+</div>
+</div>
+<div class="section" id="sammelstorung-xerr">
+<h3>Sammelstörung <em>xErr</em><a class="headerlink" href="#sammelstorung-xerr" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Sammelstörung ist aktiv ( = TRUE ), falls mindestens einer der Analogwerteingänge <em>rInX</em> gesperrt ist ( <em>xEnX</em> = FALSE ).</div>
+<div class="line">In allen übrigen Fällen ist die Sammelstörung nicht aktiv ( = FALSE ).</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head">Autoren</th>
+<th class="head">Datum</th>
+<th class="head">Version</th>
+<th class="head">Anmerkungen</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Funktion</td>
+<td>Adam Bartod</td>
+<td>07.2016</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-odd"><td>Programmierung</td>
+<td>Adam Bartod</td>
+<td>07.2016</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Alexander Halter</td>
+<td>07.2016</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-odd"><td>Dokumentation</td>
+<td>Jochen Reu</td>
+<td>11.2017</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="12%" />
+<col width="16%" />
+<col width="9%" />
+<col width="13%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="18">Input</td>
+<td>rIn1</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 1</td>
+</tr>
+<tr class="row-odd"><td>rIn2</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 2</td>
+</tr>
+<tr class="row-even"><td>rIn3</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 3</td>
+</tr>
+<tr class="row-odd"><td>rIn4</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 4</td>
+</tr>
+<tr class="row-even"><td>rIn5</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 5</td>
+</tr>
+<tr class="row-odd"><td>rIn6</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang 6</td>
+</tr>
+<tr class="row-even"><td>xEn1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 1</td>
+</tr>
+<tr class="row-odd"><td>xEn2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 2</td>
+</tr>
+<tr class="row-even"><td>xEn3</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 3</td>
+</tr>
+<tr class="row-odd"><td>xEn4</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 4</td>
+</tr>
+<tr class="row-even"><td>xEn5</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 5</td>
+</tr>
+<tr class="row-odd"><td>xEn6</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe Analogwerteingang 6</td>
+</tr>
+<tr class="row-even"><td>iLoading6</td>
+<td>INT</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 6</td>
+</tr>
+<tr class="row-odd"><td>iLoading5</td>
+<td>INT</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 5</td>
+</tr>
+<tr class="row-even"><td>iLoading4</td>
+<td>INT</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 4</td>
+</tr>
+<tr class="row-odd"><td>iLoading3</td>
+<td>INT</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 3</td>
+</tr>
+<tr class="row-even"><td>iLoading2</td>
+<td>INT</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 2</td>
+</tr>
+<tr class="row-odd"><td>iLoading1</td>
+<td>INT</td>
+<td>10</td>
+<td>Gewichtung - Analogwerteingang 1</td>
+</tr>
+<tr class="row-even"><td rowspan="2">Output</td>
+<td>rOut</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Mittelwert</td>
+</tr>
+<tr class="row-odd"><td>xErr</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Sammelstörung</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="limiter.html" class="btn btn-neutral float-right" title="Limiter (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../LNz7bB6Y2WpCYRIjOh4YpMjG7m8/mex.html" class="btn btn-neutral" title="AbsA.mEx (METH)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'de',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AverageTime (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="AverageTimeCal (FB)" href="averagetimecal.html" />
+    <link rel="prev" title="Damping" href="fld-Damping.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Damping.html">Damping</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AverageTime (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="averagetimecal.html">AverageTimeCal (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dampingt1.html">DampingT1 (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ramp.html">Ramp (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Damping.html">Damping</a> &raquo;</li>
+        
+      <li>AverageTime (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-damping-averagetime"></span><div class="section" id="averagetime-fb">
+<span id="averagetime"></span><span id="index-0"></span><h1>AverageTime (FB)<a class="headerlink" href="#averagetime-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK AverageTime</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Durchschnittswertbildung eines Analogwertes über vier verschiedene Zeiträume</div>
+<div class="line">Mittelwertbildung: Arithmetischer Mittelwert</div>
+<div class="line">Typische Anwendung: Zeitliche Mittelung der Außentemperatur</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/AverageTime_FB.png" src="../_images/AverageTime_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rIn</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rOutCH0</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Durchschnittswert Zeitraum 1</td>
+</tr>
+<tr class="row-odd"><td><em>rOutCH1</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Durchschnittswert Zeitraum 2</td>
+</tr>
+<tr class="row-even"><td><em>rOutCH2</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Durchschnittswert Zeitraum 3</td>
+</tr>
+<tr class="row-odd"><td><em>rOutCH3</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Durchschnittswert Zeitraum 4</td>
+</tr>
+<tr class="row-even"><td><em>rOutMin</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Minimalwert aller Messwerte</td>
+</tr>
+<tr class="row-odd"><td><em>rOutMax</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Maximalwert aller Messwerte</td>
+</tr>
+<tr class="row-even"><td><em>dtLastNewValue</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Speicherzeitpunkt des letzten Messwertes</td>
+</tr>
+<tr class="row-odd"><td><em>sErr</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Aktueller Fehlertext</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>xCalculation</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Freigabe / Sperrung der Datenaufzeichnung</td>
+</tr>
+<tr class="row-odd"><td><strong>xResetOnInput</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Initialisierung der Messwertspeicherung und der Durchschnittswertausgänge mit <em>rIn</em></td>
+</tr>
+<tr class="row-even"><td><strong>rInitValue</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td>Initialisierungswert für den Messwertespeicher und die Durchschnittswertausgänge bei <strong>eInitial</strong> = eInit2.InitValue.</td>
+</tr>
+<tr class="row-odd"><td><strong>tInitDelay</strong></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>10s</td>
+<td>Verzögerungszeit für die Messwertspeicherung bei <strong>eInitial</strong> = eInit2.InputValueDelayed.</td>
+</tr>
+<tr class="row-even"><td><strong>eInitial</strong></td>
+<td>eInit2</td>
+<td>&nbsp;</td>
+<td>eInit2.LastValue</td>
+<td>Festlegung der Art der Initialisierung</td>
+</tr>
+<tr class="row-odd"><td><strong>wCH3Time</strong></td>
+<td>WORD</td>
+<td>&nbsp;</td>
+<td>72</td>
+<td>Festlegung des Zeitraums 4</td>
+</tr>
+<tr class="row-even"><td><strong>wCH2Time</strong></td>
+<td>WORD</td>
+<td>&nbsp;</td>
+<td>48</td>
+<td>Festlegung des Zeitraums 3</td>
+</tr>
+<tr class="row-odd"><td><strong>wCH1Time</strong></td>
+<td>WORD</td>
+<td>1</td>
+<td>36</td>
+<td>Festlegung des Zeitraums 2</td>
+</tr>
+<tr class="row-even"><td><strong>wCH0Time</strong></td>
+<td>WORD</td>
+<td>&nbsp;</td>
+<td>12</td>
+<td>Festlegung des Zeitraums 1</td>
+</tr>
+<tr class="row-odd"><td><strong>rTimeBaseCh0to3</strong></td>
+<td>eTime</td>
+<td>&nbsp;</td>
+<td>eTime.Hour</td>
+<td>Festlegung des Zeiteinheit für die Zeiträume</td>
+</tr>
+<tr class="row-even"><td><strong>wInterval</strong></td>
+<td>WORD</td>
+<td>&nbsp;</td>
+<td>30</td>
+<td>Festlegung des Aufzeichnungsintervalls</td>
+</tr>
+<tr class="row-odd"><td><strong>rTimeBaseInterval</strong></td>
+<td>eTime</td>
+<td>&nbsp;</td>
+<td>eTime.Minute</td>
+<td>Festlegung des Zeiteinheit für das Aufzeichnungsintervall</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Messwertespeicher</div>
+<div class="line"><br /></div>
+<div class="line">Der Wert am Analogwerteingang <em>rIn</em> wird Aufzeichnungsintervall in einem Messwertespeicher ( Speichertiefe = 221 Einträge ) abgelegt.</div>
+<div class="line">Das Aufzeichnungsintervall wird durch den Zeitwert <strong>wInterval</strong> und die Zeiteinheit <strong>rTimeBaseInterval</strong> festgelegt.</div>
+<div class="line">Voreinstellung: Aufzeichnungsintervall = 30 Minuten</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Zeiträume 0 ... 3 ( X = 0 ... 3 )</div>
+<div class="line"><br /></div>
+<div class="line">Jeder der vier Zeiträume wird durch den jeweiligen Zeitwert <strong>wCHXTime</strong> und die Zeiteinheit <strong>rTimeBaseCh0to3</strong> festgelegt.</div>
+<div class="line">Diese Zeiträume werden bei Bedarf auf die maximal mögliche Größe reduziert, falls eine Überschreitung der Speichertiefe droht.</div>
+<div class="line">Bei einer Überschreitung wird ein entsprechender Fehlertext am Ausgang <em>sErr</em> erzeugt.</div>
+<div class="line"><br /></div>
+<div class="line">An den Durchschnittswertausgängen stehen erstmals nach den jeweiligen Zeiträumen die korrekten arithmetischen Mittelwerte zur Verfügung.</div>
+<div class="line">Voreinstellung: Zeitraum 0 = 12 Stunden, Zeitraum 1 = 36 Stunden, Zeitraum 3 = 48 Stunden, Zeitraum 4 = 72 Stunden</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="durchschnittswertausgange-routchx-x-0-3">
+<h3>Durchschnittswertausgänge <em>rOutCHX</em> ( X = 0 ... 3 )<a class="headerlink" href="#durchschnittswertausgange-routchx-x-0-3" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Am Durchschnittswertausgang <em>rOutCHX</em> ( X = 0 ... 3 ) steht erstmalig nach der Zeitdauer <strong>wCHXTime</strong> der korrekte arithmetische Mittelwert der</div>
+<div class="line">zugehörigen Einträge im Messwertespeicher zur Verfügung.</div>
+</div>
+</div>
+<div class="section" id="minimalwertausgang-routmin">
+<h3>Minimalwertausgang <em>rOutMin</em><a class="headerlink" href="#minimalwertausgang-routmin" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Am Minimalwertausgang <em>rOutMin</em> steht erstmalig nach einem Aufzeichnungsintervall der absolute Minimalwert aller Einträge im Messwertespeicher</div>
+<div class="line">zur Verfügung.</div>
+</div>
+</div>
+<div class="section" id="maximalwertausgang-routmax">
+<h3>Maximalwertausgang <em>rOutMax</em><a class="headerlink" href="#maximalwertausgang-routmax" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Am Maximalwertausgang <em>rOutMax</em> steht erstmalig nach einem Aufzeichnungsintervall der absolute Maximalwert aller Einträge im Messwertespeicher</div>
+<div class="line">zur Verfügung.</div>
+</div>
+</div>
+<div class="section" id="zeitstempel-dtlastnewvalue">
+<h3>Zeitstempel <em>dtLastNewValue</em><a class="headerlink" href="#zeitstempel-dtlastnewvalue" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Am Zeitstempelausgang <em>dtLastNewValue</em> steht erstmalig nach einem Aufzeichnungsintervall der Zeitstempel der letzten Ablage im Messwertespeicher</div>
+<div class="line">zur Verfügung.</div>
+</div>
+</div>
+<div class="section" id="fehlertext-serr">
+<h3>Fehlertext <em>sErr</em><a class="headerlink" href="#fehlertext-serr" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Am Ausgang für den aktuellen Fehlertext <em>sErr</em> steht im Fehlerfall ein beschreibender Text zur Verfügung. Bei Fehlerfreiheit wird ein Leerstring ausgegeben.</div>
+</div>
+</div>
+<div class="section" id="art-der-initialisierung-einitial">
+<h3>Art der Initialisierung <strong>eInitial</strong><a class="headerlink" href="#art-der-initialisierung-einitial" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Mit diesem Sollwert / Parameter wird die Art der Initialisierung des Messwertspeichers und der Durchschnittswertausgänge festgelegt. Folgende Optionen sind möglich:</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="initialisierungsarten">
+<colgroup>
+<col width="17%" />
+<col width="33%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Art</th>
+<th class="head">Wert der Initialierung</th>
+<th class="head">Hinweis</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eInit2.InitValue</td>
+<td><strong>rInitValue</strong></td>
+<td>Einstellbarer Initialwert</td>
+</tr>
+<tr class="row-odd"><td>eInit2.InputValue</td>
+<td><em>rIn</em></td>
+<td>Eingangswert</td>
+</tr>
+<tr class="row-even"><td>eInit2.InputValueDelayed</td>
+<td><em>rIn</em></td>
+<td>Verzögerter Eingangswert</td>
+</tr>
+<tr class="row-odd"><td>eInit2.LastValue</td>
+<td>Durchschnitt - Messwertespeicher ( Messwertespeicher gefüllt )</td>
+<td>Letzter Wert</td>
+</tr>
+<tr class="row-even"><td>eInit2.LastValue</td>
+<td><em>rIn</em> ( Messwertespeicher leer )</td>
+<td>Letzter Wert</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="freigabe-sperrung-der-datenaufzeichnung-xcalculation">
+<h3>Freigabe / Sperrung der Datenaufzeichnung <strong>xCalculation</strong><a class="headerlink" href="#freigabe-sperrung-der-datenaufzeichnung-xcalculation" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Mit diesem Sollwert / Parameter wird die Datenaufzeichnung freigegeben ( = TRUE ) bzw. gesperrt ( = FALSE )</div>
+</div>
+</div>
+<div class="section" id="rucksetzung-des-messwertespeichers-der-durchschnittswertausgange-xresetoninput">
+<h3>Rücksetzung des Messwertespeichers / der Durchschnittswertausgänge <strong>xResetOnInput</strong><a class="headerlink" href="#rucksetzung-des-messwertespeichers-der-durchschnittswertausgange-xresetoninput" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Mit diesem Sollwert / Parameter werden der Meswertespeicher / die Durchschnittswertausgänge auf den Wert &#8216;rIn&#8217; zurück gesetzt ( = TRUE ).</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head">Autoren</th>
+<th class="head">Datum</th>
+<th class="head">Version</th>
+<th class="head">Anmerkungen</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Funktion</td>
+<td>Adam Bartod</td>
+<td>06.2016</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-odd"><td>Programmierung</td>
+<td>Adam Bartod</td>
+<td>06.2016</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>&nbsp;</td>
+<td>12.2016</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-odd"><td>Dokumentation</td>
+<td>Jochen Reu</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="16%" />
+<col width="10%" />
+<col width="15%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="13">Input</td>
+<td>rIn</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Analogwerteingang</td>
+</tr>
+<tr class="row-odd"><td>xCalculation</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Freigabe / Sperrung der Datenaufzeichnung</td>
+</tr>
+<tr class="row-even"><td>xResetOnInput</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Initialisierung der Messwertspeicherung und der
+Durchschnittswertausgänge mit <em>rIn</em></td>
+</tr>
+<tr class="row-odd"><td>rInitValue</td>
+<td>REAL</td>
+<td>10</td>
+<td>Initialisierungswert für den Messwertespeicher und die
+Durchschnittswertausgänge bei <strong>eInit2</strong> = eInit2.InitValue.</td>
+</tr>
+<tr class="row-even"><td>tInitDelay</td>
+<td>TIME</td>
+<td>TIME#10s0ms</td>
+<td>Verzögerungszeit für die Messwertspeicherung bei <strong>eInit2</strong>
+= eInit2.InputValueDelayed.</td>
+</tr>
+<tr class="row-odd"><td>eInitial</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/einit2.html#einit2"><span class="std std-ref">eInit2</span></a></td>
+<td>eInit2.LastValue</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>wCH3Time</td>
+<td>WORD</td>
+<td>72</td>
+<td>Festlegung des Zeitraums 4 in Stunden</td>
+</tr>
+<tr class="row-odd"><td>wCH2Time</td>
+<td>WORD</td>
+<td>48</td>
+<td>Festlegung des Zeitraums 3 in Stunden</td>
+</tr>
+<tr class="row-even"><td>wCH1Time</td>
+<td>WORD</td>
+<td>36</td>
+<td>Festlegung des Zeitraums 2 in Stunden</td>
+</tr>
+<tr class="row-odd"><td>wCH0Time</td>
+<td>WORD</td>
+<td>24</td>
+<td>Festlegung des Zeitraums 1 in Stunden</td>
+</tr>
+<tr class="row-even"><td>eTimeBaseCh0to3</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/etime.html#etime"><span class="std std-ref">eTime</span></a></td>
+<td>eTime.Hour</td>
+<td>Zeiteinheit für CH 0 bis 3</td>
+</tr>
+<tr class="row-odd"><td>wInterval</td>
+<td>WORD</td>
+<td>30</td>
+<td>Speicherinterval</td>
+</tr>
+<tr class="row-even"><td>eTimeBaseInterval</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/etime.html#etime"><span class="std std-ref">eTime</span></a></td>
+<td>eTime.Minute</td>
+<td>Zeiteinheit für Speicherinterval</td>
+</tr>
+<tr class="row-odd"><td rowspan="8">Output</td>
+<td>rOutCH0</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Durchschnittswert Zeitraum 1</td>
+</tr>
+<tr class="row-even"><td>rOutCH1</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Durchschnittswert Zeitraum 2</td>
+</tr>
+<tr class="row-odd"><td>rOutCH2</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Durchschnittswert Zeitraum 3</td>
+</tr>
+<tr class="row-even"><td>rOutCH3</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Durchschnittswert Zeitraum 4</td>
+</tr>
+<tr class="row-odd"><td>rOutMin</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Minimalwert aller Messwerte</td>
+</tr>
+<tr class="row-even"><td>rOutMax</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Maximalwert aller Messwerte</td>
+</tr>
+<tr class="row-odd"><td>dtLastNewValue</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td>Speicherzeitpunkt des letzten Messwertes</td>
+</tr>
+<tr class="row-even"><td>sErr</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Aktueller Fehlertext</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="averagetimecal.html" class="btn btn-neutral float-right" title="AverageTimeCal (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fld-Damping.html" class="btn btn-neutral" title="Damping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'de',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

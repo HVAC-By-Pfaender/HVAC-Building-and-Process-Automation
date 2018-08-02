@@ -1,0 +1,908 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Fan1Speed (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Fan1Speed.mQuit (METH)" href="../t0o5b1FIxCZejC-NUk089_GVC2k/mquit.html" />
+    <link rel="prev" title="DuoPump.mResetOperatingHours (METH)" href="../tTevF1tGYGyuxF3C8qEqLb0S6sA/mresetoperatingh.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="damper2p.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="damperanalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="duopump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Fan1Speed (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pump.html">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="valve3p.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="valveanalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="valvetherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>Fan1Speed (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-fan1speed"></span><div class="section" id="fan1speed-fb">
+<span id="fan1speed"></span><span id="index-0"></span><h1>Fan1Speed (FB)<a class="headerlink" href="#fan1speed-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK Fan1Speed</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Steuerung eines einstufigen Ventilators</div>
+<div class="line">Zusatzfunktionen: Luftmangelüberwachung, Betriebsüberwachung, Reparaturschalter, Handübersteuerung, Statusanzeige</div>
+<div class="line">Typische Anwendung: Steuerung eines Raum - Abluftventilators</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/Fan1Speed_FB.png" src="../_images/Fan1Speed_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xEn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anforderung des Ventilators</td>
+</tr>
+<tr class="row-odd"><td><em>xFb</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Betriebsmeldung des Ventilators</td>
+</tr>
+<tr class="row-even"><td><em>xPFb</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Meldung der Luftmangelsituation</td>
+</tr>
+<tr class="row-odd"><td><em>xMSwitch</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Meldung des Reparaturschalters</td>
+</tr>
+<tr class="row-even"><td><em>xAlarmIn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Störmeldung des Ventilators</td>
+</tr>
+<tr class="row-odd"><td><em>eAOO</em></td>
+<td>HVACTYPES.eManBin</td>
+<td>HVACTYPES.eManBin.Auto, HVACTYPES.eManBin.ManOff, HVACTYPES.eManBin.ManOn</td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td>Betriebsart der Handübersteuerung - Hardware</td>
+</tr>
+<tr class="row-even"><td><em>xQuit</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Rücksetzung der Störmeldungen ( Betriebsüberwachung, Luftmangelüberwachung )</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xHB</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe - Ventilator nach Handübersteuerung</td>
+</tr>
+<tr class="row-odd"><td><em>xAB</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe - Ventilator vor Handübersteuerung</td>
+</tr>
+<tr class="row-even"><td><em>xAlarmFb</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Störmeldung der Betriebsüberwachung</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarmPFb</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Störmeldung der Luftmangelüberwachung</td>
+</tr>
+<tr class="row-even"><td><em>dtLastFb</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Datum / Uhrzeit des letzten Betriebs des Ventilators</td>
+</tr>
+<tr class="row-odd"><td><strong>udiOperatingHours</strong></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Betriebsstunden der Umwälzpumpe</td>
+</tr>
+<tr class="row-even"><td><strong>udiCountFb</strong></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzahl der Einschaltungen der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarm</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sammelstörmeldung</td>
+</tr>
+<tr class="row-even"><td><em>sAlarm</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Meldungstexte für Störungen</td>
+</tr>
+<tr class="row-odd"><td><em>sStatus</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Meldungstexte für den Betriebsstatus</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>udiPFbControlTime</strong></td>
+<td>UDINT</td>
+<td>1 bis 3600s</td>
+<td>30s</td>
+<td>Meldeverzögerung der Luftmangelüberwachung</td>
+</tr>
+<tr class="row-odd"><td><strong>xAlarmControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Einfluss von <em>xAlarm</em> auf <em>xAB</em></td>
+</tr>
+<tr class="row-even"><td><strong>udiFbControlTime</strong></td>
+<td>UDINT</td>
+<td>0 ... 300s</td>
+<td>60s</td>
+<td>Meldeverzögerung der Betriebsüberwachung</td>
+</tr>
+<tr class="row-odd"><td><strong>xFbControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Freigabe / Sperrung der Betriebsüberwachung</td>
+</tr>
+<tr class="row-even"><td><strong>eManModeB</strong></td>
+<td>eMANBIN</td>
+<td>eMANBIN.Auto, eMANBIN.ManOff, eMANBIN.ManOn</td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung für den digitalen Ausgang <em>xHB</em></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein steuert einen einstufigen Ventilator.</div>
+<div class="line">Es kommen im Wesentlichen folgende Funktionsbausteine zur Anwendung:</div>
+</div>
+<p><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/airshortage.html#airshortage"><span class="std std-ref">AirShortage</span></a></p>
+<p><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/manbin.html#manbin"><span class="std std-ref">ManBin</span></a></p>
+<p><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/operatinghours.html#operatinghours"><span class="std std-ref">OperatingHours</span></a></p>
+</div>
+<div class="section" id="freigabe-ventilator-vor-handubersteuerung-xab">
+<h3>Freigabe - Ventilator vor Handübersteuerung <em>xAB</em><a class="headerlink" href="#freigabe-ventilator-vor-handubersteuerung-xab" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Freigabe - Ventilator vor Handübersteuerung <em>xAB</em> wird durch die Anforderung des Ventilators <em>xEn</em>, die Sammelstörmeldung <em>xAlarm</em>,</div>
+<div class="line">die Meldung des Reparaturschalters <em>xMSwitch</em>, den Parameter <strong>xAlarmControl</strong> und die Luftmangelüberwachung beeinflusst.</div>
+<div class="line"><br /></div>
+<div class="line">Die Freigabe - Ventilator vor Handübersteuerung <em>xAB</em> ist aktiv ( = TRUE ), falls folgende Zustände gleichzeitig vorliegen:</div>
+<div class="line"><br /></div>
+<div class="line">Fall 1:</div>
+<div class="line"><br /></div>
+<div class="line"><em>xEn</em>             = TRUE  ( Anforderung aktiv )</div>
+<div class="line"><em>xAlarm</em>          = FALSE ( Sammelstörmeldung nicht aktiv )</div>
+<div class="line"><em>xMSwitch</em>            = TRUE  ( Motorschutzschalter nicht ausgelöst )</div>
+<div class="line"><strong>xAlarmControl</strong>     = FALSE ( Sammelstörmeldung und Luftmangelüberwachung nicht berücksichtigt )</div>
+<div class="line"><br /></div>
+<div class="line">Fall 2:</div>
+<div class="line"><br /></div>
+<div class="line"><em>xEn</em>             = TRUE  ( Anforderung aktiv )</div>
+<div class="line"><em>xAlarm</em>          = FALSE ( Sammelstörmeldung nicht aktiv )</div>
+<div class="line"><em>xMSwitch</em>            = TRUE  ( Motorschutzschalter nicht ausgelöst )</div>
+<div class="line"><strong>xAlarmControl</strong>     = TRUE  ( Sammelstörmeldung und Luftmangelüberwachung berücksichtigt )</div>
+<div class="line">Luftmangel                 = FALSE ( Luftmangel nicht aktiv )</div>
+<div class="line"><br /></div>
+<div class="line">In allen übrigen Situationen ist die Freigabe - Ventilator vor Handübersteuerung <em>xAB</em> nicht aktiv ( = FALSE ).</div>
+</div>
+</div>
+<div class="section" id="freigabe-ventilator-nach-handubersteuerung-xhb">
+<h3>Freigabe - Ventilator nach Handübersteuerung <em>xHB</em><a class="headerlink" href="#freigabe-ventilator-nach-handubersteuerung-xhb" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Freigabe - Ventilator vor Handübersteuerung <em>xHB</em> entspricht der Freigabe - Ventilator vor Handübersteuerung <em>xAB</em>,</div>
+<div class="line">zusätzlich erweitert um ein Handübersteuermodul.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAB</em></th>
+<th class="head"><strong>eManModeB</strong></th>
+<th class="head"><em>xHB</em></th>
+<th class="head">Hinweise</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td>Handübersteuermodul in Automatik</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eMANBIN.Auto</td>
+<td>TRUE</td>
+<td>Handübersteuermodul in Automatik</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>eMANBIN.ManOn</td>
+<td>TRUE</td>
+<td>Handübersteuermodul in Handbetrieb Ein</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANBIN.ManOff</td>
+<td>FALSE</td>
+<td>Handübersteuermodul in Handbetrieb Aus</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = beliebig</div>
+</div>
+</div>
+<div class="section" id="meldung-des-reparaturschalters-xmswitch">
+<h3>Meldung des Reparaturschalters <em>xMSwitch</em><a class="headerlink" href="#meldung-des-reparaturschalters-xmswitch" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line"><em>xMSwitch</em> = TRUE:    Reparaturschalter wurde nicht ausgelöst ( Normalzustand )</div>
+<div class="line"><em>xMSwitch</em> = FALSE:   Reparaturschalter wurde ausgelöst ( Fehlerzustand )</div>
+</div>
+</div>
+<div class="section" id="betriebsstunden-und-einschaltvorgange">
+<h3>Betriebsstunden und Einschaltvorgänge<a class="headerlink" href="#betriebsstunden-und-einschaltvorgange" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Anzahl der Betriebsstunden und der Einschaltvorgänge werden erfasst ( = Zählprozess aktiv ), falls die Betriebsmeldung</div>
+<div class="line">des Ventilators <em>xFb</em> aktiv ist und gleichzeitig die Sammelstörmeldung <em>xAlarm</em> nicht aktiv ist ( = FALSE ).</div>
+<div class="line">Die Ergebnisse stehen an den Zählerausgängen <strong>udiOperatingHours</strong> und <strong>udiCountFb</strong> zur Verfügung.</div>
+</div>
+</div>
+<div class="section" id="datum-uhrzeit-des-letzten-betriebs-des-ventilators-dtlastfb">
+<h3>Datum / Uhrzeit des letzten Betriebs des Ventilators <em>dtLastFb</em><a class="headerlink" href="#datum-uhrzeit-des-letzten-betriebs-des-ventilators-dtlastfb" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Am Ausgang <em>dtLastFb</em> steht während des Zählprozesses das aktuelle Datum / die aktuelle Uhrzeit zur Verfügung.</div>
+<div class="line">Am Ausgang <em>dtLastFb</em> steht ausserhalb des Zählprozesses das Datum / die Uhrzeit am Ende des letzten Zählprozesses zur Verfügung.</div>
+<div class="line">Am Ausgang <em>dtLastFb</em> wird vor dem ersten Zählprozess der Initialisierungswert DT#1970-1-1-0.0.0 ausgegeben.</div>
+</div>
+</div>
+<div class="section" id="betriebsuberwachung">
+<h3>Betriebsüberwachung<a class="headerlink" href="#betriebsuberwachung" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Betriebsüberwachung kann durch den Sollwert / Parameter <em>xFbControl</em> freigegeben ( = TRUE ) oder gesperrt ( = FALSE ) werden.</div>
+<div class="line"><br /></div>
+<div class="line">Bei gesperrter Überwachung wird die Störmeldung der Betriebsüberwachung <em>xAlarmFb</em> immer gesperrt ( = FALSE ).</div>
+<div class="line">Bei freigegebener Überwachung wird die Störmeldung der Betriebsüberwachung <em>xAlarmFb</em> aktiviert ( = TRUE ), falls</div>
+<div class="line">gleichzeitig während einer Mindestzeitdauer <strong>udiFbControlTime</strong> folgende Zustände gegeben sind:</div>
+<div class="line"><br /></div>
+<div class="line"><em>xHB</em> und <em>xFb</em>       = ungleich ( Freigabezustand und Betriebszustand stimmen nicht überein )</div>
+<div class="line"><em>eAOO</em>            = HVACTYPES.eManBin.Auto ( Handübersteuerung - Hardware in Automatik )</div>
+<div class="line"><em>xFbControl</em>              = TRUE  ( Betriebsüberwachung ist freigegeben )</div>
+<div class="line"><br /></div>
+<div class="line">Die Störmeldung der Betriebsüberwachung <em>xAlarmFb</em> wird zurück gesetzt ( = FALSE ), falls mindestens eine der nachfolgenden</div>
+<div class="line">Bedingungen erfüllt ist:</div>
+<div class="line"><br /></div>
+<div class="line"><em>eAOO</em>            = HVACTYPES.eManBin.Auto ( Rückschaltung in den Automatikbetrieb der Handübersteuerung - Hardware )</div>
+<div class="line"><em>xQuit</em>               = TRUE  ( Rücksetzung der Störmeldungen ist aktiv )</div>
+<div class="line"><em>xFbControl</em>      = FALSE ( Betriebsüberwachung gesperrt )</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="luftmangeluberwachung">
+<h3>Luftmangelüberwachung<a class="headerlink" href="#luftmangeluberwachung" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Sie dient zur Erkennung einer Luftmangelsituation durch die Auswertung der Signale an den Eingängen</div>
+<div class="line">Meldung der Luftmangelsituation <em>xPFb</em> und der Betriebsmeldung des Ventilators <em>xFb</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Der Ausgang - Störmeldung <em>xAlarmPFb</em> wird aktiviert ( <em>xAlarmPFb</em> = TRUE ), falls die unten stehende Bedingungen 1 und 2 gleichzeitig erfüllt sind.</div>
+<div class="line"><br /></div>
+<div class="line">Bedingung 1:  Der Eingang für den Differenzdruckschalter <em>xPFb</em> befindet sich mindestens während Wartezeit <em>udiPFbControlTime</em> permanent im Zustand FALSE ( = Luftmangelsituation ).</div>
+<div class="line"><br /></div>
+<div class="line">Bedingung 2:  Die Betriebsmeldung für den Ventilator <em>xFb</em> befindet sich mindestens während Wartezeit <em>udiPFControlTime</em> permanent im Zustand TRUE ( = Ventilator in Betrieb ).</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Der Ausgang - Störmeldung <em>xAlarmPFb</em> wird in folgenden Fällen deaktiviert ( <em>xAlarmPFb</em> = FALSE ):</div>
+<div class="line"><br /></div>
+<div class="line">Fall 1:       Die Bedingungen 1 und / oder 2 sind nicht erfüllt und die Rücksetzung der Störmeldung <em>xQuit</em> ist aktiv ( = TRUE ).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="storungsanzeige">
+<h3>Störungsanzeige<a class="headerlink" href="#storungsanzeige" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Es werden bei Bedarf am Ausgang <em>sAlarm</em> folgende Störungstexte ausgegeben ( 1 = höchste Priorität )</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">1:</th><td class="field-body">&#8216;Fan Störung Hardware&#8217;          ( <em>xAlarmIn</em> = TRUE )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">2:</th><td class="field-body">&#8216;Fan Störung Betriebsüberwachung&#8217;   ( <em>xAlarmFb</em> = TRUE )</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">3:</th><td class="field-body">&#8216;Fan Störung Luftmangel&#8217;        ( Luftmangelstörung = TRUE )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">4:</th><td class="field-body">&#8216;Fan Störung Reparaturschalter&#8217;         ( <a href="#id4"><span class="problematic" id="id5">*</span></a>xMSwitch = FALSE )</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">5:</th><td class="field-body">&#8216;&#8217;                  ( keine Störung aktiv )</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sammelstormeldung-xalarm">
+<h3>Sammelstörmeldung <em>xAlarm</em><a class="headerlink" href="#sammelstormeldung-xalarm" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Sammelstörmeldung wird aktiviert ( = TRUE ), falls mindestens eine der nachfolgend beschriebenen Bedingungen erfüllt ist.</div>
+<div class="line"><br /></div>
+<div class="line"><em>xAlarmIn</em>        = TRUE  ( Störmeldung des Ventilators ist aktiv )</div>
+<div class="line"><em>xAlarmFB</em>        = TRUE  ( Fehler aus der Betriebüberwachung )</div>
+<div class="line">Luftmangel            = TRUE  ( Fehler aus der Luftmangelüberwachung )</div>
+<div class="line"><em>xMSwitch</em>            = FALSE ( Reparaturschalter wurde ausgelöst )</div>
+<div class="line"><br /></div>
+<div class="line">In allen übrigen Fällen ist die Sammelstörung nicht aktiv ( = FALSE ).</div>
+</div>
+</div>
+<div class="section" id="statusanzeige">
+<h3>Statusanzeige<a class="headerlink" href="#statusanzeige" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Es werden bei Bedarf am Ausgang <em>sStatus</em> folgende Statustexte ausgegeben ( 1 = höchste Priorität )</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">1:</th><td class="field-body">&#8216;Inhalt von <em>sAlarm</em>&#8216;   ( <em>sAlarm</em> ungleich &#8216;&#8217; )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">2:</th><td class="field-body">&#8216;Ein über Automatik&#8217;    ( <em>eAOO</em> = HVACTYPES.eManBin.Auto UND <strong>eManModeB</strong> = eMANBIN.Auto UND <em>xFb</em> = TRUE )</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">3:</th><td class="field-body">&#8216;Aus über Automatik&#8217;    ( <em>eAOO</em> = HVACTYPES.eManBin.Auto UND <strong>eManModeB</strong> = eMANBIN.Auto UND <em>xFb</em> = FALSE )</td>
+</tr>
+<tr class="field-even field"><th class="field-name">4:</th><td class="field-body">&#8216;Ein über Hand Software&#8217;    ( <em>eAOO</em> = HVACTYPES.eManBin.Auto UND <strong>eManModeB</strong> ungleich eMANBIN.Auto UND <em>xFb</em> = TRUE )</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">5:</th><td class="field-body">&#8216;Aus über Hand Software&#8217;    ( <em>eAOO</em> = HVACTYPES.eManBin.Auto UND <strong>eManModeB</strong> ungleich eMANBIN.Auto UND <em>xFb</em> = FALSE</td>
+</tr>
+<tr class="field-even field"><th class="field-name">6:</th><td class="field-body">&#8216;Ein über Hand Hardware&#8217;    ( <em>eAOO</em> = ungleich HVACTYPES.eManBin.Auto UND <em>xFb</em> = TRUE )</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">7:</th><td class="field-body">&#8216;Aus über Hand Hardware&#8217;    ( <em>eAOO</em> = ungleich HVACTYPES.eManBin.Auto UND <em>xFb</em> = FALSE )</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id6">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head">Autoren</th>
+<th class="head">Datum</th>
+<th class="head">Version</th>
+<th class="head">Anmerkungen</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Funktion</td>
+<td>Alexander Halter</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-odd"><td>Programmierung</td>
+<td>Adam Bartod</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Alexander Halter</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-odd"><td>Dokumentation</td>
+<td>Jochen Reu</td>
+<td>11.2017</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="15%" />
+<col width="10%" />
+<col width="19%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="7">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anforderung des Ventilators</td>
+</tr>
+<tr class="row-odd"><td>xFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Betriebsmeldung des Ventilators</td>
+</tr>
+<tr class="row-even"><td>xPFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Meldung der Luftmangelsituation</td>
+</tr>
+<tr class="row-odd"><td>xMSwitch</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Meldung des Reparaturschalters</td>
+</tr>
+<tr class="row-even"><td>xAlarmIn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Störmeldung des Ventilators</td>
+</tr>
+<tr class="row-odd"><td>eAOO</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/emanbin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td>Betriebsart der Handübersteuerung - Hardware</td>
+</tr>
+<tr class="row-even"><td>xQuit</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Rücksetzung der Störmeldungen ( Betriebsüberwachung,
+Luftmangelüberwachung )</td>
+</tr>
+<tr class="row-odd"><td rowspan="10">Output</td>
+<td>xHB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Ventilator nach Handübersteuerung</td>
+</tr>
+<tr class="row-even"><td>xAB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Ventilator vor Handübersteuerung</td>
+</tr>
+<tr class="row-odd"><td>xAlarmFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Störmeldung der Betriebsüberwachung</td>
+</tr>
+<tr class="row-even"><td>xAlarmPFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Störmeldung der Luftmangelüberwachung</td>
+</tr>
+<tr class="row-odd"><td>dtLastFb</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td>Datum / Uhrzeit des letzten Betriebs des Ventilators</td>
+</tr>
+<tr class="row-even"><td>udiOperatingHours</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>Betriebsstunden der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td>udiCountFb</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>Anzahl der Einschaltungen des Ventilators</td>
+</tr>
+<tr class="row-even"><td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Sammelstörung</td>
+</tr>
+<tr class="row-odd"><td>sAlarm</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Meldungstexte für Störungen</td>
+</tr>
+<tr class="row-even"><td>sStatus</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Meldungstexte für den Betriebsstatus</td>
+</tr>
+<tr class="row-odd"><td rowspan="5">Input</td>
+<td>udiPFbControlTime</td>
+<td>UDINT</td>
+<td>30</td>
+<td>Meldeverzögerung der Luftmangelüberwachung</td>
+</tr>
+<tr class="row-even"><td>xAlarmControl</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Einfluss von <em>xAlarm</em> auf <em>xAB</em></td>
+</tr>
+<tr class="row-odd"><td>udiFbControlTime</td>
+<td>UDINT</td>
+<td>60</td>
+<td>Meldeverzögerung der Betriebsüberwachung</td>
+</tr>
+<tr class="row-even"><td>xFbControl</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Freigabe / Sperrung der Betriebsüberwachung</td>
+</tr>
+<tr class="row-odd"><td>eManModeB</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/emanbin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung für den digitalen Ausgang
+<em>xHB</em></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../t0o5b1FIxCZejC-NUk089_GVC2k/mquit.html">Fan1Speed.mQuit (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../t0o5b1FIxCZejC-NUk089_GVC2k/mresetoperatingh.html">Fan1Speed.mResetOperatingHours (METH)</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../t0o5b1FIxCZejC-NUk089_GVC2k/mquit.html" class="btn btn-neutral float-right" title="Fan1Speed.mQuit (METH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../tTevF1tGYGyuxF3C8qEqLb0S6sA/mresetoperatingh.html" class="btn btn-neutral" title="DuoPump.mResetOperatingHours (METH)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'de',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

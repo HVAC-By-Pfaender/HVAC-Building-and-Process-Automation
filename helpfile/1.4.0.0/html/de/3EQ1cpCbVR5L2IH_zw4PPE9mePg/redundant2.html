@@ -1,0 +1,873 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Redundant2 (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Monitoring" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html" />
+    <link rel="prev" title="OpModeSelect.mSetAuto (METH)" href="../BCHsLUJ_NqO2Ay9s8F9Y0DhLYx8/msetauto.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-General.html">General</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cdate.html">CDate (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ctime.html">CTime (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ctod.html">CToD (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="maninfo.html">ManInfo (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxstring2binfun.html">MuxString2BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxstring4binfun.html">MuxString4BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxstring5binfun.html">MuxString5BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxstring5fun.html">MuxString5Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="opmodeselect.html">OpModeSelect (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Redundant2 (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-General.html">General</a> &raquo;</li>
+        
+      <li>Redundant2 (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-general-redundant2"></span><div class="section" id="redundant2-fb">
+<span id="redundant2"></span><span id="index-0"></span><h1>Redundant2 (FB)<a class="headerlink" href="#redundant2-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK Redundant2</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Redundante Steuerung von zwei gleichartigen Geräten</div>
+<div class="line">Einflussfaktoren: Anforderungen, Betriebsstunden, Betriebs- und Störzustände</div>
+<div class="line">Typische Anwendung: Festlegung der Führungs- und Folgepumpe</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/Redundant2_FB.png" src="../_images/Redundant2_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xEnOne</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anforderung - Führungsgerät</td>
+</tr>
+<tr class="row-odd"><td><em>xEnTwo</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anforderung - Führungs- und Folgegerät</td>
+</tr>
+<tr class="row-even"><td><em>xFb1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Betrieb - Gerät 1</td>
+</tr>
+<tr class="row-odd"><td><em>xFb2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Betrieb - Gerät 2</td>
+</tr>
+<tr class="row-even"><td><em>xAlarm1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Störung - Gerät 1</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarm2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Störung - Gerät 2</td>
+</tr>
+<tr class="row-even"><td><em>uiOperatingHours1</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Betriebsstunden - Gerät 1</td>
+</tr>
+<tr class="row-odd"><td><em>uiOperatingHours2</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Betriebsstunden - Gerät 2</td>
+</tr>
+<tr class="row-even"><td><em>xUpdate</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Eingang - Folgeschaltung nach Betriebsstunden</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>iCurrentSequence</em></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Aktuelle Gerätefolge</td>
+</tr>
+<tr class="row-odd"><td><em>xCmd1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe - Gerät 1</td>
+</tr>
+<tr class="row-even"><td><em>xCmd2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe - Gerät 2</td>
+</tr>
+<tr class="row-odd"><td><em>xErr</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Ausgang - Störung</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>xConOperatingHours</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Freigabe - Folgeschaltung nach Betriebsstunden</td>
+</tr>
+<tr class="row-odd"><td><strong>xEnFb</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Freigabe - Verwendung der Betriebsmeldungen</td>
+</tr>
+<tr class="row-even"><td><strong>wTolerance</strong></td>
+<td>WORD</td>
+<td>&nbsp;</td>
+<td>100</td>
+<td>Grenzwert - Betriebsstundendifferenz</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein dient zur redundanten Steuerung von zwei gleichartigen Geräten in Abhängigkeit von den Einflußgrößen</div>
+<div class="line">Anforderungen ( <em>xEnOne</em> und <em>xEnTwo</em> ), Betriebstunden ( <em>uiOperatingHours1</em> und <em>uiOperatingHours2</em> ), Betriebszuständen ( <em>xFb1</em> und <em>xFb2</em> )</div>
+<div class="line">und Störzuständen ( <em>xAlarm1</em> und <em>xAlarm2</em> ). Die Freigabe des Führungs- und bei Bedarf des Folgegerätes wird intern festgelegt und unter</div>
+<div class="line">Berücksichtigung der aktuellen Folge <em>iCurrentSequence</em> auf die Geräteausgänge <em>xCmd1</em> bzw. <em>xCmd2</em> übertragen.</div>
+</div>
+</div>
+<div class="section" id="anforderungen-xenone-und-xentwo">
+<h3>Anforderungen <em>xEnOne</em> und <em>xEnTwo</em><a class="headerlink" href="#anforderungen-xenone-und-xentwo" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Sie dienen zur Festlegung, ob nur das Führungsgerät oder das Führungs- und das Folgegerät angefordert werden sollen.</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="anforderungen">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xEnOne</em></th>
+<th class="head"><em>xEnTwo</em></th>
+<th class="head">Führungsgerät</th>
+<th class="head">Folgegerät</th>
+<th class="head">Hinweis</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>Keine Anforderung</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>Anforderung - Führungsgerät</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>Anforderung - Führungs- und Folgegerät</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = Unbestimmt</div>
+</div>
+</div>
+<div class="section" id="ausgang-storung-xerr">
+<h3>Ausgang Störung <em>xErr</em><a class="headerlink" href="#ausgang-storung-xerr" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Er zeigt eine Diskrepanz zwischen den Anforderungen und den Störzuständen der Geräte an.</div>
+<div class="line">In der Funktionstabelle werden die Konstellationen beschrieben, die den Ausgang <em>xErr</em> ( = TRUE ) aktivieren, d.h eine Störung anzeigen.</div>
+<div class="line">In allen übrigen Fällen ist der Ausgang <em>xErr</em> nicht aktiv ( = FALSE ).</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="storausgang">
+<colgroup>
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xEnOne</em></th>
+<th class="head"><em>xEnTwo</em></th>
+<th class="head"><em>xAlarm1</em></th>
+<th class="head"><em>xAlarm2</em></th>
+<th class="head"><em>xErr</em></th>
+<th class="head">Hinweis</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TRUE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>Anforderung - Führungsgerät und beide Geräte gestört</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>Anforderung - Führungs- und Folgegerät und mindestens ein Gerät gestört</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>TRUE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>Anforderung - Führungs- und Folgegerät und mindestens ein Gerät gestört</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = Unbestimmt</div>
+</div>
+</div>
+<div class="section" id="ausgang-icurrentsequence">
+<h3>Ausgang <em>iCurrentSequence</em><a class="headerlink" href="#ausgang-icurrentsequence" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Er zeigt stets die aktuelle Folge der beiden Geräte an.</div>
+<div class="line">Die erste Ziffer zeigt stets die Gerätenummer des Führungsgerätes an ( Beispiel: <em>iCurrentSequence</em> = 1X ... Führungsgerät = Gerät 1 )</div>
+<div class="line">Die zweite Ziffer zeigt stets die Gerätenummer des Folgegeräts an.   ( Beispiel: <em>iCurrentSequence</em> = X2 ... Folgegerät = Gerät 2 )</div>
+</div>
+</div>
+<div class="section" id="sollwert-parameter-xconoperatinghours">
+<h3>Sollwert / Parameter <strong>xConOperatingHours</strong><a class="headerlink" href="#sollwert-parameter-xconoperatinghours" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Im Zustand TRUE wird bei jeder Abarbeitung des Funktionsblocks die Folgeschaltung in Abhängigkeit von den Betriebsstunden und Betriebsmeldungen</div>
+<div class="line">( bei <strong>xEnFb</strong> = TRUE ) der Geräte 1 und 2 ausgelöst. Im Zustand FALSE kann die Folgeschaltung nur noch durch eine ansteigende Flanke am Eingang</div>
+<div class="line"><em>xUpdate</em> ausgelöst werden.</div>
+</div>
+</div>
+<div class="section" id="sollwert-parameter-xenfb">
+<h3>Sollwert / Parameter <strong>xEnFb</strong><a class="headerlink" href="#sollwert-parameter-xenfb" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Im Zustand TRUE werden in der Folgeschaltung die Betriebzustände der Geräte 1 und 2 ausgewertet und berücksichtigt.</div>
+<div class="line">Im Zustand FALSE werden in der Folgeschaltung die Geräteausgänge der Geräte 1 und 2 ausgewertet und berücksichtigt.</div>
+</div>
+</div>
+<div class="section" id="sollwert-parameter-wtolerance">
+<h3>Sollwert / Parameter <strong>wTolerance</strong><a class="headerlink" href="#sollwert-parameter-wtolerance" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Sollwert bestimmt die maximale Betriebsstundendifferenz vor einer Umschaltung des Führungs- und des Folgegeräts aufgrund der Betriebsstunden.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="bestimmung-des-fuhrungs-und-des-folgegerats">
+<h3>Bestimmung des Führungs- und des Folgegeräts<a class="headerlink" href="#bestimmung-des-fuhrungs-und-des-folgegerats" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><p>Umschaltung mit hoher Priorität in Abhängigkeit von den Störzuständen der Geräte 1 und 2</p>
+<table border="1" class="docutils" id="fuhrungs-folgegerat">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAlarm1</em></th>
+<th class="head"><em>xAlarm2</em></th>
+<th class="head">Führungsgerät</th>
+<th class="head">Folgegerät</th>
+<th class="head">Hinweis</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>nicht beeinflusst</td>
+<td>nicht beeinflusst</td>
+<td>Beide Geräte ohne Störung</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>FALSE</td>
+<td>Gerät 2</td>
+<td>Gerät 1</td>
+<td>Gerät 1 gestört</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>TRUE</td>
+<td>Gerät 1</td>
+<td>Gerät 2</td>
+<td>Gerät 2 gestört</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = Unbestimmt</div>
+</div>
+<blockquote>
+<div><p>Umschaltung mit niedriger Priorität in Abhängigkeit von den Betriebsstunden, Betriebsmeldungen ( <strong>xEnFb</strong> = TRUE )
+und Freigabeausgänge ( <strong>xEnFb</strong> = FALSE ) der Geräte 1 und 2</p>
+<p>Eine Neubewertung und -festlegung mit niedriger Priorität kann dabei jeweils wie folgt ausgelöst werden:</p>
+<p><strong>xConOperatingHours</strong> = TRUE und / oder ansteigende Flanke am Eingang <em>xUpdate</em></p>
+<table border="1" class="docutils" id="umschaltung-zusammenfassung">
+<colgroup>
+<col width="9%" />
+<col width="18%" />
+<col width="36%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>xConOperatingHours</strong></th>
+<th class="head"><em>xUpdate</em></th>
+<th class="head">Bedingungen</th>
+<th class="head">Führungsgerät</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE, TRUE, H/L</td>
+<td>&nbsp;</td>
+<td>keine Neubewertung</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>FALSE, TRUE, H/L</td>
+<td>gleiche Betriebsmeldungen ( <strong>xEnFb</strong> = TRUE ) oder gleiche Freigabeausgänge ( <strong>xEnFb</strong> = FALSE ) der Geräte</td>
+<td>Gerät mit geringerer Betriebstundenanzahl</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>FALSE, TRUE, H/L</td>
+<td>Ein Gerät in Betrieb ( <strong>xEnFb</strong> = TRUE ) oder ein Gerät freigegeben ( <strong>xEnFb</strong> = FALSE )</td>
+<td>Wechsel zum Gerät mit geringerer Betriebstundenanzahl, falls Betriebsstundendifferenz &gt; <strong>wTolerance</strong></td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>L/H</td>
+<td><em>uiOperatingHours1</em> = <em>uiOperatingHours2</em> = 0 ( keine Betriebsstunden vorhanden )</td>
+<td>Wechsel des Führungs- mit dem Folgegerät</td>
+</tr>
+<tr class="row-even"><td>FALSE</td>
+<td>L/H</td>
+<td><em>uiOperatingHours1</em> oder <em>uiOperatingHours2</em> &gt; 0</td>
+<td>Gerät mit geringerer Betriebstundenanzahl</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: L/H ... ansteigende Flanke, H/L ... abfallende Flanke</div>
+</div>
+</div>
+<div class="section" id="gerateausgange-xcmd1-und-xcmd2">
+<h3>Geräteausgänge <em>xCmd1</em> und <em>xCmd2</em><a class="headerlink" href="#gerateausgange-xcmd1-und-xcmd2" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Geräteausgänge werden abschließend wie folgt festgelegt:</p>
+<p>Führungsgerät = Gerät 1</p>
+<p><em>xCmd1</em> = TRUE: Das Führungsgerät ist angefordert und mindestens ein Gerät ist angefordert und das Gerät 1 ist nicht gestört
+<em>xCmd1</em> = FALSE: In allen übrigen Fällen</p>
+<p><em>xCmd2</em> = TRUE: Das Folgegerät ist angefordert und mindestens ein Gerät ist angefordert und das Gerät 2 ist nicht gestört
+<em>xCmd2</em> = FALSE: In allen übrigen Fällen</p>
+<p>Führungsgerät = Gerät 2</p>
+<p><em>xCmd1</em> = TRUE: Das Folgegerät ist angefordert und mindestens ein Gerät ist angefordert und das Gerät 1 ist nicht gestört
+<em>xCmd1</em> = FALSE:    In allen übrigen Fällen</p>
+<p><em>xCmd2</em> = TRUE: Das Führungsgerät ist angefordert und mindestens ein Gerät ist angefordert und das Gerät 2 ist nicht gestört
+<em>xCmd2</em> = FALSE:    In allen übrigen Fällen</p>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head">Autoren</th>
+<th class="head">Datum</th>
+<th class="head">Version</th>
+<th class="head">Anmerkungen</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Funktion</td>
+<td>Adam Bartod</td>
+<td>09.2016</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-odd"><td>Programmierung</td>
+<td>Adam Bartod</td>
+<td>09.2016</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Jochen Reu</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+<tr class="row-odd"><td>Dokumentation</td>
+<td>Jochen Reu</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td>Ursprungsversion</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="8%" />
+<col width="19%" />
+<col width="7%" />
+<col width="9%" />
+<col width="57%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="12">Input</td>
+<td>xEnOne</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anforderung - Führungsgerät</td>
+</tr>
+<tr class="row-odd"><td>xEnTwo</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anforderung - Führungs- / Folgegerät</td>
+</tr>
+<tr class="row-even"><td>xFb1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Betrieb - Gerät 1</td>
+</tr>
+<tr class="row-odd"><td>xFb2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Betrieb - Gerät 2</td>
+</tr>
+<tr class="row-even"><td>xAlarm1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Störung - Gerät 1</td>
+</tr>
+<tr class="row-odd"><td>xAlarm2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Störung - Gerät 2</td>
+</tr>
+<tr class="row-even"><td>uiOperatingHours1</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>Betriebsstunden - Gerät 1</td>
+</tr>
+<tr class="row-odd"><td>uiOperatingHours2</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>Betriebsstunden - Gerät 2</td>
+</tr>
+<tr class="row-even"><td>xUpdate</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Vergleich der Betriebsstunden bei Flanke</td>
+</tr>
+<tr class="row-odd"><td>xConOperatingHours</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Freigabe - kontinuierlicher Vergleich der Betriebsstunden</td>
+</tr>
+<tr class="row-even"><td>xEnFb</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Verwendung von FALSE = Freigabe; TRUE = Betriebsmeldung</td>
+</tr>
+<tr class="row-odd"><td>wTolerance</td>
+<td>WORD</td>
+<td>100</td>
+<td>Grenzwert - Betriebsstundendifferenz für direkten
+Folgewechsel wenn nur ein Gerät in Betrieb ist</td>
+</tr>
+<tr class="row-even"><td rowspan="4">Output</td>
+<td>iCurrentSequence</td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>Aktuelle Gerätefolge</td>
+</tr>
+<tr class="row-odd"><td>xCmd1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Gerät 1</td>
+</tr>
+<tr class="row-even"><td>xCmd2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Gerät 2</td>
+</tr>
+<tr class="row-odd"><td>xErr</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Ausgang - Störung</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html" class="btn btn-neutral float-right" title="Monitoring" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../BCHsLUJ_NqO2Ay9s8F9Y0DhLYx8/msetauto.html" class="btn btn-neutral" title="OpModeSelect.mSetAuto (METH)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'de',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
