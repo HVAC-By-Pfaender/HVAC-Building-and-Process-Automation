@@ -33,7 +33,9 @@ The HVAC Building & Process Automation product requires a license, which can be 
 ## Documentation
 
 There is a detailed documentation for each HVAC component available. 
+
 [Click here](https://cdn.rawgit.com/HVAC-By-Pfaender/HVAC-Building-and-Process-Automation/af9b2e50/helpfile/1.4.0.0/html/en/index.html) to view the documentation in englisch.
+
 [Click here](https://cdn.rawgit.com/HVAC-By-Pfaender/HVAC-Building-and-Process-Automation/07785ecc/helpfile/1.4.0.0/html/de/index.html) to view the documentation in german.
 
 
