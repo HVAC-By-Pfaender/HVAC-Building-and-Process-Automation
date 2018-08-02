@@ -1,0 +1,591 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Position3P (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Numeric" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html" />
+    <link rel="prev" title="FilterMonitoringB (FB)" href="filtermonitoring.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Monitoring.html">Monitoring</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="airshortage.html">AirShortage (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filtermonitoring.html">FilterMonitoringB (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Position3P (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Monitoring.html">Monitoring</a> &raquo;</li>
+        
+      <li>Position3P (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-monitoring-position3p"></span><div class="section" id="position3p-fb">
+<span id="position3p"></span><span id="index-0"></span><h1>Position3P (FB)<a class="headerlink" href="#position3p-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK Position3P</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Calculation of the current position of a 3-point drive</div>
+<div class="line">In addition, a reference position (limit switch) of the drive can be detected.</div>
+<div class="line">Typical application: Determining the position on a 3-point valve drive</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/Position3P_FB.png" src="../_images/Position3P_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xOutOpen</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Input - Release - Opening</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xOutClose</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Input - Release - Closing</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xRefPos</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Digital input to detect the reference position (limit Switch).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rPos</em></td>
+<td>REAL</td>
+<td><strong>rMinLimit</strong> bis <strong>rMaxLimit</strong></td>
+<td>&nbsp;</td>
+<td><p class="first last">Display of the current position in %.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>iRefPosition</strong></td>
+<td>INT</td>
+<td>0 - 100</td>
+<td>0%</td>
+<td><p class="first last">Reference position of the drive</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>rMinLimit</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td><p class="first last">Limit value - minimum position</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>rMaxLimit</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>100.0</td>
+<td><p class="first last">Limit value - maximum position</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>tDuration</strong></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>T#120s</td>
+<td><p class="first last">Operating time of the drive</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block is used to calculate the current position of a 3-point drive that has no position feedback.</div>
+<div class="line">The calculation is based on the duration of the signals at the inputs &#8220;Input - Release - Opening&#8221; <em>xOutOpen</em> and &#8220;Input - Release - Closing&#8221; <em>xOutClose</em>.</div>
+<div class="line">Every rising edge at the digital input <em>xRefPos</em> (i.e. the drive is currently in its reference position) results in a new definition of the</div>
+<div class="line">analog output signal <em>rPos</em> to the setpoint/parameter <strong>iRefPosition</strong>.</div>
+</div>
+</div>
+<div class="section" id="referenzposition">
+<h3>Reference position<a class="headerlink" href="#referenzposition" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The digital input <em>xRefPos</em> allows for a readjustment of the position display <em>rPos</em> to a predefined value <strong>iRefPosition</strong> (0% = rest position - 100% = maximum position).</div>
+<div class="line">Every rising edge at the digital input triggers a readjustment.</div>
+</div>
+</div>
+<div class="section" id="positionsanzeige-rpos">
+<h3>Position indicator <em>rPos</em><a class="headerlink" href="#positionsanzeige-rpos" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">It is used to show the current position of the 3-point drive in the <strong>rMinLimit</strong> to <strong>rMaxLimit</strong> range and is calculated internally. Signals at the input <em>xOutOpen</em> increase</div>
+<div class="line">the value of the position display; signals at the input <a href="#id1"><span class="problematic" id="id2">*</span></a>xOutClose*reduce the value of the position indicator.</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Limitations/Information</p>
+<div class="line-block">
+<div class="line">The 3-point drive must move linearly, i.e. execute the same position changes within the same time segments.</div>
+<div class="line">A position change via a possibly existing manual override hardware is not registered.</div>
+<div class="line">To avoid deviations between the calculated position and the actual position, it is recommended to initiate a readjustment of the position indicator periodically.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head"><p class="first last">Authors</p>
+</th>
+<th class="head"><p class="first last">Date</p>
+</th>
+<th class="head">Version</th>
+<th class="head"><p class="first last">Note</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Function</p>
+</td>
+<td>Adam Bartod</td>
+<td>11.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Programming</p>
+</td>
+<td>Adam Bartod</td>
+<td>11.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Jochen Reu /</td>
+<td>11.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Documentation</p>
+</td>
+<td>Jochen Reu</td>
+<td>11.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="13%" />
+<col width="6%" />
+<col width="13%" />
+<col width="61%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="7">Input</td>
+<td>xOutOpen</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Input - Release - Opening</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xOutClose</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Input - Release - Closing</p>
+</td>
+</tr>
+<tr class="row-even"><td>xRefPos</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Digital signal for detecting the reference position (limit switch)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>iRefPosition</td>
+<td>INT</td>
+<td>0</td>
+<td><p class="first last">Reference position of the drive</p>
+</td>
+</tr>
+<tr class="row-even"><td>rMinLimit</td>
+<td>REAL</td>
+<td>0.0</td>
+<td><p class="first last">Limit value - minimum position</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rMaxLimit</td>
+<td>REAL</td>
+<td>100.0</td>
+<td><p class="first last">Limit value - maximum position</p>
+</td>
+</tr>
+<tr class="row-even"><td>tDuration</td>
+<td>TIME</td>
+<td>TIME#2m0s0ms</td>
+<td><p class="first last">Operating time of the drive</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Output</td>
+<td>rPos</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Display of the current position in %.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html" class="btn btn-neutral float-right" title="Numeric" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="filtermonitoring.html" class="btn btn-neutral" title="FilterMonitoringB (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,972 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OpModeSelect (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OpModeSelect.mSetAuto (METH)" href="../BCHsLUJ_NqO2Ay9s8F9Y0DhLYx8/msetauto.html" />
+    <link rel="prev" title="MuxString5Fun (FUN)" href="muxstring5fun.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-General.html">General</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cdate.html">CDate (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ctime.html">CTime (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ctod.html">CToD (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="maninfo.html">ManInfo (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxstring2binfun.html">MuxString2BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxstring4binfun.html">MuxString4BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxstring5binfun.html">MuxString5BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxstring5fun.html">MuxString5Fun (FUN)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">OpModeSelect (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="redundant2.html">Redundant2 (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-General.html">General</a> &raquo;</li>
+        
+      <li>OpModeSelect (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-general-opmodeselect"></span><div class="section" id="opmodeselect-fb">
+<span id="opmodeselect"></span><span id="index-0"></span><h1>OpModeSelect (FB)<a class="headerlink" href="#opmodeselect-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK OpModeSelect EXTENDS MANASBase IMPLEMENTS IMan</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Operating mode selector for switching between a maximum of 6 operating modes (automatic and 5 manual operating modes)</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/OpModeSelect_FB.png" src="../_images/OpModeSelect_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xIn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">State variable for <em>xActive</em> in automatic mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Outputs<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xActive</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Output variable in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAutoM0</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode display in automatic mode</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xManOffM1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode display in manual off mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xManM2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode display in manual mode 1</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xManM3</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode display in manual mode 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xManM4</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode display in manual mode 3</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xManM5</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode display in manual mode 4</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xActMode</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Name of the current operating mode (e.g. &#8216;Automatic&#8217;)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>tToggleTime</strong></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>2s</td>
+<td><p class="first last">Time delay for switching the operating mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eMaxMode</strong></td>
+<td>eOpMode</td>
+<td>&nbsp;</td>
+<td>eOpMode.Mode5</td>
+<td><p class="first last">Maximum number of manual operating modes</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xOpModeToggle</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Switch operating mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xResAuto</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Reset to automatic mode</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xEn</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Enable</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>sTitle</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Betriebsmodus &#8216;</td>
+<td><p class="first last">Name of the operating mode (OP) selector</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>sTitle2</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Beschreibung &#8216;</td>
+<td><p class="first last">Description of the OP selector</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eMode</strong></td>
+<td>eOpMode</td>
+<td>&nbsp;</td>
+<td>eOpMode.Mode0</td>
+<td><p class="first last">Current state of the OP mode selector</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>sTitleM0</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Automatik&#8217;</td>
+<td><p class="first last">Description of the automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>sTitleM1</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Hand Aus&#8217;</td>
+<td><p class="first last">Description of the manual off mode</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>sTitleM2</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Hand 1&#8217;</td>
+<td><p class="first last">Description of the manual mode 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>sTitleM3</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Hand 2&#8217;</td>
+<td><p class="first last">Description of the manual mode 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>sTitleM4</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Hand 3&#8217;</td>
+<td><p class="first last">Description of the manual mode 3</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>sTitleM5</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Hand 4&#8217;</td>
+<td><p class="first last">Description of the manual mode 4</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The operating mode selector is used to switch between <em>eMaxMode</em> +1 different operating modes (automatic, manual off and <em>eMaxMode</em>-1 manual-operating modes).</div>
+<div class="line">A rising edge at the variable <em>xOpModeToggle</em> triggers the switching process (Requirement: <em>xEn</em> =TRUE).</div>
+<div class="line">The switchover is continuous, i.e. after the last manual operating mode, the automatic mode is selected with the next switching operation.</div>
+<div class="line">.</div>
+<div class="line">Die Betriebsart kann explizit auch durch die Auswahl des Sollwerts / Parameter <strong>eMode</strong> im Bereich eOpMode.Mode0 - <strong>eMaxMode</strong> erfolgen.</div>
+<div class="line">Die aktuelle Betriebsart wird numerisch durch den Sollwert/Parameter <strong>eMode</strong> im Bereich eOpMode.Mode0 - <strong>eMaxMode</strong> dargestellt.</div>
+<div class="line">It is additionally represented by the corresponding digital outputs xAutoM0, xManOffM1, xManM2, xManM3, etc.</div>
+</div>
+</div>
+<div class="section" id="zustandsvariable-xin">
+<h3>Variable <em>xIn</em>.<a class="headerlink" href="#zustandsvariable-xin" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="zustandsvariable">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">In</th>
+<th class="head"><em>xActive</em></th>
+<th class="head"><p class="first last">Note</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>Nur im Automatikbetrieb ( <strong>eMode</strong> = eOpMode.Mode0 ) gültig</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>TRUE</td>
+<td>Nur im Automatikbetrieb ( <strong>eMode</strong> = eOpMode.Mode0 ) gültig</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgangsvariable-xactive">
+<h3>Output variable xActive<a class="headerlink" href="#ausgangsvariable-xactive" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Im Automatikbetrieb ( <strong>eMode</strong> = eOpMode.Mode0 ) folgt die Ausgangsvariable <em>xActive</em> der Eingangsveriablen <em>xIn</em>.</div>
+<div class="line">With all other operating modes, the status FALSE is always active.</div>
+</div>
+</div>
+<div class="section" id="rucksetzung-in-den-automatikbetrieb">
+<h3>Reset to automatic mode<a class="headerlink" href="#rucksetzung-in-den-automatikbetrieb" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Each rising edge at setpoint/parameter <strong>xResAuto</strong> activates the automatic mode, if the</div>
+<div class="line">Setpoint/parameter <strong>xEn</strong> is TRUE.</div>
+</div>
+</div>
+<div class="section" id="freigabe-sperrung-der-umschaltung">
+<h3>Enabling/disabling switching<a class="headerlink" href="#freigabe-sperrung-der-umschaltung" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The operating mode can only be changed if the setpoint/parameter <strong>xEn</strong> is</div>
+<div class="line">TRUE.</div>
+</div>
+</div>
+<div class="section" id="umschaltverzogerung-ttoggletime">
+<h3>Switching delay <strong>tToggleTime</strong><a class="headerlink" href="#umschaltverzogerung-ttoggletime" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The length of time between activation of mode switching and actual switching</div>
+<div class="line">can be set via the setpoint/parameter <strong>tToggleTime</strong>. The length of time only starts after the</div>
+<div class="line">the operating modes have been switched over via the setpoint/parameter <strong>xOpModeToggle</strong>.</div>
+</div>
+</div>
+<div class="section" id="betriebsarten">
+<h3>Operating modes<a class="headerlink" href="#betriebsarten" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="7%" />
+<col width="20%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>eMode</strong></th>
+<th class="head"><p class="first last">Name of the operating mode</p>
+</th>
+<th class="head"><em>xIn</em></th>
+<th class="head"><em>xActive</em></th>
+<th class="head"><em>xAutoM0</em></th>
+<th class="head"><em>xManOffM1</em></th>
+<th class="head"><em>xManM2</em></th>
+<th class="head"><em>xManM3</em></th>
+<th class="head"><em>xManM4</em></th>
+<th class="head"><em>xManM5</em></th>
+<th class="head"><p class="first last">Note</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eOpMode.Mode0</td>
+<td><strong>sTitleM0</strong></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode automatic</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eOpMode.Mode0</td>
+<td><strong>sTitleM0</strong></td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode automatic</p>
+</td>
+</tr>
+<tr class="row-even"><td>eOpMode.Mode1</td>
+<td><strong>sTitleM1</strong></td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode manual-off</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eOpMode.Mode2</td>
+<td><strong>sTitleM2</strong></td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode manual 1</p>
+</td>
+</tr>
+<tr class="row-even"><td>eOpMode.Mode3</td>
+<td><strong>sTitleM3</strong></td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode manual 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eOpMode.Mode4</td>
+<td><strong>sTitleM4</strong></td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td><p class="first last">Operating mode manual 3</p>
+</td>
+</tr>
+<tr class="row-even"><td>eOpMode.Mode5</td>
+<td><strong>sTitleM5</strong></td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td><p class="first last">Operating mode manual 4</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = Undefined</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id5">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head"><p class="first last">Authors</p>
+</th>
+<th class="head"><p class="first last">Date</p>
+</th>
+<th class="head">Version</th>
+<th class="head"><p class="first last">Note</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Function</p>
+</td>
+<td>Adam Bartod</td>
+<td>11.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial Version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Programming</p>
+</td>
+<td>Adam Bartod</td>
+<td>02.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial Version</p>
+</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Jochen Reu</td>
+<td>02.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial Version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Documentation</p>
+</td>
+<td>Jochen Reu</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial Version</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="14%" />
+<col width="12%" />
+<col width="16%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="15">Input</td>
+<td>xIn</td>
+<td>BOOL</td>
+<td>0</td>
+<td><p class="first last">State variable for <em>xActive</em> in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>tToggleTime</td>
+<td>TIME</td>
+<td>TIME#2s0ms</td>
+<td><p class="first last">Time delay for switching the operating mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>eMaxMode</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/eopmode.html#eopmode"><span class="std std-ref">eOpMode</span></a></td>
+<td>eOpMode.Mode5</td>
+<td><p class="first last">Maximum number of manual operating modes</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xOpModeToggle</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Switch operating mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>xResAuto</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Reset to automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xEn</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Enable</p>
+</td>
+</tr>
+<tr class="row-even"><td>sTitle</td>
+<td>STRING</td>
+<td>&#8216;Betriebsmodus&#8217;</td>
+<td><p class="first last">Name of the operating mode (OP) selector</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sTitle2</td>
+<td>STRING</td>
+<td>&#8216;Beschreibung&#8217;</td>
+<td><p class="first last">Description of the OP selector</p>
+</td>
+</tr>
+<tr class="row-even"><td>eMode</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/eopmode.html#eopmode"><span class="std std-ref">eOpMode</span></a></td>
+<td>eOpMode.Mode0</td>
+<td><p class="first last">Current state of the OP mode selector</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sTitleM0</td>
+<td>STRING</td>
+<td>&#8216;Automatik&#8217;</td>
+<td><p class="first last">Description of the automatic mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>sTitleM1</td>
+<td>STRING</td>
+<td>&#8216;Hand Aus&#8217;</td>
+<td><p class="first last">Description of the manual off mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sTitleM2</td>
+<td>STRING</td>
+<td>&#8216;Hand 1&#8217;</td>
+<td><p class="first last">Description of the manual mode 1</p>
+</td>
+</tr>
+<tr class="row-even"><td>sTitleM3</td>
+<td>STRING</td>
+<td>&#8216;Hand 2&#8217;</td>
+<td><p class="first last">Description of the manual mode 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sTitleM4</td>
+<td>STRING</td>
+<td>&#8216;Hand 3&#8217;</td>
+<td><p class="first last">Description of the manual mode 3</p>
+</td>
+</tr>
+<tr class="row-even"><td>sTitleM5</td>
+<td>STRING</td>
+<td>&#8216;Hand 4&#8217;</td>
+<td><p class="first last">Description of the manual mode 4</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="8">Output</td>
+<td>xActive</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Output variable in automatic mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAutoM0</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating mode display in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xManOffM1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating mode display in manual off mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>xManM2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating mode display in manual mode 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xManM3</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating mode display in manual mode 2</p>
+</td>
+</tr>
+<tr class="row-even"><td>xManM4</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating mode display in manual mode 3</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xManM5</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating mode display in manual mode 4</p>
+</td>
+</tr>
+<tr class="row-even"><td>xActMode</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">Name of the current operating mode (e.g. &#8216;Automatic&#8217;)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../BCHsLUJ_NqO2Ay9s8F9Y0DhLYx8/msetauto.html">OpModeSelect.mSetAuto (METH)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../BCHsLUJ_NqO2Ay9s8F9Y0DhLYx8/msetauto.html#kurzbeschreibung-methode-msetauto">Kurzbeschreibung Methode (mSetAuto)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../BCHsLUJ_NqO2Ay9s8F9Y0DhLYx8/msetauto.html" class="btn btn-neutral float-right" title="OpModeSelect.mSetAuto (METH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="muxstring5fun.html" class="btn btn-neutral" title="MuxString5Fun (FUN)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

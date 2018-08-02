@@ -1,0 +1,1550 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DuoPump (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DuoPump.mQuit (METH)" href="../tTevF1tGYGyuxF3C8qEqLb0S6sA/mquit.html" />
+    <link rel="prev" title="DamperAnalog (FB)" href="damperanalog.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="damper2p.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="damperanalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fan1speed.html">Fan1Speed ​​(FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pump.html">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="valve3p.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="valveanalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="valvetherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>DuoPump (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-duopump"></span><div class="section" id="duopump-fb">
+<span id="duopump"></span><span id="index-0"></span><h1>DuoPump (FB)<a class="headerlink" href="#duopump-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK DuoPump</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Redundant control of two similar circulation pumps with blocking protection function</div>
+<div class="line">Additional functions: Request for heat generation, manual override, pump run-on, operating hours counter, operation monitoring</div>
+<div class="line">Typical application: Redundant control of a double pump in one heating circuit</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/DuoPump_FB.png" src="../_images/DuoPump_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xEnOne</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Requirement of the lead pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xEnTwo</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Requirement of the lead and follower pump</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xFb1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating message of the circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xFb2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating message of the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xAlarmIn1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">failure message of the circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarmIn2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">failure message of the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>eAOO1</em></td>
+<td>HVACTYPES.eManBin</td>
+<td>HVACTYPES.eManBin.Auto, HVACTYPES.eManBin.ManOff, HVACTYPES.eManBin.ManOn</td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td><p class="first last">Operating mode of manual override - Hardware cirulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>eAOO2</em></td>
+<td>HVACTYPES.eManBin</td>
+<td>HVACTYPES.eManBin.Auto, HVACTYPES.eManBin.ManOff, HVACTYPES.eManBin.ManOn</td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td><p class="first last">Operating mode of manual override - Hardware cirulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xQuit</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Resetting the fault message of the operational monitoring</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Outputs<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xHB1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Release - cirulation pump 1 after manual override</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xHB2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Release - cirulation pump 2 after manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xAB1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Release - cirulation pump 1 before manual override</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAB2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Release - cirulation pump 2 before manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xHeatRequest</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Requirement of heat generation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarmFb1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Fault message - Operation monitoring - Circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xAlarmFb2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Fault message - Operation monitoring - Circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>tOffDelay</em></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Remaining shut-off time of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>dtLastFb1</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last operation of the circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>dtLastFb2</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last operation of the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>dtAbsLastOn1</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last blocking protection operation of the circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>dtAbsLastOn2</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last blocking protection operation of the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>udiOperatingHours1</strong></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating hours of the circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>udiOperatingHours2</strong></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating hours of the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>udiCountFb1</strong></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of activations of the circulating pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>udiCountFb2</strong></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of activations of the circulating pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xAlarm1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective fault - Circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarm2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective fault - Circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xAlarm</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective fault</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>sAlarm</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Message texts for faults</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>sStatus</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Message texts for the operating status</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>xAlarmControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Option Fault message of the circulation pump acts on the enable before manual override.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>udiFbControlTime</strong></td>
+<td>UDINT</td>
+<td>0 bis 300s</td>
+<td>60s</td>
+<td><p class="first last">Duration of operation monitoring</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xFbControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Release of the operation monitoring</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>tAbsTime</strong></td>
+<td>UDINT</td>
+<td>0 bis 3600s</td>
+<td>120s</td>
+<td><p class="first last">Duration of blocking protection operation</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>tAbsStartTime</strong></td>
+<td>TOD</td>
+<td>00:00:00 - 23:59:59 Uhr</td>
+<td>08:00:00 Uhr</td>
+<td><p class="first last">Time point of blocking protection operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eAbsDay</strong></td>
+<td>eDoW</td>
+<td>eDoW.Monday bis eDoW.Sunday</td>
+<td>eDoW.Monday</td>
+<td><p class="first last">Weekday of the blocking protection operation</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>eOffDelayTimeBase</strong></td>
+<td>eTime</td>
+<td>eTime.Second, eTime.Minute, eTime.Hour</td>
+<td>eTime.Second</td>
+<td><p class="first last">Scaling of the follow-up time ( seconds / minutes / hours )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>udiOffDelay</strong></td>
+<td>UDINT</td>
+<td>0 bis 600s</td>
+<td>120s</td>
+<td><p class="first last">Follow-up time of the circulation pumps</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>eManModeB2</strong></td>
+<td>eMANBIN</td>
+<td>eMANBIN.Auto, eMANBIN.ManOff, eMANBIN.ManOn</td>
+<td>eMANBIN.Auto</td>
+<td><p class="first last">Manual override mode for the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eManModeB1</strong></td>
+<td>eMANBIN</td>
+<td>eMANBIN.Auto, eMANBIN.ManOff, eMANBIN.ManOn</td>
+<td>eMANBIN.Auto</td>
+<td><p class="first last">Manual override mode for the circulation pump 1</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block controls two similar circulation pumps in redundant operation.</div>
+<div class="line">The number of required circulation pumps is selected via the inputs <em>xEnOne</em> and <em>xEnTwo</em>.</div>
+<div class="line">The circulation pumps 1 and 2 are enabled via the outputs <em>xHB1</em> and <em>xHB2</em> or <em>xAB1</em> and <em>xAB2</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Essentially, the following function blocks are used:</div>
+</div>
+<p><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/redundant2.html#redundant2"><span class="std std-ref">Redundant2</span></a></p>
+<p><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/absb.html#absb"><span class="std std-ref">AbsB</span></a></p>
+<p><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/operatinghours.html#operatinghours"><span class="std std-ref">OperatingHours</span></a></p>
+<p><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/manbin.html#manbin"><span class="std std-ref">ManBin</span></a></p>
+</div>
+<div class="section" id="redundante-steuerung">
+<h3>Redundant control<a class="headerlink" href="#redundante-steuerung" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">It is used for redundant control of the two circulation pumps depending on the influencing factors requirements (<em>xEnOne</em> and <em>xEnTwo</em>),</div>
+<div class="line">Operating hours (<em>udiOperatingHours1</em> and <em>udiOperatingHours2</em>), operating states (<em>xFb1</em> and <em>xFb2</em>) and fault states (<em>xAlarm1</em> and <em>xAlarm2</em>).</div>
+<div class="line">The release of the lead and, if required, of the follower pump is determined internally and transferred to the internal outputs <em>xCmd1</em> or <em>xCmd2</em></div>
+<div class="line">, taking into account the current sequence.</div>
+<div class="line"><br /></div>
+<div class="line">The lead pump is required if it is requested by the <em>xEnOne</em> input and / or while the pump run-on time is active.</div>
+<div class="line">The lead and follower pumps are required when requested by the <em>xEnTwo</em> input.</div>
+<div class="line">Requirements at input <em>xEnTwo</em> have priority over requirements at input <em>xEnOne</em>.</div>
+<div class="line"><br /></div>
+<div class="line">The operating message of the circulation pump 1 is active if the input <em>xFb1</em> is active and / or at the same time the</div>
+<div class="line">Enable - Circulation pump 1 after manual override <em>xHB1</em> with disabled operating monitoring (<em>xFbControl</em> = FALSE) is active.</div>
+<div class="line">The operating message of circulation pump 2 is active if the input <em>xFb2</em> is active and / or</div>
+<div class="line">at the same time the enable circulation pump 2 is active after manual override <em>xHB2</em> with blocked operating monitoring (<em>xFbControl</em> = FALSE).</div>
+<div class="line"><br /></div>
+<div class="line">The control or follower pump is selected with high priority via the states at the fault message of the circulation pumps.</div>
+<div class="line"><em>xAlarmIn1</em> - <em>xAlarmIn2</em> ( fault = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">The control or follower pump is selected with low priority over the current number of operating hours of the</div>
+<div class="line">circulation pumps.</div>
+<div class="line">The switch-over takes place according to different criteria, which are described in detail in FB Redundant2.</div>
+<div class="line">The options <strong>xConOperatingHours</strong> and <strong>xEnFb</strong> are enabled (= TRUE).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="freigabe-umwalzpumpe-1-vor-handubersteuerung-xab1">
+<h3>Enable - circulation pump 1 before manual override <em>xAB1</em>.<a class="headerlink" href="#freigabe-umwalzpumpe-1-vor-handubersteuerung-xab1" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The output <em>xAB1</em> is influenced by the redundant control,</div>
+<div class="line">the output <em>xAlarm1</em> (if <a href="#id1"><span class="problematic" id="id2">**</span></a>xAlarmControl = TRUE), the tracking module and the blocking protection module.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="20%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Redundant control</p>
+</th>
+<th class="head"><em>xAlarm1</em></th>
+<th class="head"><em>xAlarmControl</em></th>
+<th class="head"><p class="first last">Follow-up period</p>
+</th>
+<th class="head"><p class="first last">blocking protection module</p>
+</th>
+<th class="head"><em>xAB1</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>X</td>
+<td>FALSE</td>
+<td><p class="first last">Shutdown enabled via collective fault</p>
+</td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Disabling via redundant control</p>
+</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>x</td>
+<td>FALSe</td>
+<td>FALSe</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td><p class="first last">Release via redundant control</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>X</td>
+<td>FALSe</td>
+<td>TRUE</td>
+<td>X</td>
+<td>TRUE</td>
+<td><p class="first last">Follow-up operation</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>x</td>
+<td>FALSE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td><p class="first last">blocking protection mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="freigabe-umwalzpumpe-2-vor-handubersteuerung-xab2">
+<h3>Enable - Circulation pump 2 before manual override <em>xAB2</em>.<a class="headerlink" href="#freigabe-umwalzpumpe-2-vor-handubersteuerung-xab2" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The output <em>xAB2</em> by the redundant control, the output <em>xAlarm2</em> (if <a href="#id1"><span class="problematic" id="id2">**</span></a>xAlarmControl = TRUE),</div>
+<div class="line">the output <em>xAlarm1</em> (if <a href="#id1"><span class="problematic" id="id2">**</span></a>xAlarmControl = TRUE), the tracking module and the blocking protection module.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-2">
+<colgroup>
+<col width="20%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Redundant control</p>
+</th>
+<th class="head"><em>xAlarm2</em></th>
+<th class="head"><em>xAlarmControl</em></th>
+<th class="head"><p class="first last">Follow-up period</p>
+</th>
+<th class="head"><p class="first last">blocking protection module</p>
+</th>
+<th class="head"><em>xAB2</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>X</td>
+<td>FALSE</td>
+<td><p class="first last">Shutdown enabled via collective fault</p>
+</td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Disabling via redundant control</p>
+</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>x</td>
+<td>FALSe</td>
+<td>FALSe</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td><p class="first last">Release via redundant control</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>X</td>
+<td>FALSe</td>
+<td>TRUE</td>
+<td>X</td>
+<td>TRUE</td>
+<td><p class="first last">Follow-up operation</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>x</td>
+<td>FALSE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td><p class="first last">blocking protection mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="freigabe-umwalzpumpe-1-nach-handubersteuerung-xhb1">
+<h3>enable - circulation pump 1 after manual override <em>xHB1</em>.<a class="headerlink" href="#freigabe-umwalzpumpe-1-nach-handubersteuerung-xhb1" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Enable - circulation pump 1 after manual override <em>xHB1</em> corresponds to the enable - circulation pump 1 before manual override <em>xAB1</em>,</div>
+<div class="line">additionally extended by a manual override module.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-3">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAB1</em></th>
+<th class="head">eMANBIN</th>
+<th class="head"><em>xHB1</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eMANBIN.Auto</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>eMANBIN.ManOn</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in manual mode On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANBIN.ManOff</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in manual mode Off</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="freigabe-umwalzpumpe-2-nach-handubersteuerung-xhb2">
+<h3>Enable - Circulation pump 2 after manual override <em>xHB2</em>.<a class="headerlink" href="#freigabe-umwalzpumpe-2-nach-handubersteuerung-xhb2" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Enable - circulation pump 2 after manual override <em>xHB2</em> corresponds to the Release - circulation pump 2 before manual override <em>xAB2</em>,</div>
+<div class="line">additionally extended by a manual override module.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-4">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAB2</em></th>
+<th class="head">eMANBIN</th>
+<th class="head"><em>xHB2</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eMANBIN.Auto</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>eMANBIN.ManOn</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in manual mode On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANBIN.ManOff</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in manual mode Off</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="betriebsmeldungen-xfb1-und-xfb2">
+<h3>operating messages <em>xFb1</em> and <em>xFb2</em><a class="headerlink" href="#betriebsmeldungen-xfb1-und-xfb2" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Circulation pump 1 in operation:         <em>xFb1</em> = TRUE</div>
+<div class="line">Circulation pump 1 not in operation:         <em>xFb1</em> = FALSE</div>
+<div class="line"><br /></div>
+<div class="line">Circulation pump 2 in operation:         <em>xFb2</em> = TRUE</div>
+<div class="line">Circulation pump 2 not in operation:         <em>xFb2</em> = FALSE</div>
+</div>
+</div>
+<div class="section" id="stormeldungen-xalarmin1-und-xalarmin2">
+<h3>Fault messages <em>xAlarmIn1</em> and <em>xAlarmIn2</em><a class="headerlink" href="#stormeldungen-xalarmin1-und-xalarmin2" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Circulation pump 1 faulty: <em>xAlarmIn1</em> = TRUE</div>
+<div class="line">Circulation pump 1 not faulty: <em>xAlarmIn1</em> = FALSE</div>
+<div class="line"><br /></div>
+<div class="line">Circulation pump 2 faulty: <em>xAlarmIn2</em> = TRUE</div>
+<div class="line">Circulation pump 2 not faulty: <em>xAlarmIn2</em> = TRUE</div>
+</div>
+</div>
+<div class="section" id="rucksetzung-der-stormeldung-der-betriebsuberwachungen-xquit">
+<h3>Resetting the fault signal of the operational monitoring systems <em>xQuit</em><a class="headerlink" href="#rucksetzung-der-stormeldung-der-betriebsuberwachungen-xquit" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The resetting of the fault message from the operating monitors <em>xAlarmFb1</em> and <em>xAlarmFb2</em> is performed as long as</div>
+<div class="line">the resetting of the fault signal from the operating monitors <em>xQuit</em> is active (= TRUE).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="anforderung-warmeerzeugung-xheatrequest">
+<h3>Requirement - heat generation <em>xHeatRequest</em><a class="headerlink" href="#anforderung-warmeerzeugung-xheatrequest" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The requirement - heat generation <em>xHeatRequest</em> is influenced by the redundant control system, the blocking protection module,</div>
+<div class="line">the follow-up module and the operating feedback signals of the circulation pumps 1 and 2 <em>xFb1</em> and <em>xFb2</em>.</div>
+<div class="line"><br /></div>
+<div class="line">The request - heat generation <em>xHeatRequest</em> is active in following two cases (= TRUE):</div>
+<div class="line"><br /></div>
+<div class="line">Condition 1:</div>
+<div class="line"><br /></div>
+<div class="line">At least one circulation pump is required by the redundant control and / or by the blocking protection module.</div>
+<div class="line"><br /></div>
+<div class="line">Condition 2:</div>
+<div class="line"><br /></div>
+<div class="line">There is no request via the inputs <em>xEnOne</em> and / or <em>xEnTwo</em> and at the same time at least one of the</div>
+<div class="line">operating messages of the circulation pumps <em>xFb1</em> and / or <em>xFb2</em> is active.</div>
+<div class="line"><br /></div>
+<div class="line">Case 1:</div>
+<div class="line"><br /></div>
+<div class="line">Condition 1 = TRUE and condition 2 = FALSE</div>
+<div class="line"><br /></div>
+<div class="line">Case 2:</div>
+<div class="line"><br /></div>
+<div class="line">Condition 1 = FALSE and condition 2 = TRUE</div>
+<div class="line"><br /></div>
+<div class="line">In all other situations the requirement - heat generation <em>xHeatRequest</em> is not active (= FALSE).</div>
+</div>
+</div>
+<div class="section" id="nachlaufmodul">
+<h3>Follow-up period<a class="headerlink" href="#nachlaufmodul" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The follow-up is implemented by a switch-off delay with an adjustable duration <strong>udiOffDelay</strong>. The follow-up module</div>
+<div class="line">is activated if there is no requirement on the inputs <em>xEnOne*or rather at *xEnTwo</em>.</div>
+<div class="line">an der Führungspumpe statt.</div>
+</div>
+</div>
+<div class="section" id="blockierschutzmodule">
+<h3>Blocking protection modules<a class="headerlink" href="#blockierschutzmodule" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The blocking protection modules are implemented by the binary blocking protection module with adjustable duration.</div>
+<div class="line">The time duration <em>tAbsTime</em>, the time point <strong>tAbsStartTime</strong> and the weekday <strong>eAbsDay</strong> are adjustable.</div>
+<div class="line">The time stamp (date / time) of the last blocking protection operation is available separately for each circulation pump</div>
+<div class="line">at the outputs <em>dtAbsLastOn1</em> or <em>dtAbsLastOn2</em>.</div>
+</div>
+</div>
+<div class="section" id="sammelstorung-umwalzpumpe-1-xalarm1">
+<h3>Collective fault - Circulation pump 1 <em>xAlarm1</em><a class="headerlink" href="#sammelstorung-umwalzpumpe-1-xalarm1" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective fault - circulating pump 1 <em>xAlarm1</em> is active (= TRUE) if the fault message of the circulating pump 1 <em>xAlarmIn1</em> is active</div>
+<div class="line">(= TRUE) and / or a fault message - operating monitoring - circulating pump 1 <em>xAlarmFb1</em> (= TRUE) is present.</div>
+<div class="line">In all other situations, the collective fault - circulation pump 1 <em>xAlarm1</em> is not active (= FALSE).</div>
+</div>
+</div>
+<div class="section" id="sammelstorung-umwalzpumpe-2-xalarm2">
+<h3>Collective fault - Circulation pump 2 <em>xAlarm2</em><a class="headerlink" href="#sammelstorung-umwalzpumpe-2-xalarm2" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective fault - circulating pump 2 <em>xAlarm2</em> is active (= TRUE) if the fault message of the circulating pump 2 <em>xAlarmIn2</em> is active</div>
+<div class="line">(= TRUE) and / or a fault message - operating monitoring - circulating pump 2 <em>xAlarmFb2</em> (= TRUE) is present.</div>
+<div class="line">In all other situations, the collective fault - circulation pump 2 <em>xAlarm2</em> is not active (= FALSE).</div>
+</div>
+</div>
+<div class="section" id="sammelstorung-xalarm">
+<h3><em>xAlarm</em> collective fault<a class="headerlink" href="#sammelstorung-xalarm" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective fault <em>xAlarm</em> is active if the collective fault - circulation pump 1 <em>xAlarm1</em> is active and / or</div>
+<div class="line">the collective fault - circlulation pump 2 <em>xAlarm2</em> is active.</div>
+<div class="line">In all other cases, the collective fault <em>xAlarm</em> is not active (= FALSE).</div>
+</div>
+</div>
+<div class="section" id="betriebsstundenzahler-umwalzpumpe-1">
+<h3>Operating hours counter - circulation pump 1<a class="headerlink" href="#betriebsstundenzahler-umwalzpumpe-1" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The operating hours counter for circulation pump 1 is active in following cases:</div>
+<div class="line"><br /></div>
+<div class="line">Case 1:</div>
+<div class="line"><br /></div>
+<div class="line">This case is active if all subsequent conditions are active at the same time.</div>
+<div class="line"><br /></div>
+<div class="line">Release of the operation monitoring <strong>xFbControl</strong>       = TRUE</div>
+<div class="line">Collective fault - Circulation pump 1 <em>xAlarm1</em>           = FALSE</div>
+<div class="line">Operating message of the Circulation pump 1:         <em>xFb1</em> = TRUE</div>
+<div class="line"><br /></div>
+<div class="line">Case 2:</div>
+<div class="line"><br /></div>
+<div class="line">This case is active if all subsequent conditions are active at the same time.</div>
+<div class="line"><br /></div>
+<div class="line">Release of the operation monitoring <strong>xFbControl</strong>       = FALSE</div>
+<div class="line">enable - circulation pump 1 after manual override <em>xHB1</em>    = TRUE</div>
+<div class="line"><br /></div>
+<div class="line">In all other situations the operating hours counter is not active</div>
+</div>
+</div>
+<div class="section" id="betriebsstundenzahler-umwalzpumpe-2">
+<h3>Operating hours counter - circulation pump 2<a class="headerlink" href="#betriebsstundenzahler-umwalzpumpe-2" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The operating hours counter for circulation pump 2 is active in following cases:</div>
+<div class="line"><br /></div>
+<div class="line">Case 1:</div>
+<div class="line"><br /></div>
+<div class="line">This case is active if all subsequent conditions are active at the same time.</div>
+<div class="line"><br /></div>
+<div class="line">Release of the operation monitoring <strong>xFbControl</strong>       = TRUE</div>
+<div class="line">Collective fault - Circulation pump 2 <em>xAlarm2</em>           = FALSE</div>
+<div class="line">Operating message of the Circulation pump 2:         <em>xFb2</em> = TRUE</div>
+<div class="line"><br /></div>
+<div class="line">Case 2:</div>
+<div class="line"><br /></div>
+<div class="line">This case is active if all subsequent conditions are active at the same time.</div>
+<div class="line"><br /></div>
+<div class="line">Release of the operation monitoring <strong>xFbControl</strong>       = FALSE</div>
+<div class="line">Enable - Circulation pump 2 after manual override <em>xHB2</em>    = TRUE</div>
+<div class="line"><br /></div>
+<div class="line">In all other situations the operating hours counter is not active</div>
+</div>
+</div>
+<div class="section" id="betriebsuberwachung-umwalzpumpe-1">
+<h3>Operation monitoring - Circulation pump 1<a class="headerlink" href="#betriebsuberwachung-umwalzpumpe-1" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The operation monitoring monitors the correct function of the circulation pump 1.</div>
+<div class="line">The monitoring can generally be enabled (<strong>xFbControl</strong> = TRUE) or disabled (<strong>xFbControl</strong> = FALSE).</div>
+<div class="line">The operating mode of the manual override - hardware circulation pump 1 must be in automatic mode (<em>eAOOO1</em> = HVACTYPES. eManBin. Auto).</div>
+<div class="line"><br /></div>
+<div class="line">The collective fault – operation monitoring – circulation pump 1 <em>xAlarmFb1</em> is activated (=TRUE), if the states of the inputs</div>
+<div class="line">Betriebsüberwachung**udiFbControlTime** die Zustände des Eingängs <em>xFb1</em> und des Ausgangs <em>xHb1</em> ungleich sind.</div>
+<div class="line"><br /></div>
+<div class="line">The collective fault - operation monitoring - circulation pump 1 <em>xAlarmFb1</em> is deactivated (=FALSE), if at least one</div>
+<div class="line">of the following conditions are active:</div>
+<div class="line"><br /></div>
+<div class="line"><em>eAOO1</em> = HVACTYPES.eManBin.Auto (Switch to automatic mode of manual override - Hardware).</div>
+<div class="line">Reset of the collective fault of the operation monitoring <em>xQuit</em> = TRUE</div>
+<div class="line">Release of the operation monitoring <strong>xFbControl</strong> = FALSE</div>
+</div>
+</div>
+<div class="section" id="betriebsuberwachung-umwalzpumpe-2">
+<h3>Operation monitoring - Circulation pump 2<a class="headerlink" href="#betriebsuberwachung-umwalzpumpe-2" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The operation monitoring monitors the correct function of the circulation pump 2</div>
+<div class="line">The monitoring can generally be enabled (<strong>xFbControl</strong> = TRUE) or disabled (<strong>xFbControl</strong> = FALSE).</div>
+<div class="line">The operating mode of the manual override - hardware circulation pump 2 must be in automatic mode (<em>eAOO2</em> = HVACTYPES. eManBin. Auto).</div>
+<div class="line"><br /></div>
+<div class="line">The collective fault – operation monitoring – circulation pump 2 <em>xAlarmFb2</em> is activated (=TRUE), if the states of the inputs</div>
+<div class="line"><em>xFb2</em> and the Outputs <em>xHb2</em> are unequal during the time duration of the operation monitoring <strong>udiFbControlTime</strong></div>
+<div class="line"><br /></div>
+<div class="line">The collective fault - operation monitoring - circulation pump 2 <em>xAlarmFb1</em> is deactivated (=FALSE), if at least one</div>
+<div class="line">of the following conditions are active:</div>
+<div class="line"><br /></div>
+<div class="line"><em>eAOO2</em> = HVACTYPES.eManBin.Auto (Switch to automatic mode of manual override - Hardware).</div>
+<div class="line">Reset of the collective fault of the operation monitoring <em>xQuit</em> = TRUE</div>
+<div class="line">Release of the operation monitoring <strong>xFbControl</strong> = FALSE</div>
+</div>
+</div>
+<div class="section" id="meldungstexte-fur-storungen-salarm">
+<h3>Message texts for faults <em>sAlarm</em><a class="headerlink" href="#meldungstexte-fur-storungen-salarm" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">If necessary, the following error message texts are generated at output <em>sAlarm</em> (1 = highest priority):</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">1:</th><td class="field-body"><p class="first last">&#8216;CP 1 hardware error&#8217;             ( <a href="#id1"><span class="problematic" id="id2">*</span></a>xAlarmIn1*= TRUE )</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">2:</th><td class="field-body"><p class="first last">&#8216;CP 2 hardware error&#8217;             ( <a href="#id1"><span class="problematic" id="id2">*</span></a>xAlarmIn2*= TRUE )</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">3:</th><td class="field-body"><p class="first last">&#8216;CP 1 Fault Operation monitoring&#8217;  ( <em>xAlarmFb1</em> = TRUE )</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">4:</th><td class="field-body"><p class="first last">&#8216;CP 2 Fault Operation monitoring&#8217;  ( <em>xAlarmFb2</em> = TRUE )</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">5:</th><td class="field-body"><p class="first last">&#8216;&#8217;                  (no fault active)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="statusanzeige-sstatus">
+<h3>Status display <em>sStatus</em><a class="headerlink" href="#statusanzeige-sstatus" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">If required, the following status texts are displayed at the output <em>sStatus</em> (1 = highest priority)</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">1:</th><td class="field-body"><p class="first last">&#8216;Content of <em>sAlarm</em>&#8216;   (<em>sAlarm</em> unequal &#8216;&#8217;)</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">2:</th><td class="field-body"><p class="first last">&#8216;On via manual Hardware&#8217;    ( <em>eAOO1</em> = <em>eAOO2</em> = HVACTYPES.eManBin.Auto AND <strong>eManModeB1</strong> = <strong>eManModeB2</strong> = eMANBIN.Auto AND <em>xFb1</em> and / or <a href="#id1"><span class="problematic" id="id2">*</span></a>xFb2*= TRUE )</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">3:</th><td class="field-body"><p class="first last">&#8216;Off via manual Hardware&#8217;    ( <em>eAOO1</em> = <em>eAOO2</em> = HVACTYPES.eManBin.Auto AND <strong>eManModeB1</strong> = <strong>eManModeB2</strong> = eMANBIN.Auto AND <em>xFb1</em> and <a href="#id1"><span class="problematic" id="id2">*</span></a>xFb2*= FALSE )</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">4:</th><td class="field-body"><p class="first last">&#8216;On via manual Hardware&#8217;    ( <em>eAOO1</em> = <em>eAOO2</em> = HVACTYPES.eManBin.Auto AND <strong>eManModeB1</strong> OR <strong>eManModeB2</strong> unequal eMANBIN.Auto AND <em>xFb1</em> and / or <a href="#id1"><span class="problematic" id="id2">*</span></a>xFb2*= TRUE )</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">5:</th><td class="field-body"><p class="first last">&#8216;Off via manual Hardware&#8217;    ( <em>eAOO1</em> = <em>eAOO2</em> = HVACTYPES.eManBin.Auto AND <strong>eManModeB1</strong> OR <strong>eManModeB2</strong> unequal eMANBIN.Auto AND <em>xFb1</em> and / or <a href="#id1"><span class="problematic" id="id2">*</span></a>xFb2*= FALSE )</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">6:</th><td class="field-body"><p class="first last">&#8216;On via manual Hardware&#8217;    ( <em>eAOO1</em> or <em>eAOO2</em> unequal HVACTYPES.eManBin.Auto AND <em>xFb1</em> and <a href="#id1"><span class="problematic" id="id2">*</span></a>xFb2*= FALSE )</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">7:</th><td class="field-body"><p class="first last">&#8216;Off via manual Hardware&#8217;    ( <em>eAOO1</em> or <em>eAOO2</em> unequal HVACTYPES.eManBin.Auto AND <em>xFb1</em> and <a href="#id1"><span class="problematic" id="id2">*</span></a>xFb2*= FALSE )</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id20">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head"><p class="first last">Authors</p>
+</th>
+<th class="head">Datum</th>
+<th class="head">Version</th>
+<th class="head"><p class="first last">Note</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Function</p>
+</td>
+<td>Alexander Halter</td>
+<td>04.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Programming</p>
+</td>
+<td>Adam Bartod, Lukas Pfänder</td>
+<td>04.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Alexander Halter</td>
+<td>04.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Documentation</p>
+</td>
+<td>Jochen Reu</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="16%" />
+<col width="10%" />
+<col width="19%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="9">Input</td>
+<td>xEnOne</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Requirement of the lead pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xEnTwo</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Requirement of the lead and follower pump</p>
+</td>
+</tr>
+<tr class="row-even"><td>xFb1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating message of the circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xFb2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating message of the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAlarmIn1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">failure message of the circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarmIn2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">failure message of the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td>eAOO1</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/emanbin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td><p class="first last">Operating mode of manual override - Hardware cirulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eAOO2</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/emanbin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td><p class="first last">Operating mode of manual override - Hardware cirulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td>xQuit</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Resetting the fault message of the operational monitoring</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="21">Output</td>
+<td>xHB1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Release - cirulation pump 1 after manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td>xHB2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Release - cirulation pump 2 after manual override</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAB1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Release - cirulation pump 1 before manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAB2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Release - cirulation pump 2 before manual override</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xHeatRequest</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Requirement of heat generation</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAlarmFb1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Fault message - Operation monitoring - Circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarmFb2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Fault message - Operation monitoring - Circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-even"><td>tOffDelay</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td><p class="first last">Remaining shut-off time of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td>dtLastFb1</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last operation of the circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-even"><td>dtLastFb2</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last operation of the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>dtAbsLastOn1</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last blocking protection operation of the circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-even"><td>dtAbsLastOn2</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last blocking protection operation of the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiOperatingHours1</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating hours of the circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-even"><td>udiOperatingHours2</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating hours of the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiCountFb1</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of activations of the circulating pump 1</p>
+</td>
+</tr>
+<tr class="row-even"><td>udiCountFb2</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of activations of the circulating pump 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarm1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective fault - Circulation pump 1</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAlarm2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective fault - Circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective fault</p>
+</td>
+</tr>
+<tr class="row-even"><td>sAlarm</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">Message texts for faults</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sStatus</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">Message texts for the operating status</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="10">Input</td>
+<td>xAlarmControl</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Option Fault message of the circulation pump acts on the enable before manual override.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiFbControlTime</td>
+<td>UDINT</td>
+<td>60</td>
+<td><p class="first last">Duration of operation monitoring</p>
+</td>
+</tr>
+<tr class="row-even"><td>xFbControl</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Release of the operation monitoring</p>
+</td>
+</tr>
+<tr class="row-odd"><td>tAbsTime</td>
+<td>UDINT</td>
+<td>120</td>
+<td><p class="first last">Duration of blocking protection operation</p>
+</td>
+</tr>
+<tr class="row-even"><td>todAbsStartTime</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#8:0</td>
+<td><p class="first last">Time point of blocking protection operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eAbsDay</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/edow.html#edow"><span class="std std-ref">eDoW</span></a></td>
+<td>eDow.Monday</td>
+<td><p class="first last">Weekday of the blocking protection operation</p>
+</td>
+</tr>
+<tr class="row-even"><td>eOffDelayTimeBase</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/etime.html#etime"><span class="std std-ref">eTime</span></a></td>
+<td>eTime.Second</td>
+<td><p class="first last">Scaling of the follow-up time ( seconds / minutes / hours )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiOffDelay</td>
+<td>UDINT</td>
+<td>120</td>
+<td><p class="first last">Follow-up period of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-even"><td>eManModeB2</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/emanbin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td><p class="first last">Manual override mode for the circulation pump 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eManModeB1</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/emanbin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td><p class="first last">Manual override mode for the circulation pump 1</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tTevF1tGYGyuxF3C8qEqLb0S6sA/mquit.html">DuoPump.mQuit (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tTevF1tGYGyuxF3C8qEqLb0S6sA/mresetoperatingh.html">DuoPump.mResetOperatingHours (METH)</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tTevF1tGYGyuxF3C8qEqLb0S6sA/mquit.html" class="btn btn-neutral float-right" title="DuoPump.mQuit (METH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="damperanalog.html" class="btn btn-neutral" title="DamperAnalog (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

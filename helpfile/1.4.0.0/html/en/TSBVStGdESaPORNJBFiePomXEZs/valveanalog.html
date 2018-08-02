@@ -1,0 +1,814 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ValveAnalog (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ValveTherm (FB)" href="valvetherm.html" />
+    <link rel="prev" title="Valve3P (FB)" href="valve3p.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="damper2p.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="damperanalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="duopump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fan1speed.html">Fan1Speed ​​(FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pump.html">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="valve3p.html">Valve3P (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="valvetherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>ValveAnalog (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-valveanalog"></span><div class="section" id="valveanalog-fb">
+<span id="valveanalog"></span><span id="index-0"></span><h1>ValveAnalog (FB)<a class="headerlink" href="#valveanalog-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK ValveAnalog</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Control of a continuous valve drive with blocking protection function</div>
+<div class="line"><br /></div>
+<div class="line">Typical application: Control valve in a heating circuit</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/ValveAnalog_FB.png" src="../_images/ValveAnalog_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rY</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal off Regulation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>rU</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td><p class="first last">Position feedback from the control valve</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>byAU</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Feedback - Automatic operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>rPoti</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Feedback - Control signal from hardware manual level</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Outputs<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xHA</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal after manual override</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>rAA</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal before manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xAlarm</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">collective fault message</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>dtAbsLastOn</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last blocking protection operation</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>sStatus</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><div class="first line-block">
+<div class="line">Message texts for the operating status (1 = highest priority)</div>
+</div>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">1:</th><td class="field-body"><p class="first last">&#8216;Fault position monitoring&#8217;.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">2:</th><td class="field-body"><p class="first last">&#8216;Control via automatic control&#8217;</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">2:</th><td class="field-body"><p class="first last">&#8216;Controlled by manual hardware&#8217;</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">3:</th><td class="field-body"><p class="first last">&#8216;Control via manual software&#8217;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>udiControlTime</strong></td>
+<td>UDINT</td>
+<td>0 ... 600s</td>
+<td>180s</td>
+<td><p class="first last">Monitoring of the valve position: signal delay</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>rControlDiff</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>7.0%</td>
+<td><p class="first last">Monitoring of the valve position: Maximum position deviation</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Monitoring of the valve position: enable / disable</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>rAbsMaxLimit</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>100.0</td>
+<td><p class="first last">Upper limit value for the control signal before manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>rAbsMinLimit</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td><p class="first last">Lower limit value for the control signal before manual override</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>udiAbsTime</em></td>
+<td>UDINT</td>
+<td>10s ... 600s</td>
+<td>180s</td>
+<td><p class="first last">Duration of blocking protection operation</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>tAbsStartTime</strong></td>
+<td>TOD</td>
+<td>00:00:00 - 23:59:59 Uhr</td>
+<td>08:00:00 Uhr</td>
+<td><p class="first last">Time point of blocking protection operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eAbsDay</strong></td>
+<td>eDoW</td>
+<td>eDoW.Monday ... eDoW.Sunday</td>
+<td>eDoW.Monday</td>
+<td><p class="first last">Weekday of the blocking protection operation</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>rManValue</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td><p class="first last">Manual override: Hand value</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eManModeN</strong></td>
+<td>eMANNUM</td>
+<td>eMANNUM.Auto, eMANNUM.Man</td>
+<td>&nbsp;</td>
+<td><p class="first last">Manual override: Operating mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="stellsignal-vor-handubersteuerung-raa">
+<h3><em>rAA</em> control signal before manual override<a class="headerlink" href="#stellsignal-vor-handubersteuerung-raa" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The <em>rAA</em> control signal before manual override is influenced by the blocking protection module. The blocking protection module is parameterised by the</div>
+<div class="line"><em>udiAbsTime</em>, <strong>tAbsStartTime</strong> und <strong>eAbsDay</strong> set-points/ parameters, the <a href="#id1"><span class="problematic" id="id2">*</span></a>rU*position feedback from the control valve being used as input signal.</div>
+<div class="line">The minimum change in valve position to lock the blockin protection function is fixed at 10.0%.</div>
+<div class="line">The <em>rAA</em> control signal before manual override is limited by ​​**rAbsMinLimit** and <strong>rAbsmaxLimit</strong>, the two absolute limit values.</div>
+<div class="line">The <em>rU</em> position feedback from the control valve can be replaced by the <em>rY</em> control signal from regulation if no position feedback is available.</div>
+</div>
+</div>
+<div class="section" id="stellsignal-nach-handubersteuerung-rha">
+<h3><em>rHA</em> control signal after manual override<a class="headerlink" href="#stellsignal-nach-handubersteuerung-rha" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The <em>rHA</em> control signal after manual override is influenced by the output of the anti-lock module, the <em>rY</em> control signal from regulation and the manual override.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-3">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>eManModeN</strong></th>
+<th class="head"><p class="first last">Blocking protection process</p>
+</th>
+<th class="head"><em>rHA</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eMANNUM.Auto</td>
+<td>FALSE</td>
+<td><em>rY</em></td>
+<td><p class="first last">Automatic operation with passive blocking protection process</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eMANNUM.Auto</td>
+<td>TRUE</td>
+<td><p class="first last">Output of the blocking protection process</p>
+</td>
+<td><p class="first last">Automatic operation with active blocking protection process</p>
+</td>
+</tr>
+<tr class="row-even"><td>eMANNUM.Man</td>
+<td>X</td>
+<td><strong>rManValue</strong></td>
+<td><p class="first last">manual override</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="positionsuberwachung">
+<h3>position monitoring<a class="headerlink" href="#positionsuberwachung" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The position monitoring can be enabled (<a href="#id1"><span class="problematic" id="id2">**</span></a>xControl**= TRUE) or disabled (<a href="#id3"><span class="problematic" id="id4">**</span></a>xControl**= FALSE).</div>
+<div class="line">When position monitoring is enabled, the value of the difference between the <em>rHA</em> control signal after manual override and the <em>rU</em> position feedback from the control valve is permanently determined</div>
+<div class="line">and compared to the <a href="#id1"><span class="problematic" id="id2">**</span></a>rControlDiff**limit value. If this difference permanently exceeds the limit value during a <a href="#id3"><span class="problematic" id="id4">**</span></a>udiControlTime**message delay, an alarm signal is generated if</div>
+<div class="line">at the same time the feedback - automatic operation <a href="#id1"><span class="problematic" id="id2">*</span></a>byAU*signals the automatic operation (<a href="#id3"><span class="problematic" id="id4">*</span></a>byAU*= 0). This alarm signal is displayed with the highest priority at the sStatus output in plain text</div>
+<div class="line">and at the same time the <em>xAlarm</em> collective fault message (<a href="#id1"><span class="problematic" id="id2">*</span></a>xAlarm*= TRUE) is transmitted. The alarm signal is deactivated again (<a href="#id3"><span class="problematic" id="id4">*</span></a>xAlarm*= FALSE) as soon as the difference</div>
+<div class="line">falls again below the limit value</div>
+</div>
+</div>
+<div class="section" id="positionsruckmeldung-vom-regelventil-ru">
+<h3><em>rU</em> position feedback from the control valve<a class="headerlink" href="#positionsruckmeldung-vom-regelventil-ru" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The <em>rU</em> position feedback from the control valve can be replaced by the <em>rY</em> control signal from regulation if no position feedback is available.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="blockierschutzmodul">
+<h3>blocking protection module<a class="headerlink" href="#blockierschutzmodul" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The blocking protection module is implemented by the numerical blocking protection module with adjustable time duration (FB: AbsA).</div>
+<div class="line">The <em>udiAbsTime</em> time period, the <strong>todAbsStartTime</strong> point in time and the <strong>eAbsDay</strong> weekday are adjustable.</div>
+<div class="line">The minimum run time for locking the blocking protection operation is 30s.</div>
+<div class="line">The <em>dtAbsLastOn</em> time stamp (date / time) of the last anti-lock operation is available.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head"><p class="first last">Authors</p>
+</th>
+<th class="head"><p class="first last">Date</p>
+</th>
+<th class="head">Version</th>
+<th class="head"><p class="first last">Note</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Function</p>
+</td>
+<td>Alexander Halter</td>
+<td>06.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Programming</p>
+</td>
+<td>Alexander Halter</td>
+<td>06.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Jochen Reu</td>
+<td>11.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Documentation</p>
+</td>
+<td>Jochen Reu</td>
+<td>11.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="14%" />
+<col width="11%" />
+<col width="20%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="4">Input</td>
+<td>rY</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Stellsignal z.B. vom PI-Regler</td>
+</tr>
+<tr class="row-odd"><td>rU</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Feedback Valve position</p>
+</td>
+</tr>
+<tr class="row-even"><td>eAO</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/emannum.html#emannum"><span class="std std-ref">eManNum</span></a></td>
+<td>HVACTYPES.eManNum.Auto</td>
+<td><p class="first last">Manual - Switch position (A) Auto, (O)n</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rPoti</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Poti position of the hardware manual level</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="5">Output</td>
+<td>rHA</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rAA</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control Regulation</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Fault message via valve position</p>
+</td>
+</tr>
+<tr class="row-odd"><td>dtAbsLastOn</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Last Start ABS function</p>
+</td>
+</tr>
+<tr class="row-even"><td>sStatus</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">Status Message</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="10">Input</td>
+<td>udiControlTime</td>
+<td>UDINT</td>
+<td>180</td>
+<td><p class="first last">Time in seconds from 10sec - 10min</p>
+</td>
+</tr>
+<tr class="row-even"><td>rControlDiff</td>
+<td>REAL</td>
+<td>7</td>
+<td><p class="first last">Maximum permissible deviation between nominal and actual position in %.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xControl</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Enable Monitoring of the valve position</p>
+</td>
+</tr>
+<tr class="row-even"><td>rAbsMaxLimit</td>
+<td>REAL</td>
+<td>100</td>
+<td><p class="first last">Upper limit value for the control signal</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rAbsMinLimit</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Lower limit value for the control signal</p>
+</td>
+</tr>
+<tr class="row-even"><td>udiAbsTime</td>
+<td>UDINT</td>
+<td>180</td>
+<td><p class="first last">ABS Time of the valve. Time in seconds from 0sec - 10min</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todAbsStartTime</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#8:0</td>
+<td><p class="first last">Time at which blocking protection is executed</p>
+</td>
+</tr>
+<tr class="row-even"><td>eAbsDay</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/edow.html#edow"><span class="std std-ref">eDoW</span></a></td>
+<td>eDow.Monday</td>
+<td><p class="first last">Weekday on which the blocking protection is executed</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rManValue</td>
+<td>REAL</td>
+<td>0</td>
+<td>HandWert</td>
+</tr>
+<tr class="row-even"><td>eManModeN</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/emannum.html#emannum"><span class="std std-ref">eMANNUM</span></a></td>
+<td>eMANNUM.Auto</td>
+<td><p class="first last">0=Automatic operation 1=Manual operation</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="valvetherm.html" class="btn btn-neutral float-right" title="ValveTherm (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="valve3p.html" class="btn btn-neutral" title="Valve3P (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

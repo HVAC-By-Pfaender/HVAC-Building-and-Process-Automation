@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AlarmCounter (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Binary" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html" />
+    <link rel="prev" title="Alarming" href="fld-Alarming.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Alarming.html">Alarming</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AlarmCounter (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Alarming.html">Alarming</a> &raquo;</li>
+        
+      <li>AlarmCounter (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-alarming-alarmcounter"></span><div class="section" id="alarmcounter-fb">
+<span id="alarmcounter"></span><span id="index-0"></span><h1>AlarmCounter (FB)<a class="headerlink" href="#alarmcounter-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK AlarmCounter</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Descritpion<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Reading out the active alarms from a predefined alarm group</div>
+<div class="line"><br /></div>
+<div class="line">Typical application: display of the number of active alarms</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/AlarmCounter_FB.png" src="../_images/AlarmCounter_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>udiAlarmgroup</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Alarm group ID</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>sAlarmClass</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Name of the alarm class</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Outputs<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>iTotalActiveAlarms</em></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Total Number of active alarms with the following states: &#8220;Active&#8221;,&#8221;Waiting for acknowledgement&#8221; and &#8220;Active, acknowledged&#8221;)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>iActive</em></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of alarms in &#8220;Active&#8221; state</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>iActiveACK</em></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of alarms in the state &#8220;Active, acknowledged&#8221;</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>iWaitingForACK</em></td>
+<td>INT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of alarms in the state &#8220;Waiting for acknowledgement&#8221;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block is used to read out the number of active alarms in different states.</div>
+<div class="line">In order to read out the number of active alarms, the respective alarm group ID and the alarm class name must be specified.</div>
+<div class="line"><br /></div>
+</div>
+<div class="topic">
+<p class="topic-title first">Determine the alarm group ID <em>udiAlarmgroup</em></p>
+<div class="line-block">
+<div class="line">The alarm group ID is an internally generated ID of CODESYS.</div>
+<div class="line">This ID can be output via the &#8220;AlarmManager library&#8221; of CODESYS.</div>
+<div class="line"><br /></div>
+<div class="line">Note:</div>
+<div class="line">The ID is only available after an alarm group has been created and a build has been carried out.</div>
+<div class="line">In addition, the variable is not automatically completed when you enter it.</div>
+<div class="line"><br /></div>
+<div class="line">Alm_AlarmConfiguration_Alarmgroup_InternalIDs.ID_&lt;Alarmgruppen Name&gt;</div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Determine the name of the alarm class <em>sAlarmClass</em></p>
+<div class="line-block">
+<div class="line">The name of the alarm class is the name of the created alarm class object.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisation<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head"><p class="first last">Authors</p>
+</th>
+<th class="head"><p class="first last">Date</p>
+</th>
+<th class="head">Version</th>
+<th class="head"><p class="first last">Information</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Function</p>
+</td>
+<td>Kevin Rohn</td>
+<td>09.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Programming</p>
+</td>
+<td>Kevin Rohn</td>
+<td>09.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Lukas Pfänder</td>
+<td>10.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Documentation</p>
+</td>
+<td>Kevin Rohn</td>
+<td>11.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="8%" />
+<col width="21%" />
+<col width="8%" />
+<col width="62%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Input</td>
+<td>udiAlarmgroup</td>
+<td>UDINT</td>
+<td><p class="first last">Alarm group ID</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sAlarmclass</td>
+<td>STRING</td>
+<td>Alarmklassen Name</td>
+</tr>
+<tr class="row-even"><td rowspan="4">Output</td>
+<td>iTotalActiveAlarms</td>
+<td>INT</td>
+<td><p class="first last">Total Number of active alarms with the following states: &#8220;Active&#8221;,&#8221;Waiting for acknowledgement&#8221; and &#8220;Active, acknowledged&#8221;)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>iActive</td>
+<td>INT</td>
+<td><p class="first last">Number of alarms in &#8220;Active&#8221; state</p>
+</td>
+</tr>
+<tr class="row-even"><td>iActiveACK</td>
+<td>INT</td>
+<td><p class="first last">Number of alarms in the state &#8220;Active, acknowledged&#8221;</p>
+</td>
+</tr>
+<tr class="row-odd"><td>iWaitingForACK</td>
+<td>INT</td>
+<td><p class="first last">Number of alarms in the state &#8220;Waiting for acknowledgement&#8221;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html" class="btn btn-neutral float-right" title="Binary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fld-Alarming.html" class="btn btn-neutral" title="Alarming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

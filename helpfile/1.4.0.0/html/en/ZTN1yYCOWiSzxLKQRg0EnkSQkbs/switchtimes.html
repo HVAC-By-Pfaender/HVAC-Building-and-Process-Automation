@@ -1,0 +1,983 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SwitchTimeS (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TimeRead (FB)" href="timeread.html" />
+    <link rel="prev" title="PublicHoliday (FB)" href="publicholiday.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Clock.html">Clock</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="clock7d1ch.html">Clock7d1Ch (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clock7d2ch.html">Clock7d2Ch (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="holiday.html">Holiday (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="publicholiday.html">PublicHoliday (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">SwitchTimeS (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timeread.html">TimeRead (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Clock.html">Clock</a> &raquo;</li>
+        
+      <li>SwitchTimeS (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-clock-switchtimes"></span><div class="section" id="switchtimes-fb">
+<span id="switchtimes"></span><span id="index-0"></span><h1>SwitchTimeS (FB)<a class="headerlink" href="#switchtimes-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK SwitchTimeS</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Timer with 5 adjustable time periods and binary output</div>
+<div class="line">Each time period is defined by a switch-on/ switch-off time and a date</div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/SwitchTimeS_FB.png" src="../_images/SwitchTimeS_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xEn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable input</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Outputs<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xActive</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Active time periods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>todActivatedFrom</em></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Switch-on time of the last active time period for the current day</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>todActivatedTo</em></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Switch off time of the last active time period for the current day</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>datCH1_Date</strong></td>
+<td>DATE</td>
+<td>&nbsp;</td>
+<td>DATE#2017-01-01</td>
+<td><p class="first last">Date of the Time period 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todCH1_TimeFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on time of the time period 1</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todCH1_TimeTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off time of the time period 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xCH1_Mode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode of display for time period 1</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>sCH1_Notice</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">&#8216;Custom note - click to change.&#8217;</p>
+</td>
+<td><p class="first last">Text for time period 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>datCH2_Date</strong></td>
+<td>DATE</td>
+<td>&nbsp;</td>
+<td>DATE#2017-01-01</td>
+<td><p class="first last">Date of the time period 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todCH2_TimeFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on time of the time period 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todCH2_TimeTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off time of the time period 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xCH2_Mode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode of display for time period 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>sCH2_Notice</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">&#8216;Custom note - click to change.&#8217;</p>
+</td>
+<td><p class="first last">Text for time period 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>datCH3_Date</strong></td>
+<td>DATE</td>
+<td>&nbsp;</td>
+<td>DATE#2017-01-01</td>
+<td><p class="first last">Date of the time period 3</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todCH3_TimeFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on time of the time period 3</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todCH3_TimeTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off time of the time period 3</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xCH3_Mode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode of display for the time period 3</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>sCH3_Notice</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">&#8216;Custom note - click to change.&#8217;</p>
+</td>
+<td><p class="first last">Text for time period 3</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>datCH4_Date</strong></td>
+<td>DATE</td>
+<td>&nbsp;</td>
+<td>DATE#2017-01-01</td>
+<td><p class="first last">Date of the time period 4</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todCH4_TimeFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on time of the time period 4</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todCH4_TimeTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off time of the time period 4</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xCH4_Mode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode of display for the time period 4</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>sCH4_Notice</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">&#8216;Custom note - click to change.&#8217;</p>
+</td>
+<td><p class="first last">Text for time period 4</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>datCH5_Date</strong></td>
+<td>DATE</td>
+<td>&nbsp;</td>
+<td>DATE#2017-01-01</td>
+<td><p class="first last">Date of the time period 5</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todCH5_TimeFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on time of the time period 5</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todCH5_TimeTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td>Ausschaltzeitpunkt der Zeitperiode 5</td>
+</tr>
+<tr class="row-odd"><td><strong>xCH5_Mode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode of display for the time period 5</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>sCH5_Notice</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">&#8216;Custom note - click to change.&#8217;</p>
+</td>
+<td><p class="first last">Text for the time period 5</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The current point in time (date / time) is permanently compared with the 5 defined time periods.</div>
+<div class="line">The <em>xActive</em> display output assumes the TRUE status if at least one of the 5 time periods is active when the enable input (<em>xEn</em> = TRUE) is active.</div>
+</div>
+</div>
+<div class="section" id="freigabeeingang-xen">
+<h3>Enabling input <em>xEN</em><a class="headerlink" href="#freigabeeingang-xen" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="freigabeeingang">
+<colgroup>
+<col width="8%" />
+<col width="23%" />
+<col width="23%" />
+<col width="23%" />
+<col width="23%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xEn</em></th>
+<th class="head"><em>xActive</em></th>
+<th class="head"><em>todActivatedFrom</em></th>
+<th class="head"><em>todActivatedTo</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">unchanged</p>
+</td>
+<td><p class="first last">unchanged</p>
+</td>
+<td><p class="first last">FB deactivated</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td><p class="first last">Status depending on the 5 time periods</p>
+</td>
+<td><p class="first last">Switch-on time of the last active time period for the current day</p>
+</td>
+<td><p class="first last">Switch off time of the last active time period for the current day</p>
+</td>
+<td><p class="first last">FB activated</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="anzeigeausgang-xactive">
+<h3>Display output <em>xActive</em><a class="headerlink" href="#anzeigeausgang-xactive" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The display output assumes the TRUE status if at least one of the 5 time periods is active when the enable input (<em>xEn</em> = TRUE) is active.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="anzeigeausgang">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="1%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xActive</em></th>
+<th class="head"><em>xEn</em></th>
+<th class="head"><p class="first last">Time period 1</p>
+</th>
+<th class="head"><p class="first last">Time period 2</p>
+</th>
+<th class="head"><p class="first last">Time period 3</p>
+</th>
+<th class="head"><p class="first last">Time period 4</p>
+</th>
+<th class="head"><p class="first last">Time period 5</p>
+</th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td><p class="first last">FB deactivated</p>
+</td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">No time period is active</p>
+</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">At least one time period active</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="einschaltzeitpunkt-der-letzten-aktiven-zeitperiode-des-aktuellen-tags-todactivatedfrom">
+<h3>Switch-on point in time of the last active time period of the <em>todActivatedFrom</em> the current day<a class="headerlink" href="#einschaltzeitpunkt-der-letzten-aktiven-zeitperiode-des-aktuellen-tags-todactivatedfrom" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This display output assumes the value of the switch-on point in time of the last active time period, if, when enable input is active (<em>xEn</em> = TRUE), the date of the</div>
+<div class="line">current time coincides with the date of the time period.</div>
+</div>
+</div>
+<div class="section" id="ausschaltzeitpunkt-der-letzten-aktiven-zeitperiode-des-aktuellen-tags-todactivatedto">
+<h3>Switch-off point in time of the last active time period of the <em>todActivated</em> from the current day<a class="headerlink" href="#ausschaltzeitpunkt-der-letzten-aktiven-zeitperiode-des-aktuellen-tags-todactivatedto" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This display output assumes the value of the switch-off point in time of the last active time period, if, when enable input is active (<em>xEn</em> = TRUE), the date of the</div>
+<div class="line">current time coincides with the date of the time period. It is not changed in all other situations.</div>
+</div>
+</div>
+<div class="section" id="zeitperioden-1-5-x-1-5">
+<h3>Time periods 1 - 5 (X = 1 ..5)<a class="headerlink" href="#zeitperioden-1-5-x-1-5" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Each time period is defined by configurable data ( <strong>todCHX_TimeFrom</strong> switch-on point in time, <strong>todCHX_TimeTo</strong> switch-off point in time and <strong>datCHX_Date</strong> date )</div>
+<div class="line">In addition, an operating mode ( <strong>xCHX_Mode</strong> ) as well as a descriptive text ( <strong>sCHX_Notice</strong> ) can be specified.</div>
+<div class="line">If the switch-off point in time is before the switch-on point in time, then the switch-off point in time is set to the value of the switch-on point in time for the test.</div>
+<div class="line">A time period is active if the current date matches the date of the time period and the time is within the time period (<strong>xCHX_Mode</strong> = TRUE).</div>
+<div class="line">A time period is active if the current date matches the date of the time period and the time is outside the time period (<strong>xCHX_Mode</strong> = FALSE).</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head"><p class="first last">Authors</p>
+</th>
+<th class="head"><p class="first last">Date</p>
+</th>
+<th class="head">Version</th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Function</p>
+</td>
+<td>Adam Bartod</td>
+<td>09.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Programming</p>
+</td>
+<td>Adam Bartod</td>
+<td>09.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Jochen Reu</td>
+<td>09.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Documentation</p>
+</td>
+<td>Jochen Reu</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="14%" />
+<col width="6%" />
+<col width="30%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="26">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable input</p>
+</td>
+</tr>
+<tr class="row-odd"><td>datCH1_Date</td>
+<td>DATE</td>
+<td>DATE#2017-1-1</td>
+<td><p class="first last">Date of the Time period 1</p>
+</td>
+</tr>
+<tr class="row-even"><td>todCH1_TimeFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on time of the time period 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todCH1_TimeTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td><p class="first last">Switch-off time of the time period 1</p>
+</td>
+</tr>
+<tr class="row-even"><td>xCH1_Mode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode of display for time period 1</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sCH1_Notice</td>
+<td>STRING</td>
+<td><p class="first last">&#8216;Custom note - click to change.&#8217;</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>datCH2_Date</td>
+<td>DATE</td>
+<td>DATE#2017-1-1</td>
+<td><p class="first last">Date of the time period 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todCH2_TimeFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on time of the time period 2</p>
+</td>
+</tr>
+<tr class="row-even"><td>todCH2_TimeTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td><p class="first last">Switch-off time of the time period 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xCH2_Mode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode of display for time period 2</p>
+</td>
+</tr>
+<tr class="row-even"><td>sCH2_Notice</td>
+<td>STRING</td>
+<td><p class="first last">&#8216;Custom note - click to change.&#8217;</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>datCH3_Date</td>
+<td>DATE</td>
+<td>DATE#2017-1-1</td>
+<td><p class="first last">Date of the time period 3</p>
+</td>
+</tr>
+<tr class="row-even"><td>todCH3_TimeFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on time of the time period 3</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todCH3_TimeTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td><p class="first last">Switch-off time of the time period 3</p>
+</td>
+</tr>
+<tr class="row-even"><td>xCH3_Mode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode of display for the time period 3</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sCH3_Notice</td>
+<td>STRING</td>
+<td><p class="first last">&#8216;Custom note - click to change.&#8217;</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>datCH4_Date</td>
+<td>DATE</td>
+<td>DATE#2017-1-1</td>
+<td><p class="first last">Date of the time period 4</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todCH4_TimeFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on time of the time period 4</p>
+</td>
+</tr>
+<tr class="row-even"><td>todCH4_TimeTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td><p class="first last">Switch-off time of the time period 4</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xCH4_Mode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode of display for the time period 4</p>
+</td>
+</tr>
+<tr class="row-even"><td>sCH4_Notice</td>
+<td>STRING</td>
+<td><p class="first last">&#8216;Custom note - click to change.&#8217;</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>datCH5_Date</td>
+<td>DATE</td>
+<td>DATE#2017-1-1</td>
+<td><p class="first last">Date of the time period 5</p>
+</td>
+</tr>
+<tr class="row-even"><td>todCH5_TimeFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on time of the time period 5</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todCH5_TimeTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td>Ausschaltzeitpunkt der Zeitperiode 5</td>
+</tr>
+<tr class="row-even"><td>xCH5_Mode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode of display for the time period 5</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sCH5_Notice</td>
+<td>STRING</td>
+<td><p class="first last">&#8216;Custom note - click to change.&#8217;</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td rowspan="3">Output</td>
+<td>xActive</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Active time periods</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todActivatedFrom</td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td><p class="first last">Switch-on time of the last active time period for the current day</p>
+</td>
+</tr>
+<tr class="row-even"><td>todActivatedTo</td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td><p class="first last">Switch off time of the last active time period for the current day</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="timeread.html" class="btn btn-neutral float-right" title="TimeRead (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="publicholiday.html" class="btn btn-neutral" title="PublicHoliday (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

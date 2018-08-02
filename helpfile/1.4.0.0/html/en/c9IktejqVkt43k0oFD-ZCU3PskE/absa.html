@@ -1,0 +1,662 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AbsA (FB) &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AbsA.mEx (METH)" href="../LNz7bB6Y2WpCYRIjOh4YpMjG7m8/mex.html" />
+    <link rel="prev" title="Numeric" href="fld-Numeric.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hGNp1Pzm05GYtCjW1jh6JOQKpE0/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Numeric.html">Numeric</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AbsA (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="averagech.html">AverageCh (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="limiter.html">Limiter (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mannum.html">ManNum (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="max8fun.html">Max8Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="min8fun.html">Min8Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="moveenfun.html">MoveEnFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="movestore.html">MoveStore (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxbin2fun.html">MuxBin2Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="muxbin5fun.html">MuxBin5Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="offset.html">Offset (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="offsetfun.html">OffsetFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="twopoint.html">TwoPoint (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Numeric.html">Numeric</a> &raquo;</li>
+        
+      <li>AbsA (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-numeric-absa"></span><div class="section" id="absa-fb">
+<span id="absa"></span><span id="index-0"></span><h1>AbsA (FB)<a class="headerlink" href="#absa-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK AbsA</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Anti-blocking protection for an analog signal</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../_images/AbsA_FB.png" src="../_images/AbsA_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rPosFb</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Position feedback</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Outputs<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rOut</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Analog - output</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAbsOn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Anti-blocking protection process</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>dtAbsLastOn</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Startdate / -Timepoint of the last anti-blocking protection process</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>rMinChange</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>10.0</td>
+<td><p class="first last">Minimum position change</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>tTime</strong></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>180s</td>
+<td><p class="first last">Time duration of the anti-blocking protection process</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>eDay</strong></td>
+<td>eDoW</td>
+<td>&nbsp;</td>
+<td><p class="first last">eDow.Monday</p>
+</td>
+<td><p class="first last">Weekday of anti-blocking operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todStartTime</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>08:00:00 Uhr</td>
+<td><p class="first last">Time point of the anti-blocking protection process</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>rMinLimit</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0</td>
+<td><p class="first last">Lower limit for the analog - output <em>rOut</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>rMaxLimit</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>100</td>
+<td><p class="first last">Upper limit for the analog - output <em>rOut</em></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block is used to monitor the analog input <em>rPosFb</em> to activity. The test period covers 168 hours (= 1 week).</div>
+<div class="line">The position feedback <em>rPosFb</em> is active if its value has changed in the check period by an amount greater than the minimum position change <strong>rMinChange</strong>.</div>
+<div class="line">The blocking protection process is thereby suppressed (= blocking protection process not active), the test time starts again.</div>
+<div class="line"><br /></div>
+<div class="line">If no activity was detected during the test period, the blocking protection process is triggered with the <strong>tTime</strong> time period on the <strong>eDay</strong> weekday</div>
+<div class="line">at <strong>todStartTime</strong> time. (= blocking protection process active). At the same time, the test period starts again.</div>
+<div class="line"><br /></div>
+<div class="line">During the blocking protection process, different signals are shown at the analog output <em>rOut</em> depending on the current value at the position feedback <em>rPosFb</em>, at the beginning of the blocking protection process.</div>
+<div class="line"><br /></div>
+<div class="line">Condition 1: <em>rPosFb</em> &gt; 51% of the upper limit for the analog output <em>rOut</em>:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><em>rOut</em> = <strong>rMinLimit</strong></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Condition 2: <em>rPosFb</em> &lt;= 51% of the upper limit for the analog output <em>rOut</em>:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><em>rOut</em> = <strong>rMaxLimit</strong></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">If the blocking protection process is disabled, the analog output <em>rOut</em> shows 0.0.</div>
+<div class="line"><br /></div>
+<div class="line">The initial triggering of the blocking protection process may vary depending to the relevant settings (<strong>eDay</strong> weekday and <strong>todStartTime</strong>)</div>
+<div class="line">(example: test time ended on Tuesday morning, triggering of the blocking protection process only on the next Monday).</div>
+<div class="line"><br /></div>
+<div class="line">At the <em>dtAbsLastOn</em> output, the start date and the start time of the last blocking protection process are available.</div>
+<div class="line"><br /></div>
+</div>
+<div class="topic">
+<p class="topic-title first">Voraussetzung für den Einsatz des Funktionsbausteins AbsA</p>
+<div class="line-block">
+<div class="line">For correct function, the use of the function block TimeRead with <em>xEn</em> = TRUE is mandatory.</div>
+</div>
+</div>
+</div>
+<div class="section" id="anzeige-blockierschutzprozess-xabson">
+<h3>Display of the blocking protection process <em>xAbsOn</em><a class="headerlink" href="#anzeige-blockierschutzprozess-xabson" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to display an active blocking protection process (<em>xAbsOn</em> = TRUE).</div>
+</div>
+</div>
+<div class="section" id="sollwert-parameter-eday">
+<h3>Setpoint / Parameter <strong>eDay</strong><a class="headerlink" href="#sollwert-parameter-eday" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Blockierschutzfunktion kann durch die Einstellung <strong>eDay</strong> = eDow.Inactive generell gesperrt werden.</div>
+</div>
+</div>
+<div class="section" id="sollwert-parameter-ttime">
+<h3>Setpoint / Parameter**tTime**<a class="headerlink" href="#sollwert-parameter-ttime" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The blocking protection function can be disabled by set the setting to <strong>tTime</strong> = 0s.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element</th>
+<th class="head"><p class="first last">Authors</p>
+</th>
+<th class="head"><p class="first last">Date</p>
+</th>
+<th class="head">Version</th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Function</p>
+</td>
+<td>Adam Bartod</td>
+<td>06.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Programming</p>
+</td>
+<td>Adam Bartod</td>
+<td>06.2016</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-even"><td>Test</td>
+<td>Jochen Reu</td>
+<td>02.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Documentation</p>
+</td>
+<td>Jochen Reu</td>
+<td>10.2017</td>
+<td>1.0</td>
+<td><p class="first last">Initial version</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="13%" />
+<col width="9%" />
+<col width="16%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="7">Input</td>
+<td>rPosFb</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Position feedback</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rMinChange</td>
+<td>REAL</td>
+<td>10</td>
+<td><p class="first last">Minimum position change</p>
+</td>
+</tr>
+<tr class="row-even"><td>tTime</td>
+<td>TIME</td>
+<td>TIME#3m0s0ms</td>
+<td><p class="first last">Time duration of the anti-blocking protection process</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eDay</td>
+<td><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/edow.html#edow"><span class="std std-ref">eDoW</span></a></td>
+<td>eDow.Monday</td>
+<td><p class="first last">Weekday of anti-blocking operation</p>
+</td>
+</tr>
+<tr class="row-even"><td>todStartTime</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#8:0</td>
+<td><p class="first last">Time point of the anti-blocking protection process</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rMinLimit</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Lower limit for the analog - output <em>rOut</em></p>
+</td>
+</tr>
+<tr class="row-even"><td>rMaxLimit</td>
+<td>REAL</td>
+<td>100</td>
+<td><p class="first last">Upper limit for the analog - output <em>rOut</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">Output</td>
+<td>rOut</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Analog - output</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAbsOn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Anti-blocking protection process</p>
+</td>
+</tr>
+<tr class="row-odd"><td>dtAbsLastOn</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Startdate / -Timepoint of the last anti-blocking protection process</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../LNz7bB6Y2WpCYRIjOh4YpMjG7m8/mex.html">AbsA.mEx (METH)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../LNz7bB6Y2WpCYRIjOh4YpMjG7m8/mex.html#kurzbeschreibung-methode-absa-mex">Kurzbeschreibung Methode (AbsA.mEx)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../LNz7bB6Y2WpCYRIjOh4YpMjG7m8/mex.html" class="btn btn-neutral float-right" title="AbsA.mEx (METH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fld-Numeric.html" class="btn btn-neutral" title="Numeric" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

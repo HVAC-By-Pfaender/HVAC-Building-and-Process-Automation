@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Control &mdash; HVAC Building and Process Automation V1.4.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Control2P (FB)" href="control2p.html" />
+    <link rel="prev" title="ValveTherm (FB)" href="../TSBVStGdESaPORNJBFiePomXEZs/valvetherm.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../mTJ7WBJjzT7n3xJ2a49_gZIgG2M/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Y9nuu0FFwNPYR6MVmi9QFuSQ8zQ/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SMxiSew_qh1qukHUDa4ZWVrO3KM/fld-GlobalVariables.html">GlobalVariables</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jq0yMb2encISQ15q0NDPqBqYvW0/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../58Gk8-GO-wnjGWLsITk4Vd_O9EY/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4Ja2x0KZ555TZ7m46LV9LTxB_jI/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ZTN1yYCOWiSzxLKQRg0EnkSQkbs/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TSBVStGdESaPORNJBFiePomXEZs/fld-Components.html">Components</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control2p.html">Control2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control2seq.html">Control2Seq (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="controlp.html">ControlP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="controlpi.html">ControlPI (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="out3p.html">Out3P (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../K08gUNROLTffK7v-vZEyMxy3uqk/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../U00zYrLcwohocZ3bkAxaNowor7c/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../K8cZxgcvZcxLYqnkb_AVqkVJl9s/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3EQ1cpCbVR5L2IH_zw4PPE9mePg/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../0MOjKlz-Cl6iXGUujFBXzuyd520/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../c9IktejqVkt43k0oFD-ZCU3PskE/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ScIZxMe-Cunh7PsRl8WKDC_-75w/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../xRUNWgmZuzomY36tpli6a0F96u0/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../v_-e3jN64okjBZBokBfAnvTb-DE/checklicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">File and Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries.html">Library Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fQPpk5RiWYVsXaoYCger1eVQJuk/fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../v_-e3jN64okjBZBokBfAnvTb-DE/fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+      <li>Control</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="control">
+<span id="id1"></span><span id="fld-hvac-library-fld-hvac-functions-fld-control"></span><h1>Control<a class="headerlink" href="#control" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="control2p.html">Control2P (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="control2p.html#kurzbeschreibung">Short Descritpion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control2p.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control2p.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="control2p.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="control2p.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="control2p.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="control2p.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="control2p.html#freigabe-eingang-xen">Enabling Input <em>xEn</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="control2p.html#digital-ausgang-xy">Digital output <em>xY</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="control2p.html#regelprozess">Controlling process</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="control2p.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control2p.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control2p.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="control2seq.html">Control2Seq (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="control2seq.html#kurzbeschreibung">Short Descritpion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control2seq.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control2seq.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="control2seq.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="control2seq.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="control2seq.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="control2seq.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="control2seq.html#digital-ausgang-xy">Digital output <em>xY</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="control2seq.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control2seq.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control2seq.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controlp.html">ControlP (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controlp.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlp.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlp.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controlp.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlp.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlp.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controlp.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controlp.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlp.html#freigabeeingang-xen">Enabling input <em>xEn</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlp.html#regelabweichung-rdiff">Control deviation <em>rDiff</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlp.html#absolute-grenzwerte-rmin-und-rmax">Absolute <strong>rMin</strong> and <strong>rMax</strong> limits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlp.html#status-grenzwertuberschreitung-xlimitactive">Status - limit exceeded <em>xLimitActive</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlp.html#betriebsart-fur-das-ausgangssignal-des-reglers-emanmoden">Operating mode for the output signal of the <strong>eManModeN</strong> controller</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controlp.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlp.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlp.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controlpi.html">ControlPI (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controlpi.html#kurzbeschreibung">Functional Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlpi.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlpi.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controlpi.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#integralanteil">Integral part</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#freigabeeingang-xen">Enabling input <em>xEN</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#neustart-des-reglers">Restart of the controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#regelabweichung-rdiff">Control deviation <em>rDiff</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#proportionalanteil-am-ausgangssignal-rpartp">Proportional part at the signal output <em>rPartP</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#integralanteil-am-ausgangssignal-rparti">Integral part at the signal output <em>rPartl</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#absolute-grenzwerte-rmin-und-rmax">Absolute <strong>rMin</strong> and <strong>rMax</strong> limits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#status-grenzwertuberschreitung-xlimitactive">Status - limit exceeded <em>xLimitActive</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="controlpi.html#betriebsart-fur-das-ausgangssignal-des-reglers-emanmoden">Operating mode for the output signal of the <strong>eManModeN</strong> controller</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controlpi.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlpi.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlpi.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="out3p.html">Out3P (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="out3p.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="out3p.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="out3p.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="out3p.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="out3p.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="out3p.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="out3p.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="out3p.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="out3p.html#freigabeeingang-xen">Enable input <em>xEn</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="out3p.html#referenzposition">Reference position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="out3p.html#signalerzeugung">Signal generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="out3p.html#positionsanzeige-rpos">Position display <em>rPos</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="out3p.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="out3p.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="out3p.html#codesys">Codesys</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="control2p.html" class="btn btn-neutral float-right" title="Control2P (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../TSBVStGdESaPORNJBFiePomXEZs/valvetherm.html" class="btn btn-neutral" title="ValveTherm (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.4.0.0',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
