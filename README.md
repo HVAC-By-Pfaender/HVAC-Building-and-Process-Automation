@@ -30,6 +30,11 @@ Helpfile (CHM) | [Download](https://github.com/HVAC-By-Pfaender/HVAC-Building-an
 To use the HVAC Building & Process Automation product, the CODESYS Development System has to be installed. The CODESYS Development System can be downloaded from the official [CODESYS Store](https://store.codesys.com/engineering/codesys.html).
 The HVAC Building & Process Automation product requires a license, which can be only purchased from the CODESYS Store. Without purchasing a license (just download), the HVAC Building & Process Automation SL product runs for 30 minutes without functional limitations and disconnects automatically (demo).**
 
+## Documentation
+
+There is a detailed documentation for each HVAC component available. 
+[Click here](https://cdn.rawgit.com/HVAC-By-Pfaender/HVAC-Building-and-Process-Automation/af9b2e50/helpfile/1.4.0.0/html/en/index.html) to view the documentation in englisch.
+[Click here](https://cdn.rawgit.com/HVAC-By-Pfaender/HVAC-Building-and-Process-Automation/07785ecc/helpfile/1.4.0.0/html/de/index.html) to view the documentation in german.
 
 
 ## Quickstart Guide
