@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CascadeExtractSupplyAirTemp2Setpt (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="CascadeExtractSupplyAirTemperature (FB)" href="CascadeExtractSupplyAirTemperature.html" />
+    <link rel="prev" title="Control" href="fld-Control.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Control.html">Control</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">CascadeExtractSupplyAirTemp2Setpt (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CascadeExtractSupplyAirTemperature.html">CascadeExtractSupplyAirTemperature (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Control2P.html">Control2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Control2Seq.html">Control2Seq (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ControlP.html">ControlP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ControlPI.html">ControlPI (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Out3P.html">Out3P (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Control.html">Control</a> &raquo;</li>
+        
+      <li>CascadeExtractSupplyAirTemp2Setpt (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Control/CascadeExtractSupplyAirTemp2Setpt.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-control-cascadeextractsupplyairtemp2setpt"></span><div class="section" id="cascadeextractsupplyairtemp2setpt-fb">
+<span id="cascadeextractsupplyairtemp2setpt"></span><span id="index-0"></span><h1>CascadeExtractSupplyAirTemp2Setpt (FB)<a class="headerlink" href="#cascadeextractsupplyairtemp2setpt-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK CascadeExtractSupplyAirTemp2Setpt</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Creation of two supply air setpoint temperatures by means of two cascade controllers ( PI controllers )</div>
+<div class="line">Additional functions: Limitation of supply air target temperatures</div>
+<div class="line">Typical application: Supply air temperature control in a ventilation system with active cooling</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/CascadeExtractSupplyAirTemp2Setpt_FB.png" src="../../../_images/CascadeExtractSupplyAirTemp2Setpt_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block corresponds to the &#8216;CascadeExtractSupplyAirTemperature&#8217; block, which is here extended by a further cascade controller to form a separate supply air target temperature for the cooler in active cooling mode.</div>
+</div>
+<p><a class="reference internal" href="CascadeExtractSupplyAirTemperature.html#cascadeextractsupplyairtemperature"><span class="std std-ref">CascadeExtractSupplyAirTemperature</span></a></p>
+<div class="line-block">
+<div class="line">This function block is used to form the target supply air temperature of a ventilation system consisting of</div>
+<div class="line"><br /></div>
+<div class="line">Part 1: Current setpoint temperature ( exhaust air or room temperature ) in °C</div>
+<div class="line"><br /></div>
+<div class="line">Part 2: Current actual temperature ( exhaust air or room temperature ) in °C</div>
+<div class="line"><br /></div>
+<div class="line">taking into account the relative ( <em>rMinSUPTemp</em> or <em>rMaxSUPTemp</em> ) and absolute ( <strong>rMinSUP</strong> or <strong>rMaxSUP</strong> ) limits.</div>
+<div class="line">In addition, the special operating modes &#8216;rapid heating&#8217; and &#8216;free night cooling&#8217; are taken into account when forming the supply air setpoint temperature.</div>
+<div class="line">The supply air setpoint temperature is formed with a time delay ( <strong>tDelayControl</strong> ) after the controller has been enabled / disabled ( <em>xEn</em> = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">The cascade controller is enabled if the following conditions described below are simultaneously fulfilled:</div>
+<div class="line"><br /></div>
+<div class="line">Condition 1: The special operating mode <em>fast heating</em> is disabled ( <em>xFastHeatEn</em> = FALSE ).</div>
+<div class="line"><br /></div>
+<div class="line">Condition 2: The special operating mode <em>free night cooling</em> is disabled ( <em>xFNCEn</em> = FALSE ).</div>
+<div class="line"><br /></div>
+<div class="line">Condition 3: The current actual temperature <em>rActTemp</em> does not violate its absolute limits ( +5.0 - +50.0 °C ).</div>
+<div class="line"><br /></div>
+<div class="line">Condition 4: The control is enabled ( <em>xEn</em> = TRUE ) and the switch-on delay ( duration = <strong>tDelayControl</strong> ) is finished.</div>
+<div class="line"><br /></div>
+<div class="line">In all other situations the cascade controller is disabled.</div>
+</div>
+</div>
+<div class="section" id="regelung">
+<h3>Control<a class="headerlink" href="#regelung" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The current actual temperature <em>rActTemp</em> is permanently compared with the current setpoint temperature <em>rSetPtTemp</em> when the cascade controller is enabled ( PI controller, <em>xEn</em> = TRUE, elapsed time <strong>tDelayControl</strong>, no limit value violation at input <em>rActTemp</em> ) and an offset temperature is generated in the cascade controller depending on the amount / sign of the difference or the controller settings ( <strong>rPI_Kp</strong> or <strong>rPI_Tn</strong> ).</div>
+<div class="line"><br /></div>
+<div class="line">In heating mode ( <em>rActTemp</em> &lt; <em>rSetPtTemp</em> ) a positive offset temperature in the range 0.0 - <strong>rMaxRelativeSUP</strong> K results.</div>
+<div class="line">In cooling mode ( <em>rActTemp</em> &gt; <em>rSetPtTemp</em> ) a negative offset temperature in the range 0.0 - <strong>rMinRelativeSUP</strong> K occurs.</div>
+<div class="line">In the fully regulated state ( <em>rActTemp</em> = <em>rSetPtTemp</em> ) the offset temperature does not change.</div>
+<div class="line"><br /></div>
+<div class="line">This offset temperature is then added to the current setpoint temperature and, if necessary, adjusted to the calculated limit values.</div>
+<div class="line"><em>rMinSUPTemp</em> or <em>rMaxSUPTemp</em> limited.</div>
+<div class="line"><br /></div>
+<div class="line">At the output <em>rMinSUPTemp</em> the calculated minimum supply air setpoint temperature ( <em>rActTemp</em> + <strong>rMinRelativeSUP</strong>, absolutely limited to <strong>rMinSUP</strong> or <strong>rMaxSUP</strong> ) is permanently displayed.</div>
+<div class="line">At the output <em>rMaxSUPTemp</em> the calculated maximum supply air setpoint temperature ( <em>rActTemp</em> + <strong>rMaxRelativeSUP</strong>, absolutely limited to <strong>rMinSUP</strong> or <strong>rMaxSUP</strong> ) is permanently displayed.</div>
+<div class="line"><br /></div>
+<div class="line">The current actual temperature <em>rActTemp</em> is monitored for compliance with limit values.</div>
+<div class="line">The cascade controller is deactivated for each limit violation ( <em>rActTemp</em> &lt; +5.0 °C or <em>rActTemp</em> &gt; +50.0 °C ).</div>
+</div>
+</div>
+<div class="section" id="auswahl-der-zuluftsolltemperatur">
+<h3>Selection of the supply air setpoint temperature<a class="headerlink" href="#auswahl-der-zuluftsolltemperatur" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The supply air setpoint temperature is selected according to the following function table.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="20%" />
+<col width="10%" />
+<col width="20%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xFastHeatEn</em></th>
+<th class="head"><em>xFNCEn</em></th>
+<th class="head"><p class="first last"><em>rActTemp</em> within limit value</p>
+</th>
+<th class="head"><em>xEn</em></th>
+<th class="head"><p class="first last">Supply air setpoint temperature</p>
+</th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TRUE</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td><strong>rMaxSUP</strong></td>
+<td><p class="first last">Special operating mode &#8216;Fast heating&#8217;</p>
+</td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>X</td>
+<td><strong>rMinSUP</strong></td>
+<td><p class="first last">Special operating mode &#8216;Free night cooling&#8217;</p>
+</td>
+</tr>
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>X</td>
+<td><em>rSetPtTemp</em></td>
+<td><p class="first last">Limit value violation actual temperature</p>
+</td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>FALSE</td>
+<td>X</td>
+<td>FALSE</td>
+<td><em>rSetPtTemp</em></td>
+<td><p class="first last">Disabling the regulation</p>
+</td>
+</tr>
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td><p class="first last"><em>rSetPtTemp</em> + offset temperature</p>
+</td>
+<td><p class="first last">normal operation</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">legend: X = any</div>
+</div>
+</div>
+<div class="section" id="bildung-der-aktuellen-zuluftsolltemperatur-rsetptsuptemp">
+<h3>Formation of the current supply air setpoint temperature <em>rSetPtSUPTemp</em><a class="headerlink" href="#bildung-der-aktuellen-zuluftsolltemperatur-rsetptsuptemp" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The current supply air setpoint temperature <em>rSetPtSUPTemp</em> is formed from the supply air setpoint temperature, extended by a manual override module.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-2">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Supply air setpoint temperature</p>
+</th>
+<th class="head"><strong>eManModeN</strong></th>
+<th class="head"><em>rSetPtSUPTemp</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>X</td>
+<td>eMANNUM.Auto</td>
+<td><p class="first last">Supply air setpoint temperature</p>
+</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANNUM.Man</td>
+<td><strong>rManValue</strong></td>
+<td><p class="first last">Manual override module in manual mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">legend: X = any</div>
+</div>
+</div>
+<div class="section" id="kaskadenregler-fur-den-aktiven-kuhlbetrieb-pi-regler">
+<h3>Cascade controller for active cooling mode ( PI controller )<a class="headerlink" href="#kaskadenregler-fur-den-aktiven-kuhlbetrieb-pi-regler" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This cascade controller is used to form the supply air setpoint temperature for a cooling system consisting of</div>
+<div class="line"><br /></div>
+<div class="line">Part 1: Current setpoint temperature ( maximum value off ( <em>rSetPtTemp</em> + 1) and <em>rSetPtTempCool</em> )</div>
+<div class="line"><br /></div>
+<div class="line">Part 2: Current actual temperature ( exhaust air or room temperature ) in °C</div>
+<div class="line"><br /></div>
+<div class="line">unter Berücksichtigung der folgenden Grenzen:</div>
+<div class="line"><br /></div>
+<div class="line">Minimum value - output signal of the cascade controller: <em>rMinSUPTemP</em> - ( Maximum value off ( <em>rSetPtTemp</em> + 1) and <em>rSetPtTempCool</em> )</div>
+<div class="line"><br /></div>
+<div class="line">Maximum value - output signal of the cascade controller: <em>rMaxSUPTemP</em> - ( Maximum value off ( <em>rSetPtTemp</em> + 1) and <em>rSetPtTempCool</em> )</div>
+<div class="line"><br /></div>
+<div class="line">The supply air setpoint temperature is formed after the main cascade controller has been enabled / disabled, provided that the <em>xEnCool</em> input is active ( = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">The cascade controller is enabled for active cooling if the following conditions described below are simultaneously fulfilled:</div>
+<div class="line"><br /></div>
+<div class="line">Condition 1: The special operating mode <em>fast heating</em> is disabled ( <em>xFastHeatEn</em> = FALSE ).</div>
+<div class="line"><br /></div>
+<div class="line">Condition 2: The special operating mode <em>free night cooling</em> is disabled ( <em>xFNCEn</em> = FALSE ).</div>
+<div class="line"><br /></div>
+<div class="line">Condition 3: The current actual temperature <em>rActTemp</em> does not violate its absolute limits ( +5.0 - +50.0 °C ).</div>
+<div class="line"><br /></div>
+<div class="line">Condition 4: The control is enabled ( <em>xEn</em> = TRUE ) and the switch-on delay ( duration = <strong>tDelayControl</strong> ) is finished.</div>
+<div class="line"><br /></div>
+<div class="line">Part 5: The input <em>xEnCool</em> is enabled ( <em>xEnCool</em> = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">In all other situations, the cascade controller is disabled for active cooling mode.</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Control<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The current actual temperature <em>rActTemp</em> is permanently compared with the current setpoint temperature ( maximum value from ( <em>rSetPtTemp</em> + 1) and <em>rSetPtTempCool</em> ) when the cascade controller is enabled for active cooling mode and an offset temperature for active cooling mode is generated in the cascade controller depending on the amount / sign of the difference or the controller settings ( <strong>rPI_Kp</strong> or <strong>rPI_Tn</strong> ).</div>
+<div class="line"><br /></div>
+<div class="line">In heating mode ( <em>rActTemp</em> &lt; current setpoint temperature ) a positive offset temperature in the range 0.0 - minimum value - output signal of the cascade controller for active cooling mode K is generated.</div>
+<div class="line">In cooling mode ( <em>rActTemp</em> &gt; current setpoint temperature ) a negative offset temperature in the range 0.0 - maximum value - output signal of the cascade controller for active cooling mode K is generated.</div>
+<div class="line">In the fully controlled state ( <em>rActTemp</em> = current setpoint temperature ), the offset temperature does not change.</div>
+<div class="line"><br /></div>
+<div class="line">This offset temperature is then added to the current setpoint temperature and, if necessary, adjusted to the calculated limit values.</div>
+<div class="line"><em>rMinSUPTemp</em> or <em>rMaxSUPTemp</em> limited.</div>
+<div class="line"><br /></div>
+<div class="line">The current actual temperature <em>rActTemp</em> is monitored for compliance with limit values.</div>
+<div class="line">The cascade controller is deactivated for each limit violation ( <em>rActTemp</em> &lt; +5.0 °C or <em>rActTemp</em> &gt; +50.0 °C ).</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Selection of the supply air setpoint temperature<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The supply air setpoint temperature is selected according to the following function table.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-3">
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="25%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Enable cascade controller for active cooling mode</p>
+</th>
+<th class="head"><p class="first last"><em>rActTemp</em> within limit value</p>
+</th>
+<th class="head"><p class="first last">Supply air setpoint temperature</p>
+</th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>X</td>
+<td><p class="first last">Maximum value off ( <em>rSetPtTemp</em> + 1) and <em>rSetPtTempCool</em></p>
+</td>
+<td><p class="first last">Controller disabled</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>FALSE</td>
+<td><p class="first last">Maximum value off ( <em>rSetPtTemp</em> + 1) and <em>rSetPtTempCool</em></p>
+</td>
+<td><p class="first last">Threshold violation</p>
+</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>TRUE</td>
+<td><p class="first last">Current setpoint temperature + offset temperature</p>
+</td>
+<td><p class="first last">normal operation</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">legend: X = any</div>
+</div>
+</div>
+<div class="section" id="bildung-der-aktuellen-zuluftsolltemperatur-rsetptsuptempcool">
+<h3>Formation of the current supply air setpoint temperature <em>rSetPtSUPTempCool</em><a class="headerlink" href="#bildung-der-aktuellen-zuluftsolltemperatur-rsetptsuptempcool" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The current supply air setpoint temperature <em>rSetPtSUPTempCool</em> is formed from the supply air setpoint temperature, extended by a manual override module.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-4">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Supply air setpoint temperature</p>
+</th>
+<th class="head"><strong>eManModeNCool</strong></th>
+<th class="head"><em>rSetPtSUPTempCool</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>X</td>
+<td>eMANNUM.Auto</td>
+<td><p class="first last">Supply air setpoint temperature</p>
+</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANNUM.Man</td>
+<td><strong>rManValueCool</strong></td>
+<td><p class="first last">Manual override module in manual mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">legend: X = any</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="16%" />
+<col width="11%" />
+<col width="12%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="7">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable / disable the controller ( FALSE = disable, TRUE = enable )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rActTemp</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Current actual temperature ( exhaust air or room temperature ) in °C ( +5.0 - +50.0 )</p>
+</td>
+</tr>
+<tr class="row-even"><td>rSetPtTemp</td>
+<td>REAL</td>
+<td>21</td>
+<td><p class="first last">Current setpoint temperature ( exhaust air or room temperature ) in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rSetPtTempCool</td>
+<td>REAL</td>
+<td>24</td>
+<td><p class="first last">Current setpoint temperature for active cooling mode (exhaust air or room temperature) in °C</p>
+</td>
+</tr>
+<tr class="row-even"><td>xEnCool</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable / disable active cooling mode ( FALSE = disable, TRUE = enable ) ( off sequence controller )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xFastHeatEn</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Enable / disable rapid heating ( FALSE = disable, TRUE = enable )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xFNCEn</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Enable / Disable free night cooling ( FALSE = Disable, TRUE = Enable )</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="4">Output</td>
+<td>rSetPtSUPTemp</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Current supply air setpoint temperature in °C</p>
+</td>
+</tr>
+<tr class="row-even"><td>rSetPtSUPTempCool</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Current supply air setpoint temperature for the cooler in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rMinSUPTemp</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Calculated minimum target supply air temperature in °C</p>
+</td>
+</tr>
+<tr class="row-even"><td>rMaxSUPTemp</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Calculated maximum supply air setpoint temperature in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="11">Input</td>
+<td>rPI_Tn</td>
+<td>REAL</td>
+<td>600</td>
+<td><p class="first last">Reset time of the cascade controllers in s</p>
+</td>
+</tr>
+<tr class="row-even"><td>rPI_Kp</td>
+<td>REAL</td>
+<td>1</td>
+<td><p class="first last">Amplification factor of the cascade controllers</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rMaxSUP</td>
+<td>REAL</td>
+<td>26</td>
+<td><p class="first last">Absolute maximum setpoint supply air temperature in °C</p>
+</td>
+</tr>
+<tr class="row-even"><td>rMaxRelativeSUP</td>
+<td>REAL</td>
+<td>6</td>
+<td><p class="first last">Maximum difference between the room / extract air temperature and the supply air setpoint temperature - Heating mode in K</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rMinSUP</td>
+<td>REAL</td>
+<td>16</td>
+<td><p class="first last">Absolute minimum supply air setpoint temperature in °C</p>
+</td>
+</tr>
+<tr class="row-even"><td>rMinRelativeSUP</td>
+<td>REAL</td>
+<td>-8</td>
+<td><p class="first last">Maximum difference between room / extract air temperature and supply air setpoint temperature - Cooling mode in K</p>
+</td>
+</tr>
+<tr class="row-odd"><td>tDelayControl</td>
+<td>TIME</td>
+<td>TIME#5m0s0ms</td>
+<td><p class="first last">Start delay of the cascade controller in min</p>
+</td>
+</tr>
+<tr class="row-even"><td>rManValueCool</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Output signal of the cascade controller - Active cooling mode in manual mode in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eManModeNCool</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eManNum</span></a></td>
+<td>eManNum.Auto</td>
+<td><p class="first last">Operating mode for the output signal of the cascade controller - Active cooling mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>rManValue</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Output signal of the cascade controller in manual mode in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eManModeN</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eManNum</span></a></td>
+<td>eManNum.Auto</td>
+<td><p class="first last">Operating mode of manual override for the output signal of the cascade controller</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CascadeExtractSupplyAirTemperature.html" class="btn btn-neutral float-right" title="CascadeExtractSupplyAirTemperature (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fld-Control.html" class="btn btn-neutral float-left" title="Control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

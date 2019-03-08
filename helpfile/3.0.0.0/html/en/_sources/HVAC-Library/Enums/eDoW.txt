@@ -1,0 +1,68 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eDoW`:
+
+
+.. Index::
+   single: eDoW
+
+.. _`eDoW`:
+
+eDoW (ENUM)
+-----------
+
+TYPE eDoW :
+
+
+
+.. todo:: Please add documentation for enum: eDoW
+
+
+
+
+
+InOut:
+    +-----------------------+---------+------------+
+    | Name                  | Initial | Comment    |
+    +=======================+=========+============+
+    | .. _`eDoW.Inactive`:  | 0       | Inaktiv    |
+    |                       |         |            |
+    | Inactive              |         |            |
+    +-----------------------+---------+------------+
+    | .. _`eDoW.Monday`:    | 1       | Montag     |
+    |                       |         |            |
+    | Monday                |         |            |
+    +-----------------------+---------+------------+
+    | .. _`eDoW.Tuesday`:   | 2       | Dienstag   |
+    |                       |         |            |
+    | Tuesday               |         |            |
+    +-----------------------+---------+------------+
+    | .. _`eDoW.Wednesday`: | 3       | Mittwoch   |
+    |                       |         |            |
+    | Wednesday             |         |            |
+    +-----------------------+---------+------------+
+    | .. _`eDoW.Thursday`:  | 4       | Donnerstag |
+    |                       |         |            |
+    | Thursday              |         |            |
+    +-----------------------+---------+------------+
+    | .. _`eDoW.Friday`:    | 5       | Freitag    |
+    |                       |         |            |
+    | Friday                |         |            |
+    +-----------------------+---------+------------+
+    | .. _`eDoW.Saturday`:  | 6       | Samstag    |
+    |                       |         |            |
+    | Saturday              |         |            |
+    +-----------------------+---------+------------+
+    | .. _`eDoW.Sunday`:    | 7       | Sonntag    |
+    |                       |         |            |
+    | Sunday                |         |            |
+    +-----------------------+---------+------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

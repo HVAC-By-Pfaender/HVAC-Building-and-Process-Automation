@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OperatingHours (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../../search.html" />
+    <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>OperatingHours (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/Libraries/HVAC-Library/HVAC-Functions/Counter/OperatingHours.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-counter-operatinghours"></span><div class="section" id="operatinghours-fb">
+<span id="operatinghours"></span><span id="index-0"></span><h1>OperatingHours (FB)<a class="headerlink" href="#operatinghours-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK OperatingHours</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Zähler für die Betriebsstunden und Einschaltvorgänge</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../../_images/OperatingHours_FB.png" src="../../../../_images/OperatingHours_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xFb</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Zähler - Eingang</td>
+</tr>
+<tr class="row-odd"><td><em>xReset</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Freigabe - Eingang - Rücksetzung</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>udiOperatingHours</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Zähler - Ausgang - Betriebsstunden</td>
+</tr>
+<tr class="row-odd"><td><em>udiCountFb</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Zähler - Ausgang - Einschaltungen</td>
+</tr>
+<tr class="row-even"><td><em>dtLastFb</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Datum/-zeitpunkt des Ende des letzten Zählprozesses</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein dient zur Erfassung der Betriebsstunden und Einschaltvorgänge am Zähler-Eingang <em>xFb</em>.</div>
+<div class="line">Die Ausgänge <em>udiOperatingHours</em> und <em>udiCountFb</em> werden auf 0 zurück gesetzt, sobald am Eingang <em>xReset</em> eine ansteigende Flanke erkannt wird.</div>
+<div class="line">Der Zählprozess ist aktiv, solange am Zähler-Eingang <em>xFb</em> der Zustand TRUE anliegt.</div>
+<div class="line">Der Ausgang <em>udiOperatingHours</em> zeigt die kummulierte Zeitdauer der Zählprozesse seit dem letzten Rücksetzvorgang in Stunden an.</div>
+<div class="line">Der Ausgang <em>udiCountFb</em> wird mit jeder ansteigenden Flanke am Eingang <em>xFb</em> inkrementiert.</div>
+<div class="line"><br /></div>
+<div class="line">Am Ausgang <em>dtLastFb</em> steht während des Zählprozesses das aktuelle Datum / die aktuelle Uhrzeit zur Verfügung.</div>
+<div class="line">Am Ausgang <em>dtLastFb</em> steht ausserhalb des Zählprozesses das Datum / die Uhrzeit am Ende des letzten Zählprozesses zur Verfügung.</div>
+<div class="line">Am Ausgang <em>dtLastFb</em> wird vor dem ersten Zählprozess der Initialisierungswert DT#1970-1-1-0.0.0 ausgegeben.</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Wertebereiche der Ausgänge <em>udiOperatingHours</em> und <em>udiCountFb</em></p>
+<div class="line-block">
+<div class="line">Gültige Zählerstände befinden sich innerhalb der Grenzen 0 und 4294967295.</div>
+<div class="line">Die Inkrementierung des Zählerstandes 4294967295 setzt den Zählerstand auf 0 zurück.</div>
+<div class="line">Anschliessend wird der Zählerstand wieder fortlaufend inkrementiert.</div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Voraussetzung für den Einsatz des Funktionsbausteins OperatingHours</p>
+<div class="line-block">
+<div class="line">Zur korrekten Funktion ist der Einsatz des Funktionsbausteins TimeRead mit <em>xEn</em> = TRUE erforderlich.</div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Schreibzugriff auf die Zählerstände</p>
+<div class="line-block">
+<div class="line">Über den Pfad &#8216;Instanzname._OperatingHours.udiOperatingHours&#8217; bzw. &#8216;Instanzname._OperatingHours.udiCountFb&#8217; ist ein
+Schreibzugriff auf die beide Zählerstände möglich.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="8%" />
+<col width="20%" />
+<col width="7%" />
+<col width="9%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Input</td>
+<td>xFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Zähler - Eingang</td>
+</tr>
+<tr class="row-odd"><td>xReset</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Freigabe - Eingang - Rücksetzung</td>
+</tr>
+<tr class="row-even"><td rowspan="3">Output</td>
+<td>udiOperatingHours</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>Zähler - Ausgang - Betriebsstunden</td>
+</tr>
+<tr class="row-odd"><td>udiCountFb</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>Zähler - Ausgang - Einschaltungen</td>
+</tr>
+<tr class="row-even"><td>dtLastFb</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td>Datum/-zeitpunkt des Ende des letzten Zählprozesses</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

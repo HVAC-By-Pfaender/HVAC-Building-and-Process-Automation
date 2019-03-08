@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OpModeSelect (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../../search.html" />
+    <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>OpModeSelect (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/Libraries/HVAC-Library/HVAC-Functions/General/OpModeSelect.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-general-opmodeselect"></span><div class="section" id="opmodeselect-fb">
+<span id="opmodeselect"></span><span id="index-0"></span><h1>OpModeSelect (FB)<a class="headerlink" href="#opmodeselect-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK OpModeSelect EXTENDS MANASBase IMPLEMENTS IMan</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Anlagenschalter zur Umschaltung von maximal 6 Betriebsarten (Automatik und 5 Handbetriebsarten)</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../../_images/OpModeSelect_FB.png" src="../../../../_images/OpModeSelect_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xIn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Zustandsvariable für <em>xActive</em> im Automatikbetrieb</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xActive</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Ausgangsvariable im Automatikbetrieb</td>
+</tr>
+<tr class="row-odd"><td><em>xAutoM0</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Anzeige der Betriebsart Automatik</td>
+</tr>
+<tr class="row-even"><td><em>xManOffM1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Anzeige der Betriebsart Hand-Aus</td>
+</tr>
+<tr class="row-odd"><td><em>xManM2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Anzeige der Betriebsart Hand 1</td>
+</tr>
+<tr class="row-even"><td><em>xManM3</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Anzeige der Betriebsart Hand 2</td>
+</tr>
+<tr class="row-odd"><td><em>xManM4</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Anzeige der Betriebsart Hand 3</td>
+</tr>
+<tr class="row-even"><td><em>xManM5</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Anzeige der Betriebsart Hand 4</td>
+</tr>
+<tr class="row-odd"><td><em>sActMode</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Name der aktuellen Betriebsart (z.B. &#8216;Automatik&#8217;)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>tToggleTime</strong></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>2s</td>
+<td>Zeitverzögerung bis zum Betriebsartenwechsel</td>
+</tr>
+<tr class="row-odd"><td><strong>eMaxMode</strong></td>
+<td>eOpMode</td>
+<td>&nbsp;</td>
+<td>eOpMode.Mode5</td>
+<td>Festlegung der maximalen Anzahl der Hand-Betriebsarten</td>
+</tr>
+<tr class="row-even"><td><strong>xOpModeToggle</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Umschaltung der Betriebsarten</td>
+</tr>
+<tr class="row-odd"><td><strong>xResAuto</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Rücksetzung in den Automatikbetrieb</td>
+</tr>
+<tr class="row-even"><td><strong>xEn</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Freigabe</td>
+</tr>
+<tr class="row-odd"><td><strong>sTitle</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Betriebsmodus &#8216;</td>
+<td>Name des Anlagenschalters</td>
+</tr>
+<tr class="row-even"><td><strong>sTitle2</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Beschreibung &#8216;</td>
+<td>Beschreibung des Anlagenschalters</td>
+</tr>
+<tr class="row-odd"><td><strong>eMode</strong></td>
+<td>eOpMode</td>
+<td>&nbsp;</td>
+<td>eOpMode.Mode0</td>
+<td>Aktueller Betriebszustand des Anlagenschalters</td>
+</tr>
+<tr class="row-even"><td><strong>sTitleM0</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Automatik&#8217;</td>
+<td>Beschreibung der Betriebsart Automatik</td>
+</tr>
+<tr class="row-odd"><td><strong>sTitleM1</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Hand Aus&#8217;</td>
+<td>Beschreibung der Betriebsart Hand-Aus</td>
+</tr>
+<tr class="row-even"><td><strong>sTitleM2</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Hand 1&#8217;</td>
+<td>Beschreibung der Betriebsart Hand 1</td>
+</tr>
+<tr class="row-odd"><td><strong>sTitleM3</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Hand 2&#8217;</td>
+<td>Beschreibung der Betriebsart Hand 2</td>
+</tr>
+<tr class="row-even"><td><strong>sTitleM4</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Hand 3&#8217;</td>
+<td>Beschreibung der Betriebsart Hand 3</td>
+</tr>
+<tr class="row-odd"><td><strong>sTitleM5</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Hand 4&#8217;</td>
+<td>Beschreibung der Betriebsart Hand 4</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der Anlagenschalter dient zur Umschaltung von <strong>eMaxMode</strong> +1 unterschiedlichen Betriebsarten (Automatik, Hand-Aus und <strong>eMaxMode</strong> -1 Hand-Betriebsarten).</div>
+<div class="line">Der Umschaltvorgang wird durch eine ansteigende Flanke am Sollwert / Parameter <strong>xOpModeToggle</strong> ausgelöst.</div>
+<div class="line">Die Umschaltung erfolgt endlos, d.h. nach der letzten Handbetriebsart wird mit dem nächsten Umschaltvorgang die Betriebsart Automatik ausgewählt.</div>
+<div class="line">Die Betriebsart kann explizit auch durch die Auswahl des Sollwerts / Parameter <strong>eMode</strong> im Bereich eOpMode.Mode0 - <strong>eMaxMode</strong> erfolgen.</div>
+<div class="line">Die aktuelle Betriebsart wird numerisch durch den Sollwert/Parameter <strong>eMode</strong> im Bereich eOpMode.Mode0 - <strong>eMaxMode</strong> dargestellt.</div>
+<div class="line">Sie wird zusätzlich durch die entsprechenden Digitalausgänge <em>xAutoM0</em>, <em>xManOffM1</em>, <em>xManM2</em>, <em>xManM3</em>, usw. dargestellt.</div>
+</div>
+</div>
+<div class="section" id="zustandsvariable-xin">
+<h3>Zustandsvariable <em>xIn</em><a class="headerlink" href="#zustandsvariable-xin" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="zustandsvariable">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">In</th>
+<th class="head"><em>xActive</em></th>
+<th class="head">Hinweis</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>Nur im Automatikbetrieb ( <strong>eMode</strong> = eOpMode.Mode0 ) gültig</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>TRUE</td>
+<td>Nur im Automatikbetrieb ( <strong>eMode</strong> = eOpMode.Mode0 ) gültig</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgangsvariable-xactive">
+<h3>Ausgangsvariable <em>xActive</em><a class="headerlink" href="#ausgangsvariable-xactive" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Im Automatikbetrieb ( <strong>eMode</strong> = eOpMode.Mode0 ) folgt die Ausgangsvariable <em>xActive</em> der Eingangsvariablen <em>xIn</em>.</div>
+<div class="line">In allen übrigen Betriebsarten ist stets der Zustand FALSE aktiv.</div>
+</div>
+</div>
+<div class="section" id="rucksetzung-in-den-automatikbetrieb">
+<h3>Rücksetzung in den Automatikbetrieb<a class="headerlink" href="#rucksetzung-in-den-automatikbetrieb" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Jede ansteigende Flanke am Sollwert/Parameter <strong>xResAuto</strong> aktiviert den Automatikbetrieb, falls sich der Sollwert/Parameter <strong>xEn</strong> im Zustand TRUE befindet.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="freigabe-sperrung-der-umschaltung">
+<h3>Freigabe/Sperrung der Umschaltung<a class="headerlink" href="#freigabe-sperrung-der-umschaltung" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Umschaltung der Betriebsart kann nur erfolgen, falls sich der Sollwert/Parameter <strong>xEn</strong> im Zustand TRUE befindet.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="umschaltverzogerung-ttoggletime">
+<h3>Umschaltverzögerung <strong>tToggleTime</strong><a class="headerlink" href="#umschaltverzogerung-ttoggletime" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Zeitdauer zwischen der Aktivierung der Betriebsartenumschaltung und der tatsächlichen Umschaltung kann über den Sollwert / Parameter <strong>tToggleTime</strong> eingestellt werden.</div>
+<div class="line">Die Zeitdauer startet nur, falls die Umschaltung der Betriebsarten über den Sollwert/Parameter <strong>xOpModeToggle</strong> vorgenommen wurde.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="betriebsarten">
+<h3>Betriebsarten<a class="headerlink" href="#betriebsarten" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="7%" />
+<col width="20%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>eMode</strong></th>
+<th class="head">Name der Betriebsart</th>
+<th class="head"><em>xIn</em></th>
+<th class="head"><em>xActive</em></th>
+<th class="head"><em>xAutoM0</em></th>
+<th class="head"><em>xManOffM1</em></th>
+<th class="head"><em>xManM2</em></th>
+<th class="head"><em>xManM3</em></th>
+<th class="head"><em>xManM4</em></th>
+<th class="head"><em>xManM5</em></th>
+<th class="head">Hinweis</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eOpMode.Mode0</td>
+<td><strong>sTitleM0</strong></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>Betriebsart Automatik</td>
+</tr>
+<tr class="row-odd"><td>eOpMode.Mode0</td>
+<td><strong>sTitleM0</strong></td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>Betriebsart Automatik</td>
+</tr>
+<tr class="row-even"><td>eOpMode.Mode1</td>
+<td><strong>sTitleM1</strong></td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>Betriebsart Hand-Aus</td>
+</tr>
+<tr class="row-odd"><td>eOpMode.Mode2</td>
+<td><strong>sTitleM2</strong></td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>Betriebsart Hand 1</td>
+</tr>
+<tr class="row-even"><td>eOpMode.Mode3</td>
+<td><strong>sTitleM3</strong></td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>Betriebsart Hand 2</td>
+</tr>
+<tr class="row-odd"><td>eOpMode.Mode4</td>
+<td><strong>sTitleM4</strong></td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>Betriebsart Hand 3</td>
+</tr>
+<tr class="row-even"><td>eOpMode.Mode5</td>
+<td><strong>sTitleM5</strong></td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>Betriebsart Hand 4</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = Unbestimmt</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Passendes Visualisierungselement aus der HVACV Visu Library: <strong>OpModeSelect</strong> <strong>OpModeSelect_Button</strong></p>
+<div class="section" id="id5">
+<h3>Darstellung<a class="headerlink" href="#id5" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><img alt="../../../../_images/OpModeSelect.PNG" src="../../../../_images/OpModeSelect.PNG" />
+<img alt="../../../../_images/OpModeSelect_Button.PNG" src="../../../../_images/OpModeSelect_Button.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen-visu-element-opmodeselect-button">
+<h3>Schnittstellen Visu-Element OpModeSelect_Button<a class="headerlink" href="#schnittstellen-visu-element-opmodeselect-button" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="schnittstellen-visu-element">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Typ</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>FB_OpModeSelect_0</strong></td>
+<td>HVAC.OpModeSelect</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td>Hier FB Instanz OpModeSelect eintragen Bsp. PRG.OpModeSelect</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Es reicht das Visualisierungselement OpModeSelect_Button zu platzieren. Ein Klick darauf öffnet in der Visualisierung den Dialog OpModeSelect. Die Anzahl der Betriebsmodi werden im FB HVAC.OpModeSelect festgelegt (eMaxMode) sowie die Titel (sTitelM0 bis M5) und der Dialogtitel (sTitle und sTitle2). Das Visualisierungselement passt sich automatisch der Größe der maximales Betriebsmodi an.
+|
+| Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.
+|
+|</p>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="14%" />
+<col width="12%" />
+<col width="16%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="15">Input</td>
+<td>xIn</td>
+<td>BOOL</td>
+<td>0</td>
+<td>Zustandsvariable für <em>xActive</em> im Automatikbetrieb</td>
+</tr>
+<tr class="row-odd"><td>tToggleTime</td>
+<td>TIME</td>
+<td>TIME#2s0ms</td>
+<td>Zeitverzögerung bis zum Betriebsartenwechsel</td>
+</tr>
+<tr class="row-even"><td>eMaxMode</td>
+<td><a class="reference internal" href="../../Enums/eOpMode.html#eopmode"><span class="std std-ref">eOpMode</span></a></td>
+<td>eOpMode.Mode5</td>
+<td>Festlegung der maximalen Anzahl der Hand-Betriebsarten</td>
+</tr>
+<tr class="row-odd"><td>xOpModeToggle</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Umschaltung der Betriebsarten</td>
+</tr>
+<tr class="row-even"><td>xResAuto</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Rücksetzung in den Automatikbetrieb</td>
+</tr>
+<tr class="row-odd"><td>xEn</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Freigabe</td>
+</tr>
+<tr class="row-even"><td>sTitle</td>
+<td>STRING</td>
+<td>&#8216;operating mode&#8217;</td>
+<td>Name des Anlagenschalters</td>
+</tr>
+<tr class="row-odd"><td>sTitle2</td>
+<td>STRING</td>
+<td>&#8216;Description&#8217;</td>
+<td>Beschreibung des Anlagenschalters</td>
+</tr>
+<tr class="row-even"><td>eMode</td>
+<td><a class="reference internal" href="../../Enums/eOpMode.html#eopmode"><span class="std std-ref">eOpMode</span></a></td>
+<td>eOpMode.Mode0</td>
+<td>Aktueller Betriebszustand des Anlagenschalters</td>
+</tr>
+<tr class="row-odd"><td>sTitleM0</td>
+<td>STRING</td>
+<td>&#8216;Automatic&#8217;</td>
+<td>Beschreibung der Betriebsart Automatik</td>
+</tr>
+<tr class="row-even"><td>sTitleM1</td>
+<td>STRING</td>
+<td>&#8216;Hand Off&#8217;</td>
+<td>Beschreibung der Betriebsart Hand-Aus</td>
+</tr>
+<tr class="row-odd"><td>sTitleM2</td>
+<td>STRING</td>
+<td>&#8216;Hand 1&#8217;</td>
+<td>Beschreibung der Betriebsart Hand 1</td>
+</tr>
+<tr class="row-even"><td>sTitleM3</td>
+<td>STRING</td>
+<td>&#8216;Hand 2&#8217;</td>
+<td>Beschreibung der Betriebsart Hand 2</td>
+</tr>
+<tr class="row-odd"><td>sTitleM4</td>
+<td>STRING</td>
+<td>&#8216;Hand 3&#8217;</td>
+<td>Beschreibung der Betriebsart Hand 3</td>
+</tr>
+<tr class="row-even"><td>sTitleM5</td>
+<td>STRING</td>
+<td>&#8216;Hand 4&#8217;</td>
+<td>Beschreibung der Betriebsart Hand 4</td>
+</tr>
+<tr class="row-odd"><td rowspan="8">Output</td>
+<td>xActive</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Ausgangsvariable im Automatikbetrieb</td>
+</tr>
+<tr class="row-even"><td>xAutoM0</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige der Betriebsart Automatik</td>
+</tr>
+<tr class="row-odd"><td>xManOffM1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige der Betriebsart Hand-Aus</td>
+</tr>
+<tr class="row-even"><td>xManM2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige der Betriebsart Hand 1</td>
+</tr>
+<tr class="row-odd"><td>xManM3</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige der Betriebsart Hand 2</td>
+</tr>
+<tr class="row-even"><td>xManM4</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige der Betriebsart Hand 3</td>
+</tr>
+<tr class="row-odd"><td>xManM5</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige der Betriebsart Hand 4</td>
+</tr>
+<tr class="row-even"><td>sActMode</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Name der aktuellen Betriebsart (z.B. &#8216;Automatik&#8217;)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

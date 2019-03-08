@@ -1,0 +1,48 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eAirFlowFormula`:
+
+
+.. Index::
+   single: eAirFlowFormula
+
+.. _`eAirFlowFormula`:
+
+eAirFlowFormula (ENUM)
+----------------------
+
+TYPE eAirFlowFormula :
+
+
+
+.. todo:: Please add documentation for enum: eAirFlowFormula
+
+
+
+
+
+InOut:
+    +------------------------------------------+---------+----------------------------------+
+    | Name                                     | Initial | Comment                          |
+    +==========================================+=========+==================================+
+    | .. _`eAirFlowFormula.exclusiveAirtight`: | 0       | k * Wurzel(delta p)              |
+    |                                          |         |                                  |
+    | exclusiveAirtight                        |         |                                  |
+    +------------------------------------------+---------+----------------------------------+
+    | .. _`eAirFlowFormula.inclusiveAirtight`: | 1       | k * Wurzel( (2 / rho) * delta p) |
+    |                                          |         |                                  |
+    | inclusiveAirtight                        |         |                                  |
+    +------------------------------------------+---------+----------------------------------+
+    | .. _`eAirFlowFormula.strangeForm`:       | 2       | Reserve für Erweiterungen        |
+    |                                          |         |                                  |
+    | strangeForm                              |         |                                  |
+    +------------------------------------------+---------+----------------------------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

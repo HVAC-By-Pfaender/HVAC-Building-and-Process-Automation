@@ -1,0 +1,19 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Monitoring`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Monitoring`:
+
+Monitoring
+==========
+
+.. todo:: Please add documentation for folder: Monitoring
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Monitoring/AirFlowMeasuring
+   /HVAC-Library/HVAC-Functions/Monitoring/AirShortage
+   /HVAC-Library/HVAC-Functions/Monitoring/FilterMonitoringA
+   /HVAC-Library/HVAC-Functions/Monitoring/FilterMonitoringB
+   /HVAC-Library/HVAC-Functions/Monitoring/Position3P
+
+.. last line of folder.rst template

@@ -1,0 +1,292 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Control.ControlP`:
+
+
+.. index::
+   single: ControlP
+
+.. _`ControlP`:
+
+ControlP (FB)
+-------------
+
+FUNCTION_BLOCK ControlP
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Proportional wirkender Regler ( P-Regler )
+     | Der Wirksinn ( invertiert / direkt ) ist ebenfalls einstellbar.
+     | Typische Anwendung: Regelstrecken mit Stellgliedern, die speichernden Charakter haben.
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/ControlP_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rX*
+      - REAL
+      -
+      -
+      - Analoger Istwert
+    * - *rW*
+      - REAL
+      -
+      -
+      - Analoger Sollwert
+    * - *xEn*
+      - BOOL
+      -
+      -
+      - Freigabe des Reglers
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rY*
+      - REAL
+      -
+      - 0.0
+      - Ausgangssignal des Reglers
+    * - *rDiff*
+      - REAL
+      -
+      -
+      - Regelabweichung
+    * - *xLimitActive*
+      - BOOL
+      -
+      -
+      - Status - Grenzwertüberschreitung
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **rMax**
+      - REAL
+      -
+      - 100.0
+      - Oberer absoluter Grenzwert des Ausgangssignals
+    * - **rMin**
+      - REAL
+      -
+      - -100.0
+      - Unterer absoluter Grenzwert des Ausgangssignals
+    * - **rKp**
+      - REAL
+      - 0.0 ...
+      - 2.0
+      - Verstärkungsfaktor
+    * - **rOffset**
+      - REAL
+      -
+      - 0.0
+      - Versatz
+    * - **rYDisabled**
+      - REAL
+      -
+      - 0.0
+      - Ausschaltwert
+    * - **eAction**
+      - eControlMode
+      -
+      - eControlMode.Inverted
+      - Wirksinnn des Reglers ( Invertiert, Direkt )
+    * - **eManModeN**
+      - eManNum
+      -
+      - eManNum.Auto
+      - Betriebsart für das Ausgangssignal des Reglers
+    * - **rManValue**
+      - REAL
+      -
+      -
+      - Ausgangssignal im Handbetrieb
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein enthält einen proportional wirkenden Pegler ( P-Regler ).
+| Das Ausgangssignal des Reglers *rY* wird bei freigegebenem Regler ( *xEn* = TRUE ) und in der Betriebsart Automatik des Reglers ( **eManModeN** = eManNum.Auto ) wie folgt berechnet:
+|
+|
+|               *rY* = **rKp** * (( Istwert + Offset ) - ( Sollwert ))
+|
+|
+| Je nach Wirksinn des Reglers **eAction** werden die Ist- und Sollwerte wie folgt festgelegt:
+
+ .. list-table::
+    :name: Wirksinn - Werte
+    :widths: 300 300 300 900 900
+    :header-rows: 1
+
+    * - **eAction**
+      - Istwert
+      - Sollwert
+      - Formel
+      - Funktion
+    * - eControlMode.Invertiert
+      - *rW*
+      - *rX*
+      - *rY* = **rKp** * (( *rW* + **rOffset** ) - ( *rX* ))
+      - Wirksinn - Invertiert
+    * - eControlMode.Direct
+      - *rX*
+      - *rW*
+      - *rY* = **rKp** * (( *rX* + **rOffset** ) - ( *rW* ))
+      - Wirksinn - Direkt
+
+Freigabeeingang *xEn*
+=====================
+| Bei nicht aktivem Freigabeeingang ( *xEn* = FALSE ) wird der Ausschaltwert **rYDisabled** zum Ausgang *rY* übertragen
+  ( Voraussetzung: **eManModeN** = eManNum.Auto ) und durch die absoluten Grenzwerte begrenzt.
+|
+| Bei aktivem Freigabeeingang ( *xEn* = TRUE ) wird as Ausgangssignal gemäß oben stehender Formel berechnet und zum Ausgang *rY* übertragen
+  ( Voraussetzung: **eManModeN** = eManNum.Auto ) und durch die absoluten Grenzwerte begrenzt.
+
+Regelabweichung *rDiff*
+=======================
+| Die Regelabweichung wird gemäß nachfolgender Formel berechnet und zum Ausgang *rDiff* übertragen.
+|
+|
+|               *rDiff* = Istwert - Sollwert
+|
+|
+
+Absolute Grenzwerte **rMin** und **rMax**
+=========================================
+| Das Ausgangssignal des Reglers *rY* wird durch die absoluten Grenzwerte **rMin** nach unten und **rMax** nach oben begrenzt.
+| Der absolute Grenzwert **rMin** wird auf den aktuellen Wert von **rMax** - 0.1 festgelegt, falls er >= dem aktuellen Wert von **rMax** ist.
+| Davon ausgenommen ist lediglich der Handbetrieb für das Ausgangssignal des Reglers (**eManModeN** = eManNum.Man ).
+
+Status - Grenzwertüberschreitung *xLimitActive*
+================================================
+| Der Status der Grenzwertüberschreitung wird aktiviert ( *xLimitActive* = TRUE ), falls eine Grenzwertüberschreitung vorliegt.
+| Der Status der Grenzwertüberschreitung wird nicht aktiviert ( *xLimitActive* = FALSE ), falls keine Grenzwertüberschreitung vorliegt.
+|
+| Eine Grenzwertüberschreitung liegt vor, falls das Ausgangssignal des Reglers *rY* den oberen Grenzwert **rMax** erreicht / überschreitet oder
+  den unteren Grenzwert **rMin** erreicht / unterschreitet.
+|
+
+Betriebsart für das Ausgangssignal des Reglers **eManModeN**
+============================================================
+| Der Parameter **eManModeN** erlaubt die Umschaltung des Ausgangssignals *rY* vom Automatik- in den Handbetrieb und umgekehrt.
+| Im Handbetrieb übernimmt das Ausgangssignal *rY* das Ausgangssignal im Handbetrieb **rManValue**.
+| Der Sollwert / Parameter **rManValue** wird bei jedem Übergang in den Automatikbetrieb mit dem aktuellen Wert des Ausgangssignal *rY* überschrieben.
+|
+
+ .. list-table::
+    :name: Betriebsart - Ausgangssignal
+    :widths: 300 300 900
+    :header-rows: 1
+
+    * - **eManModeN**
+      - *rY*
+      - Funktion
+    * - eManNum.Auto
+      - Signal gemäß Formel / Ausschaltwert
+      - Automatikbetrieb - Ausgangssignal
+    * - eManNum.Man
+      - **rManValue**
+      - Handbetrieb - Ausgangssignal
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------+------------------+-----------------------+-------------------------------------------------+
+    | Scope  | Name        | Type             | Initial               | Comment                                         |
+    +========+=============+==================+=======================+=================================================+
+    | Input  | rX          | REAL             |                       | Analoger Istwert                                |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | rW          | REAL             |                       | Analoger Sollwert                               |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | xEn         | BOOL             |                       | Freigabe des Reglers                            |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | rYMax       | REAL             | 100                   | Oberer absoluter Grenzwert des Ausgangssignals  |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | rYMin       | REAL             | -100                  | Unterer absoluter Grenzwert des Ausgangssignals |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | rKp         | REAL             | 2                     | Verstärkungsfaktor                              |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | rOffset     | REAL             | 0                     | Versatz                                         |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | rYDisabled  | REAL             | 0                     | Ausschaltwert                                   |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | eAction     | |ioeControlMode| | eControlMode.Inverted | Wirksinnn des Reglers ( Invertiert, Direkt )    |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | eManModeN   | |ioeManNum|      | eManNum.Auto          | Betriebsart für das Ausgangssignal des Reglers  |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | rManValue   | REAL             |                       | Ausgangssignal im Handbetrieb                   |
+    +--------+-------------+------------------+-----------------------+-------------------------------------------------+
+    | Output | rY          | REAL             | 0                     | Ausgangssignal des Reglers                      |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | rDiff       | REAL             |                       | Regelabweichung_Xw ( *rX* - *rW* )              |
+    +        +-------------+------------------+-----------------------+-------------------------------------------------+
+    |        | xLimitAktiv | BOOL             |                       | Status - Grenzwertüberschreitung                |
+    +--------+-------------+------------------+-----------------------+-------------------------------------------------+
+
+.. |ioeManNum| replace:: :ref:`eManNum<eManNum>`
+.. |ioeControlMode| replace:: :ref:`eControlMode<eControlMode>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

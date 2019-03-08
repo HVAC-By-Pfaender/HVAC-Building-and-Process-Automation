@@ -1,0 +1,61 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fun-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.OffsetFun`:
+
+
+.. index::
+   single: OffsetFun
+
+.. _`OffsetFun`:
+
+OffsetFun (FUN)
+---------------
+
+FUNCTION OffsetFun : REAL
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Addition eines nummerischen Versatzes zu einer nummerischen Eingangsgrösse
+     |
+     | Typische Anwendung: Anpassung einer Solltemperatur
+
+*********************
+Funktionsbeschreibung
+*********************
+
+| Diese Funktion addiert den nummerischen Versatz *rOffset* zur nummerischen Eingangsgrösse *rValue* und gibt das Ergebnis
+ gerundet mit maximal 2 Nachkommastellen zurück.
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+------+----------------------------+
+    | Scope  | Name      | Type | Comment                    |
+    +========+===========+======+============================+
+    | Return | OffsetFun | REAL |                            |
+    +--------+-----------+------+----------------------------+
+    | Input  | rValue    | REAL | Nummerische Eingangsgrösse |
+    +        +-----------+------+----------------------------+
+    |        | rOffset   | REAL | Nummerischer Versatz       |
+    +--------+-----------+------+----------------------------+
+
+
+.. last line of fun-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

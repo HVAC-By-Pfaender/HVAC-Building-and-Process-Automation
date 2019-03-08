@@ -1,0 +1,276 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Binary.Abs3P`:
+
+
+.. index::
+   single: Abs3P
+
+.. _`Abs3P`:
+
+Abs3P (FB)
+----------
+
+FUNCTION_BLOCK Abs3P
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Antiblockierschutz für einen 3-Punkt-Antrieb
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Abs3P_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xFbOpen*
+      - BOOL
+      -
+      -
+      - Meldung - Eingang - Plus
+    * - *XFbClose*
+      - BOOL
+      -
+      -
+      - Meldung - Eingang - Minus
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xOutOpen*
+      - BOOL
+      -
+      -
+      - Freigabe - Ausgang - Plus
+    * - *xOutClose*
+      - BOOL
+      -
+      -
+      - Freigabe - Ausgang - Minus
+    * - *xAbsOn*
+      - BOOL
+      -
+      -
+      - Anzeige - Blockierschutzprozess
+    * - *dtAbsLastOn*
+      - DATE_AND_TIME
+      -
+      -
+      - Startdatum/-zeitpunkt der letzten Blockierschutzprozesses
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **tMinRunTime**
+      - TIME
+      -
+      - 30s
+      - Minimale Betriebsdauer
+    * - **tTime**
+      - TIME
+      -
+      - 120s
+      - Zeitdauer des Blockierschutzprozesses
+    * - **eDay**
+      - eDoW
+      -
+      - eDow.Montag
+      - Wochentag des Blockierschutzprozesses
+    * - **todStartTime**
+      - TOD
+      -
+      - 08:00:00 Uhr
+      - Startzeitpunkt des Blockierschutzprozesses
+
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Überwachung der Meldungseingänge *xFbOpen* und *XFbClose* auf Aktivität. Der Prüfzeitraum umfasst dabei jeweils 168 Stunden ( = 1 Woche ).
+| Die Meldungseingänge *xFbOpen* und *XFbClose* sind aktiv, falls sie im Prüfzeitraum während der minimalen Betriebsdauer **tMinRunTime** durchgehend aktiv sind ( Nur *xFbOpen* oder nur *XFbClose* oder beide ).
+| Der Blockierschutzprozess wird damit unterbunden, die Prüfzeit startet erneut.
+|
+| Wurde während des Prüfzeitraums keine Aktivität erfasst, so wird der Blockierschutzprozess am Wochentag **eDay** zur Uhrzeit **todStartTime** ausgelöst.
+| Gleichzeitig startet die Prüfzeitdauer erneut.
+|
+| Der aktive Blockierschutzprozess wird in zwei aufeinander folgende Zeitabschnitte unterteilt ( Abschnitt 1 und Abschnitt 2 )
+| Im Abschnitt 1 wird während der Zeitdauer **tTime** die Kombination Freigabe - Ausgang *xOutOpen* = TRUE, Freigabe - Ausgang *xOutClose* = FALSE ausgegeben.
+| Im Abschnitt 2 wird während der Zeitdauer **tTime** die Kombination Freigabe - Ausgang *xOutOpen* = FALSE, Freigabe - Ausgang *xOutClose* = TRUE ausgegeben.
+|
+| Die erstmalige Auslösung der Blockierschutzprozesses kann je nach den relevanten Einstellungen ( Wochentag **eDay** und **todStartTime** ) verzögert sein.
+
+.. topic:: Beispiel
+
+    | Prüfzeit am Dienstagmorgen beendet, Auslösung des Blockierschutzprozesses erst am kommenden Montag.
+
+|
+| Am Ausgang *dtAbsLastOn* steht das Startdatum und der Startzeitpunkt der letzten Blockierschutzprozesses zur Verfügung.
+|
+
+.. topic:: Voraussetzung für den Einsatz des Funktionsbausteins Abs3P
+
+    | Zur korrekten Funktion ist der Einsatz des Funktionsbausteins TimeRead mit *xEn* = TRUE erforderlich.
+
+Freigabe - Ausgang *xOutOpen*
+=============================
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 600 300 900
+    :header-rows: 1
+
+    * - *xFbOpen*
+      - Blockierschutzprozess
+      - *xOutOpen*
+      - Hinweise
+    * - X
+      - FALSE
+      - FALSE
+      - Blockierschutzprozess nicht aktiv
+    * - X
+      - TRUE
+      - TRUE
+      - Blockierschutzprozess aktiv - Abschnitt 1
+    * - X
+      - TRUE
+      - FALSE
+      - Blockierschutzprozess aktiv - Abschnitt 2
+
+| Legende: X = beliebig
+
+Freigabe - Ausgang *xOutClose*
+==============================
+
+ .. list-table::
+    :name: Funktionstabelle_2
+    :widths: 300 600 300 900
+    :header-rows: 1
+
+    * - *xFbClose*
+      - Blockierschutzprozess
+      - *xOutClose*
+      - Hinweise
+    * - X
+      - FALSE
+      - FALSE
+      - Blockierschutzprozess nicht aktiv
+    * - X
+      - TRUE
+      - FALSE
+      - Blockierschutzprozess aktiv - Abschnitt 1
+    * - X
+      - TRUE
+      - TRUE
+      - Blockierschutzprozess aktiv - Abschnitt 2
+
+| Legende: X = beliebig
+
+Anzeige - Blockierschutzprozess *xAbsOn*
+========================================
+| Dieser Ausgang dient zur Anzeige eines aktiven Blockierschutzprozesses ( *xAbsOn* = TRUE ).
+
+Sollwert / Parameter **eDay**
+=============================
+| Die Blockierschutzfunktion kann durch die Einstellung **eDay** = eDow.Inactive generell gesperrt werden.
+
+Sollwert / Parameter **tTime**
+==============================
+| Die Blockierschutzfunktion kann durch die Einstellung **tTime** = 0s generell gesperrt werden.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+--------------+----------+-----------------+-----------------------------------------------------------+
+    | Scope  | Name         | Type     | Initial         | Comment                                                   |
+    +========+==============+==========+=================+===========================================================+
+    | Input  | xFbOpen      | BOOL     |                 | Meldung - Eingang - Plus                                  |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | xFbClose     | BOOL     |                 | Meldung - Eingang - Minus                                 |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | tMinRunTime  | TIME     | TIME#30s0ms     | Minimale Betriebsdauer                                    |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | tTime        | TIME     | TIME#2m0s0ms    | Zeitdauer des Blockierschutzprozesses                     |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | eDay         | |ioeDoW| | eDow.Monday     | Wochentag des Blockierschutzprozesses                     |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | todStartTime | TOD      | TIME_OF_DAY#8:0 | Startzeitpunkt des Blockierschutzprozesses                |
+    +--------+--------------+----------+-----------------+-----------------------------------------------------------+
+    | Output | xOutOpen     | BOOL     |                 | Freigabe - Ausgang - Plus                                 |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | xOutClose    | BOOL     |                 | Freigabe - Ausgang - Minus                                |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | xAbsOn       | BOOL     |                 | Anzeige - Blockierschutzprozess                           |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | dtAbsLastOn  | DT       |                 | Startdatum/-zeitpunkt der letzten Blockierschutzprozesses |
+    +--------+--------------+----------+-----------------+-----------------------------------------------------------+
+
+.. |ioeDoW| replace:: :ref:`eDoW<eDoW>`
+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Binary/pou-Abs3P/mEx
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

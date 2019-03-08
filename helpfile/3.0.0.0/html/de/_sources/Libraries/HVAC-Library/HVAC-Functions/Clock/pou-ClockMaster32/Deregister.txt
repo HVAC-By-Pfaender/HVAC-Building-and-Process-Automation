@@ -1,0 +1,36 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Clock.ClockMaster32.Deregister`:
+
+
+.. _`ClockMaster32.Deregister`:
+
+ClockMaster32.Deregister (METH)
+-------------------------------
+
+METHOD Deregister
+
+
+
+
+{warning 'Methodenimplementierung hinzufügen'}
+
+
+
+
+
+InOut:
+    +-------+-------------------+----------+
+    | Scope | Name              | Type     |
+    +=======+===================+==========+
+    | Inout | instUhrMasterBase | Uhr_Base |
+    +-------+-------------------+----------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,60 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eHandMan`:
+
+
+.. Index::
+   single: eHandMan
+
+.. _`eHandMan`:
+
+eHandMan (ENUM)
+---------------
+
+TYPE eHandMan :
+
+
+
+.. todo:: Please add documentation for enum: eHandMan
+
+
+
+
+
+InOut:
+    +------------------------------------+---------+-------------------------------+
+    | Name                               | Initial | Comment                       |
+    +====================================+=========+===============================+
+    | .. _`eHandMan.Auto`:               | 0       |                               |
+    |                                    |         |                               |
+    | Auto                               |         |                               |
+    +------------------------------------+---------+-------------------------------+
+    | .. _`eHandMan.HandBin`:            | 1       | HandBin (Fb's ManBin2 )       |
+    |                                    |         |                               |
+    | HandBin                            |         |                               |
+    +------------------------------------+---------+-------------------------------+
+    | .. _`eHandMan.HandNum`:            | 2       | HandNum (Fb's ManNum2 )       |
+    |                                    |         |                               |
+    | HandNum                            |         |                               |
+    +------------------------------------+---------+-------------------------------+
+    | .. _`eHandMan.HandOpModeSelector`: | 3       | HandAs (Fb's OpModeSelector ) |
+    |                                    |         |                               |
+    | HandOpModeSelector                 |         |                               |
+    +------------------------------------+---------+-------------------------------+
+    | .. _`eHandMan.HandFb`:             | 4       | HandFb (Fb's mit ManFb )      |
+    |                                    |         |                               |
+    | HandFb                             |         |                               |
+    +------------------------------------+---------+-------------------------------+
+    | .. _`eHandMan.HandEnControl`:      | 5       | HandEnCon (Fb's EditBin2)     |
+    |                                    |         |                               |
+    | HandEnControl                      |         |                               |
+    +------------------------------------+---------+-------------------------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

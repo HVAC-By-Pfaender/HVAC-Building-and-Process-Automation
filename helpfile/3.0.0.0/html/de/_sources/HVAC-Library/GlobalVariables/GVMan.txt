@@ -1,0 +1,29 @@
+.. first line of object.rst template
+.. first line of gvl-object.rst template
+.. _`.fld-HVAC Library.fld-GlobalVariables.GVMan`:
+
+
+.. _`GVMan`:
+
+GVMan (GVL)
+-----------
+
+In der GLV werden Variabel die für Globalefunktionen verwendet werden geklariert.
+
+
+
+
+InOut:
+    +---------------------+------------------+
+    | Name                | Type             |
+    +=====================+==================+
+    | .. _`GVMan.itfMan`: | IManInfoProtocol |
+    |                     |                  |
+    | itfMan              |                  |
+    +---------------------+------------------+
+
+
+.. last line of gvl-object.rst template
+.. last line of object.rst template
+
+

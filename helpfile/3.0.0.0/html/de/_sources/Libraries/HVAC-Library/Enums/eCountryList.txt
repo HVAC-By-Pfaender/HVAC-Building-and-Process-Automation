@@ -1,0 +1,44 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eCountryList`:
+
+
+.. Index::
+   single: eCountryList
+
+.. _`eCountryList`:
+
+eCountryList (ENUM)
+-------------------
+
+TYPE eCountryList :
+
+
+
+.. todo:: Please add documentation for enum: eCountryList
+
+
+
+
+
+InOut:
+    +---------------------------------+---------+
+    | Name                            | Initial |
+    +=================================+=========+
+    | .. _`eCountryList.UserDefined`: | 0       |
+    |                                 |         |
+    | UserDefined                     |         |
+    +---------------------------------+---------+
+    | .. _`eCountryList.DE`:          |         |
+    |                                 |         |
+    | DE                              |         |
+    +---------------------------------+---------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,71 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fun-object.rst template
+.. _`.fld-HVAC Library.fld-Functions.SplitInstanceText`:
+
+
+.. index::
+   single: SplitInstanceText
+
+.. _`SplitInstanceText`:
+
+SplitInstanceText (FUN)
+-----------------------
+
+FUNCTION SplitInstanceText : BOOL
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Aufsplittung eines übergebenen Instanzpfades
+     |
+     |
+
+*********************
+Funktionsbeschreibung
+*********************
+
+| Diese Funktion splittet einen übergebenen Instanzpfad ( Gerät.Application.POU.Makroname ) in die gewünschten Teilpfade auf.
+| Am Eingang *pString* wird über einen Zeiger der vollständige Instanzpfad ( Gerät.Application.POU.Makroname ) übergeben.
+| Am Eingang *pResultString1* wird über einen Zeiger der Teilpfad 1 ( Gerät.Application.POU ) auf die Ausgabevariable übergeben.
+| Am Eingang *pResultString2* wird über einen Zeiger der Teilpfad 2 ( POU ) auf die Ausgabevariable übergeben.
+| Am Eingang *iInstanzOffset* wird der Aufbau des Teilpfads 1 definiert ( 0 = Gerät.Application.POU.Makroname, 1 = Gerät.Application.POU, 2 = Gerät.Application ).
+| Am Ausgang *iNumberOfSuffix* wird der Aufbau des Teilpfads 1 dargestellt ( 0 = Gerät.Application.POU.Makroname, 1 = Gerät.Application.POU, 2 = Gerät.Application ).
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------------+------------------------+------------------------------------------------------+
+    | Scope  | Name              | Type                   | Comment                                              |
+    +========+===================+========================+======================================================+
+    | Return | SplitInstanceText | BOOL                   |                                                      |
+    +--------+-------------------+------------------------+------------------------------------------------------+
+    | Input  | pString           | POINTER TO STRING(255) | Vollständiger Instanzpfad                            |
+    +        +-------------------+------------------------+------------------------------------------------------+
+    |        | pResultString1    | POINTER TO STRING      | Instanzpfad                                          |
+    +        +-------------------+------------------------+------------------------------------------------------+
+    |        | pResultString2    | POINTER TO STRING      | Instanz ohne Namespace                               |
+    +        +-------------------+------------------------+------------------------------------------------------+
+    |        | iInstanzOffset    | INT                    | Position 0=Instanzpfad 1=Eine Instanz tiefer (max 2) |
+    +--------+-------------------+------------------------+------------------------------------------------------+
+    | Output | iNumberOfSuffix   | INT                    | Position                                             |
+    +--------+-------------------+------------------------+------------------------------------------------------+
+
+
+.. last line of fun-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

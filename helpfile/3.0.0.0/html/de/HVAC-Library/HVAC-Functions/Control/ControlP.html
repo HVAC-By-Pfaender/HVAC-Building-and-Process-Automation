@@ -1,0 +1,670 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ControlP (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../search.html" />
+    <link rel="next" title="ControlPI (FB)" href="ControlPI.html" />
+    <link rel="prev" title="Control2Seq (FB)" href="Control2Seq.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Control.html">Control</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="CascadeExtractSupplyAirTemp2Setpt.html">CascadeExtractSupplyAirTemp2Setpt (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CascadeExtractSupplyAirTemperature.html">CascadeExtractSupplyAirTemperature (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Control2P.html">Control2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Control2Seq.html">Control2Seq (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ControlP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ControlPI.html">ControlPI (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Out3P.html">Out3P (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Control.html">Control</a> &raquo;</li>
+        
+      <li>ControlP (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Control/ControlP.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-control-controlp"></span><div class="section" id="controlp-fb">
+<span id="controlp"></span><span id="index-0"></span><h1>ControlP (FB)<a class="headerlink" href="#controlp-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK ControlP</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Proportional wirkender Regler ( P-Regler )</div>
+<div class="line">Der Wirksinn ( invertiert / direkt ) ist ebenfalls einstellbar.</div>
+<div class="line">Typische Anwendung: Regelstrecken mit Stellgliedern, die speichernden Charakter haben.</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/ControlP_FB.png" src="../../../_images/ControlP_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rX</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Analoger Istwert</td>
+</tr>
+<tr class="row-odd"><td><em>rW</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Analoger Sollwert</td>
+</tr>
+<tr class="row-even"><td><em>xEn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe des Reglers</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rY</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td>Ausgangssignal des Reglers</td>
+</tr>
+<tr class="row-odd"><td><em>rDiff</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Regelabweichung</td>
+</tr>
+<tr class="row-even"><td><em>xLimitActive</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Status - Grenzwertüberschreitung</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>rMax</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>100.0</td>
+<td>Oberer absoluter Grenzwert des Ausgangssignals</td>
+</tr>
+<tr class="row-odd"><td><strong>rMin</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>-100.0</td>
+<td>Unterer absoluter Grenzwert des Ausgangssignals</td>
+</tr>
+<tr class="row-even"><td><strong>rKp</strong></td>
+<td>REAL</td>
+<td>0.0 ...</td>
+<td>2.0</td>
+<td>Verstärkungsfaktor</td>
+</tr>
+<tr class="row-odd"><td><strong>rOffset</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td>Versatz</td>
+</tr>
+<tr class="row-even"><td><strong>rYDisabled</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td>Ausschaltwert</td>
+</tr>
+<tr class="row-odd"><td><strong>eAction</strong></td>
+<td>eControlMode</td>
+<td>&nbsp;</td>
+<td>eControlMode.Inverted</td>
+<td>Wirksinnn des Reglers ( Invertiert, Direkt )</td>
+</tr>
+<tr class="row-even"><td><strong>eManModeN</strong></td>
+<td>eManNum</td>
+<td>&nbsp;</td>
+<td>eManNum.Auto</td>
+<td>Betriebsart für das Ausgangssignal des Reglers</td>
+</tr>
+<tr class="row-odd"><td><strong>rManValue</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Ausgangssignal im Handbetrieb</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein enthält einen proportional wirkenden Pegler ( P-Regler ).</div>
+<div class="line">Das Ausgangssignal des Reglers <em>rY</em> wird bei freigegebenem Regler ( <em>xEn</em> = TRUE ) und in der Betriebsart Automatik des Reglers ( <strong>eManModeN</strong> = eManNum.Auto ) wie folgt berechnet:</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><em>rY</em> = <strong>rKp</strong> * (( Istwert + Offset ) - ( Sollwert ))</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Je nach Wirksinn des Reglers <strong>eAction</strong> werden die Ist- und Sollwerte wie folgt festgelegt:</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="wirksinn-werte">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>eAction</strong></th>
+<th class="head">Istwert</th>
+<th class="head">Sollwert</th>
+<th class="head">Formel</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eControlMode.Invertiert</td>
+<td><em>rW</em></td>
+<td><em>rX</em></td>
+<td><em>rY</em> = <strong>rKp</strong> * (( <em>rW</em> + <strong>rOffset</strong> ) - ( <em>rX</em> ))</td>
+<td>Wirksinn - Invertiert</td>
+</tr>
+<tr class="row-odd"><td>eControlMode.Direct</td>
+<td><em>rX</em></td>
+<td><em>rW</em></td>
+<td><em>rY</em> = <strong>rKp</strong> * (( <em>rX</em> + <strong>rOffset</strong> ) - ( <em>rW</em> ))</td>
+<td>Wirksinn - Direkt</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="freigabeeingang-xen">
+<h3>Freigabeeingang <em>xEn</em><a class="headerlink" href="#freigabeeingang-xen" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Bei nicht aktivem Freigabeeingang ( <em>xEn</em> = FALSE ) wird der Ausschaltwert <strong>rYDisabled</strong> zum Ausgang <em>rY</em> übertragen
+( Voraussetzung: <strong>eManModeN</strong> = eManNum.Auto ) und durch die absoluten Grenzwerte begrenzt.</div>
+<div class="line"><br /></div>
+<div class="line">Bei aktivem Freigabeeingang ( <em>xEn</em> = TRUE ) wird as Ausgangssignal gemäß oben stehender Formel berechnet und zum Ausgang <em>rY</em> übertragen
+( Voraussetzung: <strong>eManModeN</strong> = eManNum.Auto ) und durch die absoluten Grenzwerte begrenzt.</div>
+</div>
+</div>
+<div class="section" id="regelabweichung-rdiff">
+<h3>Regelabweichung <em>rDiff</em><a class="headerlink" href="#regelabweichung-rdiff" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Regelabweichung wird gemäß nachfolgender Formel berechnet und zum Ausgang <em>rDiff</em> übertragen.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><em>rDiff</em> = Istwert - Sollwert</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="absolute-grenzwerte-rmin-und-rmax">
+<h3>Absolute Grenzwerte <strong>rMin</strong> und <strong>rMax</strong><a class="headerlink" href="#absolute-grenzwerte-rmin-und-rmax" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Das Ausgangssignal des Reglers <em>rY</em> wird durch die absoluten Grenzwerte <strong>rMin</strong> nach unten und <strong>rMax</strong> nach oben begrenzt.</div>
+<div class="line">Der absolute Grenzwert <strong>rMin</strong> wird auf den aktuellen Wert von <strong>rMax</strong> - 0.1 festgelegt, falls er &gt;= dem aktuellen Wert von <strong>rMax</strong> ist.</div>
+<div class="line">Davon ausgenommen ist lediglich der Handbetrieb für das Ausgangssignal des Reglers (<strong>eManModeN</strong> = eManNum.Man ).</div>
+</div>
+</div>
+<div class="section" id="status-grenzwertuberschreitung-xlimitactive">
+<h3>Status - Grenzwertüberschreitung <em>xLimitActive</em><a class="headerlink" href="#status-grenzwertuberschreitung-xlimitactive" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der Status der Grenzwertüberschreitung wird aktiviert ( <em>xLimitActive</em> = TRUE ), falls eine Grenzwertüberschreitung vorliegt.</div>
+<div class="line">Der Status der Grenzwertüberschreitung wird nicht aktiviert ( <em>xLimitActive</em> = FALSE ), falls keine Grenzwertüberschreitung vorliegt.</div>
+<div class="line"><br /></div>
+<div class="line">Eine Grenzwertüberschreitung liegt vor, falls das Ausgangssignal des Reglers <em>rY</em> den oberen Grenzwert <strong>rMax</strong> erreicht / überschreitet oder
+den unteren Grenzwert <strong>rMin</strong> erreicht / unterschreitet.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="betriebsart-fur-das-ausgangssignal-des-reglers-emanmoden">
+<h3>Betriebsart für das Ausgangssignal des Reglers <strong>eManModeN</strong><a class="headerlink" href="#betriebsart-fur-das-ausgangssignal-des-reglers-emanmoden" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der Parameter <strong>eManModeN</strong> erlaubt die Umschaltung des Ausgangssignals <em>rY</em> vom Automatik- in den Handbetrieb und umgekehrt.</div>
+<div class="line">Im Handbetrieb übernimmt das Ausgangssignal <em>rY</em> das Ausgangssignal im Handbetrieb <strong>rManValue</strong>.</div>
+<div class="line">Der Sollwert / Parameter <strong>rManValue</strong> wird bei jedem Übergang in den Automatikbetrieb mit dem aktuellen Wert des Ausgangssignal <em>rY</em> überschrieben.</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="betriebsart-ausgangssignal">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>eManModeN</strong></th>
+<th class="head"><em>rY</em></th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eManNum.Auto</td>
+<td>Signal gemäß Formel / Ausschaltwert</td>
+<td>Automatikbetrieb - Ausgangssignal</td>
+</tr>
+<tr class="row-odd"><td>eManNum.Man</td>
+<td><strong>rManValue</strong></td>
+<td>Handbetrieb - Ausgangssignal</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="12%" />
+<col width="16%" />
+<col width="21%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="11">Input</td>
+<td>rX</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Analoger Istwert</td>
+</tr>
+<tr class="row-odd"><td>rW</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Analoger Sollwert</td>
+</tr>
+<tr class="row-even"><td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe des Reglers</td>
+</tr>
+<tr class="row-odd"><td>rYMax</td>
+<td>REAL</td>
+<td>100</td>
+<td>Oberer absoluter Grenzwert des Ausgangssignals</td>
+</tr>
+<tr class="row-even"><td>rYMin</td>
+<td>REAL</td>
+<td>-100</td>
+<td>Unterer absoluter Grenzwert des Ausgangssignals</td>
+</tr>
+<tr class="row-odd"><td>rKp</td>
+<td>REAL</td>
+<td>2</td>
+<td>Verstärkungsfaktor</td>
+</tr>
+<tr class="row-even"><td>rOffset</td>
+<td>REAL</td>
+<td>0</td>
+<td>Versatz</td>
+</tr>
+<tr class="row-odd"><td>rYDisabled</td>
+<td>REAL</td>
+<td>0</td>
+<td>Ausschaltwert</td>
+</tr>
+<tr class="row-even"><td>eAction</td>
+<td><a class="reference internal" href="../../Enums/eControlMode.html#econtrolmode"><span class="std std-ref">eControlMode</span></a></td>
+<td>eControlMode.Inverted</td>
+<td>Wirksinnn des Reglers ( Invertiert, Direkt )</td>
+</tr>
+<tr class="row-odd"><td>eManModeN</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eManNum</span></a></td>
+<td>eManNum.Auto</td>
+<td>Betriebsart für das Ausgangssignal des Reglers</td>
+</tr>
+<tr class="row-even"><td>rManValue</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Ausgangssignal im Handbetrieb</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">Output</td>
+<td>rY</td>
+<td>REAL</td>
+<td>0</td>
+<td>Ausgangssignal des Reglers</td>
+</tr>
+<tr class="row-even"><td>rDiff</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Regelabweichung_Xw ( <em>rX</em> - <em>rW</em> )</td>
+</tr>
+<tr class="row-odd"><td>xLimitAktiv</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Status - Grenzwertüberschreitung</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ControlPI.html" class="btn btn-neutral float-right" title="ControlPI (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Control2Seq.html" class="btn btn-neutral float-left" title="Control2Seq (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

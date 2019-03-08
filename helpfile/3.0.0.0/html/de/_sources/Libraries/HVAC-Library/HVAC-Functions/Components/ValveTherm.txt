@@ -1,0 +1,328 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.ValveTherm`:
+
+
+.. index::
+   single: ValveTherm
+
+.. _`ValveTherm`:
+
+ValveTherm (FB)
+---------------
+
+FUNCTION_BLOCK ValveTherm
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Steuerung eines thermischen Antriebs mit Blockierschutzfunktion
+     |
+     | Typische Anwendung: Ventilantrieb am Heizkörper
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/ValveTherm_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xY*
+      - BOOL
+      -
+      -
+      - Anforderung
+    * - *xForce*
+      - BOOL
+      -
+      - FALSE
+      - Zwangsübersteuerung nach Handübersteuerung
+    * - *eAOO*
+      - HVACTYPES.eManBin
+      - HVACTYPES.eManBin.Auto, HVACTYPES.eManBin.ManOff, HVACTYPES.eManBin.ManOn
+      - HVACTYPES.eManBin.Auto
+      - Betriebsart der Handübersteuerung - Hardware
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xHB*
+      - BOOL
+      -
+      -
+      - Freigabe nach Handübersteuerung
+    * - *xAB*
+      - BOOL
+      -
+      -
+      - Freigabe vor Handübersteuerung
+    * - *xEnergyRequest*
+      - BOOL
+      -
+      -
+      - Anforderung - Energieerzeugung
+    * - *dtAbsLastOn*
+      - DATE_AND_TIME
+      -
+      -
+      - Datum / Uhrzeit des letzten Blockierschutzbetriebs
+    * - *xAuto*
+      - BOOL
+      -
+      -
+      - Sammelmeldung Automatikbetrieb
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **udiAbsTime**
+      - UDINT
+      - 0 ... 600s
+      - 200s
+      -  Zeitdauer des Blockierschutzbetriebs in Sekunden
+    * - **todAbsStartTime**
+      - TOD
+      - 00:00:00 - 23:59:59 Uhr
+      - 09:00:00 Uhr
+      - Zeitpunkt des Blockierschutzbetriebs
+    * - **eAbsDay**
+      - eDoW
+      - eDow.Inactive, eDoW.Monday ... eDoW.Sunday
+      - eDoW.Monday
+      - Wochentag des Blockierschutzbetriebs
+    * - **xForceOption**
+      - BOOL
+      -
+      - TRUE
+      - Zustand vom Ausgang *xHB* bei Zwangsübersteuerung
+    * - **eManModeB**
+      - eMANBIN
+      - eMANBIN.Auto, eMANBIN.Off, eMANBIN.On
+      - eMANBIN.Auto
+      - Betriebsart der Handübersteuerung
+
+*********************
+Funktionsbeschreibung
+*********************
+Freigabe vor Handübersteuerung *xAB*
+====================================
+| Der Ausgang Freigabe vor Handübersteuerung *xAB* wird durch den Eingang *xY* und das Blockierschutzmodul beeinflusst.
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 300 300 900
+    :header-rows: 1
+
+    * - *xY*
+      - Blockierschutzmodul
+      - *xAB*
+      - Hinweise
+    * - TRUE
+      - X
+      - TRUE
+      - Freigabe vor Handübersteuerung über Anforderung
+    * - X
+      - TRUE
+      - TRUE
+      - Freigabe vor Handübersteuerung über Blockierschutzmodul
+    * - FALSE
+      - FALSE
+      - FALSE
+      - Sperrung Freigabe vor Handübersteuerung über die Anforderungen
+
+| Legende: X = beliebig
+
+Freigabe nach Handübersteuerung *xHB*
+=====================================
+| Der Ausgang Freigabe nach Handübersteuerung *xHB* entspricht der Freigabe vor Handübersteuerung *xAB*, zusätzlich erweitert um ein Handübersteuermodul und um eine Zwangsübersteuerung.
+
+ .. list-table::
+    :name: Funktionstabelle_2
+    :widths: 300 300 300 300 300 900
+    :header-rows: 1
+
+    * - *xAB*
+      - **eManModeB**
+      - *xForce*
+      - **xForceOption**
+      - *xHB*
+      - Hinweise
+    * - FALSE
+      - eMANBIN.Auto
+      - FALSE
+      - X
+      - FALSE
+      - Handübersteuermodul in Automatik
+    * - TRUE
+      - eMANBIN.Auto
+      - FALSE
+      - X
+      - TRUE
+      - Handübersteuermodul in Automatik
+    * - X
+      - eMANBIN.On
+      - FALSE
+      - X
+      - TRUE
+      - Handübersteuermodul in Handbetrieb Ein
+    * - X
+      - eMANBIN.Off
+      - FALSE
+      - X
+      - FALSE
+      - Handübersteuermodul in Handbetrieb Aus
+    * - X
+      - X
+      - TRUE
+      - FALSE
+      - FALSE
+      - Zwangsübersteuerung Zu
+    * - X
+      - X
+      - TRUE
+      - TRUE
+      - TRUE
+      - Zwangsübersteuerung Auf
+
+| Legende: X = beliebig
+
+Anforderung - Energieerzeugung *xEnergyRequest*
+===============================================
+| Die Anforderung - Energieerzeugung *xEnergyRequest* wird durch den Blockierschutzprozess, die Freigabe nach Handübersteuerung *xHB* und die Betriebsart der Handübersteuerung - Hardware *eAOO* beeinflusst.
+
+ .. list-table::
+    :name: Funktionstabelle_3
+    :widths: 300 300 900 300 900
+    :header-rows: 1
+
+    * - Blockierschutzprozess
+      - *xHB*
+      - *eAOO*
+      - *xEnergyRequest*
+      - Hinweise
+    * - FALSE
+      - TRUE
+      - HVACTYPES.eManBin.Auto
+      - TRUE
+      - Anforderung im Automatikbetrieb der Handübersteuerung - Hardware
+    * - X
+      - X
+      - HVACTYPES.eManBin.ManOn
+      - TRUE
+      - Anforderung im Handbetrieb der Handübersteuerung - Hardware
+
+| In allen anderen Situationen ist die Anforderung - Energieerzeugung *xEnergyRequest* nicht aktiv ( = FALSE ).
+
+| Legende: X = beliebig
+
+Blockierschutzmodul
+===================
+| Das Blockierschutzmodul wird durch das binäre Blockierschutzmodul mit einstellbarer Zeitdauer ( FB: AbsB ) realisiert.
+| Die Zeitdauer *udiAbsTime*, der Zeitpunkt **todAbsStartTime** und der Wochentag **eAbsDay** sind einstellbar.
+| Die Mindestlaufzeit zur Sperrung des Blockierschutzbetriebs beträgt 30s.
+| Der Zeitstempel (Datum / Uhrzeit) des letzten Blockierschutzbetriebs *dtAbsLastOn* steht zur Verfgung.
+
+Sammelmeldung Automatikbetrieb *xAuto*
+======================================
+| Die Sammelmeldung Automatikbetrieb *xAuto* wird aktiviert ( = TRUE ), falls der Eingang *eAOO* den Wert HVACTYPES.eManBin.Auto und der Sollwert / Parameter **eManModeB**
+  den Wert eMANBIN.Auto enthält. In alle übrigen Fällen ist die Sammelmeldung Automatikbetrieb *xAuto* nicht aktiviert ( = FALSE ).
+|
+Zwangsübersteuerung *xForce*
+======================================
+| Die Zwangsübersteuerung wirkt direkt auf den Ausgang *xHB*. Mit dem Parameter **xForceOption** wird festgelegt, welchen Zustand der Ausgang *xHB* bei TRUE am Eingang *xForce* einnimmt.
+|
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------------+-------------+------------------------+----------------------------------------------------+
+    | Scope  | Name            | Type        | Initial                | Comment                                            |
+    +========+=================+=============+========================+====================================================+
+    | Input  | xY              | BOOL        |                        | Anforderung                                        |
+    +        +-----------------+-------------+------------------------+----------------------------------------------------+
+    |        | xForce          | BOOL        | FALSE                  | Zwangsübersteuerung nach Handübersteuerung         |
+    +        +-----------------+-------------+------------------------+----------------------------------------------------+
+    |        | eAOO            | |ioeManBin| | HVACTYPES.eManBin.Auto |                                                    |
+    +--------+-----------------+-------------+------------------------+----------------------------------------------------+
+    | Output | xHB             | BOOL        |                        | Freigabe nach Handübersteuerung                    |
+    +        +-----------------+-------------+------------------------+----------------------------------------------------+
+    |        | xAB             | BOOL        |                        | Freigabe vor Handübersteuerung                     |
+    +        +-----------------+-------------+------------------------+----------------------------------------------------+
+    |        | xEnergyRequest  | BOOL        |                        | Anforderung - Energieerzeugung                     |
+    +        +-----------------+-------------+------------------------+----------------------------------------------------+
+    |        | dtAbsLastOn     | DT          |                        | Datum / Uhrzeit des letzten Blockierschutzbetriebs |
+    +        +-----------------+-------------+------------------------+----------------------------------------------------+
+    |        | xAuto           | BOOL        |                        | Sammelmeldung Automatikbetrieb                     |
+    +--------+-----------------+-------------+------------------------+----------------------------------------------------+
+    | Input  | udiAbsTime      | UDINT       | 200                    | Zeitdauer des Blockierschutzbetriebs in Sekunden   |
+    +        +-----------------+-------------+------------------------+----------------------------------------------------+
+    |        | todAbsStartTime | TOD         | TIME_OF_DAY#9:0        | Zeitpunkt des Blockierschutzbetriebs               |
+    +        +-----------------+-------------+------------------------+----------------------------------------------------+
+    |        | eAbsDay         | |ioeDoW|    | eDow.Monday            | Wochentag des Blockierschutzbetriebs               |
+    +        +-----------------+-------------+------------------------+----------------------------------------------------+
+    |        | xForceOption    | BOOL        | TRUE                   | Zustand vom Ausgang *xHB* bei Zwangsübersteuerung  |
+    +        +-----------------+-------------+------------------------+----------------------------------------------------+
+    |        | eManModeB       | |ioeMANBIN| | eMANBIN.Auto           | Betriebsart der Handübersteuerung                  |
+    +--------+-----------------+-------------+------------------------+----------------------------------------------------+
+
+.. |ioeManBin| replace:: :ref:`eManBin<eManBin>`
+.. |ioeDoW| replace:: :ref:`eDoW<eDoW>`
+.. |ioeMANBIN| replace:: :ref:`eMANBIN<eManBin>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

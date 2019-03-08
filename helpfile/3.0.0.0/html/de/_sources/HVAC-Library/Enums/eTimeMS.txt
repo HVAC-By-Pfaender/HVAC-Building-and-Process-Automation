@@ -1,0 +1,56 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eTimeMS`:
+
+
+.. Index::
+   single: eTimeMS
+
+.. _`eTimeMS`:
+
+eTimeMS (ENUM)
+--------------
+
+TYPE eTimeMS :
+
+
+
+.. todo:: Please add documentation for enum: eTimeMS
+
+
+
+
+
+InOut:
+    +----------------------------+----------+------------------------+
+    | Name                       | Initial  | Comment                |
+    +============================+==========+========================+
+    | .. _`eTimeMS.Millisecond`: | 1        | 1 Milisekunde          |
+    |                            |          |                        |
+    | Millisecond                |          |                        |
+    +----------------------------+----------+------------------------+
+    | .. _`eTimeMS.Second`:      | 1000     | 1000   Milisekunde     |
+    |                            |          |                        |
+    | Second                     |          |                        |
+    +----------------------------+----------+------------------------+
+    | .. _`eTimeMS.Minute`:      | 60000    | 60000 Milisekunde      |
+    |                            |          |                        |
+    | Minute                     |          |                        |
+    +----------------------------+----------+------------------------+
+    | .. _`eTimeMS.Hour`:        | 3600000  | 3600000 Milisekunde    |
+    |                            |          |                        |
+    | Hour                       |          |                        |
+    +----------------------------+----------+------------------------+
+    | .. _`eTimeMS.Day`:         | 86400000 | 86400000   Milisekunde |
+    |                            |          |                        |
+    | Day                        |          |                        |
+    +----------------------------+----------+------------------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

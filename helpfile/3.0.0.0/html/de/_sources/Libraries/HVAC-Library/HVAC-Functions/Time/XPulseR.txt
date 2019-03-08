@@ -1,0 +1,168 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Time.XPulseR`:
+
+
+.. index::
+   single: XPulseR
+
+.. _`XPulseR`:
+
+XPulseR (FB)
+------------
+
+FUNCTION_BLOCK XPulseR
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Erzeugung eines exklusiven Impulses mit einstellbarer Zeitdauer und Rücksetzmöglichkeit
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/XPulseR_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xIN*
+      - BOOL
+      -
+      -
+      - Binärer Eingang ( FALSE > TRUE )
+    * - *tPT*
+      - TIME
+      -
+      - T#1s
+      - Zeitdauer des Ausgangsimpulses in s
+    * - *xReset*
+      - BOOL
+      -
+      -
+      - Binärer Rücksetzeingang ( FALSE > TRUE )
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 300 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xQ*
+      - BOOL
+      -
+      -
+      - Impulsausgang ( FALSE = Aus, TRUE = Ein )
+    * - *tET*
+      - TIME
+      - 0 ... *tPT*
+      -
+      - Aktuelle Zeitdauer des Impulses an *xQ* in s
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **xTest**
+      - BOOL
+      -
+      - FALSE
+      - Binärer Testeingang ( FALSE > TRUE )
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Am Impulsausgang *xQ* wird nach jeder ansteigenden Flanke ( FALSE > TRUE ) am binären Eingang *xIN* und / oder am Sollwert / Parameter
+  **xTest** ein Impuls mit einer Zeitdauer *tPT* erzeugt ( Voraussetzung: *xReset* = FALSE ).
+|
+| Jede ansteigende Flanke ( FALSE > TRUE ) am Rücksetzeingang *xReset* setzt den Impulsausgang *xQ* unmittelbar zurück ( = FALSE ).
+|
+| Die Flankenerkennung ( FALSE > TRUE ) an den Eingängen *xIN* bzw. **xTest** hat gegenüber der Flankenerkennung am Eingang
+  *xReset* ( FALSE > TRUE ) eine höhere Priorität.
+| Dies hat zur Folge, das trotz gleichzeitiger Flankenerkennung ein Impuls mit einer Zeitdauer *tPT* am Ausgang *xQ* erzeugt wird.
+
+| Der Sollwert / Parameter **xTest** wird zyklisch deaktiviert ( = FALSE ).
+|
+
+.. image:: /../DocuBilder/XPulseR_Bild_1.png
+
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+--------+------+------------+----------------------------------------------+
+    | Scope  | Name   | Type | Initial    | Comment                                      |
+    +========+========+======+============+==============================================+
+    | Input  | xIN    | BOOL |            | Binärer Eingang ( FALSE > TRUE )             |
+    +        +--------+------+------------+----------------------------------------------+
+    |        | tPT    | TIME | TIME#1s0ms | Zeitdauer des Ausgangsimpulses in s          |
+    +        +--------+------+------------+----------------------------------------------+
+    |        | xReset | BOOL |            | Binärer Rücksetzeingang ( FALSE > TRUE )     |
+    +        +--------+------+------------+----------------------------------------------+
+    |        | xTest  | BOOL | FALSE      | Binärer Testeingang ( FALSE > TRUE )         |
+    +--------+--------+------+------------+----------------------------------------------+
+    | Output | xQ     | BOOL |            | Impulsausgang ( FALSE = Aus, TRUE = Ein )    |
+    +        +--------+------+------------+----------------------------------------------+
+    |        | tET    | TIME |            | Aktuelle Zeitdauer des Impulses an *xQ* in s |
+    +--------+--------+------+------------+----------------------------------------------+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Time/pou-XPulseR/mGetTime
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

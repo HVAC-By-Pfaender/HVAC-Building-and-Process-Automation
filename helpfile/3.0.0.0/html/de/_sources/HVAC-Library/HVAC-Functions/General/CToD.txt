@@ -1,0 +1,126 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-General.CToD`:
+
+
+.. index::
+   single: CToD
+
+.. _`CToD`:
+
+CToD (FB)
+---------
+
+FUNCTION_BLOCK CToD
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Konvertierung der Zeitkomponenten Minuten/Stunden in eine Uhrzeit (TOD)
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/CToD_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *todHHMM*
+      - TOD
+      - 0 ... 23:59:59:999
+      -
+      - Uhrzeit im Format TOD
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **iMM**
+      - INT
+      -
+      - 0
+      - Festlegung der Minuten im Format MM (0..59)
+    * - **iHH**
+      - INT
+      -
+      - 0
+      - Festlegung der Stunden im Format HH (0..23)
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Bildung der Uhrzeit *todHHMM* aus den Einzelkomponenten **iMM** und **iHH**.
+| Die logischen Eingabegrenzen der Einzelkomponenten werden überwacht.
+| Wird eine Eingabe außerhalb der angegebenen Grenzen getätigt, so wird der Ausgang *todHHMM* auf TOD#0:0:0 gesetzt.
+| Dieser Baustein kann z.B. für die Eingabe in einer Visualisierung genutzt werden.
+| Die logischen Eingabegrenzen der Einzelkomponenten werden überwacht und ggf. korrigiert.
+| Die logischen Eingabegrenzen der Einzelkomponenten werden überwacht.
+| Wird eine Eingabe außerhalb der angegebenen Grenzen getätigt, so wird der Ausgang (todHHMM) auf TOD#0:0:0 gesetzt.
+| Dieser Baustein kann z.B. für die Eingabe in einer Visualisierung genutzt werden.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+---------+------+---------+---------------------------------------------+
+    | Scope  | Name    | Type | Initial | Comment                                     |
+    +========+=========+======+=========+=============================================+
+    | Input  | iMM     | INT  | 0       | Festlegung der Minuten im Format MM (0..59) |
+    +        +---------+------+---------+---------------------------------------------+
+    |        | iHH     | INT  | 0       | Festlegung der Stunden im Format HH (0..23) |
+    +--------+---------+------+---------+---------------------------------------------+
+    | Output | todHHMM | TOD  |         | Uhrzeit im Format TOD                       |
+    +--------+---------+------+---------+---------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

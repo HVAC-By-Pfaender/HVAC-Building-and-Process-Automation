@@ -1,0 +1,174 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Monitoring.FilterMonitoringB`:
+
+
+.. index::
+   single: FilterMonitoringB
+
+.. _`FilterMonitoringB`:
+
+FilterMonitoringB (FB)
+----------------------
+
+FUNCTION_BLOCK FilterMonitoringB
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Erkennung einer Filterverschmutzung und Erzeugung einer Störmeldung
+     |
+     | Typische Anwendung: Überwachung der Verschmutzung eines Luftfilters mit einem Differenzdruckschalter
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/FilterMonitoringB_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xIn*
+      - BOOL
+      -
+      -
+      - Eingang - Differenzdruckschalter
+    * - *xQuit*
+      - BOOL
+      -
+      - FALSE
+      - Rücksetzung - Störmeldung
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xAlarm*
+      - BOOL
+      -
+      -
+      - Ausgang - Störmeldung
+    * - *tTimeToAlarm*
+      - TIME
+      -
+      -
+      - Zeitdauer bis zur Auslösung der Störmeldung
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *udiControlTime*
+      - UDINT
+      - 1s ... 3600s
+      - 300s
+      - Wartezeit
+    * - **xControl**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe der Überwachung
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Erkennung einer Filterverschnmutzung durch die Auswertung des Eingangs für den Differenzdruckschalter *xIn*.
+|
+
+Ausgang - Störmeldung *xAlarm*
+==============================
+| Der Ausgang - Störmeldung *xAlarm* wird aktiviert ( *xAlarm* = TRUE ), falls die unten stehende Bedingung 1 erfüllt ist.
+|
+| Bedingung 1:  Der Eingang für den Differenzdruckschalter *xIn* befindet sich mindestens während Wartezeit *udiControlTime* permanent im Zustand TRUE ( = Filterverschmutzung ).
+|                    Gleichzeitig ist die Überwachung generell freigegeben  ( **xControl** = TRUE ).
+|
+| Der Ausgang - Störmeldung *xAlarm* wird in folgenden Fällen deaktiviert ( *xAlarm* = FALSE ):
+|
+| Fall 1:       Die Bedingung 1 ist nicht erfüllt und die Rücksetzung der Störmeldung *xQuit* ist aktiv ( = TRUE ).
+|
+| Fall 2:       Die Bedingung 1 ist nicht erfüllt und die Freigabe der Überwachung **xControl** ist nicht aktiv ( = FALSE ).
+|
+
+Zeitdauer bis zur Auslösung der Störmeldung *tTimeToAlarm*
+==========================================================
+| Am Ausgang Zeitdauer bis zur Auslösung der Störmeldung *tTimeToAlarm* werden je nach Betriebssituation unterschiedliche Werte angezeigt.
+|
+| Situation 1:  Ausgabe der Restzeitdauer bis zur Auslösung der Störmeldung ( Bedingungen: *xIn* = TRUE, **xControl** = TRUE )
+|
+| Situation 2:  Falls die Situation 1 nicht vorliegt, so wird permanent der Wert 0.0 ausgegeben.
+|
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+----------------+-------+---------+---------------------------------------------+
+    | Scope  | Name           | Type  | Initial | Comment                                     |
+    +========+================+=======+=========+=============================================+
+    | Input  | xIn            | BOOL  |         | Eingang - Differenzdruckschalter            |
+    +        +----------------+-------+---------+---------------------------------------------+
+    |        | xQuit          | BOOL  | FALSE   | Rücksetzung - Störmeldung                   |
+    +        +----------------+-------+---------+---------------------------------------------+
+    |        | udiControlTime | UDINT | 300     | Wartezeit                                   |
+    +        +----------------+-------+---------+---------------------------------------------+
+    |        | xControl       | BOOL  | TRUE    | Freigabe der Überwachung                    |
+    +--------+----------------+-------+---------+---------------------------------------------+
+    | Output | xAlarm         | BOOL  |         | Ausgang - Störmeldung                       |
+    +        +----------------+-------+---------+---------------------------------------------+
+    |        | tTimeToAlarm   | TIME  |         | Zeitdauer bis zur Auslösung der Störmeldung |
+    +--------+----------------+-------+---------+---------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

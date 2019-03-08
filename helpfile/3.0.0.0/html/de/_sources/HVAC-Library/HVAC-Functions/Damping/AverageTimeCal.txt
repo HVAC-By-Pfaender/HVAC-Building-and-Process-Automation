@@ -1,0 +1,349 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Damping.AverageTimeCal`:
+
+
+.. index::
+   single: AverageTimeCal
+
+.. _`AverageTimeCal`:
+
+AverageTimeCal (FB)
+-------------------
+
+FUNCTION_BLOCK AverageTimeCal
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Durchschnittswertbildung eines Analogwertes über vier verschiedene Zeiträume
+     | Mittelwertbildung: Gewichteter Mittelwert ( siehe untenstehende Formel )
+     | Typische Anwendung: Zeitliche Mittelung der Außentemperatur
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/AverageTimeCal_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rIn*
+      - REAL
+      -
+      -
+      - Analogwerteingang
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rOutCH0*
+      - REAL
+      -
+      -
+      - Durchschnittswert Zeitraum 1
+    * - *rOutCH1*
+      - REAL
+      -
+      -
+      - Durchschnittswert Zeitraum 2
+    * - *rOutCH2*
+      - REAL
+      -
+      -
+      - Durchschnittswert Zeitraum 3
+    * - *rOutCH3*
+      - REAL
+      -
+      -
+      - Durchschnittswert Zeitraum 4
+    * - *rOutMin*
+      - REAL
+      -
+      -
+      - Minimalwert aller Messwerte
+    * - *rOutMax*
+      - REAL
+      -
+      -
+      - Maximalwert aller Messwerte
+    * - *dtLastNewValue*
+      - DATE_AND_TIME
+      -
+      -
+      - Speicherzeitpunkt des letzten Messwertes
+    * - *sErr*
+      - STRING
+      -
+      -
+      - Aktueller Fehlertext
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **xCalculation**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung der Datenaufzeichnung
+    * - **xResetOnInput**
+      - BOOL
+      -
+      - FALSE
+      - Initialisierung der Messwertspeicherung und der Durchschnittswertausgänge mit *rIn*
+    * - **rInitValue**
+      - REAL
+      -
+      - 10
+      - Initialisierungswert für den Messwertespeicher und die Durchschnittswertausgänge bei **eInitial** = eInit2.InitValue.
+    * - **tInitDelay**
+      - TIME
+      -
+      - 5s
+      - Verzögerungszeit für die Messwertspeicherung bei **eInitial** = eInit2.InputValueDelayed.
+    * - **eInitial**
+      - eInit2
+      -
+      - eInit2.LastValue
+      - Festlegung der Art der Initialisierung
+    * - **wCH3Time**
+      - WORD
+      -
+      - 48
+      - Festlegung des Zeitraums 4 in Stunden
+    * - **wCH2Time**
+      - WORD
+      -
+      - 36
+      - Festlegung des Zeitraums 3 in Stunden
+    * - **wCH1Time**
+      - WORD
+      -
+      - 24
+      - Festlegung des Zeitraums 2 in Stunden
+    * - **wCH0Time**
+      - WORD
+      -
+      - 12
+      - Festlegung des Zeitraums 1 in Stunden
+    * - **wInterval**
+      - WORD
+      -
+      - 15
+      - Festlegung des Aufzeichnungsintervalls in Minuten
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Mittelwertbildung
+|
+| Der Wert am Analogwerteingang *rIn* wird Aufzeichnungsintervall **iInterval** ( Voreinstellung = 15 Minuten ) erfasst.
+| Zur Berechnung des Mittelwerts eines Zeitraums X ( X = 0 ... 3 ) werden nun jeweils drei Faktoren ermittelt.
+|
+|
+| Faktor 1 - Zeitraum X: Gesamtanzahl der zu berücksichtigenden Messwerte
+|
+|                   Faktor 1  =  ( **iCHXTime** * 60    ) / **iInterval**
+|
+|
+| Faktor 2 - Zeitraum X: Faktor für den gespeicherten Durchschnitt
+|
+|                   Faktor 2  =  ( Faktor 1 - 1 ) / Faktor 1
+|
+|
+| Faktor 3 - Zeitraum X: Faktor für den aktuellen Wert am Analogwerteingang *rIn*
+|
+|                   Faktor 3  =  1 - Faktor 2
+|
+|
+| Der Mittelwert jedes Zeitraums wird im Aufzeichnungsintervall **iInterval** gemäß nachfolgender Formel berechnet und auf die
+  Durchschnittswertausgänge übertragen:
+|
+|
+| Mittelwert = ( Alter Mittelwert * Faktor 2 ) + (  *rIn* * Faktor 3 )
+|
+|
+| Legende:  X = 0 ... 3
+|
+
+.. topic:: Beispiel
+
+    | **iInterval** = 15 Minuten, **wCH0Time** = 12 Stunden, Alter Mittelwert = 20.0, *rIn* = 22.0
+    |
+    | Faktor 1 = 48
+    |
+    | Faktor 2 = 47 / 48
+    |
+    | Faktor 3 = 1 / 48
+    |
+    | Mittelwert = 20.041
+    |
+
+Durchschnittswertausgänge *rOutCHX* ( X = 0 ... 3 )
+===================================================
+| Am Durchschnittswertausgang *rOutCHX* ( X = 0 ... 3 ) steht erstmalig nach der Zeitdauer  **iCHXTime** der Mittelwert der erfassten Eingangswerte zur Verfügung.
+
+Minimalwertausgang *rOutMin*
+============================
+| Am Minimalwertausgang *rOutMin* steht erstmalig nach einem Aufzeichnungsintervall **iInterval** der absolute Minimalwert aller erfassten Eingangswerte
+  zur Verfügung.
+
+Maximalwertausgang *rOutMax*
+============================
+| Am Maximalwertausgang *rOutMax* steht erstmalig nach einem Aufzeichnungsintervall **iInterval** der absolute Maximalwert aller erfassten Eingangswerte
+  zur Verfügung.
+
+Zeitstempel *dtLastNewValue*
+=============================
+| Am Zeitstempelausgang *dtLastNewValue* steht erstmalig nach einem Aufzeichnungsintervall **iInterval** der Zeitstempel der letzten Ablage im Messwertespeicher
+  zur Verfügung.
+
+Fehlertext *sErr*
+=================
+| Am Ausgang für den aktuellen Fehlertext *sErr* steht im Fehlerfall ein beschreibender Text zur Verfügung. Bei Fehlerfreiheit wird ein Leerstring ausgegeben.
+
+Art der Initialisierung **eInitial**
+====================================
+| Mit diesem Sollwert / Parameter wird die Art der Initialisierung des Messwertspeichers und der Durchschnittswertausgänge festgelegt. Folgende Optionen sind möglich:
+
+ .. list-table::
+    :name: Initialisierungsarten
+    :widths: 300 600 900
+    :header-rows: 1
+
+    * - Art
+      - Wert der Initialierung
+      - Hinweis
+    * - eInit2.InitValue
+      - **rInitValue**
+      - Einstellbarer Initialwert
+    * - eInit2.InputValue
+      - *rIn*
+      - Eingangswert
+    * - eInit2.InputValueDelayed
+      - *rIn*
+      - Verzögerter Eingangswert
+    * - eInit2.LastValue
+      - Durchschnitt - Messwertespeicher ( Messwertespeicher gefüllt )
+      - Letzter Wert
+    * - eInit2.LastValue
+      - *rIn* ( Messwertespeicher leer )
+      - Letzter Wert
+
+Freigabe / Sperrung der Datenaufzeichnung **xCalculation**
+==========================================================
+| Mit diesem Sollwert / Parameter wird die Datenaufzeichnung freigegeben ( = TRUE ) bzw. gesperrt ( = FALSE )
+
+Rücksetzung des Messwertespeichers / der Durchschnittswertausgänge **xResetOnInput**
+====================================================================================
+| Mit diesem Sollwert / Parameter werden der Meswertespeicher / die Durchschnittswertausgänge auf den Wert 'rIn' zurück gesetzt ( = TRUE ).
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+----------------+------------+------------------+--------------------------------------------------------+
+    | Scope  | Name           | Type       | Initial          | Comment                                                |
+    +========+================+============+==================+========================================================+
+    | Input  | rIn            | REAL       |                  | Analogwerteingang                                      |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | xCalculation   | BOOL       | TRUE             | Freigabe / Sperrung der Datenaufzeichnung              |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | xResetOnInput  | BOOL       | FALSE            | Initialisierung der Messwertspeicherung und der        |
+    |        |                |            |                  | Durchschnittswertausgänge mit *rIn*                    |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | rInitValue     | REAL       | 10               | Initialisierungswert für den Messwertespeicher und die |
+    |        |                |            |                  | Durchschnittswertausgänge bei **eInitial** =           |
+    |        |                |            |                  | eInit2.InitValue.                                      |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | tInitDelay     | TIME       | TIME#5s0ms       | Verzögerungszeit für die Messwertspeicherung bei       |
+    |        |                |            |                  | **eInitial** = eInit2.InputValueDelayed.               |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | eInitial       | |ioeInit2| | eInit2.LastValue | Festlegung der Art der Initialisierung                 |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | wCH3Time       | WORD       | 48               | Festlegung des Zeitraums 4 in Stunden                  |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | wCH2Time       | WORD       | 36               | Festlegung des Zeitraums 3 in Stunden                  |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | wCH1Time       | WORD       | 24               | Festlegung des Zeitraums 2 in Stunden                  |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | wCH0Time       | WORD       | 12               | Festlegung des Zeitraums 1 in Stunden                  |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | wInterval      | WORD       | 15               | Festlegung des Aufzeichnungsintervalls in Minuten      |
+    +--------+----------------+------------+------------------+--------------------------------------------------------+
+    | Output | rOutCH0        | REAL       |                  | Durchschnittswert Zeitraum 1                           |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | rOutCH1        | REAL       |                  | Durchschnittswert Zeitraum 2                           |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | rOutCH2        | REAL       |                  | Durchschnittswert Zeitraum 3                           |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | rOutCH3        | REAL       |                  | Durchschnittswert Zeitraum 4                           |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | rOutMin        | REAL       |                  | Minimalwert aller Messwerte                            |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | rOutMax        | REAL       |                  | Maximalwert aller Messwerte                            |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | dtLastNewValue | DT         |                  | Speicherzeitpunkt des letzten Messwertes               |
+    +        +----------------+------------+------------------+--------------------------------------------------------+
+    |        | sErr           | STRING     |                  | Aktueller Fehlertext                                   |
+    +--------+----------------+------------+------------------+--------------------------------------------------------+
+
+.. |ioeInit2| replace:: :ref:`eInit2<eInit2>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

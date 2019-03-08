@@ -1,0 +1,119 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.MoveStore`:
+
+
+.. index::
+   single: MoveStore
+
+.. _`MoveStore`:
+
+MoveStore (FB)
+--------------
+
+FUNCTION_BLOCK MoveStore
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Flankengesteuerte Speicherung eines numerischen Eingangswerts
+     |
+     | Typische Anwendung: Ereignisabhängige Speicherung eines Messwerts
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/MoveStore_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xEn*
+      - BOOL
+      -
+      -
+      - Speichersignal
+    * - *rIn*
+      - REAL
+      -
+      -
+      - Eingangswert
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rOut*
+      - REAL
+      -
+      - 0.0
+      - Ausgangswert
+
+*********************
+Funktionsbeschreibung
+*********************
+Ausgangswert *rOut*
+===================
+| Der aktuelle Wert am Eingangswert *rIn* wird bei jeder ansteigenden Flanke am Eingang Speichersignal *xEn* gespeichert und
+  direkt zum Ausgangswert *rOut* übertragen.
+| Das hat zur Folge, dass sich der Wert von *rOut* nur bei einer ansteigenden Flanke verändern kann und in allen übrigen Situationen seinen Wert nicht verändert.
+|
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+------+------+---------+----------------+
+    | Scope  | Name | Type | Initial | Comment        |
+    +========+======+======+=========+================+
+    | Input  | xEn  | BOOL |         | Speichersignal |
+    +        +------+------+---------+----------------+
+    |        | rIn  | REAL |         | Eingangswert   |
+    +--------+------+------+---------+----------------+
+    | Output | rOut | REAL | 0       | Ausgangswert   |
+    +--------+------+------+---------+----------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

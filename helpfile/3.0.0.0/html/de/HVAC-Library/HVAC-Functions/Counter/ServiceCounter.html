@@ -1,0 +1,586 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ServiceCounter (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../search.html" />
+    <link rel="next" title="ServiceCounter.mReset (METH)" href="pou-ServiceCounter/mReset.html" />
+    <link rel="prev" title="OperatingHours.mReset (METH)" href="pou-OperatingHours/mReset.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Counter.html">Counter</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="ImpulseCounter.html">ImpulseCounter (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OperatingHours.html">OperatingHours (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ServiceCounter (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Counter.html">Counter</a> &raquo;</li>
+        
+      <li>ServiceCounter (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Counter/ServiceCounter.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-counter-servicecounter"></span><div class="section" id="servicecounter-fb">
+<span id="servicecounter"></span><span id="index-0"></span><h1>ServiceCounter (FB)<a class="headerlink" href="#servicecounter-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK ServiceCounter</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Signalisierung von Wartungen</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/ServiceCounter_FB.png" src="../../../_images/ServiceCounter_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>dLastService</em></td>
+<td>DATE</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Datum der letzten Wartung</td>
+</tr>
+<tr class="row-odd"><td><em>dNextService</em></td>
+<td>DATE</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Datum der Fälligkeit der nächsten Wartung</td>
+</tr>
+<tr class="row-even"><td><em>xAlarm1</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzeige, dass Wartung demnächst fällig ist</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarm2</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzeige, dass Wartung heute fällig ist</td>
+</tr>
+<tr class="row-even"><td><em>xAlarm3</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzeige, dass Wartung bereits fällig war</td>
+</tr>
+<tr class="row-odd"><td><em>diServiceInDay</em></td>
+<td>DINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzeige in wie vielen Tagen die nächste Wartung fällig ist</td>
+</tr>
+<tr class="row-even"><td><em>diServiceSinceDay</em></td>
+<td>DINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Tage seit der letzten Wartung</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>iAlarm1</strong></td>
+<td>INT</td>
+<td>(0-diServiceInterval)...0</td>
+<td>-10</td>
+<td>Alarmgrenze 1 in Tagen (Wartung ist demnächst fällig)</td>
+</tr>
+<tr class="row-odd"><td><strong>iAlarm3</strong></td>
+<td>INT</td>
+<td>0...diServiceInterval</td>
+<td>10</td>
+<td>Alarmgrenze 3 in Tagen (Wartung war bereits fällig)</td>
+</tr>
+<tr class="row-even"><td><strong>diServiceInterval</strong></td>
+<td>UINT</td>
+<td>1...1825</td>
+<td>365</td>
+<td>Wartungsintervall (in Tagen)</td>
+</tr>
+<tr class="row-odd"><td><strong>xReset</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Wartungstagezähler zurücksetzen</td>
+</tr>
+<tr class="row-even"><td><strong>xEn</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Freigabe der Ausgänge xAlarm1 bis 3</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein stellt Funktionalitäten zur Signalisierung von Wartungsintervallen bzw. zur Rücksetzung des Zähler nach erfolgter Wartung bereit.</div>
+<div class="line">Die drei Ausgänge zur Signalisierung sind temporär abschaltbar.</div>
+<div class="line">Die Anzahl der Tage bis zur nächsten Wartung (Wartungsintervall) ist frei einstellbar. Die Anzahl der Tage seit der letzten Wartung wird berechnet und angezeigt.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ausgange-xalarm1-xalarm2-und-xalarm3">
+<h3>Ausgänge <em>xAlarm1</em>, <em>xAlarm2</em> und <em>xAlarm3</em><a class="headerlink" href="#ausgange-xalarm1-xalarm2-und-xalarm3" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Mit dem Sollwert / Parameter <strong>xEn</strong> gleich FALSE werden die Ausgänge <em>xAlarm1</em>, <em>xAlarm2</em> und <em>xAlarm3</em> vorübergehend deaktiviert.</div>
+<div class="line">Beim Ablauf des nächsten Serviceintervalls wird der Sollwert / Parameter wieder auf den Initialwert TRUE gesetzt.</div>
+<div class="line"><br /></div>
+<div class="line">Der Ausgang <em>xAlarm1</em> wrid TRUE, wenn der nächste Wartungstermin in weniger als <em>iAlarm1</em> Tagen erreicht wird. Da der Zeitraum vor dem Wartungstermin liegt, ist der Wert <strong>negativ</strong> einzugeben.</div>
+<div class="line">Der Ausgang <em>xAlarm2</em> wird TRUE, wenn heute die Wartung fällig ist (<em>diServcieInDay</em> &lt;= 0).</div>
+<div class="line">Der Ausgang <em>xAlarm3</em> wird TRUE, wenn der nächste Wartungstermin bereits um mindestens <em>iAlarm3</em> Tage zurück liegt.</div>
+<div class="line">Die drei Ausgänge werden wieder auf FALSE gesetzt, wenn der Wartungstagezahler mit dem Sollwert / Parameter <strong>xReset</strong> zurück gesetzt wird. Dabei wird die Variable <em>dLastService</em> mit dem aktuellen Datum beschrieben.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="sollwerte-parameter-ialarm1-ialarm3-und-diserviceinterval">
+<h3>Sollwerte / Parameter <strong>iAlarm1</strong>, <strong>iAlarm3</strong> und <strong>diServiceInterval</strong><a class="headerlink" href="#sollwerte-parameter-ialarm1-ialarm3-und-diserviceinterval" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Sollwerte / Parameter sind mit Eingabegrenzen gemäß nachfolgender Tabelle versehen:</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="grenzwerte">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Sollwert / Paremeter</th>
+<th class="head">Minimalwert</th>
+<th class="head">Maximalwert</th>
+<th class="head">Hinweis</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>diServiceInterval</strong></td>
+<td>0</td>
+<td>5 * <strong>diServiceInterval</strong></td>
+<td>Serviceintervall</td>
+</tr>
+<tr class="row-odd"><td><strong>iAlarm1</strong></td>
+<td>(0-diServiceInterval)</td>
+<td>0</td>
+<td>Schwellwert für Ausgang <em>xAlarm1</em></td>
+</tr>
+<tr class="row-even"><td><strong>iAlarm2</strong></td>
+<td><strong>iAlarm1</strong></td>
+<td><strong>iAlarm3</strong></td>
+<td>Schwellwert für Ausgang <em>xAlarm2</em></td>
+</tr>
+<tr class="row-odd"><td><strong>iAlarm3</strong></td>
+<td><strong>iAlarm2</strong></td>
+<td>diServiceInterval</td>
+<td>Schwellwert für Ausgang <em>xAlarm3</em></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">Der Sollwert / Parameter <strong>iAlarm2</strong> kann durch den Benutzer nicht verändert werden.</div>
+<div class="line">Die Sollwerte / Parameter werden zyklisch geprüft und bei Bedarf auf die entsprechenden Grenzwerte limitiert.</div>
+<div class="line">Jede Veränderung eines Sollwerts / Parameters kann daher eine Veränderung eines anderen Sollwerts / Parameters bewirken.</div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+<div class="topic">
+<p class="topic-title first">Voraussetzung für den Einsatz des Funktionsbausteins ServiceCounter</p>
+<div class="line-block">
+<div class="line">Zur korrekten Funktion ist der Einsatz des Funktionsbausteins TimeRead mit <em>xEn</em> = TRUE erforderlich.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="8%" />
+<col width="19%" />
+<col width="6%" />
+<col width="9%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="5">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Freigabe der Ausgänge xAlarm1 bis 3</td>
+</tr>
+<tr class="row-odd"><td>xReset</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Wartungstagezähler zurücksetzen</td>
+</tr>
+<tr class="row-even"><td>diServiceInterval</td>
+<td>UINT</td>
+<td>365</td>
+<td>Wartungsintervall (in Tagen)</td>
+</tr>
+<tr class="row-odd"><td>iAlarm3</td>
+<td>INT</td>
+<td>10</td>
+<td>Alarmgrenze 3 in Tagen (Wartung war bereits fällig)</td>
+</tr>
+<tr class="row-even"><td>iAlarm1</td>
+<td>INT</td>
+<td>-10</td>
+<td>Alarmgrenze 1 in Tagen (Wartung ist demnächst fällig)</td>
+</tr>
+<tr class="row-odd"><td rowspan="7">Output</td>
+<td>dLastService</td>
+<td>DATE</td>
+<td>&nbsp;</td>
+<td>Datum der letzten Wartung</td>
+</tr>
+<tr class="row-even"><td>dNextService</td>
+<td>DATE</td>
+<td>&nbsp;</td>
+<td>Datum der Fälligkeit der nächsten Wartung</td>
+</tr>
+<tr class="row-odd"><td>xAlarm1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige, dass Wartung demnächst fällig ist</td>
+</tr>
+<tr class="row-even"><td>xAlarm2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige, dass Wartung heute fällig ist</td>
+</tr>
+<tr class="row-odd"><td>xAlarm3</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige, dass Wartung bereits fällig war</td>
+</tr>
+<tr class="row-even"><td>diServiceInDay</td>
+<td>DINT</td>
+<td>&nbsp;</td>
+<td>Anzeige in wie vielen Tagen die nächste Wartung fällig ist</td>
+</tr>
+<tr class="row-odd"><td>diServiceSinceDay</td>
+<td>DINT</td>
+<td>&nbsp;</td>
+<td>Tage seit der letzten Wartung</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pou-ServiceCounter/mReset.html">ServiceCounter.mReset (METH)</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pou-ServiceCounter/mReset.html" class="btn btn-neutral float-right" title="ServiceCounter.mReset (METH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pou-OperatingHours/mReset.html" class="btn btn-neutral float-left" title="OperatingHours.mReset (METH)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

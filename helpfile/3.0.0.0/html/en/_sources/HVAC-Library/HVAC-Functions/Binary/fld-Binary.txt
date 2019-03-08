@@ -1,0 +1,19 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Binary`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Binary`:
+
+Binary
+======
+
+.. todo:: Please add documentation for folder: Binary
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Binary/Abs3P
+   /HVAC-Library/HVAC-Functions/Binary/AbsB
+   /HVAC-Library/HVAC-Functions/Binary/ManBin
+   /HVAC-Library/HVAC-Functions/Binary/Trig
+   /HVAC-Library/HVAC-Functions/Binary/TrigGen
+
+.. last line of folder.rst template

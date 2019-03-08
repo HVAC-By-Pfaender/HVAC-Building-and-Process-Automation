@@ -1,0 +1,1130 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pump (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../../search.html" />
+    <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Pump (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/Libraries/HVAC-Library/HVAC-Functions/Components/Pump.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-pump"></span><div class="section" id="pump-fb">
+<span id="pump"></span><span id="index-0"></span><h1>Pump (FB)<a class="headerlink" href="#pump-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK Pump</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Steuerung einer Umwälzpumpe mit Blockierschutzfunktion</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../../_images/Pump_FB.png" src="../../../../_images/Pump_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xEn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anforderung der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td><em>xForce</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Zwangsübersteuerung nach Handübersteuerung</td>
+</tr>
+<tr class="row-even"><td><em>xFb</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Betriebsmeldung der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarmIn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Störmeldung der Umwälzpumpe</td>
+</tr>
+<tr class="row-even"><td><em>eAOO</em></td>
+<td>HVACTYPES.eManBin</td>
+<td>HVACTYPES.eManBin.Auto, HVACTYPES.eManBin.ManOff, HVACTYPES.eManBin.ManOn</td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td>Betriebsart der Handübersteuerung - Hardware</td>
+</tr>
+<tr class="row-odd"><td><em>xQuit</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>Rücksetzung der Störmeldung der Betriebsüberwachung</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xHB</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body">Hand-Ausgang: Umwälzpumpe nicht freigegeben</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body">Hand-Ausgang: Umwälzpumpe freigegeben</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAB</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body">Automatik-Ausgang: Umwälzpumpe nicht freigegeben</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body">Automatik-Ausgang: Umwälzpumpe freigegeben</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><em>xEnergyRequest</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body">Anforderung-Energieerzeugung nicht freigegeben</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body">Anforderung-Energieerzeugung freigegeben</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarmFb</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body">Störmeldung-Betriebsüberwachung nicht freigegeben</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body">Störmeldung-Betriebsüberwachung freigegeben</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><em>tOffDelay</em></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Restzeit des Nachlaufs der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td><em>dtLastFb</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Datum / Uhrzeit des letzten Betriebs der Umwälzpumpe</td>
+</tr>
+<tr class="row-even"><td><em>dtAbsLastOn</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Datum / Uhrzeit des letzten Blockierschutzbetriebs</td>
+</tr>
+<tr class="row-odd"><td><em>udiOperatingHours</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Betriebsstunden der Umwälzpumpe</td>
+</tr>
+<tr class="row-even"><td><em>udiCountFb</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzahl der Einschaltungen der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarm</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body">Sammelstörmeldung nicht freigegeben</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body">Sammelstörmeldung freigegeben</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><em>xAuto</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body">Sammelmeldung Automatikbetrieb nicht freigegeben</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body">Sammelmeldung Automatikbetrieb freigegeben</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>xAlarmControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><em>xHb</em> von <em>xAlarm</em> unabhängig</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><em>xHb</em> wird bei <em>xAlarm</em> = TRUE gesperrt</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>udiFbControlTime</strong></td>
+<td>UDINT</td>
+<td>0 ... 300s</td>
+<td>60s</td>
+<td>Zeitdauer der Betriebsüberwachung</td>
+</tr>
+<tr class="row-even"><td><strong>xFbControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body">Betriebsüberwachung nicht freigegeben</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body">Betriebsüberwachung freigegeben</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xForceOption</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body">Ausgang <em>xHB</em> bei Zwangsübersteuerung AUS</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body">Ausgang <em>xHB</em> bei Zwangsübersteuerung EIN</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><strong>tAbsTime</strong></td>
+<td>UDINT</td>
+<td>0 ... 600s</td>
+<td>120s</td>
+<td>Zeitdauer des Blockierschutzbetriebs</td>
+</tr>
+<tr class="row-odd"><td><strong>tAbsTime</strong></td>
+<td>TOD</td>
+<td>00:00:00 - 23:59:59 Uhr</td>
+<td>08:00:00 Uhr</td>
+<td>Zeitpunkt des Blockierschutzbetriebs</td>
+</tr>
+<tr class="row-even"><td><strong>eAbsDay</strong></td>
+<td>eDoW</td>
+<td>eDoW.Monday ... eDoW.Sunday</td>
+<td>eDoW.Monday</td>
+<td>Wochentag des Blockierschutzbetriebs</td>
+</tr>
+<tr class="row-odd"><td><strong>eOffDelayTimeBase</strong></td>
+<td>eTime</td>
+<td>eTime.Second, eTime.Minute, eTime.Hour</td>
+<td>eTime.Second</td>
+<td>Skalierung der Nachlaufzeit ( Sekunden / Minuten / Stunden )</td>
+</tr>
+<tr class="row-even"><td><strong>udiOffDelay</strong></td>
+<td>UDINT</td>
+<td>0 ... 60min</td>
+<td>120s</td>
+<td>Nachlaufzeitdauer der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td><strong>eManModeB</strong></td>
+<td>eMANBIN</td>
+<td>eMANBIN.Auto, eMANBIN.ManOff, eMANBIN.ManOn</td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung für den digitalen Ausgang <em>xHB</em></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="automatik-ausgang-xab">
+<h3>Automatik-Ausgang <em>xAB</em><a class="headerlink" href="#automatik-ausgang-xab" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der digitale Automatik-Ausgang <em>xAB</em> wird durch den Eingang <em>xEn</em>, den Ausgang <em>xAlarm</em>, das Nachlaufmodul und das Blockierschutzmodul beeinflusst.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xEn</em></th>
+<th class="head"><em>xAlarm</em></th>
+<th class="head"><em>xAlarmControl</em></th>
+<th class="head">Nachlaufmodul</th>
+<th class="head">Blockierschutzmodul</th>
+<th class="head"><em>xAB</em></th>
+<th class="head">Hinweise</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>X</td>
+<td>FALSE</td>
+<td>Abschaltung über Sammelstörung freigegeben</td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>Automatikbetrieb Aus</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>x</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>Automatikbetrieb Ein</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>X</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>Nachlaufbetrieb</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>x</td>
+<td>FALSE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>Blockierschutzbetrieb</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = beliebig</div>
+<div class="line"><br /></div>
+<div class="line">Mit dem Parameter <em>xAlarmControl</em> kann das Verhalten des Ausgangs <em>xAB</em> im Fehlerfall beeinflusst werden.</div>
+<div class="line">Bei <em>xAlarmControl</em> = TRUE wird im Fehlerfall (<em>xAlarm</em> = TRUE) der Automatik-Ausgang <em>xAB</em> abgeschaltet,
+befindet sich das Handübersteuermodul in Automatik, dann wird auch der Ausgang <em>xHB</em> abgeschaltet.</div>
+<div class="line">Bei <em>xAlarmControl</em> = FALSE erfolgt keine Reaktion.</div>
+</div>
+</div>
+<div class="section" id="hand-ausgang-xhb">
+<h3>Hand-Ausgang <em>xHB</em><a class="headerlink" href="#hand-ausgang-xhb" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der digitale Hand-Ausgang <em>xHB</em> entspricht dem digitalen Automatik-Ausgang <em>xAB</em>, zusätzlich erweitert um ein Handübersteuermodul und um eine Zwangsübersteuerung.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-2">
+<colgroup>
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAB</em></th>
+<th class="head">eMANBIN</th>
+<th class="head"><em>xForce</em></th>
+<th class="head"><strong>xForceOption</strong></th>
+<th class="head"><em>xHB</em></th>
+<th class="head">Hinweise</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td>X</td>
+<td>FALSE</td>
+<td>Handübersteuermodul in Automatik</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>Handübersteuermodul in Automatik</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>eMANBIN.ManOn</td>
+<td>FALSE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>Handübersteuermodul in Handbetrieb Ein</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANBIN.ManOff</td>
+<td>FALSE</td>
+<td>X</td>
+<td>FALSE</td>
+<td>Handübersteuermodul in Handbetrieb Aus</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>X</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>Zwangsübersteuerung Aus</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>Zwangsübersteuerung Ein</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = beliebig</div>
+</div>
+</div>
+<div class="section" id="anforderung-energieerzeugung-xenergyrequest">
+<h3>Anforderung - Energieerzeugung <em>xEnergyRequest</em><a class="headerlink" href="#anforderung-energieerzeugung-xenergyrequest" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der digitale Ausgang <em>xEnergyRequest</em> wird durch den Eingang <em>xFb</em>, das Nachlaufmodul und das Blockierschutzmodul beeinflusst.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-3">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xFB</em></th>
+<th class="head">Nachlaufmodul</th>
+<th class="head">Blockierschutzmodul</th>
+<th class="head"><em>xEnergyRequest</em></th>
+<th class="head">Hinweise</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>X</td>
+<td>X</td>
+<td>FALSE</td>
+<td>Umwälzpumpe ist nicht in Betrieb</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>Umwälzpumpe ist in Betrieb</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>FALSE</td>
+<td>Nachlaufmodul ist in Betrieb</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>Blockierschutzmodul ist in Betrieb</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = beliebig</div>
+</div>
+</div>
+<div class="section" id="nachlaufmodul">
+<h3>Nachlaufmodul<a class="headerlink" href="#nachlaufmodul" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Das Nachlaufmodul wird durch eine Abschaltverzögerung mit einstellbarer Zeitdauer realisiert. Der Eingang des Nachlaufmoduls ist aktiv,
+falls die Freigabe &#8216;xEn&#8217; aktiv und gleichzeitig die Sammelstörmeldung <em>xAlarm</em> nicht aktiv ist.</div>
+</div>
+</div>
+<div class="section" id="blockierschutzmodul">
+<h3>Blockierschutzmodul<a class="headerlink" href="#blockierschutzmodul" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Das Blockierschutzmodul wird durch das binäre Blockierschutzmodul mit einstellbarer Zeitdauer realisiert.</div>
+<div class="line">Die Zeitdauer <em>tAbsTime</em>, der Zeitpunkt <strong>tAbsTime</strong> und der Wochentag <strong>eAbsDay</strong> sind einstellbar.</div>
+<div class="line">Der Zeitstempel (Datum / Uhrzeit) des letzten Blockierschutzbetriebs <em>dtAbsLastOn</em> steht zur Verfügung.</div>
+</div>
+</div>
+<div class="section" id="ausgang-xalarm">
+<h3>Ausgang <em>xAlarm</em><a class="headerlink" href="#ausgang-xalarm" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-4">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAlarmIn</em></th>
+<th class="head"><em>xAlarmFb</em></th>
+<th class="head"><em>xAlarm</em></th>
+<th class="head">Hinweise</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>Sammelstörung ist inaktiv</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>Externe Hardwarestörung ist aktiv</td>
+</tr>
+<tr class="row-even"><td>FALSE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>Störung der Betriebsüberwachung ist aktiv</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>Beide Störungen sind aktiv</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = beliebig</div>
+</div>
+</div>
+<div class="section" id="sammelmeldung-automatikbetrieb-xauto">
+<h3>Sammelmeldung Automatikbetrieb <em>xAuto</em><a class="headerlink" href="#sammelmeldung-automatikbetrieb-xauto" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Sammelmeldung Automatikbetrieb <em>xAuto</em> wird aktiviert ( = TRUE ), falls der Eingang <em>eAOO</em> den Wert HVACTYPES.eManBin.Auto und der Sollwert / Parameter <strong>eManModeB</strong>
+den Wert eMANBIN.Auto enthält.</div>
+<div class="line">In alle übrigen Fällen ist die Sammelmeldung Automatikbetrieb <em>xAuto</em> nicht aktiviert ( = FALSE ).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="zwangsubersteuerung-xforce">
+<h3>Zwangsübersteuerung <em>xForce</em><a class="headerlink" href="#zwangsubersteuerung-xforce" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Zwangsübersteuerung wirkt direkt auf den Ausgang <em>xHB</em>. Mit dem Parameter <strong>xForceOption</strong> wird festgelegt, welchen Zustand der Ausgang <em>xHB</em> bei TRUE am Eingang <em>xForce</em> einnimmt.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="betriebsstundenzahler">
+<h3>Betriebsstundenzähler<a class="headerlink" href="#betriebsstundenzahler" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der Betriebsstundenzähler ist aktiv, falls die Umwälzpumpe in Betrieb ist (<em>xFb</em> = TRUE) und gleichzeitig die Sammelstörung <em>xAlarm</em> nicht aktiv ist (<em>xAlarm</em> = FALSE).</div>
+<div class="line">Die Anzahl der Betriebsstunden <strong>udiOperatingHours</strong>, und die Anzahl der Einschaltungen <strong>udiCountFb</strong> werden an den entsprechenden Ausgängen ausgegeben.</div>
+<div class="line">Der Zeitstempel (Datum / Uhrzeit) des Betriebs der Umwälzpumpe <em>dtLastFb</em> steht zur Verfügung.</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Schreibzugriff auf die Zählerstände</p>
+<div class="line-block">
+<div class="line">Über den Pfad &#8216;Instanzname._OperatingHours.udiOperatingHours&#8217; bzw. &#8216;Instanzname._OperatingHours.udiCountFb&#8217; ist ein Schreibzugriff auf die beide Zählerstände möglich.</div>
+</div>
+</div>
+</div>
+<div class="section" id="betriebsuberwachung">
+<h3>Betriebsüberwachung<a class="headerlink" href="#betriebsuberwachung" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Betriebsüberwachung überwacht die korrekte Funktion der Umwälzpumpe.</div>
+<div class="line">Die Überwachung kann generell freigegeben (<strong>xFbControl</strong> = TRUE) oder gesperrt (<strong>xFbControl</strong> = FALSE) werden.</div>
+<div class="line">Der Automatikbetrieb der Umwälzpumpe muss ebenfalls aktiv sein ( <em>eAOO</em> = HVACTYPES.eManBin.Auto ).</div>
+<div class="line"><br /></div>
+<div class="line">Der Eingang <em>xFb</em> und der Ausgang <em>xHB</em> werden permanent miteinander verglichen.</div>
+<div class="line">Sind die Zustände während einer einstellbaren Zeitdauer <strong>udiFbControlTime</strong> stets ungleich (d.h. Freigabe der Pumpe aber keine Betriebsrückmeldung),
+so wird die Störmeldung der Betriebsüberwachung <em>xAlarmFb</em> aktiviert.</div>
+<div class="line"><br /></div>
+<div class="line">Die Störmeldung der Betriebsüberwachung <em>xAlarmFb</em> wird zurück gesetzt, falls die Freigabe der Überwachung <strong>xFbControl</strong>
+gesperrt ist, oder der Rücksetzeingang <em>xQuit</em> aktiv ist, oder der Automatikbetrieb der Umwälzpumpe ( <em>eAOO</em> = HVACTYPES.eManBin.Auto )
+aktiviert wird.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Passendes Visualisierungselement aus der HVACV Visu Library: <strong>FB_PumpHorizontal</strong> oder <strong>FB_PumpVertical</strong></p>
+<div class="section" id="id4">
+<h3>Darstellung<a class="headerlink" href="#id4" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><img alt="../../../../_images/FB_PumpHorizontal.PNG" src="../../../../_images/FB_PumpHorizontal.PNG" />
+<img alt="../../../../_images/FB_PumpVertical.PNG" src="../../../../_images/FB_PumpVertical.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen-visu-element">
+<h3>Schnittstellen Visu-Element<a class="headerlink" href="#schnittstellen-visu-element" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id5">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Typ</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>FB_Pump</strong></td>
+<td>Pump</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td>Hier FB Pump eintragen Bsp. PRG.Pump</td>
+</tr>
+<tr class="row-odd"><td><strong>rRotation</strong></td>
+<td>INT</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td>Hier kann die Rotation der Pumpen Grafik als Gradzahl eingetragen werden. z.B. 90 entspricht eine Drehung um 90 Grad nach rechts. -90 Grad entspricht eine Drehung um 90 Grad nach links.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<dl class="docutils">
+<dt>Parameter Dialog für die Pumpe: <strong>FB_PumpParameter</strong></dt>
+<dd><img alt="../../../../_images/FB_PumpParameter.PNG" class="first last" src="../../../../_images/FB_PumpParameter.PNG" />
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="15%" />
+<col width="10%" />
+<col width="19%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="6">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anforderung der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td>xForce</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Zwangsübersteuerung nach Handebene</td>
+</tr>
+<tr class="row-even"><td>xFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Betriebsmeldung der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td>xAlarmIn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Störmeldung der Umwälzpumpe</td>
+</tr>
+<tr class="row-even"><td>eAOO</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td>Betriebsart der Handübersteuerung - Hardware</td>
+</tr>
+<tr class="row-odd"><td>xQuit</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Rücksetzung der Störmeldung der Betriebsüberwachung</td>
+</tr>
+<tr class="row-even"><td rowspan="11">Output</td>
+<td>xHB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Hand-Ausgang: Umwälzpumpe nicht freigegeben</div>
+<div class="line">TRUE:  Hand-Ausgang: Umwälzpumpe freigegeben</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>xAB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Automatik-Ausgang: Umwälzpumpe nicht freigegeben</div>
+<div class="line">TRUE:  Automatik-Ausgang: Umwälzpumpe freigegeben</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>xEnergyRequest</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Anforderung-Energieerzeugung nicht freigegeben</div>
+<div class="line">TRUE:  Anforderung-Energieerzeugung freigegeben</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarmFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Störmeldung-Betriebsüberwachung nicht freigegeben</div>
+<div class="line">TRUE:  Störmeldung-Betriebsüberwachung freigegeben</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>tOffDelay</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>Restzeit des Nachlaufs der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td>dtLastFb</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td>Datum / Uhrzeit des letzten Betriebs der Umwälzpumpe</td>
+</tr>
+<tr class="row-even"><td>dtAbsLastOn</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td>Datum / Uhrzeit des letzten Blockierschutzbetriebs</td>
+</tr>
+<tr class="row-odd"><td>udiOperatingHours</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>Betriebsstunden der Umwälzpumpe</td>
+</tr>
+<tr class="row-even"><td>udiCountFb</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>Anzahl der Einschaltungen der Umwälzpumpe</td>
+</tr>
+<tr class="row-odd"><td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Sammelstörmeldung nicht freigegeben</div>
+<div class="line">TRUE:  Sammelstörmeldung freigegeben</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>xAuto</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Sammelmeldung Automatikbetrieb nicht freigegeben</div>
+<div class="line">TRUE:  Sammelmeldung Automatikbetrieb freigegeben</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="10">Input</td>
+<td>xAlarmControl</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: <em>xHb</em> von <em>xAlarm</em> unabhängig</div>
+<div class="line">TRUE:  <em>xHb</em> wird bei <em>xAlarm</em> = TRUE gesperrt</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>udiFbControlTime</td>
+<td>UDINT</td>
+<td>60</td>
+<td>Zeitdauer der Betriebsüberwachung</td>
+</tr>
+<tr class="row-odd"><td>xFbControl</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Betriebsüberwachung nicht freigegeben</div>
+<div class="line">TRUE:  Betriebsüberwachung freigegeben</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>xForceOption</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Ausgang <em>xHB</em> bei Zwangsübersteuerung AUS</div>
+<div class="line">TRUE:  Ausgang <em>xHB</em> bei Zwangsübersteuerung EIN</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>udiAbsTime</td>
+<td>UDINT</td>
+<td>120</td>
+<td>Zeitdauer des Blockierschutzbetriebs</td>
+</tr>
+<tr class="row-even"><td>todAbsStartTime</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#8:0</td>
+<td>Zeitpunkt des Blockierschutzbetriebs</td>
+</tr>
+<tr class="row-odd"><td>eAbsDay</td>
+<td><a class="reference internal" href="../../Enums/eDoW.html#edow"><span class="std std-ref">eDoW</span></a></td>
+<td>eDow.Monday</td>
+<td>Wochentag des Blockierschutzbetriebs</td>
+</tr>
+<tr class="row-even"><td>eOffDelayTimeBase</td>
+<td><a class="reference internal" href="../../Enums/eTime.html#etime"><span class="std std-ref">eTime</span></a></td>
+<td>eTime.Second</td>
+<td>Skalierung der Nachlaufzeit ( Sekunden / Minuten / Stunden )</td>
+</tr>
+<tr class="row-odd"><td>udiOffDelay</td>
+<td>UDINT</td>
+<td>60</td>
+<td>Nachlaufzeitdauer der Umwälzpumpe</td>
+</tr>
+<tr class="row-even"><td>eManModeB</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung für den digitalen Ausgang
+<em>xHB</em></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

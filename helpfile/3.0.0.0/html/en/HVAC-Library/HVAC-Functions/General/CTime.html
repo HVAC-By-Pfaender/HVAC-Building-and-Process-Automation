@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CTime (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="CToD (FB)" href="CToD.html" />
+    <link rel="prev" title="CDate (FB)" href="CDate.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-General.html">General</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="CDate.html">CDate (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">CTime (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CToD.html">CToD (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MacroInfo.html">MacroInfo (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ManInfo.html">ManInfo (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MuxString2BinFun.html">MuxString2BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MuxString4BinFun.html">MuxString4BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MuxString5BinFun.html">MuxString5BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MuxString5Fun.html">MuxString5Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OpModeSelect.html">OpModeSelect (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Redundance2.html">Redundance2 (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-General.html">General</a> &raquo;</li>
+        
+      <li>CTime (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/General/CTime.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-general-ctime"></span><div class="section" id="ctime-fb">
+<span id="ctime"></span><span id="index-0"></span><h1>CTime (FB)<a class="headerlink" href="#ctime-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK CTime</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Convertion of a time-input (Dataype: UDINT) into a time-output (Dataype: TIME). The scaling for the time input can be selected. Automatic calculation of min / max limits for input values.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/CTime_FB.png" src="../../../_images/CTime_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="ausgange">
+<h3>Outputs<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>tOutTime</em></td>
+<td>TIME</td>
+<td>0 ... 4294967295ms</td>
+<td>&nbsp;</td>
+<td><p class="first last">Timevalue (Datatype: TIME)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>udiMinVisu</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Display of <strong>tMinTime</strong> for visualization</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>udiMaxVisu</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Display of <strong>tMaxTime</strong> for visualization</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>udiTime</strong></td>
+<td>UDINT</td>
+<td>0 ... 4294967295</td>
+<td>&nbsp;</td>
+<td><p class="first last">Timevalue (Limit: 0..7 Days) depending on scaling</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eTimeScale</strong></td>
+<td><p class="first last">eTime</p>
+</td>
+<td><p class="first last">Seconds, Minutes, Hours</p>
+</td>
+<td><p class="first last">eTime.seconds</p>
+</td>
+<td><p class="first last">Commitment of the scaling of the time-input (seconds, minutes, hours)</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>tMinTime</strong></td>
+<td>TIME</td>
+<td>0 ... 4294967295ms</td>
+<td>0s</td>
+<td><p class="first last">Lower limit for the time-input <strong>udiTime</strong></p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>tMaxTime</strong></td>
+<td>TIME</td>
+<td>0 ... 4294967295ms</td>
+<td>2h</td>
+<td><p class="first last">Upper limit for the time-input <strong>udiTime</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block is used to convert a time-input <strong>udiTime</strong> into a time-output <strong>tOutTime</strong>.</div>
+<div class="line">The scaling for the time-input <strong>udiTime</strong> takes place via the setpoint and parameter <strong>eTimeScale</strong>.</div>
+<div class="line">The time-input is absolutely limited to a value range of 0...7 days.</div>
+<div class="line">The time-input is limited by a lower limit <strong>tMinTime</strong> and an upper limit <strong>tMaxTime</strong>, both limits are also subject to scaling.</div>
+<div class="line">The time-output <em>tOutTime</em> is accordingly limited to the range <strong>tMinTime</strong> - <strong>tMaxTime</strong>.</div>
+<div class="line">If the lower limit <strong>tMinTime</strong> exceeds the upper limit <strong>tMaxTime</strong>, the lower limit <strong>tMinTime</strong> is reduced to the upper limit.</div>
+<div class="line">This Functionblock can for example be used within the visualization.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<p>Suitable visualization element from the HVACV Visu Library: <strong>CTime</strong> and <strong>CTime_single_input</strong></p>
+<div class="section" id="id3">
+<h3>Portrayal<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../../_images/CTime.PNG" src="../../../_images/CTime.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen-visu-element">
+<h3>Interfaces Visu-Element<a class="headerlink" href="#schnittstellen-visu-element" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="schnittstellen-visu-element-1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>FB_CTime</strong></td>
+<td>CTime</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enter FB instance CTime here Example: PRG.CTime</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>sDialogTitle</strong></td>
+<td>STRING</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enter title in string format e.g.: &#8216;Enter room temperature&#8217; - appears in the Numpad during entry.</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>iFieldSizeL</strong></td>
+<td>INT</td>
+<td>VAR_INPUT</td>
+<td>0</td>
+<td><p class="first last">Field increases by the number of pixels entered to the left. Needed to display long numbers or units.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>iFieldSizeR</strong></td>
+<td>INT</td>
+<td>VAR_INPUT</td>
+<td>0</td>
+<td><p class="first last">Field increases by the number of pixels entered to the right. Needed to display long numbers or units.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The unit second &#8216;s&#8217; minute &#8216;m&#8217; or hour &#8216;h&#8217; is automatically adjusted via the setting in FB CTime. The MIN and MAX input limit is also automatically generated via the FB and adjusted in the visual element. Can be changed at runtime! | Note: VAR_IN_OUT interfaces must be assigned, VAR_INPUT are optional. | |</p>
+<p>The visualization element <strong>CTime_single_input</strong> works like <strong>CTime</strong> but all inputs must be entered separately via the interfaces. So you can use this visualization element without your component CTime.</p>
+</div>
+<div class="section" id="schnittstellen-visu-element-ctime-single-input">
+<h3>Interfaces Visu element CTime_single_input<a class="headerlink" href="#schnittstellen-visu-element-ctime-single-input" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="schnittstellen-visu-element-2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>udiTime</strong></td>
+<td>UDINT</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enter the UDINT variable here.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eTimeScale</strong></td>
+<td>HVAC.eTime</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td><p class="first last">The Enum eTimeScale can be entered here. Display whether second, minute or hour.</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>udiMinVisu</strong></td>
+<td>UDINT</td>
+<td>VAR_INPUT</td>
+<td>0</td>
+<td><p class="first last">The MIN input limit can be entered here. Inputs below this are not accepted via the visualization.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>udiMaxVisu</strong></td>
+<td>UDINT</td>
+<td>VAR_INPUT</td>
+<td>7200</td>
+<td><p class="first last">The MAX input limit can be entered here. Entries about this are not accepted via the visualization.</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>sDialogTitle</strong></td>
+<td>STRING</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enter title in string format e.g.: &#8216;Enter follow-up time&#8217; - appears in the Numpad during entry.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>iFieldSizeL</strong></td>
+<td>INT</td>
+<td>VAR_INPUT</td>
+<td>0</td>
+<td><p class="first last">Field increases by the number of pixels entered to the left. Needed to display long numbers or units.</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>iFieldSizeR</strong></td>
+<td>INT</td>
+<td>VAR_INPUT</td>
+<td>0</td>
+<td><p class="first last">Field increases by the number of pixels entered to the right. Needed to display long numbers or units.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="11%" />
+<col width="10%" />
+<col width="15%" />
+<col width="57%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="4">Input</td>
+<td>tMaxTime</td>
+<td>TIME</td>
+<td>TIME#120m0s0ms</td>
+<td><p class="first last">Upper limit for time entry <strong>udiTime</strong> (0 ... 4294967295ms)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>tMinTime</td>
+<td>TIME</td>
+<td>TIME#0ms</td>
+<td><p class="first last">Lower limit for time entry <strong>udiTime</strong> (0 ... 4294967295ms)</p>
+</td>
+</tr>
+<tr class="row-even"><td>eTimeScale</td>
+<td><a class="reference internal" href="../../Enums/eTime.html#etime"><span class="std std-ref">eTime</span></a></td>
+<td>eTime.Second</td>
+<td><p class="first last">Commitment of the scaling of the time-input (seconds, minutes, hours)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiTime</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Timevalue (Limit: 0..7 Days) depending on scaling</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="3">Output</td>
+<td>tOutTime</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td><p class="first last">Timevalue (Datatype: TIME)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiMinVisu</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Display of <strong>tMinTime</strong> for visualization</p>
+</td>
+</tr>
+<tr class="row-even"><td>udiMaxVisu</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Display of <strong>tMaxTime</strong> for visualization</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CToD.html" class="btn btn-neutral float-right" title="CToD (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CDate.html" class="btn btn-neutral float-left" title="CDate (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

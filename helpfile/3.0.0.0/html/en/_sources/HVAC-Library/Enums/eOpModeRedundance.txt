@@ -1,0 +1,48 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eOpModeRedundance`:
+
+
+.. Index::
+   single: eOpModeRedundance
+
+.. _`eOpModeRedundance`:
+
+eOpModeRedundance (ENUM)
+------------------------
+
+TYPE eOpModeRedundance :
+
+
+
+.. todo:: Please add documentation for enum: eOpModeRedundance
+
+
+
+
+
+InOut:
+    +------------------------------------------+---------+------------------------------------------------------------+
+    | Name                                     | Initial | Comment                                                    |
+    +==========================================+=========+============================================================+
+    | .. _`eOpModeRedundance.Auto`:            | 0       | Automatische Umschaltung nach Betriebsstunden oder xUpdate |
+    |                                          |         |                                                            |
+    | Auto                                     |         |                                                            |
+    +------------------------------------------+---------+------------------------------------------------------------+
+    | .. _`eOpModeRedundance.ForceComponent1`: | 1       | Zwangssequenz beginnend bei Gerät1 (Nur Störumschaltung)   |
+    |                                          |         |                                                            |
+    | ForceComponent1                          |         |                                                            |
+    +------------------------------------------+---------+------------------------------------------------------------+
+    | .. _`eOpModeRedundance.ForceComponent2`: | 2       | Zwangssequenz beginnend bei Gerät (nur Störumschaltung)    |
+    |                                          |         |                                                            |
+    | ForceComponent2                          |         |                                                            |
+    +------------------------------------------+---------+------------------------------------------------------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,66 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fun-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-General.MuxString2BinFun`:
+
+
+.. index::
+   single: MuxString2BinFun
+
+.. _`MuxString2BinFun`:
+
+MuxString2BinFun (FUN)
+----------------------
+
+FUNCTION MuxString2BinFun : STRING
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Multiplexer für Strings mit binärer Auswahl ( 2 binäre Eingänge )
+     |
+     | Typische Anwendung: Auswahl von Meldungstexten
+
+*********************
+Funktionsbeschreibung
+*********************
+
+| Diese Funktion liefert den durch die binären Eingänge *xEn1* ( FALSE = nicht aktiv, TRUE = aktiv ) bzw. *xEn2* ( FALSE = nicht aktiv, TRUE = aktiv )
+  ausgewählten String ( *sValue1* bzw. *sValue2* ) im Format STRING zurück.
+| Der Eingang *xEn1* hat stets die höchste Priorität. Ist kein Eingang aktiv, so wird ein Leerstring ( '' ) zurück gegeben.
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+------------------+--------+--------------------------------------------------------------------+
+    | Scope  | Name             | Type   | Comment                                                            |
+    +========+==================+========+====================================================================+
+    | Return | MuxString2BinFun | STRING |                                                                    |
+    +--------+------------------+--------+--------------------------------------------------------------------+
+    | Input  | xEn1             | BOOL   | Freigabe / Sperrung String 1 ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | xEn2             | BOOL   | Freigabe / Sperrung String 2 ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | sValue1          | STRING | String 1                                                           |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | sValue2          | STRING | String 2                                                           |
+    +--------+------------------+--------+--------------------------------------------------------------------+
+
+
+.. last line of fun-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

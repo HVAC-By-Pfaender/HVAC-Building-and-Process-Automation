@@ -1,0 +1,753 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Burner3P (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../search.html" />
+    <link rel="next" title="BurnerP (FB)" href="BurnerP.html" />
+    <link rel="prev" title="Components" href="fld-Components.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Burner3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerP.html">BurnerP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerT.html">BurnerT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoolOutProtection.html">CoolOutProtection (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Damper2P.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DamperAnalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuoPump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fan1Speed.html">Fan1Speed (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanAnalog.html">FanAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanControl.html">FanControl (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FastHeating.html">FastHeating (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FireDamperMot.html">FireDamperMot (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptStartHeat.html">OptStartHeat (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreRinseOperationValveAnalog.html">PreRinseOperationValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Pump.html">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SequenceSUPTemp.html">SequenceSUPTemp (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SmokeDetector.html">SmokeDetector (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve2P.html">Valve2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve3P.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveAnalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveTherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>Burner3P (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Components/Burner3P.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-burner3p"></span><div class="section" id="burner3p-fb">
+<span id="burner3p"></span><span id="index-0"></span><h1>Burner3P (FB)<a class="headerlink" href="#burner3p-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK Burner3P</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Steuerung eines Wärmeerzeugers ( Temperaturregelung über binäre Steuerbefehle Mehr / Weniger )</div>
+<div class="line"><br /></div>
+<div class="line">Typische Anwendung: Wärmeerzeugung</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/Burner3P_FB.png" src="../../../_images/Burner3P_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein dient zur Steuerung / Regelung eines Wärmeerzeugers in Abhängigkeit von der Anforderung des Wärmeerzeugers <em>xEn</em>,
+der Vorlaufsolltemperatur <em>rSetPtTemp</em> und der Vorlauftemperatur <em>rFdT</em>.</div>
+<div class="line">Die Freigabe / Sperrung des Wärmeerzeugers erfolgt über den Ausgang <em>xHB</em> ( FALSE = Sperrung, TRUE = Freigabe ).</div>
+<div class="line">Die Vorlauftemperaturregelung ( analog auch Kesseltemperaturregelung ) erfolgt mittels zweier Leistungsregler ( P-Regler, langsam und schnell )
+durch die Ausgänge <em>xMoreHB</em> und <em>xLessHB</em>.</div>
+<div class="line">Die Freigabe der Regelung erfolgt zweitverzögert ( Sollwert / Parameter <strong>udiWaitControl</strong> ) nach der Betriebsrückmeldung ( <em>xFb</em> = TRUE ) des Wärmeerzeugers.</div>
+</div>
+<div class="line-block">
+<div class="line">Es kommen im Wesentlichen folgende Funktionsbausteine zur Anwendung:</div>
+</div>
+<p><a class="reference internal" href="../Control/ControlP.html#controlp"><span class="std std-ref">ControlP</span></a></p>
+<p><a class="reference internal" href="../Control/Out3P.html#out3p"><span class="std std-ref">Out3P</span></a></p>
+<p><a class="reference internal" href="../Counter/OperatingHours.html#operatinghours"><span class="std std-ref">OperatingHours</span></a></p>
+<p><a class="reference internal" href="../Binary/ManBin.html#manbin"><span class="std std-ref">ManBin</span></a></p>
+</div>
+<div class="section" id="freigabe-sperrung-des-warmeerzeugers">
+<h3>Freigabe / Sperrung des Wärmeerzeugers<a class="headerlink" href="#freigabe-sperrung-des-warmeerzeugers" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Freigabe des Wärmeerzeugers ( <em>xAB</em> = TRUE, <em>xHB</em> = TRUE ( eManModeB = eManBin.Auto )) erfolgt, falls die Vorlauftemperatur <em>rFdT</em> die Summe aus
+Vorlaufsolltemperatur <em>rSetPtTemp</em> und Sollwert / Parameter <strong>rSwitchOnPoint</strong> unterschreitet, gleichzeitig die generelle Freigabe <em>xEn</em> aktiv ( = TRUE ) und
+die Mindeststillstandszeit nicht aktiv ist.</div>
+<div class="line">Die Sperrung des Wärmeerzeugers ( <em>xAB</em> = FALSE, <em>xHB</em> = FALSE ( eManModeB = eManBin.Auto )) erfolgt, falls die Vorlauftemperatur <em>rFdT</em> die Summe aus
+Vorlaufsolltemperatur <em>rSetPtTemp</em> und Sollwert / Parameter <strong>rSwitchOffPoint</strong> überschreitet und gleichzeitig die generelle Freigabe <em>xEn</em> aktiv ( = TRUE ) ist.</div>
+<div class="line">Zwischen zwei aufeinander folgenden Betriebszyklen wird stets eine Mindeststillstandszeit ( Zeitdauer = <strong>udiTimeMinOff</strong>, Anzeige - Restzeit: <em>tOnDelay</em> ) eingefügt.</div>
+<div class="line">Die Mindeststillstandszeit beginnt jeweils mit der fallenden Flanke ( TRUE &gt; FALSE ) am Eingang <em>xFb</em>.</div>
+</div>
+</div>
+<div class="section" id="temperaturregelung-des-warmeerzeugers">
+<h3>Temperaturregelung des Wärmeerzeugers<a class="headerlink" href="#temperaturregelung-des-warmeerzeugers" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Freigabe der Temperaturregelung erfolgt zeitverzögert ( Zeitdauer = <strong>udiWaitControl</strong>, Anzeige - Restzeit: <em>tOnControlDelay</em> )</div>
+<div class="line">nach der aktiven Betriebsmeldung ( <em>xFb</em> = TRUE ) des Wärmeerzeugers.</div>
+<div class="line">Die Sperrung der Temperaturregelung erfolgt unmittelbar nach der inaktiven Betriebsmeldung ( <em>xFb</em> = FALSE ) des Wärmeerzeugers ( Ausschaltwert: <strong>rYDisabled</strong> ).</div>
+<div class="line">Die beiden internen Leistungsregler ( P-Regler, langsam und schnell, Ausgangsbereich jeweils -100.0 - 100.0 % ) werden gleichzeitig freigegeben / gesperrt.
+( Sollwert = Vorlaufsolltemperatur <em>rSetPtTemp</em>, Istwert = Vorlauftemperatur <em>rFdT</em> ).</div>
+<div class="line">Die Stellsignale beider Leistungsregler werden in Minimalwertauswahl ( Weiterleitung des Signals mit dem geringeren Wert ) dem Ausgangsregler im Bereich -100.0 - 100.0 % zugeführt.</div>
+<div class="line">Der Ausgangsregler erzeugt abschliessend Ausgangssignale für einen 3-Punkt-Antrieb ( Pulsweitenmodulation, Integrationsintervall = <strong>tIntegration</strong> )
+mit den Ausgängen <em>xMoreHB</em> bzw. <em>xLessHB</em>.</div>
+<div class="line">Die konstante Impulsdauer für die beiden Ausgänge ist jeweils frei einstellbar ( <strong>tImpulsOpen</strong> bzw. <strong>tImpuls Close</strong> ),
+die variablen Impulspausen werden durch den Ausgangsregler festgelegt.</div>
+<div class="line">Die beiden Leistungsregler können individuell und abhängig voneinander konfiguriert werden
+( P-Regler schnell: Verstärkungsfaktor <strong>rKpBig</strong>, P-Regler langsam: Verstärkungsfaktor <strong>rKpTiny</strong> ).</div>
+</div>
+</div>
+<div class="section" id="handubersteuerung-der-digitalen-ausgange">
+<h3>Handübersteuerung der digitalen Ausgänge<a class="headerlink" href="#handubersteuerung-der-digitalen-ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Alle digitalen Steuerungsausgänge nach Handübersteuerung ( <em>xHB</em>, xMoreHB*, <em>xLessHB</em> ) können entweder im Automatikmodus ( eMANBIN.Auto )
+oder in einer der beiden Handbetriebsarten ( eMANBIN.ManOn, eMANBIN.ManOff ) betrieben werden.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAB</em></th>
+<th class="head">eMANBIN</th>
+<th class="head"><em>xHB</em></th>
+<th class="head">Hinweise</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td>Handübersteuermodul in Automatik</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eMANBIN.Auto</td>
+<td>TRUE</td>
+<td>Handübersteuermodul in Automatik</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>eMANBIN.ManOn</td>
+<td>TRUE</td>
+<td>Handübersteuermodul in Handbetrieb Ein</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANBIN.ManOff</td>
+<td>FALSE</td>
+<td>Handübersteuermodul in Handbetrieb Aus</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = beliebig</div>
+</div>
+</div>
+<div class="section" id="sammelstorung-xalarm">
+<h3>Sammelstörung <em>xAlarm</em><a class="headerlink" href="#sammelstorung-xalarm" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Sammelstörung <em>xAlarm</em> ist aktiv ( = TRUE ), falls die Störmeldung des Wärmeerzeugers <em>xAlarmIn</em> aktiv ( = TRUE ) ist.</div>
+<div class="line">In allen übrigen Situationen ist die Sammelstörung <em>xAlarm</em> nicht aktiv ( = FALSE ).</div>
+</div>
+</div>
+<div class="section" id="sammelmeldung-automatikbetrieb-xauto">
+<h3>Sammelmeldung Automatikbetrieb <em>xAuto</em><a class="headerlink" href="#sammelmeldung-automatikbetrieb-xauto" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Sammelmeldung Automatikbetrieb <em>xAuto</em> wird aktiviert ( = TRUE ), falls folgende Bedingungen gleichzeitig erfüllt sind:</div>
+<div class="line"><br /></div>
+<div class="line">- Eingang <em>eAOO</em> = HVACTYPES.eManBin.Auto</div>
+<div class="line">- Eingang <em>eAOOMore</em> = HVACTYPES.eManBin.Auto</div>
+<div class="line">- Eingang <em>eAOOLess</em> = HVACTYPES.eManBin.Auto</div>
+<div class="line">- Sollwert / Parameter <strong>eManModeB</strong> = eMANBIN.Auto</div>
+<div class="line">- Sollwert / Parameter <strong>eManModeBMore</strong> = eMANBIN.Auto</div>
+<div class="line">- Sollwert / Parameter <strong>eManModeBLess</strong> = eMANBIN.Auto</div>
+</div>
+</div>
+<div class="section" id="betriebsstundenzahler-warmeerzeuger">
+<h3>Betriebsstundenzähler - Wärmeerzeuger<a class="headerlink" href="#betriebsstundenzahler-warmeerzeuger" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der Betriebsstundenzähler ( <em>udiOperatingHours</em>, <em>udiCountFb</em> ) für den Wärmeerzeuger ist aktiv, wenn die Betriebsmeldung aktiv ist ( <em>xFb</em> = TRUE ).</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Schreibzugriff auf die Zählerstände</p>
+<div class="line-block">
+<div class="line">Über den Pfad &#8216;Instanzname._OperatingHours.udiOperatingHours&#8217; bzw. &#8216;Instanzname._OperatingHours.udiCountFb&#8217; ist ein Schreibzugriff auf die beide Zählerstände möglich.</div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Voraussetzung für den Einsatz des Funktionsbausteins Burner3P</p>
+<div class="line-block">
+<div class="line">Zur korrekten Funktion ist der Einsatz des Funktionsbausteins TimeRead mit <em>xEn</em> = TRUE erforderlich.</div>
+</div>
+</div>
+</div>
+<div class="section" id="aktuelle-berechnete-leistung-des-warmeerzeugers-rpos">
+<h3>Aktuelle berechnete Leistung des Wärmeerzeugers <em>rPos</em><a class="headerlink" href="#aktuelle-berechnete-leistung-des-warmeerzeugers-rpos" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die aktuelle <strong>berechnete Leistung</strong> des Wärmeerzeugers wird am Ausgang <em>rPos</em> im Bereich 0.0 - 100.0 % dargestellt.</div>
+<div class="line">Hierzu ist die korrekte Angabe der Laufzeit des Antriebs zwischen minimaler und maximaler Leistung ( <strong>tDuration</strong> ) erforderlich.</div>
+<div class="line">Es findet keine Neupositionierung an einer Referenzposition statt.</div>
+</div>
+</div>
+<div class="section" id="ruckfuhrung-der-leistung-des-warmeerzeugers-ru">
+<h3>Rückführung der Leistung des Wärmeerzeugers <em>rU</em><a class="headerlink" href="#ruckfuhrung-der-leistung-des-warmeerzeugers-ru" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die aktuelle <strong>tatsächliche</strong> Leistung des Wärmeerzeugers kann am Eingang <em>rU</em> angeschlossen werden.</div>
+<div class="line">Dieser Eingang wird aktuell nicht für Steuerungs- und Regelungszwecke verwandt.</div>
+</div>
+</div>
+<div class="section" id="nicht-aktiver-zustand-xen-false">
+<h3>Nicht aktiver Zustand ( <em>xEn</em> = FALSE )<a class="headerlink" href="#nicht-aktiver-zustand-xen-false" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-2">
+<colgroup>
+<col width="8%" />
+<col width="4%" />
+<col width="8%" />
+<col width="4%" />
+<col width="8%" />
+<col width="4%" />
+<col width="8%" />
+<col width="4%" />
+<col width="4%" />
+<col width="8%" />
+<col width="4%" />
+<col width="4%" />
+<col width="8%" />
+<col width="8%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xHB</em></th>
+<th class="head"><em>xAB</em></th>
+<th class="head"><em>xMoreHB</em></th>
+<th class="head"><em>xMoreAB</em></th>
+<th class="head"><em>xLessHB</em></th>
+<th class="head"><em>xLessAB</em></th>
+<th class="head"><em>rPos</em></th>
+<th class="head"><em>tOnDelay</em></th>
+<th class="head"><em>tOnControlDelay</em></th>
+<th class="head"><em>dtLastFb</em></th>
+<th class="head"><em>udiOperatingHours</em></th>
+<th class="head"><em>udiCountFb</em></th>
+<th class="head"><em>xAlarm</em></th>
+<th class="head"><em>xAuto</em></th>
+<th class="head">Hinweise</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE ( eManModeB = eManBin.Auto )</td>
+<td>FALSE</td>
+<td>FALSE ( eManModeBMore = eManBin.Auto )</td>
+<td>FALSE</td>
+<td>FALSE ( eManModeBLess = eManBin.Auto )</td>
+<td>FALSE</td>
+<td>0.0 %</td>
+<td>alter Wert</td>
+<td>alter Wert</td>
+<td>alter Wert</td>
+<td>alter Wert</td>
+<td>alter Wert</td>
+<td>Zustand von <em>xAlarmIn</em></td>
+<td>alter Wert</td>
+<td><em>xEn</em> = FALSE</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = beliebig</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="15%" />
+<col width="10%" />
+<col width="19%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="9">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anforderung des Wärmeerzeugers ( FALSE = Aus, TRUE = Ein )</td>
+</tr>
+<tr class="row-odd"><td>rSetPtTemp</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Vorlaufsolltemperatur in °C</td>
+</tr>
+<tr class="row-even"><td>xFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Betriebsrückmeldung des Wärmeerzeugers ( FALSE = Aus, TRUE =
+Ein )</td>
+</tr>
+<tr class="row-odd"><td>rU</td>
+<td>REAL</td>
+<td>0</td>
+<td>Rückführung der Leistung des Wärmeerzeugers in %</td>
+</tr>
+<tr class="row-even"><td>xAlarmIn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Störmeldung des Wärmeerzeugers ( FALSE = Aus, TRUE = Ein )</td>
+</tr>
+<tr class="row-odd"><td>eAOO</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td>Betriebsart der Handübersteuerung - Hardware für den Ausgang
+<em>xHB</em></td>
+</tr>
+<tr class="row-even"><td>eAOOMore</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td>Betriebsart der Handübersteuerung - Hardware für den Ausgang
+<em>xMoreHB</em></td>
+</tr>
+<tr class="row-odd"><td>eAOOLess</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td>Betriebsart der Handübersteuerung - Hardware für den Ausgang
+<em>xLessHB</em></td>
+</tr>
+<tr class="row-even"><td>rFdT</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Vorlauftemperatur in °C</td>
+</tr>
+<tr class="row-odd"><td rowspan="14">Output</td>
+<td>xHB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Wärmeerzeuger nach Handübersteuerung ( FALSE =
+Aus, TRUE = Ein )</td>
+</tr>
+<tr class="row-even"><td>xAB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Wärmeerzeuger vor Handübersteuerung ( FALSE =
+Aus, TRUE = Ein )</td>
+</tr>
+<tr class="row-odd"><td>xMoreHB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Leistungserhöhung nach Handübersteuerung ( FALSE
+= Aus, TRUE = Ein )</td>
+</tr>
+<tr class="row-even"><td>xMoreAB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Leistungserhöhung vor Handübersteuerung ( FALSE =
+Aus, TRUE = Ein )</td>
+</tr>
+<tr class="row-odd"><td>xLessHB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Leistungsreduktion nach Handübersteuerung ( FALSE
+= Aus, TRUE = Ein )</td>
+</tr>
+<tr class="row-even"><td>xLessAB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Leistungsreduktion vor Handübersteuerung ( FALSE
+= Aus, TRUE = Ein )</td>
+</tr>
+<tr class="row-odd"><td>rPos</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Aktuelle berechnete Leistung des Wärmeerzeugers in %</td>
+</tr>
+<tr class="row-even"><td>tOnDelay</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>Wartezeit bis zum Ende der Mindeststillstandszeit in s</td>
+</tr>
+<tr class="row-odd"><td>tOnControlDelay</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>Wartezeit bis zum Beginn der Temperaturregelung in s</td>
+</tr>
+<tr class="row-even"><td>dtLastFb</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td>Datum / Uhrzeit des letzten Betriebs des Wärmeerzeugers</td>
+</tr>
+<tr class="row-odd"><td>udiOperatingHours</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>Betriebsstunden des Wärmeerzeugers in h</td>
+</tr>
+<tr class="row-even"><td>udiCountFb</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>Anzahl der Einschaltungen des Wärmeerzeugers</td>
+</tr>
+<tr class="row-odd"><td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Sammelstörmeldung ( FALSE = Aus, TRUE = Ein )</td>
+</tr>
+<tr class="row-even"><td>xAuto</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Automatikmeldung ( FALSE = Aus, TRUE = Ein )</td>
+</tr>
+<tr class="row-odd"><td rowspan="15">Input</td>
+<td>tDuration</td>
+<td>TIME</td>
+<td>TIME#1m0s0ms</td>
+<td>Laufzeit des Antriebs zwischen minimaler und maximaler
+Leistung in s</td>
+</tr>
+<tr class="row-even"><td>tIntegration</td>
+<td>TIME</td>
+<td>TIME#100ms</td>
+<td>Zeitdauer zwischen zwei Integrationsvorgängen in s</td>
+</tr>
+<tr class="row-odd"><td>tImpulsClose</td>
+<td>TIME</td>
+<td>TIME#1s0ms</td>
+<td>Zeitdauer eines Impulses am Ausgang <em>xLessAB</em> in s</td>
+</tr>
+<tr class="row-even"><td>tImpulsOpen</td>
+<td>TIME</td>
+<td>TIME#1s0ms</td>
+<td>Zeitdauer eines Impulses am Ausgang <em>xMoreAB</em> in s</td>
+</tr>
+<tr class="row-odd"><td>rKpTiny</td>
+<td>REAL</td>
+<td>0.8</td>
+<td>Verstärkungsfaktor des langsamen Leistungsreglers</td>
+</tr>
+<tr class="row-even"><td>rKpBig</td>
+<td>REAL</td>
+<td>8</td>
+<td>Verstärkungsfaktor des schnellen Leistungsreglers</td>
+</tr>
+<tr class="row-odd"><td>rOffset</td>
+<td>REAL</td>
+<td>0</td>
+<td>Temperaturversatz - Vorlaufsolltemperatur für die
+Leistungsregler in °C</td>
+</tr>
+<tr class="row-even"><td>rYDisabled</td>
+<td>REAL</td>
+<td>0</td>
+<td>Ausschaltwert der Leistungsregler ( xEn = FALSE )</td>
+</tr>
+<tr class="row-odd"><td>udiWaitControl</td>
+<td>UDINT</td>
+<td>3</td>
+<td>Wartezeit bis zur Freigabe der Leistungsregler ( <em>xFB</em> =
+TRUE ) in  Minuten</td>
+</tr>
+<tr class="row-even"><td>rSwitchOffPoint</td>
+<td>REAL</td>
+<td>2.5</td>
+<td>Ausschaltpunkt relativ zur Vorlaufsolltemperatur
+<em>rSetPtTemp</em> in °C</td>
+</tr>
+<tr class="row-odd"><td>rSwitchOnPoint</td>
+<td>REAL</td>
+<td>-2.5</td>
+<td>Einschaltpunkt relativ zur Vorlaufsolltemperatur
+<em>rSetPtTemp</em> in °C</td>
+</tr>
+<tr class="row-even"><td>udiTimeMinOff</td>
+<td>UDINT</td>
+<td>3</td>
+<td>Mindeststillstandszeit des Wärmeerzeugers in s</td>
+</tr>
+<tr class="row-odd"><td>eManModeBLess</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung für den digitalen Ausgang
+<em>xLessHB</em></td>
+</tr>
+<tr class="row-even"><td>eManModeBMore</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung für den digitalen Ausgang
+<em>xMoreHB</em></td>
+</tr>
+<tr class="row-odd"><td>eManModeB</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung für den digitalen Ausgang
+<em>xHB</em></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BurnerP.html" class="btn btn-neutral float-right" title="BurnerP (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fld-Components.html" class="btn btn-neutral float-left" title="Components" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

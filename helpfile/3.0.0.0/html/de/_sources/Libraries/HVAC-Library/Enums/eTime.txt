@@ -1,0 +1,48 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eTime`:
+
+
+.. Index::
+   single: eTime
+
+.. _`eTime`:
+
+eTime (ENUM)
+------------
+
+TYPE eTime :
+
+
+
+.. todo:: Please add documentation for enum: eTime
+
+
+
+
+
+InOut:
+    +---------------------+---------+---------+
+    | Name                | Initial | Comment |
+    +=====================+=========+=========+
+    | .. _`eTime.Second`: | 1       | Sekunde |
+    |                     |         |         |
+    | Second              |         |         |
+    +---------------------+---------+---------+
+    | .. _`eTime.Minute`: | 2       | Minute  |
+    |                     |         |         |
+    | Minute              |         |         |
+    +---------------------+---------+---------+
+    | .. _`eTime.Hour`:   | 3       | Stunde  |
+    |                     |         |         |
+    | Hour                |         |         |
+    +---------------------+---------+---------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,30 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.ManNum.mSetAuto`:
+
+
+.. _`ManNum.mSetAuto`:
+
+ManNum.mSetAuto (METH)
+----------------------
+
+METHOD mSetAuto
+
+
+
+
+.. todo:: Please add documentation for method: ManNum.mSetAuto
+
+
+
+
+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

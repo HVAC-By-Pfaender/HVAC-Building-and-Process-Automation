@@ -1,0 +1,15 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-System Info`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-System Info`:
+
+System Info
+===========
+
+.. todo:: Please add documentation for folder: System Info
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/System-Info/SystemInfo
+
+.. last line of folder.rst template

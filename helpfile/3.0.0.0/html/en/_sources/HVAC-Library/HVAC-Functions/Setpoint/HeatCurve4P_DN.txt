@@ -1,0 +1,319 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Setpoint.HeatCurve4P_DN`:
+
+
+.. index::
+   single: HeatCurve4P_DN
+
+.. _`HeatCurve4P_DN`:
+
+HeatCurve4P_DN (FB)
+-------------------
+
+FUNCTION_BLOCK HeatCurve4P_DN
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Heizkurve mit vier Aussentemperatur-Punkten und zwei Kennlinien ( Nacht, Tag ).
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/HeatCurve4P_DN_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rOutTemp*
+      - REAL
+      - -50.0 ... +50.0 °C
+      - 0
+      - Aussentemperatur zur Berechnung der Kennlinien
+    * - *xDay*
+      - BOOL
+      -
+      -
+      - Betriebsart ( FALSE = Nachtbetrieb / TRUE = Tagbetrieb )
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rSupplyTemp*
+      - REAL
+      -
+      - 0.0 °C
+      - Vorlaufsolltemperatur der aktiven Kennlinie
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **eManModeN**
+      - eManNum
+      -
+      - eManNum.Auto
+      - Betriebsart für die Vorlaufsolltemperatur *rSupplyTemp*
+    * - **rManValue**
+      - REAL
+      -
+      - 0.0 °C
+      - Handwert für die Betriebsart eManNum.Man
+    * - **rSupplyTempMin**
+      - REAL
+      -
+      - 20.0 °C
+      - Absolute minimale Vorlaufsolltemperatur
+    * - **rSupplyTempMax**
+      - REAL
+      -
+      - 70.0 °C
+      - Absolute maximale Vorlaufsolltemperatur
+    * - **rTo1**
+      - REAL
+      -
+      - -15.0 °C
+      - Aussentemperatur für Punkt 1
+    * - **rW1Day**
+      - REAL
+      -
+      - 70.0 °C
+      - Vorlaufsolltemperatur für Aussentemperatur-Punkt 1 - Tagkennlinie
+    * - **rW1Night**
+      - REAL
+      -
+      - 65.0 °C
+      - Vorlaufsolltemperatur für Aussentemperatur-Punkt 1 - Nachtkennlinie
+    * - **rTo2**
+      - REAL
+      -
+      - -5.0 °C
+      - Aussentemperatur für Punkt 2
+    * - **rW2Day**
+      - REAL
+      -
+      - 60.0 °C
+      - Vorlaufsolltemperatur für Aussentemperatur-Punkt 2 - Tagkennlinie
+    * - **rW2Night**
+      - REAL
+      -
+      - 55.0 °C
+      - Vorlaufsolltemperatur für Aussentemperatur-Punkt 2 - Nachtkennlinie
+    * - **rTo3**
+      - REAL
+      -
+      - 5.0 °C
+      - Aussentemperatur für Punkt 3
+    * - **rW3Day**
+      - REAL
+      -
+      - 50.0 °C
+      - Vorlaufsolltemperatur für Aussentemperatur-Punkt 3 - Tagkennlinie
+    * - **rW3Night**
+      - REAL
+      -
+      - 45.0 °C
+      - Vorlaufsolltemperatur für Aussentemperatur-Punkt 3 - Nachtkennlinie
+    * - **rTo4**
+      - REAL
+      -
+      - 15.0 °C
+      - Aussentemperatur für Punkt 4
+    * - **rW4Day**
+      - REAL
+      -
+      - 40.0 °C
+      - Vorlaufsolltemperatur für Aussentemperatur-Punkt 4 - Tagkennlinie
+    * - **rW4Night**
+      - REAL
+      -
+      - 35.0 °C
+      - Vorlaufsolltemperatur für Aussentemperatur-Punkt 4 - Nachtkennlinie
+    * - **rButtonJump**
+      - REAL
+      -
+      - 1.0 °C
+      - Funktion noch nicht implementiert.
+    * - **rSupplyTempMaxScale**
+      - REAL
+      -
+      - 90.0 °C
+      - Maximaltemperatur für die Skalierung der Y-Achse ( VISU )  Schieberegler nur bei 90°C angezeigt!
+    * - **rBorderDistance**
+      - REAL
+      -
+      - 3.0 °C
+      - Randabstand zum Rand rechts/links in Grad Celsius für die X-Achse ( VISU )
+
+*********************
+Funktionsbeschreibung
+*********************
+|
+| Die Vorlaufsolltemperatur *rSupplyTemp* wird in Abhängigkeit der aktuellen Aussentemperatur *rOutTemp*
+  und der gewählten Kennlinie ( Nachtkenlinie: *xDay* = FALSE // Tagkennlinie: *xDay* = TRUE ) berechnet.
+| Die Vorlaufsolltemperatur *rSupplyTemp* wird durch einstellbare absolute Minimal- ( **rSupplyTempMin** ) und
+  Maximalwerte ( **rSupplyTempMax** ) begrenzt.
+|
+| Die Kennlinien sind durch jeweils vier Aussentemperatur-Punkte ( getrennt für die Nacht- und Tagkennlinie )
+  definiert und einstellbar.
+| Jeder Punkt wird durch eine Aussentemperatur und eine zugeordnete Vorlaufsolltemperatur definiert.
+| Die vier Aussentemperatur-Punkte einer Kennlinie werden durch Geraden miteinander verbunden.
+
+.. topic:: Einschränkung
+
+    | rTo4 > rTo3 > rTo2 > rTo1
+
+| Der Parameter **eManModeN** erlaubt die Umschaltung der Vorlaufsolltemperatur *rSupplyTemp* vom Automatik- in den
+  Handbetrieb und umgekehrt.
+| Im Handbetrieb übernimmt die Vorlaufsolltemperatur *rSupplyTemp* den Wert des Parameter **rManValue**.
+|
+
+.. image:: /../DocuBilder/HeatCurve4P_DN_Bild_1.png
+
+**************
+Visualisierung
+**************
+Passendes Visualisierungselement aus der HVACV Visu Library: **HeatCurve4P_DN**
+
+Darstellung
+===========
+  .. image:: /../DocumentationPictures_Visu/HeatCurve4P_DN.PNG
+
+Schnittstellen Visu-Element
+===========================
+
+ .. list-table::
+    :name: Schnittstellen Visu-Element
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Typ
+      - Initialwert
+      - Funktion
+    * - **FB_HeatCurve4P_DN**
+      - HeatCurve4P_DN
+      - VAR_IN_OUT
+      -
+      - FB Instanz HVAC.HeatCurve4P_DN hier eintragen z.B. PRG.HeatCurve4P_DN
+
+|
+| Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+---------------------+-------------+--------------+-----------------------------------------------------------+
+    | Scope  | Name                | Type        | Initial      | Comment                                                   |
+    +========+=====================+=============+==============+===========================================================+
+    | Input  | rOutTemp            | REAL        | 0            | Aussentemperatur zur Berechnung der Kennlinien            |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | xDay                | BOOL        |              | Betriebsart ( FALSE = Nachtbetrieb / TRUE = Tagbetrieb )  |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rBorderDistance     | REAL        | 3            | Randabstand zum Rand rechts/links in Grad Celsius für die |
+    |        |                     |             |              | X-Achse ( VISU )                                          |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rSupplyTempMaxScale | REAL        | 90           | Maximaltemperatur für die Skalierung der Y-Achse ( VISU ) |
+    |        |                     |             |              | Schieberegler nur bei 90°C angezeigt!                     |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rButtonJump         | REAL        | 1            | Funktion noch nicht implementiert.                        |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rW4Night            | REAL        | 35           | Vorlaufsolltemperatur für Aussentemperatur-Punkt 4 -      |
+    |        |                     |             |              | Nachtkennlinie                                            |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rW4Day              | REAL        | 40           | Vorlaufsolltemperatur für Aussentemperatur-Punkt 4 -      |
+    |        |                     |             |              | Tagkennlinie                                              |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rTo4                | REAL        | 15           | Aussentemperatur für Punkt 4                              |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rW3Night            | REAL        | 45           | Vorlaufsolltemperatur für Aussentemperatur-Punkt 3 -      |
+    |        |                     |             |              | Nachtkennlinie                                            |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rW3Day              | REAL        | 50           | Vorlaufsolltemperatur für Aussentemperatur-Punkt 3 -      |
+    |        |                     |             |              | Tagkennlinie                                              |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rTo3                | REAL        | 5            | Aussentemperatur für Punkt 3                              |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rW2Night            | REAL        | 55           | Vorlaufsolltemperatur für Aussentemperatur-Punkt 2 -      |
+    |        |                     |             |              | Nachtkennlinie                                            |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rW2Day              | REAL        | 60           | Vorlaufsolltemperatur für Aussentemperatur-Punkt 2 -      |
+    |        |                     |             |              | Tagkennlinie                                              |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rTo2                | REAL        | -5           | Aussentemperatur für Punkt 2                              |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rW1Night            | REAL        | 65           | Vorlaufsolltemperatur für Aussentemperatur-Punkt 1 -      |
+    |        |                     |             |              | Nachtkennlinie                                            |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rW1Day              | REAL        | 70           | Vorlaufsolltemperatur für Aussentemperatur-Punkt 1 -      |
+    |        |                     |             |              | Tagkennlinie                                              |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rTo1                | REAL        | -15          | Aussentemperatur für Punkt 1                              |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rSupplyTempMax      | REAL        | 70           | Absolute maximale Vorlaufsolltemperatur                   |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rSupplyTempMin      | REAL        | 20           | Absolute minimale Vorlaufsolltemperatur                   |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | rManValue           | REAL        | 0            | Handwert für die Betriebsart eManNum.Man                  |
+    +        +---------------------+-------------+--------------+-----------------------------------------------------------+
+    |        | eManModeN           | |ioeManNum| | eManNum.Auto | Betriebsart für die Vorlaufsolltemperatur *rSupplyTemp*   |
+    +--------+---------------------+-------------+--------------+-----------------------------------------------------------+
+    | Output | rSupplyTemp         | REAL        | 0            | Vorlaufsolltemperatur der aktiven Kennlinie               |
+    +--------+---------------------+-------------+--------------+-----------------------------------------------------------+
+
+.. |ioeManNum| replace:: :ref:`eManNum<eManNum>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

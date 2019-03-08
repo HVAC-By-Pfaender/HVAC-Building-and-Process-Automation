@@ -1,0 +1,40 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Button.ButtonToggle.mCentralOn`:
+
+
+.. _`ButtonToggle.mCentralOn`:
+
+ButtonToggle.mCentralOn (METH)
+------------------------------
+
+METHOD mCentralOn : BOOL
+
+
+
+
+*************************************
+Kurzbeschreibung Methode (mCentralOn)
+*************************************
+
+     | Zentrale Einschaltung
+
+
+
+
+
+InOut:
+    +--------+------------+------+
+    | Scope  | Name       | Type |
+    +========+============+======+
+    | Return | mCentralOn | BOOL |
+    +--------+------------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

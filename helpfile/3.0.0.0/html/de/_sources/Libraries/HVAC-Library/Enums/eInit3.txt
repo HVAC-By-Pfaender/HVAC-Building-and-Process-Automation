@@ -1,0 +1,48 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eInit3`:
+
+
+.. Index::
+   single: eInit3
+
+.. _`eInit3`:
+
+eInit3 (ENUM)
+-------------
+
+TYPE eInit3 :
+
+
+
+.. todo:: Please add documentation for enum: eInit3
+
+
+
+
+
+InOut:
+    +-----------------------------+---------+-------------------------+
+    | Name                        | Initial | Comment                 |
+    +=============================+=========+=========================+
+    | .. _`eInit3.InitToOff`:     | 0       | Initialisierungswert On |
+    |                             |         |                         |
+    | InitToOff                   |         |                         |
+    +-----------------------------+---------+-------------------------+
+    | .. _`eInit3.InitToOn`:      | 1       | Initialisierungswert On |
+    |                             |         |                         |
+    | InitToOn                    |         |                         |
+    +-----------------------------+---------+-------------------------+
+    | .. _`eInit3.InitToLastVal`: | 2       | Letzte Wert oder 0      |
+    |                             |         |                         |
+    | InitToLastVal               |         |                         |
+    +-----------------------------+---------+-------------------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

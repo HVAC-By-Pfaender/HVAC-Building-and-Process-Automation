@@ -1,0 +1,478 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Clock.Holiday`:
+
+
+.. index::
+   single: Holiday
+
+.. _`Holiday`:
+
+Holiday (FB)
+------------
+
+FUNCTION_BLOCK Holiday
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Definition von 10 Ferienzeiträumen ( = Kanäle ) mit Einschalt- und Auschaltdaten
+     |
+     | Typische Anwendung: Uhrsystem
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Holiday_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xEN*
+      - BOOL
+      -
+      -
+      - Freigabe / Sperrung der Ferienzeiträume ( FALSE = Sperrung, TRUE = Freigabe )
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xActive*
+      - BOOL
+      -
+      -
+      - Zustand der Ferienzeiträume ( FALSE = nicht aktiv, TRUE = aktiv )
+    * - *datActiveFrom*
+      - DATE
+      -
+      -
+      - Einschaltdatum des letzen aktiven Ferienzeitraums ( Kanal 10 = höchste Priorität )
+    * - *datActiveTo*
+      - DATE
+      -
+      -
+      - Ausschaltdatum des letzen aktiven Ferienzeitraums ( Kanal 10 = höchste Priorität )
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **xCh10_Mode**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung Kanal 10 ( FALSE = Sperrung, TRUE = Freigabe )
+    * - **datCH10_DateFrom**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Einschaltdatum Kanal 10
+    * - **datCH10_DateTo**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Ausschaltdatum Kanal 10
+    * - **sCH10_Notice**
+      - STRING
+      -
+      - 'Notice'
+      - Bezeichnung für Kanal 10
+    * - **xCh9_Mode**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung Kanal 9 ( FALSE = Sperrung, TRUE = Freigabe )
+    * - **datCH9_DateFrom**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Einschaltdatum Kanal 9
+    * - **datCH9_DateTo**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Ausschaltdatum Kanal 9
+    * - **sCH9_Notice**
+      - STRING
+      -
+      - 'Notice'
+      - Bezeichnung für Kanal 9
+    * - **xCh8_Mode**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung Kanal 8 ( FALSE = Sperrung, TRUE = Freigabe )
+    * - **datCH8_DateFrom**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Einschaltdatum Kanal 8
+    * - **datCH8_DateTo**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Ausschaltdatum Kanal 8
+    * - **sCH8_Notice**
+      - STRING
+      -
+      - 'Notice'
+      - Bezeichnung für Kanal 8
+    * - **xCh7_Mode**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung Kanal 7 ( FALSE = Sperrung, TRUE = Freigabe )
+    * - **datCH7_DateFrom**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Einschaltdatum Kanal 7
+    * - **datCH7_DateTo**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Ausschaltdatum Kanal 7
+    * - **sCH7_Notice**
+      - STRING
+      -
+      - 'Notice'
+      - Bezeichnung für Kanal 7
+    * - **xCh6_Mode**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung Kanal 6 ( FALSE = Sperrung, TRUE = Freigabe )
+    * - **datCH6_DateFrom**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Einschaltdatum Kanal 6
+    * - **datCH6_DateTo**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Ausschaltdatum Kanal 6
+    * - **sCH6_Notice**
+      - STRING
+      -
+      - 'Notice'
+      - Bezeichnung für Kanal 6
+    * - **xCh5_Mode**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung Kanal 5 ( FALSE = Sperrung, TRUE = Freigabe )
+    * - **datCH5_DateFrom**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Einschaltdatum Kanal 5
+    * - **datCH5_DateTo**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Ausschaltdatum Kanal 5
+    * - **sCH5_Notice**
+      - STRING
+      -
+      - 'Notice'
+      - Bezeichnung für Kanal 5
+    * - **xCh4_Mode**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung Kanal 4 ( FALSE = Sperrung, TRUE = Freigabe )
+    * - **datCH4_DateFrom**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Einschaltdatum Kanal 4
+    * - **datCH4_DateTo**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Ausschaltdatum Kanal 4
+    * - **sCH4_Notice**
+      - STRING
+      -
+      - 'Notice'
+      - Bezeichnung für Kanal 4
+    * - **xCh3_Mode**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung Kanal 3 ( FALSE = Sperrung, TRUE = Freigabe )
+    * - **datCH3_DateFrom**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Einschaltdatum Kanal 3
+    * - **datCH3_DateTo**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Ausschaltdatum Kanal 3
+    * - **sCH3_Notice**
+      - STRING
+      -
+      - 'Notice'
+      - Bezeichnung für Kanal 3
+    * - **xCh2_Mode**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung Kanal 2 ( FALSE = Sperrung, TRUE = Freigabe )
+    * - **datCH2_DateFrom**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Einschaltdatum Kanal 2
+    * - **datCH2_DateTo**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Ausschaltdatum Kanal 2
+    * - **sCH2_Notice**
+      - STRING
+      -
+      - 'Notice'
+      - Bezeichnung für Kanal 2
+    * - **xCh1_Mode**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung Kanal 1 ( FALSE = Sperrung, TRUE = Freigabe )
+    * - **datCH1_DateFrom**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Einschaltdatum Kanal 1
+    * - **datCH1_DateTo**
+      - DATE
+      -
+      - DATE#2019-1-1
+      - Ausschaltdatum Kanal 1
+    * - **sCH1_Notice**
+      - STRING
+      -
+      - 'Notice'
+      - Bezeichnung für Kanal 1
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein wertet maximal 10 frei definierbare Ferienzeiträume ( = Kanäle ) aus.
+| Ist die Auswertung generell freigegeben ( *xEN* = TRUE ), so wird bei allen aktivierten Ferienzeiträumen ( **xChX_Mode** = TRUE, 0 < X < 11 ) geprüft, ob
+  das aktuelle Datum innerhalb des Ferienzeitraums liegt. Ist dies bei mindestens einem aktivierten Ferienzeitraum der Fall, so wird der Ausgang *xActive* aktiviert ( = TRUE ).
+| In allen übrigen Fällen wird der Ausgang *xActive* deaktiviert ( = FALSE ).
+| Liegt das Ausschaltdatum zeitlich vor dem Einschaltdatum ( Kanäle 1 - 10 ), so wird intern das Ausschaltdatum mit dem Einschaltdatum gleich gesetzt.
+| Ist das Einschalt- und Ausschaltdatum eines Kanals ( Kanäle 1 - 10 ) identisch, so wird dieser Tag als Ferientag bewertet.
+| An den Ausgängen *datActiveFrom* bzw. *datActiveTo* stehen ( Voraussetzung: *xEN* = TRUE ) das Einschaltdatum / Ausschaltdatum des Kanals 10 zur Verfügung.
+|
+
+.. topic:: Voraussetzung für den Einsatz des Funktionsbausteins Holiday
+
+    | Zur korrekten Funktion ist der Einsatz des Funktionsbausteins TimeRead mit *xEn* = TRUE erforderlich.
+
+
+**************
+Visualisierung
+**************
+Passendes Visualisierungselement aus der HVACV Visu Library: **Holidays**
+
+Darstellung
+===========
+  .. image:: /../DocumentationPictures_Visu/Holidays.PNG
+
+
+Schnittstellen Visu-Element
+===========================
+
+ .. list-table::
+    :name: Schnittstellen Visu-Element
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Typ
+      - Initialwert
+      - Funktion
+    * - **FB_Holiday**
+      - Holiday
+      - VAR_IN_OUT
+      -
+      - Hier FB Holiday eintragen Bsp. PRG.Holiday
+    * - **BMS_Active**
+      - BOOL
+      - VAR_INPUT
+      -
+      - BMS (Building Management System) GLT (Gebäudeleittechnik). Wenn BMS_Active = TRUE wird die Eingabe/Editierung der Uhren deaktiviert da diese dann nur über das BMS eingestellt werden können. Uhrzeiten können dann nur angeschaut werden.
+    * - **DisableInput**
+      - BOOL
+      - VAR_INPUT
+      -
+      - DisableInpput = TRUE Uhrzeiten der Wochenuhren können nur angesehen werden und nicht editiert werden.///      - BMS (Building Management System) GLT (Gebäudeleittechnik). Wenn BMS_Active = TRUE wird die Eingabe/Editierung der Uhren deaktiviert da diese dann nur über das BMS eingestellt werden können. Uhrzeiten können dann nur angeschaut werden.
+|
+| Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+------------------+--------+---------------+--------------------------------------------------------------+
+    | Scope  | Name             | Type   | Initial       | Comment                                                      |
+    +========+==================+========+===============+==============================================================+
+    | Input  | xEn              | BOOL   |               | Freigabe / Sperrung der Ferienzeiträume ( FALSE = Sperrung,  |
+    |        |                  |        |               | TRUE = Freigabe )                                            |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | sCH1_Notice      | STRING | 'Notice'      | Bezeichnung für Kanal 1                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH1_DateTo    | DATE   | DATE#2019-1-1 | Ausschaltdatum Kanal 1                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH1_DateFrom  | DATE   | DATE#2019-1-1 | Einschaltdatum Kanal 1                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | xCH1_Mode        | BOOL   | TRUE          | Freigabe / Sperrung Kanal 1 ( FALSE = Sperrung, TRUE =       |
+    |        |                  |        |               | Freigabe )                                                   |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | sCH2_Notice      | STRING | 'Notice'      | Bezeichnung für Kanal 2                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH2_DateTo    | DATE   | DATE#2019-1-1 | Ausschaltdatum Kanal 2                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH2_DateFrom  | DATE   | DATE#2019-1-1 | Einschaltdatum Kanal 2                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | xCH2_Mode        | BOOL   | TRUE          | Freigabe / Sperrung Kanal 2 ( FALSE = Sperrung, TRUE =       |
+    |        |                  |        |               | Freigabe )                                                   |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | sCH3_Notice      | STRING | 'Notice'      | Bezeichnung für Kanal 3                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH3_DateTo    | DATE   | DATE#2019-1-1 | Ausschaltdatum Kanal 3                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH3_DateFrom  | DATE   | DATE#2019-1-1 | Einschaltdatum Kanal 3                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | xCH3_Mode        | BOOL   | TRUE          | Freigabe / Sperrung Kanal 3 ( FALSE = Sperrung, TRUE =       |
+    |        |                  |        |               | Freigabe )                                                   |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | sCH4_Notice      | STRING | 'Notice'      | Bezeichnung für Kanal 4                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH4_DateTo    | DATE   | DATE#2019-1-1 | Ausschaltdatum Kanal 4                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH4_DateFrom  | DATE   | DATE#2019-1-1 | Einschaltdatum Kanal 4                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | xCH4_Mode        | BOOL   | TRUE          | Freigabe / Sperrung Kanal 4 ( FALSE = Sperrung, TRUE =       |
+    |        |                  |        |               | Freigabe )                                                   |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | sCH5_Notice      | STRING | 'Notice'      | Bezeichnung für Kanal 5                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH5_DateTo    | DATE   | DATE#2019-1-1 | Ausschaltdatum Kanal 5                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH5_DateFrom  | DATE   | DATE#2019-1-1 | Einschaltdatum Kanal 5                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | xCH5_Mode        | BOOL   | TRUE          | Freigabe / Sperrung Kanal 5 ( FALSE = Sperrung, TRUE =       |
+    |        |                  |        |               | Freigabe )                                                   |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | sCH6_Notice      | STRING | 'Notice'      | Bezeichnung für Kanal 6                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH6_DateTo    | DATE   | DATE#2019-1-1 | Ausschaltdatum Kanal 6                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH6_DateFrom  | DATE   | DATE#2019-1-1 | Einschaltdatum Kanal 6                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | xCH6_Mode        | BOOL   | TRUE          | Freigabe / Sperrung Kanal 6 ( FALSE = Sperrung, TRUE =       |
+    |        |                  |        |               | Freigabe )                                                   |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | sCH7_Notice      | STRING | 'Notice'      | Bezeichnung für Kanal 7                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH7_DateTo    | DATE   | DATE#2019-1-1 | Ausschaltdatum Kanal 7                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH7_DateFrom  | DATE   | DATE#2019-1-1 | Einschaltdatum Kanal 7                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | xCH7_Mode        | BOOL   | TRUE          | Freigabe / Sperrung Kanal 7 ( FALSE = Sperrung, TRUE =       |
+    |        |                  |        |               | Freigabe )                                                   |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | sCH8_Notice      | STRING | 'Notice'      | Bezeichnung für Kanal 8                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH8_DateTo    | DATE   | DATE#2019-1-1 | Ausschaltdatum Kanal 8                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH8_DateFrom  | DATE   | DATE#2019-1-1 | Einschaltdatum Kanal 8                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | xCH8_Mode        | BOOL   | TRUE          | Freigabe / Sperrung Kanal 8 ( FALSE = Sperrung, TRUE =       |
+    |        |                  |        |               | Freigabe )                                                   |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | sCH9_Notice      | STRING | 'Notice'      | Bezeichnung für Kanal 9                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH9_DateTo    | DATE   | DATE#2019-1-1 | Ausschaltdatum Kanal 9                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH9_DateFrom  | DATE   | DATE#2019-1-1 | Einschaltdatum Kanal 9                                       |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | xCH9_Mode        | BOOL   | TRUE          | Freigabe / Sperrung Kanal 9 ( FALSE = Sperrung, TRUE =       |
+    |        |                  |        |               | Freigabe )                                                   |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | sCH10_Notice     | STRING | 'Notice'      | Bezeichnung für Kanal 10                                     |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH10_DateTo   | DATE   | DATE#2019-1-1 | Einschaltdatum Kanal 10                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datCH10_DateFrom | DATE   | DATE#2019-1-1 | Ausschaltdatum Kanal 10                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | xCH10_Mode       | BOOL   | TRUE          | Freigabe / Sperrung Kanal 10 ( FALSE = Sperrung, TRUE =      |
+    |        |                  |        |               | Freigabe )                                                   |
+    +--------+------------------+--------+---------------+--------------------------------------------------------------+
+    | Output | xActive          | BOOL   |               | Zustand der Ferienzeiträume ( FALSE = nicht aktiv, TRUE =    |
+    |        |                  |        |               | aktiv )                                                      |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datActiveFrom    | DATE   |               | Einschaltdatum des letzen aktiven Ferienzeitraums ( Kanal 10 |
+    |        |                  |        |               | = höchste Priorität )                                        |
+    +        +------------------+--------+---------------+--------------------------------------------------------------+
+    |        | datActiveTo      | DATE   |               | Ausschaltdatum des letzen aktiven Ferienzeitraums ( Kanal 10 |
+    |        |                  |        |               | = höchste Priorität )                                        |
+    +--------+------------------+--------+---------------+--------------------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

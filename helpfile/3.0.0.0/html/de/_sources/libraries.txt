@@ -1,0 +1,512 @@
+.. first line of libraries.rst template
+
+.. _libraries:
+
+Library Reference
+=================
+
+This is a dictionary of all referenced libraries and their name spaces.
+
+3SLicense
+---------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: 3SLicense
+| Default Resolution: 3SLicense, * (3S - Smart Software Solutions GmbH)
+| Namespace: _3S_LICENSE
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: 3SLicense
+    * SystemLibrary: False
+    * Optional: False
+
+AlarmManager
+------------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: AlarmManager
+| Default Resolution: AlarmManager, * (Intern)
+| Namespace: AlarmManager
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: AlarmManager
+    * SystemLibrary: False
+    * Optional: False
+
+Library Parameter
+~~~~~~~~~~~~~~~~~
+
+| Parameter: COUNT_ROWS_TO_CHECK_FOR_OLDEST_ALARMS = 50
+
+| Parameter: PLACEHOLDER_VALUE_LENGTH = (ANY_TO_INT(60) * ANY_TO_INT(2))
+
+AnyViz Cloud Adapter
+--------------------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Name: AnyViz Cloud Adapter
+| Version: 1.6.3.0
+| Company: Mirasoft GmbH & Co. KG
+| Namespace: AnyViz
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * HideWhenReferencedAsDependency: True
+    * QualifiedOnly: False
+    * Key: AnyViz Cloud Adapter, 1.6.3.0 (Mirasoft GmbH & Co. KG)
+    * SystemLibrary: False
+    * Optional: False
+
+CAA DTUtil Extern
+-----------------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: CAA DTUtility
+| Default Resolution: CAA DTUtil Extern, * (CAA Technical Workgroup)
+| Namespace: DTU
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: True
+    * Key: CAA DTUtility
+    * SystemLibrary: False
+    * Optional: False
+
+CAA List And Tree
+-----------------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: CAA List And Tree
+| Default Resolution: CAA List And Tree, * (CAA Technical Workgroup)
+| Namespace: LAT
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: True
+    * Key: CAA List And Tree
+    * SystemLibrary: False
+    * Optional: False
+
+CAA Types Extern
+----------------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: CAA Types
+| Default Resolution: CAA Types Extern, * (CAA Technical Workgroup)
+| Namespace: CAA
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: True
+    * Key: CAA Types
+    * SystemLibrary: False
+    * Optional: False
+
+CmpApp
+------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: CmpApp
+| Default Resolution: CmpApp, * (System)
+| Namespace: CmpApp
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: CmpApp
+    * SystemLibrary: False
+    * Optional: False
+
+CmpErrors2 Interfaces
+---------------------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Name: CmpErrors2 Interfaces
+| Version: **newest**
+| Company: System
+| Namespace: CmpErrors
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: CmpErrors2 Interfaces, * (System)
+    * SystemLibrary: False
+    * Optional: False
+
+CmpLog
+------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: CmpLog
+| Default Resolution: CmpLog, * (System)
+| Namespace: CmpLog
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: CmpLog
+    * SystemLibrary: False
+    * Optional: False
+
+Component Manager
+-----------------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: Component Manager
+| Default Resolution: Component Manager, * (System)
+| Namespace: Component_Manager
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: Component Manager
+    * SystemLibrary: False
+    * Optional: False
+
+HVAC Types Library
+------------------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: HVAC Types
+| Default Resolution: HVAC Types Library, * (Pfaender GmbH)
+| Namespace: HVACTYPES
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: True
+    * Key: HVAC Types
+    * SystemLibrary: False
+    * Optional: False
+
+Standard
+--------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: Standard
+| Default Resolution: Standard, * (System)
+| Namespace: Standard
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: Standard
+    * SystemLibrary: False
+    * Optional: False
+
+StringUtils
+-----------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: StringUtils
+| Default Resolution: StringUtils, * (System)
+| Namespace: Stu
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: StringUtils
+    * SystemLibrary: False
+    * Optional: False
+
+SysEthernet
+-----------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: CmpSysEthernet
+| Default Resolution: SysEthernet, * (3S - Smart Software Solutions GmbH)
+| Namespace: CmpSysEthernet
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: CmpSysEthernet
+    * SystemLibrary: False
+    * Optional: False
+
+SysMem
+------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: SysMem
+| Default Resolution: SysMem, * (System)
+| Namespace: SysMem
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: SysMem
+    * SystemLibrary: False
+    * Optional: False
+
+SysProcess
+----------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: SysProcess
+| Default Resolution: SysProcess, * (System)
+| Namespace: SysProcess
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: SysProcess
+    * SystemLibrary: False
+    * Optional: False
+
+SysSocket
+---------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: SysSocket
+| Default Resolution: SysSocket, * (System)
+| Namespace: SysSocket
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: SysSocket
+    * SystemLibrary: False
+    * Optional: False
+
+SysTarget
+---------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: SysTarget
+| Default Resolution: SysTarget, * (System)
+| Namespace: SysTarget
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: SysTarget
+    * SystemLibrary: False
+    * Optional: False
+
+SysTime
+-------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Name: SysTime
+| Version: 3.5.9.0
+| Company: System
+| Namespace: SysTime
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: SysTime, 3.5.9.0 (System)
+    * SystemLibrary: False
+    * Optional: False
+
+SysTypes2 Interfaces
+--------------------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Name: SysTypes2 Interfaces
+| Version: **newest**
+| Company: System
+| Namespace: SysTypes
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: SysTypes2 Interfaces, * (System)
+    * SystemLibrary: False
+    * Optional: False
+
+Util
+----
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Placeholder: Util
+| Default Resolution: Util, * (System)
+| Namespace: Util
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: False
+    * Key: Util
+    * SystemLibrary: False
+    * Optional: False
+
+Library Parameter
+~~~~~~~~~~~~~~~~~
+
+| Parameter: IBLOCKSIZE = 22800
+
+VisuSymbols
+-----------
+
+Library Identification
+~~~~~~~~~~~~~~~~~~~~~~
+
+| Name: VisuSymbols
+| Version: 3.5.10.0
+| Company: System
+| Namespace: VisuSymbols
+
+Library Properties
+~~~~~~~~~~~~~~~~~~
+
+.. hlist::
+    :columns: 3
+
+    * LinkAllContent: False
+    * QualifiedOnly: True
+    * Key: VisuSymbols, 3.5.10.0 (System)
+    * SystemLibrary: False
+    * Optional: False
+
+.. last line of libraries.rst template

@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SequenceSUPTemp (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Shade (FB)" href="Shade.html" />
+    <link rel="prev" title="Pump.mResetOperatingHours (METH)" href="pou-Pump/mResetOperatingHours.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="Burner3P.html">Burner3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerP.html">BurnerP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerT.html">BurnerT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoolOutProtection.html">CoolOutProtection (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Damper2P.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DamperAnalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuoPump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fan1Speed.html">Fan1Speed (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanAnalog.html">FanAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanControl.html">FanControl (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FastHeating.html">FastHeating (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FireDamperMot.html">FireDamperMot (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptStartHeat.html">OptStartHeat (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreRinseOperationValveAnalog.html">PreRinseOperationValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Pump.html">Pump (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">SequenceSUPTemp (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SmokeDetector.html">SmokeDetector (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve2P.html">Valve2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve3P.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveAnalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveTherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>SequenceSUPTemp (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Components/SequenceSUPTemp.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-sequencesuptemp"></span><div class="section" id="sequencesuptemp-fb">
+<span id="sequencesuptemp"></span><span id="index-0"></span><h1>SequenceSUPTemp (FB)<a class="headerlink" href="#sequencesuptemp-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK SequenceSUPTemp</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Supply air temperature control for a air-handling unit with energy recovery (continuous recirculation damper system and energy recovery) including releases for active heating and cooling.</div>
+<div class="line"><br /></div>
+<div class="line">Typical application: Supply air temperature control in a air-handling unit</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/SequenceSAT_FB.png" src="../../../_images/SequenceSAT_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">After enabling ( <em>xOpTCon</em> = TRUE ), this function block enables the supply air temperature <em>rSAT</em> to be controlled to the setpoint <em>rReferenceSAT</em> by generating the control signals <em>rYDamp</em> ( recirculation damper system 0.0 - 100.0 % fresh air proportion ) and <em>rYER</em> ( energy recovery 0.0 - 100.0 % ).</div>
+<div class="line">Once the energy recovery systems have been fully utilised, the active heating ( <em>xEnHeat</em> = TRUE ) or active cooling ( <em>xEnCool</em> = TRUE ) is enabled if required.</div>
+<div class="line">The control of the supply air temperature with active heating or with active cooling must be carried out via a separate, external PI controller. The control signals of these external PI controllers are set back to the inputs <em>rHeaterYPISAT</em> or <em>rCoolerYPISAT</em> to ensure energy-efficient control of energy recovery.</div>
+<div class="line">By taking into account the current outdoor temperature <em>rOAT</em> or exhaust air temperature <em>rRAT</em>, the optimum energy recovery can be achieved for every operating case.</div>
+<div class="line">When using this function block, the spatial arrangement of the components (damper system, energy recovery, heater circuit, cooling circuit, etc.) must be taken into account.</div>
+<div class="line"><br /></div>
+<div class="line">Case 1 - Winter case: Supply air temperature &lt; Supply air setpoint temperature, outside temperature &lt; Exhaust air temperature, Supply air setpoint temperature &gt; Exhaust air temperature</div>
+</div>
+<img alt="../../../_images/SequenceSAT_Bild_1.png" src="../../../_images/SequenceSAT_Bild_1.png" />
+<div class="line-block">
+<div class="line">Case 2 - Summer case: Supply air temperature &gt; Supply air setpoint temperature, outside temperature &gt; Exhaust air temperature, Supply air setpoint temperature &lt; Exhaust air temperature</div>
+</div>
+<img alt="../../../_images/SequenceSAT_Bild_2.png" src="../../../_images/SequenceSAT_Bild_2.png" />
+</div>
+<div class="section" id="freigabe-sperrung-des-reglers-xoptcon">
+<h3>Enabling / disabling of the controller <em>xOpTCon</em><a class="headerlink" href="#freigabe-sperrung-des-reglers-xoptcon" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">In the locked state ( <em>xOpTCon</em> = FALSE ) no control processes are taking into place - the outputs are set to the following signals / states:</div>
+<div class="line"><br /></div>
+<div class="line"><em>rYGen</em>    = 100.0 %</div>
+<div class="line"><em>xEnHeat</em>  = FALSE</div>
+<div class="line"><em>xEnCool</em>  = FALSE</div>
+<div class="line"><em>rYDamp</em>   = 100.0 %</div>
+<div class="line"><em>rYER</em>     = 100.0 %</div>
+</div>
+</div>
+<div class="section" id="freigabe-sperrung-der-freien-nachtkuhlung-xfncen">
+<h3>Enabling / disabling the free night cooling <em>xFNCEn</em><a class="headerlink" href="#freigabe-sperrung-der-freien-nachtkuhlung-xfncen" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This input signals ( <em>xFNCEn</em> = TRUE ) the active free night cooling and blocks the output for the active cooling <em>xEnCool</em> independently of the other requirements.</div>
+</div>
+</div>
+<div class="section" id="verzogerter-start-der-regelung-xproramp-bzw-xhhwfrost1">
+<h3>Delayed start of the control <em>xPRORamp</em> or <em>xHHWFrost1</em><a class="headerlink" href="#verzogerter-start-der-regelung-xproramp-bzw-xhhwfrost1" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The internal sequence controller ( PI controller ) is disabled if either the input <em>xPRORamp</em> and / or the input <em>xHHWFrost1</em> is active ( = TRUE ).</div>
+<div class="line">The internal sequence controller is enabled with a time delay of 5 minutes after both inputs are inactive again ( = FALSE ).</div>
+</div>
+</div>
+<div class="section" id="ruckmeldung-der-stellsignale-rheaterypisat-bzw-rcoolerypisat">
+<h3>Feedback of the control signals <em>rHeaterYPISAT</em> and <em>rCoolerYPISAT</em> respectively<a class="headerlink" href="#ruckmeldung-der-stellsignale-rheaterypisat-bzw-rcoolerypisat" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The feedback of the control signals for the active heating <em>rHeaterYPISAT</em> and cooling <em>rCoolerYPISAT</em> is monitored internally and evaluated as follows:</div>
+<div class="line"><br /></div>
+<div class="line">Control signal <em>rHeaterYPISAT</em> &gt; 8.0 %: Deactivation of the internal sequence controller</div>
+<div class="line">Control signal <em>rHeaterYPISAT</em> &lt; 3.0 %: Activation of the internal sequence controller after a time delay of 500 ms</div>
+<div class="line"><br /></div>
+<div class="line">Control signal <em>rCoolYPISAT</em> &gt; 8.0 %: Deactivation of the internal sequence controller</div>
+<div class="line">Control signal <em>rCoolYPISAT</em> &lt; 3.0 %: Activation of the internal sequence controller after a time delay of 500 ms</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="allgemeines-stellsignal-aus-der-squenzregelung-rygen">
+<h3>General control signal from the sequence control <em>rYGen</em><a class="headerlink" href="#allgemeines-stellsignal-aus-der-squenzregelung-rygen" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This control signal in the range 0.0 - 100.0 % ( 0.0% = maximum energy recovery, 100.0 = no energy recovery ) is primarily generated by the internal sequence controller and influenced by the input variables <em>rSAT</em> ( supply air temperature ), <em>rReferenceSAT</em> ( supply air setpoint temperature ), <em>rOAT</em> ( fresh air temperature ) and <em>rRAT</em> ( extract air temperature ).</div>
+</div>
+</div>
+<div class="section" id="freigabe-sperrung-der-aktiven-beheizung-xenheat">
+<h3>Enabling / disabling the active heating <em>xEnHeat</em><a class="headerlink" href="#freigabe-sperrung-der-aktiven-beheizung-xenheat" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The release of the active heating is active ( = TRUE ), if the following conditions are fulfilled at the same time:</div>
+<div class="line"><br /></div>
+<div class="line"><em>xOptCon</em>  = TRUE</div>
+<div class="line">( outdoor temperature &gt; exhaust air temperature AND <em>rYGen</em> &gt; 99% ) OR ( outdoor temperature &lt; exhaust air temperature AND <em>rYGen</em> &lt; 1% )</div>
+<div class="line"><br /></div>
+<div class="line">In all other situations the active heating is blocked ( = FALSE ).</div>
+</div>
+</div>
+<div class="section" id="freigabe-sperrung-der-aktiven-kuhlung-xencool">
+<h3>Enabling / disabling of active cooling <em>xEnCool</em><a class="headerlink" href="#freigabe-sperrung-der-aktiven-kuhlung-xencool" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The enable of the active cooling is active ( = TRUE ), if the following conditions are fulfilled at the same time:</div>
+<div class="line"><br /></div>
+<div class="line"><em>xOptCon</em>  = TRUE</div>
+<div class="line">( outdoor temperature &gt; exhaust air temperature AND <em>rYGen</em> &lt; 1% ) OR ( outdoor temperature &lt; exhaust air temperature AND <em>rYGen</em> &gt; 99% )</div>
+<div class="line"><em>xFNCEn</em> = FALSE</div>
+<div class="line"><em>rAverage2h</em> &gt; <strong>rSetpoint_CoolOAT</strong> ( blocking of active cooling at low outside temperatures )</div>
+<div class="line"><br /></div>
+<div class="line">In all other situations the active cooling is disabled ( = FALSE ).</div>
+</div>
+</div>
+<div class="section" id="stellsignal-fur-das-klappensystem-rydamp">
+<h3>Control signal for the damper system <em>rYDamp</em><a class="headerlink" href="#stellsignal-fur-das-klappensystem-rydamp" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The control signal for the damper system ( 0.0 - 100.0 %, 0.0 % = no fresh air component, 100.0 % maximum fresh air component ) is produced from the sequence control <em>rYGen</em> as follows, depending on the general control signal:</div>
+<div class="line"><br /></div>
+<div class="line">The control signal <em>rYGen</em> is linearly converted in the range <em>r1Damp</em> to <em>r2Damp</em> into a signal in the range 0.0 - 100.0 and limited.</div>
+</div>
+</div>
+<div class="section" id="stellsignal-fur-das-system-zur-energieruckgewinnung-ryer">
+<h3>Control signal for the energy recovery system <em>rYER</em><a class="headerlink" href="#stellsignal-fur-das-system-zur-energieruckgewinnung-ryer" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The control signal for the energy recovery ( 0.0 - 100.0 %, 0.0 % = no energy recovery, 100.0 % maximum energy recovery ) is produced as follows depending on the general control signal from the sequence control <em>rYGen</em>:</div>
+<div class="line"><br /></div>
+<div class="line">The control signal <em>rYGen</em> is linearly converted and limited in the range <em>r1Er</em> to <em>r2Er</em> into a signal in the range 100.0 - 0.0.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="8%" />
+<col width="18%" />
+<col width="6%" />
+<col width="9%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="11">Input</td>
+<td>rSAT</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Supply air temperature in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rReferenceSAT</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Nominal supply air temperature in °C</p>
+</td>
+</tr>
+<tr class="row-even"><td>xOpTCon</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable / disable the controller ( FALSE = disable, TRUE = enable )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xFNCEn</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Enable / Disable free night cooling ( FALSE = Disable, TRUE = Enable )</p>
+</td>
+</tr>
+<tr class="row-even"><td>rOAT</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Outside air temperature in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rRAT</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Exhaust air temperature in °C</p>
+</td>
+</tr>
+<tr class="row-even"><td>rAverage2h</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Outdoor temperature average over 2 hours in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xPRORamp</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Display - Control signal ramp after start-up mode ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xHHWFrost1</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Display - Status - Frost protection - Level 1 ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rHeaterYPISAT</td>
+<td>REAL</td>
+<td>0.0</td>
+<td><p class="first last">Control signal from the supply air temperature controller for active heating in %</p>
+</td>
+</tr>
+<tr class="row-even"><td>rCoolerYPISAT</td>
+<td>REAL</td>
+<td>0.0</td>
+<td><p class="first last">Control signal from the supply air temperature controller for active cooling in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="5">Output</td>
+<td>rYGen</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">General control signal from sequence control in % ( 0 - 100.0 % )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xEnHeat</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable / disable active heating ( FALSE = disable, TRUE = enable )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xEnCool</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable / disable active cooling ( FALSE = disable, TRUE = enable )</p>
+</td>
+</tr>
+<tr class="row-even"><td>rYDamp</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal for the damper system in % ( 0 - 100.0 % )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rYER</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal for the energy recovery system in % ( 0 - 100.0 % )</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="7">Input</td>
+<td>rSetpoint_CoolOAT</td>
+<td>REAL</td>
+<td>14.0</td>
+<td><p class="first last">Threshold value for enabling the active cooling ( outdoor temperature average over 2 hours ) in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td>r2ER</td>
+<td>REAL</td>
+<td>100.0</td>
+<td><p class="first last">Parameter x2 for the sequence - energy recovery in % ( y2 = 0.0 % )</p>
+</td>
+</tr>
+<tr class="row-even"><td>r1ER</td>
+<td>REAL</td>
+<td>30.0</td>
+<td><p class="first last">Parameter x1 for the sequence - energy recovery in % ( y2 = 100.0 % )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>r2Damp</td>
+<td>REAL</td>
+<td>30.0</td>
+<td><p class="first last">Parameter x2 for the sequence flap system in % ( y2 = 100.0 % )</p>
+</td>
+</tr>
+<tr class="row-even"><td>r1Damp</td>
+<td>REAL</td>
+<td>0.0</td>
+<td><p class="first last">Parameter x1 for the sequence - damper system in % ( y2 = 0.0 % )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rTn</td>
+<td>REAL</td>
+<td>200.0</td>
+<td><p class="first last">Reset time - Sequence controller in seconds</p>
+</td>
+</tr>
+<tr class="row-even"><td>rKp</td>
+<td>REAL</td>
+<td>3.5</td>
+<td><p class="first last">Gain factor - Sequence controller</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Shade.html" class="btn btn-neutral float-right" title="Shade (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pou-Pump/mResetOperatingHours.html" class="btn btn-neutral float-left" title="Pump.mResetOperatingHours (METH)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

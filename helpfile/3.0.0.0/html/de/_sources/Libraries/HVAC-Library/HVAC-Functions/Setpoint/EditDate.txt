@@ -1,0 +1,146 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Setpoint.EditDate`:
+
+
+.. index::
+   single: EditDate
+
+.. _`EditDate`:
+
+EditDate (FB)
+-------------
+
+FUNCTION_BLOCK EditDate
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Eingabe eines Datums im Format DATE ( d#2017-11-21 )
+     |
+     | Typische Anwendung: Festlegung eines Datums für einen Schaltvorgang
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/EditDate_FB.png
+
+**************
+Schnittstellen
+**************
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *dOut*
+      - DATE
+      -
+      -
+      - Ausgabewert im Format DATE
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **dSetPoint**
+      - DATE
+      -
+      -
+      - Eingabewert im Format DATE
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Übergabe eines Eingabewerts im Format DATE **dSetPoint** und die direkte Übertragung zum
+  Ausgabewert im Format DATE *dOut*.
+
+.. topic:: Verhalten bei Spannungsausfall
+
+    | Der Eingabewert im Format Date **dSetPoint** wird spannungsausfallsicher gespeichert und automatisch wiederhergestellt.
+    |
+
+**************
+Visualisierung
+**************
+Passendes Visualisierungselement aus der HVACV Visu Library: **EditDate1** und **EditDate2**
+
+Darstellung
+===========
+  .. image:: /../DocumentationPictures_Visu/EditDate1.PNG
+  .. image:: /../DocumentationPictures_Visu/EditDate2.PNG
+
+Schnittstellen Visu-Element
+===========================
+
+ .. list-table::
+    :name: Schnittstellen für das Visu-Element
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Typ
+      - Initialwert
+      - Funktion
+    * - **datDate**
+      - DATE
+      - VAR_IN_OUT
+      -
+      - Hier DATE Variable eintragen Bsp. vom Baustein HVAC.EditDate.dSetPoint
+    * - **DisableInput**
+      - BOOL
+      - VAR_INPUT
+      - FALSE
+      - Hier kann die Eingabe deaktiviert werden. Das Element wird dabei ausgegraut.
+
+|
+| Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.
+|
+|
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+------+----------------------------+
+    | Scope  | Name      | Type | Comment                    |
+    +========+===========+======+============================+
+    | Input  | dSetPoint | DATE | Eingabewert im Format DATE |
+    +--------+-----------+------+----------------------------+
+    | Output | dOut      | DATE | Ausgabewert im Format DATE |
+    +--------+-----------+------+----------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

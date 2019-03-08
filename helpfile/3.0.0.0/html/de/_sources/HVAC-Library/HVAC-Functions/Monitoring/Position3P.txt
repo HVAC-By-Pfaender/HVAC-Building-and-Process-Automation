@@ -1,0 +1,183 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Monitoring.Position3P`:
+
+
+.. index::
+   single: Position3P
+
+.. _`Position3P`:
+
+Position3P (FB)
+---------------
+
+FUNCTION_BLOCK Position3P
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Berechnung der aktuellen Position eines 3-Punkt-Antrieb
+     | Zusätzlich kann eine Referenzposition ( Endschalter ) des Antriebs erfasst werden.
+     | Typische Anwendung: Positionsbestimmung an einem 3-Punkt-Ventilantrieb
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Position3P_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xOutOpen*
+      - BOOL
+      -
+      -
+      - Eingang - Freigabe - Öffnung
+    * - *xOutClose*
+      - BOOL
+      -
+      -
+      - Eingang - Freigabe - Schliessung
+    * - *xRefPos*
+      - BOOL
+      -
+      -
+      - Digitaleingang zur Erfassung der Referenzposition ( Endschalter )
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rPos*
+      - REAL
+      - **rMinLimit** bis **rMaxLimit**
+      -
+      - Anzeige der aktuellen Position in %
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **iRefPosition**
+      - INT
+      - 0 - 100
+      - 0%
+      - Referenzposition des Antriebs
+    * - **rMinLimit**
+      - REAL
+      -
+      - 0.0
+      - Grenzwert - Minimale Position
+    * - **rMaxLimit**
+      - REAL
+      -
+      - 100.0
+      - Grenzwert - Maximale Position
+    * - **tDuration**
+      - TIME
+      -
+      - T#120s
+      - Laufzeit des Antriebs
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Berechnung der aktuellen Position eines 3-Punkt-Antriebs, der keine Positionsrückmeldung besitzt.
+| Die Berechnung erfolgt aufgrund der Zeitdauer der Signale an den Eingängen Eingang - Freigabe - Öffnung *xOutOpen* und Eingang - Freigabe - Schliessung *xOutClose*.
+| Jede ansteigende Flanke am Digitaleingang *xRefPos* ( d.h. der Antrieb befindet sich aktuell in seiner Referenzposition) bewirkt eine Neufestlegung des
+  analogen Ausgangssignales *rPos* auf den Sollwert / Parameter **iRefPosition**.
+
+Referenzposition
+================
+| Der Digitaleingang *xRefPos* erlaubt eine Neujustierung der Positionsanzeige *rPos* auf einen vordefinierten Wert **iRefPosition** ( 0% = Ruhelage - 100% = Maximalposition ).
+| Jede ansteigende Flanke am Digitaleingang löst eine Neujustierung aus.
+
+Positionsanzeige *rPos*
+=======================
+| Sie dient zur Anzeige der aktuellen Position des 3-Punkt-Antriebes im Bereich **rMinLimit** bis **rMaxLimit** und wird intern berechnet.
+| Signale am Eingang *xOutOpen* erhöhen den Wert der Positionsanzeige, Signale am Eingang *xOutClose* reduzieren den Wert der Positionsanzeige.
+
+.. topic:: Einschränkungen / Hinweise
+
+    | Der 3-Punkt-Antrieb muß sich linear bewegen, d.h. in gleichen Zeitabschnittten die gleichen Positionsänderungen ausführen.
+    | Eine Positionsänderung über eine eventuell vorhandene Handübersteuerung - Hardware wird nicht registriert.
+    | Zur Vermeidung von Abweichungen zwischen der errechneten und der tatsächlichen Position wird die regelmäßige Auslösung der Neujustierung der Positionsanzeige empfohlen.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+--------------+------+--------------+------------------------------------------------------------------+
+    | Scope  | Name         | Type | Initial      | Comment                                                          |
+    +========+==============+======+==============+==================================================================+
+    | Input  | xOutOpen     | BOOL |              | Eingang - Freigabe - Öffnung                                     |
+    +        +--------------+------+--------------+------------------------------------------------------------------+
+    |        | xOutClose    | BOOL |              | Eingang - Freigabe - Schliessung                                 |
+    +        +--------------+------+--------------+------------------------------------------------------------------+
+    |        | xRefPos      | BOOL |              | Digitalsignal zur Erfassung der Referenzposition ( Endschalter ) |
+    +        +--------------+------+--------------+------------------------------------------------------------------+
+    |        | iRefPosition | INT  | 0            | Referenzposition des Antriebs                                    |
+    +        +--------------+------+--------------+------------------------------------------------------------------+
+    |        | rMinLimit    | REAL | 0.0          | Grenzwert - Minimale Position                                    |
+    +        +--------------+------+--------------+------------------------------------------------------------------+
+    |        | rMaxLimit    | REAL | 100.0        | Grenzwert - Maximale Position                                    |
+    +        +--------------+------+--------------+------------------------------------------------------------------+
+    |        | tDuration    | TIME | TIME#2m0s0ms | Laufzeit des Antriebs                                            |
+    +--------+--------------+------+--------------+------------------------------------------------------------------+
+    | Output | rPos         | REAL |              | Anzeige der aktuellen Position in %                              |
+    +--------+--------------+------+--------------+------------------------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

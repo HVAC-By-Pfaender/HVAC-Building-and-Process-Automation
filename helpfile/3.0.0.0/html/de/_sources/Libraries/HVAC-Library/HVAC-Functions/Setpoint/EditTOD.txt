@@ -1,0 +1,115 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Setpoint.EditTOD`:
+
+
+.. index::
+   single: EditTOD
+
+.. _`EditTOD`:
+
+EditTOD (FB)
+------------
+
+FUNCTION_BLOCK EditTOD
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Eingabe eines Zeitpunkts im Laufe eines Tages im Format TIME_OF_DAY ( tod#15:24:00 )
+     |
+     | Typische Anwendung: Festlegung des Schaltzeitpunkts im Laufe eines Tages
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/EditTOD_FB.png
+
+**************
+Schnittstellen
+**************
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *todOut*
+      - TIME_OF_DAY
+      -
+      -
+      - Ausgabewert im Format TIME_OF_DAY
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **todSetPoint**
+      - TIME_OF_DAY
+      -
+      - TOD#00:00:00
+      - Eingabewert im Format TIME_OF_DAY
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Übergabe eines Eingabewerts im Format TIME_OF_DAY **todSetPoint** und die direkte Übertragung zum
+  Ausgabewert im Format TIME_OF_DAY *todOut*.
+
+.. topic:: Verhalten bei Spannungsausfall
+
+    | Der Eingabewert im Format TIME_OF_DAY **todSetPoint** wird spannungsausfallsicher gespeichert und automatisch wiederhergestellt.
+    |
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------+------+-----------------+-----------------------------------+
+    | Scope  | Name        | Type | Initial         | Comment                           |
+    +========+=============+======+=================+===================================+
+    | Input  | todSetPoint | TOD  | TIME_OF_DAY#0:0 | Eingabewert im Format TIME_OF_DAY |
+    +--------+-------------+------+-----------------+-----------------------------------+
+    | Output | todOut      | TOD  |                 | Ausgabewert im Format TIME_OF_DAY |
+    +--------+-------------+------+-----------------+-----------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

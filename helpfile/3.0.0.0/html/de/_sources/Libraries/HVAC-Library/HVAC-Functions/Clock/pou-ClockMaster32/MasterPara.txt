@@ -1,0 +1,30 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of prop-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Clock.ClockMaster32.MasterPara`:
+
+
+.. _`ClockMaster32.MasterPara`:
+
+ClockMaster32.MasterPara (PROP)
+-------------------------------
+
+PROPERTY MasterPara : POINTER TO stMClockData
+
+
+
+
+.. todo:: Please add documentation for property: ClockMaster32.MasterPara
+
+
+
+
+
+
+
+.. last line of prop-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

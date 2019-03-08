@@ -1,0 +1,30 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of prop-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.ManNum.ModusValue`:
+
+
+.. _`ManNum.ModusValue`:
+
+ManNum.ModusValue (PROP)
+------------------------
+
+PROPERTY ModusValue : |deHandMan|
+
+.. |deHandMan| replace:: :ref:`eHandMan<eHandMan>`
+
+
+.. todo:: Please add documentation for property: ManNum.ModusValue
+
+
+
+
+
+
+
+.. last line of prop-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

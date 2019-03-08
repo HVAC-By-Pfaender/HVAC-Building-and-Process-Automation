@@ -1,0 +1,76 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fun-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-General.MuxString5BinFun`:
+
+
+.. index::
+   single: MuxString5BinFun
+
+.. _`MuxString5BinFun`:
+
+MuxString5BinFun (FUN)
+----------------------
+
+FUNCTION MuxString5BinFun : STRING
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Multiplexer für Strings mit binärer Auswahl ( 5 binäre Eingänge )
+     |
+     | Typische Anwendung: Auswahl von Meldungstexten
+
+*********************
+Funktionsbeschreibung
+*********************
+
+| Diese Funktion liefert den durch die binären Eingänge *xEn1* ( FALSE = nicht aktiv, TRUE = aktiv ) bis *xEn5* ( FALSE = nicht aktiv, TRUE = aktiv ) ausgewählten String ( *sValue1* bis *sValue5* ) im Format STRING zurück. Der Eingang *xEn1* hat stets die höchste Priorität, der Eingang *xEn2* die zweithöchste, usw.. Ist kein Eingang aktiv, so wird ein Leerstring ( '' ) zurück gegeben.
+
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+------------------+--------+--------------------------------------------------------------------+
+    | Scope  | Name             | Type   | Comment                                                            |
+    +========+==================+========+====================================================================+
+    | Return | MuxString5BinFun | STRING |                                                                    |
+    +--------+------------------+--------+--------------------------------------------------------------------+
+    | Input  | xEn1             | BOOL   | Freigabe / Sperrung String 1 ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | xEn2             | BOOL   | Freigabe / Sperrung String 2 ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | xEn3             | BOOL   | Freigabe / Sperrung String 3 ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | xEn4             | BOOL   | Freigabe / Sperrung String 4 ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | xEn5             | BOOL   | Freigabe / Sperrung String 5 ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | sValue1          | STRING | String 1                                                           |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | sValue2          | STRING | String 2                                                           |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | sValue3          | STRING | String 3                                                           |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | sValue4          | STRING | String 4                                                           |
+    +        +------------------+--------+--------------------------------------------------------------------+
+    |        | sValue5          | STRING | String 5                                                           |
+    +--------+------------------+--------+--------------------------------------------------------------------+
+
+
+.. last line of fun-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

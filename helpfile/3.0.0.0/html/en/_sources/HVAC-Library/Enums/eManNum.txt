@@ -1,0 +1,44 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eManNum`:
+
+
+.. Index::
+   single: eManNum
+
+.. _`eManNum`:
+
+eManNum (ENUM)
+--------------
+
+TYPE eManNum :
+
+
+
+.. todo:: Please add documentation for enum: eManNum
+
+
+
+
+
+InOut:
+    +---------------------+---------+----------+
+    | Name                | Initial | Comment  |
+    +=====================+=========+==========+
+    | .. _`eManNum.Auto`: | 0       | Auto     |
+    |                     |         |          |
+    | Auto                |         |          |
+    +---------------------+---------+----------+
+    | .. _`eManNum.Man`:  | 1       | Hand Ein |
+    |                     |         |          |
+    | Man                 |         |          |
+    +---------------------+---------+----------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

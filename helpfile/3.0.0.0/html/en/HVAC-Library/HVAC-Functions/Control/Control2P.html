@@ -1,0 +1,846 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Control2P (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Control2Seq (FB)" href="Control2Seq.html" />
+    <link rel="prev" title="CascadeExtractSupplyAirTemperature (FB)" href="CascadeExtractSupplyAirTemperature.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Control.html">Control</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="CascadeExtractSupplyAirTemp2Setpt.html">CascadeExtractSupplyAirTemp2Setpt (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CascadeExtractSupplyAirTemperature.html">CascadeExtractSupplyAirTemperature (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Control2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Control2Seq.html">Control2Seq (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ControlP.html">ControlP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ControlPI.html">ControlPI (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Out3P.html">Out3P (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Control.html">Control</a> &raquo;</li>
+        
+      <li>Control2P (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Control/Control2P.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-control-control2p"></span><div class="section" id="control2p-fb">
+<span id="control2p"></span><span id="index-0"></span><h1>Control2P (FB)<a class="headerlink" href="#control2p-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK Control2P</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">2-point controller with actual value / set point / enable and configurable switching hysteresis</div>
+<div class="line">The direction of action (inverted/direct) is also adjustable.</div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/Control2P_FB.png" src="../../../_images/Control2P_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatyp</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Initial value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rX</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Analog actual value</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>rW</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Analog setpoint value</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xEn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><p class="first last">Controller disabled</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><p class="first last">Controller enabled</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Output<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatyp</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Initial value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xY</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Digital output signal</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>rDiff</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control deviation (<em>rX</em> - <em>rW</em>)</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>rOnAt</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Absolute switch-on point ( <em>rW</em> + <strong>rSwitchOnPoint</strong> )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>rOffAt</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Absolute switch-off point (<em>rW</em> + <strong>rSwitchOffPoint</strong>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatyp</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Initial value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>rSwitchOffPoint</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.5</td>
+<td><p class="first last">Switch-off point relative to setpoint <em>rW</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>rSwitchOnPoint</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>-0.5</td>
+<td><p class="first last">Switch-on point relative to setpoint <em>rW</em></p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xOffCondition</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Status of output <em>xY</em> at <em>xEn</em> = 0</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xInitValue</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Status of output <em>xY</em> after restart</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>eAction</strong></td>
+<td>eControlMode</td>
+<td>&nbsp;</td>
+<td>eControlMode.Inverted</td>
+<td><p class="first last">Direction of action of the controller (inverted = heating, direct = cooling)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eManModeB</strong></td>
+<td>eManBin</td>
+<td>&nbsp;</td>
+<td>eManBin.Auto</td>
+<td><p class="first last">Operating mode for the digital output signal <em>xY</em></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="freigabe-eingang-xen">
+<h3>Enable input <em>xEn</em><a class="headerlink" href="#freigabe-eingang-xen" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="9%" />
+<col width="9%" />
+<col width="27%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xEn</em></th>
+<th class="head"><p class="first last">Controlling process</p>
+</th>
+<th class="head"><em>xY</em></th>
+<th class="head"><em>rDiff</em></th>
+<th class="head"><em>rOnAt</em></th>
+<th class="head"><em>rOffAt</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TRUE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>X</td>
+<td>x</td>
+<td>x</td>
+<td><p class="first last">Enabling the control</p>
+</td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last"><strong>xOffCondition</strong> ( if <strong>eManModeB</strong> = eManBin.Auto )</p>
+</td>
+<td>X</td>
+<td>x</td>
+<td>x</td>
+<td><p class="first last">Disabling the regulation</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="digital-ausgang-xy">
+<h3>Digital output <em>xY</em><a class="headerlink" href="#digital-ausgang-xy" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The digital output <em>xY</em> is influenced by the enable input <em>xEN</em>, the controlling process, and the manual override module.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-2">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Controlling process</p>
+</th>
+<th class="head"><em>xEn</em></th>
+<th class="head"><strong>eManModeB</strong></th>
+<th class="head"><em>xY</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>TRUE</td>
+<td>eManBin.Auto</td>
+<td>FALSE</td>
+<td><p class="first last">Automatic operation - controlling process = FALSE</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>TRUE</td>
+<td>eManBin.Auto</td>
+<td>TRUE</td>
+<td><p class="first last">Automatic operation - controlling process = TRUE</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>FALSE</td>
+<td>eManBin.Auto</td>
+<td><strong>xOffCondition</strong></td>
+<td><p class="first last">Automatic operation without enabling</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>X</td>
+<td>eManBin.ManOff</td>
+<td>FALSE</td>
+<td><p class="first last">Manual operation - Off</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>X</td>
+<td>eManBin.ManOn</td>
+<td>TRUE</td>
+<td><p class="first last">Manual operation - On</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="regelprozess">
+<h3>Controlling process<a class="headerlink" href="#regelprozess" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The controller can be operated in two different operating modes (<strong>eAction</strong> = eContollerOp.Invertiert or eAction = eControllerOp.</div>
+<div class="line">The following rules apply:</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-3">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>eAction</strong></th>
+<th class="head"><p class="first last">Rule</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eControlMode.Inverted</td>
+<td><strong>rSwitchOnPoint</strong> &lt; <strong>rSwitchOffPoint</strong></td>
+</tr>
+<tr class="row-odd"><td>eControlMode.Direct</td>
+<td><strong>rSwitchOnPoint</strong> &gt; <strong>rSwitchOffPoint</strong></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">If the <strong>rSwitchOffPoint</strong> falls below the <strong>rSwitchOnPoint</strong> in eControlMode.Inverted mode, the <strong>rSwitchOffPoint</strong> is increased by 0.1 compared to the <strong>rSwitchOnPoint</strong>.</div>
+<div class="line">If the <strong>rSwitchOnPoint</strong> falls below the <strong>rSwitchOffPoint</strong> in eControlMode.Inverted mode, the <strong>rSwitchOffPoint</strong> is reduced by 0.1 compared to the <strong>rSwitchOnPoint</strong>.</div>
+<div class="line"><br /></div>
+<div class="line">The output variables <em>rDiff</em> ( <em>rX</em> - <em>rW</em> ), absolute switch-on point <em>rOnAt</em> ( <em>rW</em> + <strong>rSwitchOnPoint</strong> ) and absolute switch-off point <em>rOffAt</em> ( <em>rW</em> + <strong>rSwitchOffPoint</strong> ) are always available regardless of the enable input <em>xEn</em>.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-4">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xEn</em></th>
+<th class="head"><strong>eAction</strong></th>
+<th class="head"><em>rDiff</em></th>
+<th class="head"><em>xY</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TRUE</td>
+<td>eControlMode.Inverted</td>
+<td>&lt; <strong>rSwitchOnPoint</strong></td>
+<td>TRUE</td>
+<td><p class="first last">Automatic operation - inverted On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eControlMode.Inverted</td>
+<td>&gt; <strong>rSwitchOffPoint</strong></td>
+<td>FALSE</td>
+<td><p class="first last">Automatic operation - inverted Off</p>
+</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>eControlMode.Direct</td>
+<td>&gt; <strong>rSwitchOnPoint</strong></td>
+<td>TRUE</td>
+<td><p class="first last">Automatic operation - direct on</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eControlMode.Direct</td>
+<td>&lt; <strong>rSwitchOffPoint</strong></td>
+<td>FALSE</td>
+<td><p class="first last">Automatic operation - direct off</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+<div class="line-block">
+<div class="line">In summary, the control process can be described as follows:</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-5">
+<colgroup>
+<col width="11%" />
+<col width="33%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xEn</em></th>
+<th class="head"><strong>eAction</strong></th>
+<th class="head"><em>rX</em></th>
+<th class="head"><em>xY</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TRUE</td>
+<td>eControlMode.Inverted</td>
+<td>&lt; <strong>rOnAt</strong></td>
+<td>TRUE</td>
+<td><p class="first last">Automatic operation - inverted On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eControlMode.Inverted</td>
+<td>&gt; <strong>rOffAt</strong></td>
+<td>FALSE</td>
+<td><p class="first last">Automatic operation - inverted Off</p>
+</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>eControlMode.Direct</td>
+<td>&gt; <strong>rOnAt</strong></td>
+<td>TRUE</td>
+<td><p class="first last">Automatic operation - direct on</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eControlMode.Direct</td>
+<td>&lt; <strong>rOffAt</strong></td>
+<td>FALSE</td>
+<td><p class="first last">Automatic operation - direct off</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="13%" />
+<col width="14%" />
+<col width="18%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="9">Input</td>
+<td>rX</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Analog actual value</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rW</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Analog setpoint value</p>
+</td>
+</tr>
+<tr class="row-even"><td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable the Controller</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rSwitchOffPoint</td>
+<td>REAL</td>
+<td>0.5</td>
+<td><p class="first last">Switch-off point relative to setpoint <em>rW</em></p>
+</td>
+</tr>
+<tr class="row-even"><td>rSwitchOnPoint</td>
+<td>REAL</td>
+<td>-0.5</td>
+<td><p class="first last">Switch-on point relative to setpoint <em>rW</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>xOffCondition</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Status of output <em>xY</em> at <em>xEn</em> = 0</p>
+</td>
+</tr>
+<tr class="row-even"><td>xInitValue</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Status of output <em>xY</em> after restart</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eAction</td>
+<td><a class="reference internal" href="../../Enums/eControlMode.html#econtrolmode"><span class="std std-ref">eControlMode</span></a></td>
+<td>eControlMode.Inverted</td>
+<td><p class="first last">Direction of action of the controller (inverted = heating, direct = cooling)</p>
+</td>
+</tr>
+<tr class="row-even"><td>eManModeB</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>eManBin.Auto</td>
+<td><p class="first last">Operating mode for the digital output signal <em>xY</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="4">Output</td>
+<td>xY</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Binary control signal for control</p>
+</td>
+</tr>
+<tr class="row-even"><td>rDiff</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control deviation_Xw ( <em>rX</em> - <em>rW</em> )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rOnAt</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Absolute switch-on point ( <em>rW</em> + <strong>rSwitchOnPoint</strong> )</p>
+</td>
+</tr>
+<tr class="row-even"><td>rOffAt</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Absolute switch-off point (<em>rW</em> + <strong>rSwitchOffPoint</strong>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Control2Seq.html" class="btn btn-neutral float-right" title="Control2Seq (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CascadeExtractSupplyAirTemperature.html" class="btn btn-neutral float-left" title="CascadeExtractSupplyAirTemperature (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

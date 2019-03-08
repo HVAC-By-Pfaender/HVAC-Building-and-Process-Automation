@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AlarmCounter (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../../search.html" />
+    <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>AlarmCounter (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/Libraries/HVAC-Library/HVAC-Functions/Alarming/AlarmCounter.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-alarming-alarmcounter"></span><div class="section" id="alarmcounter-fb">
+<span id="alarmcounter"></span><span id="index-0"></span><h1>AlarmCounter (FB)<a class="headerlink" href="#alarmcounter-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK AlarmCounter</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Auslesen der aktiven Alarme aus einer vorgegebenen Alarmgruppe oder einer Alarmklasse.</div>
+<div class="line"><br /></div>
+<div class="line">Typische Anwendung: Anzeige der Anzahl von aktiven Alarme.</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../../_images/AlarmCounter_FB.png" src="../../../../_images/AlarmCounter_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>sFilterByAlarmGroup</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzahl aktiver Alarme nur nach angegebener Alarm-Gruppe filtern. (Leer = Alle Gruppen)</td>
+</tr>
+<tr class="row-odd"><td><em>sFilterByAlarmClass</em></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzahl aktiver Alarme nur nach angegebener Alarm-Klasse filtern. (Leer = Alle Klassen)</td>
+</tr>
+<tr class="row-even"><td><em>xRetryRegistration</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Registrierung des Alarm-Manager-Clients erneut versuchen</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>uiTotalActiveAlarms</em></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzahl aller aktiven Alarme ohne Filterkriterien</td>
+</tr>
+<tr class="row-odd"><td><em>uiActiveAlarms</em></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzahl aktiver Alarme im Zustand &#8220;Alarmbedingung ist wahr&#8221;</td>
+</tr>
+<tr class="row-even"><td><em>uiActiveACK</em></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzahl aktiver Alarme im Zustand &#8220;Warten auf quittieren&#8221;</td>
+</tr>
+<tr class="row-odd"><td><em>uiWaitingForConfirmation</em></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Aktueller Status</td>
+</tr>
+<tr class="row-even"><td><em>eAlarmCounterState</em></td>
+<td>eAlmAlarmCounterStates</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzahl aktiver Alarme im Zustand &#8220;Warten auf Bestätigung&#8221;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>usiMaxFailedRegistrations</strong></td>
+<td>USINT</td>
+<td>&nbsp;</td>
+<td>5</td>
+<td>Maximale Anzahl der Fehlversuche der Client-Registrierung für den Alarmzähler</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein dient zum Auslesen der Anzahl aktiver Alarme in unterschiedlichen Zuständen.</div>
+<div class="line">Der Alarmzähler kann gefiltert werden nach einer Alarmgruppe oder einer Alarmklasse, so wie in gemeinsamer Kombination dieser beiden Optionen.</div>
+<div class="line">Wird kein Filter der verfügbaren Filteroptionen angegeben, werden alle Alarme der jeweiligen Option beim Zähler beachtet.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Beispielkonfiguration 1:</div>
+<div class="line">- Die beiden Eingänge <em>sFilterByAlarmGroup</em> und <em>sFilterByAlarmClass</em> werden nicht angegeben.</div>
+<div class="line"><br /></div>
+<div class="line">Auswirkung der Beispielkonfiguration 1:</div>
+<div class="line">- Alle Alarme werden unabhängig von der Alarmklasse und Alarmgruppe beachtet.</div>
+<div class="line"><br /></div>
+<div class="line">Beispielkonfiguration 2:</div>
+<div class="line">- Der Eingang <em>sFilterAlarmClass</em> wird mit dem STRING &#8220;Alarm&#8221; belegt und der Eingang <em>sFilterByAlarmGroup</em> bleibt unbelegt.</div>
+<div class="line"><br /></div>
+<div class="line">Auswirkung der Beispielkonfiguration 2:</div>
+<div class="line">- Alle Alarme mit der Alarmklasse &#8220;Alarm&#8221; werden von allen Alarmgruppen angezeigt.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="20%" />
+<col width="21%" />
+<col width="7%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="4">Input</td>
+<td>sFilterByAlarmGroup</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Anzahl aktiver Alarme nur nach angegebener Alarm Gruppe
+filtern. (Leer = Alle Gruppen)</td>
+</tr>
+<tr class="row-odd"><td>sFilterByAlarmClass</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Anzahl aktiver Alarme nur nach angegebener Alarm Klasse
+filtern. (Leer = Alle Klassen)</td>
+</tr>
+<tr class="row-even"><td>xRetryRegistration</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Registrierung des Alarm Manager Clients erneut versuchen</td>
+</tr>
+<tr class="row-odd"><td>usiMaxFailedRegistrations</td>
+<td>USINT</td>
+<td>5</td>
+<td>Maximale Fehlvorgänge der Client Registrierung für den
+Alarmzähler</td>
+</tr>
+<tr class="row-even"><td rowspan="5">Output</td>
+<td>uiTotalActiveAlarms</td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>Alle aktiven Alarme ohne Filterkriterien</td>
+</tr>
+<tr class="row-odd"><td>uiActiveAlarms</td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>Anzahl aktiver Alarme im Zustand &#8220;Alarmbedingung ist wahr&#8221;</td>
+</tr>
+<tr class="row-even"><td>uiActiveACK</td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>Anzahl aktiver Alarme im Zustand &#8220;Warten auf quittieren&#8221;</td>
+</tr>
+<tr class="row-odd"><td>uiWaitingForConfirmation</td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>Anzahl aktiver Alarme im Zustand &#8220;Warten auf Bestätigung&#8221;</td>
+</tr>
+<tr class="row-even"><td>eAlarmCounterState</td>
+<td><a class="reference internal" href="../../Enums/eAlmAlarmCounterStates.html#ealmalarmcounterstates"><span class="std std-ref">eAlmAlarmCounterStates</span></a></td>
+<td>&nbsp;</td>
+<td>Aktueller Status</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

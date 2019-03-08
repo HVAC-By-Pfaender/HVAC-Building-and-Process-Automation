@@ -1,0 +1,52 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eActiveClocksVisu`:
+
+
+.. Index::
+   single: eActiveClocksVisu
+
+.. _`eActiveClocksVisu`:
+
+eActiveClocksVisu (ENUM)
+------------------------
+
+TYPE eActiveClocksVisu :
+
+
+
+.. todo:: Please add documentation for enum: eActiveClocksVisu
+
+
+
+
+
+InOut:
+    +-------------------------------------------+---------+-----------------------------------------------------+
+    | Name                                      | Initial | Comment                                             |
+    +===========================================+=========+=====================================================+
+    | .. _`eActiveClocksVisu.Activate8Clocks`:  | 1       | Activates 8 clocks at the FB ClockMaster32 for the  |
+    |                                           |         | Visualization                                       |
+    | Activate8Clocks                           |         |                                                     |
+    +-------------------------------------------+---------+-----------------------------------------------------+
+    | .. _`eActiveClocksVisu.Activate16Clocks`: | 2       | Activates 16 clocks at the FB ClockMaster32 for the |
+    |                                           |         | Visualization                                       |
+    | Activate16Clocks                          |         |                                                     |
+    +-------------------------------------------+---------+-----------------------------------------------------+
+    | .. _`eActiveClocksVisu.Activate24Clocks`: | 3       | Activates 24 clocks at the FB ClockMaster32 for the |
+    |                                           |         | Visualization                                       |
+    | Activate24Clocks                          |         |                                                     |
+    +-------------------------------------------+---------+-----------------------------------------------------+
+    | .. _`eActiveClocksVisu.Activate32Clocks`: | 4       | Activates 32 clocks at the FB ClockMaster32 for the |
+    |                                           |         | Visualization                                       |
+    | Activate32Clocks                          |         |                                                     |
+    +-------------------------------------------+---------+-----------------------------------------------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

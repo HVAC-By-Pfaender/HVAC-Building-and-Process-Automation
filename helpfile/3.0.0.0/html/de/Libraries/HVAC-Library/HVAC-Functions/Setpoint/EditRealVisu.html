@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>EditRealVisu (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../../search.html" />
+    <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>EditRealVisu (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/Libraries/HVAC-Library/HVAC-Functions/Setpoint/EditRealVisu.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-setpoint-editrealvisu"></span><div class="section" id="editrealvisu-fb">
+<span id="editrealvisu"></span><span id="index-0"></span><h1>EditRealVisu (FB)<a class="headerlink" href="#editrealvisu-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK EditRealVisu</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Eingabe eines numerischen Wertes mit Eingabegrenzen ( Visualisierung )</div>
+<div class="line"><br /></div>
+<div class="line">Typische Anwendung: Eingabe einer Solltemperatur in der Visualisierung</div>
+<div class="line"><br /></div>
+<div class="line">Besonderheit: Min/Max Eingaben, Einheit, Nachkommastellen und weitere Paramter werden direkt im CFC Editor parametriert und nicht im Visualisierungsobjekt.</div>
+<div class="line">Dies ermöglicht, Änderungen und Grenzwerte online in der Appliaktion ohne Download zu ändern.
+|</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../../_images/EditRealVisu_FB.png" src="../../../../_images/EditRealVisu_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rOut</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Numerischer Ausgabewert</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>xDisableSeparator</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td>TRUE = Deaktiviert das tausender Trennzeichen bei der Anzeige in der Visualisierung</td>
+</tr>
+<tr class="row-odd"><td><strong>bDecimals</strong></td>
+<td>BYTE</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>Anzahl der Nachkommastellen</td>
+</tr>
+<tr class="row-even"><td><strong>sDialogTitle</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Dialogtitel des Eingabewerts</td>
+</tr>
+<tr class="row-odd"><td><strong>sUnit</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Einheit des Eingabewerts</td>
+</tr>
+<tr class="row-even"><td><strong>rMaxInputVisu</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>100.0</td>
+<td>Obere Eingabegrenze des Eingabewerts</td>
+</tr>
+<tr class="row-odd"><td><strong>rMinInputVisu</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td>Untere Eingabegrenze des Eingabewerts</td>
+</tr>
+<tr class="row-even"><td><strong>rSetPoint</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td>Numerischer Eingabewert</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein dient zur Übergabe eines numerischen Eingabewerts <strong>rSetPoint</strong> und die direkte Übertragung zum
+numerischen Ausgabewert <em>rOut</em>.</div>
+<div class="line">Zusätzlich können hier weitere Eigenschaften des Eingabewerts definiert werden, die jedoch nicht im Funktionsbaustein,
+sondern zum Beispiel in einem geeigneten Visualisierungselement Verwendung finden.</div>
+<div class="line"><br /></div>
+<div class="line">So können die Anzahl der Nachkommastellen <strong>bDecimals</strong>, der Titel des Eingabewerts <strong>sDialogTitle</strong>, die Einheit des Eingabewerts <strong>sUnit</strong>
+sowie die Eingabegrenzwerte <strong>rMinInputVisu</strong> und <strong>rMaxInputVisu</strong> an das Visualisierungselement übergeben werden und dort bei der
+Eingabe Berücksichtigung finden.</div>
+<div class="line">Mit dem Paramter <strong>xDisableSeparator</strong> kann das Tausender-Trennzeichen in der Visualisierung deaktiviert werden.</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Verhalten bei Spannungsausfall</p>
+<div class="line-block">
+<div class="line">Alle Sollwerte / Parameter werden spannungsausfallsicher gespeichert und automatisch wiederhergestellt.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Passendes Visualisierungselement aus der HVACV Visu Library: <strong>EditRealVisu</strong></p>
+<div class="section" id="id3">
+<h3>Darstellung<a class="headerlink" href="#id3" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><img alt="../../../../_images/EditReal_Visu.PNG" src="../../../../_images/EditReal_Visu.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen-visu-element">
+<h3>Schnittstellen Visu-Element<a class="headerlink" href="#schnittstellen-visu-element" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Typ</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>rValue</strong></td>
+<td>FB_EditRealVisu</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td>FB Instanz HVAC.EditRealVisu hier eintragen z.B. PRG.EditRealVisu</td>
+</tr>
+<tr class="row-odd"><td><strong>iFieldSizeL</strong></td>
+<td>INT</td>
+<td>VAR_INPUT</td>
+<td>0</td>
+<td>Feld vergößert sich um Anzahl der eingegebenen Pixel nach links. Wird benötigt um lange Zahlen oder Einheiten anzuzeigen.</td>
+</tr>
+<tr class="row-even"><td><strong>iFieldSizeR</strong></td>
+<td>INT</td>
+<td>VAR_INPUT</td>
+<td>0</td>
+<td>Feld vergößert sich um Anzahl der eingegebenen Pixel nach rechts. Wird benötigt um lange Zahlen oder Einheiten anzuzeigen.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Folgende Eingabens des FB HVAC.EditRealVisu werden automatisch übenrommen und können zur Laufzeit geändert werden: rMinInputVisu, rMaxInputVisu, sUnit, sDialogTitle, bDeicmals, xDisableSeperator
+|
+| Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.
+|
+|</p>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="8%" />
+<col width="19%" />
+<col width="8%" />
+<col width="9%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="7">Input</td>
+<td>xDisableSeparator</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE = Deaktiviert das tausender Trennzeichen bei der
+Anzeige in der Visualisierung</td>
+</tr>
+<tr class="row-odd"><td>bDecimals</td>
+<td>BYTE</td>
+<td>1</td>
+<td>Anzahl der Nachkommastellen</td>
+</tr>
+<tr class="row-even"><td>sDialogTitle</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Dialogtitel des Eingabewerts</td>
+</tr>
+<tr class="row-odd"><td>sUnit</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Einheit des Eingabewerts</td>
+</tr>
+<tr class="row-even"><td>rMaxInputVisu</td>
+<td>REAL</td>
+<td>100</td>
+<td>Obere Eingabegrenze des Eingabewerts</td>
+</tr>
+<tr class="row-odd"><td>rMinInputVisu</td>
+<td>REAL</td>
+<td>0</td>
+<td>Untere Eingabegrenze des Eingabewerts</td>
+</tr>
+<tr class="row-even"><td>rSetPoint</td>
+<td>REAL</td>
+<td>0</td>
+<td>Numerischer Eingabewert</td>
+</tr>
+<tr class="row-odd"><td>Output</td>
+<td>rOut</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Numerischer Ausgabewert</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.OptStartHeat.mCalcAbsMin`:
+
+
+.. _`OptStartHeat.mCalcAbsMin`:
+
+OptStartHeat.mCalcAbsMin (METH)
+-------------------------------
+
+METHOD mCalcAbsMin : BOOL
+
+
+
+
+.. todo:: Please add documentation for method: OptStartHeat.mCalcAbsMin
+
+
+
+
+
+InOut:
+    +--------+-------------+------+
+    | Scope  | Name        | Type |
+    +========+=============+======+
+    | Return | mCalcAbsMin | BOOL |
+    +--------+-------------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

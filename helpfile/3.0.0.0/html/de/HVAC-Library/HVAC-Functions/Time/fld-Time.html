@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Time &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../search.html" />
+    <link rel="next" title="MPulse (FB)" href="MPulse.html" />
+    <link rel="prev" title="SystemInfo.mGetUpTime (METH)" href="../System-Info/pou-SystemInfo/mGetUpTime.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Time</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="MPulse.html">MPulse (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PulseR.html">PulseR (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PulseShift.html">PulseShift (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="StartDelay.html">StartDelay (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="StopWatch.html">StopWatch (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="StopWatchExt.html">StopWatchExt (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="XPulse.html">XPulse (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="XPulseR.html">XPulseR (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+      <li>Time</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Time/fld-Time.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="time">
+<span id="id1"></span><span id="fld-hvac-library-fld-hvac-functions-fld-time"></span><h1>Time<a class="headerlink" href="#time" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="MPulse.html">MPulse (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MPulse.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MPulse.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MPulse.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MPulse.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MPulse.html#ausgange">Ausgänge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MPulse.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MPulse.html#allgemeines">Allgemeines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MPulse.html#zeitausgang-tet">Zeitausgang <em>tET</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MPulse.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MPulse.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-MPulse/mGetTime.html">MPulse.mGetTime (METH)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pou-MPulse/mGetTime.html#kurzbeschreibung-methode-mgettime">Kurzbeschreibung Methode (mGetTime)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PulseR.html">PulseR (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PulseR.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PulseR.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PulseR.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PulseR.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PulseR.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PulseR.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PulseR.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PulseR.html#allgemeines">Allgemeines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PulseR.html#zeitausgang-tet">Zeitausgang <em>tET</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PulseR.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PulseR.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-PulseR/mGetTime.html">PulseR.mGetTime (METH)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pou-PulseR/mGetTime.html#kurzbeschreibung-methode-mgettime">Kurzbeschreibung Methode (mGetTime)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PulseShift.html">PulseShift (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PulseShift.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PulseShift.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PulseShift.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PulseShift.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PulseShift.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PulseShift.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PulseShift.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PulseShift.html#allgemeines">Allgemeines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PulseShift.html#zeitausgang-tet">Zeitausgang <em>tET</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PulseShift.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PulseShift.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="StartDelay.html">StartDelay (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="StartDelay.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StartDelay.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StartDelay.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="StartDelay.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StartDelay.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="StartDelay.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="StartDelay.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="StartDelay.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StartDelay.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="StopWatch.html">StopWatch (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="StopWatch.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StopWatch.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StopWatch.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="StopWatch.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StopWatch.html#ausgange">Ausgänge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="StopWatch.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="StopWatch.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="StopWatch.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StopWatch.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="StopWatchExt.html">StopWatchExt (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="StopWatchExt.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StopWatchExt.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StopWatchExt.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="StopWatchExt.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StopWatchExt.html#ausgange">Ausgänge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="StopWatchExt.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="StopWatchExt.html#allgemeines">Allgemeines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StopWatchExt.html#fehleranzeige-xtimeerror">Fehleranzeige <em>xTimeError</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="StopWatchExt.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StopWatchExt.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="XPulse.html">XPulse (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="XPulse.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XPulse.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XPulse.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="XPulse.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XPulse.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XPulse.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="XPulse.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="XPulse.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="XPulse.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XPulse.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-XPulse/mGetTime.html">XPulse.mGetTime (METH)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pou-XPulse/mGetTime.html#kurzbeschreibung-methode-mgettime">Kurzbeschreibung Methode (mGetTime)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="XPulseR.html">XPulseR (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="XPulseR.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XPulseR.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XPulseR.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="XPulseR.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XPulseR.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XPulseR.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="XPulseR.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="XPulseR.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="XPulseR.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XPulseR.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-XPulseR/mGetTime.html">XPulseR.mGetTime (METH)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pou-XPulseR/mGetTime.html#kurzbeschreibung-methode-mgettime">Kurzbeschreibung Methode (mGetTime)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="MPulse.html" class="btn btn-neutral float-right" title="MPulse (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../System-Info/pou-SystemInfo/mGetUpTime.html" class="btn btn-neutral float-left" title="SystemInfo.mGetUpTime (METH)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

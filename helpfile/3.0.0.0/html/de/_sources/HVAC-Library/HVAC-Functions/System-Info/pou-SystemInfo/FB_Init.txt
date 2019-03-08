@@ -1,0 +1,40 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-System Info.SystemInfo.FB_Init`:
+
+
+.. _`SystemInfo.FB_Init`:
+
+SystemInfo.FB_Init (METH)
+-------------------------
+
+METHOD FB_Init : BOOL
+
+
+
+
+.. todo:: Please add documentation for method: SystemInfo.FB_Init
+
+
+
+
+
+InOut:
+    +--------+--------------+------+
+    | Scope  | Name         | Type |
+    +========+==============+======+
+    | Return | FB_Init      | BOOL |
+    +--------+--------------+------+
+    | Input  | bInitRetains | BOOL |
+    +        +--------------+------+
+    |        | bInCopyCode  | BOOL |
+    +--------+--------------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

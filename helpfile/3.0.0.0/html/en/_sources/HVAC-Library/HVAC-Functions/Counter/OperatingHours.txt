@@ -1,0 +1,161 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Counter.OperatingHours`:
+
+
+.. index::
+   single: OperatingHours
+
+.. _`OperatingHours`:
+
+OperatingHours (FB)
+-------------------
+
+FUNCTION_BLOCK OperatingHours
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Zähler für die Betriebsstunden und Einschaltvorgänge
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/OperatingHours_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xFb*
+      - BOOL
+      -
+      -
+      - Zähler - Eingang
+    * - *xReset*
+      - BOOL
+      -
+      - FALSE
+      - Freigabe - Eingang - Rücksetzung
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *udiOperatingHours*
+      - UDINT
+      -
+      -
+      - Zähler - Ausgang - Betriebsstunden
+    * - *udiCountFb*
+      - UDINT
+      -
+      -
+      - Zähler - Ausgang - Einschaltungen
+    * - *dtLastFb*
+      - DATE_AND_TIME
+      -
+      -
+      - Datum/-zeitpunkt des Ende des letzten Zählprozesses
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Erfassung der Betriebsstunden und Einschaltvorgänge am Zähler-Eingang *xFb*.
+| Die Ausgänge *udiOperatingHours* und *udiCountFb* werden auf 0 zurück gesetzt, sobald am Eingang *xReset* eine ansteigende Flanke erkannt wird.
+| Der Zählprozess ist aktiv, solange am Zähler-Eingang *xFb* der Zustand TRUE anliegt.
+| Der Ausgang *udiOperatingHours* zeigt die kummulierte Zeitdauer der Zählprozesse seit dem letzten Rücksetzvorgang in Stunden an.
+| Der Ausgang *udiCountFb* wird mit jeder ansteigenden Flanke am Eingang *xFb* inkrementiert.
+|
+| Am Ausgang *dtLastFb* steht während des Zählprozesses das aktuelle Datum / die aktuelle Uhrzeit zur Verfügung.
+| Am Ausgang *dtLastFb* steht ausserhalb des Zählprozesses das Datum / die Uhrzeit am Ende des letzten Zählprozesses zur Verfügung.
+| Am Ausgang *dtLastFb* wird vor dem ersten Zählprozess der Initialisierungswert DT#1970-1-1-0.0.0 ausgegeben.
+
+.. topic:: Wertebereiche der Ausgänge *udiOperatingHours* und *udiCountFb*
+
+    | Gültige Zählerstände befinden sich innerhalb der Grenzen 0 und 4294967295.
+    | Die Inkrementierung des Zählerstandes 4294967295 setzt den Zählerstand auf 0 zurück.
+    | Anschliessend wird der Zählerstand wieder fortlaufend inkrementiert.
+
+
+.. topic:: Voraussetzung für den Einsatz des Funktionsbausteins OperatingHours
+
+    | Zur korrekten Funktion ist der Einsatz des Funktionsbausteins TimeRead mit *xEn* = TRUE erforderlich.
+
+
+.. topic:: Schreibzugriff auf die Zählerstände
+
+    | Über den Pfad 'Instanzname._OperatingHours.udiOperatingHours' bzw. 'Instanzname._OperatingHours.udiCountFb' ist ein
+         Schreibzugriff auf die beide Zählerstände möglich.
+
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------------+-------+---------+-----------------------------------------------------+
+    | Scope  | Name              | Type  | Initial | Comment                                             |
+    +========+===================+=======+=========+=====================================================+
+    | Input  | xFb               | BOOL  |         | Zähler - Eingang                                    |
+    +        +-------------------+-------+---------+-----------------------------------------------------+
+    |        | xReset            | BOOL  | FALSE   | Freigabe - Eingang - Rücksetzung                    |
+    +--------+-------------------+-------+---------+-----------------------------------------------------+
+    | Output | udiOperatingHours | UDINT |         | Zähler - Ausgang - Betriebsstunden                  |
+    +        +-------------------+-------+---------+-----------------------------------------------------+
+    |        | udiCountFb        | UDINT |         | Zähler - Ausgang - Einschaltungen                   |
+    +        +-------------------+-------+---------+-----------------------------------------------------+
+    |        | dtLastFb          | DT    |         | Datum/-zeitpunkt des Ende des letzten Zählprozesses |
+    +--------+-------------------+-------+---------+-----------------------------------------------------+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Counter/pou-OperatingHours/mReset
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

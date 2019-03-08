@@ -1,0 +1,30 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of prop-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Clock.ClockSlave32.SlvPara`:
+
+
+.. _`ClockSlave32.SlvPara`:
+
+ClockSlave32.SlvPara (PROP)
+---------------------------
+
+PROPERTY SlvPara : POINTER TO stSlvClockData
+
+
+
+
+.. todo:: Please add documentation for property: ClockSlave32.SlvPara
+
+
+
+
+
+
+
+.. last line of prop-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

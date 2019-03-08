@@ -1,0 +1,226 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.AbsA`:
+
+
+.. index::
+   single: AbsA
+
+.. _`AbsA`:
+
+AbsA (FB)
+---------
+
+FUNCTION_BLOCK AbsA
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Antiblockierschutz für ein analoges Signal
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/AbsA_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rPosFb*
+      - REAL
+      -
+      -
+      - Positionsrückmeldung
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rOut*
+      - REAL
+      -
+      -
+      - Analog - Ausgang
+    * - *xAbsOn*
+      - BOOL
+      -
+      -
+      - Anzeige - Blockierschutzprozess
+    * - *dtAbsLastOn*
+      - DATE_AND_TIME
+      -
+      -
+      - Startdatum/-zeitpunkt der letzten Blockierschutzprozesses
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **rMinChange**
+      - REAL
+      -
+      - 10.0
+      - Minimale Positionsänderung
+    * - **tTime**
+      - TIME
+      -
+      - 180s
+      - Zeitdauer des Blockierschutzprozesses
+    * - **eDay**
+      - eDoW
+      -
+      - eDow.Montag
+      - Wochentag des Blockierschutzprozesses
+    * - **todStartTime**
+      - TOD
+      -
+      - 08:00:00 Uhr
+      - Startzeitpunkt des Blockierschutzprozesses
+    * - **rMinLimit**
+      - REAL
+      -
+      - 0
+      - Untere Grenze für den Analog - Ausgang *rOut*
+    * - **rMaxLimit**
+      - REAL
+      -
+      - 100
+      - Obere Grenze für den Analog - Ausgang *rOut*
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Überwachung der Positionsrückmeldung *rPosFb* auf Aktivität. Der Prüfzeitraum umfasst dabei jeweils 168 Stunden ( = 1 Woche ).
+| Die Positionsrückmeldung *rPosFb* ist aktiv, falls sich ihr Wert im Prüfzeitraum um einen Betrag größer als die minimale Positionsänderung **rMinChange** geändert hat.
+| Der Blockierschutzprozess wird damit unterbunden ( = Blockierschutzprozess nicht aktiv ), die Prüfzeit startet startet erneut.
+|
+| Wurde während des Prüfzeitraums keine Aktivität erfasst, so wird der Blockierschutzprozess mit der Zeitdauer **tTime** am Wochentag **eDay**
+  zur Uhrzeit **todStartTime** ausgelöst. ( = Blockierschutzprozess aktiv ).
+| Gleichzeitig startet die Prüfzeitdauer erneut.
+|
+| Während des Blockierschutzprozesses werden am Analog - Ausgang *rOut* je nach aktuellem Wert an der Positionsrückmeldung *rPosFb* zum Beginn des Blockierschutzprozesses unterschiedliche Signale ausgegeben.
+|
+| Bedingung 1: *rPosFb* > 51% der oberen Grenze für den Analog - Ausgang *rOut*:
+|
+|                       *rOut* = **rMinLimit**
+|
+| Bedingung 2: *rPosFb* <= 51% der oberen Grenze für den Analog - Ausgang *rOut*:
+|
+|                       *rOut* = **rMaxLimit**
+|
+| Bei nicht aktivem Blockierschutzprozesses wird am Analog - Ausgang *rOut* der Wert 0.0 ausgegeben.
+|
+| Die erstmalige Auslösung der Blockierschutzprozesses kann je nach den relevanten Einstellungen ( Wochentag **eDay** und **todStartTime** )
+  verzögert sein ( Beispiel: Prüfzeit am Dienstagmorgen beendet, Auslösung des Blockierschutzprozesses erst am kommenden Montag ).
+|
+| Am Ausgang *dtAbsLastOn* steht das Startdatum und der Startzeitpunkt der letzten Blockierschutzprozesses zur Verfügung.
+|
+
+.. topic:: Voraussetzung für den Einsatz des Funktionsbausteins AbsA
+
+    | Zur korrekten Funktion ist der Einsatz des Funktionsbausteins TimeRead mit *xEn* = TRUE erforderlich.
+
+Anzeige - Blockierschutzprozess *xAbsOn*
+========================================
+| Dieser Ausgang dient zur Anzeige eines aktiven Blockierschutzprozesses ( *xAbsOn* = TRUE ).
+
+Sollwert / Parameter **eDay**
+=============================
+| Die Blockierschutzfunktion kann durch die Einstellung **eDay** = eDow.Inactive generell gesperrt werden.
+
+Sollwert / Parameter **tTime**
+==============================
+| Die Blockierschutzfunktion kann durch die Einstellung **tTime** = 0s generell gesperrt werden.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+--------------+----------+-----------------+-----------------------------------------------------------+
+    | Scope  | Name         | Type     | Initial         | Comment                                                   |
+    +========+==============+==========+=================+===========================================================+
+    | Input  | rPosFb       | REAL     |                 | Positionsrückmeldung                                      |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | rMinChange   | REAL     | 10              | Minimale Positionsänderung                                |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | tTime        | TIME     | TIME#3m0s0ms    | Zeitdauer des Blockierschutzprozesses                     |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | eDay         | |ioeDoW| | eDow.Monday     | Wochentag des Blockierschutzprozesses                     |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | todStartTime | TOD      | TIME_OF_DAY#8:0 | Startzeitpunkt des Blockierschutzprozesses                |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | rMinLimit    | REAL     | 0               | Untere Grenze für den Analog - Ausgang *rOut*             |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | rMaxLimit    | REAL     | 100             | Obere Grenze für den Analog - Ausgang *rOut*              |
+    +--------+--------------+----------+-----------------+-----------------------------------------------------------+
+    | Output | rOut         | REAL     |                 | Analog - Ausgang                                          |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | xAbsOn       | BOOL     |                 | Anzeige - Blockierschutzprozess                           |
+    +        +--------------+----------+-----------------+-----------------------------------------------------------+
+    |        | dtAbsLastOn  | DT       |                 | Startdatum/-zeitpunkt der letzten Blockierschutzprozesses |
+    +--------+--------------+----------+-----------------+-----------------------------------------------------------+
+
+.. |ioeDoW| replace:: :ref:`eDoW<eDoW>`
+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Numeric/pou-AbsA/mEx
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

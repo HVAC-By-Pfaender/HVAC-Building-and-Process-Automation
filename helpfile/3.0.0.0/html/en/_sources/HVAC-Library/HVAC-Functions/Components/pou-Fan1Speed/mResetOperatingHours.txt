@@ -1,0 +1,36 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.Fan1Speed.mResetOperatingHours`:
+
+
+.. _`Fan1Speed.mResetOperatingHours`:
+
+Fan1Speed.mResetOperatingHours (METH)
+-------------------------------------
+
+METHOD mResetOperatingHours : BOOL
+
+
+
+
+Doku hier
+
+
+
+
+
+InOut:
+    +--------+----------------------+------+
+    | Scope  | Name                 | Type |
+    +========+======================+======+
+    | Return | mResetOperatingHours | BOOL |
+    +--------+----------------------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

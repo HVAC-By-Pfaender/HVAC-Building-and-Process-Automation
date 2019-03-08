@@ -1,0 +1,156 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Clock.ClockMaster32`:
+
+
+.. index::
+   single: ClockMaster32
+
+.. _`ClockMaster32`:
+
+ClockMaster32 (FB)
+------------------
+
+FUNCTION_BLOCK ClockMaster32 EXTENDS LAT.Element IMPLEMENTS IUhrProtocol, |dIUhr|
+
+.. |dIUhr| replace:: :ref:`IUhr<IUhr>`
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Master - Funktionsbaustein für ein Uhrensystem mit 32 Wochenuhren, 30 Feiertagen, 10 Ferienperioden und 5 Sonderschaltzeiten
+     | Die Wochenuhren enthalten jeweils eine Ein- und Ausschaltzeit pro Wochentag ( 448 Schaltpunkte )
+     | Ferner sind 30 Feiertage ( länderspezifisch ), 10 Ferienperioden ( Anfangs- und Enddatum ) sowie 5 Sonderschaltzeiten ( Ein- und Ausschaltzeit sowie Datum ) definierbar.
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/ClockMaster32_FB.png
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient als Master - Funktionsbaustein für ein Uhrensystem mit 32 Wochenuhren, 30 Feiertagen, 10 Ferienperioden und 5 Sonderschaltzeiten.
+| Er erlaubt die Festlegung der Zeit- bzw. Datumsangaben durch den Anwender ( Visualisierung ) und stellt unter Berücksichtigung der aktuellen Uhrzeit und des aktuellen Datums
+  die daraus resultierenden Zustände ( Wochenuhrkanal 1 - 32, Feiertagekanal, Ferienkanal sowie Sonderschaltzeitenkanal ) den maximal 63 Slave - Funktionsbausteinen ClockSlave32 zur Verfügung.
+| In den Slave - Funktionsbausteinen erfolgt nun die Zuordnung zu den Kanälen ( Wochenuhrkanal 1 - 32, Feiertagekanal, Ferienkanal sowie Sonderschaltzeitenkanal ) durch
+  binäre Variablen ( FALSE = nicht zugeordnet, TRUE = zugeordnet ).
+| Die Verbindung zwischen dem Master - Funktionsbaustein und den Slave - Funktionsbausteinen wird dabei über den Ausgang *itfToClockSlave32* bzw. die Eingänge *itfFromClockMaster32 * hergestellt.
+| Die Eingänge *xAllOn* bzw. *xAllOff* erlauben ( Eingang = TRUE ) die zentrale Aktivierung / Deaktivierung aller Ausgänge *xClockActive* aller angeschlossenen Slave - Funktionsbausteine.
+| Der Eingang *xAllOff* ist gegenüber dem Eingang *xAllOn* höher priorisiert.
+|
+| Zur Festlegung der Zeit- bzw. Datumsangaben werden die folgende Funktionsbausteine eingesetzt:
+
+:ref:`Clock7d1Ch <Clock7d1Ch>`
+
+:ref:`PublicHoliday <PublicHoliday>`
+
+:ref:`Holiday <Holiday>`
+
+:ref:`SwitchTimeS <SwitchTimeS>`
+
+Beispiel Darstellung in Kombination mit Slave Uhren:
+
+  .. image:: /../DocumentationPictures_Visu/ClockMaster32_System.PNG
+
+**************
+Visualisierung
+**************
+Passendes Visualisierungselement aus der HVACV Visu Library: **ClockAssignmentOverview_Start**
+
+Darstellung
+===========
+  .. image:: /../DocumentationPictures_Visu/ClockAssignmentOverview_Start.PNG
+
+ Die Slave Uhren werden automatisch nach der Reihenfolge wie diese im Programm aufgerufen werden angehängt. Die Maximale Anzahl ist auf 64 Slave Uhren im Visuelement limitiert. Im ClockMaster32 kann die maximale Anzahl über die Library Konstante angepasst werden.
+
+Schnittstellen Visu-Element
+===========================
+
+ .. list-table::
+    :name: Schnittstellen Visu-Element
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Typ
+      - Initialwert
+      - Funktion
+    * - **FB_ClockMaster32**
+      - ClockMaster32
+      - VAR_IN_OUT
+      -
+      - Hier FB ClockMaster32 eintragen Bsp. PRG.ClockMaster32
+    * - **BMS_Active**
+      - BOOL
+      - VAR_INPUT
+      -
+      - BMS (Building Management System) GLT (Gebäudeleittechnik). Wenn BMS_Active = TRUE wird die Eingabe/Editierung der Uhren deaktiviert da diese dann nur über das BMS eingestellt werden können. Uhrzeiten können dann nur angeschaut werden.
+    * - **DisableInput**
+      - BOOL
+      - VAR_INPUT
+      -
+      - DisableInpput = TRUE Uhrzeiten der Wochenuhren können nur angesehen werden und nicht editiert werden.
+|
+| Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------------+-----------------------+------------------------------------+-----------------------------------------------------------+
+    | Scope  | Name              | Type                  | Initial                            | Comment                                                   |
+    +========+===================+=======================+====================================+===========================================================+
+    | Input  | xAllOn            | BOOL                  |                                    | Zentrale Freigabe aller Ausgänge xClockActive aller       |
+    |        |                   |                       |                                    | angeschlossenen Slave - Funktionsbausteine ( FALSE = Aus, |
+    |        |                   |                       |                                    | TRUE = Ein )                                              |
+    +        +-------------------+-----------------------+------------------------------------+-----------------------------------------------------------+
+    |        | xAllOff           | BOOL                  |                                    | Zentrale Sperrung aller Ausgänge xClockActive aller       |
+    |        |                   |                       |                                    | angeschlossenen Slave - Funktionsbausteine ( FALSE = Aus, |
+    |        |                   |                       |                                    | TRUE = Ein )                                              |
+    +        +-------------------+-----------------------+------------------------------------+-----------------------------------------------------------+
+    |        | eCountry          | |ioeCountryList|      | eCountryList.DE                    | Auswahl der länderspezifischen Feiertage                  |
+    +        +-------------------+-----------------------+------------------------------------+-----------------------------------------------------------+
+    |        | ActiveClocksVisu  | |ioeActiveClocksVisu| | eActiveClocksVisu.Activate16Clocks | Festlegung der Anzahl der in der Visualisierung           |
+    |        |                   |                       |                                    | dargestellten Wochenuhren                                 |
+    +--------+-------------------+-----------------------+------------------------------------+-----------------------------------------------------------+
+    | Output | itfToClockSlave32 | IUhrProtocol          | THIS^                              | Interface für die Slave - Funktionsbausteine              |
+    +        +-------------------+-----------------------+------------------------------------+-----------------------------------------------------------+
+    |        | ctClockSlave32    | CAA.COUNT             |                                    | Anzahl der angeschlossenen Slave - Funktionsbausteine     |
+    +--------+-------------------+-----------------------+------------------------------------+-----------------------------------------------------------+
+
+.. |ioeCountryList| replace:: :ref:`eCountryList<eCountryList>`
+.. |ioeActiveClocksVisu| replace:: :ref:`eActiveClocksVisu<eActiveClocksVisu>`
+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Clock/pou-ClockMaster32/Deregister
+   /HVAC-Library/HVAC-Functions/Clock/pou-ClockMaster32/MasterDatenGet
+   /HVAC-Library/HVAC-Functions/Clock/pou-ClockMaster32/MasterDatenSet
+   /HVAC-Library/HVAC-Functions/Clock/pou-ClockMaster32/MasterPara
+   /HVAC-Library/HVAC-Functions/Clock/pou-ClockMaster32/RegSlvDat
+   /HVAC-Library/HVAC-Functions/Clock/pou-ClockMaster32/Register
+   /HVAC-Library/HVAC-Functions/Clock/pou-ClockMaster32/SlvPara
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

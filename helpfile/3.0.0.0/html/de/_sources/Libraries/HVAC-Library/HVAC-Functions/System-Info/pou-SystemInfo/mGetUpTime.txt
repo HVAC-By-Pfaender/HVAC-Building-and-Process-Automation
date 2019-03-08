@@ -1,0 +1,37 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-System Info.SystemInfo.mGetUpTime`:
+
+
+.. _`SystemInfo.mGetUpTime`:
+
+SystemInfo.mGetUpTime (METH)
+----------------------------
+
+METHOD mGetUpTime : TIME
+
+
+
+
+Beim Aufruf der Mehode, wird der Ausgang für die Laufzeit des System aktualisiert.
+Die Methode wird außerdem auch von der SystemInfo Instanz aufgerufen, sobald der Eingang "xGetRTUptime" getriggert wird.
+
+
+
+
+
+InOut:
+    +--------+------------+------+
+    | Scope  | Name       | Type |
+    +========+============+======+
+    | Return | mGetUpTime | TIME |
+    +--------+------------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

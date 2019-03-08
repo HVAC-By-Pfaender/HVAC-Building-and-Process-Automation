@@ -1,0 +1,26 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Setpoint`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Setpoint`:
+
+Setpoint
+========
+
+.. todo:: Please add documentation for folder: Setpoint
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Setpoint/EditBool
+   /HVAC-Library/HVAC-Functions/Setpoint/EditDT
+   /HVAC-Library/HVAC-Functions/Setpoint/EditDate
+   /HVAC-Library/HVAC-Functions/Setpoint/EditPoti
+   /HVAC-Library/HVAC-Functions/Setpoint/EditReal
+   /HVAC-Library/HVAC-Functions/Setpoint/EditRealVisu
+   /HVAC-Library/HVAC-Functions/Setpoint/EditString
+   /HVAC-Library/HVAC-Functions/Setpoint/EditTOD
+   /HVAC-Library/HVAC-Functions/Setpoint/EditTime
+   /HVAC-Library/HVAC-Functions/Setpoint/EditUDINT
+   /HVAC-Library/HVAC-Functions/Setpoint/HeatCurve4P_DN
+   /HVAC-Library/HVAC-Functions/Setpoint/SetPointSlide
+
+.. last line of folder.rst template

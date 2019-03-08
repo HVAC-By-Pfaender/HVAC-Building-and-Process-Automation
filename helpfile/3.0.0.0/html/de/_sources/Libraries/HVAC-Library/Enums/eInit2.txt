@@ -1,0 +1,52 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eInit2`:
+
+
+.. Index::
+   single: eInit2
+
+.. _`eInit2`:
+
+eInit2 (ENUM)
+-------------
+
+TYPE eInit2 :
+
+
+
+.. todo:: Please add documentation for enum: eInit2
+
+
+
+
+
+InOut:
+    +---------------------------------+---------+------------------------+
+    | Name                            | Initial | Comment                |
+    +=================================+=========+========================+
+    | .. _`eInit2.InitValue`:         | 0       | Initialisierungswert   |
+    |                                 |         |                        |
+    | InitValue                       |         |                        |
+    +---------------------------------+---------+------------------------+
+    | .. _`eInit2.InputValue`:        | 1       | Eingangswert           |
+    |                                 |         |                        |
+    | InputValue                      |         |                        |
+    +---------------------------------+---------+------------------------+
+    | .. _`eInit2.InputValueDelayed`: | 2       | Eingangswert verzögert |
+    |                                 |         |                        |
+    | InputValueDelayed               |         |                        |
+    +---------------------------------+---------+------------------------+
+    | .. _`eInit2.LastValue`:         | 3       | Letzter Wert           |
+    |                                 |         |                        |
+    | LastValue                       |         |                        |
+    +---------------------------------+---------+------------------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

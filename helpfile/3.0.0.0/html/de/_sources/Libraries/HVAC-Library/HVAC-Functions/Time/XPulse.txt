@@ -1,0 +1,153 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Time.XPulse`:
+
+
+.. index::
+   single: XPulse
+
+.. _`XPulse`:
+
+XPulse (FB)
+-----------
+
+FUNCTION_BLOCK XPulse
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Erzeugung eines exklusiven Impulses mit einstellbarer Zeitdauer
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/XPulse_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xIN*
+      - BOOL
+      -
+      -
+      - Eingang
+    * - *tPT*
+      - TIME
+      -
+      - T#1s
+      - Impulszeitdauer
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 300 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xQ*
+      - BOOL
+      -
+      -
+      - Ausgang
+    * - *tET*
+      - TIME
+      - 0 ... *tPT*
+      -
+      - Zeitdifferenz zum Impulsanfang
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **xTest**
+      - BOOL
+      -
+      - FALSE
+      - Simulation des Eingangs *xIN*
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Erzeugung eines Impulses definierter Zeitdauer ( *tPT* ) nach einer ansteigenden Flanke am Eingang *xIN*.
+| Die Erzeugung des Impulses kann unabhängig davon auch durch den Simulationseingang **xTest** ( ansteigende Flanke ) ausgelöst werden.
+| Die Zeitdifferenz zum Impulsanfang wird am Ausgang *tET* ( Wertebereich: 0 ... *tPT* ) angezeigt.
+|
+
+.. image:: /../DocuBilder/XPulse_Bild_1.png
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------+------+------------+----------------------------------------------+
+    | Scope  | Name  | Type | Initial    | Comment                                      |
+    +========+=======+======+============+==============================================+
+    | Input  | xIN   | BOOL |            | Binärer Eingang ( FALSE > TRUE )             |
+    +        +-------+------+------------+----------------------------------------------+
+    |        | tPT   | TIME | TIME#1s0ms | Zeitdauer des Ausgangsimpulses in s          |
+    +        +-------+------+------------+----------------------------------------------+
+    |        | xTest | BOOL | FALSE      | Binärer Testeingang ( FALSE > TRUE )         |
+    +--------+-------+------+------------+----------------------------------------------+
+    | Output | xQ    | BOOL |            | Impulsausgang ( FALSE = Aus, TRUE = Ein )    |
+    +        +-------+------+------------+----------------------------------------------+
+    |        | tET   | TIME |            | Aktuelle Zeitdauer des Impulses an *xQ* in s |
+    +--------+-------+------+------------+----------------------------------------------+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Time/pou-XPulse/mGetTime
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

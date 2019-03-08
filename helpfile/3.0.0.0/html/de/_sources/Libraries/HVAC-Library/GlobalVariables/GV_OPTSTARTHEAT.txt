@@ -1,0 +1,61 @@
+.. first line of object.rst template
+.. first line of gvl-object.rst template
+.. _`.fld-HVAC Library.fld-GlobalVariables.GV_OPTSTARTHEAT`:
+
+
+.. _`GV_OPTSTARTHEAT`:
+
+GV_OPTSTARTHEAT (GVL)
+---------------------
+
+.. todo:: Please add documentation for gvl: GV_OPTSTARTHEAT
+
+
+
+
+InOut:
+    +-------------------------------------------+------+---------+-----------------------------------------------------------+
+    | Name                                      | Type | Initial | Comment                                                   |
+    +===========================================+======+=========+===========================================================+
+    | .. _`GV_OPTSTARTHEAT.rTOMin`:             | REAL | -25.0   | Minimalwert - Aussentemperatur                            |
+    |                                           |      |         |                                                           |
+    | rTOMin                                    |      |         |                                                           |
+    +-------------------------------------------+------+---------+-----------------------------------------------------------+
+    | .. _`GV_OPTSTARTHEAT.rTOMax`:             | REAL | 25.0    | Maximalwert - Aussentemperatur                            |
+    |                                           |      |         |                                                           |
+    | rTOMax                                    |      |         |                                                           |
+    +-------------------------------------------+------+---------+-----------------------------------------------------------+
+    | .. _`GV_OPTSTARTHEAT.rTIMin`:             | REAL | 15.0    | Minimalwert - Raumtemperatur                              |
+    |                                           |      |         |                                                           |
+    | rTIMin                                    |      |         |                                                           |
+    +-------------------------------------------+------+---------+-----------------------------------------------------------+
+    | .. _`GV_OPTSTARTHEAT.rTIMax`:             | REAL | 30.0    | Maximalwert - Raumtemperatur                              |
+    |                                           |      |         |                                                           |
+    | rTIMax                                    |      |         |                                                           |
+    +-------------------------------------------+------+---------+-----------------------------------------------------------+
+    | .. _`GV_OPTSTARTHEAT.rDiffSetTemp`:       | REAL | 0.0     | Abweichung zur Raumsolltemperatur am Ende des             |
+    |                                           |      |         | Vorheizprozesses                                          |
+    | rDiffSetTemp                              |      |         |                                                           |
+    +-------------------------------------------+------+---------+-----------------------------------------------------------+
+    | .. _`GV_OPTSTARTHEAT.rDTDiffTemp`:        | REAL | 0.2     | Erhöhung der Raumtemperatur zur Erkennung des Endes der   |
+    |                                           |      |         | Totzeit                                                   |
+    | rDTDiffTemp                               |      |         |                                                           |
+    +-------------------------------------------+------+---------+-----------------------------------------------------------+
+    | .. _`GV_OPTSTARTHEAT.uiPHMaxTime`:        | UINT | 720     | Maximale Zeitdauer des Vorheizprozesses                   |
+    |                                           |      |         |                                                           |
+    | uiPHMaxTime                               |      |         |                                                           |
+    +-------------------------------------------+------+---------+-----------------------------------------------------------+
+    | .. _`GV_OPTSTARTHEAT.rLimitResultWell`:   | REAL | 0.5     | Ergebnisanzeige: Raumtemperaturabweichung - Grenzwert für |
+    |                                           |      |         | einen guten Vorheizprozess                                |
+    | rLimitResultWell                          |      |         |                                                           |
+    +-------------------------------------------+------+---------+-----------------------------------------------------------+
+    | .. _`GV_OPTSTARTHEAT.rLimitResultNormal`: | REAL | 1.0     | Ergebnisanzeige: Raumtemperaturabweichung - Grenzwert für |
+    |                                           |      |         | einen normalen Vorheizprozess                             |
+    | rLimitResultNormal                        |      |         |                                                           |
+    +-------------------------------------------+------+---------+-----------------------------------------------------------+
+
+
+.. last line of gvl-object.rst template
+.. last line of object.rst template
+
+

@@ -1,0 +1,60 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eOpMode`:
+
+
+.. Index::
+   single: eOpMode
+
+.. _`eOpMode`:
+
+eOpMode (ENUM)
+--------------
+
+TYPE eOpMode :
+
+
+
+.. todo:: Please add documentation for enum: eOpMode
+
+
+
+
+
+InOut:
+    +----------------------+---------+---------+
+    | Name                 | Initial | Comment |
+    +======================+=========+=========+
+    | .. _`eOpMode.Mode0`: | 0       | Modus 0 |
+    |                      |         |         |
+    | Mode0                |         |         |
+    +----------------------+---------+---------+
+    | .. _`eOpMode.Mode1`: | 1       | Modus 1 |
+    |                      |         |         |
+    | Mode1                |         |         |
+    +----------------------+---------+---------+
+    | .. _`eOpMode.Mode2`: | 2       | Modus 2 |
+    |                      |         |         |
+    | Mode2                |         |         |
+    +----------------------+---------+---------+
+    | .. _`eOpMode.Mode3`: | 3       | Modus 3 |
+    |                      |         |         |
+    | Mode3                |         |         |
+    +----------------------+---------+---------+
+    | .. _`eOpMode.Mode4`: | 4       | Modus 4 |
+    |                      |         |         |
+    | Mode4                |         |         |
+    +----------------------+---------+---------+
+    | .. _`eOpMode.Mode5`: | 5       | Modus 5 |
+    |                      |         |         |
+    | Mode5                |         |         |
+    +----------------------+---------+---------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

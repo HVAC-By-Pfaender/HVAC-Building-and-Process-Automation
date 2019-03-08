@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AutomationPortalConnector (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Binary" href="Binary/fld-Binary.html" />
+    <link rel="prev" title="AlarmCounter (FB)" href="Alarming/AlarmCounter.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+      <li>AutomationPortalConnector (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/HVAC-Library/HVAC-Functions/AutomationPortalConnector.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-automationportalconnector"></span><div class="section" id="automationportalconnector-fb">
+<span id="automationportalconnector"></span><span id="index-0"></span><h1>AutomationPortalConnector (FB)<a class="headerlink" href="#automationportalconnector-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK AutomationPortalConnector</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Connects the controller to the HVAC Automation Portal. Further information at www.hvac-automation.com</div>
+<div class="line">Enables the transfer of variables or the CODESYS symbol configuration.</div>
+<div class="line">These can then be recorded and evaluated in the portal.</div>
+<div class="line">In addition, alarms can be forwarded, CODESYS Visu can be accessed and the device directory can be accessed.</div>
+<div class="line">In the HVAC RB300 library, a function block for establishing a VPN connection from the portal to the controller can be placed especially for the RB300 controller.</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../_images/AutomationPortalConnector_FB.PNG" src="../../_images/AutomationPortalConnector_FB.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<p>To connect, please pass through the following points:</p>
+<div class="section" id="variablen-ubertragen">
+<h3>Transfer variables:<a class="headerlink" href="#variablen-ubertragen" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><blockquote>
+<div><div class="line-block">
+<div class="line">Step 1: Visit <a class="reference external" href="https://portal.hvac-automation.com">https://portal.hvac-automation.com</a> and register for free</div>
+<div class="line">Step 2: Append the generated project ID to the Input <strong>diProjectId</strong>. Set xEn to TRUE.</div>
+<div class="line">Step 3: Assign password at the input <strong>sPassword</strong></div>
+<div class="line">Step 4: Right click on &#8220;Application&#8221; and &#8220;Symbol Configuration&#8221;. Check the variables which are to be transferred to the portal.</div>
+<div class="line">Step 5: Download the application to the controller</div>
+<div class="line">Step 6: In the HVAC Automation Portal, the controller now appears orange, the password you created yourself must be entered here. There you go.</div>
+</div>
+</div></blockquote>
+<img alt="../../_images/HVACAutomationPortal.png" src="../../_images/HVACAutomationPortal.png" />
+</div></blockquote>
+</div>
+<div class="section" id="visualisieurng-ubertragen">
+<h3>Visualization transfer:<a class="headerlink" href="#visualisieurng-ubertragen" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>To transfer the visualization, you must enter the visualization which have to be transferred at the <strong>sLocalVisuUrl</strong> input. If the local CODESYS visualization is to be transferred, it is sufficient to enter &#8216;<a class="reference external" href="http://127.0.0.1">http://127.0.0.1</a>&#8216; or &#8216;<a class="reference external" href="http://127.0.0.1:8080/webvisu.htm">http://127.0.0.1:8080/webvisu.htm</a>&#8216;. In the HVAC Automaion portal, the visualization can then be cleaved and used like a variable.</p>
+<blockquote>
+<div><img alt="../../_images/HVACAutomationPortalVisu.PNG" src="../../_images/HVACAutomationPortalVisu.PNG" />
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="gerateverzeichnis-ubertragen">
+<h3>Transfer device directory:<a class="headerlink" href="#gerateverzeichnis-ubertragen" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>The device&#8217;s folder structure can be accessed via the HVAC Automation Portal, e.g. to back up files remotely. To do this, enter &#8216;/&#8217; for the complete root directory or &#8216;./&#8217; for the CODESYS PLC directory at the <strong>sBrowsePath</strong> input.</p>
+<blockquote>
+<div><img alt="../../_images/HVACAutomationPortalDataBrowser.png" src="../../_images/HVACAutomationPortalDataBrowser.png" />
+</div></blockquote>
+</div></blockquote>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="16%" />
+<col width="11%" />
+<col width="16%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="7">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>diProjectId</td>
+<td>DINT</td>
+<td>-1</td>
+<td>Project ID generated by hvac-automation portal: Open the
+project settings at the top right of the hvac-automation
+Portal</td>
+</tr>
+<tr class="row-even"><td>sPassword</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Password for secure Adapter communication: The password must
+be entered in hvac-automation Portal once the connection has
+been established</td>
+</tr>
+<tr class="row-odd"><td>sStorageDirectory</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Optional - Speficy directory path, where to store
+configuration backup and logged value data. Use empty string
+for default directory</td>
+</tr>
+<tr class="row-even"><td>tLiveValueInterval</td>
+<td>TIME</td>
+<td>TIME#1s0ms</td>
+<td>Optional - Specify higher interval to reduce networking load
+(Minimum: T#1s)</td>
+</tr>
+<tr class="row-odd"><td>sLocalVisuUrl</td>
+<td>STRING(200)</td>
+<td>&#8216;<a class="reference external" href="http://127.0.0.1">http://127.0.0.1</a>&#8216;</td>
+<td>Optional - Specify URL(s) for pass-through to the server, to
+display local websites in hvac-automation Portal (e.g.
+<a class="reference external" href="http://localhost/visu">http://localhost/visu</a>). Multiple URLs can be separated with
+a semicolon. Limitations: No https support</td>
+</tr>
+<tr class="row-even"><td>sBrowsePath</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>Optional - Specify path for reading and writing files from
+hvac-automation (e.g. ‘/’ for root directory or ‘./’ for
+CODESYS home directory). Leave empty to disable this
+functionality</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">Output</td>
+<td>sStatus</td>
+<td>STRING(255)</td>
+<td>&nbsp;</td>
+<td>Description of current status/error</td>
+</tr>
+<tr class="row-even"><td>xError</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE if adapter is not working correctly (see Status output
+for details)</td>
+</tr>
+<tr class="row-odd"><td>xConnected</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE if connection to hvac-automation portal is established</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Binary/fld-Binary.html" class="btn btn-neutral float-right" title="Binary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Alarming/AlarmCounter.html" class="btn btn-neutral float-left" title="AlarmCounter (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

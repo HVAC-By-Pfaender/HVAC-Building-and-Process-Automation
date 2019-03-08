@@ -1,0 +1,30 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of prop-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Binary.ManBin.ModusValue`:
+
+
+.. _`ManBin.ModusValue`:
+
+ManBin.ModusValue (PROP)
+------------------------
+
+PROPERTY ModusValue : |deHandMan|
+
+.. |deHandMan| replace:: :ref:`eHandMan<eHandMan>`
+
+
+{warning 'Eigenschaftenimplementierung hinzufügen'}
+
+
+
+
+
+
+
+.. last line of prop-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

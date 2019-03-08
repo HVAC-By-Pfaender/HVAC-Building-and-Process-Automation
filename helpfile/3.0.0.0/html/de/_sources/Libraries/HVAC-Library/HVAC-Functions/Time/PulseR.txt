@@ -1,0 +1,174 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Time.PulseR`:
+
+
+.. index::
+   single: PulseR
+
+.. _`PulseR`:
+
+PulseR (FB)
+-----------
+
+FUNCTION_BLOCK PulseR
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Flankengesteuerte Impulserzeugung mit einstellbarer Zeitdauer und Rücksetzmöglichkeit
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/PulseR_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xIN*
+      - BOOL
+      -
+      -
+      - Binärer Eingang ( FALSE > TRUE )
+    * - *tPT*
+      - TIME
+      -
+      - T#1s
+      - Zeitdauer des Ausgangsimpulses in s
+    * - *xReset*
+      - BOOL
+      -
+      -
+      - Binärer Rücksetzeingang ( FALSE > TRUE )
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xQ*
+      - BOOL
+      -
+      -
+      - Impulsausgang ( FALSE = Aus, TRUE = Ein )
+    * - *tET*
+      - TIME
+      - 0 ... *tPT*
+      -
+      - Aktuelle Zeitdauer des Impulses an *xQ* in s
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **xTest**
+      - BOOL
+      -
+      - FALSE
+      - Binärer Testeingang ( FALSE > TRUE )
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Am Impulsausgang *xQ* wird nach jeder ansteigenden Flanke ( FALSE > TRUE ) am binären Eingang *xIN* und / oder am Sollwert / Parameter
+  **xTest** ein Impuls mit einer Zeitdauer *tPT* erzeugt ( Voraussetzungen: *xReset* = FALSE und keine abfallende Flanke am Eingang *xIN* ).
+|
+| Jede ansteigende Flanke ( FALSE > TRUE ) am Rücksetzeingang *xReset* setzt den Impulsausgang *xQ* unmittelbar zurück ( = FALSE ).
+| Jede abfallende Flanke ( TRUE > FALSE ) am binären Eingang *xIN* setzt den Impulsausgang *xQ* unmittelbar zurück ( = FALSE ).
+|
+| Die Flankenerkennung ( FALSE > TRUE ) an den Eingängen *xIN* bzw. **xTest** hat gegenüber der Flankenerkennung an den Eingängen
+  *xReset* ( FALSE > TRUE ) bzw. *xIN* ( TRUE > FALSE ) eine höhere Priorität.
+| Dies hat zur Folge, das trotz gleichzeitiger Flankenerkennung ein Impuls mit einer Zeitdauer *tPT* am Ausgang *xQ* erzeugt wird.
+|
+| Der Sollwert / Parameter **xTest** wird zyklisch deaktiviert ( = FALSE ).
+|
+
+.. image:: /../DocuBilder/PulseR_Bild_1.png
+
+
+Zeitausgang *tET*
+=================
+| Bei aktivem Impulsausgang *xQ* ( = TRUE ) wird die aktuelle Zeitdauer des Impulses an *xQ* ( 0.0 - *tPT* ) angezeigt.
+| Bei inaktivem Impulsausgang *xQ* ( = FALSE ) wird stets der Wert T#0s angezeigt.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+--------+------+------------+----------------------------------------------+
+    | Scope  | Name   | Type | Initial    | Comment                                      |
+    +========+========+======+============+==============================================+
+    | Input  | xIN    | BOOL |            | Binärer Eingang ( FALSE > TRUE )             |
+    +        +--------+------+------------+----------------------------------------------+
+    |        | tPT    | TIME | TIME#1s0ms | Zeitdauer des Ausgangsimpulses in s          |
+    +        +--------+------+------------+----------------------------------------------+
+    |        | xReset | BOOL |            | Binärer Rücksetzeingang ( FALSE > TRUE )     |
+    +        +--------+------+------------+----------------------------------------------+
+    |        | xTest  | BOOL | FALSE      | Binärer Testeingang ( FALSE > TRUE )         |
+    +--------+--------+------+------------+----------------------------------------------+
+    | Output | xQ     | BOOL |            | Impulsausgang ( FALSE = Aus, TRUE = Ein )    |
+    +        +--------+------+------------+----------------------------------------------+
+    |        | tET    | TIME |            | Aktuelle Zeitdauer des Impulses an *xQ* in s |
+    +--------+--------+------+------------+----------------------------------------------+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Time/pou-PulseR/mGetTime
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

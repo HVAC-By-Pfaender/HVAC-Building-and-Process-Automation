@@ -1,0 +1,200 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Button.ButtonToggle`:
+
+
+.. index::
+   single: ButtonToggle
+
+.. _`ButtonToggle`:
+
+ButtonToggle (FB)
+-----------------
+
+FUNCTION_BLOCK ButtonToggle
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Schaltelement mit Taste und Zentralbedienung
+     | Typischer Einsatz: Lichttaster und Lichtausgang
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/ButtonToggle_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xButton*
+      - BOOL
+      -
+      -
+      - Eingang - Bedientaste
+    * - *xCentralOn*
+      - BOOL
+      -
+      -
+      - Zentrale Einschaltung
+    * - *xCentralOff*
+      - BOOL
+      -
+      -
+      - Zentrale Ausschaltung
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xOut*
+      - BOOL
+      -
+      -
+      - Freigabe - Ausgang
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **xButtonVisu**
+      - BOOL
+      -
+      - FALSE
+      - Funktion wie *xButton*
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Der Funktionsbaustein dient grundsätzlich zur unmittelbaren Steuerung des Freigabe - Ausgangs *xOut* in Abhängigkeit von den ansteigenden Flanken
+  an den Eingängen *xButton* ( = Bedientaste ), *xCentralOn* ( = Zentrale Einschaltung ), *xCentralOff* ( = Zentrale Ausschaltung ) und dem Sollwert / Parameter **xButtonVisu**.
+| Jede ansteigende Flanke am Eingang - Bedientaste *xButton* und / oder am Sollwert / Parameter **xButtonVisu** schaltet den Ausgang *xOut* in den entgegengesetzten Zustand,
+  sofern keine Zentralbedienung stattfindet.
+| Werden keine ansteigenden Flanken erkannt, so verändert sich der Zustand des Freigabe - Ausgangs *xOut* nicht.
+|
+
+Funktionstabelle
+================
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 900 900 900 900 900
+    :header-rows: 1
+
+    * - *xButton* bzw. **xButtonVisu**
+      - *xCentralOn*
+      - *xCentralOff*
+      - *xOut*
+      - Hinweis
+    * - FALSE, TRUE, H/L
+      - FALSE, TRUE, H/L
+      - FALSE, TRUE, H/L
+      - unverändert
+      - Eingänge nicht aktiv
+    * - L/H
+      - FALSE, TRUE, H/L
+      - FALSE, TRUE, H/L
+      - FALSE > TRUE, TRUE > FALSE
+      - Zustandswechsel am Ausgang
+    * - FALSE, TRUE, H/L
+      - L/H
+      - FALSE, TRUE, H/L
+      - TRUE
+      - Zentrale Einschaltung
+    * - FALSE, TRUE, H/L
+      - FALSE, TRUE, H/L
+      - L/H
+      - FALSE
+      - Zentrale Ausschaltung
+    * - L/H
+      - L/H
+      - FALSE, TRUE, H/L
+      - TRUE
+      - Zentrale Einschaltung ( höhere Priorität )
+    * - L/H
+      - L/H
+      - L/H
+      - FALSE
+      - Zentrale Ausschaltung ( höchste Priorität )
+
+| Legende: L/H ... ansteigende Flanke, H/L ... abfallende Flanke
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------+------+---------+------------------------+
+    | Scope  | Name        | Type | Initial | Comment                |
+    +========+=============+======+=========+========================+
+    | Input  | xButton     | BOOL |         | Eingang - Bedientaste  |
+    +        +-------------+------+---------+------------------------+
+    |        | xCentralOn  | BOOL |         | Zentrale Einschaltung  |
+    +        +-------------+------+---------+------------------------+
+    |        | xCentralOff | BOOL |         | Zentrale Ausschaltung  |
+    +        +-------------+------+---------+------------------------+
+    |        | xButtonVisu | BOOL | FALSE   | Funktion wie *xButton* |
+    +--------+-------------+------+---------+------------------------+
+    | Output | xOut        | BOOL |         | Freigabe - Ausgang     |
+    +--------+-------------+------+---------+------------------------+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Button/pou-ButtonToggle/mCentralOff
+   /HVAC-Library/HVAC-Functions/Button/pou-ButtonToggle/mCentralOn
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

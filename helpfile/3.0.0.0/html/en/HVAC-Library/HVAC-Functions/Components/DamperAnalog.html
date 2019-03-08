@@ -1,0 +1,715 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DamperAnalog (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="DuoPump (FB)" href="DuoPump.html" />
+    <link rel="prev" title="Damper2P (FB)" href="Damper2P.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="Burner3P.html">Burner3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerP.html">BurnerP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerT.html">BurnerT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoolOutProtection.html">CoolOutProtection (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Damper2P.html">Damper2P (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuoPump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fan1Speed.html">Fan1Speed (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanAnalog.html">FanAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanControl.html">FanControl (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FastHeating.html">FastHeating (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FireDamperMot.html">FireDamperMot (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptStartHeat.html">OptStartHeat (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreRinseOperationValveAnalog.html">PreRinseOperationValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Pump.html">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SequenceSUPTemp.html">SequenceSUPTemp (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SmokeDetector.html">SmokeDetector (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve2P.html">Valve2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve3P.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveAnalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveTherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>DamperAnalog (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Components/DamperAnalog.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-damperanalog"></span><div class="section" id="damperanalog-fb">
+<span id="damperanalog"></span><span id="index-0"></span><h1>DamperAnalog (FB)<a class="headerlink" href="#damperanalog-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK DamperAnalog</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Control of a continuous damper actuator with continuous position feedback</div>
+<div class="line"><br /></div>
+<div class="line">Typical application: Continuous recirculation damper of a HVAC system</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/DamperAnalog_FB.png" src="../../../_images/DamperAnalog_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rY</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Setpoint value</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xForce</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Forced override after Manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>rU</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td><p class="first last">Return of the damper position</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>eAO</em></td>
+<td>HVACTYPES.eManNum</td>
+<td>HVACTYPES.eManNum.Auto, HVACTYPES.eManNum.Man</td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td><p class="first last">Operating mode of manual override - Hardware</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>rPoti</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td><p class="first last">Manual override value - Hardware</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Outputs<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>rHA</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal Damper actuator after manual override</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>rAA</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal Damper actuator before manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xAlarm</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">collective alarm</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAuto</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective signal Automatic operation</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>udiControlTime</strong></td>
+<td>UDINT</td>
+<td>10s ... 600s</td>
+<td>150s</td>
+<td><p class="first last">Duration of position monitoring</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>rControlDiff</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>7.0 %</td>
+<td><p class="first last">Maximum permissible deviation between nominal and actual position in %.</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Enabling position monitoring</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xForceOption</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Status of output <em>rHA</em> in state forced override</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>rManValue</strong></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td><p class="first last">Manual value</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eManModeN</strong></td>
+<td>eMANNUM</td>
+<td>eMANNUM.Auto, eMANNUM.Man</td>
+<td>eMANBIN.Auto</td>
+<td><p class="first last">Manual override mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="stellsignal-klappenantrieb-vor-handubersteuerung-raa">
+<h3>Actuator signal Damper actuator before manual override <em>rAA</em><a class="headerlink" href="#stellsignal-klappenantrieb-vor-handubersteuerung-raa" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The control signal of the damper actuator before manual override <em>rAA</em> is accepted unchanged from the input set point - position <em>rY</em>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="stellsignal-klappenantrieb-nach-handubersteuerung-rha">
+<h3>Control signal Damper actuator after manual override <em>rHA</em><a class="headerlink" href="#stellsignal-klappenantrieb-nach-handubersteuerung-rha" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The control signal of the damper actuator after manual override <em>rHA</em> corresponds to the control signal of the damper actuator before manual override <em>rAA</em>, additionally extended by a manual override module and a forced override.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>rAA</em></th>
+<th class="head"><strong>eManModeN</strong></th>
+<th class="head"><em>xForce</em></th>
+<th class="head"><strong>xForceOption</strong></th>
+<th class="head"><em>rHA</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>X</td>
+<td>eMANNUM.Auto</td>
+<td>FALSE</td>
+<td>X</td>
+<td><em>rAA</em></td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANNUM.Man</td>
+<td>FALSE</td>
+<td>X</td>
+<td><strong>rManValue</strong></td>
+<td><p class="first last">Manual override module in manual mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>X</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>0.0</td>
+<td><p class="first last">Forced override 0.0</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>100.0</td>
+<td><p class="first last">Forced override 100.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="sammelstorung-xalarm">
+<h3><em>xAlarm</em> collective alarm<a class="headerlink" href="#sammelstorung-xalarm" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective alarm <em>xAlarm</em> is activated ( = TRUE ) if the amount of the difference between the control signal damper actuator after manual override <em>rHA</em> and the actual value of position <em>rU</em> permanently exceeds the maximum deviation between setpoint and actual value of position <strong>rControlDiff</strong> for a minimum period of <strong>udiControlTime</strong>.</div>
+<div class="line">At the same time the release of the position monitoring <strong>xControl</strong> must be active ( = TRUE ) and the operating mode of the manual override hardware must be in the HVACTYPES.eManBin.Auto position.</div>
+<div class="line"><br /></div>
+<div class="line">In all other cases, the <em>xAlarm</em> collective fault is not activated (= FALSE).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="sammelmeldung-automatikbetrieb-xauto">
+<h3>Collective message automatic mode <em>xAuto</em><a class="headerlink" href="#sammelmeldung-automatikbetrieb-xauto" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective message Automatic mode <em>xAuto</em> is activated ( = TRUE ) if the input <em>eAO</em> contains the value HVACTYPES.eManNum.Auto and the setpoint / parameter <strong>eManModeN</strong> contains the value eMANNUM.Auto. In all other cases, the collective message Automatic mode <em>xAuto</em> is not activated ( = FALSE ).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="zwangsubersteuerung-xforce">
+<h3>Forced override <em>xForce</em><a class="headerlink" href="#zwangsubersteuerung-xforce" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The forced override affects the output <em>rHA</em> directly. The parameter <strong>xForceOption</strong> defines the state of the output <em>rHA</em> when TRUE at the input <em>xForce</em>.</div>
+<div class="line"><br /></div>
+<div class="line">With <strong>xForceOption</strong> = FALSE</div>
+<div class="line">If the input <em>xForce</em> is TRUE, the output <em>rHA</em> is set to 0.</div>
+<div class="line"><br /></div>
+<div class="line">With <strong>xForceOption</strong> = TRUE</div>
+<div class="line">If the input <em>xForce</em> is TRUE, the output <em>rHA</em> is set to 100.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="13%" />
+<col width="11%" />
+<col width="20%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="5">Input</td>
+<td>rY</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Setpoint value</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xForce</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Forced override after Manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td>rU</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Return of the damper position</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eAO</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eManNum</span></a></td>
+<td>HVACTYPES.eManNum.Auto</td>
+<td><p class="first last">Operating mode of manual override - Hardware</p>
+</td>
+</tr>
+<tr class="row-even"><td>rPoti</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Manual override value - Hardware</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="4">Output</td>
+<td>rHA</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal Damper actuator after manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td>rAA</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal Damper actuator before manual override</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">collective alarm</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAuto</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective signal Automatic operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="6">Input</td>
+<td>udiControlTime</td>
+<td>UDINT</td>
+<td>200</td>
+<td><p class="first last">Duration of position monitoring</p>
+</td>
+</tr>
+<tr class="row-even"><td>rControlDiff</td>
+<td>REAL</td>
+<td>7</td>
+<td><p class="first last">Maximum permissible deviation between nominal and actual position in %.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xControl</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Enabling position monitoring</p>
+</td>
+</tr>
+<tr class="row-even"><td>xForceOption</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Status of output <em>rHA</em> in state forced override</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rManValue</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Manual value</p>
+</td>
+</tr>
+<tr class="row-even"><td>eManModeN</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eMANNUM</span></a></td>
+<td>eMANNUM.Auto</td>
+<td><p class="first last">Manual override mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="DuoPump.html" class="btn btn-neutral float-right" title="DuoPump (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Damper2P.html" class="btn btn-neutral float-left" title="Damper2P (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

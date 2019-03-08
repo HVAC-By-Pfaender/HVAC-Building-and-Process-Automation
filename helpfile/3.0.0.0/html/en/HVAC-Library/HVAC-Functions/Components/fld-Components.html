@@ -1,0 +1,828 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Components &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Burner3P (FB)" href="Burner3P.html" />
+    <link rel="prev" title="TimeRead (FB)" href="../Clock/TimeRead.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Burner3P.html">Burner3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerP.html">BurnerP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerT.html">BurnerT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoolOutProtection.html">CoolOutProtection (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Damper2P.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DamperAnalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuoPump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fan1Speed.html">Fan1Speed (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanAnalog.html">FanAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanControl.html">FanControl (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FastHeating.html">FastHeating (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FireDamperMot.html">FireDamperMot (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptStartHeat.html">OptStartHeat (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreRinseOperationValveAnalog.html">PreRinseOperationValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Pump.html">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SequenceSUPTemp.html">SequenceSUPTemp (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SmokeDetector.html">SmokeDetector (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve2P.html">Valve2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve3P.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveAnalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveTherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+      <li>Components</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Components/fld-Components.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="components">
+<span id="id1"></span><span id="fld-hvac-library-fld-hvac-functions-fld-components"></span><h1>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Burner3P.html">Burner3P (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Burner3P.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Burner3P.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Burner3P.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Burner3P.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Burner3P.html#freigabe-sperrung-des-warmeerzeugers">Enabling / disabling of the heat producer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Burner3P.html#temperaturregelung-des-warmeerzeugers">Temperature control of the heat producer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Burner3P.html#handubersteuerung-der-digitalen-ausgange">Manual override of the digital outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Burner3P.html#sammelstorung-xalarm"><em>xAlarm</em> collective alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Burner3P.html#sammelmeldung-automatikbetrieb-xauto">Collective alarm message automatic mode <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Burner3P.html#betriebsstundenzahler-warmeerzeuger">Operating hours counter - heat producer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Burner3P.html#aktuelle-berechnete-leistung-des-warmeerzeugers-rpos">Current calculated power of the heat generator <em>rPos</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Burner3P.html#ruckfuhrung-der-leistung-des-warmeerzeugers-ru">Recirculation of the heat producer output <em>rU</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Burner3P.html#nicht-aktiver-zustand-xen-false">Inactive state ( <em>xEn</em> = FALSE )</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Burner3P.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Burner3P.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BurnerP.html">BurnerP (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BurnerP.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BurnerP.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BurnerP.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#freigabe-sperrung-des-warmeerzeugers">Enabling / disabling of the heat producer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#temperaturregelung-des-warmeerzeugers">Temperature control of the heat producer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#handubersteuerung-des-digitalen-ausgangs-xhb">Manual override of the digital output <em>xHB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#handubersteuerung-des-analogen-ausgangs-rha">Manual override of the analog output <em>rHA</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#sammelstorung-xalarm"><em>xAlarm</em> collective alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#betriebsstundenzahler-warmeerzeuger">Operating hours counter - heat producer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#ruckfuhrung-der-leistung-des-warmeerzeugers-ru">Recirculation of the heat producer output <em>rU</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#ruckfuhrung-des-handwerts-fur-das-leistungssignal-von-der-handubersteuerung-hardware-rpoti">Feedback of the manual value for the power signal from the manual override - Hardware <em>rPoti</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerP.html#nicht-aktiver-zustand-xen-false">Inactive state ( <em>xEn</em> = FALSE )</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="BurnerP.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BurnerP.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BurnerT.html">BurnerT (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BurnerT.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BurnerT.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BurnerT.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#freigabe-sperrung-des-warmeerzeugers-xhb">Enabling / disabling of the heat producer <em>xHB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#temperatursignal-fur-den-warmeerzeuger-rha">Temperature signal for the heat producer <em>rHA</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#handubersteuerung-des-digitalen-ausgangs-xhb">Manual override of the digital output <em>xHB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#handubersteuerung-des-analogen-ausgangs-rha">Manual override of the analog output <em>rHA</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#sammelstorung-xalarm"><em>xAlarm</em> collective alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#betriebsstundenzahler-warmeerzeuger">Operating hours counter - heat producer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#ruckfuhrung-der-leistung-des-warmeerzeugers-ru">Recirculation of the heat producer output <em>rU</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#ruckfuhrung-des-handwerts-fur-das-leistungssignal-von-der-handubersteuerung-hardware-rpoti">Feedback of the manual value for the power signal from the manual override - Hardware <em>rPoti</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BurnerT.html#nicht-aktiver-zustand-xen-false">Inactive state ( <em>xEn</em> = FALSE )</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="BurnerT.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BurnerT.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CoolOutProtection.html">CoolOutProtection (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CoolOutProtection.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CoolOutProtection.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CoolOutProtection.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CoolOutProtection.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CoolOutProtection.html#freigabe-sperrung-des-auskuhlschutzbetriebs-xen">Enabling / disabling of cooling protection mode <em>xEn</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CoolOutProtection.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CoolOutProtection.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Damper2P.html">Damper2P (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Damper2P.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Damper2P.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Damper2P.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Damper2P.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Damper2P.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Damper2P.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Damper2P.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Damper2P.html#automatik-ausgang-xab">Automatic output <em>xAB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Damper2P.html#hand-ausgang-xhb">*xHB*manual output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Damper2P.html#storung-position-klappenoffnung-xalarmopen"><em>xAlarmOpen</em> fault position damper opening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Damper2P.html#storung-position-klappenoffnung-xalarmclosed"><em>xAlarmClosed</em> fault position damper opening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Damper2P.html#sammelstorung-xalarm"><em>xAlarm</em> collective alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Damper2P.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Damper2P.html#zwangsubersteuerung-xforce">Forced override <em>xForce</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Damper2P.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Damper2P.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DamperAnalog.html">DamperAnalog (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DamperAnalog.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DamperAnalog.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DamperAnalog.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DamperAnalog.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DamperAnalog.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DamperAnalog.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DamperAnalog.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DamperAnalog.html#stellsignal-klappenantrieb-vor-handubersteuerung-raa">Actuator signal Damper actuator before manual override <em>rAA</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DamperAnalog.html#stellsignal-klappenantrieb-nach-handubersteuerung-rha">Control signal Damper actuator after manual override <em>rHA</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DamperAnalog.html#sammelstorung-xalarm"><em>xAlarm</em> collective alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DamperAnalog.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DamperAnalog.html#zwangsubersteuerung-xforce">Forced override <em>xForce</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DamperAnalog.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DamperAnalog.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DuoPump.html">DuoPump (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DuoPump.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DuoPump.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DuoPump.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DuoPump.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#redundante-steuerung">Redundant control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#freigabe-umwalzpumpe-1-vor-handubersteuerung-xab1">Enable - circulation pump 1 before manual override <em>xAB1</em>.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#freigabe-umwalzpumpe-2-vor-handubersteuerung-xab2">Enable - Circulation pump 2 before manual override <em>xAB2</em>.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#freigabe-umwalzpumpe-1-nach-handubersteuerung-xhb1">enable - circulation pump 1 after manual override <em>xHB1</em>.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#freigabe-umwalzpumpe-2-nach-handubersteuerung-xhb2">Enable - Circulation pump 2 after manual override <em>xHB2</em>.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#betriebsmeldungen-xfb1-und-xfb2">operating messages <em>xFb1</em> and <em>xFb2</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#stormeldungen-xalarmin1-und-xalarmin2">Alarm messages <em>xAlarmIn1</em> and <em>xAlarmIn2</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#rucksetzung-der-stormeldung-der-betriebsuberwachungen-xquit">Resetting the alarm signal of the operational monitoring systems <em>xQuit</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#anforderung-energieerzeugung-xenergyrequest">Requirement - Power generation <em>xEnergyRequest</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#nachlaufmodul">Follow-up period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#blockierschutzmodule">anti-lock modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#sammelstorung-umwalzpumpe-1-xalarm1">Collective alarm - Circulation pump 1 <em>xAlarm1</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#sammelstorung-umwalzpumpe-2-xalarm2">Collective message - Circulation pump 2 <em>xAlarm2</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#sammelstorung-xalarm"><em>xAlarm</em> collective alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#betriebsstundenzahler-umwalzpumpe-1">Operating hours counter - circulation pump 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#betriebsstundenzahler-umwalzpumpe-2">Operating hours counter - circulation pump 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#betriebsuberwachung-umwalzpumpe-1">Operation monitoring - Circulation pump 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#betriebsuberwachung-umwalzpumpe-2">Operation monitoring - Circulation pump 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DuoPump.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DuoPump.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DuoPump.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-DuoPump/mQuit.html">DuoPump.mQuit (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-DuoPump/mResetOperatingHours.html">DuoPump.mResetOperatingHours (METH)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Fan1Speed.html">Fan1Speed (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Fan1Speed.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Fan1Speed.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Fan1Speed.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Fan1Speed.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#freigabe-ventilator-vor-handubersteuerung-xab">Enable - Fan before manual override <em>xAB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#freigabe-ventilator-nach-handubersteuerung-xhb">Enable - Fan after manual override <em>xHB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#meldung-des-reparaturschalters-xmswitch">Repair switch message <em>xMSwitch</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#zwangsubersteuerung-xforce">Forced override <em>xForce</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#betriebsstunden-und-einschaltvorgange">Operating hours and switch-on procedures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#datum-uhrzeit-des-letzten-betriebs-des-ventilators-dtlastfb">Date / time of the last operation of the fan <em>dtLastFb</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#betriebsuberwachung">Operation monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#luftmangeluberwachung">low air pressure monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#sammelstormeldung-xalarm">Collective alarm signal <em>xAlarm</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fan1Speed.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Fan1Speed.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Fan1Speed.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-Fan1Speed/mQuit.html">Fan1Speed.mQuit (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-Fan1Speed/mResetOperatingHours.html">Fan1Speed.mResetOperatingHours (METH)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FanAnalog.html">FanAnalog (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FanAnalog.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FanAnalog.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FanAnalog.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="FanAnalog.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#freigabe-ventilator-vor-handubersteuerung-xab">Enable - Fan before manual override <em>xAB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#freigabe-ventilator-nach-handubersteuerung-xhb">Enable - Fan after manual override <em>xHB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#meldung-des-reparaturschalters-xmswitch">Repair switch message <em>xMSwitch</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#zwangssperrung-des-ventilators-nach-handubersteuerung-xforce">Forced shut-off of the fan after manual override <em>xForce</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#betriebsstunden-und-einschaltvorgange">Operating hours and switch-on procedures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#datum-uhrzeit-des-letzten-betriebs-des-ventilators-dtlastfb">Date / time of the last operation of the fan <em>dtLastFb</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#betriebsuberwachung">Operation monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#luftmangeluberwachung">low air pressure monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#sammelstormeldung-xalarm">Collective alarm signal <em>xAlarm</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#stellsignal-ventilator-vor-handubersteuerung-raa">Control signal for fan before manual override <em>rAA</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#stellsignal-ventilator-nach-handubersteuerung-rha">Control signal for fan after manual override <em>rHA</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanAnalog.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="FanAnalog.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FanAnalog.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-FanAnalog/mQuit.html">FanAnalog.mQuit (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-FanAnalog/mResetOperatingHours.html">FanAnalog.mResetOperatingHours (METH)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FanControl.html">FanControl (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FanControl.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FanControl.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FanControl.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#freigabe-ventilator-vor-handubersteuerung-xab">Enable - Fan before manual override <em>xAB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#freigabe-ventilator-nach-handubersteuerung-xhb">Enable - Fan after manual override <em>xHB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#meldung-des-reparaturschalters-xmswitch">Repair switch message <em>xMSwitch</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#zwangssperrung-des-ventilators-nach-handubersteuerung-xforce">Forced shut-off of the fan after manual override <em>xForce</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#betriebsstunden-und-einschaltvorgange-udioperatinghours-und-udicountfb">Operating hours and switch-on procedures <em>udiOperatingHours</em> and <em>udiCountFb</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#datum-uhrzeit-des-letzten-betriebs-des-ventilators-dtlastfb">Date / time of the last operation of the fan <em>dtLastFb</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#betriebsuberwachung-xalarmfb">Operation monitoring <em>xAlarmFb</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#luftmangeluberwachung-xalarmpfb">Low air pressure monitoring <em>xAlarmPFb</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#sammelstormeldung-1-ausgang-xalarm">Collective alarm message 1 - Output <em>xAlarm</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#sammelstormeldung-2">Collective alarm message 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#rucksetzung-der-stormeldungen-xquit">Reset of the alarm messages <em>xQuit</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#druckregelprozess">Pressure control process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#stellsignal-ventilator-vor-handubersteuerung-raa">Control signal for fan before manual override <em>rAA</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#stellsignal-ventilator-nach-handubersteuerung-rha">Control signal for fan after manual override <em>rHA</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#betriebsart-fur-das-ausgangssignal-des-reglers-epimanmoden">Operating mode for the output signal of the controller <strong>ePIManModeN</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#uberwachung-des-maximaldrucks-xalarmmaxvalue">Monitoring of the maximum pressure <em>xAlarmMaxValue</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#uberwachung-des-minimaldrucks-xalarmminvalue">Monitoring of the minimum pressure <em>xAlarmMinValue</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FanControl.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="FanControl.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FanControl.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-FanControl/mQuit.html">FanControl.mQuit (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-FanControl/mResetOperatingHours.html">FanControl.mResetOperatingHours (METH)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FastHeating.html">FastHeating (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FastHeating.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FastHeating.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FastHeating.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="FastHeating.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FastHeating.html#freigabe-sperrung-des-schnellaufheizbetriebs-xen">Enabling / disabling of the fast heating mode <em>xEn</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="FastHeating.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FastHeating.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FireDamperMot.html">FireDamperMot (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FireDamperMot.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FireDamperMot.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FireDamperMot.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#freigabe-offnung-schliessung-der-brandschutzklappe-vor-handubersteuerung-xab">Enable opening / closing of fire damper before manual override <em>xAB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#freigabe-offnung-schliessung-der-brandschutzklappe-nach-handubersteuerung-xhb">Release of opening / closing of fire damper after manual override <em>xHB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#sammelstorung-xalarm"><em>xAlarm</em> collective alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#freigabe-sperrung-der-stormeldung-fur-die-ruckmeldung-der-offnung-xalarmopen">Enabling / disabling the alarm message for the opening feedback <em>xAlarmOpen</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#freigabe-sperrung-der-stormeldung-fur-die-ruckmeldung-der-schliessung-xalarmclosed">Enabling / disabling the alarm message for the feedback of the closing <em>xAlarmClosed</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#zeitdauer-der-letzten-vollstandigen-offnung-tlastopen">Duration of the last complete opening <em>tLastOpen</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#zeitdauer-der-letzten-vollstandigen-schliessung-tlastclosed">Duration of the last complete closing <em>tLastClosed</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#zeitdauer-der-aktuellen-offnung-schliessung-in-truntime">Duration of the current opening / closing in <em>tRunTime</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#prufung-der-funktionen-der-brandschutzklappe-testbetrieb">Testing the functions of the fire damper ( test operation )</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FireDamperMot.html#voraussetzungen">Prerequisites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="FireDamperMot.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FireDamperMot.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OptStartHeat.html">OptStartHeat (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OptStartHeat.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OptStartHeat.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OptStartHeat.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#globale-variablen">Global Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="OptStartHeat.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#prufzeit-bstate-1">Test time (bState = 1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#totzeit-bstate-2">Dead time (bState = 2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#heizzeit-bstate-3">Heating time (bState = 3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#heizzeitende-bstate-4">Heating time end (bState = 4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#freigabe-xen">Enable <em>xEn</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#freigabe-xenadapt">Release <em>xEnAdapt</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#freigabe-xresadapt">Release <em>xResAdapt</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#eingang-rto">Input <em>rTo</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#eingang-rti">Input <em>rTi</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#eingang-rsettemp">Input <em>rSetTemp</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgang-xdaytime">Output <em>xDaytime</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgang-xprocess">Output <em>xProcess</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgang-bstate">Output <em>bState</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgang-werror">Output <em>wError</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgang-bresult">Output <em>bResult</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgang-xactive">Output <em>xActive</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgang-uideadtime">Output <em>uiDeadTime</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgang-uiheattime">Output <em>uiHeatTime</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgang-uinumber">Output <em>uiNumber</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#ausgang-raveragediff">Output <em>rAverageDiff</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#vorheizprozess">Step 1: preheating process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#parameter-uihgmin">Parameters <strong>uiHGMin</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#parameter-uihgmax">Parameters <strong>uiHGMax</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#parameter-uidtmin">Parameters <strong>uiDTMin</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#parameter-uidtmax">Parameter <strong>uiDTMax</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#parameter-uihtmin">Parameter <strong>uiHTMin</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#parameter-uihtmax">Parameter <strong>uiHTMax</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#parameter-todmonfrom-snotice">Parameter <strong>todMonFrom**</strong> - <strong>sNotice</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#globale-variable-gv-optstartheat-rtomin">Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTOMin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#globale-variable-gv-optstartheat-rtomax">Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTOMax</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#globale-variable-gv-optstartheat-rtimin">Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTIMin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#globale-variable-gv-optstartheat-rtimax">Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTIMax</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#globale-variable-gv-optstartheat-rdiffsettemp">Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rDiffSetTemp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#globale-variable-gv-optstartheat-rdtdifftemp">Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rDTDiffTemp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#globale-variable-gv-optstartheat-uiphmaxtime">Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.uiPHMaxTime</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#globale-variable-gv-optstartheat-rlimitresultwell">Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rLimitResultWell</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#globale-variable-gv-optstartheat-rlimitresultnormal">Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rLimitResultNormal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OptStartHeat.html#typische-anwendung">Typical application</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="OptStartHeat.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OptStartHeat.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/FB_Reinit.html">OptStartHeat.FB_Reinit (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mCalcAbsMin.html">OptStartHeat.mCalcAbsMin (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mCalcAverageDiff.html">OptStartHeat.mCalcAverageDiff (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mCalcEspAbsMin.html">OptStartHeat.mCalcEspAbsMin (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mCalcResults.html">OptStartHeat.mCalcResults (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mCheckClock.html">OptStartHeat.mCheckClock (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mInitAverageDiff.html">OptStartHeat.mInitAverageDiff (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mInitCurrentData.html">OptStartHeat.mInitCurrentData (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mInitHistoricalData.html">OptStartHeat.mInitHistoricalData (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mReset.html">OptStartHeat.mReset (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mResetAll.html">OptStartHeat.mResetAll (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-OptStartHeat/mSpClassification.html">OptStartHeat.mSpClassification (METH)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PreRinseOperationValveAnalog.html">PreRinseOperationValveAnalog (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PreRinseOperationValveAnalog.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PreRinseOperationValveAnalog.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PreRinseOperationValveAnalog.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PreRinseOperationValveAnalog.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PreRinseOperationValveAnalog.html#steuerung">Control</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PreRinseOperationValveAnalog.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PreRinseOperationValveAnalog.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Pump.html">Pump (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pump.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pump.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pump.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Pump.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#automatik-ausgang-xab">Automatic output <em>xAB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#hand-ausgang-xhb">*xHB*manual output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#anforderung-energieerzeugung-xenergyrequest">Requirement - Power generation <em>xEnergyRequest</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#nachlaufmodul">Follow-up period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#blockierschutzmodul">Anti-lock module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#ausgang-xalarm"><em>xAlarm</em> output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#zwangsubersteuerung-xforce">Forced override <em>xForce</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#betriebsstundenzahler">Operating hours counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#betriebsuberwachung">Operation monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Pump.html#visualisierung">Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#id4">Portrayal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Pump.html#schnittstellen-visu-element">Interfaces Visu-Element</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Pump.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-Pump/mQuit.html">Pump.mQuit (METH)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pou-Pump/mResetOperatingHours.html">Pump.mResetOperatingHours (METH)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SequenceSUPTemp.html">SequenceSUPTemp (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SequenceSUPTemp.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SequenceSUPTemp.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SequenceSUPTemp.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SequenceSUPTemp.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceSUPTemp.html#freigabe-sperrung-des-reglers-xoptcon">Enabling / disabling of the controller <em>xOpTCon</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceSUPTemp.html#freigabe-sperrung-der-freien-nachtkuhlung-xfncen">Enabling / disabling the free night cooling <em>xFNCEn</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceSUPTemp.html#verzogerter-start-der-regelung-xproramp-bzw-xhhwfrost1">Delayed start of the control <em>xPRORamp</em> or <em>xHHWFrost1</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceSUPTemp.html#ruckmeldung-der-stellsignale-rheaterypisat-bzw-rcoolerypisat">Feedback of the control signals <em>rHeaterYPISAT</em> and <em>rCoolerYPISAT</em> respectively</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceSUPTemp.html#allgemeines-stellsignal-aus-der-squenzregelung-rygen">General control signal from the sequence control <em>rYGen</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceSUPTemp.html#freigabe-sperrung-der-aktiven-beheizung-xenheat">Enabling / disabling the active heating <em>xEnHeat</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceSUPTemp.html#freigabe-sperrung-der-aktiven-kuhlung-xencool">Enabling / disabling of active cooling <em>xEnCool</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceSUPTemp.html#stellsignal-fur-das-klappensystem-rydamp">Control signal for the damper system <em>rYDamp</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SequenceSUPTemp.html#stellsignal-fur-das-system-zur-energieruckgewinnung-ryer">Control signal for the energy recovery system <em>rYER</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SequenceSUPTemp.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SequenceSUPTemp.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Shade.html">Shade (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Shade.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shade.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shade.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Shade.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Shade.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Shade.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Shade.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Shade.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Shade.html#zentralbedienung">Central control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Shade.html#warte-zeitdauer-der-umschaltung-zwischen-offnung-und-schliessung-twaitreverse">Waiting period of switching between opening and closing <strong>tWaitReverse</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Shade.html#lamellenverstellung">Slat adjustment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Shade.html#vollstandige-offnung-schliessung">Full opening/closing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Shade.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Shade.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shade.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SmokeDetector.html">SmokeDetector (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SmokeDetector.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmokeDetector.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmokeDetector.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SmokeDetector.html#alarm-ausgang-xalarm">Alarm - Output <em>xAlarm</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SmokeDetector.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SmokeDetector.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Valve2P.html">Valve2P (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Valve2P.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Valve2P.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Valve2P.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Valve2P.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#automatik-ausgang-xab">Automatic output <em>xAB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#hand-ausgang-xhb"><em>xHB</em> manual output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#storung-position-ventiloffnung-xalarmopen">Malfunction Position Valve opening <em>xAlarmOpen</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#storung-position-ventiloffnung-xalarmclosed">Malfunction Position valve opening <em>xAlarmClosed</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#sammelstorung-xalarm"><em>xAlarm</em> collective alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#blockierschutzmodul">Anti-lock module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve2P.html#zwangsubersteuerung-xforce">Forced override <em>xForce</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Valve2P.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Valve2P.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Valve3P.html">Valve3P (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Valve3P.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Valve3P.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Valve3P.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Valve3P.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#blockierschutzprozess">anti-lock process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#freigabe-ventiloffnung-vor-handubersteuerung-xabopen"><em>xABOpen</em> enable - valve opening before manual override</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#freigabe-ventilschliessung-vor-handubersteuerung-xabclose">*xABClose*enable - valve closure before manual override</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#freigabe-ventiloffnung-nach-handubersteuerung-xhbopen"><em>xHBOpen</em> enable - valve opening after manual override</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#freigabe-ventilschliessung-nach-handubersteuerung-xhbclose"><em>xHBClose</em> enable - valve closing after manual override</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#zwangsteuerung-der-handubersteuerungen-der-ausgange">Forced control of manual overrides of the outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#aktuelle-ventilposition-rpos"><em>rPos</em> current valve position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Valve3P.html#zwangsubersteuerung-xforce">Forced override <em>xForce</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Valve3P.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Valve3P.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ValveAnalog.html">ValveAnalog (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ValveAnalog.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ValveAnalog.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ValveAnalog.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ValveAnalog.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveAnalog.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveAnalog.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ValveAnalog.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ValveAnalog.html#stellsignal-vor-handubersteuerung-raa"><em>rAA</em> control signal before manual override</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveAnalog.html#stellsignal-nach-handubersteuerung-rha"><em>rHA</em> control signal after manual override</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveAnalog.html#positionsuberwachung">position monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveAnalog.html#positionsruckmeldung-vom-regelventil-ru"><em>rU</em> position feedback from the control valve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveAnalog.html#blockierschutzmodul">Anti-lock module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveAnalog.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveAnalog.html#zwangsubersteuerung-xforce">Forced override <em>xForce</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ValveAnalog.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ValveAnalog.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ValveTherm.html">ValveTherm (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ValveTherm.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ValveTherm.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ValveTherm.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ValveTherm.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveTherm.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveTherm.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ValveTherm.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ValveTherm.html#freigabe-vor-handubersteuerung-xab">Enable before manual override <em>xAB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveTherm.html#freigabe-nach-handubersteuerung-xhb">Enable after manual override <em>xHB</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveTherm.html#anforderung-energieerzeugung-xenergyrequest">Requirement - Power production <em>xEnergyRequest</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveTherm.html#blockierschutzmodul">Anti-lock module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveTherm.html#sammelmeldung-automatikbetrieb-xauto">Collective message automatic mode <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ValveTherm.html#zwangsubersteuerung-xforce">Forced override <em>xForce</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ValveTherm.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ValveTherm.html#codesys">Codesys</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Burner3P.html" class="btn btn-neutral float-right" title="Burner3P (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Clock/TimeRead.html" class="btn btn-neutral float-left" title="TimeRead (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-GlobalVariables`:
+
+.. _`fld-HVAC Library.fld-GlobalVariables`:
+
+GlobalVariables
+===============
+
+.. todo:: Please add documentation for folder: GlobalVariables
+
+.. toctree::
+
+   /HVAC-Library/GlobalVariables/GVMan
+   /HVAC-Library/GlobalVariables/GV_DT
+   /HVAC-Library/GlobalVariables/GV_OPTSTARTHEAT
+
+.. last line of folder.rst template

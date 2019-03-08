@@ -1,0 +1,460 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PublicHoliday (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../../search.html" />
+    <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>PublicHoliday (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/Libraries/HVAC-Library/HVAC-Functions/Clock/PublicHoliday.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-clock-publicholiday"></span><div class="section" id="publicholiday-fb">
+<span id="publicholiday"></span><span id="index-0"></span><h1>PublicHoliday (FB)<a class="headerlink" href="#publicholiday-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK PublicHoliday</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Anzeige der Zustände von Feiertagen</div>
+<div class="line"><br /></div>
+<div class="line">Typisch Anwendung: Erkennung von Feiertagen in einem Uhrsystem</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../../_images/PublicHoliday_FB.png" src="../../../../_images/PublicHoliday_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xEn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe / Sperrung der Funktion ( FALSE = Sperrung, TRUE = Freigabe )</td>
+</tr>
+<tr class="row-odd"><td><em>astPublicHoliday</em></td>
+<td>ARRAY[0..29] OF HVACTYPES.stPublicHoliday</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Übergabe der definierten Feiertage mit Name, Datum und Freigabestatus</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xActive</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzeige - Status - Feiertage ( FALSE = nicht aktiv, TRUE = aktiv )</td>
+</tr>
+<tr class="row-odd"><td><em>sName</em></td>
+<td>STRING(30)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Name des aktiven Feiertags</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>eCountry</strong></td>
+<td>eCountryList</td>
+<td>eCountryList.UserDefined, eCountryList.DE</td>
+<td>eCountryList.DE</td>
+<td>Auswahl der länderspezifischen Feiertage</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein ermittelt, ob ein Feiertag aktiv ist und zeigt zu dem Feiertag den Namen an.</div>
+<div class="line">Der Funktionsbaustein muss über den Eingang <em>xEn</em> aktiviert werden (TRUE = Funktion aktiv).</div>
+<div class="line">Die Feiertage können über die Struktur stPublicHoliday definiert werden. Hier wird der Name, das Datum des Feiertags und der Freigabestatus festgelegt.</div>
+<div class="line">Dabei können Feiertage als festes Datum, mit einem Abstand zu Ostern oder Wochentag vor einem festen Datum defniert werden.</div>
+<div class="line">Der Sollwert / Parameter <strong>eCountry</strong> erlaubt die Festlegung des Landes, dessen Feiertage verwendet werden sollen. Aktuell sind nur die Feiertage für Deutschland implementiert.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Passendes Visualisierungselement aus der HVACV Visu Library: <strong>PublicHoliday</strong></p>
+<div class="section" id="id4">
+<h3>Darstellung<a class="headerlink" href="#id4" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><img alt="../../../../_images/PublicHoliday.PNG" src="../../../../_images/PublicHoliday.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen-visu-element">
+<h3>Schnittstellen Visu-Element<a class="headerlink" href="#schnittstellen-visu-element" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id5">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Typ</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>FB_PublicHoliday</strong></td>
+<td>PublicHoliday</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td>Hier FB PublicHoliday eintragen Bsp. PRG.PublicHoliday</td>
+</tr>
+<tr class="row-odd"><td><strong>BMS_Active</strong></td>
+<td>BOOL</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td>BMS (Building Management System) GLT (Gebäudeleittechnik). Wenn BMS_Active = TRUE wird die Eingabe/Editierung der Uhren deaktiviert da diese dann nur über das BMS eingestellt werden können. Uhrzeiten können dann nur angeschaut werden.</td>
+</tr>
+<tr class="row-even"><td><strong>DisableInput</strong></td>
+<td>BOOL</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td>DisableInpput = TRUE Uhrzeiten der Wochenuhren können nur angesehen werden und nicht editiert werden.///      - BMS (Building Management System) GLT (Gebäudeleittechnik). Wenn BMS_Active = TRUE wird die Eingabe/Editierung der Uhren deaktiviert da diese dann nur über das BMS eingestellt werden können. Uhrzeiten können dann nur angeschaut werden.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="0%" />
+<col width="1%" />
+<col width="1%" />
+<col width="95%" />
+<col width="3%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="3">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Freigabe / Sperrung der Funktion ( FALSE = Sperrung, TRUE =
+Freigabe )</td>
+</tr>
+<tr class="row-odd"><td>astPublicHoliday</td>
+<td>ARRAY [0..29] OF
+HVACTYPES.stPublicHoliday</td>
+<td>[STRUCT(sName := &#8216;00&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;01&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;02&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;03&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;04&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;05&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;06&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;07&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;08&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;09&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;10&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;11&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;12&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;13&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;14&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;15&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;16&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;17&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;18&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;19&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;20&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;21&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;22&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;23&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;24&#8217;, datDate := DATE#1970-1-1, xEnable := FALSE), STRUCT(sName := &#8216;Public Holiday 1&#8217;, datDate := DATE#2019-1-1, xEnable := TRUE), STRUCT(sName := &#8216;Public Holiday 2&#8217;, datDate := DATE#2019-1-1, xEnable := TRUE), STRUCT(sName := &#8216;Public Holiday 3&#8217;, datDate := DATE#2019-1-1, xEnable := TRUE), STRUCT(sName := &#8216;Public Holiday 4&#8217;, datDate := DATE#2019-1-1, xEnable := TRUE), STRUCT(sName := &#8216;Public Holiday 5&#8217;, datDate := DATE#2019-1-1, xEnable := TRUE)]</td>
+<td>Übergabe der definierten Feiertage mit Name, Datum und
+Freigabestatus</td>
+</tr>
+<tr class="row-even"><td>eCountry</td>
+<td><a class="reference internal" href="../../Enums/eCountryList.html#ecountrylist"><span class="std std-ref">eCountryList</span></a></td>
+<td>eCountryList.DE</td>
+<td>Auswahl der länderspezifischen feiertage</td>
+</tr>
+<tr class="row-odd"><td rowspan="2">Output</td>
+<td>xActive</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige - Status - Feiertage ( FALSE = nicht aktiv, TRUE =
+aktiv )</td>
+</tr>
+<tr class="row-even"><td>sName</td>
+<td>STRING(30)</td>
+<td>&nbsp;</td>
+<td>Name des aktiven Feiertags</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-General`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-General`:
+
+General
+=======
+
+.. todo:: Please add documentation for folder: General
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/General/CDate
+   /HVAC-Library/HVAC-Functions/General/CTime
+   /HVAC-Library/HVAC-Functions/General/CToD
+   /HVAC-Library/HVAC-Functions/General/MacroInfo
+   /HVAC-Library/HVAC-Functions/General/ManInfo
+   /HVAC-Library/HVAC-Functions/General/MuxString2BinFun
+   /HVAC-Library/HVAC-Functions/General/MuxString4BinFun
+   /HVAC-Library/HVAC-Functions/General/MuxString5BinFun
+   /HVAC-Library/HVAC-Functions/General/MuxString5Fun
+   /HVAC-Library/HVAC-Functions/General/OpModeSelect
+   /HVAC-Library/HVAC-Functions/General/Redundance2
+
+.. last line of folder.rst template

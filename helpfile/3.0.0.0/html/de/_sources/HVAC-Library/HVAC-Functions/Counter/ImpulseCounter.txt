@@ -1,0 +1,183 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Counter.ImpulseCounter`:
+
+
+.. index::
+   single: ImpulseCounter
+
+.. _`ImpulseCounter`:
+
+ImpulseCounter (FB)
+-------------------
+
+FUNCTION_BLOCK ImpulseCounter
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Zähler für Eingangsimpulse mit Rücksetzeingang und einstellbarer Reduktion
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/ImpulseCounter_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xImpulse*
+      - BOOL
+      -
+      -
+      - Zählereingang
+    * - *xReset*
+      - BOOL
+      -
+      - FALSE
+      - Rücksetzeingang
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *udiImpulseCounter*
+      - UDINT
+      -
+      -
+      - Impulszähler
+    * - *udiEnergy*
+      - UDINT
+      -
+      -
+      - Impulszähler nach Reduktion
+    * - *dtLastImpulse*
+      - DATE_AND_TIME
+      -
+      -
+      - Datum/-zeitpunkt des Ende des letzten Zählimpulses
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **udiEnergyFactor**
+      - UDINT
+      -
+      - 1
+      - Reduktionsfaktor
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Zählung der Impulse ( = ansteigende Flanken ) am Zähler-Eingang *xImpulse* im Rahmen der technischen Grenzen.
+| Der Zählerstand wird am Ausgang *udiImpulseCounter* angezeigt.
+|
+| Überschreitet / erreicht der Zählerstand *udiImpulseCounter* den Grenzwert **udiEnergyFactor**, so wird der der Ausgang *udiEnergy* inkrementiert.
+| Anschließend wird der Ausgang *udiImpulseCounter* auf 0 zurück gesetzt.
+|
+| Die Ausgänge *udiImpulseCounter* und **udiEnergy** werden auf 0 zurück gesetzt, solange am Eingang *xReset* eine ansteigende Flanke erkannt wird.
+|
+| Am Ausgang *dtLastImpulse* steht nach jeder ansteigenden Flanke am Eingang *xImpulse* das aktuelle Datum / die aktuelle Uhrzeit zur Verfügung.
+| Am Ausgang *dtLastImpulse* steht bei allen anderen Zuständen am Eingang *xImpulse* das Datum / die Uhrzeit am Ende der letzten ansteigenden Flanke zur Verfügung.
+| Am Ausgang *dtLastImpulse* wird vor der ersten ansteigenden Flanke der Initialisierungswert DT#1970-1-1-0.0.0 ausgegeben.
+
+.. topic:: Wertebereiche der Ausgänge *udiImpulseCounter* und *udiEnergy*
+
+    | Gültige Zählerstände befinden sich innerhalb der Grenzen 0 und 4294967295.
+    | Die Inkrementierung des Zählerstandes 4294967295 setzt den Zählerstand auf 0 zurück.
+    | Anschliessend wird der Zählerstand wieder fortlaufend inkrementiert.
+
+.. topic:: Reduktionsfaktor **udiEnergyFactor**
+
+    | Der Reduktionsfaktor **udiEnergyFactor** wird nach jeder Eingabe des Wertes 0 mit dem Wert 1 überschrieben.
+
+.. topic:: Beispiel - Reduktionsfaktor
+
+    | *udiImpulseCounter* = 9, **udiEnergy** = 0, **udiEnergyFactor** = 10
+    |
+    | Nach einer ansteigenden Flanke am Eingang *xImpulse* verändern sich die Zählerstände wie folgt:
+    |
+    | *udiImpulseCounter* = 0, **udiEnergy** = 1, **udiEnergyFactor** = 10
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------------+-------+---------+----------------------------------------------------+
+    | Scope  | Name              | Type  | Initial | Comment                                            |
+    +========+===================+=======+=========+====================================================+
+    | Input  | xImpulse          | BOOL  |         | Zählereingang                                      |
+    +        +-------------------+-------+---------+----------------------------------------------------+
+    |        | xReset            | BOOL  | FALSE   | Rücksetzeingang                                    |
+    +        +-------------------+-------+---------+----------------------------------------------------+
+    |        | udiEnergyFactor   | UDINT |         | Reduktionsfaktor                                   |
+    +--------+-------------------+-------+---------+----------------------------------------------------+
+    | Output | udiImpulseCounter | UDINT |         | Impulszähler                                       |
+    +        +-------------------+-------+---------+----------------------------------------------------+
+    |        | udiEnergy         | UDINT |         | Impulszähler nach Reduktion                        |
+    +        +-------------------+-------+---------+----------------------------------------------------+
+    |        | dtLastImpulse     | DT    |         | Datum/-zeitpunkt des Ende des letzten Zählimpulses |
+    +--------+-------------------+-------+---------+----------------------------------------------------+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Counter/pou-ImpulseCounter/mReset
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

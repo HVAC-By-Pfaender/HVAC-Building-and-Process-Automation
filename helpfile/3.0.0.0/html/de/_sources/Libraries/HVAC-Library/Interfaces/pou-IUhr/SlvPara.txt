@@ -1,0 +1,30 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of prop-object.rst template
+.. _`.fld-HVAC Library.fld-Interfaces.IUhr.SlvPara`:
+
+
+.. _`IUhr.SlvPara`:
+
+IUhr.SlvPara (PROP)
+-------------------
+
+PROPERTY SlvPara : POINTER TO stSlvClockData
+
+
+
+
+.. todo:: Please add documentation for property: IUhr.SlvPara
+
+
+
+
+
+
+
+.. last line of prop-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,45 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.ManNum.mExPara`:
+
+
+.. _`ManNum.mExPara`:
+
+ManNum.mExPara (METH)
+---------------------
+
+METHOD mExPara
+
+
+
+
+.. todo:: Please add documentation for method: ManNum.mExPara
+
+
+
+
+
+InOut:
+    +-------+-----------------+--------------+-----------------------------------------------------------+
+    | Scope | Name            | Type         | Comment                                                   |
+    +=======+=================+==============+===========================================================+
+    | Inout | eManModeN_Ex    | |ioeManNum|  | Betriebsart für das binäre Ausgangssignal *xOut*, 0=Auto, |
+    |       |                 |              | 1=Hand Aus, 2=Hand Ein                                    |
+    +       +-----------------+--------------+-----------------------------------------------------------+
+    |       | rManValue_Ex    | REAL         | Handwert ( **eManModeN** = eManNum.Man )                  |
+    +-------+-----------------+--------------+-----------------------------------------------------------+
+    | Input | MasterHandID_Ex | |ioeHandMAN| | MasterHandID fur Hand MasterFb                            |
+    +-------+-----------------+--------------+-----------------------------------------------------------+
+
+.. |ioeHandMAN| replace:: :ref:`eHandMAN<eHandMan>`
+.. |ioeManNum| replace:: :ref:`eManNum<eManNum>`
+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

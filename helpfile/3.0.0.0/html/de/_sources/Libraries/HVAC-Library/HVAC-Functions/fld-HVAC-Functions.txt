@@ -1,0 +1,59 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions`:
+
+HVAC Functions
+==============
+
+Persistente Variablen werden mit Hilfe des Application Composers - Persistent Managers in Textfiles auf der Steuerung gespeichert.
+Die ermöglicht das Einstellungen vom Nutzer ständig und aktuell auf der Steuerung gespeichert sind und somit bei einem Kaltstart wieder zur Verfügung stehen. Die Dateien können außerdem extern gespeichert werden. Wechselt man die Steuerung so können die Einstellungen wieder eingespielt werden. Auch Betriebszustände können z.B. nach Inbetriebnahme gesichert werden und nach belieben wieder eingelesen werden.
+Damit diese Dateien gespeichert werden müssen die gespeicherten Variablen mit einem Attribut versehen werden und im Projekt müssen die Dateien im Application Composer angelegt werden.
+Dazu im Application Composer zwei Kanäle mithilfe des PersistenceManager anlegen. Die Bennenung der zwei Kanäle muss gleich wie die Bezeichnung der verwendeten Attribute in der Library sein. (Im Beispielprojekt sind die Kanäle fertig angelegt. Ein Beispielvideo auf unserem Youtube Channel erklärt das Persistent Verhalten nochmals im detail.
+
+Es wird in zwei Dateien unterschieden:
+- HVAC_Parameter (Für Parameter des Parameterfensters aller FBs)
+- HVAC_Counter (für Betriebsstundendaten oder andern Zählerdaten)
+
+Die Attribute vor den Variablen lauten dann:
+
+Für HVAC_Parameter:
+
+::
+
+{attribute 'ac_persist' := 'HVAC_Parameter'}
+
+Für HVAC_Counter:
+
+::
+
+{attribute 'ac_persist' := 'HVAC_Counter'}
+
+Warum zwei Dateien?
+Die HVAC_Parameter Datei ist von und so konfiguriert, dass wenn Änderungen in den Parametern statt finden, sofort die Datei auf dem System neu geschrieben wird (Speichern bei Änderung). Da die Änderungen nur vorkommen, wenn aktiv der Nutzer Einstellungen ändert, ist dies nicht so oft.
+
+Die HVAC_Counter Datei enthält Betriebsstundenzähler oder Impulszähler. Diese Werte ändern sich ständig zur Laufzeit. Damit die Datei nicht ständig den Speicher beschreibt wird hier auf ein zyklisches speichern gesetzt (z.B. alle 12h, einstellbar).
+
+Sollten die Parameter offline verändert werden muss vor dem online gehen die Parameterliste gelöscht werden und es wird eine neue angelegt. Alle anderen Onlinewerte gehen dann aber auch verloren!
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Alarming/fld-Alarming
+   /HVAC-Library/HVAC-Functions/AutomationPortalConnector
+   /HVAC-Library/HVAC-Functions/Binary/fld-Binary
+   /HVAC-Library/HVAC-Functions/Button/fld-Button
+   /HVAC-Library/HVAC-Functions/Clock/fld-Clock
+   /HVAC-Library/HVAC-Functions/Components/fld-Components
+   /HVAC-Library/HVAC-Functions/Control/fld-Control
+   /HVAC-Library/HVAC-Functions/Counter/fld-Counter
+   /HVAC-Library/HVAC-Functions/Damping/fld-Damping
+   /HVAC-Library/HVAC-Functions/Energy/fld-Energy
+   /HVAC-Library/HVAC-Functions/General/fld-General
+   /HVAC-Library/HVAC-Functions/Monitoring/fld-Monitoring
+   /HVAC-Library/HVAC-Functions/Numeric/fld-Numeric
+   /HVAC-Library/HVAC-Functions/Setpoint/fld-Setpoint
+   /HVAC-Library/HVAC-Functions/System-Info/fld-System-Info
+   /HVAC-Library/HVAC-Functions/Time/fld-Time
+   /HVAC-Library/HVAC-Functions/checkLicense
+
+.. last line of folder.rst template

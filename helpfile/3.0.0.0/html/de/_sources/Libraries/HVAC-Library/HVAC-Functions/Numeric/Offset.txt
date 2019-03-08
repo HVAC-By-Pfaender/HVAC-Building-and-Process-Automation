@@ -1,0 +1,129 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.Offset`:
+
+
+.. index::
+   single: Offset
+
+.. _`Offset`:
+
+Offset (FB)
+-----------
+
+FUNCTION_BLOCK Offset
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Addition eines Korrekturwerts zu einem numerischen Eingangswert
+     |
+     | Typische Anwendung: Abgleich eines Temperaturfühlers
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Offset_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rValueIN*
+      - REAL
+      -
+      -
+      - Eingangswert
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rValueOUT*
+      - REAL
+      -
+      -
+      - Ausgangswert
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **rOffset**
+      - REAL
+      -
+      -
+      - Korrekturwert
+
+*********************
+Funktionsbeschreibung
+*********************
+Analogwertausgang *rOut*
+========================
+| Der Ausgangswert *rValueOUT* wird durch die Addition des Eingangswerts *rValueIN* mit dem Korrekturwert **rOffset** gebildet
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+------+---------------+
+    | Scope  | Name      | Type | Comment       |
+    +========+===========+======+===============+
+    | Input  | rValueIN  | REAL | Eingangswert  |
+    +--------+-----------+------+---------------+
+    | Output | rValueOUT | REAL | Ausgangswert  |
+    +--------+-----------+------+---------------+
+    | Input  | rOffset   | REAL | Korrekturwert |
+    +--------+-----------+------+---------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,168 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Time.StartDelay`:
+
+
+.. index::
+   single: StartDelay
+
+.. _`StartDelay`:
+
+StartDelay (FB)
+---------------
+
+FUNCTION_BLOCK StartDelay
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Erzeugung von Signalen nach jedem CPU-Neustart
+     | Einsatz: Verzögerte Freigabe von Aktionen nach dem CPU-Neustart
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/StartDelay_FB.png
+
+**************
+Schnittstellen
+**************
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xQ1*
+      - BOOL
+      -
+      -
+      - Ausgang 1
+    * - *xQ1p*
+      - BOOL
+      -
+      -
+      - Impulsausgang 1
+    * - *xQ2*
+      - BOOL
+      -
+      -
+      - Ausgang 2
+    * - *xQ2p*
+      - BOOL
+      -
+      -
+      - Impulsausgang 2
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **TimeQ2Puls**
+      - TIME
+      -
+      - T#1s
+      - Impulszeitdauer - Impulsausgang 2
+    * - **TimeQ2**
+      - TIME
+      -
+      - T#20s
+      - Zeitverzögerung - Ausgang 2
+    * - **TimeQ1Puls**
+      - TIME
+      -
+      - T#1s
+      - Impulszeitdauer - Impulsausgang 1
+    * - **TimeQ1**
+      - TIME
+      -
+      - T#5s
+      - Zeitverzögerung - Ausgang 1
+    * - **xTest**
+      - BOOL
+      -
+      - FALSE
+      - Simulation des CPU-Neustart
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Erzeugung von Signalen nach jedem CPU-Neustart.
+| Der CPU-Neustart kann durch den Simulationseingang **xTest** ( = TRUE ) unabhängig von einem tatsächlichen CPU-Neustart ausgelöst werden.
+|
+| Der Ausgang *xQ1* wechselt nach jedem CPU-Neustart mit einer Zeitverzögerung **TimeQ1** vom Zustand FALSE dauerhaft in den Zustand TRUE.
+| Am Impulsausgang 1 *xQ1p* wird bei diesem Zustandswechsel ein einmaliger Impuls mit der Impulslänge **TimeQ1Puls** erzeugt.
+|
+| Der Ausgang *xQ2* wechselt nach jedem CPU-Neustart mit einer Zeitverzögerung **TimeQ2** vom Zustand FALSE dauerhaft in den Zustand TRUE.
+| Am Impulsausgang 2 *xQ2p* wird bei diesem Zustandswechsel ein einmaliger Impuls mit der Impulslänge **TimeQ2Puls** erzeugt.
+|
+
+.. image:: /../DocuBilder/StartDelay_Bild_1.png
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+------------+------+-------------+-----------------------------------+
+    | Scope  | Name       | Type | Initial     | Comment                           |
+    +========+============+======+=============+===================================+
+    | Input  | TimeQ2Puls | TIME | TIME#1s0ms  | Impulszeitdauer - Impulsausgang 2 |
+    +        +------------+------+-------------+-----------------------------------+
+    |        | TimeQ2     | TIME | TIME#20s0ms | Zeitverzögerung - Ausgang 2       |
+    +        +------------+------+-------------+-----------------------------------+
+    |        | TimeQ1Puls | TIME | TIME#1s0ms  | Impulszeitdauer - Impulsausgang 1 |
+    +        +------------+------+-------------+-----------------------------------+
+    |        | TimeQ1     | TIME | TIME#5s0ms  | Zeitverzögerung - Ausgang 1       |
+    +        +------------+------+-------------+-----------------------------------+
+    |        | xTest      | BOOL | FALSE       | Simulation des CPU-Neustart       |
+    +--------+------------+------+-------------+-----------------------------------+
+    | Output | xQ1        | BOOL |             | Ausgang 1                         |
+    +        +------------+------+-------------+-----------------------------------+
+    |        | xQ1p       | BOOL |             | Impulsausgang 1                   |
+    +        +------------+------+-------------+-----------------------------------+
+    |        | xQ2        | BOOL |             | Ausgang 2                         |
+    +        +------------+------+-------------+-----------------------------------+
+    |        | xQ2p       | BOOL |             | Impulsausgang 2                   |
+    +--------+------------+------+-------------+-----------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

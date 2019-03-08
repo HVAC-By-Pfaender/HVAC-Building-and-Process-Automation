@@ -1,0 +1,22 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Clock`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Clock`:
+
+Clock
+=====
+
+.. todo:: Please add documentation for folder: Clock
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Clock/Clock7d1Ch
+   /HVAC-Library/HVAC-Functions/Clock/Clock7d2Ch
+   /HVAC-Library/HVAC-Functions/Clock/ClockMaster32
+   /HVAC-Library/HVAC-Functions/Clock/ClockSlave32
+   /HVAC-Library/HVAC-Functions/Clock/Holiday
+   /HVAC-Library/HVAC-Functions/Clock/PublicHoliday
+   /HVAC-Library/HVAC-Functions/Clock/SwitchTimeS
+   /HVAC-Library/HVAC-Functions/Clock/TimeRead
+
+.. last line of folder.rst template

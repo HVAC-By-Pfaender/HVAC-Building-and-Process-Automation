@@ -1,0 +1,36 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.OptStartHeat.mInitCurrentData`:
+
+
+.. _`OptStartHeat.mInitCurrentData`:
+
+OptStartHeat.mInitCurrentData (METH)
+------------------------------------
+
+METHOD mInitCurrentData : BOOL
+
+
+
+
+.. todo:: Please add documentation for method: OptStartHeat.mInitCurrentData
+
+
+
+
+
+InOut:
+    +--------+------------------+------+
+    | Scope  | Name             | Type |
+    +========+==================+======+
+    | Return | mInitCurrentData | BOOL |
+    +--------+------------------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

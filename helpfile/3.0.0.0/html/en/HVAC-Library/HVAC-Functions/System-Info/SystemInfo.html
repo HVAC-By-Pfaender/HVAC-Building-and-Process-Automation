@@ -1,0 +1,567 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SystemInfo (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="SystemInfo.FB_Init (METH)" href="pou-SystemInfo/FB_Init.html" />
+    <link rel="prev" title="System Info" href="fld-System-Info.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-System-Info.html">System Info</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">SystemInfo (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-System-Info.html">System Info</a> &raquo;</li>
+        
+      <li>SystemInfo (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/System-Info/SystemInfo.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-system-info-systeminfo"></span><div class="section" id="systeminfo-fb">
+<span id="systeminfo"></span><span id="index-0"></span><h1>SystemInfo (FB)<a class="headerlink" href="#systeminfo-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK SystemInfo</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Acquisition of system information / input of individual project information.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/SystemInfo_FB.PNG" src="../../../_images/SystemInfo_FB.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">This function block enables you to read the system information.</div>
+<div class="line">The static values that are written to the controller when an application is downloaded are displayed here.</div>
+<div class="line">Values are also displayed that can change at runtime.</div>
+<div class="line">These values can be queried within a definable interval and can also be read out if required.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="eingang-xgetnetworkinfo">
+<h3>Input <em>xGetNetworkInfo</em><a class="headerlink" href="#eingang-xgetnetworkinfo" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">With each rising edge ( FALSE &gt; TRUE ) the current network information are returned.</div>
+<div class="line">The values are returned via the outputs <em>sEthernetAdapterIPAddress</em>, <em>sEthernetAdapterSubnetMask</em>, <em>sEthernetAdapterGateway</em> and <em>sEthernetAdapterMACAddress</em>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="eingang-xgetrtuptime">
+<h3>Input <em>xGetRTUpTime</em><a class="headerlink" href="#eingang-xgetrtuptime" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The current running time of the system is read with every rising edge.</div>
+<div class="line">The value is returned via the output <em>tRuntimeUptime</em>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>sProjectNumber</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>0000</td>
+<td><p class="first last">Individual project number for display in visualization</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>sProjectName</strong></td>
+<td>STRING(255)</td>
+<td>&nbsp;</td>
+<td>HVAC Example</td>
+<td><p class="first last">Individual project name for display in the visualization</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>sProjectVersion</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td><p class="first last">Individual project version for display in the visualization</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>sConfigEthernetAdapterName</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>eth0</td>
+<td><p class="first last">Name of the network adapter for the network information to be queried</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>tRefresh interval</strong></p>
+</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>T#15S</td>
+<td><p class="first last">Update interval for requesting network information and system runtime ( T#0s =&gt; Disabled)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<p>Suitable visualization element from the HVACV Visu Library: <strong>SystemInfo</strong></p>
+<div class="section" id="id2">
+<h3>Portrayal<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../../_images/SystemInfo.PNG" src="../../../_images/SystemInfo.PNG" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="21%" />
+<col width="16%" />
+<col width="12%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="7">Input</td>
+<td>xGetNetworkInfo</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Query of the current network information of the system ( FALSE &gt; TRUE )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xGetRTUptime</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Query of the current runtime of the system ( FALSE &gt; TRUE )</p>
+</td>
+</tr>
+<tr class="row-even"><td>sProjectNumber</td>
+<td>STRING</td>
+<td>&#8216;0000&#8217;</td>
+<td><p class="first last">Individual project number for display in visualization</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sProjectName</td>
+<td>STRING(255)</td>
+<td>&#8216;HVAC Example&#8217;</td>
+<td><p class="first last">Individual project name for display in the visualization</p>
+</td>
+</tr>
+<tr class="row-even"><td>sProjectVersion</td>
+<td>STRING</td>
+<td>&#8216;1&#8217;</td>
+<td><p class="first last">Individual project version for display in the visualization</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sConfigEthernetAdapterName</td>
+<td>STRING</td>
+<td>&#8216;eth0&#8217;</td>
+<td><p class="first last">Name of the network adapter for the network information to be queried</p>
+</td>
+</tr>
+<tr class="row-even"><td>tRefreshIntervall</td>
+<td>TIME</td>
+<td>TIME#15s0ms</td>
+<td><p class="first last">Update interval for requesting network information and system runtime ( T#0s =&gt; Disabled)</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="20">Output</td>
+<td>sProjectInfoTitle</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td><p class="first last"><code class="docutils literal"><span class="pre">Title</span></code> - Field of integrated <code class="docutils literal"><span class="pre">Project</span> <span class="pre">information</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td>sProjectInfoVersion</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td><p class="first last"><code class="docutils literal"><span class="pre">Version</span></code> - Field of integrated <code class="docutils literal"><span class="pre">Project</span> <span class="pre">information</span></code></p>
+</td>
+</tr>
+<tr class="row-odd"><td>sProjectInfoAuthor</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td><p class="first last"><code class="docutils literal"><span class="pre">Author</span></code> - field of the integrated <code class="docutils literal"><span class="pre">project</span> <span class="pre">information</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td>sProjectInfoDescription</td>
+<td>STRING(255)</td>
+<td>&nbsp;</td>
+<td><p class="first last"><code class="docutils literal"><span class="pre">Description</span></code> - Field of the integrated <code class="docutils literal"><span class="pre">Project</span> <span class="pre">Information</span></code></p>
+</td>
+</tr>
+<tr class="row-odd"><td>sProfileVersion</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td><p class="first last">Profile Version which is set during download</p>
+</td>
+</tr>
+<tr class="row-even"><td>dtLastAppChange</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Time stamp of the last Change which was made to the application</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sCompilerVersion</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td><p class="first last">Compiler version set during download</p>
+</td>
+</tr>
+<tr class="row-even"><td>sDeviceName</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td>Device-Name</td>
+</tr>
+<tr class="row-odd"><td>sDeviceVersion</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td>Device-Version</td>
+</tr>
+<tr class="row-even"><td>sDeviceSerialNumber</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td>Device-Seriennummer</td>
+</tr>
+<tr class="row-odd"><td>sDeviceHostName</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td>Device-Hostname</td>
+</tr>
+<tr class="row-even"><td>sDeviceNodeName</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td>Device-Nodename</td>
+</tr>
+<tr class="row-odd"><td>sRuntimeVersion</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td>Runtime-Version</td>
+</tr>
+<tr class="row-even"><td>tRuntimeUptime</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td><p class="first last">Runtime Runtime of the CODESYS Control Runtime ( not of the application )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>wProcessorType</td>
+<td>WORD</td>
+<td>&nbsp;</td>
+<td><p class="first last">Runtime processor type</p>
+</td>
+</tr>
+<tr class="row-even"><td>sEthernetAdapterIPAddress</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td><p class="first last">IP address of the specified network adapter</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sEthernetAdapterSubnetMask</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td><p class="first last">Subnet mask of the specified network adapter</p>
+</td>
+</tr>
+<tr class="row-even"><td>sEthernetAdapterGateway</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td><p class="first last">Gateway address of the specified network adapter</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sEthernetAdapterMACAddress</td>
+<td>STRING(diMaxStrLen)</td>
+<td>&nbsp;</td>
+<td><p class="first last">MAC address of the specified network adapter</p>
+</td>
+</tr>
+<tr class="row-even"><td>diStringMaxLen</td>
+<td>DINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Maximum length of strings</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pou-SystemInfo/FB_Init.html">SystemInfo.FB_Init (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-SystemInfo/mGetNetworkInfo.html">SystemInfo.mGetNetworkInfo (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-SystemInfo/mGetUpTime.html">SystemInfo.mGetUpTime (METH)</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pou-SystemInfo/FB_Init.html" class="btn btn-neutral float-right" title="SystemInfo.FB_Init (METH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fld-System-Info.html" class="btn btn-neutral float-left" title="System Info" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

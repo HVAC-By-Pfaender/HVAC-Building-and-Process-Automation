@@ -1,0 +1,76 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.ERROR`:
+
+
+.. Index::
+   single: ERROR
+
+.. _`ERROR`:
+
+ERROR (ENUM)
+------------
+
+TYPE ERROR :
+
+
+
+.. todo:: Please add documentation for enum: ERROR
+
+
+
+
+
+InOut:
+    +---------------------------------+---------+---------------+
+    | Name                            | Initial | Comment       |
+    +=================================+=========+===============+
+    | .. _`ERROR.UNKNOWN_ERROR`:      | -1      | Unknown error |
+    |                                 |         |               |
+    | UNKNOWN_ERROR                   |         |               |
+    +---------------------------------+---------+---------------+
+    | .. _`ERROR.NO_ERROR`:           | 0       | No error      |
+    |                                 |         |               |
+    | NO_ERROR                        |         |               |
+    +---------------------------------+---------+---------------+
+    | .. _`ERROR.TIME_OUT`:           | 1       | Timeout error |
+    |                                 |         |               |
+    | TIME_OUT                        |         |               |
+    +---------------------------------+---------+---------------+
+    | .. _`ERROR.TIME_READING_ERROR`: | 1000    |               |
+    |                                 |         |               |
+    | TIME_READING_ERROR              |         |               |
+    +---------------------------------+---------+---------------+
+    | .. _`ERROR.SET_TIMEZONE_ERROR`: | 1001    |               |
+    |                                 |         |               |
+    | SET_TIMEZONE_ERROR              |         |               |
+    +---------------------------------+---------+---------------+
+    | .. _`ERROR.GET_DAT_ERROR`:      | 1002    |               |
+    |                                 |         |               |
+    | GET_DAT_ERROR                   |         |               |
+    +---------------------------------+---------+---------------+
+    | .. _`ERROR.SPLIT_DUT_ERROR`:    | 1003    |               |
+    |                                 |         |               |
+    | SPLIT_DUT_ERROR                 |         |               |
+    +---------------------------------+---------+---------------+
+    | .. _`ERROR.GET_DOW_ERROR`:      | 1004    |               |
+    |                                 |         |               |
+    | GET_DOW_ERROR                   |         |               |
+    +---------------------------------+---------+---------------+
+    | .. _`ERROR.ARRAY_TO_SMALL`:     | 100     |               |
+    |                                 |         |               |
+    | ARRAY_TO_SMALL                  |         |               |
+    +---------------------------------+---------+---------------+
+    | .. _`ERROR.ARRAY_TO_BIG`:       | 101     |               |
+    |                                 |         |               |
+    | ARRAY_TO_BIG                    |         |               |
+    +---------------------------------+---------+---------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,513 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CascadeExtractSupplyAirTemperature (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../../search.html" />
+    <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>CascadeExtractSupplyAirTemperature (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/Libraries/HVAC-Library/HVAC-Functions/Control/CascadeExtractSupplyAirTemperature.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-control-cascadeextractsupplyairtemperature"></span><div class="section" id="cascadeextractsupplyairtemperature-fb">
+<span id="cascadeextractsupplyairtemperature"></span><span id="index-0"></span><h1>CascadeExtractSupplyAirTemperature (FB)<a class="headerlink" href="#cascadeextractsupplyairtemperature-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK CascadeExtractSupplyAirTemperature</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Bildung einer Zuluftsolltemperatur mittels eines Kaskadenreglers ( PI-Regler )</div>
+<div class="line">Zusatzfunktionen: Begrenzung der Zuluftsolltemperatur</div>
+<div class="line">Typische Anwendung: Zulufttemperaturregelung in einer Lüftungsanlage</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../../_images/CascadeExtractSupplyAirTemperature_FB.png" src="../../../../_images/CascadeExtractSupplyAirTemperature_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein dient zur Bildung der Zuluftsolltemperatur einer Lüftungsanlage aus</div>
+<div class="line"><br /></div>
+<div class="line">1) Aktuelle Solltemperatur ( Abluft- oder Raumtemperatur ) in °C</div>
+<div class="line"><br /></div>
+<div class="line">2) Aktuelle Isttemperatur ( Abluft- oder Raumtemperatur ) in °C</div>
+<div class="line"><br /></div>
+<div class="line">unter Berücksichtigung der relativen (  <em>rMinSUPTemp</em> bzw. <em>rMaxSUPTemp</em> ) und absoluten ( <strong>rMinSUP</strong> bzw. <strong>rMaxSUP</strong> ) Grenzen.</div>
+<div class="line">Zusätzlich werden bei der Bildung der Zuluftsolltemperatur die Sonderbetriebsarten &#8216;Schnellaufheizung&#8217; und &#8216;Freie Nachtkühlung&#8217; berücksichtigt.</div>
+<div class="line">Die Bildung der Zuluftsolltemperatur erfolgt zeitverzögert ( <strong>tDelayControl</strong> ) nach der Freigabe / Sperrung des Reglers ( <em>xEn</em> = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">Die Freigabe des Kaskadenreglers erfolgt, falls folgende nachfolgend beschriebenen Bedingungen gleichzeitig erfüllt sind:</div>
+<div class="line"><br /></div>
+<div class="line">1) Die Sonderbetriebsart <em>Schnellaufheizung</em> ist gesperrt ( <em>xFastHeatEn</em> = FALSE ).</div>
+<div class="line"><br /></div>
+<div class="line">2) Die Sonderbetriebsart <em>Freie Nachtkühlung</em> ist gesperrt ( <em>xFNCEn</em> = FALSE ).</div>
+<div class="line"><br /></div>
+<div class="line">3) Die aktuelle Isttemperatur <em>rActTemp</em> verletzt nicht ihre absoluten Grenzwerte ( +5.0 - +50.0 °C ).</div>
+<div class="line"><br /></div>
+<div class="line">4) Die Regelung ist freigegeben ( <em>xEn</em> = TRUE ) und die Einschaltverzögerung ( Zeitdauer = <strong>tDelayControl</strong> ) ist beendet.</div>
+<div class="line"><br /></div>
+<div class="line">In allen übrigen Situationen ist der Kaskadenregler gesperrt.</div>
+</div>
+</div>
+<div class="section" id="regelung">
+<h3>Regelung<a class="headerlink" href="#regelung" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die aktuelle Isttemperatur <em>rActTemp</em> wird bei freigegebenem Kaskadenregler ( PI-Regler, <em>xEn</em> = TRUE, Ablauf der Zeitdauer <strong>tDelayControl</strong>, keine
+Grenzwerteverletzung am Eingang <em>rActTemp</em> ) permanent mit der aktuellen Solltemperatur <em>rSetPtTemp</em> verglichen und je nach Betrag / Vorzeichen der Differenz
+bzw. in Abhängigkeit von den Reglereinstellungen ( <strong>rPI_Kp</strong> bzw. <strong>rPI_Tn</strong> ) wird im Kaskadenregler eine Versatztemperatur erzeugt.</div>
+<div class="line"><br /></div>
+<div class="line">Im Heizfall ( <em>rActTemp</em> &lt; <em>rSetPtTemp</em> ) ensteht somit eine positive Versatztemperatur im Bereich 0.0 - <strong>rMaxRelativeSUP</strong> K.</div>
+<div class="line">Im Kühlfall ( <em>rActTemp</em> &gt; <em>rSetPtTemp</em> ) ensteht somit eine negative Versatztemperatur im Bereich 0.0 - <strong>rMinRelativeSUP</strong> K.</div>
+<div class="line">Im vollständig ausgeregelten Zustand ( <em>rActTemp</em> = <em>rSetPtTemp</em> ) ändert sich die Versatztemperatur nicht.</div>
+<div class="line"><br /></div>
+<div class="line">Diese Versatztemperatur wird anschliessend zur aktuellen Solltemperatur addiert und bei Bedarf auf die berechneten Grenzwerte</div>
+<div class="line"><em>rMinSUPTemp</em> bzw. <em>rMaxSUPTemp</em> begrenzt.</div>
+<div class="line"><br /></div>
+<div class="line">Am Ausgang <em>rMinSUPTemp</em> wird permanent die berechnete minimale Zuluftsolltemperatur ( <em>rActTemp</em> + <strong>rMinRelativeSUP</strong>,
+absolut begrenzt auf <strong>rMinSUP</strong> bzw. <strong>rMaxSUP</strong> ) dargestellt.</div>
+<div class="line">Am Ausgang <em>rMaxSUPTemp</em> wird permanent die berechnete maximale Zuluftsolltemperatur ( <em>rActTemp</em> + <strong>rMaxRelativeSUP</strong>,
+absolut begrenzt auf <strong>rMinSUP</strong> bzw. <strong>rMaxSUP</strong> ) dargestellt.</div>
+<div class="line"><br /></div>
+<div class="line">Die aktuelle Isttemperatur <em>rActTemp</em> wird auf die Einhaltung von Grenzwerten überwacht.</div>
+<div class="line">Bei jeder Grenzwertverletzung ( <em>rActTemp</em> &lt; +5.0 °C bzw. <em>rActTemp</em> &gt; +50.0 °C ) wird der Kaskadenregler deaktiviert.</div>
+</div>
+</div>
+<div class="section" id="auswahl-der-zuluftsolltemperatur">
+<h3>Auswahl der Zuluftsolltemperatur<a class="headerlink" href="#auswahl-der-zuluftsolltemperatur" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Auswahl der Zuluftsolltemperatur erfolgt gemäß der nachfolgenden Funktionstabelle.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="20%" />
+<col width="10%" />
+<col width="20%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xFastHeatEn</em></th>
+<th class="head"><em>xFNCEn</em></th>
+<th class="head"><em>rActTemp</em> innerhalb Grenzwert</th>
+<th class="head"><em>xEn</em></th>
+<th class="head">Zuluftsolltemperatur</th>
+<th class="head">Hinweise</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TRUE</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td><strong>rMaxSUP</strong></td>
+<td>Sonderbetriebsart &#8216;Schnellaufheizung&#8217;</td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>X</td>
+<td><strong>rMinSUP</strong></td>
+<td>Sonderbetriebsart &#8216;Freie Nachtkühlung&#8217;</td>
+</tr>
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>X</td>
+<td><em>rSetPtTemp</em></td>
+<td>Grenzwertverletzung Isttemperatur</td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>FALSE</td>
+<td>X</td>
+<td>FALSE</td>
+<td><em>rSetPtTemp</em></td>
+<td>Sperrung der Regelung</td>
+</tr>
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td><em>rSetPtTemp</em> + Versatztemperatur</td>
+<td>Normalbetrieb</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = beliebig</div>
+</div>
+</div>
+<div class="section" id="bildung-der-aktuellen-zuluftsolltemperatur-rsetptsuptemp">
+<h3>Bildung der aktuellen Zuluftsolltemperatur <em>rSetPtSUPTemp</em><a class="headerlink" href="#bildung-der-aktuellen-zuluftsolltemperatur-rsetptsuptemp" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die aktuelle Zuluftsolltemperatur <em>rSetPtSUPTemp</em> wird aus der Zuluftsolltemperatur, erweitert um ein Handübersteuermodul, gebildet.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-2">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Zuluftsolltemperatur</th>
+<th class="head"><strong>eManModeN</strong></th>
+<th class="head"><em>rSetPtSUPTemp</em></th>
+<th class="head">Hinweise</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>X</td>
+<td>eMANNUM.Auto</td>
+<td>Zuluftsolltemperatur</td>
+<td>Handübersteuermodul in Automatik</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANNUM.Man</td>
+<td><strong>rManValue</strong></td>
+<td>Handübersteuermodul in Handbetrieb</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legende: X = beliebig</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="15%" />
+<col width="11%" />
+<col width="12%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="5">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe / Sperrung des Reglers ( FALSE = Sperrung, TRUE =
+Freigabe )</td>
+</tr>
+<tr class="row-odd"><td>rActTemp</td>
+<td>REAL</td>
+<td>0</td>
+<td>Aktuelle Isttemperatur ( Abluft- oder Raumtemperatur ) in °C
+( +5.0 - +50.0 )</td>
+</tr>
+<tr class="row-even"><td>rSetPtTemp</td>
+<td>REAL</td>
+<td>21</td>
+<td>Aktuelle Solltemperatur ( Abluft- oder Raumtemperatur ) in
+°C</td>
+</tr>
+<tr class="row-odd"><td>xFastHeatEn</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Freigabe / Sperrung der Schnellaufheizung ( FALSE =
+Sperrung, TRUE = Freigabe )</td>
+</tr>
+<tr class="row-even"><td>xFNCEn</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td>Freigabe / Sperrung der freien Nachtkühlung ( FALSE =
+Sperrung, TRUE = Freigabe )</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">Output</td>
+<td>rSetPtSUPTemp</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Aktuelle Zuluftsolltemperatur in °C</td>
+</tr>
+<tr class="row-even"><td>rMinSUPTemp</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Berechnete minimale Zuluftsolltemperatur in °C</td>
+</tr>
+<tr class="row-odd"><td>rMaxSUPTemp</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Berechnete maximale Zuluftsolltemperatur in °C</td>
+</tr>
+<tr class="row-even"><td rowspan="9">Input</td>
+<td>rPI_Tn</td>
+<td>REAL</td>
+<td>600</td>
+<td>Nachstellzeit des Kaskadenreglers in s</td>
+</tr>
+<tr class="row-odd"><td>rPI_Kp</td>
+<td>REAL</td>
+<td>1</td>
+<td>Verstärkungsfaktor des Kaskadenreglers</td>
+</tr>
+<tr class="row-even"><td>rMaxSUP</td>
+<td>REAL</td>
+<td>26</td>
+<td>Absolute maximale Zuluftsolltemperatur in °C</td>
+</tr>
+<tr class="row-odd"><td>rMaxRelativeSUP</td>
+<td>REAL</td>
+<td>6</td>
+<td>Maximale Differenz zwischen der Raum- / Ablufttemperatur und
+der Zuluftsolltemperatur - Heizfall in K</td>
+</tr>
+<tr class="row-even"><td>rMinSUP</td>
+<td>REAL</td>
+<td>16</td>
+<td>Absolute minimale Zuluftsolltemperatur in °C</td>
+</tr>
+<tr class="row-odd"><td>rMinRelativeSUP</td>
+<td>REAL</td>
+<td>-8</td>
+<td>Maximale Differenz zwischen der Raum- / Ablufttemperatur und
+der Zuluftsolltemperatur - Kühlfall in K</td>
+</tr>
+<tr class="row-even"><td>tDelayControl</td>
+<td>TIME</td>
+<td>TIME#5m0s0ms</td>
+<td>Startverzögerung des Kaskadenreglers in min</td>
+</tr>
+<tr class="row-odd"><td>rManValue</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Ausgangssignal des Kaskadenreglers im Handbetrieb in °C</td>
+</tr>
+<tr class="row-even"><td>eManModeN</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eManNum</span></a></td>
+<td>eManNum.Auto</td>
+<td>Betriebsart der Handübersteuerung für das Ausgangssignal des
+Kaskadenreglers</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

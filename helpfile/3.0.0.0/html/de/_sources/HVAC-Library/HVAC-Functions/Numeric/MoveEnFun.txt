@@ -1,0 +1,61 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fun-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.MoveEnFun`:
+
+
+.. index::
+   single: MoveEnFun
+
+.. _`MoveEnFun`:
+
+MoveEnFun (FUN)
+---------------
+
+FUNCTION MoveEnFun : REAL
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Freigabe / Sperrung eines nummerischen Werts
+     |
+     | Typische Anwendung: Weiterleitung von Sollwerten
+
+*********************
+Funktionsbeschreibung
+*********************
+
+| Diese Funktion liefert die nummerische Eingangsgrösse *rValue* im Format REAL zurück, falls der Eingang Freigabe / Sperrung *xEn* aktiv ( = TRUE ) ist.
+| In allen anderen Fällen liefert die Funktion den Wert 0.0 zurück.
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+------+-----------------------------------------------------------+
+    | Scope  | Name      | Type | Comment                                                   |
+    +========+===========+======+===========================================================+
+    | Return | MoveEnFun | REAL |                                                           |
+    +--------+-----------+------+-----------------------------------------------------------+
+    | Input  | xEn       | BOOL | Freigabe / Sperrung ( FALSE = Sperrung, TRUE = Freigabe ) |
+    +        +-----------+------+-----------------------------------------------------------+
+    |        | rValue    | REAL | nummerische Eingangsgrösse                                |
+    +--------+-----------+------+-----------------------------------------------------------+
+
+
+.. last line of fun-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

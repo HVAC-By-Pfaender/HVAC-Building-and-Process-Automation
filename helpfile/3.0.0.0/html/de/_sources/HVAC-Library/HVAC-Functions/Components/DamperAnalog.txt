@@ -1,0 +1,288 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.DamperAnalog`:
+
+
+.. index::
+   single: DamperAnalog
+
+.. _`DamperAnalog`:
+
+DamperAnalog (FB)
+-----------------
+
+FUNCTION_BLOCK DamperAnalog
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Steuerung eines stetigen Klappenantriebs mit stetiger Positionsrückmeldung
+     |
+     | Typische Anwendung: Stetige Umluftklappe einer RLT-Anlage
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/DamperAnalog_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rY*
+      - REAL
+      -
+      -
+      - Sollwert - Position
+    * - *xForce*
+      - BOOL
+      -
+      - FALSE
+      - Zwangsübersteuerung nach Handebene
+    * - *rU*
+      - REAL
+      -
+      - 0.0
+      - Rückführung der Klappenstellung
+    * - *eAO*
+      - HVACTYPES.eManNum
+      - HVACTYPES.eManNum.Auto, HVACTYPES.eManNum.Man
+      - HVACTYPES.eManBin.Auto
+      - Betriebsart der Handübersteuerung - Hardware
+    * - *rPoti*
+      - REAL
+      -
+      - 0.0
+      - Handwert der Handübersteuerung - Hardware
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rHA*
+      - REAL
+      -
+      -
+      - Stellsignal Klappenantrieb nach Handübersteuerung
+    * - *rAA*
+      - REAL
+      -
+      -
+      - Stellsignal Klappenantrieb vor Handübersteuerung
+    * - *xAlarm*
+      - BOOL
+      -
+      -
+      - Sammelstörung
+    * - *xAuto*
+      - BOOL
+      -
+      -
+      - Sammelmeldung Automatikbetrieb
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **udiControlTime**
+      - UDINT
+      - 10s ... 600s
+      - 150s
+      - Zeitdauer der Positionsüberwachung
+    * - **rControlDiff**
+      - REAL
+      -
+      - 7.0 %
+      - maximal zulässige Abweichung zwischen Soll- und Iststellung in %
+    * - **xControl**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe der Positionsüberwachung
+    * - **xForceOption**
+      - BOOL
+      -
+      - FALSE
+      - Zustand vom Ausgang *rHA* bei Zwangsübersteuerung
+    * - **rManValue**
+      - REAL
+      -
+      - 0.0
+      - Handwert
+    * - **eManModeN**
+      - eMANNUM
+      - eMANNUM.Auto, eMANNUM.Man
+      - eMANBIN.Auto
+      - Betriebsart der Handübersteuerung
+
+*********************
+Funktionsbeschreibung
+*********************
+Stellsignal Klappenantrieb vor Handübersteuerung *rAA*
+======================================================
+| Das Stellsignal des Klappenantriebs vor Handübersteuerung *rAA* wird unverändert vom Eingang Sollwert - Position *rY* übernommen.
+|
+
+Stellsignal Klappenantrieb nach Handübersteuerung *rHA*
+=======================================================
+| Das Stellsignal des Klappenantriebs nach Handübersteuerung *rHA* entspricht dem Stellsignal des Klappenantriebs vor Handübersteuerung *rAA*
+  zusätzlich erweitert um ein Handübersteuermodul und um eine Zwangsübersteuerung.
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 300 300 300 300 900
+    :header-rows: 1
+
+    * - *rAA*
+      - **eManModeN**
+      - *xForce*
+      - **xForceOption**
+      - *rHA*
+      - Hinweise
+    * - X
+      - eMANNUM.Auto
+      - FALSE
+      - X
+      - *rAA*
+      - Handübersteuermodul in Automatik
+    * - X
+      - eMANNUM.Man
+      - FALSE
+      - X
+      - **rManValue**
+      - Handübersteuermodul im Handbetrieb
+    * - X
+      - X
+      - TRUE
+      - FALSE
+      - 0.0
+      - Zwangsübersteuerung 0.0
+    * - X
+      - X
+      - TRUE
+      - TRUE
+      - 100.0
+      - Zwangsübersteuerung 100.0
+
+| Legende: X = beliebig
+
+Sammelstörung *xAlarm*
+======================
+| Die Sammelstörung *xAlarm* wird aktiviert ( = TRUE ), falls der Betrag der Differenz zwischen dem Stellsignal Klappenantrieb nach Handübersteuerung *rHA* und
+  dem Istwert der Position *rU* während einer Mindestzeitdauer von **udiControlTime** permanent die maximale Abweichung zwischen Soll- und Istwert der Position
+  **rControlDiff** überschreitet.
+| Gleichzeitig müssen sowohl die Freigabe der Positionsüberwachung **xControl** aktiv ( = TRUE ) sein und die Betriebsart der Handübersteuerung - Hardware sich in der
+  Stellung HVACTYPES.eManBin.Auto befinden.
+|
+| In alle übrigen Fällen ist die Sammelstörung *xAlarm* nicht aktiviert ( = FALSE ).
+|
+
+Sammelmeldung Automatikbetrieb *xAuto*
+======================================
+| Die Sammelmeldung Automatikbetrieb *xAuto* wird aktiviert ( = TRUE ), falls der Eingang *eAO* den Wert HVACTYPES.eManNum.Auto und der Sollwert / Parameter **eManModeN**
+  den Wert eMANNUM.Auto enthält. In alle übrigen Fällen ist die Sammelmeldung Automatikbetrieb *xAuto* nicht aktiviert ( = FALSE ).
+|
+Zwangsübersteuerung *xForce*
+======================================
+| Die Zwangsübersteuerung wirkt direkt auf den Ausgang *rHA*. Mit dem Parameter **xForceOption** wird festgelegt, welchen Zustand der Ausgang *rHA* bei TRUE am Eingang *xForce* einnimmt.
+|
+| Bei **xForceOption** = FALSE
+| Befindet sich der Eingang *xForce* auf TRUE, dann wird der Ausgang *rHA* auf 0 gesetzt.
+|
+| Bei **xForceOption** = TRUE
+| Befindet sich der Eingang *xForce* auf TRUE, dann wird der Ausgang *rHA* auf 100 gesetzt.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+----------------+-------------+------------------------+-------------------------------------------------------------+
+    | Scope  | Name           | Type        | Initial                | Comment                                                     |
+    +========+================+=============+========================+=============================================================+
+    | Input  | rY             | REAL        |                        | Sollwert - Position                                         |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xForce         | BOOL        | FALSE                  | Zwangsübersteuerung nach Handebene                          |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | rU             | REAL        | 0                      | Rückführung der Klappenstellung                             |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | eAO            | |ioeManNum| | HVACTYPES.eManNum.Auto | Betriebsart der Handübersteuerung - Hardware                |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | rPoti          | REAL        | 0                      | Handwert der Handübersteuerung - Hardware                   |
+    +--------+----------------+-------------+------------------------+-------------------------------------------------------------+
+    | Output | rHA            | REAL        |                        | Stellsignal Klappenantrieb nach Handübersteuerung           |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | rAA            | REAL        |                        | Stellsignal Klappenantrieb vor Handübersteuerung            |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarm         | BOOL        |                        | Sammelstörung                                               |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAuto          | BOOL        |                        | Sammelmeldung Automatikbetrieb                              |
+    +--------+----------------+-------------+------------------------+-------------------------------------------------------------+
+    | Input  | udiControlTime | UDINT       | 200                    | Zeitdauer der Positionsüberwachung                          |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | rControlDiff   | REAL        | 7                      | maximal zulässige Abweichung zwischen Soll- und Iststellung |
+    |        |                |             |                        | in %                                                        |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xControl       | BOOL        | TRUE                   | Freigabe der Positionsüberwachung                           |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xForceOption   | BOOL        | FALSE                  | Zustand vom Ausgang *rHA* bei Zwangsübersteuerung           |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | rManValue      | REAL        | 0                      | Handwert                                                    |
+    +        +----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | eManModeN      | |ioeMANNUM| | eMANNUM.Auto           | Betriebsart der Handübersteuerung                           |
+    +--------+----------------+-------------+------------------------+-------------------------------------------------------------+
+
+.. |ioeMANNUM| replace:: :ref:`eMANNUM<eManNum>`
+.. |ioeManNum| replace:: :ref:`eManNum<eManNum>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,36 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Clock.ClockMaster32.MasterDatenGet`:
+
+
+.. _`ClockMaster32.MasterDatenGet`:
+
+ClockMaster32.MasterDatenGet (METH)
+-----------------------------------
+
+METHOD MasterDatenGet : HVACTYPES.stMasterClockData
+
+
+
+
+.. todo:: Please add documentation for method: ClockMaster32.MasterDatenGet
+
+
+
+
+
+InOut:
+    +--------+----------------+-----------------------------+
+    | Scope  | Name           | Type                        |
+    +========+================+=============================+
+    | Return | MasterDatenGet | HVACTYPES.stMasterClockData |
+    +--------+----------------+-----------------------------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,43 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Binary.ManBin.mExPara`:
+
+
+.. _`ManBin.mExPara`:
+
+ManBin.mExPara (METH)
+---------------------
+
+METHOD mExPara
+
+
+
+
+{attribute 'hide'}
+
+
+
+
+
+InOut:
+    +-------+-----------------+--------------+-----------------------------------------------------------+
+    | Scope | Name            | Type         | Comment                                                   |
+    +=======+=================+==============+===========================================================+
+    | Inout | eManModeB_Ex    | |ioeManBin|  | Betriebsart für das binäre Ausgangssignal *xOut*, 0=Auto, |
+    |       |                 |              | 1=Hand Aus, 2=Hand Ein                                    |
+    +-------+-----------------+--------------+-----------------------------------------------------------+
+    | Input | MasterHandID_Ex | |ioeHandMAN| | MasterHandID fur Hand MasterFb                            |
+    +-------+-----------------+--------------+-----------------------------------------------------------+
+
+.. |ioeManBin| replace:: :ref:`eManBin<eManBin>`
+.. |ioeHandMAN| replace:: :ref:`eHandMAN<eHandMan>`
+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

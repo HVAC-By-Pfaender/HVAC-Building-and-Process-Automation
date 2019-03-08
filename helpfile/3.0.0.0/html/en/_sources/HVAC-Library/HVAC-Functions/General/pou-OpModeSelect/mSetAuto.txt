@@ -1,0 +1,34 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-General.OpModeSelect.mSetAuto`:
+
+
+.. _`OpModeSelect.mSetAuto`:
+
+OpModeSelect.mSetAuto (METH)
+----------------------------
+
+METHOD mSetAuto
+
+
+
+
+***********************************
+Kurzbeschreibung Methode (mSetAuto)
+***********************************
+
+     | Rücksetzung in den Automatikbetrieb
+
+
+
+
+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

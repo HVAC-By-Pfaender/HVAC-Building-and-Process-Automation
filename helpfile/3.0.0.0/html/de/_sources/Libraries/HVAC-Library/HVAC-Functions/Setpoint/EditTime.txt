@@ -1,0 +1,115 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Setpoint.EditTime`:
+
+
+.. index::
+   single: EditTime
+
+.. _`EditTime`:
+
+EditTime (FB)
+-------------
+
+FUNCTION_BLOCK EditTime
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Eingabe einer Zeitdauer im Format TIME ( t#12h34m15s )
+     |
+     | Typische Anwendung: Festlegung einer Zeitverzögerung
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/EditTime_FB.png
+
+**************
+Schnittstellen
+**************
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *tOut*
+      - TIME
+      -
+      -
+      - Ausgabewert im Format TIME
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **tSetPoint**
+      - TIME
+      -
+      - T#0s
+      - Eingabewert im Format TIME
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Übergabe eines Eingabewerts im Format TIME **tSetPoint** und die direkte Übertragung zum
+  Ausgabewert im Format TIME *tOut*.
+
+.. topic:: Verhalten bei Spannungsausfall
+
+    | Der Eingabewert im Format TIME **tSetPoint** wird spannungsausfallsicher gespeichert und automatisch wiederhergestellt.
+    |
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+------+----------+----------------------------+
+    | Scope  | Name      | Type | Initial  | Comment                    |
+    +========+===========+======+==========+============================+
+    | Input  | tSetPoint | TIME | TIME#0ms | Eingabewert im Format TIME |
+    +--------+-----------+------+----------+----------------------------+
+    | Output | tOut      | TIME |          | Ausgabewert im Format TIME |
+    +--------+-----------+------+----------+----------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

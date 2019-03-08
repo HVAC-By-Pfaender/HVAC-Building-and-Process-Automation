@@ -1,0 +1,96 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.SmokeDetector`:
+
+
+.. index::
+   single: SmokeDetector
+
+.. _`SmokeDetector`:
+
+SmokeDetector (FB)
+------------------
+
+FUNCTION_BLOCK SmokeDetector
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Auswertung der Signale eines Rauchmelders
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/SmokeDetector_FB.png
+
+*********************
+Funktionsbeschreibung
+*********************
+
+Alarm - Ausgang *xAlarm*
+========================
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 600 300 900
+    :header-rows: 1
+
+    * - *xAlarmIn*
+      - *xService*
+      - *xAlarm*
+      - Hinweise
+    * - FALSE
+      - FALSE
+      - FALSE
+      - keine Störung aktiv
+    * - TRUE
+      - X
+      - TRUE
+      - Eingang *xAlarmIn* aktiv
+    * - X
+      - TRUE
+      - TRUE
+      - Eingang *xService* aktiv
+
+| Legende: X = beliebig
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+----------+------+-------------------------------------------------------------------+
+    | Scope  | Name     | Type | Comment                                                           |
+    +========+==========+======+===================================================================+
+    | Input  | xAlarmIn | BOOL | Eingang - Störmeldung ( FALSE = nicht aktiv, TRUE = aktiv )       |
+    +        +----------+------+-------------------------------------------------------------------+
+    |        | xService | BOOL | Eingang - Servicemeldung ( FALSE = nicht aktiv, TRUE = aktiv )    |
+    +--------+----------+------+-------------------------------------------------------------------+
+    | Output | xAlarm   | BOOL | Ausgang - Sammelstörmeldung ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +--------+----------+------+-------------------------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

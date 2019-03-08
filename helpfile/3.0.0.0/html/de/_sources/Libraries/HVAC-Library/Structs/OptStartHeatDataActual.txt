@@ -1,0 +1,74 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of struct-object.rst template
+.. _`.fld-HVAC Library.fld-Structs.OptStartHeatDataActual`:
+
+
+.. Index::
+   single: OptStartHeatDataActual
+
+.. _`OptStartHeatDataActual`:
+
+OptStartHeatDataActual (STRUCT)
+-------------------------------
+
+TYPE OptStartHeatDataActual : STRUCT
+
+
+
+.. todo:: Please add documentation for struct: OptStartHeatDataActual
+
+
+
+
+
+InOut:
+    +-----------------+-------+
+    | Name            | Type  |
+    +=================+=======+
+    | TestTimeTime    | TOD   |
+    +-----------------+-------+
+    | TestTimeDate    | UDINT |
+    +-----------------+-------+
+    | TestTimeTO      | REAL  |
+    +-----------------+-------+
+    | TestTimeTI      | REAL  |
+    +-----------------+-------+
+    | DeadTimeTime    | TOD   |
+    +-----------------+-------+
+    | DeadTimeDate    | UDINT |
+    +-----------------+-------+
+    | DeadTimeTO      | REAL  |
+    +-----------------+-------+
+    | DeadTimeTI      | REAL  |
+    +-----------------+-------+
+    | HeatTimeTime    | TOD   |
+    +-----------------+-------+
+    | HeatTimeDate    | UDINT |
+    +-----------------+-------+
+    | HeatTimeTO      | REAL  |
+    +-----------------+-------+
+    | HeatTimeTI      | REAL  |
+    +-----------------+-------+
+    | HeatEndTimeTime | TOD   |
+    +-----------------+-------+
+    | HeatEndTimeDate | UDINT |
+    +-----------------+-------+
+    | HeatEndTimeTO   | REAL  |
+    +-----------------+-------+
+    | HeatEndTimeTI   | REAL  |
+    +-----------------+-------+
+    | ErrorTime       | TOD   |
+    +-----------------+-------+
+    | ErrorDate       | UDINT |
+    +-----------------+-------+
+    | ErrorCode       | WORD  |
+    +-----------------+-------+
+
+
+.. last line of struct-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

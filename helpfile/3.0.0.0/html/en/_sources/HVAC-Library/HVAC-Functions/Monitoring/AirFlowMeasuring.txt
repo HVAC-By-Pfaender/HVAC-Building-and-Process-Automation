@@ -1,0 +1,118 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Monitoring.AirFlowMeasuring`:
+
+
+.. index::
+   single: AirFlowMeasuring
+
+.. _`AirFlowMeasuring`:
+
+AirFlowMeasuring (FB)
+---------------------
+
+FUNCTION_BLOCK AirFlowMeasuring
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Berechnung des aktuellen Volumenstroms über eine Ringmessdüse
+     |
+     | Typische Anwendung: Berechnung des aktuellen Volumenstroms eines Ventilators
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/AirFlowMeasuring_FB.png
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Berechnung des aktuellen Volumenstroms eines Ventilators aufgrund der Druckdifferenz, die mittels einer
+  Messeinrichtung ( = Ringmessdüse ) permanent erfasst wird.
+
+.. topic:: Erfassung der aktuellen Luftdichte *rDensity*
+
+    | Für Berechnungen mit reduzierter Genauigkeit ist die Angabe einer Konstanten ausreichend.
+    | Für Berechnungen mit erhöhter Genauigkeit ist die Berechnung der Luftdichte in Abhängigkeit von der aktuellen Temperatur, der relativen Luftfeuchtigkeit, des Luftdrucks und des Sättigungsdampfdrucks erforderlich.
+    | Sinkt der aktuelle Wert für die Luftdichte unter 0.1 kg/m³, so wird sie auf 0.1 kg/m³ begrenzt.
+
+Auswahl der Berechnungsformel **eMode**
+=======================================
+| Dieser Sollwerte / Parameter dient zur Auswahl der zugrundeliegenden Berechnungsformel. Die Berechnungsformel und der **k_Value** müssen stets
+  anlagenspezifisch beim Ventilatorersteller erfragt werden.
+
+ .. list-table::
+    :name: Berechnungsformel
+    :widths: 300 600 900
+    :header-rows: 1
+
+    * - **eMode**
+      - Formel
+      - Hinweise
+    * - eAirFlowFormula.exclusiveAirtight
+      - rOut = **k_Value** multipliziert mit der Wurzel aus *rPressure*
+      - Hersteller: z.B. EBM-Papst, Ziehl-Abegg
+    * - eAirFlowFormula.inclusiveAirtight
+      - rOut = **k_Value** multipliziert mit Wurzel aus (( 2 multipliziert mit *rPressure* ) geteilt durch ( *rDensity* ))
+      - Hersteller: z.B. Rosenberg, Gebhardt Nicotra
+    * - eAirFlowFormula.strangeForm
+      - Platzhalter für Erweiterungen
+      - *rOut* = 0.0 konstant
+
+Berechnungsfaktor **k_Value**
+=============================
+| Dieser Sollwerte / Parameter dient zur Eingabe des Berechnungsfaktor. Die Berechnungsformel und der **k_Value** müssen stets
+  anlagenspezifisch beim Ventilatorersteller erfragt werden.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+---------------------+-----------------------------------+--------------------------------------------------------------+
+    | Scope  | Name      | Type                | Initial                           | Comment                                                      |
+    +========+===========+=====================+===================================+==============================================================+
+    | Input  | rPressure | REAL                |                                   | Eingang für den Druckfühler in Pa ( 100 000 Pa = 1000 mbar = |
+    |        |           |                     |                                   | 1.000 bar ), Untere Grenze = 0.0 Pa                          |
+    +        +-----------+---------------------+-----------------------------------+--------------------------------------------------------------+
+    |        | rDensity  | REAL                | 1.2                               | Eingang für die Luftdichte = 1,2041 kg/m³ bei 20 °C und auf  |
+    |        |           |                     |                                   | Meereshöhe ( = 0m ), untere Grenze = 0.1 kg/m³               |
+    +--------+-----------+---------------------+-----------------------------------+--------------------------------------------------------------+
+    | Output | rOut      | REAL                |                                   | Berechnete Luftmenge in m³/h                                 |
+    +--------+-----------+---------------------+-----------------------------------+--------------------------------------------------------------+
+    | Input  | k_Value   | REAL                | 200                               | K-Faktor - bitte beim Ventilatorhersteller erfragen, untere  |
+    |        |           |                     |                                   | Grenze = 0.0                                                 |
+    +        +-----------+---------------------+-----------------------------------+--------------------------------------------------------------+
+    |        | eMode     | |ioeAirFlowFormula| | eAirFlowFormula.exclusiveAirtight | Auswahl der Berechnungsformel - bitte beim                   |
+    |        |           |                     |                                   | Ventilatorhersteller erfragen                                |
+    +--------+-----------+---------------------+-----------------------------------+--------------------------------------------------------------+
+
+.. |ioeAirFlowFormula| replace:: :ref:`eAirFlowFormula<eAirFlowFormula>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

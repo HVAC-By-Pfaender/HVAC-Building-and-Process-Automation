@@ -1,0 +1,76 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fun-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.MuxBin5Fun`:
+
+
+.. index::
+   single: MuxBin5Fun
+
+.. _`MuxBin5Fun`:
+
+MuxBin5Fun (FUN)
+----------------
+
+FUNCTION MuxBin5Fun : REAL
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Multiplexer für nummerische Eingangsgrössen mit binärer Auswahl ( 5 binäre Eingänge )
+     |
+     | Typische Anwendung: Umschaltung von Temperaturfühlern
+
+*********************
+Funktionsbeschreibung
+*********************
+
+| Diese Funktion liefert die durch die binären Eingänge *xEn1* ( FALSE = nicht aktiv, TRUE = aktiv ) bis *xEn5* ( FALSE = nicht aktiv, TRUE = aktiv ) ausgewählte nummerische Eingangsgrösse ( *rValue1* bis *rValue5* ) im Format REAL zurück. Der Eingang *xEn1* hat stets die höchste Priorität, der Eingang *xEn2* die zweithöchste, usw... Ist kein Eingang aktiv, so wird der Wert 0.0 zurück gegeben.
+
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+------------+------+---------------------------------------------------------------------+
+    | Scope  | Name       | Type | Comment                                                             |
+    +========+============+======+=====================================================================+
+    | Return | MuxBin5Fun | REAL |                                                                     |
+    +--------+------------+------+---------------------------------------------------------------------+
+    | Input  | xEn1       | BOOL | Freigabe / Sperrung *rValue1* ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | xEn2       | BOOL | Freigabe / Sperrung *rValue2* ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | xEn3       | BOOL | Freigabe / Sperrung *rValue3* ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | xEn4       | BOOL | Freigabe / Sperrung *rValue4* ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | xEn5       | BOOL | Freigabe / Sperrung *rValue5* ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | rValue1    | REAL | Nummerische Eingangsgrösse 1                                        |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | rValue2    | REAL | Nummerische Eingangsgrösse 2                                        |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | rValue3    | REAL | Nummerische Eingangsgrösse 3                                        |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | rValue4    | REAL | Nummerische Eingangsgrösse 4                                        |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | rValue5    | REAL | Nummerische Eingangsgrösse 5                                        |
+    +--------+------------+------+---------------------------------------------------------------------+
+
+
+.. last line of fun-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

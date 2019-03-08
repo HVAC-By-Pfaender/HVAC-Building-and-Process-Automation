@@ -1,0 +1,197 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Binary.ManBin`:
+
+
+.. index::
+   single: ManBin
+
+.. _`ManBin`:
+
+ManBin (FB)
+-----------
+
+FUNCTION_BLOCK ManBin EXTENDS MANASBase IMPLEMENTS IMan
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Handübersteuerung für ein binäres Signal
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/ManBin_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xIn*
+      - BOOL
+      -
+      -
+      - Binärer Eingang
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xOut*
+      - BOOL
+      -
+      -
+      - Binärer Ausgang
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **eManModeB**
+      - eMANBIN
+      - eMANBIN.Auto, eMANBIN.ManOff, eMANBIN.ManOn
+      - eMANBIN.Auto
+      - Betriebsart für das binäre Ausgangssignal *xOut*
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Handübersteuerung eines binären Eingangssignals *xIn*.
+
+Binärer Ausgang *xOut*
+======================
+
+ .. list-table::
+    :name: Funktionstabelle
+    :widths: 300 300 300 900
+    :header-rows: 1
+
+    * - *xIn*
+      - **eManMode**
+      - *xOut*
+      - Hinweise
+    * - FALSE
+      - Auto
+      - FALSE
+      - Automatikbetrieb - Aus
+    * - TRUE
+      - Auto
+      - TRUE
+      - Automatikbetrieb - Ein
+    * - X
+      - ManOff
+      - FALSE
+      - Handbetrieb - Aus
+    * - X
+      - ManOn
+      - TRUE
+      - Handbetrieb - Ein
+
+| Legende: X = beliebig
+
+**************
+Visualisierung
+**************
+Passendes Visualisierungselement aus der HVACV Visu Library: **ManBin**
+
+Darstellung
+===========
+  .. image:: /../DocumentationPictures_Visu/ManBin1.PNG
+
+  .. image:: /../DocumentationPictures_Visu/ManBin2.PNG
+
+Schnittstellen Visu-Element
+===========================
+
+ .. list-table::
+    :name: Schnittstellen Visu-Element
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Typ
+      - Initialwert
+      - Funktion
+    * - **eManModeB**
+      - eManBin
+      - VAR_IN_OUT
+      -
+      - Hier eManModeB eintragen Bsp. ManBin.eManModeB
+|
+| Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+-------------+--------------+--------------------------------------------------+
+    | Scope  | Name      | Type        | Initial      | Comment                                          |
+    +========+===========+=============+==============+==================================================+
+    | Input  | xIn       | BOOL        |              | Binärer Eingang                                  |
+    +        +-----------+-------------+--------------+--------------------------------------------------+
+    |        | eManModeB | |ioeManBin| | eManBin.Auto | Betriebsart für das binäre Ausgangssignal *xOut* |
+    +--------+-----------+-------------+--------------+--------------------------------------------------+
+    | Output | xOut      | BOOL        |              | Binärer Ausgang                                  |
+    +--------+-----------+-------------+--------------+--------------------------------------------------+
+
+.. |ioeManBin| replace:: :ref:`eManBin<eManBin>`
+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Binary/pou-ManBin/ModusValue
+   /HVAC-Library/HVAC-Functions/Binary/pou-ManBin/mExPara
+   /HVAC-Library/HVAC-Functions/Binary/pou-ManBin/mSetAuto
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

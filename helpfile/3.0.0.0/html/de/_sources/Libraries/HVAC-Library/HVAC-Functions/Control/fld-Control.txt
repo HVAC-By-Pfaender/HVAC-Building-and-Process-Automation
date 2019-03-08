@@ -1,0 +1,21 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Control`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Control`:
+
+Control
+=======
+
+.. todo:: Please add documentation for folder: Control
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Control/CascadeExtractSupplyAirTemp2Setpt
+   /HVAC-Library/HVAC-Functions/Control/CascadeExtractSupplyAirTemperature
+   /HVAC-Library/HVAC-Functions/Control/Control2P
+   /HVAC-Library/HVAC-Functions/Control/Control2Seq
+   /HVAC-Library/HVAC-Functions/Control/ControlP
+   /HVAC-Library/HVAC-Functions/Control/ControlPI
+   /HVAC-Library/HVAC-Functions/Control/Out3P
+
+.. last line of folder.rst template

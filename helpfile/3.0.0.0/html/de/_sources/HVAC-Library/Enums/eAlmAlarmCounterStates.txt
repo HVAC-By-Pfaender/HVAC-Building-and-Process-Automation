@@ -1,0 +1,52 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eAlmAlarmCounterStates`:
+
+
+.. Index::
+   single: eAlmAlarmCounterStates
+
+.. _`eAlmAlarmCounterStates`:
+
+eAlmAlarmCounterStates (ENUM)
+-----------------------------
+
+TYPE eAlmAlarmCounterStates :
+
+
+
+.. todo:: Please add documentation for enum: eAlmAlarmCounterStates
+
+
+
+
+
+InOut:
+    +---------------------------------------------------------------+---------+
+    | Name                                                          | Initial |
+    +===============================================================+=========+
+    | .. _`eAlmAlarmCounterStates.ERR_OK`:                          | 0       |
+    |                                                               |         |
+    | ERR_OK                                                        |         |
+    +---------------------------------------------------------------+---------+
+    | .. _`eAlmAlarmCounterStates.CLIENT_REGISTRATION_IN_PROGRESS`: | 1       |
+    |                                                               |         |
+    | CLIENT_REGISTRATION_IN_PROGRESS                               |         |
+    +---------------------------------------------------------------+---------+
+    | .. _`eAlmAlarmCounterStates.CLIENT_REGISTRATION_FAILED`:      | 2       |
+    |                                                               |         |
+    | CLIENT_REGISTRATION_FAILED                                    |         |
+    +---------------------------------------------------------------+---------+
+    | .. _`eAlmAlarmCounterStates.COUNTERS_UP_TO_DATE`:             | 3       |
+    |                                                               |         |
+    | COUNTERS_UP_TO_DATE                                           |         |
+    +---------------------------------------------------------------+---------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

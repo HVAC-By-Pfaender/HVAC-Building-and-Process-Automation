@@ -1,0 +1,126 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Binary.Trig`:
+
+
+.. index::
+   single: Trig
+
+.. _`Trig`:
+
+Trig (FB)
+---------
+
+FUNCTION_BLOCK Trig
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Flankenerkennung an einem binären Eingangssignal
+     | Impulserzeugung bei ansteigenden / abfallenden oder beiden Flanken
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Trig_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xIn*
+      - BOOL
+      -
+      -
+      - Binäres Eingangssignal
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xTrigH*
+      - BOOL
+      -
+      -
+      - Impulsausgang für ansteigende Flanken
+    * - *xTrigL*
+      - BOOL
+      -
+      -
+      - Impulsausgang für abfallende Flanken
+    * - *xTrig*
+      - BOOL
+      -
+      -
+      - Impulsausgang für ansteigende / abfallende Flanken
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Das binäre Eingangssignal *xIn* wird permanent auf ansteigende und abfallende Flanken überwacht.
+| Bei jeder ansteigenden Flanke wird am Ausgang *xTrigH* ein Impuls mit einer Zeitdauer von einem Programmzyklus erzeugt.
+| Bei jeder abfallenden Flanke wird am Ausgang *xTrigL* ein Impuls mit einer Zeitdauer von einem Programmzyklus erzeugt.
+| Bei jeder ansteigenden / abfallenden Flanke wird am Ausgang *xTrig* ein Impuls mit einer Zeitdauer von einem Programmzyklus erzeugt.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+--------+------+------------------------------------------------------+
+    | Scope  | Name   | Type | Comment                                              |
+    +========+========+======+======================================================+
+    | Input  | xIn    | BOOL | Binäres Eingangssignal                               |
+    +--------+--------+------+------------------------------------------------------+
+    | Output | xTrigH | BOOL | Impulsausgang für ansteigende Flanken                |
+    +        +--------+------+------------------------------------------------------+
+    |        | xTrigL | BOOL | Impulsausgang für abfallende Flanken                 |
+    +        +--------+------+------------------------------------------------------+
+    |        | xTrig  | BOOL | Impulsausgang für ansteigende und abfallende Flanken |
+    +--------+--------+------+------------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

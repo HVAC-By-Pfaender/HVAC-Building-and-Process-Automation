@@ -1,0 +1,30 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Binary.ManBin.mSetAuto`:
+
+
+.. _`ManBin.mSetAuto`:
+
+ManBin.mSetAuto (METH)
+----------------------
+
+METHOD mSetAuto
+
+
+
+
+.. todo:: Please add documentation for method: ManBin.mSetAuto
+
+
+
+
+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

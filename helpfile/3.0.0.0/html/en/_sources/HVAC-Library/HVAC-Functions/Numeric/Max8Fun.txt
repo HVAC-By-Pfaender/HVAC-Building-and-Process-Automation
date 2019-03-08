@@ -1,0 +1,72 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fun-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.Max8Fun`:
+
+
+.. index::
+   single: Max8Fun
+
+.. _`Max8Fun`:
+
+Max8Fun (FUN)
+-------------
+
+FUNCTION Max8Fun : REAL
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Maximalwertbildung aus 8 nummerischen Eingängen
+     |
+     | Typische Anwendung: Berechnung der höchsten Temperatur
+
+*********************
+Funktionsbeschreibung
+*********************
+
+| Diese Funktion liefert den Maximalwert aus den 8 nummerischen Eingängen *rValue1* bis *rValue8* im Format REAL zurück.
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+---------+------+------------------------+
+    | Scope  | Name    | Type | Comment                |
+    +========+=========+======+========================+
+    | Return | Max8Fun | REAL |                        |
+    +--------+---------+------+------------------------+
+    | Input  | rValue1 | REAL | Nummerischer Eingang 1 |
+    +        +---------+------+------------------------+
+    |        | rValue2 | REAL | Nummerischer Eingang 2 |
+    +        +---------+------+------------------------+
+    |        | rValue3 | REAL | Nummerischer Eingang 3 |
+    +        +---------+------+------------------------+
+    |        | rValue4 | REAL | Nummerischer Eingang 4 |
+    +        +---------+------+------------------------+
+    |        | rValue5 | REAL | Nummerischer Eingang 5 |
+    +        +---------+------+------------------------+
+    |        | rValue6 | REAL | Nummerischer Eingang 6 |
+    +        +---------+------+------------------------+
+    |        | rValue7 | REAL | Nummerischer Eingang 7 |
+    +        +---------+------+------------------------+
+    |        | rValue8 | REAL | Nummerischer Eingang 8 |
+    +--------+---------+------+------------------------+
+
+
+.. last line of fun-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

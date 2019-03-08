@@ -1,0 +1,206 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Setpoint.EditRealVisu`:
+
+
+.. index::
+   single: EditRealVisu
+
+.. _`EditRealVisu`:
+
+EditRealVisu (FB)
+-----------------
+
+FUNCTION_BLOCK EditRealVisu
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Eingabe eines numerischen Wertes mit Eingabegrenzen ( Visualisierung )
+     |
+     | Typische Anwendung: Eingabe einer Solltemperatur in der Visualisierung
+     |
+     | Besonderheit: Min/Max Eingaben, Einheit, Nachkommastellen und weitere Paramter werden direkt im CFC Editor parametriert und nicht im Visualisierungsobjekt.
+     | Dies ermöglicht, Änderungen und Grenzwerte online in der Appliaktion ohne Download zu ändern.
+        |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/EditRealVisu_FB.png
+
+**************
+Schnittstellen
+**************
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rOut*
+      - REAL
+      -
+      -
+      - Numerischer Ausgabewert
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **xDisableSeparator**
+      - BOOL
+      -
+      - FALSE
+      - TRUE = Deaktiviert das tausender Trennzeichen bei der Anzeige in der Visualisierung
+    * - **bDecimals**
+      - BYTE
+      -
+      - 1
+      - Anzahl der Nachkommastellen
+    * - **sDialogTitle**
+      - STRING
+      -
+      -
+      - Dialogtitel des Eingabewerts
+    * - **sUnit**
+      - STRING
+      -
+      -
+      - Einheit des Eingabewerts
+    * - **rMaxInputVisu**
+      - REAL
+      -
+      - 100.0
+      - Obere Eingabegrenze des Eingabewerts
+    * - **rMinInputVisu**
+      - REAL
+      -
+      - 0.0
+      - Untere Eingabegrenze des Eingabewerts
+    * - **rSetPoint**
+      - REAL
+      -
+      - 0.0
+      - Numerischer Eingabewert
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Übergabe eines numerischen Eingabewerts **rSetPoint** und die direkte Übertragung zum
+  numerischen Ausgabewert *rOut*.
+| Zusätzlich können hier weitere Eigenschaften des Eingabewerts definiert werden, die jedoch nicht im Funktionsbaustein,
+  sondern zum Beispiel in einem geeigneten Visualisierungselement Verwendung finden.
+|
+| So können die Anzahl der Nachkommastellen **bDecimals**, der Titel des Eingabewerts **sDialogTitle**, die Einheit des Eingabewerts **sUnit**
+  sowie die Eingabegrenzwerte **rMinInputVisu** und **rMaxInputVisu** an das Visualisierungselement übergeben werden und dort bei der
+  Eingabe Berücksichtigung finden.
+| Mit dem Paramter **xDisableSeparator** kann das Tausender-Trennzeichen in der Visualisierung deaktiviert werden.
+
+.. topic:: Verhalten bei Spannungsausfall
+
+    | Alle Sollwerte / Parameter werden spannungsausfallsicher gespeichert und automatisch wiederhergestellt.
+    |
+
+**************
+Visualisierung
+**************
+Passendes Visualisierungselement aus der HVACV Visu Library: **EditRealVisu**
+
+Darstellung
+===========
+  .. image:: /../DocumentationPictures_Visu/EditReal_Visu.PNG
+
+Schnittstellen Visu-Element
+===========================
+
+ .. list-table::
+    :name: Schnittstellen Visu-Element
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Typ
+      - Initialwert
+      - Funktion
+    * - **rValue**
+      - FB_EditRealVisu
+      - VAR_IN_OUT
+      -
+      - FB Instanz HVAC.EditRealVisu hier eintragen z.B. PRG.EditRealVisu
+    * - **iFieldSizeL**
+      - INT
+      - VAR_INPUT
+      - 0
+      - Feld vergößert sich um Anzahl der eingegebenen Pixel nach links. Wird benötigt um lange Zahlen oder Einheiten anzuzeigen.
+    * - **iFieldSizeR**
+      - INT
+      - VAR_INPUT
+      - 0
+      - Feld vergößert sich um Anzahl der eingegebenen Pixel nach rechts. Wird benötigt um lange Zahlen oder Einheiten anzuzeigen.
+
+Folgende Eingabens des FB HVAC.EditRealVisu werden automatisch übenrommen und können zur Laufzeit geändert werden: rMinInputVisu, rMaxInputVisu, sUnit, sDialogTitle, bDeicmals, xDisableSeperator
+|
+| Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------------+--------+---------+-------------------------------------------------------+
+    | Scope  | Name              | Type   | Initial | Comment                                               |
+    +========+===================+========+=========+=======================================================+
+    | Input  | xDisableSeparator | BOOL   |         | TRUE = Deaktiviert das tausender Trennzeichen bei der |
+    |        |                   |        |         | Anzeige in der Visualisierung                         |
+    +        +-------------------+--------+---------+-------------------------------------------------------+
+    |        | bDecimals         | BYTE   | 1       | Anzahl der Nachkommastellen                           |
+    +        +-------------------+--------+---------+-------------------------------------------------------+
+    |        | sDialogTitle      | STRING |         | Dialogtitel des Eingabewerts                          |
+    +        +-------------------+--------+---------+-------------------------------------------------------+
+    |        | sUnit             | STRING |         | Einheit des Eingabewerts                              |
+    +        +-------------------+--------+---------+-------------------------------------------------------+
+    |        | rMaxInputVisu     | REAL   | 100     | Obere Eingabegrenze des Eingabewerts                  |
+    +        +-------------------+--------+---------+-------------------------------------------------------+
+    |        | rMinInputVisu     | REAL   | 0       | Untere Eingabegrenze des Eingabewerts                 |
+    +        +-------------------+--------+---------+-------------------------------------------------------+
+    |        | rSetPoint         | REAL   | 0       | Numerischer Eingabewert                               |
+    +--------+-------------------+--------+---------+-------------------------------------------------------+
+    | Output | rOut              | REAL   |         | Numerischer Ausgabewert                               |
+    +--------+-------------------+--------+---------+-------------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

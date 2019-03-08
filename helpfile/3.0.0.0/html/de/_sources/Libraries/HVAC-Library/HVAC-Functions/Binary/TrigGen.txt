@@ -1,0 +1,166 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Binary.TrigGen`:
+
+
+.. index::
+   single: TrigGen
+
+.. _`TrigGen`:
+
+TrigGen (FB)
+------------
+
+FUNCTION_BLOCK TrigGen
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Impulserzeugung mit einstellbarem Zeitintervall
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/TrigGen_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xEn*
+      - BOOL
+      -
+      -
+      - Freigabeeingang
+    * - *wInterval*
+      - WORD
+      -
+      -
+      - Zeitwert für Zeitintervall
+    * - *eTimeBase*
+      - eTimeMS
+      -
+      -
+      - Zeitbasis für Zeitintervall
+    * - *xEnImp*
+      - BOOL
+      -
+      -
+      - Option Freigabe 1. Impuls
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xTrig*
+      - BOOL
+      -
+      -
+      - Impulsausgang
+    * - *tNextImp*
+      - TIME
+      -
+      -
+      - Restzeit bis zum nächsten Impuls
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Am Impulsausgang *xTrig* werden zyklisch Impulse mit einer Zeitdauer von einem Programmzyklus und einem Zeitintervall von ( *wInterval* multipliziert
+  mit *eTimeBase* ) erzeugt, falls der Freigabeeingang *xEn* aktiv ist.
+
+.. topic:: Beschränkung des maximalen Zeitintervalls
+
+    | Das Zeitintervall ist dabei auf maximal 48 Tage beschränkt, um einen internen Werteüberlauf zu vermeiden.
+    |
+
+.. topic:: Beispiel zur Berechnung des Zeitintervalls
+
+    | *wIntervall* = 1000, *eTimeBase* = Millisecond, es werden Impulse in einem Zeitintervall von 1000ms erzeugt.
+    |
+
+.. image:: /../DocuBilder/TrigGen_Bild_1.png
+
+Freigabe 1.Impuls *xEnImp*
+==========================
+| Bei aktiver Option ( *xEnImp* = TRUE ) wird der 1. Impuls direkt nach der Freigabe *xEn* erzeugt.
+| Bei nicht aktiver Option ( *xEnImp* = FALSE ) wird der 1. Impuls nach der Freigabe *xEn* nach Ablauf eines Zeitintervalls erzeugt.
+
+Restzeit bis zum nächsten Impuls *tNextImp*
+===========================================
+| An diesem Ausgang wird die Restzeit bis zum nächsten Impuls dargestellt, falls der Freigabeeingang aktiv ( *xEn = TRUE ) ist.
+| In allen übrigen Situationen wird die Konstante 0.0 dargestellt.
+|
+
+.. image:: /../DocuBilder/TrigGen_Bild_2.png
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+-------------+----------------------------------+
+    | Scope  | Name      | Type        | Comment                          |
+    +========+===========+=============+==================================+
+    | Input  | xEn       | BOOL        | Freigabeeingang                  |
+    +        +-----------+-------------+----------------------------------+
+    |        | wInterval | WORD        | Zeitwert für Zeitintervall       |
+    +        +-----------+-------------+----------------------------------+
+    |        | eTimeBase | |ioeTimeMS| | Zeitbasis für Zeitintervall      |
+    +        +-----------+-------------+----------------------------------+
+    |        | xEnImp    | BOOL        | Option Freigabe 1. Impuls        |
+    +--------+-----------+-------------+----------------------------------+
+    | Output | xTrig     | BOOL        | Impulsausgang                    |
+    +        +-----------+-------------+----------------------------------+
+    |        | tNextImp  | TIME        | Restzeit bis zum nächsten Impuls |
+    +--------+-----------+-------------+----------------------------------+
+
+.. |ioeTimeMS| replace:: :ref:`eTimeMS<eTimeMS>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,31 @@
+.. first line of object.rst template
+.. first line of param-object.rst template
+.. _`.fld-HVAC Library.fld-GlobalConstants.gc_Parameters`:
+
+
+.. _`gc_Parameters`:
+
+gc_Parameters (PARAMS)
+----------------------
+
+.. todo:: Please add documentation for paramlist: gc_Parameters
+
+
+
+InOut:
+    +----------+------------------------------------------------+------+---------+--------------------------------------------------------------+
+    | Scope    | Name                                           | Type | Initial | Comment                                                      |
+    +==========+================================================+======+=========+==============================================================+
+    | Constant | .. _`gc_Parameters.gc_iMaxDBIndexAverageTime`: | WORD | 220     | Maximale Anzahl der Einträge im Datenbaustein                |
+    |          |                                                |      |         |                                                              |
+    |          | gc_iMaxDBIndexAverageTime                      |      |         |                                                              |
+    +          +------------------------------------------------+------+---------+--------------------------------------------------------------+
+    |          | .. _`gc_Parameters.gc_iMaxSlaveList`:          | WORD | 63      | Maximale Anzahl der ClockSlave32-Teilnehmer am ClockMaster32 |
+    |          |                                                |      |         |                                                              |
+    |          | gc_iMaxSlaveList                               |      |         |                                                              |
+    +----------+------------------------------------------------+------+---------+--------------------------------------------------------------+
+
+.. last line of param-object.rst template
+.. last line of object.rst template
+
+

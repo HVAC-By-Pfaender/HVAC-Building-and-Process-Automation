@@ -1,0 +1,36 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.OptStartHeat.mInitAverageDiff`:
+
+
+.. _`OptStartHeat.mInitAverageDiff`:
+
+OptStartHeat.mInitAverageDiff (METH)
+------------------------------------
+
+METHOD mInitAverageDiff : BOOL
+
+
+
+
+.. todo:: Please add documentation for method: OptStartHeat.mInitAverageDiff
+
+
+
+
+
+InOut:
+    +--------+------------------+------+
+    | Scope  | Name             | Type |
+    +========+==================+======+
+    | Return | mInitAverageDiff | BOOL |
+    +--------+------------------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,56 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eLimiterMode`:
+
+
+.. Index::
+   single: eLimiterMode
+
+.. _`eLimiterMode`:
+
+eLimiterMode (ENUM)
+-------------------
+
+TYPE eLimiterMode :
+
+
+
+.. todo:: Please add documentation for enum: eLimiterMode
+
+
+
+
+
+InOut:
+    +--------------------------------------+---------+------------------+
+    | Name                                 | Initial | Comment          |
+    +======================================+=========+==================+
+    | .. _`eLimiterMode.InputValue`:       | 0       | Eingangsvariable |
+    |                                      |         |                  |
+    | InputValue                           |         |                  |
+    +--------------------------------------+---------+------------------+
+    | .. _`eLimiterMode.MinValue`:         | 1       | Min Wert         |
+    |                                      |         |                  |
+    | MinValue                             |         |                  |
+    +--------------------------------------+---------+------------------+
+    | .. _`eLimiterMode.MaxValue`:         | 2       | Max Wert         |
+    |                                      |         |                  |
+    | MaxValue                             |         |                  |
+    +--------------------------------------+---------+------------------+
+    | .. _`eLimiterMode.ReplacementValue`: | 3       | Ersatzwert       |
+    |                                      |         |                  |
+    | ReplacementValue                     |         |                  |
+    +--------------------------------------+---------+------------------+
+    | .. _`eLimiterMode.LastValue`:        | 4       | Letzter Wert     |
+    |                                      |         |                  |
+    | LastValue                            |         |                  |
+    +--------------------------------------+---------+------------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

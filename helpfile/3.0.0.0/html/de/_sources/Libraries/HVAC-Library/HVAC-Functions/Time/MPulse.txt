@@ -1,0 +1,139 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Time.MPulse`:
+
+
+.. index::
+   single: MPulse
+
+.. _`MPulse`:
+
+MPulse (FB)
+-----------
+
+FUNCTION_BLOCK MPulse
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Flankengesteuerte Impulserzeugung mit einstellbarer Mindestzeitdauer
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/MPulse_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xIN*
+      - BOOL
+      -
+      -
+      - Binärer Eingang
+    * - *tPT*
+      - TIME
+      -
+      - T#1s
+      - Mindestzeitdauer des Ausgangsimpulses
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xQ*
+      - BOOL
+      -
+      -
+      - Impulsausgang
+    * - *tET*
+      - TIME
+      -
+      -
+      - Zeitdifferenz zwischen Mindestzeitdauer und Zeitdauer des Impulses an *xQ*
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Am Impulsausgang *xQ* wird nach einer positiven Flanke am binären Eingang *xIN* ein Impuls mit einer
+  Mindestzeitdauer *tPT* erzeugt.
+|
+
+.. image:: /../DocuBilder/MPulse_Bild_1.png
+
+
+Zeitausgang *tET*
+=================
+| Bei aktivem Impulsausgang *xQ* wird die Zeitdifferenz zwischen der Mindestzeitdauer *tPT* und der Zeitdauer des
+  Impulses an *xQ* angezeigt.
+| Bei inaktivem Impulsausgang *xQ* wird stets der Wert T#0s angezeigt.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+------+------+-------------+----------------------------------------------------------------------------+
+    | Scope  | Name | Type | Initial     | Comment                                                                    |
+    +========+======+======+=============+============================================================================+
+    | Input  | xIN  | BOOL |             | Binärer Eingang                                                            |
+    +        +------+------+-------------+----------------------------------------------------------------------------+
+    |        | tPT  | TIME | TIME#10s0ms | Mindestzeitdauer des Ausgangsimpulses                                      |
+    +--------+------+------+-------------+----------------------------------------------------------------------------+
+    | Output | xQ   | BOOL |             | Impulsausgang                                                              |
+    +        +------+------+-------------+----------------------------------------------------------------------------+
+    |        | tET  | TIME |             | Zeitdifferenz zwischen Mindestzeitdauer und Zeitdauer des Impulses an *xQ* |
+    +--------+------+------+-------------+----------------------------------------------------------------------------+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Time/pou-MPulse/mGetTime
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

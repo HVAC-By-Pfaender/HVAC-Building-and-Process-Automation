@@ -1,0 +1,128 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-General.CDate`:
+
+
+.. index::
+   single: CDate
+
+.. _`CDate`:
+
+CDate (FB)
+----------
+
+FUNCTION_BLOCK CDate
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Konvertierung der Datumskomponenten Tag/Monat/Jahr in ein Datum (YYYYMMDD)
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/CDate_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *datYYYYMMDD*
+      - DATE
+      -
+      -
+      - Datum im Format YYYYMMDD
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **iDD**
+      - INT
+      -
+      - 1
+      - Festlegung des Tages im Format DD (1..31)
+    * - **iMM**
+      - INT
+      -
+      - 1
+      - Festlegung des Monats im Format MM (1..12)
+    * - **iYYYY**
+      - INT
+      -
+      - 1970
+      - Festlegung des Jahres im Format YYYY (1970..2099)
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Bildung des Datums *datYYYYMMDD* aus den Einzelkomponenten **iDD**, **iMM**, und **iYYYY**.
+| Die logischen Eingabegrenzen der Einzelkomponenten werden überwacht und ggf. korrigiert.
+| Dieser Baustein kann z.B. für die Eingabe in einer Visualisierung genutzt werden.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------+------+---------+---------------------------------------------------+
+    | Scope  | Name        | Type | Initial | Comment                                           |
+    +========+=============+======+=========+===================================================+
+    | Input  | iDD         | INT  | 1       | Festlegung des Tages im Format DD (1..31)         |
+    +        +-------------+------+---------+---------------------------------------------------+
+    |        | iMM         | INT  | 1       | Festlegung des Monats im Format MM (1..12)        |
+    +        +-------------+------+---------+---------------------------------------------------+
+    |        | iYYYY       | INT  | 1970    | Festlegung des Jahres im Format YYYY (1970..2099) |
+    +--------+-------------+------+---------+---------------------------------------------------+
+    | Output | datYYYYMMDD | DATE |         | Datum im Format YYYYMMDD                          |
+    +--------+-------------+------+---------+---------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

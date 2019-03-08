@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Shade (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../../search.html" />
+    <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Shade (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../_sources/Libraries/HVAC-Library/HVAC-Functions/Components/Shade.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-shade"></span><div class="section" id="shade-fb">
+<span id="shade"></span><span id="index-0"></span><h1>Shade (FB)<a class="headerlink" href="#shade-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK Shade</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Steuerung eines Jalousieantriebs mit Auf-/Zu-Befehlen und Zentralbedienung</div>
+<div class="line">Zusatzfunktionen: Lamellenverstellung / Zentralbedienung / Komfortfunktionen</div>
+<div class="line">Typische Anwendung: Steuerung eines Standard-Jalousieantriebs</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../../_images/Shade_FB.png" src="../../../../_images/Shade_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xButtonUp</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anforderung - Jalousieöffnung über Taste</td>
+</tr>
+<tr class="row-odd"><td><em>xButtonDown</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anforderung - Jalousieschliessung über Taste</td>
+</tr>
+<tr class="row-even"><td><em>xCentralUp</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anforderung - Jalousieöffnung über Zentralbedienung</td>
+</tr>
+<tr class="row-odd"><td><em>xCentralDown</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anforderung - Jalousieschliessung über Zentralbedienung</td>
+</tr>
+<tr class="row-even"><td><em>eAOOUp</em></td>
+<td>HVACTYPES.eManBin</td>
+<td>HVACTYPES.eManBin.Auto, HVACTYPES.eManBin.ManOff, HVACTYPES.eManBin.ManOn</td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td>Betriebsart der Handübersteuerung - Hardware für die Jalousieöffnung</td>
+</tr>
+<tr class="row-odd"><td><em>eAOODown</em></td>
+<td>HVACTYPES.eManBin</td>
+<td>HVACTYPES.eManBin.Auto, HVACTYPES.eManBin.ManOff, HVACTYPES.eManBin.ManOn</td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td>Betriebsart der Handübersteuerung - Hardware für die Jalousieschliessung</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xUp</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe - Jalousieöffnung</td>
+</tr>
+<tr class="row-odd"><td><em>xDown</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabe - Jalousieschliessung</td>
+</tr>
+<tr class="row-even"><td><em>xAuto</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Sammelmeldung Automatikbetrieb</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>tFullMovement</strong></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>T#30s</td>
+<td>Zeitdauer für die vollständige Öffnung / Schliessung</td>
+</tr>
+<tr class="row-odd"><td><strong>tPulse</strong></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>T#600ms</td>
+<td>Zeitdauer des Impulses für die Lamellenverstellung</td>
+</tr>
+<tr class="row-even"><td><strong>tButton</strong></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>T#900ms</td>
+<td>Zeitdauer für die Unterscheidung Lamellenverstellung / vollständige Öffnung/Schliessung</td>
+</tr>
+<tr class="row-odd"><td><strong>tWaitReverse</strong></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>T#2s</td>
+<td>Warte-Zeitdauer der Umschaltung zwischen Öffnung und Schliessung</td>
+</tr>
+<tr class="row-even"><td><strong>eManModeUp</strong></td>
+<td>eMANBIN</td>
+<td>eMANBIN.Auto, eMANBIN.ManOff, eMANBIN.ManOn</td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung - Jalousieöffnung</td>
+</tr>
+<tr class="row-odd"><td><strong>eManModeDown</strong></td>
+<td>eMANBIN</td>
+<td>eMANBIN.Auto, eMANBIN.ManOff, eMANBIN.ManOn</td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung - Jalousieschliessung</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein steuert einen Jalousieantrieb mit Auf- ( <em>xUp</em> ) und Zu-Befehlen ( <em>xDown</em> ).</div>
+<div class="line">Die Auf- und Zu-Befehle können durch die Parameter <strong>eManModeUp</strong> bzw. <strong>eManModeDown</strong> unabhängig von den Automatikfunktionen übersteuert werden.</div>
+<div class="line">Die Bedienung erfolgt durch die Tasteneingänge <em>xButtonUp</em> und <em>xButtonDown</em>.</div>
+<div class="line">Übergeordnet ist eine Zentralbedienung über die Eingänge <em>xCentralUp</em> und <em>xCentralDown</em> möglich.</div>
+<div class="line">Die Zeitdauer der Betätigung der Eingänge <em>xButtonUp</em> und <em>xButtonDown</em> entscheidet über die ausgeführte Funktion
+( Zeitdauer &lt; <strong>tButton</strong>: vollständige Öffnung/Schliessung, Zeitdauer &gt;= <strong>tButton</strong>: Lamellenverstellung ).</div>
+<div class="line">Es findet zusätzlich eine Zwangssteuerung der Ausgänge <em>xUP</em> und <em>xDown</em> statt, d.h. wenn der Ausgang <em>xUp</em> aktiv ( = TRUE ) ist,
+so wird gleichzeitig der Ausgang <em>xDown</em> deaktiviert ( = FALSE ). Dies gilt auch für den umgekehrten Fall.</div>
+<div class="line">Wird während einer vollständigen Öffnung / Schliessung eine der beiden Tasten ( <em>xButtonUp</em> = TRUE und / oder <em>xButtonDown</em> = TRUE )
+betätigt, so wird die Öffnung / Schliessung sofort unterbrochen.</div>
+</div>
+</div>
+<div class="section" id="zentralbedienung">
+<h3>Zentralbedienung<a class="headerlink" href="#zentralbedienung" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Jede ansteigende Flanke am Eingang Anforderung - Jalousieöffnung über Zentralbedienung <em>xCentralUp</em> löst die vollständige
+Öffnung der Jalousie ( <em>xUp</em> = TRUE und <em>xDown</em> = FALSE während der Zeitdauer <strong>tFullMovement</strong> ) aus.</div>
+<div class="line">Jede ansteigende Flanke am Eingang Anforderung - Jalousieschliesung über Zentralbedienung <em>xCentralDown</em> löst die vollständige
+Schliessung der Jalousie ( <em>xDown</em> = TRUE und <em>xUp</em> = FALSE während der Zeitdauer <strong>tFullMovement</strong> ) aus.</div>
+<div class="line">Sind die Eingänge für die Zentralbedienung dauerhaft aktiv ( = TRUE ), so ist keine Bedienung über die Tasten <em>xButtonUp</em> und <em>xButtonDown</em> möglich.</div>
+</div>
+</div>
+<div class="section" id="warte-zeitdauer-der-umschaltung-zwischen-offnung-und-schliessung-twaitreverse">
+<h3>Warte-Zeitdauer der Umschaltung zwischen Öffnung und Schliessung <strong>tWaitReverse</strong><a class="headerlink" href="#warte-zeitdauer-der-umschaltung-zwischen-offnung-und-schliessung-twaitreverse" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Umschaltung von der Öffnung zur Schliessung der Jalousie und umgekehrt kann durch diesen Sollwert / Parameter zeitlich verzögert werden.</div>
+<div class="line">Der Wert 0.0s erlaubt die unmittelbare Umschaltung.</div>
+</div>
+</div>
+<div class="section" id="lamellenverstellung">
+<h3>Lamellenverstellung<a class="headerlink" href="#lamellenverstellung" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Lamellenverstellung wird durch eine durchgehende Betätigung der Bedientasten <em>xUp</em> oder <em>xDown</em> während einer Zeitdauer größer als
+Zeitdauer für die Unterscheidung Lamellenverstellung / vollständige Öffnung/Schliessung <strong>tButton</strong> ausgelöst.</div>
+<div class="line">Während der Betätigung der jeweiligen Taste wird am zugeordneten Ausgang ein symmetrisches Ausgangssignal ( Pausendauer = Impulsdauer = <strong>tPulse</strong> ) erzeugt.</div>
+</div>
+</div>
+<div class="section" id="vollstandige-offnung-schliessung">
+<h3>Vollständige Öffnung / Schliessung<a class="headerlink" href="#vollstandige-offnung-schliessung" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die vollständige Öffnung / Schliessung wird durch eine Betätigung der jeweils zugeordneten Tasten <em>xUp</em> bzw. <em>xDown</em> während eines Zeitraums kleiner
+als Zeitdauer für die Unterscheidung Lamellenverstellung / vollständige Öffnung/Schliessung <strong>tButton</strong> ausgelöst.</div>
+<div class="line">Am entsprechenden Ausgang wird dann ohne weitere Beeinflussung ein Signal ( Zustand = TRUE ) mit einer Zeitdauer von <strong>tFullMovement</strong> erzeugt.</div>
+<div class="line">Am jeweils anderen Ausgang wird während dieser Zeitdauer kein Signal ( Zustand = FALSE ) erzeugt.</div>
+</div>
+</div>
+<div class="section" id="sammelmeldung-automatikbetrieb-xauto">
+<h3>Sammelmeldung Automatikbetrieb <em>xAuto</em><a class="headerlink" href="#sammelmeldung-automatikbetrieb-xauto" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Die Sammelmeldung Automatikbetrieb <em>xAuto</em> wird aktiviert ( = TRUE ), falls folgende Bedingungen gleichzeitig erfüllt sind:</div>
+<div class="line"><br /></div>
+<div class="line">- Eingang <em>eAOOUp</em> = HVACTYPES.eManBin.Auto</div>
+<div class="line">- Eingang <em>eAOODown</em> = HVACTYPES.eManBin.Auto</div>
+<div class="line">- Sollwert / Parameter <strong>eManModeUp</strong> = eMANBIN.Auto</div>
+<div class="line">- Sollwert / Parameter <strong>eManModeDown</strong> = eMANBIN.Auto</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="14%" />
+<col width="12%" />
+<col width="13%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="6">Input</td>
+<td>xButtonUp</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anforderung - Jalousieöffnung über Taste</td>
+</tr>
+<tr class="row-odd"><td>xButtonDown</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anforderung - Jalousieschliessung über Taste</td>
+</tr>
+<tr class="row-even"><td>xCentralUp</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anforderung - Jalousieöffnung über Zentralbedienung</td>
+</tr>
+<tr class="row-odd"><td>xCentralDown</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anforderung - Jalousieschliessung über Zentralbedienung</td>
+</tr>
+<tr class="row-even"><td>eAOOUp</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>&nbsp;</td>
+<td>Betriebsart der Handübersteuerung - Hardware für die
+Jalousieöffnung</td>
+</tr>
+<tr class="row-odd"><td>eAOODown</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>&nbsp;</td>
+<td>Betriebsart der Handübersteuerung - Hardware für die
+Jalousieschliessung</td>
+</tr>
+<tr class="row-even"><td rowspan="3">Output</td>
+<td>xUp</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Jalousieöffnung</td>
+</tr>
+<tr class="row-odd"><td>xDown</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabe - Jalousieschliessung</td>
+</tr>
+<tr class="row-even"><td>xAuto</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Sammelmeldung Automatikbetrieb</td>
+</tr>
+<tr class="row-odd"><td rowspan="6">Input</td>
+<td>tFullMovement</td>
+<td>TIME</td>
+<td>TIME#30s0ms</td>
+<td>Zeitdauer für die vollständige Öffnung / Schliessung</td>
+</tr>
+<tr class="row-even"><td>tPulse</td>
+<td>TIME</td>
+<td>TIME#600ms</td>
+<td>Zeitdauer des Impulses für die Lamellenverstellung</td>
+</tr>
+<tr class="row-odd"><td>tButton</td>
+<td>TIME</td>
+<td>TIME#900ms</td>
+<td>Zeitdauer für die Unterscheidung Lamellenverstellung /
+vollständige Öffnung/Schliessung</td>
+</tr>
+<tr class="row-even"><td>tWaitReverse</td>
+<td>TIME</td>
+<td>TIME#2s0ms</td>
+<td>Warte-Zeitdauer der Umschaltung zwischen Öffnung und
+Schliessung</td>
+</tr>
+<tr class="row-odd"><td>eManModeUp</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung - Jalousieöffnung</td>
+</tr>
+<tr class="row-even"><td>eManModeDown</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td>Betriebsart der Handübersteuerung - Jalousieschliessung</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.FastHeating`:
+
+
+.. index::
+   single: FastHeating
+
+.. _`FastHeating`:
+
+FastHeating (FB)
+----------------
+
+FUNCTION_BLOCK FastHeating
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Aktivierung eines Schnellaufheizbetriebs ( Regelgröße: Raumtemperatur )
+     |
+     | Typische Anwendung: Aktivierung des Schnellaufheizbetriebs im Betrieb einer Lüftungsanlage
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/FastHeating_FB.png
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein steuert die Aktivierung des Schnellaufheizbetriebs ( *xEn* = TRUE ) durch die Vergleich der Raumtemperatur *rRoomTemp*
+| mit der Raumsolltemperatur *rSetPtTemp* bei aktiver Lüftungsanlage ( *xRegAHU* = TRUE ).
+| Der Schnellaufheizbetrieb kann unabhängig davon auch durch den Eingang *xCoolOutProtectionEn* aktiviert werden.
+
+Freigabe / Sperrung des Schnellaufheizbetriebs *xEn*
+====================================================
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 500 500 300 900
+    :header-rows: 1
+
+    * - *xReqAHU*
+      - *rRoomTemp*
+      - *xCoolOutProtection*
+      - *xEn*
+      - Hinweise
+    * - FALSE
+      - X
+      - FALSE
+      - FALSE
+      - Schnellaufheizbetrieb über Lüftungsanlage und Eingang gesperrt
+    * - TRUE
+      - > *rSetPtTemp* + **rSwitchOffPoint**
+      - FALSE
+      - FALSE
+      - Schnellaufheizbetrieb über Raumtemperatur gesperrt
+    * - TRUE
+      - < *rSetPtTemp* + **rSwitchOnPoint**
+      - FALSE
+      - TRUE
+      - Schnellaufheizbetrieb über Raumtemperatur freigegeben
+    * - X
+      - X
+      - TRUE
+      - TRUE
+      - Schnellaufheizbetrieb über Eingang freigegeben
+
+| Legende: X = beliebig
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+----------------------+------+---------+------------------------------------------------------------+
+    | Scope  | Name                 | Type | Initial | Comment                                                    |
+    +========+======================+======+=========+============================================================+
+    | Input  | rSetPtTemp           | REAL |         | Raumsolltemperatur in °C                                   |
+    +        +----------------------+------+---------+------------------------------------------------------------+
+    |        | rRoomTemp            | REAL |         | Raumtemperatur in °C                                       |
+    +        +----------------------+------+---------+------------------------------------------------------------+
+    |        | xReqAHU              | BOOL |         | Freigabe / Sperrung der Lüftungsanlage ( FALSE = Sperrung, |
+    |        |                      |      |         | TRUE = Freigabe )                                          |
+    +        +----------------------+------+---------+------------------------------------------------------------+
+    |        | xCoolOutProtectionEn | BOOL |         | Freigabe / Sperrung des Auskühlschutzbetriebs ( FALSE =    |
+    |        |                      |      |         | Sperrung, TRUE = Freigabe )                                |
+    +--------+----------------------+------+---------+------------------------------------------------------------+
+    | Output | xEn                  | BOOL |         | Freigabe / Sperrung des Schnellaufheizbetriebs ( FALSE =   |
+    |        |                      |      |         | Sperrung, TRUE = Freigabe )                                |
+    +--------+----------------------+------+---------+------------------------------------------------------------+
+    | Input  | rSwitchOffPoint      | REAL | -1      | Ausschaltschwelle relativ zu *rSetPtTemp* des 2-Punkt-     |
+    |        |                      |      |         | Reglers in K                                               |
+    +        +----------------------+------+---------+------------------------------------------------------------+
+    |        | rSwitchOnPoint       | REAL | -2.5    | Einschaltschwelle relativ zu *rSetPtTemp* des 2-Punkt-     |
+    |        |                      |      |         | Reglers in K                                               |
+    +--------+----------------------+------+---------+------------------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

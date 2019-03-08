@@ -1,0 +1,355 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.Valve2P`:
+
+
+.. index::
+   single: Valve2P
+
+.. _`Valve2P`:
+
+Valve2P (FB)
+------------
+
+FUNCTION_BLOCK Valve2P
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Steuerung eines binären Ventilantriebs mit zwei Positionsrückmeldungen
+     |
+     | Typische Anwendung: Antrieb einer Kessel-Anlage mit Absperrklappen
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Valve2P_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xY*
+      - BOOL
+      -
+      -
+      - Stellsignal
+    * - *xForce*
+      - BOOL
+      -
+      - FALSE
+      - Zwangsübersteuerung nach Handübersteuerung
+    * - *eAOO*
+      - HVACTYPES.eManBin
+      - HVACTYPES.eManBin.Auto, HVACTYPES.eManBin.ManOff, HVACTYPES.eManBin.ManOn
+      - HVACTYPES.eManBin.Auto
+      - Betriebsart der Handübersteuerung - Hardware
+    * - *xOpen*
+      - BOOL
+      -
+      -
+      - Rückmeldung Ventilöffnung
+    * - *xClosed*
+      - BOOL
+      -
+      -
+      - Rückmeldung Ventilschliessung
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xHB*
+      - BOOL
+      -
+      -
+      - Freigabe Ventilantrieb nach Handübersteuerung
+    * - *xAB*
+      - BOOL
+      -
+      -
+      - Freigabe Ventilantrieb vor Handübersteuerung
+    * - *xAlarmOpen*
+      - BOOL
+      -
+      -
+      - Störung Position Ventilöffnung
+    * - *xAlarmClosed*
+      - BOOL
+      -
+      -
+      - Störung Position Ventilschliessung
+    * - *dtAbsLastOn*
+      - DATE_AND_TIME
+      -
+      -
+      - Datum / Uhrzeit des letzten Blockierschutzbetriebs
+    * - *xAlarm*
+      - BOOL
+      -
+      -
+      - Sammelstörung
+    * - *xAuto*
+      - BOOL
+      -
+      -
+      - Sammelmeldung Automatikbetrieb
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **udiAbsTime**
+      - UDINT
+      - 0 ... 600s
+      - 200s
+      - Zeitdauer des Blockierschutzbetriebs
+    * - **todAbsStartTime**
+      - TOD
+      - 00:00:00 - 23:59:59 Uhr
+      - 09:00:00 Uhr
+      - Zeitpunkt des Blockierschutzbetriebs
+    * - **eAbsDay**
+      - eDoW
+      - eDow.Inactive, eDoW.Monday ... eDoW.Sunday
+      - eDoW.Monday
+      - Wochentag des Blockierschutzbetriebs
+    * - **udiControlTime**
+      - UDINT
+      - 10s ... 600s
+      - 150s
+      - Meldeverzögerung der Positionsüberwachung
+    * - **xControl**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe der Positionsüberwachung
+    * - **xForceOption**
+      - BOOL
+      -
+      - FALSE
+      - Zustand vom Ausgang *xHB* bei Zwangsübersteuerung
+    * - **eManModeB**
+      - eMANBIN
+      - eMANBIN.Auto, eMANBIN.ManOff, eMANBIN.ManOn
+      - eMANBIN.Auto
+      - Betriebsart der Handübersteuerung für den digitalen Ausgang *xHB*
+
+*********************
+Funktionsbeschreibung
+*********************
+Automatik-Ausgang *xAB*
+=======================
+| Die Freigabe des Ventilantrieb vor Handübersteuerung *xAB* wird unverändert vom Freigabeeingang *xY* übernommen.
+|
+
+Hand-Ausgang *xHB*
+==================
+| Die Freigabe des Ventilantrieb nach Handübersteuerung *xHB* entspricht der Freigabe des Ventilantrieb vor Handübersteuerung *xAB*
+  zusätzlich erweitert um ein Handübersteuermodul und einer Zwangsübersteuerung.
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 300 300 300 300 900
+    :header-rows: 1
+
+    * - *xAB*
+      - **eManModeB**
+      - *xForce*
+      - **xForceOption**
+      - *xHB*
+      - Hinweise
+    * - FALSE
+      - eMANBIN.Auto
+      - FALSE
+      - X
+      - FALSE
+      - Handübersteuermodul in Automatik
+    * - TRUE
+      - eMANBIN.Auto
+      - FALSE
+      - X
+      - TRUE
+      - Handübersteuermodul in Automatik
+    * - X
+      - eMANBIN.ManOff
+      - FALSE
+      - X
+      - FALSE
+      - Handübersteuermodul im Handbetrieb Aus
+    * - X
+      - eMANBIN.ManOn
+      - FALSE
+      - X
+      - TRUE
+      - Handübersteuermodul im Handbetrieb Ein
+    * - X
+      - X
+      - TRUE
+      - FALSE
+      - FALSE
+      - Zwangsübersteuerung Zu
+    * - X
+      - X
+      - TRUE
+      - TRUE
+      - TRUE
+      - Zwangsübersteuerung Auf
+
+| Legende: X = beliebig
+
+Störung Position Ventilöffnung *xAlarmOpen*
+============================================
+| Die Störmeldung für die Position bei der Ventilöffnung *xAlarmOpen* wird aktiviert ( *xAlarmOpen* = TRUE ), falls folgende Bedingungen gleichzeitig erfüllt sind:
+|
+| 1) Die Freigabe der Positionsüberwachung *xControl* ist freigegeben ( = TRUE )
+|
+| 2) Als Betriebsart der Handübersteuerung - Hardware *eAOO* ist der Automatikbetrieb ausgewählt ( *eAOO* = HVACTYPES.eManBin.Auto )
+|
+| 3) Die Zustände der Freigabe des Ventilantrieb nach Handübersteuerung *xHB* und der Rückmeldung für die Ventilöffnung *xOpen* sind mindestens
+     während der Meldeverzögerung der Positionsüberwachung **udiControlTime** durchgehend unterschiedlich ( ( *xHB* = FALSE und *xOpen* = TRUE ) ODER ( *xHB* = TRUE und *xOpen* = FALSE ) ).
+|
+| Die Störmeldung für die Position bei der Ventilöffnung *xAlarmOpen* wird deaktiviert, falls mindestens eine der oben stehenden Bedingungen nicht mehr erfüllt ist.
+|
+
+Störung Position Ventilöffnung *xAlarmClosed*
+==============================================
+| Die Störmeldung für die Position bei der Ventilöffnung *xAlarmClosed* wird aktiviert ( *xAlarmClosed* = TRUE ), falls folgende Bedingungen gleichzeitig erfüllt sind:
+|
+| 1) Die Freigabe der Positionsüberwachung *xControl* ist freigegeben ( = TRUE )
+|
+| 2) Als Betriebsart der Handübersteuerung - Hardware *eAOO* ist der Automatikbetrieb ausgewählt ( *eAOO* = HVACTYPES.eManBin.Auto )
+|
+| 3) Die Zustände der Freigabe des Ventilantrieb nach Handübersteuerung *xHB* und der Rückmeldung für die Ventilschliessung *xClosed* sind mindestens
+     während der Meldeverzögerung der Positionsüberwachung **udiControlTime** durchgehend gleich ( ( *xHB* = TRUE und *xOpen* = TRUE ) ODER ( *xHB* = FALSE und *xOpen* = FALSE ) ).
+|
+| Die Störmeldung für die Position bei der Ventilöffnung *xAlarmClosed* wird deaktiviert, falls mindestens eine der oben stehenden Bedingungen nicht mehr erfüllt ist.
+|
+
+Sammelstörung *xAlarm*
+======================
+| Die Sammelstörung *xAlarm* wird aktiviert ( = TRUE ), falls mindestens eine der beiden Störungen für die Positionen der Klappe ( *xAlarmOpen* und *xAlarmClosed* ) aktiv ist.
+| In alle übrigen Fällen ist die Sammelstörung *xAlarm* nicht aktiviert ( = FALSE ).
+|
+
+Blockierschutzmodul
+===================
+| Das Blockierschutzmodul wird durch das binäre Blockierschutzmodul mit einstellbarer Zeitdauer ( FB: AbsB ) realisiert.
+| Die Zeitdauer *udiAbsTime*, der Zeitpunkt **todAbsStartTime** und der Wochentag **eAbsDay** sind einstellbar.
+| Die Mindestlaufzeit zur Sperrung des Blockierschutzbetriebs beträgt 30s.
+| Der Zeitstempel (Datum / Uhrzeit) des letzten Blockierschutzbetriebs *dtAbsLastOn* steht zur Verfgung.
+
+Sammelmeldung Automatikbetrieb *xAuto*
+======================================
+| Die Sammelmeldung Automatikbetrieb *xAuto* wird aktiviert ( = TRUE ), falls der Eingang *eAOO* den Wert HVACTYPES.eManBin.Auto und der Sollwert / Parameter **eManModeB**
+  den Wert eMANBIN.Auto enthält.
+| In alle übrigen Fällen ist die Sammelmeldung Automatikbetrieb *xAuto* nicht aktiviert ( = FALSE ).
+|
+Zwangsübersteuerung *xForce*
+======================================
+| Die Zwangsübersteuerung wirkt direkt auf den Ausgang *xHB*. Mit dem Parameter **xForceOption** wird festgelegt, welchen Zustand der Ausgang *xHB* bei TRUE am Eingang *xForce* einnimmt.
+|
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------------+-------------+------------------------+-------------------------------------------------------------+
+    | Scope  | Name            | Type        | Initial                | Comment                                                     |
+    +========+=================+=============+========================+=============================================================+
+    | Input  | xY              | BOOL        |                        | Stellsignal                                                 |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xForce          | BOOL        | FALSE                  | Zwangsübersteuerung nach Handebene                          |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | eAOO            | |ioeManBin| | HVACTYPES.eManBin.Auto | Betriebsart der Handübersteuerung - Hardware                |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xOpen           | BOOL        |                        | Rückmeldung Ventilöffnung                                   |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xClosed         | BOOL        |                        | Rückmeldung Ventilschliessung                               |
+    +--------+-----------------+-------------+------------------------+-------------------------------------------------------------+
+    | Output | xHB             | BOOL        |                        | Freigabe Ventilantrieb nach Handübersteuerung               |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAB             | BOOL        |                        | Freigabe Ventilantrieb vor Handübersteuerung                |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarmOpen      | BOOL        |                        | Störung Position Ventilöffnung                              |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarmClosed    | BOOL        |                        | Störung Position Ventilschliessung                          |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | dtAbsLastOn     | DT          |                        | Datum / Uhrzeit des letzten Blockierschutzbetriebs          |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarm          | BOOL        |                        | Sammelstörung                                               |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAuto           | BOOL        |                        | Sammelmeldung Automatikbetrieb                              |
+    +--------+-----------------+-------------+------------------------+-------------------------------------------------------------+
+    | Input  | udiAbsTime      | UDINT       | 120                    | Zeitdauer des Blockierschutzbetriebs                        |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | todAbsStartTime | TOD         | TIME_OF_DAY#8:0        | Zeitpunkt des Blockierschutzbetriebs                        |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | eAbsDay         | |ioeDoW|    | eDow.Monday            | Wochentag des Blockierschutzbetriebs                        |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | udiControlTime  | UDINT       | 200                    | Meldeverzögerung der Positionsüberwachung                   |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xControl        | BOOL        | TRUE                   | Freigabe der Positionsüberwachung                           |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xForceOption    | BOOL        | FALSE                  | Zustand vom Ausgang *xHB* bei Zwangsübersteuerung           |
+    +        +-----------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | eManModeB       | |ioeMANBIN| | eMANBIN.Auto           | Betriebsart der Handübersteuerung für den digitalen Ausgang |
+    |        |                 |             |                        | *xHB*                                                       |
+    +--------+-----------------+-------------+------------------------+-------------------------------------------------------------+
+
+.. |ioeManBin| replace:: :ref:`eManBin<eManBin>`
+.. |ioeDoW| replace:: :ref:`eDoW<eDoW>`
+.. |ioeMANBIN| replace:: :ref:`eMANBIN<eManBin>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

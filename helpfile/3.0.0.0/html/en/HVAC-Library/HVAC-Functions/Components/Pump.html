@@ -1,0 +1,1295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pump (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Pump.mQuit (METH)" href="pou-Pump/mQuit.html" />
+    <link rel="prev" title="PreRinseOperationValveAnalog (FB)" href="PreRinseOperationValveAnalog.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="Burner3P.html">Burner3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerP.html">BurnerP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerT.html">BurnerT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoolOutProtection.html">CoolOutProtection (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Damper2P.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DamperAnalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuoPump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fan1Speed.html">Fan1Speed (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanAnalog.html">FanAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanControl.html">FanControl (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FastHeating.html">FastHeating (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FireDamperMot.html">FireDamperMot (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptStartHeat.html">OptStartHeat (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreRinseOperationValveAnalog.html">PreRinseOperationValveAnalog (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SequenceSUPTemp.html">SequenceSUPTemp (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SmokeDetector.html">SmokeDetector (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve2P.html">Valve2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve3P.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveAnalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveTherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>Pump (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Components/Pump.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-pump"></span><div class="section" id="pump-fb">
+<span id="pump"></span><span id="index-0"></span><h1>Pump (FB)<a class="headerlink" href="#pump-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK Pump</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Controlling a circulation pump with anti-lock function</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/Pump_FB.png" src="../../../_images/Pump_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xEn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Requirement of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xForce</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Forced override after manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xFb</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating message of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarmIn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Alarm message of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>eAOO</em></td>
+<td>HVACTYPES.eManBin</td>
+<td>HVACTYPES.eManBin.Auto, HVACTYPES.eManBin.ManOff, HVACTYPES.eManBin.ManOn</td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td><p class="first last">Operating mode of manual override - Hardware</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xQuit</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Resetting the fault message of the operational monitoring</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Outputs<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xHB</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><p class="first last">Manual output: circulation pump disabled</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><p class="first last">Manual output: circulation pump enabled</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAB</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><p class="first last">Automatic output: circulation pump disabled</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><p class="first last">Automatic output: circulation pump enabled</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><em>xEnergyRequest</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><p class="first last">Requirement power producer is not released</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><p class="first last">Requirement Power production is released</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarmFb</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><p class="first last">The operation monitoring error message is disabled</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><p class="first last">The operation monitoring error message is enabled</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><em>tOffDelay</em></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Remaining shut-off time of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>dtLastFb</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last operation of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>dtAbsLastOn</em></td>
+<td>DATE_AND_TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last anti-lock operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>udiOperatingHours</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating hours of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>udiCountFb</em></td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of activations of the circulating pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xAlarm</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><p class="first last">Collective fault message disabled</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><p class="first last">Collective fault message enabled</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><em>xAuto</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><p class="first last">Collective message Automatic mode is not enabled</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><p class="first last">Collective message Automatic mode is enabled</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>xAlarmControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><p class="first last"><em>xHb</em> independent of <em>xAlarm</em></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><p class="first last"><em>xHb</em> is disabled for <em>xAlarm</em> = TRUE</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>udiFbControlTime</strong></td>
+<td>UDINT</td>
+<td>0 ... 300s</td>
+<td>60s</td>
+<td><p class="first last">Duration of operation monitoring</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xFbControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><p class="first last">Operation monitoring is disabled</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><p class="first last">Operation monitoring is enabled</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xForceOption</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">FALSE:</th><td class="field-body"><p class="first last">Output <em>xHB</em> with forced override OFF</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">TRUE:</th><td class="field-body"><p class="first last">Output <em>xHB</em> with forced override ON</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><strong>tAbsTime</strong></td>
+<td>UDINT</td>
+<td>0 ... 600s</td>
+<td>120s</td>
+<td><p class="first last">Duration of anti-lock operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>tAbsTime</strong></td>
+<td>TOD</td>
+<td><p class="first last">00:00:00 - 23:59:59 o&#8217;clock</p>
+</td>
+<td><p class="first last">08:00:00 o&#8217;clock</p>
+</td>
+<td><p class="first last">Time point of anti-lock operation</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>eAbsDay</strong></td>
+<td>eDoW</td>
+<td>eDoW.Monday ... eDoW.Sunday</td>
+<td>eDoW.Monday</td>
+<td><p class="first last">Weekday of the anti-lock operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eOffDelayTimeBase</strong></td>
+<td>eTime</td>
+<td>eTime.Second, eTime.Minute, eTime.Hour</td>
+<td>eTime.Second</td>
+<td><p class="first last">Scaling of the follow-up time ( seconds / minutes / hours )</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>udiOffDelay</strong></td>
+<td>UDINT</td>
+<td>0 ... 60min</td>
+<td>120s</td>
+<td><p class="first last">Follow-up period of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>eManModeB</strong></td>
+<td>eMANBIN</td>
+<td>eMANBIN.Auto, eMANBIN.ManOff, eMANBIN.ManOn</td>
+<td>eMANBIN.Auto</td>
+<td><p class="first last">Operating mode of manual override for the <em>xHB</em> digital output</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="automatik-ausgang-xab">
+<h3>Automatic output <em>xAB</em><a class="headerlink" href="#automatik-ausgang-xab" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The <em>xAB</em> digital automatic output is influenced by the <em>xEn</em> input, the <em>xAlarm</em> output, the follow-up module and the anti-lock module.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xEn</em></th>
+<th class="head"><em>xAlarm</em></th>
+<th class="head"><em>xAlarmControl</em></th>
+<th class="head"><p class="first last">Follow-up period</p>
+</th>
+<th class="head"><p class="first last">Anti-lock module</p>
+</th>
+<th class="head"><em>xAB</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>X</td>
+<td>FALSE</td>
+<td><p class="first last">Shutdown enabled via collective alarm</p>
+</td>
+</tr>
+<tr class="row-odd"><td>FALSE</td>
+<td>X</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Automatic mode Off</p>
+</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>x</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td><p class="first last">Automatic mode On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>X</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>TRUE</td>
+<td><p class="first last">Follow-up operation</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>x</td>
+<td>FALSE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td><p class="first last">Anti-lock operation</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+<div class="line"><br /></div>
+<div class="line">With the parameter <em>xAlarmControl</em> the behaviour of the output <em>xAB</em> can be influenced in case of an error.</div>
+<div class="line">If <em>xAlarmControl</em> = TRUE, the automatic output <em>xAB</em> is switched off in the event of an error (<em>xAlarm</em> = TRUE), if the manual override module is in automatic mode, then the output <em>xHB</em> is also switched off.</div>
+<div class="line">With <em>xAlarmControl</em> = FALSE there is no reaction.</div>
+</div>
+</div>
+<div class="section" id="hand-ausgang-xhb">
+<h3><a href="#id1"><span class="problematic" id="id2">*</span></a>xHB*manual output<a class="headerlink" href="#hand-ausgang-xhb" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The digital manual output <em>xHB</em> corresponds to the digital automatic output <em>xAB</em>, additionally extended by a manual override module and a forced override.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-2">
+<colgroup>
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAB</em></th>
+<th class="head">eMANBIN</th>
+<th class="head"><em>xForce</em></th>
+<th class="head"><strong>xForceOption</strong></th>
+<th class="head"><em>xHB</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td>X</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td>X</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>eMANBIN.ManOn</td>
+<td>FALSE</td>
+<td>X</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in manual mode On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANBIN.ManOff</td>
+<td>FALSE</td>
+<td>X</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in manual mode Off</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>X</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Forced override Off</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>X</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td><p class="first last">Forced override On</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="anforderung-energieerzeugung-xenergyrequest">
+<h3>Requirement - Power generation <em>xEnergyRequest</em><a class="headerlink" href="#anforderung-energieerzeugung-xenergyrequest" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The digital output <em>xEnergyRequest</em> is influenced by the input <em>xFb</em>, the tracking module and the anti-lock module.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-3">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last"><em>xFb</em></p>
+</th>
+<th class="head"><p class="first last">Follow-up period</p>
+</th>
+<th class="head"><p class="first last">Anti-lock module</p>
+</th>
+<th class="head"><em>xEnergyRequest</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>X</td>
+<td>X</td>
+<td>FALSE</td>
+<td><p class="first last">Circulation pump is not in operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td><p class="first last">Circulation pump is in operation</p>
+</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>TRUE</td>
+<td>X</td>
+<td>FALSE</td>
+<td><p class="first last">Follow-up module is in operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>X</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td><p class="first last">Anti-lock module is in operation</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="nachlaufmodul">
+<h3>Follow-up period<a class="headerlink" href="#nachlaufmodul" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The follow-up module is implemented by a switch-off delay with adjustable duration. The input of the follow-up module is active if the enable &#8216;xEn&#8217; is active and the collective alarm message <em>xAlarm</em> is not active at the same time.</div>
+</div>
+</div>
+<div class="section" id="blockierschutzmodul">
+<h3>Anti-lock module<a class="headerlink" href="#blockierschutzmodul" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The anti-lock module is implemented by the binary anti-lock module with adjustable time duration.</div>
+<div class="line">The duration <em>tAbsTime</em>, the time <strong>tAbsTime</strong> and the weekday <strong>eAbsDay</strong> are adjustable.</div>
+<div class="line">The time stamp (date / time) of the last anti-lock operation <em>dtAbsLastOn</em> is available.</div>
+</div>
+</div>
+<div class="section" id="ausgang-xalarm">
+<h3><em>xAlarm</em> output<a class="headerlink" href="#ausgang-xalarm" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-4">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAlarmIn</em></th>
+<th class="head"><em>xAlarmFb</em></th>
+<th class="head"><em>xAlarm</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Collective alarm is inactive</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td><p class="first last">External hardware error is active</p>
+</td>
+</tr>
+<tr class="row-even"><td>FALSE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td><p class="first last">The operation monitoring error is active</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td><p class="first last">Both errors are active</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="sammelmeldung-automatikbetrieb-xauto">
+<h3>Collective message automatic mode <em>xAuto</em><a class="headerlink" href="#sammelmeldung-automatikbetrieb-xauto" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective message Automatic mode <em>xAuto</em> is activated ( = TRUE ) if the input <em>eAOO</em> contains the value HVACTYPES.eManBin.Auto and the setpoint / parameter <strong>eManModeB</strong> contains the value eMANBIN.Auto.</div>
+<div class="line">In all other cases, the collective message Automatic mode <em>xAuto</em> is not activated ( = FALSE ).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="zwangsubersteuerung-xforce">
+<h3>Forced override <em>xForce</em><a class="headerlink" href="#zwangsubersteuerung-xforce" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The forced override acts directly on the output <em>xHB</em>. The parameter <strong>xForceOption</strong> defines the state of the output <em>xHB</em> when TRUE at the input <em>xForce</em>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="betriebsstundenzahler">
+<h3>Operating hours counter<a class="headerlink" href="#betriebsstundenzahler" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The operating hours meter is active if the circulation pump is in operation (<em>xFb</em> = TRUE) and at the same time the collective malfunction <a href="#id1"><span class="problematic" id="id2">*</span></a>xAlarm*is not active (<a href="#id3"><span class="problematic" id="id4">*</span></a>xAlarm*= FALSE).</div>
+<div class="line">The number of operating hours <strong>udiOperatingHours</strong>, and the number of times <strong>udiCountFb</strong> are output to the corresponding outputs.</div>
+<div class="line">The time stamp (date / time) of the circulating pump <em>dtLastFb</em> operation is available.</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Write access to the counter readings</p>
+<div class="line-block">
+<div class="line">Via the path &#8216;Instancename._OperatingHours.udiOperatingHours&#8217; or &#8216;Instancename._OperatingHours.udiCountFb&#8217; a write access to both counter readings is possible.</div>
+</div>
+</div>
+</div>
+<div class="section" id="betriebsuberwachung">
+<h3>Operation monitoring<a class="headerlink" href="#betriebsuberwachung" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The operation monitoring monitors the correct function of the circulation pump.</div>
+<div class="line">The monitoring can generally be enabled (<strong>xFbControl</strong> = TRUE) or disabled (<strong>xFbControl</strong> = FALSE).</div>
+<div class="line">The automatic operation of the circulation pump must also be active ( <em>eAOO</em> = HVACTYPES.eManBin.Auto ).</div>
+<div class="line"><br /></div>
+<div class="line">The input <em>xFb</em> and the output <em>xHB</em> are permanently compared with each other.</div>
+<div class="line">If the states are always unequal during an adjustable period of time <strong>udiFbControlTime</strong> (i.e. release of the pump but no operation feedback), the alarm message of the operation monitoring <em>xAlarmFb</em> is activated.</div>
+<div class="line"><br /></div>
+<div class="line">The alarm message of the operation monitoring <em>xAlarmFb</em> is reset if the enabling of the monitoring <strong>xFbControl</strong> is disabled, or the reset input <em>xQuit</em> is active, or the automatic mode of the circulation pump ( <em>eAOO</em> = HVACTYPES.eManBin.Auto ) is activated.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<p>Suitable visualization element from the HVACV Visu Library: <strong>FB_PumpHorizontal</strong> or <strong>FB_PumpVertical</strong></p>
+<div class="section" id="id4">
+<h3>Portrayal<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../../_images/FB_PumpHorizontal.PNG" src="../../../_images/FB_PumpHorizontal.PNG" />
+<img alt="../../../_images/FB_PumpVertical.PNG" src="../../../_images/FB_PumpVertical.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen-visu-element">
+<h3>Interfaces Visu-Element<a class="headerlink" href="#schnittstellen-visu-element" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id5">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>FB_Pump</strong></td>
+<td>Pump</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enter FB Pump here, for example PRG.Pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>rRotation</strong></td>
+<td>INT</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Here rotation of pump graphic can be entered as number of degrees. e.g. 90 corresponds to turning 90 degrees to right side. -90 degrees corresponds to turning 90 degrees to left.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<dl class="docutils">
+<dt>Parameter dialog for the pump: <strong>FB_PumpParameter</strong></dt>
+<dd><img alt="../../../_images/FB_PumpParameter.PNG" class="first last" src="../../../_images/FB_PumpParameter.PNG" />
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Note: VAR_IN_OUT interfaces must be assigned, VAR_INPUT is optional.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="15%" />
+<col width="10%" />
+<col width="19%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="6">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Requirement of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xForce</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Forced override after Manual override</p>
+</td>
+</tr>
+<tr class="row-even"><td>xFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating message of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarmIn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Alarm message of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-even"><td>eAOO</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td><p class="first last">Operating mode of manual override - Hardware</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xQuit</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Resetting the fault message of the operational monitoring</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="11">Output</td>
+<td>xHB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Manual output: Circulation pump not enabled</div>
+<div class="line">TRUE: Manual output: Circulation pump enabled</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>xAB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Automatic output: Circulation pump not enabled</div>
+<div class="line">TRUE: Automatic output: Circulation pump enabled</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>xEnergyRequest</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Request power production not released</div>
+<div class="line">TRUE: Request energy production is released</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarmFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Alarm message operation monitoring not enabled</div>
+<div class="line">TRUE: Alarm message operation monitoring enabled</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>tOffDelay</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td><p class="first last">Remaining shut-off time of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td>dtLastFb</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last operation of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-even"><td>dtAbsLastOn</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last anti-lock operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiOperatingHours</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating hours of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-even"><td>udiCountFb</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of activations of the circulating pump</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Collective alarm message not enabled</div>
+<div class="line">TRUE: Collective Alarm message enabled</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>xAuto</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Collective message Automatic mode not enabled</div>
+<div class="line">TRUE: Collective message Automatic mode enabled</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="10">Input</td>
+<td>xAlarmControl</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: <em>xHb</em> of <em>xAlarm</em> independent</div>
+<div class="line">TRUE: <em>xHb</em> is disabled at <em>xAlarm</em> = TRUE</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>udiFbControlTime</td>
+<td>UDINT</td>
+<td>60</td>
+<td><p class="first last">Duration of operation monitoring</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xFbControl</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Operation monitoring not enabled</div>
+<div class="line"><strong>xFbControl</strong>         = TRUE  ( Operation Monitoring is enabled )</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>xForceOption</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><div class="first last line-block">
+<div class="line">FALSE: Output <em>xHB</em> with forced override OFF</div>
+<div class="line">TRUE: Output <em>xHB</em> with forced override ON</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>udiAbsTime</td>
+<td>UDINT</td>
+<td>120</td>
+<td><p class="first last">Duration of anti-lock operation</p>
+</td>
+</tr>
+<tr class="row-even"><td>todAbsStartTime</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#8:0</td>
+<td><p class="first last">Time point of anti-lock operation</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eAbsDay</td>
+<td><a class="reference internal" href="../../Enums/eDoW.html#edow"><span class="std std-ref">eDoW</span></a></td>
+<td>eDow.Monday</td>
+<td><p class="first last">Weekday of the anti-lock operation</p>
+</td>
+</tr>
+<tr class="row-even"><td>eOffDelayTimeBase</td>
+<td><a class="reference internal" href="../../Enums/eTime.html#etime"><span class="std std-ref">eTime</span></a></td>
+<td>eTime.Second</td>
+<td><p class="first last">Scaling of the follow-up time ( seconds / minutes / hours )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiOffDelay</td>
+<td>UDINT</td>
+<td>60</td>
+<td><p class="first last">Follow-up period of the circulation pump</p>
+</td>
+</tr>
+<tr class="row-even"><td>eManModeB</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td><p class="first last">Operating mode of manual override for the <em>xHB</em> digital output</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pou-Pump/mQuit.html">Pump.mQuit (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-Pump/mResetOperatingHours.html">Pump.mResetOperatingHours (METH)</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pou-Pump/mQuit.html" class="btn btn-neutral float-right" title="Pump.mQuit (METH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="PreRinseOperationValveAnalog.html" class="btn btn-neutral float-left" title="PreRinseOperationValveAnalog (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

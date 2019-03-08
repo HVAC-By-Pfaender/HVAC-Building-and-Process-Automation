@@ -1,0 +1,453 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.Fan1Speed`:
+
+
+.. index::
+   single: Fan1Speed
+
+.. _`Fan1Speed`:
+
+Fan1Speed (FB)
+--------------
+
+FUNCTION_BLOCK Fan1Speed
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Steuerung eines einstufigen Ventilators
+     | Zusatzfunktionen: Luftmangelüberwachung, Betriebsüberwachung, Reparaturschalter, Handübersteuerung, Statusanzeige
+     | Typische Anwendung: Steuerung eines Raum - Abluftventilators
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Fan1Speed_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xEn*
+      - BOOL
+      -
+      -
+      - Anforderung des Ventilators
+    * - *xForce*
+      - BOOL
+      -
+      - FALSE
+      - Zwangsübersteuerung nach Handübersteuerung
+    * - *xFb*
+      - BOOL
+      -
+      -
+      - Betriebsmeldung des Ventilators
+    * - *xPFb*
+      - BOOL
+      -
+      -
+      - Meldung der Luftmangelsituation
+    * - *xMSwitch*
+      - BOOL
+      -
+      - TRUE
+      - Meldung des Reparaturschalters
+    * - *xAlarmIn*
+      - BOOL
+      -
+      -
+      - Störmeldung des Ventilators
+    * - *eAOO*
+      - HVACTYPES.eManBin
+      - HVACTYPES.eManBin.Auto, HVACTYPES.eManBin.ManOff, HVACTYPES.eManBin.ManOn
+      - HVACTYPES.eManBin.Auto
+      - Betriebsart der Handübersteuerung - Hardware
+    * - *xQuit*
+      - BOOL
+      -
+      - FALSE
+      - Rücksetzung der Störmeldungen ( Betriebsüberwachung, Luftmangelüberwachung )
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xHB*
+      - BOOL
+      -
+      -
+      - Freigabe - Ventilator nach Handübersteuerung
+    * - *xAB*
+      - BOOL
+      -
+      -
+      - Freigabe - Ventilator vor Handübersteuerung
+    * - *xAlarmFb*
+      - BOOL
+      -
+      -
+      - Störmeldung der Betriebsüberwachung
+    * - *xAlarmPFb*
+      - BOOL
+      -
+      -
+      - Störmeldung der Luftmangelüberwachung
+    * - *dtLastFb*
+      - DATE_AND_TIME
+      -
+      -
+      - Datum / Uhrzeit des letzten Betriebs des Ventilators
+    * - *udiOperatingHours*
+      - UDINT
+      -
+      -
+      - Betriebsstunden der Umwälzpumpe
+    * - *udiCountFb*
+      - UDINT
+      -
+      -
+      - Anzahl der Einschaltungen der Umwälzpumpe
+    * - *xAlarm*
+      - BOOL
+      -
+      -
+      - Sammelstörmeldung
+    * - *xAuto*
+      - BOOL
+      -
+      -
+      - Sammelmeldung Automatikbetrieb
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **udiPFbControlTime**
+      - UDINT
+      - 1 bis 3600s
+      - 60s
+      - Meldeverzögerung der Luftmangelüberwachung
+    * - **xPFbControl**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe der Luftmangelüberwachung
+    * - **xAlarmControl**
+      - BOOL
+      -
+      - TRUE
+      - Einfluss von *xAlarm* auf *xAB*
+    * - **udiFbControlTime**
+      - UDINT
+      - 0 ... 300s
+      - 60s
+      - Meldeverzögerung der Betriebsüberwachung
+    * - **xFbControl**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe / Sperrung der Betriebsüberwachung
+    * - **xForceOption**
+      - BOOL
+      -
+      - FALSE
+      - Zustand vom Ausgang *xHB* bei Zwangsübersteuerung
+    * - **eManModeB**
+      - eMANBIN
+      - eMANBIN.Auto, eMANBIN.ManOff, eMANBIN.ManOn
+      - eMANBIN.Auto
+      - Betriebsart der Handübersteuerung für den digitalen Ausgang *xHB*
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein steuert einen einstufigen Ventilator.
+| Es kommen im Wesentlichen folgende Funktionsbausteine zur Anwendung:
+
+:ref:`AirShortage <AirShortage>`
+
+:ref:`ManBin <ManBin>`
+
+:ref:`OperatingHours <OperatingHours>`
+
+Freigabe - Ventilator vor Handübersteuerung *xAB*
+=================================================
+| Die Freigabe - Ventilator vor Handübersteuerung *xAB* wird durch die Anforderung des Ventilators *xEn*, die Sammelstörmeldung *xAlarm*,
+  die Meldung des Reparaturschalters *xMSwitch*, den Parameter **xAlarmControl** und die Luftmangelüberwachung beeinflusst.
+|
+| Die Freigabe - Ventilator vor Handübersteuerung *xAB* ist aktiv ( = TRUE ), falls folgende Zustände gleichzeitig vorliegen:
+|
+| Fall 1:
+|
+| *xEn*             = TRUE  ( Anforderung aktiv )
+| *xMSwitch*            = TRUE  ( Motorschutzschalter nicht ausgelöst )
+| **xAlarmControl**     = FALSE ( Sammelstörmeldung nicht berücksichtigt )
+|
+| Fall 2:
+|
+| *xEn*             = TRUE  ( Anforderung aktiv )
+| *xAlarm*          = FALSE ( Sammelstörmeldung nicht aktiv )
+| *xMSwitch*            = TRUE  ( Motorschutzschalter nicht ausgelöst )
+| **xAlarmControl**     = TRUE  ( Sammelstörmeldung berücksichtigt )
+|
+| In allen übrigen Situationen ist die Freigabe - Ventilator vor Handübersteuerung *xAB* nicht aktiv ( = FALSE ).
+
+Freigabe - Ventilator nach Handübersteuerung *xHB*
+==================================================
+| Die Freigabe - Ventilator vor Handübersteuerung *xHB* entspricht der Freigabe - Ventilator vor Handübersteuerung *xAB*,
+  zusätzlich erweitert um ein Handübersteuermodul und um eine Zwangsübersteuerung.
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 300 300 300 300 900
+    :header-rows: 1
+
+    * - *xAB*
+      - **eManModeB**
+      - *xForce*
+      - **xForceOption**
+      - *xHB*
+      - Hinweise
+    * - FALSE
+      - eMANBIN.Auto
+      - FALSE
+      - X
+      - FALSE
+      - Handübersteuermodul in Automatik
+    * - TRUE
+      - eMANBIN.Auto
+      - FALSE
+      - X
+      - TRUE
+      - Handübersteuermodul in Automatik
+    * - X
+      - eMANBIN.ManOn
+      - FALSE
+      - X
+      - TRUE
+      - Handübersteuermodul in Handbetrieb Ein
+    * - X
+      - eMANBIN.ManOff
+      - FALSE
+      - X
+      - FALSE
+      - Handübersteuermodul in Handbetrieb Aus
+    * - X
+      - X
+      - TRUE
+      - FALSE
+      - FALSE
+      - Zwangsübersteuerung Aus
+    * - X
+      - X
+      - TRUE
+      - TRUE
+      - TRUE
+      - Zwangsübersteuerung Ein
+
+| Legende: X = beliebig
+
+Meldung des Reparaturschalters *xMSwitch*
+=========================================
+| *xMSwitch* = TRUE:    Reparaturschalter wurde nicht ausgelöst ( Normalzustand )
+| *xMSwitch* = FALSE:   Reparaturschalter wurde ausgelöst ( Fehlerzustand )
+
+Zwangsübersteuerung *xForce*
+======================================
+| Die Zwangsübersteuerung wirkt direkt auf den Ausgang *xHB*. Mit dem Parameter **xForceOption** wird festgelegt, welchen Zustand der Ausgang *xHB* bei TRUE am Eingang *xForce* einnimmt.
+|
+Betriebsstunden und Einschaltvorgänge
+=====================================
+| Die Anzahl der Betriebsstunden und der Einschaltvorgänge werden erfasst ( = Zählprozess aktiv ), falls die Betriebsmeldung
+  des Ventilators *xFb* aktiv ist und gleichzeitig die Sammelstörmeldung *xAlarm* nicht aktiv ist ( = FALSE ).
+| Die Ergebnisse stehen an den Zählerausgängen **udiOperatingHours** und **udiCountFb** zur Verfügung.
+
+.. topic:: Schreibzugriff auf die Zählerstände
+
+    | Über den Pfad 'Instanzname._OperatingHours.udiOperatingHours' bzw. 'Instanzname._OperatingHours.udiCountFb' ist ein Schreibzugriff auf die beide Zählerstände möglich.
+
+Datum / Uhrzeit des letzten Betriebs des Ventilators *dtLastFb*
+===============================================================
+| Am Ausgang *dtLastFb* steht während des Zählprozesses das aktuelle Datum / die aktuelle Uhrzeit zur Verfügung.
+| Am Ausgang *dtLastFb* steht ausserhalb des Zählprozesses das Datum / die Uhrzeit am Ende des letzten Zählprozesses zur Verfügung.
+| Am Ausgang *dtLastFb* wird vor dem ersten Zählprozess der Initialisierungswert DT#1970-1-1-0.0.0 ausgegeben.
+
+Betriebsüberwachung
+===================
+| Die Betriebsüberwachung kann durch den Sollwert / Parameter **xFbControl** freigegeben ( = TRUE ) oder gesperrt ( = FALSE ) werden.
+|
+| Bei gesperrter Überwachung wird die Störmeldung der Betriebsüberwachung *xAlarmFb* immer gesperrt ( = FALSE ).
+| Bei freigegebener Überwachung wird die Störmeldung der Betriebsüberwachung *xAlarmFb* aktiviert ( = TRUE ), falls
+  gleichzeitig während einer Mindestzeitdauer **udiFbControlTime** folgende Zustände gegeben sind:
+|
+| *xHB* und *xFb*        = ungleich ( Freigabezustand und Betriebszustand stimmen nicht überein )
+| *eAOO*                 = HVACTYPES.eManBin.Auto ( Handübersteuerung - Hardware in Automatik )
+| *xFbControl*           = TRUE  ( Betriebsüberwachung ist freigegeben )
+|
+| Die Störmeldung der Betriebsüberwachung *xAlarmFb* wird zurück gesetzt ( = FALSE ), falls mindestens eine der nachfolgenden
+  Bedingungen erfüllt ist:
+|
+| *eAOO*            = HVACTYPES.eManBin.Auto ( Rückschaltung in den Automatikbetrieb der Handübersteuerung - Hardware )
+| *xQuit*               = TRUE  ( Rücksetzung der Störmeldungen ist aktiv )
+| *xFbControl*      = FALSE ( Betriebsüberwachung gesperrt )
+|
+
+Luftmangelüberwachung
+=====================
+| Sie dient zur Erkennung einer Luftmangelsituation durch die Auswertung der Signale an den Eingängen Meldung der Luftmangelsituation *xPFb* und der Betriebsmeldung des Ventilators *xFb*.
+| Die Luftmangelüberwachung kann durch den Sollwert / Parameter **xPFbControl** freigegeben ( = TRUE ) oder gesperrt ( = FALSE ) werden. Im gesperrten Zustand wird der
+  Ausgang - Störmeldung *xAlarmPFb* nicht aktiviert ( = FALSE ).
+|
+| Der Ausgang - Störmeldung *xAlarmPFb* wird aktiviert ( *xAlarmPFb* = TRUE ), falls die unten stehenden Bedingungen 1 und 2 gleichzeitig erfüllt sind.
+|
+| Bedingung 1:  Der Eingang für den Differenzdruckschalter *xPFb* befindet sich mindestens während der Wartezeit *udiPFbControlTime* permanent im Zustand FALSE ( = Luftmangelsituation ).
+|
+| Bedingung 2:  Die Betriebsmeldung für den Ventilator *xFb* befindet sich mindestens während der Wartezeit *udiPFControlTime* permanent im Zustand TRUE ( = Ventilator in Betrieb ).
+|
+|
+| Der Ausgang - Störmeldung *xAlarmPFb* wird in folgenden Fällen deaktiviert ( *xAlarmPFb* = FALSE ):
+|
+| Fall 1:       Die Bedingungen 1 und / oder 2 sind nicht erfüllt und die Rücksetzung der Störmeldung *xQuit* ist aktiv ( = TRUE ).
+|
+
+Sammelstörmeldung *xAlarm*
+==========================
+| Die Sammelstörmeldung wird aktiviert ( = TRUE ), falls mindestens eine der nachfolgend beschriebenen Bedingungen erfüllt ist.
+|
+| *xAlarmIn*        = TRUE  ( Störmeldung des Ventilators ist aktiv )
+| *xAlarmFB*        = TRUE  ( Fehler aus der Betriebüberwachung )
+| *xAlarmPFb*        = TRUE     ( Fehler aus der Luftmangelüberwachung )
+| *xMSwitch*            = FALSE ( Reparaturschalter wurde ausgelöst )
+|
+| In allen übrigen Fällen ist die Sammelstörung nicht aktiv ( = FALSE ).
+|
+
+Sammelmeldung Automatikbetrieb *xAuto*
+======================================
+| Die Sammelmeldung Automatikbetrieb *xAuto* wird aktiviert ( = TRUE ), falls der Eingang *eAOO* den Wert HVACTYPES.eManBin.Auto und der Sollwert / Parameter **eManModeB**
+  den Wert eMANBIN.Auto enthält.
+| In alle übrigen Fällen ist die Sammelmeldung Automatikbetrieb *xAuto* nicht aktiviert ( = FALSE ).
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------------+-------------+------------------------+-------------------------------------------------------------+
+    | Scope  | Name              | Type        | Initial                | Comment                                                     |
+    +========+===================+=============+========================+=============================================================+
+    | Input  | xEn               | BOOL        |                        | Anforderung des Ventilators                                 |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xForce            | BOOL        | FALSE                  | Zwangsübersteuerung nach Handübersteuerung                  |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xFb               | BOOL        |                        | Betriebsmeldung des Ventilators                             |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xPFb              | BOOL        |                        | Meldung der Luftmangelsituation                             |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xMSwitch          | BOOL        | TRUE                   | Meldung des Reparaturschalters                              |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarmIn          | BOOL        |                        | Störmeldung des Ventilators                                 |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | eAOO              | |ioeManBin| | HVACTYPES.eManBin.Auto | Betriebsart der Handübersteuerung - Hardware                |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xQuit             | BOOL        | FALSE                  | Rücksetzung der Störmeldungen ( Betriebsüberwachung,        |
+    |        |                   |             |                        | Luftmangelüberwachung )                                     |
+    +--------+-------------------+-------------+------------------------+-------------------------------------------------------------+
+    | Output | xHB               | BOOL        |                        | Freigabe - Ventilator nach Handübersteuerung                |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAB               | BOOL        |                        | Freigabe - Ventilator vor Handübersteuerung                 |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarmFb          | BOOL        |                        | Störmeldung der Betriebsüberwachung                         |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarmPFb         | BOOL        |                        | Störmeldung der Luftmangelüberwachung                       |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | dtLastFb          | DT          |                        | Datum / Uhrzeit des letzten Betriebs des Ventilators        |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | udiOperatingHours | UDINT       |                        | Betriebsstunden der Umwälzpumpe                             |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | udiCountFb        | UDINT       |                        | Anzahl der Einschaltungen des Ventilators                   |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarm            | BOOL        |                        | Sammelstörung                                               |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAuto             | BOOL        |                        | Sammelmeldung Automatikbetrieb                              |
+    +--------+-------------------+-------------+------------------------+-------------------------------------------------------------+
+    | Input  | udiPFbControlTime | UDINT       | 60                     | Meldeverzögerung der Luftmangelüberwachung                  |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xPFbControl       | BOOL        | TRUE                   | Freigabe der Luftmangelüberwachung                          |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarmControl     | BOOL        | TRUE                   | Einfluss von *xAlarm* auf *xAB*                             |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | udiFbControlTime  | UDINT       | 60                     | Meldeverzögerung der Betriebsüberwachung                    |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xFbControl        | BOOL        | TRUE                   | Freigabe / Sperrung der Betriebsüberwachung                 |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | xForceOption      | BOOL        | FALSE                  | Zustand vom Ausgang *xHB* bei Zwangsübersteuerung           |
+    +        +-------------------+-------------+------------------------+-------------------------------------------------------------+
+    |        | eManModeB         | |ioeMANBIN| | eMANBIN.Auto           | Betriebsart der Handübersteuerung für den digitalen Ausgang |
+    |        |                   |             |                        | *xHB*                                                       |
+    +--------+-------------------+-------------+------------------------+-------------------------------------------------------------+
+
+.. |ioeManBin| replace:: :ref:`eManBin<eManBin>`
+.. |ioeMANBIN| replace:: :ref:`eMANBIN<eManBin>`
+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Components/pou-Fan1Speed/mQuit
+   /HVAC-Library/HVAC-Functions/Components/pou-Fan1Speed/mResetOperatingHours
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,17 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Button`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Button`:
+
+Button
+======
+
+.. todo:: Please add documentation for folder: Button
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Button/Button1
+   /HVAC-Library/HVAC-Functions/Button/Button4
+   /HVAC-Library/HVAC-Functions/Button/ButtonToggle
+
+.. last line of folder.rst template

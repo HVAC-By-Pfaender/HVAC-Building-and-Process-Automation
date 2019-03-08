@@ -1,0 +1,17 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-Structs`:
+
+.. _`fld-HVAC Library.fld-Structs`:
+
+Structs
+=======
+
+.. todo:: Please add documentation for folder: Structs
+
+.. toctree::
+
+   /HVAC-Library/Structs/OptStartHeatDataActual
+   /HVAC-Library/Structs/stMClockData
+   /HVAC-Library/Structs/stSlvClockData
+
+.. last line of folder.rst template

@@ -1,0 +1,32 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-Enums`:
+
+.. _`fld-HVAC Library.fld-Enums`:
+
+Enums
+=====
+
+.. todo:: Please add documentation for folder: Enums
+
+.. toctree::
+
+   /HVAC-Library/Enums/ERROR
+   /HVAC-Library/Enums/eActiveClocksVisu
+   /HVAC-Library/Enums/eAirFlowFormula
+   /HVAC-Library/Enums/eAlmAlarmCounterStates
+   /HVAC-Library/Enums/eControlMode
+   /HVAC-Library/Enums/eCountryList
+   /HVAC-Library/Enums/eDoW
+   /HVAC-Library/Enums/eHandMan
+   /HVAC-Library/Enums/eInit
+   /HVAC-Library/Enums/eInit2
+   /HVAC-Library/Enums/eInit3
+   /HVAC-Library/Enums/eLimiterMode
+   /HVAC-Library/Enums/eManBin
+   /HVAC-Library/Enums/eManNum
+   /HVAC-Library/Enums/eOpMode
+   /HVAC-Library/Enums/eOpModeRedundance
+   /HVAC-Library/Enums/eTime
+   /HVAC-Library/Enums/eTimeMS
+
+.. last line of folder.rst template

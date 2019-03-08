@@ -1,0 +1,209 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Damping.Ramp`:
+
+
+.. index::
+   single: Ramp
+
+.. _`Ramp`:
+
+Ramp (FB)
+---------
+
+FUNCTION_BLOCK Ramp
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Begrenzung der Signaländerung eins analogen Eingangssignals
+     | Typische Anwendung: Dämpfung / Filterung
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Ramp_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rIn*
+      - REAL
+      -
+      -
+      - Analogwerteingang
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rOut*
+      - REAL
+      -
+      -
+      - Analogwertausgang
+    * - *xRampActive*
+      - BOOL
+      -
+      -
+      - Status - Rampe
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **rVariation**
+      - REAL
+      - 0 ...
+      - 100
+      - Maximale Änderung pro Zeiteinheit
+    * - **tTime**
+      - TIME
+      -
+      - T#10s
+      - Zeiteinheit
+    * - **rInitValue**
+      - REAL
+      -
+      - 0
+      - Initialwert
+    * - **eInitial**
+      - eInit
+      -
+      - eInit.InputValue
+      - Auswahl des Initialwerts
+    * - **tInitDelay**
+      - TIME
+      -
+      - T#5s
+      - Startverzögerung
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Das analoge Eingangssignal *rIn* wird permanent auf seine Wertänderungen hin untersucht.
+| Weicht das Signal am Analogwertausgang *rOut* vom Eingangssignal ab, so folgt es dem Eingangssignal mit der maximalen Signaländerungsgeschwindigkeit.
+
+.. topic:: Einstellung der Zeiteinheit **tTime**
+
+    | Dieser Sollwert / Parameter darf nur Werte >= 0 annehmen.
+
+| Die maximale Signaländerungsgeschwindigkeit wird durch den Quotienten aus den Sollwerten / Parametern **rVariation** und **tTime** gebildet ( **tTime** > 0s ).
+| Die maximale Signaländerungsgeschwindigkeit wird durch den Quotienten aus den Sollwerten / Parametern **rVariation** und Taskzykluszeit gebildet ( **tTime** = 0s ).
+| Die maximale Signaländerungsgeschwindigkeit ist sowohl bei positiven als auch bei negativen Wertänderungen am Eingang *rIn* wirksam.
+|
+
+.. image:: /../DocuBilder/Ramp_Bild_1.png
+
+|
+
+Art der Initialisierung **eInitial**
+====================================
+| Mit diesem Sollwert / Parameter wird die Art der Initialisierung des Analogwerteingangs *rIn* festgelegt.
+| Die Initialisierung wird einmalig nach jedem CPU-Neustart ausgeführt.
+|
+| Folgende Optionen sind möglich:
+
+ .. list-table::
+    :name: Initialisierungsarten
+    :widths: 300 600 900
+    :header-rows: 1
+
+    * - Art
+      - Wert der Initialierung
+      - Hinweis
+    * - eInit.InitValue
+      - **rInitValue**
+      - Einstellbarer Initialwert
+    * - eInit.InputValue
+      - *rIn*
+      - Eingangswert
+    * - eInit.InputValueDelayed
+      - *rIn*
+      - Verzögerter Eingangswert
+
+| Die Initialisierung wird unabhängig davon permanent ausgeführt, wenn der Sollwert / Parameter **tTime** den Wert T#0s hat.
+|
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------+-----------+------------------+-----------------------------------+
+    | Scope  | Name        | Type      | Initial          | Comment                           |
+    +========+=============+===========+==================+===================================+
+    | Input  | rIn         | REAL      |                  | Analogwerteingang                 |
+    +        +-------------+-----------+------------------+-----------------------------------+
+    |        | rVariation  | REAL      | 100              | Maximale Änderung pro Zeiteinheit |
+    +        +-------------+-----------+------------------+-----------------------------------+
+    |        | tTime       | TIME      | TIME#10s0ms      | Zeiteinheit                       |
+    +        +-------------+-----------+------------------+-----------------------------------+
+    |        | rInitValue  | REAL      | 0                | Initialwert                       |
+    +        +-------------+-----------+------------------+-----------------------------------+
+    |        | eInitial    | |ioeInit| | eInit.InputValue | Auswahl des Initialwerts          |
+    +        +-------------+-----------+------------------+-----------------------------------+
+    |        | tInitDelay  | TIME      | TIME#5s0ms       | Startverzögerung                  |
+    +--------+-------------+-----------+------------------+-----------------------------------+
+    | Output | rOut        | REAL      |                  | Analogwertausgang                 |
+    +        +-------------+-----------+------------------+-----------------------------------+
+    |        | xRampActive | BOOL      |                  | Status - Rampe                    |
+    +--------+-------------+-----------+------------------+-----------------------------------+
+
+.. |ioeInit| replace:: :ref:`eInit<eInit>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

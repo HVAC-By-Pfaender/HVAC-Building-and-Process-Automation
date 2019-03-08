@@ -1,0 +1,175 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Setpoint.EditReal`:
+
+
+.. index::
+   single: EditReal
+
+.. _`EditReal`:
+
+EditReal (FB)
+-------------
+
+FUNCTION_BLOCK EditReal
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Eingabe eines numerischen Wertes
+     |
+     | Typische Anwendung: Eingabe einer Solltemperatur
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/EditReal_FB.png
+
+**************
+Schnittstellen
+**************
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rOut*
+      - REAL
+      -
+      -
+      - Numerischer Ausgabewert
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **rSetPoint**
+      - REAL
+      -
+      - 0.0
+      - Numerischer Eingabewert
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Übergabe eines numerischen Eingabewerts **rSetPoint** und die direkte Übertragung zum
+  numerischen Ausgabewert *rOut*.
+
+.. topic:: Verhalten bei Spannungsausfall
+
+    | Der numerische Eingabewert **rSetPoint** wird spannungsausfallsicher gespeichert und automatisch wiederhergestellt.
+    |
+
+**************
+Visualisierung
+**************
+Passendes Visualisierungselement aus der HVACV Visu Library: **EditReal**
+
+Darstellung
+===========
+  .. image:: /../DocumentationPictures_Visu/EditReal_Visu.PNG
+
+Schnittstellen Visu-Element
+===========================
+
+ .. list-table::
+    :name: Schnittstellen Visu-Element
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Typ
+      - Initialwert
+      - Funktion
+    * - **rValue**
+      - REAL
+      - VAR_IN_OUT
+      -
+      - Numerischer Eingabewert hier eintragen Bsp. EditReal.rSetPoint
+    * - **bDecimals**
+      - BYTE
+      - VAR_INPUT
+      - 0
+      - Anzahl der Nachkommastellen hier eintragen z.B. 0= XX ; 1 = XX.X ; 2= XX.XX Die Anzeige wird nicht gerundet sondern abgeschnitten.
+    * - **sUnit**
+      - STRING
+      - VAR_INPUT
+      -
+      - Einheit im Stringformat eingeben z.B. '°C' oder '%'
+    * - **rMinInputVisu**
+      - REAL
+      - VAR_INPUT
+      - -1000
+      - Min Eingabe die im Numpad erscheint und rot aufleuchetet wenn Wert unterschritten wird. Eingabe ist dann nicht möglich.
+    * - **rMaxInputVisu**
+      - REAL
+      - VAR_INPUT
+      - 1000
+      - Max Eingabe die im Numpad erscheint und rot aufleuchetet wenn Wert überschritten wird. Eingabe ist dann nicht möglich.
+    * - **sDialogTitle**
+      - STRING
+      - VAR_INPUT
+      -
+      - Titel im Stringformat eingeben z.B: 'Eingabe Raumtemperatur' - erscheint im Numpad bei der Eingabe.
+    * - **iFieldSizeL**
+      - INT
+      - VAR_INPUT
+      - 0
+      - Feld vergößert sich um Anzahl der eingegebenen Pixel nach links. Wird benötigt um lange Zahlen oder Einheiten anzuzeigen.
+    * - **iFieldSizeR**
+      - INT
+      - VAR_INPUT
+      - 0
+      - Feld vergößert sich um Anzahl der eingegebenen Pixel nach rechts. Wird benötigt um lange Zahlen oder Einheiten anzuzeigen.
+|
+| Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+------+---------+-------------------------+
+    | Scope  | Name      | Type | Initial | Comment                 |
+    +========+===========+======+=========+=========================+
+    | Input  | rSetPoint | REAL | 0       | Numerischer Eingabewert |
+    +--------+-----------+------+---------+-------------------------+
+    | Output | rOut      | REAL |         | Numerischer Ausgabewert |
+    +--------+-----------+------+---------+-------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

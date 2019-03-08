@@ -1,0 +1,930 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Clock7d1Ch (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../search.html" />
+    <link rel="next" title="Clock7d2Ch (FB)" href="Clock7d2Ch.html" />
+    <link rel="prev" title="Clock" href="fld-Clock.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Clock.html">Clock</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Clock7d1Ch (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Clock7d2Ch.html">Clock7d2Ch (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ClockMaster32.html">ClockMaster32 (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ClockSlave32.html">ClockSlave32 (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Holiday.html">Holiday (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PublicHoliday.html">PublicHoliday (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SwitchTimeS.html">SwitchTimeS (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TimeRead.html">TimeRead (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Clock.html">Clock</a> &raquo;</li>
+        
+      <li>Clock7d1Ch (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Clock/Clock7d1Ch.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-clock-clock7d1ch"></span><div class="section" id="clock7d1ch-fb">
+<span id="clock7d1ch"></span><span id="index-0"></span><h1>Clock7d1Ch (FB)<a class="headerlink" href="#clock7d1ch-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK Clock7d1Ch</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Schaltuhr mit 7 Wochentagen, je einem Ein-/Ausschaltzeitpunkt und binärem Gesamtausgang.</div>
+<div class="line">Die Funktionsweise ( Einschaltperiode oder Ausschaltperiode ) ist pro Wochentag definierbar.</div>
+<div class="line">Typische Anwendung: Festlegung des Nacht- / Tagbetriebs einer Zonentemperaturregelung</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/Clock7d1Ch_FB.png" src="../../../_images/Clock7d1Ch_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Schnittstellen<a class="headerlink" href="#schnittstellen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Eingänge<a class="headerlink" href="#eingange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xEn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Freigabeeingang</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Ausgänge<a class="headerlink" href="#ausgange" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xActive</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Anzeige aktiver Schaltperioden</td>
+</tr>
+<tr class="row-odd"><td><em>todActivatedFrom</em></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Einschaltzeitpunkt des aktuellen Wochentags</td>
+</tr>
+<tr class="row-even"><td><em>todActivatedTo</em></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Ausschaltzeitpunkt des aktuellen Wochentags</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Sollwerte / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Wertebereich</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>todMonFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td>Einschaltzeitpunkt - Montag</td>
+</tr>
+<tr class="row-odd"><td><strong>todMonTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td>Ausschaltzeitpunkt - Montag</td>
+</tr>
+<tr class="row-even"><td><strong>xMonMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Montag</td>
+</tr>
+<tr class="row-odd"><td><strong>todTueFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td>Einschaltzeitpunkt - Dienstag</td>
+</tr>
+<tr class="row-even"><td><strong>todTueTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td>Ausschaltzeitpunkt - Dienstag</td>
+</tr>
+<tr class="row-odd"><td><strong>xTueMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Dienstag</td>
+</tr>
+<tr class="row-even"><td><strong>todWedFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td>Einschaltzeitpunkt - Mittwoch</td>
+</tr>
+<tr class="row-odd"><td><strong>todWedTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td>Ausschaltzeitpunkt - Mittwoch</td>
+</tr>
+<tr class="row-even"><td><strong>xWedMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Mittwoch</td>
+</tr>
+<tr class="row-odd"><td><strong>todThuFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td>Einschaltzeitpunkt - Donnerstag</td>
+</tr>
+<tr class="row-even"><td><strong>todThuTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td>Ausschaltzeitpunkt - Donnerstag</td>
+</tr>
+<tr class="row-odd"><td><strong>xThuMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Donnerstag</td>
+</tr>
+<tr class="row-even"><td><strong>todFriFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td>Einschaltzeitpunkt - Freitag</td>
+</tr>
+<tr class="row-odd"><td><strong>todFriTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td>Ausschaltzeitpunkt - Freitag</td>
+</tr>
+<tr class="row-even"><td><strong>xFriMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Freitag</td>
+</tr>
+<tr class="row-odd"><td><strong>todSatFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td>Einschaltzeitpunkt - Samstag</td>
+</tr>
+<tr class="row-even"><td><strong>todSatTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td>Ausschaltzeitpunkt - Samstag</td>
+</tr>
+<tr class="row-odd"><td><strong>xSatMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Samstag</td>
+</tr>
+<tr class="row-even"><td><strong>todSunFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td>Einschaltzeitpunkt - Sonntag</td>
+</tr>
+<tr class="row-odd"><td><strong>todSunTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td>Ausschaltzeitpunkt - Sonntag</td>
+</tr>
+<tr class="row-even"><td><strong>xSunMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Sonntag</td>
+</tr>
+<tr class="row-odd"><td><strong>sNotice</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td>&#8216;Notice&#8217;</td>
+<td>Bezeichnung - Schaltuhr</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+</div>
+<div class="section" id="wochentage-1-7-montag-sonntag-xxx-mon-tue-wed-thu-fri-sat-sun">
+<h3>Wochentage 1 - 7 ( Montag ... Sonntag, XXX = Mon, Tue, Wed, Thu, Fri, Sat, Sun )<a class="headerlink" href="#wochentage-1-7-montag-sonntag-xxx-mon-tue-wed-thu-fri-sat-sun" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Jedem der sieben Wochentage ist eine eigene Schaltperiode zugeordnet.</div>
+<div class="line"><br /></div>
+<div class="line">Jede Schaltperiode ist durch einstellbare Daten ( Einschaltzeitpunkt <strong>todXXXTimeFrom</strong> und Ausschaltzeitpunkt <strong>todXXXTimeTo</strong> ) definiert.</div>
+<div class="line">Zusätzlich kann eine Betriebsart ( <strong>xXXXMode</strong> ) pro Wochentag festgelegt werden.</div>
+<div class="line"><br /></div>
+<div class="line">Liegt der Ausschaltzeitpunkt vor dem Einschaltzeitpunkt, so wird für die Prüfung der Ausschaltzeitpunkt auf den Wert des Einschaltzeitpunkts gelegt.</div>
+<div class="line"><br /></div>
+<div class="line">Eine Schaltperiode ist aktiv, falls sich die aktuelle Uhrzeit am Wochentag XXX innerhalb der Schaltperiode des Wochentag XXX befindet ( <strong>xXXXMode</strong> = TRUE ).</div>
+<div class="line">Eine Schaltperiode ist aktiv, falls sich die aktuelle Uhrzeit am Wochentag XXX ausserhalb der Schaltperiode des Wochentag XXX befindet ( <strong>xXXXMode</strong> = FALSE ).</div>
+<div class="line"><br /></div>
+</div>
+<div class="topic">
+<p class="topic-title first">Sonderfall 1: Einschaltzeitpunkt = Ausschaltzeitpunkt = TOD#00:00</p>
+<div class="line-block">
+<div class="line">Bei aktiver Einschaltperiode ( <strong>xXXXMode</strong> = TRUE ) ist die Schaltperiode ganztägig nicht aktiv.</div>
+<div class="line">Bei aktiver Ausschaltperiode ( <strong>xXXXMode</strong> = FALSE ) ist die Schaltperiode ganztägig aktiv.</div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Sonderfall 2: Einschaltzeitpunkt = Ausschaltzeitpunkt = TOD#23:59</p>
+<div class="line-block">
+<div class="line">Bei aktiver Einschaltperiode ( <strong>xXXXMode</strong> = TRUE ) ist die Schaltperiode ganztägig aktiv.</div>
+<div class="line">Bei aktiver Ausschaltperiode ( <strong>xXXXMode</strong> = FALSE ) ist die Schaltperiode ganztägig nicht aktiv.</div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Voraussetzung für den Einsatz des Funktionsbausteins Clock7d1Ch</p>
+<div class="line-block">
+<div class="line">Zur korrekten Funktion ist der Einsatz des Funktionsbausteins TimeRead mit <em>xEn</em> = TRUE erforderlich.</div>
+</div>
+</div>
+</div>
+<div class="section" id="einschaltperiode">
+<h3>Einschaltperiode<a class="headerlink" href="#einschaltperiode" title="Link zu dieser Überschrift">¶</a></h3>
+<img alt="../../../_images/Clock7d1Ch_Bild_1.png" src="../../../_images/Clock7d1Ch_Bild_1.png" />
+</div>
+<div class="section" id="ausschaltperiode">
+<h3>Ausschaltperiode<a class="headerlink" href="#ausschaltperiode" title="Link zu dieser Überschrift">¶</a></h3>
+<img alt="../../../_images/Clock7d1Ch_Bild_2.png" src="../../../_images/Clock7d1Ch_Bild_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="freigabeeingang-xen">
+<h3>Freigabeeingang <em>xEn</em><a class="headerlink" href="#freigabeeingang-xen" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="freigabeeingang">
+<colgroup>
+<col width="8%" />
+<col width="23%" />
+<col width="23%" />
+<col width="23%" />
+<col width="23%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xEn</em></th>
+<th class="head"><em>xActive</em></th>
+<th class="head"><em>todActivatedFrom</em></th>
+<th class="head"><em>todActivatedTo</em></th>
+<th class="head">Hinweis</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>unverändert</td>
+<td>unverändert</td>
+<td>FB deaktiviert</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>Zustand abhängig vom Wochentag, der Uhrzeit und der Schaltperiode</td>
+<td>Einschaltzeitpunkt der Schaltperiode des aktuellen Wochentags</td>
+<td>Ausschaltzeitpunkt der Schaltperiode des aktuellen Wochentags</td>
+<td>FB aktiviert</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="anzeigeausgang-xactive">
+<h3>Anzeigeausgang <em>xActive</em><a class="headerlink" href="#anzeigeausgang-xactive" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Der Anzeigeausgang <em>xActive</em> nimmt den Zustand TRUE an, falls bei aktivem Freigabeeingang ( <em>xEn</em> = TRUE ) die Uhrzeit am Wochentag XXX
+innerhalb der Schaltperiode des Wochentags XXX liegt ( <strong>xXXXMode</strong> = TRUE, Einschaltperiode ).</div>
+<div class="line">Der Anzeigeausgang <em>xActive</em> nimmt den Zustand TRUE an, falls bei aktivem Freigabeeingang ( <em>xEn</em> = TRUE ) die Uhrzeit am Wochentag XXX
+außerhalb der Schaltperiode des Wochentags XXX liegt ( <strong>xXXXMode</strong> = FALSE, Ausschaltperiode ).</div>
+<div class="line">In allen übrigen Fällen nimmt der Anzeigeausgang <em>xActive</em> den Zustand FALSE an.</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="anzeigeausgang">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xEn</em></th>
+<th class="head"><em>xActive</em></th>
+<th class="head">Schaltperiode XXX</th>
+<th class="head"><strong>xXXXMode</strong> - XXX</th>
+<th class="head">Hinweis</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>X</td>
+<td>X</td>
+<td>FB deaktiviert</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>Einschaltperiode nicht aktiv</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>Einschaltperiode aktiv</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>Ausschaltperiode nicht aktiv</td>
+</tr>
+<tr class="row-even"><td>TRUE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>Ausschaltperiode aktiv</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="einschaltzeitpunkt-der-schaltperiode-des-aktuellen-wochentags-todactivatedfrom">
+<h3>Einschaltzeitpunkt der Schaltperiode des aktuellen Wochentags <em>todActivatedFrom</em><a class="headerlink" href="#einschaltzeitpunkt-der-schaltperiode-des-aktuellen-wochentags-todactivatedfrom" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Ausgang zeigt permanent den Einschaltzeitpunkt der Schaltperiode des aktuellen Wochentags an, falls der Freigabeeingang ( <em>xEn</em> = TRUE ) aktiv ist.</div>
+<div class="line">In allen übrigen Situationen wird er nicht verändert. In den Sonderfällen 1 und 2 wird stets der Wert TOD#00:00 angezeigt.</div>
+</div>
+</div>
+<div class="section" id="ausschaltzeitpunkt-der-schaltperiode-des-aktuellen-wochentags-todactivatedto">
+<h3>Ausschaltzeitpunkt der Schaltperiode des aktuellen Wochentags <em>todActivatedTo</em><a class="headerlink" href="#ausschaltzeitpunkt-der-schaltperiode-des-aktuellen-wochentags-todactivatedto" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Ausgang zeigt permanent den Ausschaltzeitpunkt der Schaltperiode des aktuellen Wochentags an, falls der Freigabeeingang ( <em>xEn</em> = TRUE ) aktiv ist.</div>
+<div class="line">In allen übrigen Situationen wird er nicht verändert. Im Sonderfall 1 wird stets der Wert TOD#00:00, im Sonderfall 2 der Wert TOD#23:59 angezeigt.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Passendes Visualisierungselement aus der HVACV Visu Library: <strong>FB_Clock7d1Ch</strong></p>
+<div class="section" id="id4">
+<h3>Darstellung<a class="headerlink" href="#id4" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><img alt="../../../_images/FB_Clock7d1Ch.PNG" src="../../../_images/FB_Clock7d1Ch.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen-visu-element">
+<h3>Schnittstellen Visu-Element<a class="headerlink" href="#schnittstellen-visu-element" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="schnittstellen-visu-element-1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Typ</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>FB_Clock7d1Ch</strong></td>
+<td>Clock7d1Ch</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td>Hier FB Clock7d1Ch eintragen Bsp. PRG.Clock7d1Ch</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Oder Visuelement <strong>Clock7d1Ch_D</strong> als Dialog. Aufruf des Dialogs z.B. über das Viuelement <strong>Clock7d1Ch_Button</strong></p>
+<blockquote>
+<div><img alt="../../../_images/Clock7d1Ch_D.PNG" src="../../../_images/Clock7d1Ch_D.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h3>Schnittstellen Visu-Element<a class="headerlink" href="#id5" title="Link zu dieser Überschrift">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="schnittstellen-visu-element-2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Datentyp</th>
+<th class="head">Typ</th>
+<th class="head">Initialwert</th>
+<th class="head">Funktion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>FB_Clock7d1Ch</strong></td>
+<td>Clock7d1Ch</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td>Hier FB Clock7d1Ch eintragen Bsp. PRG.Clock7d1Ch</td>
+</tr>
+<tr class="row-odd"><td><strong>ClockNumber</strong></td>
+<td>INT</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td>Uhrnummer. Nur für die Anzeige des Titels verwendet.</td>
+</tr>
+<tr class="row-even"><td><strong>BMS_Active</strong></td>
+<td>BOOL</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td>BMS (Building Management System) GLT (Gebäudeleittechnik). Wenn BMS_Active = TRUE wird die Eingabe/Editierung der Uhren deaktiviert da diese dann nur über das BMS eingestellt werden können. Uhrzeiten können dann nur angeschaut werden.</td>
+</tr>
+<tr class="row-odd"><td><strong>DisableInput</strong></td>
+<td>BOOL</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td>DisableInpput = TRUE Uhrzeiten der Wochenuhren können nur angesehen werden und nicht editiert werden.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="8%" />
+<col width="19%" />
+<col width="8%" />
+<col width="19%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="23">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Freigabeeingang</td>
+</tr>
+<tr class="row-odd"><td>todMonFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td>Einschaltzeitpunkt - Montag</td>
+</tr>
+<tr class="row-even"><td>todMonTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td>Ausschaltzeitpunkt - Montag</td>
+</tr>
+<tr class="row-odd"><td>xMonMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Montag</td>
+</tr>
+<tr class="row-even"><td>todTueFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td>Einschaltzeitpunkt - Dienstag</td>
+</tr>
+<tr class="row-odd"><td>todTueTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td>Ausschaltzeitpunkt - Dienstag</td>
+</tr>
+<tr class="row-even"><td>xTueMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Dienstag</td>
+</tr>
+<tr class="row-odd"><td>todWedFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td>Einschaltzeitpunkt - Mittwoch</td>
+</tr>
+<tr class="row-even"><td>todWedTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td>Ausschaltzeitpunkt - Mittwoch</td>
+</tr>
+<tr class="row-odd"><td>xWedMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Mittwoch</td>
+</tr>
+<tr class="row-even"><td>todThuFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td>Einschaltzeitpunkt - Donnerstag</td>
+</tr>
+<tr class="row-odd"><td>todThuTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td>Ausschaltzeitpunkt - Donnerstag</td>
+</tr>
+<tr class="row-even"><td>xThuMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Donnerstag</td>
+</tr>
+<tr class="row-odd"><td>todFriFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td>Einschaltzeitpunkt - Freitag</td>
+</tr>
+<tr class="row-even"><td>todFriTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td>Ausschaltzeitpunkt - Freitag</td>
+</tr>
+<tr class="row-odd"><td>xFriMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Freitag</td>
+</tr>
+<tr class="row-even"><td>todSatFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td>Einschaltzeitpunkt - Samstag</td>
+</tr>
+<tr class="row-odd"><td>todSatTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td>Ausschaltzeitpunkt - Samstag</td>
+</tr>
+<tr class="row-even"><td>xSatMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Samstag</td>
+</tr>
+<tr class="row-odd"><td>todSunFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td>Einschaltzeitpunkt - Sonntag</td>
+</tr>
+<tr class="row-even"><td>todSunTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#12:0</td>
+<td>Ausschaltzeitpunkt - Sonntag</td>
+</tr>
+<tr class="row-odd"><td>xSunMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td>Modus - Schaltperiode - Sonntag</td>
+</tr>
+<tr class="row-even"><td>sNotice</td>
+<td>STRING</td>
+<td>&#8216;Notice&#8217;</td>
+<td>Bezeichnung - Schaltuhr</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">Output</td>
+<td>xActive</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>Anzeige aktiver Schaltperioden</td>
+</tr>
+<tr class="row-even"><td>todActivatedFrom</td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>Einschaltzeitpunkt des aktuellen Wochentags</td>
+</tr>
+<tr class="row-odd"><td>todActivatedTo</td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>Ausschaltzeitpunkt des aktuellen Wochentags</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Clock7d2Ch.html" class="btn btn-neutral float-right" title="Clock7d2Ch (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fld-Clock.html" class="btn btn-neutral float-left" title="Clock" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

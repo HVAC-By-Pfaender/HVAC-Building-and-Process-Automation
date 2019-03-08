@@ -1,0 +1,58 @@
+.. first line of index.rst template
+
+
+==================================
+HVAC Library Library Documentation
+==================================
+
+:Company: Pfaender GmbH
+:Title: HVAC Library
+:Version: 3.0.0.0
+:Namespace: HVAC
+:Author: Pfaender GmbH
+:Placeholder: HVAC
+
+.. _index_description:
+
+Description [1]_
+----------------
+
+HVAC Building and Processautomation
+
+Contents:
+---------
+
+.. toctree::
+   :maxdepth: 2
+
+   /HVAC-Library/fld-HVAC-Library
+
+Indices and tables
+------------------
+
+.. toctree::
+   :hidden:
+
+   info
+   libraries
+
+.. only:: libdoc_html
+
+    * :ref:`genindex`
+    * :ref:`search`
+    * :ref:`info`
+    * :ref:`libraries`
+
+.. only:: libdoc_chm
+
+    * :ref:`info`
+    * :ref:`libraries`
+
+.. only:: libdoc_lmd
+
+    * :ref:`info`
+    * :ref:`libraries`
+
+.. [1] | Based on HVAC-Trunk-Lib.library, last modified 05.03.2019, 11:49:20.
+       | The content file HVAC-3.0.0.0.clean.json was generated with CODESYS V3.5 SP14 on 05.03.2019, 11:51:04
+.. last line of index.rst template

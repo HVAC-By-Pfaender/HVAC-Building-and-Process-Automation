@@ -1,0 +1,277 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.TwoPoint`:
+
+
+.. index::
+   single: TwoPoint
+
+.. _`TwoPoint`:
+
+TwoPoint (FB)
+-------------
+
+FUNCTION_BLOCK TwoPoint
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Lineare Umwandlung eines nummerischen Eingangswertes durch eine durch zwei Punkte definierte Kennlinie.
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/TwoPoint_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rIn_X*
+      - REAL
+      -
+      - 0
+      - Analogwerteingang
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rOut_Y*
+      - REAL
+      -
+      -
+      - Analogwertausgang
+    * - *xErr*
+      - BOOL
+      -
+      -
+      - :FALSE: Umwandlung fehlerfrei
+        :TRUE: Fehler beim Umwandlungsprozess
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **iMinMaxOffset**
+      - INTEGER
+      -
+      - 0
+      - Werte der Begrenzungen am Analogwertausgang *rOut_Y*
+    * - **xMinMaxLimit**
+      - BOOL
+      -
+      - FALSE
+      - Freigabe / Sperrung der Begrenzung am Analogwertausgang *rOut_Y*
+    * - **rY2**
+      - REAL
+      -
+      - 100
+      - Punkt 2 der Ausgangskennlinie
+    * - **rX2**
+      - REAL
+      -
+      - 100
+      - Punkt 2 des Eingangsbereiches
+    * - **rY1**
+      - REAL
+      -
+      - 0
+      - Punkt 1 der Ausgangskennlinie
+    * - **rX1**
+      - REAL
+      -
+      - 0
+      - Punkt 1 des Eingangsbereiches
+
+*********************
+Funktionsbeschreibung
+*********************
+Analogwertausgang *rOut_Y*
+==========================
+| Der Analogwertausgang *rOut_Y* wird vom Analogwerteingang *rIn_X* in Abhängigkeit der durch die beiden Punkte P1(**rX1**/**rY1**)
+  und P2(**rX2**/**rY2**) bestimmten linearen Kennlinie berechnet.
+| Im Falle eines Konvertierungsfehlers ( *xErr* = TRUE ) bleibt der Analogwertausgang *rOut_Y* unverändert.
+
+  .. image:: /../DocuBilder/TwoPoint_Bild_1.png
+
+.. topic:: Formel
+
+    | rOut_Y = (((rX1-rIn_X)*(rY2-rY1))/(rX1-rX2))+rY1
+
+
+.. topic:: Einschränkungen
+
+    | Der Analogwertausgang *rOut_Y* ist vom Datentyp REAL. Durch eine ungeeignete Auswahl der Parameter **rX1**, **rX2**, **rY1** und
+      **rY2** sowie des Wertes des Analogwerteingangs *rIn_X* kann es zu einer Überschreitung der Grenzen des Datentyps kommen.
+
+Freigabe / Sperrung der Begrenzungen **xMinMaxLimit**
+=====================================================
+| Die Begrenzungen des Analogwertausgangs *rOut_Y* können mit diesem Sollwert / Parameter generell freigegeben und gesperrt werden.
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 300 900
+    :header-rows: 1
+
+    * - **xMinMaxLimit**
+      - Begrenzungen
+      - Hinweise
+    * - FALSE
+      - keine
+      - *rOut_Y* ohne absolute Begrenzungen
+    * - TRUE
+      - Y_min und Y_max
+      - Begrenzung des Analogwertausgangs *rOut_Y* aktiv
+
+Werte der Begrenzungen **iMinMaxOffset**
+========================================
+| Die Begrenzungen des Analogwertausgangs sind nur dann aktiv, falls der Sollwert / Parameter **xMinMaxLimit** aktiv ( = TRUE ) ist.
+| Die Grenzwerte Y_min und Y_max werden dann wie folgt berechnet:
+
+.. topic:: Formeln
+
+    | Y_min = rY1 - ((ABS(rY2-rY1))*iMinMaxOffset)/100
+    | Y_max = rY2 + ((ABS(rY2-rY1))*iMinMaxOffset)/100
+
+ .. list-table::
+    :name: Wertetabelle
+    :widths: 300 300 300 300 300 300 900
+    :header-rows: 1
+
+    * - *rY1*
+      - *rY2*
+      - *rY2* - *rY1*
+      - **iMinMaxOffset**
+      - *Y_min*
+      - *Y_max*
+      - Hinweise
+    * - 0
+      - 100
+      - 100
+      - 0
+      - 0
+      - 100
+      - Standard-Begrenzungen
+    * - 0
+      - 100
+      - 100
+      - 10
+      - -10
+      - 110
+      - Positiver Offset
+    * - 0
+      - 100
+      - 100
+      - -10
+      - 10
+      - 90
+      - Negativer Offset
+
+Digitalausgang *xErr*
+=====================
+| Der digitale Ausgang *xErr* signalisiert einen Fehler beim Umwandlungsprozess. Folgende Fehler werden berücksichtigt:
+|
+
+- *rX1* UND *rX2* = 0
+- *rX1* = *rX2*
+- *rY1* UND *rY2* = 0
+- *rY1* = *rY2*
+
+ .. list-table::
+    :name: Funktionstabelle_2
+    :widths: 900 300 900
+    :header-rows: 1
+
+    * - Fehler beim Umwandlungsprozess
+      - *xErr*
+      - Hinweise
+    * - FALSE
+      - FALSE
+      - Umwandlung fehlerfrei
+    * - TRUE
+      - TRUE
+      - Fehler beim Umwandlungsprozess
+
+| Legende: X = beliebig
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+---------------+------+---------+----------------------------------------------------------------+
+    | Scope  | Name          | Type | Initial | Comment                                                        |
+    +========+===============+======+=========+================================================================+
+    | Input  | rIn_X         | REAL | 0       | Analogwerteingang                                              |
+    +--------+---------------+------+---------+----------------------------------------------------------------+
+    | Output | rOut_Y        | REAL |         | Analogwertausgang                                              |
+    +        +---------------+------+---------+----------------------------------------------------------------+
+    |        | xErr          | BOOL |         | | FALSE: Umwandlung fehlerfrei                                 |
+    |        |               |      |         | | TRUE: Fehler beim Umwandlungsprozess                         |
+    +--------+---------------+------+---------+----------------------------------------------------------------+
+    | Input  | iMinMaxOffset | INT  | 0       | Wert der Begrenzungen am Analogwertausgang rOut_Y              |
+    +        +---------------+------+---------+----------------------------------------------------------------+
+    |        | xMinMaxLimit  | BOOL | FALSE   | Freigabe / Sperrung der Begrenzung am Analogwertausgang rOut_Y |
+    +        +---------------+------+---------+----------------------------------------------------------------+
+    |        | rY2           | REAL | 100     | Punkt 2 der Ausgangskennlinie                                  |
+    +        +---------------+------+---------+----------------------------------------------------------------+
+    |        | rX2           | REAL | 100     | Punkt 2 des Eingangsbereiches                                  |
+    +        +---------------+------+---------+----------------------------------------------------------------+
+    |        | rY1           | REAL | 0       | Punkt 1 der Ausgangskennlinie                                  |
+    +        +---------------+------+---------+----------------------------------------------------------------+
+    |        | rX1           | REAL | 0       | Punkt 1 des Eingangsbereiches                                  |
+    +--------+---------------+------+---------+----------------------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

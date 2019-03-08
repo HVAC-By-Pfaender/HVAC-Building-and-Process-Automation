@@ -1,0 +1,144 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Clock.TimeRead`:
+
+
+.. index::
+   single: TimeRead
+
+.. _`TimeRead`:
+
+TimeRead (FB)
+-------------
+
+FUNCTION_BLOCK TimeRead
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Auslesen des aktuellem Datums und der aktuellen Uhrzeit
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/TimeRead_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xEN*
+      - BOOL
+      -
+      -
+      - Uhrzeit lesen aktivieren/deaktivieren
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *datDateAndTime*
+      - DATE_AND_TIME
+      -
+      -
+      - Aktuelles Datum und aktuelle Uhrzeit
+    * - *todTime*
+      - DATE
+      -
+      -
+      - Aktuelle Uhrzeit
+    * - *dtDate*
+      - DATE
+      -
+      -
+      - Aktuelles Datum
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **stTimeZoneInformation**
+      - DTU.RTCLK.TIME_ZONE_INfO
+      -
+      - DTU.gc_tziTimeZoneCET;
+      - Zeitzone (Default: CET)
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zum Auslesen des aktuellem Datums und der aktuellen Uhrzeit.
+| Die Einstellung der Zeitzone erfolgt über den Datentyp TIME_ZONE_INFO.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------------------+--------------------------+-----------------------+---------------------------------------+
+    | Scope  | Name                  | Type                     | Initial               | Comment                               |
+    +========+=======================+==========================+=======================+=======================================+
+    | Input  | xEn                   | BOOL                     | TRUE                  | Uhrzeit lesen aktivieren/deaktivieren |
+    +        +-----------------------+--------------------------+-----------------------+---------------------------------------+
+    |        | stTimeZoneInformation | DTU.RTCLK.TIME_ZONE_INFO | DTU.gc_tziTimeZoneCET | Zeitzone (Default: CET)               |
+    +--------+-----------------------+--------------------------+-----------------------+---------------------------------------+
+    | Output | datDateAndTime        | DT                       |                       | Aktuelles Datum und aktuelle Uhrzeit  |
+    +        +-----------------------+--------------------------+-----------------------+---------------------------------------+
+    |        | todTime               | TOD                      |                       | Aktuelle Uhrzeit                      |
+    +        +-----------------------+--------------------------+-----------------------+---------------------------------------+
+    |        | dtDate                | DATE                     |                       | Aktuelles Datum                       |
+    +--------+-----------------------+--------------------------+-----------------------+---------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

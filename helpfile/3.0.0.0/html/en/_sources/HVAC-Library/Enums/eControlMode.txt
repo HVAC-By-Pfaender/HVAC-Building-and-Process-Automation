@@ -1,0 +1,44 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eControlMode`:
+
+
+.. Index::
+   single: eControlMode
+
+.. _`eControlMode`:
+
+eControlMode (ENUM)
+-------------------
+
+TYPE eControlMode :
+
+
+
+.. todo:: Please add documentation for enum: eControlMode
+
+
+
+
+
+InOut:
+    +------------------------------+---------+------------+
+    | Name                         | Initial | Comment    |
+    +==============================+=========+============+
+    | .. _`eControlMode.Inverted`: | 0       | Invertiert |
+    |                              |         |            |
+    | Inverted                     |         |            |
+    +------------------------------+---------+------------+
+    | .. _`eControlMode.Direct`:   | 1       | Direkt     |
+    |                              |         |            |
+    | Direct                       |         |            |
+    +------------------------------+---------+------------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,219 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.Limiter`:
+
+
+.. index::
+   single: Limiter
+
+.. _`Limiter`:
+
+Limiter (FB)
+------------
+
+FUNCTION_BLOCK Limiter
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Grenzwertüberwachung eines Analogwertes
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Limiter_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rIn*
+      - REAL
+      -
+      - 0
+      - Analogwerteingang
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *rOut*
+      - REAL
+      -
+      -
+      - Analogwertausgang
+    * - *xErr*
+      - BOOL
+      -
+      -
+      - :FALSE: keine Grenzwertverletzung
+        :TRUE: Grenzwertverletzung
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **rReplacementValue**
+      - REAL
+      -
+      - 0
+      - Wert am Ausgang *rOut* bei verletztem Grenzwert und Option 'ReplacementValue'
+    * - **rReplacementOption**
+      - eLimiterMode
+      - InpultValue, MinValue, MaxValue, LastValue, ReplacementValue
+      - InputValue
+      - Auswahl des Wertes am Ausgang *rOut* je nach gewählter Option
+    * - **rMaxLimit**
+      - REAL
+      -
+      - 150
+      - Oberer Grenzwert
+    * - **rMinLimit**
+      - REAL
+      -
+      - -50
+      - Unterer Grenzwert
+
+*********************
+Funktionsbeschreibung
+*********************
+Analogwertausgang *rOut*
+========================
+| Der Analogwertausgang *rOut* folgt dem Analogwerteingang *rIn*, solange der Analogwerteingang *rIn* keinen der beiden Grenzwerte **rMinLimit** bzw. **rMaxLimit** verletzt.
+| Eine Grenzwertverletzung liegt immer dann vor, wenn der Analogwerteingang *rIn* kleiner als der Grenzwert **rMinLimit** oder größer als der Grenzwert **rMaxLimit** ist.
+| Im Falle einer Grenzwertverletzung wird der Analogwertausgang *rOut* in Abhängigkeit von der gewählten Option **rReplacementOption** (eLimiterMode) festgelegt.
+
+ .. list-table::
+    :name: Grenzwertverletzung
+    :widths: 300 600 900 900
+    :header-rows: 1
+
+    * - *rIn*
+      - **ReplacementOption**
+      - *rOut*
+      - Hinweise
+    * - X
+      - InputValue
+      - *rIn*
+      - Option 'InpultValue'
+    * - X
+      - MinValue
+      - **rMinLimit**
+      - Option 'MinValue'
+    * - X
+      - MaxValue
+      - **rMaxLimit**
+      - Option 'MaxValue'
+    * - X
+      - LastValue
+      - Letzter Zustand von *rOut* vor der Grenzwertverletzung
+      - Option 'LastValue' Achtung: Der letzte Wert wird bei einem Kaltstart der PLC nicht gespeichert!
+    * - X
+      - ReplacementValue
+      - **rReplacementValue**
+      - Option 'ReplacementValue'
+
+| Legende: X = beliebig
+
+Digitalausgang *xErr*
+=====================
+| Der digitale Ausgang *xErr* signalisiert eine aktive Grenzwertverletzung.
+
+ .. list-table::
+    :name: Funktionstabelle
+    :widths: 900 300 900
+    :header-rows: 1
+
+    * - Grenzwertverletzung
+      - *xErr*
+      - Hinweise
+    * - FALSE
+      - FALSE
+      - keine Grenzwertverletzung
+    * - TRUE
+      - TRUE
+      - Grenzwertverletzung
+
+| Legende: X = beliebig
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+--------------------+------------------+-------------------------+------------------------------------------------------------+
+    | Scope  | Name               | Type             | Initial                 | Comment                                                    |
+    +========+====================+==================+=========================+============================================================+
+    | Input  | rIn                | REAL             | 0                       | Analogwerteingang                                          |
+    +        +--------------------+------------------+-------------------------+------------------------------------------------------------+
+    |        | rReplacementValue  | REAL             | 0                       | Wert am Ausgang *rOut* bei verletztem Grenzwert und Option |
+    |        |                    |                  |                         | 'ReplacementValue'                                         |
+    +        +--------------------+------------------+-------------------------+------------------------------------------------------------+
+    |        | rReplacementOption | |ioeLimiterMode| | eLimiterMode.InputValue | Auswahl des Wertes am Ausgang *rOut* je nach gewählter     |
+    |        |                    |                  |                         | Option                                                     |
+    +        +--------------------+------------------+-------------------------+------------------------------------------------------------+
+    |        | rMaxLimit          | REAL             | 150                     | Oberer Grenzwert                                           |
+    +        +--------------------+------------------+-------------------------+------------------------------------------------------------+
+    |        | rMinLimit          | REAL             | -50                     | Unterer Grenzwert                                          |
+    +--------+--------------------+------------------+-------------------------+------------------------------------------------------------+
+    | Output | rOut               | REAL             |                         | Analogwertausgang                                          |
+    +        +--------------------+------------------+-------------------------+------------------------------------------------------------+
+    |        | xErr               | BOOL             |                         | | FALSE: keine Grenzwertverletzung                         |
+    |        |                    |                  |                         | | TRUE: Grenzwertverletzung                                |
+    +--------+--------------------+------------------+-------------------------+------------------------------------------------------------+
+
+.. |ioeLimiterMode| replace:: :ref:`eLimiterMode<eLimiterMode>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

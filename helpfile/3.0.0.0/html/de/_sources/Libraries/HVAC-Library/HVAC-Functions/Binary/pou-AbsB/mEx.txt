@@ -1,0 +1,42 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Binary.AbsB.mEx`:
+
+
+.. _`AbsB.mEx`:
+
+AbsB.mEx (METH)
+---------------
+
+METHOD mEx
+
+
+
+
+***********************************
+Kurzbeschreibung Methode (AbsA.mEx)
+***********************************
+
+     | Direkte Anbindung an Binary Aktor
+
+
+
+
+
+InOut:
+    +--------+-------+------+------------------+
+    | Scope  | Name  | Type | Comment          |
+    +========+=======+======+==================+
+    | Input  | xIn   | BOOL | Binary - Eingang |
+    +--------+-------+------+------------------+
+    | Output | rOutB | BOOL | Binary - Ausgang |
+    +--------+-------+------+------------------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

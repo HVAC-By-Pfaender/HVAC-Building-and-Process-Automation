@@ -1,0 +1,40 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Time.PulseR.mGetTime`:
+
+
+.. _`PulseR.mGetTime`:
+
+PulseR.mGetTime (METH)
+----------------------
+
+METHOD mGetTime : TIME
+
+
+
+
+***********************************
+Kurzbeschreibung Methode (mGetTime)
+***********************************
+
+     | Rückgabe der Zeit bis Zeitfunktion abgelaufen ist
+
+
+
+
+
+InOut:
+    +--------+----------+------+
+    | Scope  | Name     | Type |
+    +========+==========+======+
+    | Return | mGetTime | TIME |
+    +--------+----------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

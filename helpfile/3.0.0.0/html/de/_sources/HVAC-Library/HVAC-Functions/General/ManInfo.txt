@@ -1,0 +1,209 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-General.ManInfo`:
+
+
+.. index::
+   single: ManInfo
+
+.. _`ManInfo`:
+
+ManInfo (FB)
+------------
+
+FUNCTION_BLOCK ManInfo EXTENDS LAT.Element IMPLEMENTS IManInfoProtocol, IMan
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Statusanzeige für die Handübersteuerung von Funktionsblöcken
+     |
+     | Anwendung: Erzeugung eines Benutzerhinweises bei einer Handübersteuerung
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/ManInfo_FB.png
+
+**************
+Schnittstellen
+**************
+
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xResetAuto*
+      - BOOL
+      -
+      -
+      - Rücksetzeingang
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xManActive*
+      - BOOL
+      -
+      - FALSE
+      - Statusanzeige - Handübersteuerungen
+    * - *iManBinCounter*
+      - INT
+      -
+      - 0
+      - Anzahl der binären Handübersteuerungen
+    * - *iManNumCounter*
+      - INT
+      -
+      - 0
+      - Anzahl der numerischen Handübersteuerungen
+    * - *iManOpCounter*
+      - INT
+      -
+      - 0
+      - Anzahl der Handübersteuerungen an den Betriebsartenwahlschaltern
+    * - *iManFbCounter*
+      - INT
+      -
+      - 0
+      - Anzahl der Funktionsblöcke im Handbetrieb
+    * - *iEnControlCounter*
+      - INT
+      -
+      - 0
+      - Anzahl der deaktivierten Funktionsfreigaben
+    * - *iManCounter*
+      - INT
+      -
+      - 0
+      - Gesamtanzahl der Handübersteuerungen
+    * - *udiManCounter*
+      - CAA.Count
+      -
+      -
+      - Anzahl der überwachten Slave-Funktionsbausteine
+
+**********************
+Funktionsbeschreibung
+**********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Statusanzeige für die Handübersteuerung von Funktionsblöcken.
+| Dabei werden alle Funktionsblöcke berücksichtigt, die einen binären oder numerischen Ausgang mit Handübersteuerung haben, eine Betriebsartenumschaltung vornehemen,
+  in unterschiedlichen Betriebsweisen betrieben werden können oder einen Freigabeeingang haben.
+|
+
+Rücksetzeingang *xResetAuto*
+============================
+| Jede ansteigende Flanke am Rücksetzeingang bewirkt einen umgehenden Übergang aller überwachten Funktionsblöcke in den Automatikbetrieb.
+|
+
+Statusanzeige - Handübersteuerungen *xManActive*
+================================================
+| Die Statusanzeige befindet sich im Zustand TRUE, falls mindestens eine Handübersteuerung aktiv ist.
+| Die Statusanzeige befindet sich im Zustand FALSE, falls keine Handübersteuerung aktiv ist.
+|
+
+Anzahl der binären Handübersteuerungen *iManBinCounter*
+=======================================================
+| An diesem Ausgang wird permanent die aktuelle Anzahl der binärer Handübersteuerungen dargestellt.
+|
+
+Anzahl der numerischen Handübersteuerungen *iManNumCounter*
+===========================================================
+| An diesem Ausgang wird permanent die aktuelle Anzahl der numerischen Handübersteuerungen dargestellt.
+|
+
+Anzahl der Handübersteuerungen an den Betriebsartenwahlschaltern *iManOpCounter*
+================================================================================
+| An diesem Ausgang wird permanent die aktuelle Anzahl der Handübersteuerungen an den Betriebsartenwahlschaltern dargestellt.
+|
+
+Anzahl der Funktionsblöcke im Handbetrieb *iManFbCounter*
+=========================================================
+| An diesem Ausgang wird permanent die aktuelle Anzahl der Funktionsblöcke im Handbetrieb dargestellt.
+|
+
+Anzahl der deaktivierten Funktionsfreigaben *iEnControlCounter*
+===============================================================
+| An diesem Ausgang wird permanent die aktuelle Anzahl der deaktivierten Funktionsfreigaben dargestellt.
+|
+
+Gesamtanzahl der Handübersteuerungen *iManCounter*
+==================================================
+| An diesem Ausgang wird permanent die aktuelle Anzahl aller Handübersteuerungen dargestellt.
+|
+
+*udiManCounter*
+===============
+| An diesem Ausgang wird permanent die aktuelle Anzahl der überwachten Slave-Funktionsblöcke dargestellt.
+|
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------------+-----------+---------+-------------------------------------------------+
+    | Scope  | Name              | Type      | Initial | Comment                                         |
+    +========+===================+===========+=========+=================================================+
+    | Input  | xResetAuto        | BOOL      |         | Rücksetzeingang                                 |
+    +--------+-------------------+-----------+---------+-------------------------------------------------+
+    | Output | xManActive        | BOOL      | 0       | Statusanzeige - Handübersteuerungen             |
+    +        +-------------------+-----------+---------+-------------------------------------------------+
+    |        | iManBinCounter    | INT       | 0       | Anzahl der binären Handübersteuerungen          |
+    +        +-------------------+-----------+---------+-------------------------------------------------+
+    |        | iManNumCounter    | INT       | 0       | Anzahl der numerischen Handübersteuerungen      |
+    +        +-------------------+-----------+---------+-------------------------------------------------+
+    |        | iManOpCounter     | INT       | 0       | Anzahl der Handübersteuerungen an den           |
+    |        |                   |           |         | Betriebsartenwahlschaltern                      |
+    +        +-------------------+-----------+---------+-------------------------------------------------+
+    |        | iManFbCounter     | INT       | 0       | Anzahl der Funktionsblöcke im Handbetrieb       |
+    +        +-------------------+-----------+---------+-------------------------------------------------+
+    |        | iEnControlCounter | INT       | 0       | Anzahl der deaktivierten Funktionsfreigaben     |
+    +        +-------------------+-----------+---------+-------------------------------------------------+
+    |        | iManCounter       | INT       | 0       | Gesamtanzahl der Handübersteuerungen            |
+    +        +-------------------+-----------+---------+-------------------------------------------------+
+    |        | udiManCounter     | CAA.COUNT |         | Anzahl der überwachten Slave-Funktionsbausteine |
+    +--------+-------------------+-----------+---------+-------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

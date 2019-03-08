@@ -1,0 +1,54 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of struct-object.rst template
+.. _`.fld-HVAC Library.fld-Structs.stSlvClockData`:
+
+
+.. Index::
+   single: stSlvClockData
+
+.. _`stSlvClockData`:
+
+stSlvClockData (STRUCT)
+-----------------------
+
+TYPE stSlvClockData : STRUCT
+
+
+
+.. todo:: Please add documentation for struct: stSlvClockData
+
+
+
+
+
+InOut:
+    +----------------+-----------------------+----------------------------------------------------------------+
+    | Name           | Type                  | Comment                                                        |
+    +================+=======================+================================================================+
+    | sTitle         | STRING                | sTitle                                                         |
+    +----------------+-----------------------+----------------------------------------------------------------+
+    | sLine1         | STRING                | sLine1                                                         |
+    +----------------+-----------------------+----------------------------------------------------------------+
+    | xClockCH       | ARRAY [1..32] OF BOOL | ARRAY Wochenuhr Zuordnung von Master                           |
+    +----------------+-----------------------+----------------------------------------------------------------+
+    | xHoliday       | BOOL                  | Ferien                                                         |
+    +----------------+-----------------------+----------------------------------------------------------------+
+    | xPublicHoliday | BOOL                  | Feiertag                                                       |
+    +----------------+-----------------------+----------------------------------------------------------------+
+    | xSwitchTimeS   | BOOL                  | Sonderschaltzeit                                               |
+    +----------------+-----------------------+----------------------------------------------------------------+
+    | xActState      | BOOL                  | Slv Freigabe Aktiv                                             |
+    +----------------+-----------------------+----------------------------------------------------------------+
+    | TodayTON       | TOD                   | Ton Zeit On Eingestellte Einschaltzeit für den aktuellen Tag.  |
+    +----------------+-----------------------+----------------------------------------------------------------+
+    | TodayTOF       | TOD                   | Tof Zeit Off Eingestellte Ausschaltzeit für den aktuellen Tag. |
+    +----------------+-----------------------+----------------------------------------------------------------+
+
+
+.. last line of struct-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

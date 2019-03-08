@@ -1,0 +1,28 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Numeric`:
+
+Numeric
+=======
+
+.. todo:: Please add documentation for folder: Numeric
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Numeric/AbsA
+   /HVAC-Library/HVAC-Functions/Numeric/AverageCh
+   /HVAC-Library/HVAC-Functions/Numeric/Limiter
+   /HVAC-Library/HVAC-Functions/Numeric/ManNum
+   /HVAC-Library/HVAC-Functions/Numeric/Max8Fun
+   /HVAC-Library/HVAC-Functions/Numeric/Min8Fun
+   /HVAC-Library/HVAC-Functions/Numeric/MoveEnFun
+   /HVAC-Library/HVAC-Functions/Numeric/MoveStore
+   /HVAC-Library/HVAC-Functions/Numeric/MuxBin2Fun
+   /HVAC-Library/HVAC-Functions/Numeric/MuxBin5Fun
+   /HVAC-Library/HVAC-Functions/Numeric/Offset
+   /HVAC-Library/HVAC-Functions/Numeric/OffsetFun
+   /HVAC-Library/HVAC-Functions/Numeric/TwoPoint
+   /HVAC-Library/HVAC-Functions/Numeric/TwoPointFun
+
+.. last line of folder.rst template

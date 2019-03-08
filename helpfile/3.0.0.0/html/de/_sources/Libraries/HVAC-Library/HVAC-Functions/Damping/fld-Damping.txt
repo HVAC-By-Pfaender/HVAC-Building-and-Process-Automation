@@ -1,0 +1,18 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Damping`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Damping`:
+
+Damping
+=======
+
+.. todo:: Please add documentation for folder: Damping
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Damping/AverageTime
+   /HVAC-Library/HVAC-Functions/Damping/AverageTimeCal
+   /HVAC-Library/HVAC-Functions/Damping/DampingT1
+   /HVAC-Library/HVAC-Functions/Damping/Ramp
+
+.. last line of folder.rst template

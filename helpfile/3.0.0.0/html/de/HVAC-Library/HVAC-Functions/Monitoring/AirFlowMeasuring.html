@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AirFlowMeasuring (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../search.html" />
+    <link rel="next" title="AirShortage (FB)" href="AirShortage.html" />
+    <link rel="prev" title="Monitoring" href="fld-Monitoring.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Monitoring.html">Monitoring</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AirFlowMeasuring (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AirShortage.html">AirShortage (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FilterMonitoringA.html">FilterMonitoringA (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FilterMonitoringB.html">FilterMonitoringB (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Position3P.html">Position3P (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Monitoring.html">Monitoring</a> &raquo;</li>
+        
+      <li>AirFlowMeasuring (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Monitoring/AirFlowMeasuring.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-monitoring-airflowmeasuring"></span><div class="section" id="airflowmeasuring-fb">
+<span id="airflowmeasuring"></span><span id="index-0"></span><h1>AirFlowMeasuring (FB)<a class="headerlink" href="#airflowmeasuring-fb" title="Link zu dieser Überschrift">¶</a></h1>
+<p>FUNCTION_BLOCK AirFlowMeasuring</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Berechnung des aktuellen Volumenstroms über eine Ringmessdüse</div>
+<div class="line"><br /></div>
+<div class="line">Typische Anwendung: Berechnung des aktuellen Volumenstroms eines Ventilators</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Darstellung<a class="headerlink" href="#darstellung" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/AirFlowMeasuring_FB.png" src="../../../_images/AirFlowMeasuring_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Funktionsbeschreibung<a class="headerlink" href="#funktionsbeschreibung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>Allgemeines<a class="headerlink" href="#allgemeines" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Funktionsbaustein dient zur Berechnung des aktuellen Volumenstroms eines Ventilators aufgrund der Druckdifferenz, die mittels einer
+Messeinrichtung ( = Ringmessdüse ) permanent erfasst wird.</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Erfassung der aktuellen Luftdichte <em>rDensity</em></p>
+<div class="line-block">
+<div class="line">Für Berechnungen mit reduzierter Genauigkeit ist die Angabe einer Konstanten ausreichend.</div>
+<div class="line">Für Berechnungen mit erhöhter Genauigkeit ist die Berechnung der Luftdichte in Abhängigkeit von der aktuellen Temperatur, der relativen Luftfeuchtigkeit, des Luftdrucks und des Sättigungsdampfdrucks erforderlich.</div>
+<div class="line">Sinkt der aktuelle Wert für die Luftdichte unter 0.1 kg/m³, so wird sie auf 0.1 kg/m³ begrenzt.</div>
+</div>
+</div>
+</div>
+<div class="section" id="auswahl-der-berechnungsformel-emode">
+<h3>Auswahl der Berechnungsformel <strong>eMode</strong><a class="headerlink" href="#auswahl-der-berechnungsformel-emode" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Sollwerte / Parameter dient zur Auswahl der zugrundeliegenden Berechnungsformel. Die Berechnungsformel und der <strong>k_Value</strong> müssen stets
+anlagenspezifisch beim Ventilatorersteller erfragt werden.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="berechnungsformel">
+<colgroup>
+<col width="17%" />
+<col width="33%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>eMode</strong></th>
+<th class="head">Formel</th>
+<th class="head">Hinweise</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eAirFlowFormula.exclusiveAirtight</td>
+<td>rOut = <strong>k_Value</strong> multipliziert mit der Wurzel aus <em>rPressure</em></td>
+<td>Hersteller: z.B. EBM-Papst, Ziehl-Abegg</td>
+</tr>
+<tr class="row-odd"><td>eAirFlowFormula.inclusiveAirtight</td>
+<td>rOut = <strong>k_Value</strong> multipliziert mit Wurzel aus (( 2 multipliziert mit <em>rPressure</em> ) geteilt durch ( <em>rDensity</em> ))</td>
+<td>Hersteller: z.B. Rosenberg, Gebhardt Nicotra</td>
+</tr>
+<tr class="row-even"><td>eAirFlowFormula.strangeForm</td>
+<td>Platzhalter für Erweiterungen</td>
+<td><em>rOut</em> = 0.0 konstant</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="berechnungsfaktor-k-value">
+<h3>Berechnungsfaktor <strong>k_Value</strong><a class="headerlink" href="#berechnungsfaktor-k-value" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="line-block">
+<div class="line">Dieser Sollwerte / Parameter dient zur Eingabe des Berechnungsfaktor. Die Berechnungsformel und der <strong>k_Value</strong> müssen stets
+anlagenspezifisch beim Ventilatorersteller erfragt werden.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Link zu dieser Überschrift">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="8%" />
+<col width="15%" />
+<col width="26%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Input</td>
+<td>rPressure</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Eingang für den Druckfühler in Pa ( 100 000 Pa = 1000 mbar =
+1.000 bar ), Untere Grenze = 0.0 Pa</td>
+</tr>
+<tr class="row-odd"><td>rDensity</td>
+<td>REAL</td>
+<td>1.2</td>
+<td>Eingang für die Luftdichte = 1,2041 kg/m³ bei 20 °C und auf
+Meereshöhe ( = 0m ), untere Grenze = 0.1 kg/m³</td>
+</tr>
+<tr class="row-even"><td>Output</td>
+<td>rOut</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>Berechnete Luftmenge in m³/h</td>
+</tr>
+<tr class="row-odd"><td rowspan="2">Input</td>
+<td>k_Value</td>
+<td>REAL</td>
+<td>200</td>
+<td>K-Faktor - bitte beim Ventilatorhersteller erfragen, untere
+Grenze = 0.0</td>
+</tr>
+<tr class="row-even"><td>eMode</td>
+<td><a class="reference internal" href="../../Enums/eAirFlowFormula.html#eairflowformula"><span class="std std-ref">eAirFlowFormula</span></a></td>
+<td>eAirFlowFormula.exclusiveAirtight</td>
+<td>Auswahl der Berechnungsformel - bitte beim
+Ventilatorhersteller erfragen</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="AirShortage.html" class="btn btn-neutral float-right" title="AirShortage (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fld-Monitoring.html" class="btn btn-neutral float-left" title="Monitoring" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

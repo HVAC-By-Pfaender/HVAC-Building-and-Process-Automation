@@ -1,0 +1,42 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.AbsA.mEx`:
+
+
+.. _`AbsA.mEx`:
+
+AbsA.mEx (METH)
+---------------
+
+METHOD mEx
+
+
+
+
+***********************************
+Kurzbeschreibung Methode (AbsA.mEx)
+***********************************
+
+     | Direkte Anbindung an Analog Aktor
+
+
+
+
+
+InOut:
+    +--------+-------+------+------------------+
+    | Scope  | Name  | Type | Comment          |
+    +========+=======+======+==================+
+    | Input  | rIn   | REAL | Analog - Eingang |
+    +--------+-------+------+------------------+
+    | Output | rOutA | REAL | Analog - Ausgang |
+    +--------+-------+------+------------------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,18 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library`:
+
+.. _`fld-HVAC Library`:
+
+HVAC Library
+============
+
+.. todo:: Please add documentation for folder: HVAC Library
+
+.. toctree::
+   /HVAC-Library/HVAC-Functions/fld-HVAC-Functions
+   /HVAC-Library/Functions/fld-Functions
+   /HVAC-Library/Enums/fld-Enums 
+   /HVAC-Library/GlobalConstants/fld-GlobalConstants
+   /HVAC-Library/GlobalVariables/fld-GlobalVariables
+
+.. last line of folder.rst template

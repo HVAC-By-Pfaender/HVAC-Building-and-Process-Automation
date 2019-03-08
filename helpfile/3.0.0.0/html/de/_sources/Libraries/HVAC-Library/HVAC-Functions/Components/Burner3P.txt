@@ -1,0 +1,317 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.Burner3P`:
+
+
+.. index::
+   single: Burner3P
+
+.. _`Burner3P`:
+
+Burner3P (FB)
+-------------
+
+FUNCTION_BLOCK Burner3P
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Steuerung eines Wärmeerzeugers ( Temperaturregelung über binäre Steuerbefehle Mehr / Weniger )
+     |
+     | Typische Anwendung: Wärmeerzeugung
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Burner3P_FB.png
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Steuerung / Regelung eines Wärmeerzeugers in Abhängigkeit von der Anforderung des Wärmeerzeugers *xEn*,
+  der Vorlaufsolltemperatur *rSetPtTemp* und der Vorlauftemperatur *rFdT*.
+| Die Freigabe / Sperrung des Wärmeerzeugers erfolgt über den Ausgang *xHB* ( FALSE = Sperrung, TRUE = Freigabe ).
+| Die Vorlauftemperaturregelung ( analog auch Kesseltemperaturregelung ) erfolgt mittels zweier Leistungsregler ( P-Regler, langsam und schnell )
+  durch die Ausgänge *xMoreHB* und *xLessHB*.
+| Die Freigabe der Regelung erfolgt zweitverzögert ( Sollwert / Parameter **udiWaitControl** ) nach der Betriebsrückmeldung ( *xFb* = TRUE ) des Wärmeerzeugers.
+
+| Es kommen im Wesentlichen folgende Funktionsbausteine zur Anwendung:
+
+:ref:`ControlP <ControlP>`
+
+:ref:`Out3P <Out3P>`
+
+:ref:`OperatingHours <OperatingHours>`
+
+:ref:`ManBin <ManBin>`
+
+Freigabe / Sperrung des Wärmeerzeugers
+======================================
+| Die Freigabe des Wärmeerzeugers ( *xAB* = TRUE, *xHB* = TRUE ( eManModeB = eManBin.Auto )) erfolgt, falls die Vorlauftemperatur *rFdT* die Summe aus
+  Vorlaufsolltemperatur *rSetPtTemp* und Sollwert / Parameter **rSwitchOnPoint** unterschreitet, gleichzeitig die generelle Freigabe *xEn* aktiv ( = TRUE ) und
+  die Mindeststillstandszeit nicht aktiv ist.
+| Die Sperrung des Wärmeerzeugers ( *xAB* = FALSE, *xHB* = FALSE ( eManModeB = eManBin.Auto )) erfolgt, falls die Vorlauftemperatur *rFdT* die Summe aus
+  Vorlaufsolltemperatur *rSetPtTemp* und Sollwert / Parameter **rSwitchOffPoint** überschreitet und gleichzeitig die generelle Freigabe *xEn* aktiv ( = TRUE ) ist.
+| Zwischen zwei aufeinander folgenden Betriebszyklen wird stets eine Mindeststillstandszeit ( Zeitdauer = **udiTimeMinOff**, Anzeige - Restzeit: *tOnDelay* ) eingefügt.
+| Die Mindeststillstandszeit beginnt jeweils mit der fallenden Flanke ( TRUE > FALSE ) am Eingang *xFb*.
+
+Temperaturregelung des Wärmeerzeugers
+=====================================
+| Die Freigabe der Temperaturregelung erfolgt zeitverzögert ( Zeitdauer = **udiWaitControl**, Anzeige - Restzeit: *tOnControlDelay* )
+| nach der aktiven Betriebsmeldung ( *xFb* = TRUE ) des Wärmeerzeugers.
+| Die Sperrung der Temperaturregelung erfolgt unmittelbar nach der inaktiven Betriebsmeldung ( *xFb* = FALSE ) des Wärmeerzeugers ( Ausschaltwert: **rYDisabled** ).
+| Die beiden internen Leistungsregler ( P-Regler, langsam und schnell, Ausgangsbereich jeweils -100.0 - 100.0 % ) werden gleichzeitig freigegeben / gesperrt.
+  ( Sollwert = Vorlaufsolltemperatur *rSetPtTemp*, Istwert = Vorlauftemperatur *rFdT* ).
+| Die Stellsignale beider Leistungsregler werden in Minimalwertauswahl ( Weiterleitung des Signals mit dem geringeren Wert ) dem Ausgangsregler im Bereich -100.0 - 100.0 % zugeführt.
+| Der Ausgangsregler erzeugt abschliessend Ausgangssignale für einen 3-Punkt-Antrieb ( Pulsweitenmodulation, Integrationsintervall = **tIntegration** )
+  mit den Ausgängen *xMoreHB* bzw. *xLessHB*.
+| Die konstante Impulsdauer für die beiden Ausgänge ist jeweils frei einstellbar ( **tImpulsOpen** bzw. **tImpuls Close** ),
+  die variablen Impulspausen werden durch den Ausgangsregler festgelegt.
+| Die beiden Leistungsregler können individuell und abhängig voneinander konfiguriert werden
+ ( P-Regler schnell: Verstärkungsfaktor **rKpBig**, P-Regler langsam: Verstärkungsfaktor **rKpTiny** ).
+
+Handübersteuerung der digitalen Ausgänge
+========================================
+| Alle digitalen Steuerungsausgänge nach Handübersteuerung ( *xHB*, xMoreHB*, *xLessHB* ) können entweder im Automatikmodus ( eMANBIN.Auto )
+  oder in einer der beiden Handbetriebsarten ( eMANBIN.ManOn, eMANBIN.ManOff ) betrieben werden.
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 300 300 900
+    :header-rows: 1
+
+    * - *xAB*
+      - eMANBIN
+      - *xHB*
+      - Hinweise
+    * - FALSE
+      - eMANBIN.Auto
+      - FALSE
+      - Handübersteuermodul in Automatik
+    * - TRUE
+      - eMANBIN.Auto
+      - TRUE
+      - Handübersteuermodul in Automatik
+    * - X
+      - eMANBIN.ManOn
+      - TRUE
+      - Handübersteuermodul in Handbetrieb Ein
+    * - X
+      - eMANBIN.ManOff
+      - FALSE
+      - Handübersteuermodul in Handbetrieb Aus
+
+| Legende: X = beliebig
+
+Sammelstörung *xAlarm*
+======================
+| Die Sammelstörung *xAlarm* ist aktiv ( = TRUE ), falls die Störmeldung des Wärmeerzeugers *xAlarmIn* aktiv ( = TRUE ) ist.
+| In allen übrigen Situationen ist die Sammelstörung *xAlarm* nicht aktiv ( = FALSE ).
+
+Sammelmeldung Automatikbetrieb *xAuto*
+======================================
+| Die Sammelmeldung Automatikbetrieb *xAuto* wird aktiviert ( = TRUE ), falls folgende Bedingungen gleichzeitig erfüllt sind:
+|
+| - Eingang *eAOO* = HVACTYPES.eManBin.Auto
+| - Eingang *eAOOMore* = HVACTYPES.eManBin.Auto
+| - Eingang *eAOOLess* = HVACTYPES.eManBin.Auto
+| - Sollwert / Parameter **eManModeB** = eMANBIN.Auto
+| - Sollwert / Parameter **eManModeBMore** = eMANBIN.Auto
+| - Sollwert / Parameter **eManModeBLess** = eMANBIN.Auto
+
+Betriebsstundenzähler - Wärmeerzeuger
+=====================================
+| Der Betriebsstundenzähler ( *udiOperatingHours*, *udiCountFb* ) für den Wärmeerzeuger ist aktiv, wenn die Betriebsmeldung aktiv ist ( *xFb* = TRUE ).
+
+.. topic:: Schreibzugriff auf die Zählerstände
+
+    | Über den Pfad 'Instanzname._OperatingHours.udiOperatingHours' bzw. 'Instanzname._OperatingHours.udiCountFb' ist ein Schreibzugriff auf die beide Zählerstände möglich.
+
+.. topic:: Voraussetzung für den Einsatz des Funktionsbausteins Burner3P
+
+    | Zur korrekten Funktion ist der Einsatz des Funktionsbausteins TimeRead mit *xEn* = TRUE erforderlich.
+
+Aktuelle berechnete Leistung des Wärmeerzeugers *rPos*
+======================================================
+| Die aktuelle **berechnete Leistung** des Wärmeerzeugers wird am Ausgang *rPos* im Bereich 0.0 - 100.0 % dargestellt.
+| Hierzu ist die korrekte Angabe der Laufzeit des Antriebs zwischen minimaler und maximaler Leistung ( **tDuration** ) erforderlich.
+| Es findet keine Neupositionierung an einer Referenzposition statt.
+
+Rückführung der Leistung des Wärmeerzeugers *rU*
+================================================
+| Die aktuelle **tatsächliche** Leistung des Wärmeerzeugers kann am Eingang *rU* angeschlossen werden.
+| Dieser Eingang wird aktuell nicht für Steuerungs- und Regelungszwecke verwandt.
+
+Nicht aktiver Zustand ( *xEn* = FALSE )
+=======================================
+
+ .. list-table::
+    :name: Funktionstabelle_2
+    :widths: 600 300 600 300 600 300 600 300 300 600 300 300 600 600 900
+    :header-rows: 1
+
+    * - *xHB*
+      - *xAB*
+      - *xMoreHB*
+      - *xMoreAB*
+      - *xLessHB*
+      - *xLessAB*
+      - *rPos*
+      - *tOnDelay*
+      - *tOnControlDelay*
+      - *dtLastFb*
+      - *udiOperatingHours*
+      - *udiCountFb*
+      - *xAlarm*
+      - *xAuto*
+      - Hinweise
+    * - FALSE ( eManModeB = eManBin.Auto )
+      - FALSE
+      - FALSE ( eManModeBMore = eManBin.Auto )
+      - FALSE
+      - FALSE ( eManModeBLess = eManBin.Auto )
+      - FALSE
+      - 0.0 %
+      - alter Wert
+      - alter Wert
+      - alter Wert
+      - alter Wert
+      - alter Wert
+      - Zustand von *xAlarmIn*
+      - alter Wert
+      - *xEn* = FALSE
+
+| Legende: X = beliebig
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------------+-------------+------------------------+--------------------------------------------------------------+
+    | Scope  | Name              | Type        | Initial                | Comment                                                      |
+    +========+===================+=============+========================+==============================================================+
+    | Input  | xEn               | BOOL        |                        | Anforderung des Wärmeerzeugers ( FALSE = Aus, TRUE = Ein )   |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | rSetPtTemp        | REAL        |                        | Vorlaufsolltemperatur in °C                                  |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | xFb               | BOOL        |                        | Betriebsrückmeldung des Wärmeerzeugers ( FALSE = Aus, TRUE = |
+    |        |                   |             |                        | Ein )                                                        |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | rU                | REAL        | 0                      | Rückführung der Leistung des Wärmeerzeugers in %             |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | xAlarmIn          | BOOL        |                        | Störmeldung des Wärmeerzeugers ( FALSE = Aus, TRUE = Ein )   |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | eAOO              | |ioeManBin| | HVACTYPES.eManBin.Auto | Betriebsart der Handübersteuerung - Hardware für den Ausgang |
+    |        |                   |             |                        | *xHB*                                                        |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | eAOOMore          | |ioeManBin| | HVACTYPES.eManBin.Auto | Betriebsart der Handübersteuerung - Hardware für den Ausgang |
+    |        |                   |             |                        | *xMoreHB*                                                    |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | eAOOLess          | |ioeManBin| | HVACTYPES.eManBin.Auto | Betriebsart der Handübersteuerung - Hardware für den Ausgang |
+    |        |                   |             |                        | *xLessHB*                                                    |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | rFdT              | REAL        |                        | Vorlauftemperatur in °C                                      |
+    +--------+-------------------+-------------+------------------------+--------------------------------------------------------------+
+    | Output | xHB               | BOOL        |                        | Freigabe - Wärmeerzeuger nach Handübersteuerung ( FALSE =    |
+    |        |                   |             |                        | Aus, TRUE = Ein )                                            |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | xAB               | BOOL        |                        | Freigabe - Wärmeerzeuger vor Handübersteuerung ( FALSE =     |
+    |        |                   |             |                        | Aus, TRUE = Ein )                                            |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | xMoreHB           | BOOL        |                        | Freigabe - Leistungserhöhung nach Handübersteuerung ( FALSE  |
+    |        |                   |             |                        | = Aus, TRUE = Ein )                                          |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | xMoreAB           | BOOL        |                        | Freigabe - Leistungserhöhung vor Handübersteuerung ( FALSE = |
+    |        |                   |             |                        | Aus, TRUE = Ein )                                            |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | xLessHB           | BOOL        |                        | Freigabe - Leistungsreduktion nach Handübersteuerung ( FALSE |
+    |        |                   |             |                        | = Aus, TRUE = Ein )                                          |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | xLessAB           | BOOL        |                        | Freigabe - Leistungsreduktion vor Handübersteuerung ( FALSE  |
+    |        |                   |             |                        | = Aus, TRUE = Ein )                                          |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | rPos              | REAL        |                        | Aktuelle berechnete Leistung des Wärmeerzeugers in %         |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | tOnDelay          | TIME        |                        | Wartezeit bis zum Ende der Mindeststillstandszeit in s       |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | tOnControlDelay   | TIME        |                        | Wartezeit bis zum Beginn der Temperaturregelung in s         |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | dtLastFb          | DT          |                        | Datum / Uhrzeit des letzten Betriebs des Wärmeerzeugers      |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | udiOperatingHours | UDINT       |                        | Betriebsstunden des Wärmeerzeugers in h                      |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | udiCountFb        | UDINT       |                        | Anzahl der Einschaltungen des Wärmeerzeugers                 |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | xAlarm            | BOOL        |                        | Sammelstörmeldung ( FALSE = Aus, TRUE = Ein )                |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | xAuto             | BOOL        |                        | Automatikmeldung ( FALSE = Aus, TRUE = Ein )                 |
+    +--------+-------------------+-------------+------------------------+--------------------------------------------------------------+
+    | Input  | tDuration         | TIME        | TIME#1m0s0ms           | Laufzeit des Antriebs zwischen minimaler und maximaler       |
+    |        |                   |             |                        | Leistung in s                                                |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | tIntegration      | TIME        | TIME#100ms             | Zeitdauer zwischen zwei Integrationsvorgängen in s           |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | tImpulsClose      | TIME        | TIME#1s0ms             | Zeitdauer eines Impulses am Ausgang *xLessAB* in s           |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | tImpulsOpen       | TIME        | TIME#1s0ms             | Zeitdauer eines Impulses am Ausgang *xMoreAB* in s           |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | rKpTiny           | REAL        | 0.8                    | Verstärkungsfaktor des langsamen Leistungsreglers            |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | rKpBig            | REAL        | 8                      | Verstärkungsfaktor des schnellen Leistungsreglers            |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | rOffset           | REAL        | 0                      | Temperaturversatz - Vorlaufsolltemperatur für die            |
+    |        |                   |             |                        | Leistungsregler in °C                                        |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | rYDisabled        | REAL        | 0                      | Ausschaltwert der Leistungsregler ( xEn = FALSE )            |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | udiWaitControl    | UDINT       | 3                      | Wartezeit bis zur Freigabe der Leistungsregler ( *xFB* =     |
+    |        |                   |             |                        | TRUE ) in  Minuten                                           |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | rSwitchOffPoint   | REAL        | 2.5                    | Ausschaltpunkt relativ zur Vorlaufsolltemperatur             |
+    |        |                   |             |                        | *rSetPtTemp* in °C                                           |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | rSwitchOnPoint    | REAL        | -2.5                   | Einschaltpunkt relativ zur Vorlaufsolltemperatur             |
+    |        |                   |             |                        | *rSetPtTemp* in °C                                           |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | udiTimeMinOff     | UDINT       | 3                      | Mindeststillstandszeit des Wärmeerzeugers in s               |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | eManModeBLess     | |ioeMANBIN| | eMANBIN.Auto           | Betriebsart der Handübersteuerung für den digitalen Ausgang  |
+    |        |                   |             |                        | *xLessHB*                                                    |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | eManModeBMore     | |ioeMANBIN| | eMANBIN.Auto           | Betriebsart der Handübersteuerung für den digitalen Ausgang  |
+    |        |                   |             |                        | *xMoreHB*                                                    |
+    +        +-------------------+-------------+------------------------+--------------------------------------------------------------+
+    |        | eManModeB         | |ioeMANBIN| | eMANBIN.Auto           | Betriebsart der Handübersteuerung für den digitalen Ausgang  |
+    |        |                   |             |                        | *xHB*                                                        |
+    +--------+-------------------+-------------+------------------------+--------------------------------------------------------------+
+
+.. |ioeManBin| replace:: :ref:`eManBin<eManBin>`
+.. |ioeMANBIN| replace:: :ref:`eMANBIN<eManBin>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

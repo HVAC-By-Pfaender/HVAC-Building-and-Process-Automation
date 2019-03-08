@@ -1,0 +1,36 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.OptStartHeat.mCheckClock`:
+
+
+.. _`OptStartHeat.mCheckClock`:
+
+OptStartHeat.mCheckClock (METH)
+-------------------------------
+
+METHOD mCheckClock : BYTE
+
+
+
+
+.. todo:: Please add documentation for method: OptStartHeat.mCheckClock
+
+
+
+
+
+InOut:
+    +--------+-------------+------+
+    | Scope  | Name        | Type |
+    +========+=============+======+
+    | Return | mCheckClock | BYTE |
+    +--------+-------------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

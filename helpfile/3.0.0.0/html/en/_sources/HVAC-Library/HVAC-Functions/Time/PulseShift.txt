@@ -1,0 +1,163 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Time.PulseShift`:
+
+
+.. index::
+   single: PulseShift
+
+.. _`PulseShift`:
+
+PulseShift (FB)
+---------------
+
+FUNCTION_BLOCK PulseShift
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Flankengesteuerte, verzögerte Impulserzeugung mit einstellbarer Impulsdauer
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/PulseShift_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xIN*
+      - BOOL
+      -
+      -
+      - Binärer Eingang
+    * - *tShift*
+      - TIME
+      -
+      - T#1s
+      - Verzögerungszeit
+    * - *tPT*
+      - TIME
+      -
+      - T#1s
+      - Zeitdauer des Ausgangsimpulses
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xQ*
+      - BOOL
+      -
+      -
+      - Impulsausgang
+    * - *tET*
+      - TIME
+      -
+      -
+      - Zeitdifferenz zwischen der Sollzeitdauer und der Zeitdauer des Impulses an *xQ*
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **xTest**
+      - BOOL
+      -
+      - FALSE
+      - Testeingang zur Auslösung des Impulses
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Am Impulsausgang *xQ* wird nach einer positiven Flanke am binären Eingang *xIN* und einer sich anschließenden Verzögerungszeit
+  *tShift* ein Impuls mit einer Zeitdauer *tPT* erzeugt.
+| Alternativ kann die Impulserzeugung ohne Verzögerungszeit auch durch den Sollwert / Parameter **xTest** ausgelöst werden.
+|
+
+.. image:: /../DocuBilder/PulseShift_Bild_1.png
+
+
+Zeitausgang *tET*
+=================
+| Bei aktivem Impulsausgang *xQ* wird die Zeitdifferenz zwischen der Sollzeitdauer *tPT* und der Zeitdauer des
+  Impulses an *xQ* angezeigt.
+| Bei inaktivem Impulsausgang *xQ* wird stets der Wert T#0s angezeigt.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+--------+------+------------+------------------------------------------------------------+
+    | Scope  | Name   | Type | Initial    | Comment                                                    |
+    +========+========+======+============+============================================================+
+    | Input  | xIN    | BOOL |            | Binärer Eingang                                            |
+    +        +--------+------+------------+------------------------------------------------------------+
+    |        | tShift | TIME | TIME#1s0ms | Verzögerungszeit in s                                      |
+    +        +--------+------+------------+------------------------------------------------------------+
+    |        | tPT    | TIME | TIME#1s0ms | Zeitdauer des Ausgangsimpulses                             |
+    +        +--------+------+------------+------------------------------------------------------------+
+    |        | xTest  | BOOL | FALSE      | Simulation des Eingangs *xIN*                              |
+    +--------+--------+------+------------+------------------------------------------------------------+
+    | Output | xQ     | BOOL |            | Impulsausgang                                              |
+    +        +--------+------+------------+------------------------------------------------------------+
+    |        | tET    | TIME |            | Zeitdifferenz zwischen der Sollzeitdauer und der Zeitdauer |
+    |        |        |      |            | des Impulses an *xQ* in s                                  |
+    +--------+--------+------+------------+------------------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

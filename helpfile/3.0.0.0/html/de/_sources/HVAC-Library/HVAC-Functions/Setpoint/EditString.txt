@@ -1,0 +1,155 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Setpoint.EditString`:
+
+
+.. index::
+   single: EditString
+
+.. _`EditString`:
+
+EditString (FB)
+---------------
+
+FUNCTION_BLOCK EditString
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Eingabe einer Zeichenkette
+     |
+     | Typische Anwendung: Festlegung des Namens eines Heizkreises
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/EditString_FB.png
+
+**************
+Schnittstellen
+**************
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *sOut*
+      - STRING
+      -
+      -
+      - Ausgabewert vom Typ STRING
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **sSetPoint**
+      - STRING
+      -
+      - ''
+      - Eingabewert vom Typ STRING
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Übergabe eines Eingabewerts vom Typ STRING **sSetPoint** und die direkte Übertragung zum
+  Ausgabewert vom Typ STRING *sOut*.
+
+.. topic:: Verhalten bei Spannungsausfall
+
+    | Der Eingabewert vom Typ STRING **sSetPoint** wird spannungsausfallsicher gespeichert und automatisch wiederhergestellt.
+    |
+
+**************
+Visualisierung
+**************
+Passendes Visualisierungselement aus der HVACV Visu Library: **EditString**
+
+Darstellung
+===========
+  .. image:: /../DocumentationPictures_Visu/EditString.PNG
+
+Schnittstellen Visu-Element
+===========================
+
+ .. list-table::
+    :name: Schnittstellen Visu-Element
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Typ
+      - Initialwert
+      - Funktion
+    * - **rString**
+      - STIRNG
+      - VAR_IN_OUT
+      -
+      - String Eingabewert Bsp. HVAC.EditString.sSetPoint
+    * - **sDialogTitle**
+      - STRING
+      - VAR_INPUT
+      -
+      - Titel im Stringformat eingeben z.B: 'Eingabe Raumtemperatur' - erscheint im Numpad bei der Eingabe.
+    * - **iFieldSizeL**
+      - INT
+      - VAR_INPUT
+      - 0
+      - Feld vergößert sich um Anzahl der eingegebenen Pixel nach links. Wird benötigt um lange Zahlen oder Einheiten anzuzeigen.
+    * - **iFieldSizeR**
+      - INT
+      - VAR_INPUT
+      - 0
+      - Feld vergößert sich um Anzahl der eingegebenen Pixel nach rechts. Wird benötigt um lange Zahlen oder Einheiten anzuzeigen.
+|
+| Hinweis: VAR_IN_OUT Schnittstellen müssen belegt werden, VAR_INPUT sind optional.
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+--------+---------+----------------------------+
+    | Scope  | Name      | Type   | Initial | Comment                    |
+    +========+===========+========+=========+============================+
+    | Input  | sSetPoint | STRING | ''      | Eingabewert vom Typ STRING |
+    +--------+-----------+--------+---------+----------------------------+
+    | Output | sOut      | STRING |         | Ausgabewert vom Typ STRING |
+    +--------+-----------+--------+---------+----------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,36 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.DuoPump.mQuit`:
+
+
+.. _`DuoPump.mQuit`:
+
+DuoPump.mQuit (METH)
+--------------------
+
+METHOD mQuit : BOOL
+
+
+
+
+Doku hier
+
+
+
+
+
+InOut:
+    +--------+-------+------+
+    | Scope  | Name  | Type |
+    +========+=======+======+
+    | Return | mQuit | BOOL |
+    +--------+-------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

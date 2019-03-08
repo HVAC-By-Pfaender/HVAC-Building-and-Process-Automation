@@ -1,0 +1,128 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Time.StopWatch`:
+
+
+.. index::
+   single: StopWatch
+
+.. _`StopWatch`:
+
+StopWatch (FB)
+--------------
+
+FUNCTION_BLOCK StopWatch
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Messung von Zeitabschnitten mit Rücksetzmöglichkeit.
+     | Anzeige der Gesamtzeit ( *tElapsed* ) und der Gesamtzeit vor der letzten Messung ( *tMeasured* ).
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/StopWatch_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xEn*
+      - BOOL
+      -
+      -
+      - Freigabe der Messung
+    * - *xReset*
+      - BOOL
+      -
+      -
+      - Rücksetzung der Stoppuhr
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *tMeasured*
+      - TIME
+      - 0 ... 10 Tage
+      - 0 Tage
+      - Gemessene Zeit vor der letzten Messung
+    * - *tElapsed*
+      - TIME
+      - 0 ... 10 Tage
+      - 0 Tage
+      - Gemessene Zeitdauer seit der letzten Rücksetzung
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Messung von einzelnen Zeitabschnitten ( *xEn* = TRUE ).
+| Die Summe der gemessenen Zeitabschnitte wird am Ausgang *tElapsed* dargestellt.
+| Die Summe der gemessenen Zeitabschnitte vor der letzten Messung wird am Ausgang *tMeasured* dargestellt.
+| Die Summe der gemessenen Zeitabschnitte darf maximal 14400 Minuten ( = 10 Tage ) betragen.
+| Der aktive Rücksetzeingang ( *xReset* = TRUE ) setzt unabhängig von den übrigen Zuständen die Ausgänge *tEleapsed* und *tMeasured* auf 0 zurück.
+| Bei nicht freigegebener Messung ( *xEn* = FALSE ) werden die Ausgänge *tEleapsed* und *tMeasured* nicht verändert.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+------+--------------------------------------------------+
+    | Scope  | Name      | Type | Comment                                          |
+    +========+===========+======+==================================================+
+    | Input  | xEn       | BOOL | Freigabe der Messung                             |
+    +        +-----------+------+--------------------------------------------------+
+    |        | xReset    | BOOL | Rücksetzung der Stoppuhr                         |
+    +--------+-----------+------+--------------------------------------------------+
+    | Output | tMeasured | TIME | Gemessene Zeit vor der letzten Messung           |
+    +        +-----------+------+--------------------------------------------------+
+    |        | tElapsed  | TIME | Gemessene Zeitdauer seit der letzten Rücksetzung |
+    +--------+-----------+------+--------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,809 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ClockSlave32 (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="ClockSlave32.SlvPara (PROP)" href="pou-ClockSlave32/SlvPara.html" />
+    <link rel="prev" title="ClockMaster32.SlvPara (PROP)" href="pou-ClockMaster32/SlvPara.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Clock.html">Clock</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="Clock7d1Ch.html">Clock7d1Ch (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Clock7d2Ch.html">Clock7d2Ch (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ClockMaster32.html">ClockMaster32 (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ClockSlave32 (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Holiday.html">Holiday (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PublicHoliday.html">PublicHoliday (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SwitchTimeS.html">SwitchTimeS (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TimeRead.html">TimeRead (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Clock.html">Clock</a> &raquo;</li>
+        
+      <li>ClockSlave32 (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Clock/ClockSlave32.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-clock-clockslave32"></span><div class="section" id="clockslave32-fb">
+<span id="clockslave32"></span><span id="index-0"></span><h1>ClockSlave32 (FB)<a class="headerlink" href="#clockslave32-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK ClockSlave32 EXTENDS Uhr_Base IMPLEMENTS <a class="reference internal" href="../../Interfaces/IUhr.html#iuhr"><span class="std std-ref">IUhr</span></a></p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Slave function block for a clock system with 32 weekly clocks, 30 public holidays, 10 vacation periods and 5 special switching times</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/ClockSlave32_FB.png" src="../../../_images/ClockSlave32_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block serves as a slave function block for a clock system with 32 weekly clocks, 30 public holidays, 10 vacation periods and 5 special switching times.</div>
+<div class="line">It allows the individual activation / deactivation of the 32 week clock channels, the holiday channel, the holiday channel and the special switching time channel ( FALSE = deactivation, TRUE = activation ).</div>
+<div class="line">The connection between the master function block and the slave function blocks is established via the output <em>itfToClockSlave32</em> or the inputs <em>itfFromClockMaster32</em>.</div>
+<div class="line">The inputs <em>sTitle</em> or <em>sLine1</em> allow the designation of the title or line 1 in the visualization to be defined.</div>
+</div>
+</div>
+<div class="section" id="zustand-des-slave-kanals-xactive">
+<h3>Status of the slave channel <em>xActive</em><a class="headerlink" href="#zustand-des-slave-kanals-xactive" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The output <em>xActive</em> ( FALSE = not active, TRUE = active ) is determined by the current states of the <strong>assigned</strong> week clock channels ( <strong>xClockCH_01</strong> to <strong>xClockCH_32</strong> = TRUE ) of the <strong>assigned</strong> holiday channel ( <strong>xPublicHoliday</strong> = TRUE ), of the <strong>assigned</strong> holiday channel ( <strong>xHoliday</strong> = TRUE ) or of the <strong>assigned</strong> holiday channel ( <strong>xHoliday</strong> = TRUE ). of the <strong>assigned</strong> special switching time channel ( <strong>xSwitchTimeS</strong> = TRUE ) as follows ( Note: Channels that are not assigned automatically assume the FALSE state ):</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">week clock channels</p>
+</th>
+<th class="head"><p class="first last">Public holiday channel</p>
+</th>
+<th class="head"><p class="first last">Holiday channel</p>
+</th>
+<th class="head"><p class="first last">Special switching time channel</p>
+</th>
+<th class="head"><p class="first last">Central activation ( Master )</p>
+</th>
+<th class="head"><p class="first last">Central deactivation ( Master )</p>
+</th>
+<th class="head"><em>xActive</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Normal operation - Off</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td><p class="first last">Normal operation - On</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Holiday operation - On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td><p class="first last">Holiday operation - On</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>X</td>
+<td>X</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td><p class="first last">Special switching times operation - On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td><p class="first last">Central activation ( Master )</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td><p class="first last">Central deactivation ( Master )</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="zentrale-aufhebung-aller-zuordnungen-xresetassignment">
+<h3>Central cancellation of all assignments <strong>xResetAssignment</strong><a class="headerlink" href="#zentrale-aufhebung-aller-zuordnungen-xresetassignment" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This setpoint / parameter is used for the central cancellation of all assignments made in the slave function block.</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<p>Suitable visualization element from the HVACV Visu Library: <strong>ClockSlave32_Clock7d1Ch_Start</strong></p>
+<div class="section" id="id1">
+<h3>Portrayal<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><img alt="../../../_images/ClockSlave32_Clock7d1Ch_Start.PNG" src="../../../_images/ClockSlave32_Clock7d1Ch_Start.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen-visu-element">
+<h3>Interfaces Visu-Element<a class="headerlink" href="#schnittstellen-visu-element" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>FB_ClockSlave32</strong></td>
+<td>ClockSlave32</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enter FB ClockSlave32 here Example: PRG.ClockSlave32</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>FB_ClockMaster32</strong></td>
+<td>ClockMaster32</td>
+<td>VAR_IN_OUT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enter FB ClockMaster32 here e.g. PRG.ClockMaster32</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>BMS_Active</strong></td>
+<td>BOOL</td>
+<td>VAR_INPUT</td>
+<td>&nbsp;</td>
+<td><p class="first last">BMS (Building Management System) GLT (Building Management System). If BMS_Active = TRUE the input/editing of the clocks is deactivated because they can only be set via the BMS. Times can then only be viewed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Note: VAR_IN_OUT interfaces must be assigned, VAR_INPUT is optional.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="16%" />
+<col width="15%" />
+<col width="7%" />
+<col width="45%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+<th class="head">Inherited from</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="40">Input</td>
+<td>itfFromClockMaster32</td>
+<td>IUhrProtocol</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Clock_Base</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sTitle</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">Designation for the slave function block</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>sLine1</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">Designation of line 1 for the slave function block</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>ClockSlvPara</td>
+<td><a class="reference internal" href="../../Structs/stSlvClockData.html#stslvclockdata"><span class="std std-ref">stSlvClockData</span></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xSwitchTimeS</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the special switching time channel ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xPublicHoliday</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the public holiday channel ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xHoliday</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the holiday channel ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_32</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 32 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_31</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 31 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_30</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 30 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_29</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 29 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_28</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 28 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_27</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 27 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_26</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 26 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_25</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 25 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_24</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 24 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_23</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 23 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_22</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 22 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_21</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 21 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_20</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 20 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_19</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 19 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_18</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 18 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_17</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 17 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_16</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 16 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_15</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 15 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_14</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 14 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_13</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 13 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_12</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 12 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_11</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 11 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_10</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 10 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_09</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 9 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_08</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 8 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_07</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 7 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_06</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 6 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_05</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 5 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_04</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 4 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_03</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 3 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xClockCH_02</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 2 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xClockCH_01</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Assignment of the channel of the week clock 1 ( FALSE = not assigned, TRUE = assigned )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>xResetAssignment</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Central cancellation of all assignments ( FALSE = Off, TRUE = On )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td rowspan="3">Output</td>
+<td>xClockActive</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">State of the clock channel of the slave function block ( FALSE = Off, TRUE = On )</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>todTodayTON</td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td><p class="first last">Earliest switch-on time of the current day</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>todTodayTOF</td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td><p class="first last">Latest switch-off time of the current day</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pou-ClockSlave32/SlvPara.html">ClockSlave32.SlvPara (PROP)</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pou-ClockSlave32/SlvPara.html" class="btn btn-neutral float-right" title="ClockSlave32.SlvPara (PROP)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pou-ClockMaster32/SlvPara.html" class="btn btn-neutral float-left" title="ClockMaster32.SlvPara (PROP)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

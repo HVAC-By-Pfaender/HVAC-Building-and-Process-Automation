@@ -1,0 +1,114 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.checkLicense`:
+
+
+.. index::
+   single: checkLicense
+
+.. _`checkLicense`:
+
+checkLicense (FB)
+-----------------
+
+FUNCTION_BLOCK checkLicense
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Prüfung auf eine gültige Lizenz
+     |
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/checkLicense_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xLicenseActive*
+      - BOOL
+      -
+      -
+      - Anzeige - Ergbnis - Lizenzprüfung ( FALSE = keine Lizenz, TRUE = gültige Lizenz )
+
+Sollwerte / Parameter
+=====================
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Prüfung, ob eine gültige Lizenz für die Bibliothek(en) vorhanden ist.
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 900 300 900
+    :header-rows: 1
+
+    * - Bedingung
+      - *xLicenseActive*
+      - Hinweise
+    * - Gültige Lizenz vorhanden
+      - TRUE
+      - Gültige Lizenz vorhanden
+    * - Demo - Modus aktiv
+      - TRUE
+      - Demo - Modus aktiv
+    * - Gültige Lizenz nicht vorhanden UND Demo - Modus nicht aktiv
+      - FALSE
+      - Gültige Lizenz nicht vorhanden UND Demo - Modus nicht aktiv
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+----------------+------+-------------------------------------------------------------+
+    | Scope  | Name           | Type | Comment                                                     |
+    +========+================+======+=============================================================+
+    | Output | xLicenseActive | BOOL | TRUE = valid license found OR running in trial mode | FALSE |
+    |        |                |      | = no valid license found OR trila mode over                 |
+    +--------+----------------+------+-------------------------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

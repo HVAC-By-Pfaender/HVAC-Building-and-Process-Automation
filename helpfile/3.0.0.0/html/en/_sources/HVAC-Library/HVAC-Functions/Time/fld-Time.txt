@@ -1,0 +1,22 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Time`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Time`:
+
+Time
+====
+
+.. todo:: Please add documentation for folder: Time
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Time/MPulse
+   /HVAC-Library/HVAC-Functions/Time/PulseR
+   /HVAC-Library/HVAC-Functions/Time/PulseShift
+   /HVAC-Library/HVAC-Functions/Time/StartDelay
+   /HVAC-Library/HVAC-Functions/Time/StopWatch
+   /HVAC-Library/HVAC-Functions/Time/StopWatchExt
+   /HVAC-Library/HVAC-Functions/Time/XPulse
+   /HVAC-Library/HVAC-Functions/Time/XPulseR
+
+.. last line of folder.rst template

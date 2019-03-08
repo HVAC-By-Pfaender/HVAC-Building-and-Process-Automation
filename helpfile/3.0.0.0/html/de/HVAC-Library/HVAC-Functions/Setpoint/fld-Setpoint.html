@@ -1,0 +1,484 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Setpoint &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'de',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../../../genindex.html" />
+    <link rel="search" title="Suche" href="../../../search.html" />
+    <link rel="next" title="EditBool (FB)" href="EditBool.html" />
+    <link rel="prev" title="TwoPointFun (FUN)" href="../Numeric/TwoPointFun.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Setpoint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EditBool.html">EditBool (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EditDT.html">EditDT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EditDate.html">EditDate (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EditPoti.html">EditPoti (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EditReal.html">EditReal (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EditRealVisu.html">EditRealVisu (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EditString.html">EditString (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EditTOD.html">EditTOD (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EditTime.html">EditTime (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EditUDINT.html">EditUDINT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HeatCurve4P_DN.html">HeatCurve4P_DN (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SetPointSlide.html">SetPointSlide (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+      <li>Setpoint</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Setpoint/fld-Setpoint.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="setpoint">
+<span id="id1"></span><span id="fld-hvac-library-fld-hvac-functions-fld-setpoint"></span><h1>Setpoint<a class="headerlink" href="#setpoint" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EditBool.html">EditBool (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EditBool.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditBool.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditBool.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditBool.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditBool.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditBool.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditBool.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditBool.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditBool.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EditDT.html">EditDT (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EditDT.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditDT.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditDT.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditDT.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditDT.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditDT.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditDT.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditDT.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditDT.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EditDate.html">EditDate (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EditDate.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditDate.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditDate.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditDate.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditDate.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditDate.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditDate.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditDate.html#visualisierung">Visualisierung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditDate.html#id3">Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditDate.html#schnittstellen-visu-element">Schnittstellen Visu-Element</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditDate.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EditPoti.html">EditPoti (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EditPoti.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditPoti.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditPoti.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditPoti.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditPoti.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditPoti.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditPoti.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditPoti.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditPoti.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EditReal.html">EditReal (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EditReal.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditReal.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditReal.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditReal.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditReal.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditReal.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditReal.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditReal.html#visualisierung">Visualisierung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditReal.html#id3">Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditReal.html#schnittstellen-visu-element">Schnittstellen Visu-Element</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditReal.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EditRealVisu.html">EditRealVisu (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EditRealVisu.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditRealVisu.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditRealVisu.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditRealVisu.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditRealVisu.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditRealVisu.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditRealVisu.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditRealVisu.html#visualisierung">Visualisierung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditRealVisu.html#id3">Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditRealVisu.html#schnittstellen-visu-element">Schnittstellen Visu-Element</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditRealVisu.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EditString.html">EditString (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EditString.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditString.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditString.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditString.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditString.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditString.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditString.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditString.html#visualisierung">Visualisierung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditString.html#id3">Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditString.html#schnittstellen-visu-element">Schnittstellen Visu-Element</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditString.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EditTOD.html">EditTOD (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EditTOD.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditTOD.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditTOD.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditTOD.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditTOD.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditTOD.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditTOD.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditTOD.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditTOD.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EditTime.html">EditTime (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EditTime.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditTime.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditTime.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditTime.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditTime.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditTime.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditTime.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditTime.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditTime.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EditUDINT.html">EditUDINT (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EditUDINT.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditUDINT.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditUDINT.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditUDINT.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditUDINT.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditUDINT.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditUDINT.html#allgemeines">Allgemeines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditUDINT.html#visualisierung">Visualisierung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EditUDINT.html#id3">Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EditUDINT.html#schnittstellen-visu-element">Schnittstellen Visu-Element</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditUDINT.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="HeatCurve4P_DN.html">HeatCurve4P_DN (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="HeatCurve4P_DN.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HeatCurve4P_DN.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HeatCurve4P_DN.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="HeatCurve4P_DN.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="HeatCurve4P_DN.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="HeatCurve4P_DN.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="HeatCurve4P_DN.html#funktionsbeschreibung">Funktionsbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HeatCurve4P_DN.html#visualisierung">Visualisierung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="HeatCurve4P_DN.html#id4">Darstellung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="HeatCurve4P_DN.html#schnittstellen-visu-element">Schnittstellen Visu-Element</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="HeatCurve4P_DN.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SetPointSlide.html">SetPointSlide (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SetPointSlide.html#kurzbeschreibung">Kurzbeschreibung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SetPointSlide.html#darstellung">Darstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SetPointSlide.html#schnittstellen">Schnittstellen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SetPointSlide.html#eingange">Eingänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SetPointSlide.html#ausgange">Ausgänge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SetPointSlide.html#sollwerte-parameter">Sollwerte / Parameter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SetPointSlide.html#funktionsbeschreibung">Funktionsbeschreibung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SetPointSlide.html#allgemeines">Allgemeines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SetPointSlide.html#anzeige-schiebung-boverthrust">Anzeige - Schiebung <em>bOverThrust</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SetPointSlide.html#visualisierung">Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SetPointSlide.html#codesys">Codesys</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="EditBool.html" class="btn btn-neutral float-right" title="EditBool (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Numeric/TwoPointFun.html" class="btn btn-neutral float-left" title="TwoPointFun (FUN)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

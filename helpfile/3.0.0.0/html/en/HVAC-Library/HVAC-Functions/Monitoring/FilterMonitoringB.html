@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FilterMonitoringB (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Position3P (FB)" href="Position3P.html" />
+    <link rel="prev" title="FilterMonitoringA (FB)" href="FilterMonitoringA.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Monitoring.html">Monitoring</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="AirFlowMeasuring.html">AirFlowMeasuring (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AirShortage.html">AirShortage (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FilterMonitoringA.html">FilterMonitoringA (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">FilterMonitoringB (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Position3P.html">Position3P (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Monitoring.html">Monitoring</a> &raquo;</li>
+        
+      <li>FilterMonitoringB (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Monitoring/FilterMonitoringB.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-monitoring-filtermonitoringb"></span><div class="section" id="filtermonitoringb-fb">
+<span id="filtermonitoringb"></span><span id="index-0"></span><h1>FilterMonitoringB (FB)<a class="headerlink" href="#filtermonitoringb-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK FilterMonitoringB</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Detection of a filter contamination and generation of a fault message</div>
+<div class="line"><br /></div>
+<div class="line">Typical Application: Detection of air filter contamination with a differential pressure switch</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/FilterMonitoringB_FB.png" src="../../../_images/FilterMonitoringB_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatyp</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xIn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Input - differential pressure switch</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xQuit</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Reset - fault message</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Output<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatyp</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xAlarm</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Output - fault message</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>tTimeToAlarm</em></td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Time duration until the fault signal is triggered</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameter<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatyp</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Function</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>udiControlTime</em></td>
+<td>UDINT</td>
+<td>1s ... 3600s</td>
+<td>300s</td>
+<td><p class="first last">Wait time</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xControl</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Enable of the monitoring</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block is used to detect filter contamination by evaluating the input for the differential pressure switch <em>xIn</em>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ausgang-stormeldung-xalarm">
+<h3>Output - fault message <em>xAlarm</em><a class="headerlink" href="#ausgang-stormeldung-xalarm" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The output - fault message <em>xAlarm</em> is activated (<em>xAlarm</em> = TRUE) if condition 1 below is fulfilled.</div>
+<div class="line"><br /></div>
+<div class="line">Condition 1: The input for the differential pressure switch <em>xIn</em> is permanently in the TRUE state (=filter contaminiation)  at least during the waiting time <em>udiControlTime</em>.</div>
+<div class="line-block">
+<div class="line">At the same time the monitoring is released generally (<strong>xContol</strong> = TRUE).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">The output - fault message <em>xAlarm</em> is deactivated (<em>xAlarm</em> = FALSE) in following cases:</div>
+<div class="line"><br /></div>
+<div class="line">Case 1: Condition 1 is not fulfilled and the reset of the error message <em>xQuit</em> is active ( = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">Case 2: The Condition 1 is not fulfilled and the release of the monitoring <em>xControl</em> is not active (= FALSE).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="zeitdauer-bis-zur-auslosung-der-stormeldung-ttimetoalarm">
+<h3>Time duration until the fault message is triggered * tTimeToAlarm*<a class="headerlink" href="#zeitdauer-bis-zur-auslosung-der-stormeldung-ttimetoalarm" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">At the output duration, until the fault message <em>tTimeToAlarm</em> is triggered, different values are displayed depending on the operating situation.</div>
+<div class="line"><br /></div>
+<div class="line">Situation 1: Output of the remaining duration until the fault message is released (Condition: <em>xIn</em> = TRUE, <strong>xControl</strong> = TRUE)</div>
+<div class="line"><br /></div>
+<div class="line">Situation 2: If the situation 1 is not present, then the value 0.0 is permanently displayed.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="9%" />
+<col width="19%" />
+<col width="8%" />
+<col width="11%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="4">Input</td>
+<td>xIn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Input - differential pressure switch</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xQuit</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Reset - fault message</p>
+</td>
+</tr>
+<tr class="row-even"><td>udiControlTime</td>
+<td>UDINT</td>
+<td>300</td>
+<td><p class="first last">Wait time</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xControl</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Enable of the monitoring</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="2">Output</td>
+<td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Output - fault message</p>
+</td>
+</tr>
+<tr class="row-odd"><td>tTimeToAlarm</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td><p class="first last">Time duration until the fault signal is triggered</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Position3P.html" class="btn btn-neutral float-right" title="Position3P (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FilterMonitoringA.html" class="btn btn-neutral float-left" title="FilterMonitoringA (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+.. first line of object.rst template
+.. first line of itf-object.rst template
+.. _`.fld-HVAC Library.fld-Interfaces.IUhr`:
+
+
+.. Index::
+   single: IUhr
+
+.. _`IUhr`:
+
+IUhr (ITF)
+----------
+
+INTERFACE IUhr EXTENDS \__SYSTEM.IQueryInterface
+
+
+
+
+.. todo:: Please add documentation for interface: IUhr
+
+
+
+
+.. toctree::
+
+   /HVAC-Library/Interfaces/pou-IUhr/SlvPara
+
+.. last line of itf-object.rst template
+.. last line of object.rst template
+
+

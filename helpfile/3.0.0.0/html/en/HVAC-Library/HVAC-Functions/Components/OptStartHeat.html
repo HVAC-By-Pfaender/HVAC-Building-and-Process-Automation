@@ -1,0 +1,1686 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OptStartHeat (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="OptStartHeat.FB_Reinit (METH)" href="pou-OptStartHeat/FB_Reinit.html" />
+    <link rel="prev" title="FireDamperMot (FB)" href="FireDamperMot.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="Burner3P.html">Burner3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerP.html">BurnerP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerT.html">BurnerT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoolOutProtection.html">CoolOutProtection (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Damper2P.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DamperAnalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuoPump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fan1Speed.html">Fan1Speed (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanAnalog.html">FanAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanControl.html">FanControl (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FastHeating.html">FastHeating (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FireDamperMot.html">FireDamperMot (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">OptStartHeat (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreRinseOperationValveAnalog.html">PreRinseOperationValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Pump.html">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SequenceSUPTemp.html">SequenceSUPTemp (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SmokeDetector.html">SmokeDetector (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve2P.html">Valve2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve3P.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveAnalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveTherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>OptStartHeat (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Components/OptStartHeat.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-optstartheat"></span><div class="section" id="optstartheat-fb">
+<span id="optstartheat"></span><span id="index-0"></span><h1>OptStartHeat (FB)<a class="headerlink" href="#optstartheat-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK OptStartHeat</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Switch-on optimisation for heating operation ( principle: variable preheating time )</div>
+<div class="line">Target: Room temperature = target temperature at the start of daytime operation</div>
+<div class="line">Typical application: Zone control loop with heating valve</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/OptStartHeat_FB.PNG" src="../../../_images/OptStartHeat_FB.PNG" />
+</div></blockquote>
+</div>
+<div class="section" id="schnittstellen">
+<h2>Interfaces<a class="headerlink" href="#schnittstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eingange">
+<h3>Inputs<a class="headerlink" href="#eingange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xEn</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">General release of the switch-on optimization</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xEnAdapt</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Release of the data storage in the historical memory</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>xResAdapt</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Resetting the historical memory</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>rTo</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Current outside temperature</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>rTi</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Current room temperature</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>rSetTemp</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Current room setpoint temperature in comfort mode/day mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgange">
+<h3>Outputs<a class="headerlink" href="#ausgange" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id2">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xDaytime</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Release of the comfort / day mode ( Off = FALSE, On = TRUE )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xProcess</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">Enable - Preheating process ( Off = FALSE, On = TRUE )</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>bState</em></td>
+<td>BYTE</td>
+<td>&nbsp;</td>
+<td>0</td>
+<td><p class="first last">Phase of preheating process ( 0=Off/Decativated, 1 = Test time, 2 = Dead time, 3 = Heating time, 4 = End of heating time )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>wError</em></td>
+<td>WORD</td>
+<td>&nbsp;</td>
+<td>0</td>
+<td><p class="first last">Error state of the last preheating process</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>bResult</em></td>
+<td>BYTE</td>
+<td>&nbsp;</td>
+<td>0</td>
+<td><p class="first last">Quality of the last preheating process ( 0 = invalid, 1 = good, 2 = normal, 3 = poor )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>xActive</em></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>FALSE</td>
+<td><p class="first last">State of the clock channel of the weekly clock ( Off = FALSE, On = TRUE )</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>uiDeadTime</em></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>0</td>
+<td><p class="first last">Display of the current dead time duration ( min )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>uiHeatTime</em></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>0</td>
+<td><p class="first last">Display of the current heating time duration ( min )</p>
+</td>
+</tr>
+<tr class="row-even"><td><em>uiNumber</em></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>0</td>
+<td><p class="first last">Display of the total number of successful preheating processes</p>
+</td>
+</tr>
+<tr class="row-odd"><td><em>rAverageDiff</em></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td><p class="first last">Average absolute room temperature deviation of the last 10 successful preheating processes</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="sollwerte-parameter">
+<h3>Setpoints / Parameters<a class="headerlink" href="#sollwerte-parameter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id3">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>uiHGMin</strong></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>30</td>
+<td><p class="first last">Minimum value - heating gradient ( min/K )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>uiHGMax</strong></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>240</td>
+<td><p class="first last">Maximum value - heating gradient ( min/K )</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>uiDTMin</strong></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>10</td>
+<td><p class="first last">Minimum value - Dead time ( min )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>uiDTMax</strong></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>180</td>
+<td><p class="first last">Maximum value - Dead time ( min )</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>uiHTMin</strong></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td><p class="first last">Minimum value - heating time ( min )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>uiHTMax</strong></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>600</td>
+<td><p class="first last">Maximum value - heating time ( min )</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todMonFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on point in time - Monday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todMonTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off point in time - Monday</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xMonMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Monday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todTueFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on point in time - Tuesday</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todTueTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off point in time - Tuesday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xTueMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Tuesday</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todWedFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on point in time - Wednesday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todWedTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off point in time - Wednesday</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xWedMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Wednesday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todThuFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on point in time - Thursday</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todThuTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off point in time - Thursday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xThuMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Friday</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todFriFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on point in time - Friday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todFriTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off point in time - Friday</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xFriMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Friday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todSatFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on point in time 1 - Saturday</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todSatTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off point in time - Saturday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>xSatMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Saturday</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>todSunFrom</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#07:00</td>
+<td><p class="first last">Switch-on point in time - Sunnday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>todSunTo</strong></td>
+<td>TOD</td>
+<td>&nbsp;</td>
+<td>TOD#12:00</td>
+<td><p class="first last">Switch-off point in time - Sunnday</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>xSunMode</strong></td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Sunday</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>sNotice</strong></td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">&#8216;Own Notice - click to change.&#8217;</p>
+</td>
+<td><p class="first last">Designation - Time switch</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="globale-variablen">
+<h3>Global Variables<a class="headerlink" href="#globale-variablen" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="id4">
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head"><p class="first last">Datatype</p>
+</th>
+<th class="head"><p class="first last">Range</p>
+</th>
+<th class="head"><p class="first last">Init-Value</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTOMin</span></code></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>-25.0</td>
+<td><p class="first last">Minimum value - Outdoor temperature ( °C )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTOMax</span></code></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>25.0</td>
+<td><p class="first last">Maximum value - outdoor temperature ( °C )</p>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTIMin</span></code></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>15.0</td>
+<td><p class="first last">Minimum value - room temperature ( °C )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTIMax</span></code></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>30.0</td>
+<td><p class="first last">Maximum value - room temperature ( °C )</p>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rDiffSetTemp</span></code></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.0</td>
+<td><p class="first last">Deviation from the room target temperature at the end of the preheating process ( K )</p>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rDTDiffTemp</span></code></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.2</td>
+<td><p class="first last">Increasing the room temperature to detect the end of the dead time ( K )</p>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.uiPHMaxTime</span></code></td>
+<td>UINT</td>
+<td>&nbsp;</td>
+<td>720</td>
+<td><p class="first last">Maximum duration of the preheating process</p>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rLimitResultWell</span></code></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>0.5</td>
+<td><p class="first last">Result display: Room temperature deviation - limit value for a good preheating process</p>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rLimitResultNormal</span></code></td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td>1.0</td>
+<td><p class="first last">Result display: Room temperature deviation - limit value for a normal preheating process</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The output <em>xDaytime</em> is activated with generally enabled switch-on optimization ( <em>xEn</em> = TRUE ) depending on the historical data, the current outdoor temperature, the current room temperature and the current setpoint temperature for the day/comfort mode <strong>before</strong> the planned start of the comfort/day mode.</div>
+<div class="line"><br /></div>
+<div class="line">This preheating ensures that the room temperature already corresponds to the desired target temperature at the start of daytime operation.</div>
+<div class="line">The preheating time required for this is recalculated <strong>individually</strong> for each preheating process, the actual preheating time is also included in the historical data.</div>
+<div class="line">Preheating processes over several days are possible.</div>
+<div class="line">The switch-on optimization serves to save energy and increase operating comfort.</div>
+<div class="line">The components relevant for switch-on optimization are processed every 60s.</div>
+<div class="line"><br /></div>
+<div class="line">The preheating process is divided into four time periods.</div>
+<div class="line">They are run through one after the other during every successful preheating process.</div>
+<div class="line">The preheating process can end before, exactly at or after the switch-on point ( = transition to the comfort / day mode ).</div>
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/OptStartHeat_Bild_1.png" src="../../../_images/OptStartHeat_Bild_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="prufzeit-bstate-1">
+<h3>Test time (bState = 1)<a class="headerlink" href="#prufzeit-bstate-1" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The test time is used for cyclic testing (every 60s) to determine whether the conditions for enabling the preheating have been fulfilled.</div>
+<div class="line"><br /></div>
+<div class="line">It starts if the following conditions are met at the same time:</div>
+<div class="line"><br /></div>
+<div class="line">Condition 1: Preheating process is not active ( <em>xProcess</em> = FALSE )</div>
+<div class="line"><br /></div>
+<div class="line">Condition 2: The week clock is not active ( <em>xActive</em> = FALSE )</div>
+<div class="line"><br /></div>
+<div class="line">Condition 3: A valid next switch-on point exists</div>
+<div class="line"><br /></div>
+<div class="line">It ends according to the rules - if the conditions for enabling preheating are fulfilled ( = start of dead time ).</div>
+<div class="line">It ends in any case if the next valid switch-on point is equal to the current time.</div>
+</div>
+</div>
+<div class="section" id="totzeit-bstate-2">
+<h3>Dead time (bState = 2)<a class="headerlink" href="#totzeit-bstate-2" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The dead time is used for preconditioning the heating.</div>
+<div class="line"><br /></div>
+<div class="line">It begins with the regular end of the test period.</div>
+<div class="line"><br /></div>
+<div class="line">It ends according to the rules - if the current room temperature <em>rTi</em> exceeds the room temperature at the beginning of the dead time by the adjustable difference <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rDTDiffTemp</span></code> for a period of at least 120s (= beginning of the heating time).</div>
+<div class="line"><br /></div>
+<div class="line">It ends in any case if the next valid switch-on point is equal to the current time.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="heizzeit-bstate-3">
+<h3>Heating time (bState = 3)<a class="headerlink" href="#heizzeit-bstate-3" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The heating time is used to preheat the zone.</div>
+<div class="line"><br /></div>
+<div class="line">It begins with the regular end of the dead time.</div>
+<div class="line"><br /></div>
+<div class="line">It ends according to rules - if the current room temperature <em>rTI</em> approaches the current room setpoint temperature in comfort mode/day mode <em>rSetTemp</em> permanently for a period of at least 120s except for a difference smaller than the global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rDiffSetTemp</span></code>.</div>
+<div class="line"><br /></div>
+<div class="line">It ends if a falling signal edge is detected at the state of the clock channel of the weekly clock <em>xActive</em>.</div>
+<div class="line"><br /></div>
+<div class="line">It ends if the current heating time exceeds the adjustable maximum value <strong>uiHTMax</strong>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="heizzeitende-bstate-4">
+<h3>Heating time end (bState = 4)<a class="headerlink" href="#heizzeitende-bstate-4" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The end of the heating time serves to complete the successful preheating process. The historical data is updated if the release of the data storage in the historical memory ( <em>xEnAdapt</em> ) is active, provided that no limit values are violated.</div>
+<div class="line"><br /></div>
+<div class="line">It begins with the regular end of the heating period.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="freigabe-xen">
+<h3>Enable <em>xEn</em><a class="headerlink" href="#freigabe-xen" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This input is used for the general enable of the switch-on optimization ( <em>xEn</em> = TRUE ). In the locked state ( <em>xEn</em> = FALSE ) the outputs are defined as follows:</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Output</p>
+</th>
+<th class="head"><p class="first last">State/Value</p>
+</th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>xDaytime</em></td>
+<td>FALSE</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><em>xProcess</em></td>
+<td>FALSE</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em>bState</em></td>
+<td>0</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><em>wError</em></td>
+<td>0</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em>bResult</em></td>
+<td>0</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><em>uiDeadTime</em></td>
+<td>0</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em>uiHeatTime</em></td>
+<td>0</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><em>uiNumber</em></td>
+<td>0</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em>rAverageDiff</em></td>
+<td>0</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">The historical data is also retained in the locked state.</div>
+<div class="line"><br /></div>
+<div class="line">This input can also be used for the connection of sensor faults ( fault - room temperature sensor, fault outdoor temperature sensor ) or for the operation of the zone in the useful time extension.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="freigabe-xenadapt">
+<h3>Release <em>xEnAdapt</em><a class="headerlink" href="#freigabe-xenadapt" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This input is used to release the data storage in the historical memory ( <em>xEnAdapt</em> = TRUE, prerequisite: <em>xEn</em> = TRUE ).</div>
+<div class="line">After each successful preheating process, the relevant parameters are stored and are available again for the next preheating process.</div>
+<div class="line">In the locked state ( <em>xEnAdapt</em> = FALSE ) no data storage takes place.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="freigabe-xresadapt">
+<h3>Release <em>xResAdapt</em><a class="headerlink" href="#freigabe-xresadapt" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This input is used to initialize the historical memory with each rising signal edge ( prerequisite: <em>xEn</em> = TRUE ).</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-2">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Storage</p>
+</th>
+<th class="head"><p class="first last">State/Value</p>
+</th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Heating gradients</p>
+</td>
+<td><strong>uiHGMax</strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">Dead times</p>
+</td>
+<td><strong>uiDTMax</strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><p class="first last">Number of preheating processes</p>
+</td>
+<td>0</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">In addition, the buffer storage for the average absolute room temperature deviation of the last 10 successful preheating processes and the data storage for the current data are reset.</div>
+<div class="line"><br /></div>
+<div class="line">This input can be used in combination with the <em>rAverageDiff</em> output (average absolute room temperature deviation of the last 10 successful preheating processes) to reinitialise the historical and current data in the event of major deviations.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="eingang-rto">
+<h3>Input <em>rTo</em><a class="headerlink" href="#eingang-rto" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This input is used to record the current outdoor temperature.</div>
+<div class="line">It is additionally filtered and limited in time for switch-on optimization ( minimum value = <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTOMin</span></code>, maximum value = <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTOMax</span></code> ).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="eingang-rti">
+<h3>Input <em>rTi</em><a class="headerlink" href="#eingang-rti" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This input is used to record the current room temperature.</div>
+<div class="line">It is additionally filtered and limited in time for switch-on optimization ( minimum value = <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTIMin</span></code>, maximum value = <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTIMax</span></code> ).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="eingang-rsettemp">
+<h3>Input <em>rSetTemp</em><a class="headerlink" href="#eingang-rsettemp" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This input is used to record the current room setpoint temperature for the comfort / day mode.</div>
+<div class="line">Each time the setpoint temperature is changed, it is reset to the basic state ( see Release <em>xEn</em> - locked state ).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ausgang-xdaytime">
+<h3>Output <em>xDaytime</em><a class="headerlink" href="#ausgang-xdaytime" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to enable the comfort/day mode ( Off = FALSE, On = TRUE ) <strong>by the switch-on optimization</strong>.</div>
+<div class="line">It is activated during the transition from the test time to the dead time.</div>
+<div class="line">It is deactivated if the next valid switch-on point is reached.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ausgang-xprocess">
+<h3>Output <em>xProcess</em><a class="headerlink" href="#ausgang-xprocess" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to display the active preheating process ( Off = FALSE, On = TRUE ).</div>
+<div class="line">It is active if the preheating process is in phases 1 - 4 and / or the output <em>xDaytime</em> is active.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ausgang-bstate">
+<h3>Output <em>bState</em><a class="headerlink" href="#ausgang-bstate" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to display the active phase of the preheating process.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-3">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Values</p>
+</th>
+<th class="head"><p class="first last">Stage</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td><p class="first last">Off / Disabled</p>
+</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td><p class="first last">Test time active</p>
+</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td><p class="first last">Dead time active</p>
+</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td><p class="first last">Heating time active</p>
+</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td><p class="first last">Heating time end active</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgang-werror">
+<h3>Output <em>wError</em><a class="headerlink" href="#ausgang-werror" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to display warnings / errors during the last preheating process.</div>
+<div class="line">Each message is assigned a bit ( bit = 0 = no error, bit = 1 = warning / error active ).</div>
+<div class="line">This output is permanently updated.</div>
+<div class="line">The date / current time is also recorded for each change.</div>
+<div class="line">This output is always initialized with 0 ( = no error ) at the beginning of the test time.</div>
+<div class="line">Each time an error occurs, the preheating process is stopped and the &#8216;Off / Deactivated&#8217; phase is initiated.</div>
+<div class="line">Each time a warning occurs, the output <em>wError</em> is updated.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-4">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Bit</th>
+<th class="head"><p class="first last">Cause</p>
+</th>
+<th class="head"><p class="first last">Error type</p>
+</th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td><p class="first last">Maximum heating time exceeded</p>
+</td>
+<td><p class="first last">Error</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td><p class="first last">Limit value violation Heating gradient</p>
+</td>
+<td><p class="first last">Warning</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td><p class="first last">Limit value violation Dead time</p>
+</td>
+<td><p class="first last">Warning</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td><p class="first last">Minimum heating time undercut</p>
+</td>
+<td><p class="first last">Warning</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgang-bresult">
+<h3>Output <em>bResult</em><a class="headerlink" href="#ausgang-bresult" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to display the quality of the last successful preheating process.</div>
+<div class="line">The output is updated as required at the switch-on point ( = transition to comfort / day mode ).</div>
+<div class="line">The absolute amount from the calculation of <em>rSetTemp</em> - <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rDiffSetTemp</span></code> - <em>rTi</em> is used for the valuation.</div>
+<div class="line">This output is always initialized with 0 ( = no result ) at the beginning of the test time.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-5">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Result</p>
+</th>
+<th class="head"><p class="first last">Limit</p>
+</th>
+<th class="head"><em>bResult</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">less than</p>
+</td>
+<td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rLimitResultWell</span></code></td>
+<td>1</td>
+<td><p class="first last">Good preheating process</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">less than</p>
+</td>
+<td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rLimitResultNormal</span></code></td>
+<td>2</td>
+<td><p class="first last">Normal preheating process</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">greater than or equal to</p>
+</td>
+<td><code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rLimitResultNormal</span></code></td>
+<td>3</td>
+<td><p class="first last">Poor preheating process</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="ausgang-xactive">
+<h3>Output <em>xActive</em><a class="headerlink" href="#ausgang-xactive" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to display the status of the clock channel of the weekly clock ( Off = FALSE, On = TRUE ).</div>
+<div class="line">The weekly clock is permanently updated independently of the state of <em>xEn</em> ( = general enable of switch-on optimization ).</div>
+<div class="line">Each time the settings of the weekly clock are changed, the clock is resetted to the basic state ( see Release <em>xEn</em> - Locked state ).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ausgang-uideadtime">
+<h3>Output <em>uiDeadTime</em><a class="headerlink" href="#ausgang-uideadtime" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to display the current dead time duration ( min ).</div>
+<div class="line">This output is always initialized with 0 min at the beginning of the test time.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ausgang-uiheattime">
+<h3>Output <em>uiHeatTime</em><a class="headerlink" href="#ausgang-uiheattime" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to display the current heating time ( min ).</div>
+<div class="line">This output is always initialized with 0 min at the beginning of the test time.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ausgang-uinumber">
+<h3>Output <em>uiNumber</em><a class="headerlink" href="#ausgang-uinumber" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to display the total number of successful preheating processes.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ausgang-raveragediff">
+<h3>Output <em>rAverageDiff</em><a class="headerlink" href="#ausgang-raveragediff" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This output is used to display the average absolute room temperature deviation of the last 10 successful preheating processes.</div>
+<div class="line">This output is always updated after updating the <em>bResult</em> output.</div>
+<div class="line">This output is initialized with 0 K at each rising signal edge at input <em>xResAdapt</em>.</div>
+<div class="line"><br /></div>
+<div class="line">This output can be used in combination with the <em>xResAdapt</em> input to reinitialize the historical data in the event of major deviations.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="vorheizprozess">
+<h3>Step 1: preheating process<a class="headerlink" href="#vorheizprozess" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">After the software download or after each rising signal edge at input <em>xResAdapt</em>, the historical data is re-initialized.</div>
+<div class="line">The dead times are set with the parameter <strong>uiDTMax</strong>, the heating gradients with the parameter <strong>uiHGMax</strong> and the number of successful preheating processes with the value 0.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="parameter-uihgmin">
+<h3>Parameters <strong>uiHGMin</strong><a class="headerlink" href="#parameter-uihgmin" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This parameter is used to define the minimum permissible heating gradient ( min / K ).</div>
+<div class="line">It is used to check whether limit values have been exceeded. In the event of a limit value violation, the historical data is not updated.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="parameter-uihgmax">
+<h3>Parameters <strong>uiHGMax</strong><a class="headerlink" href="#parameter-uihgmax" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This parameter is used to define the maximum permissible heating gradient ( min / K ).</div>
+<div class="line">It is used to check whether limit values have been exceeded. In the event of a limit value violation, the historical data is not updated.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="parameter-uidtmin">
+<h3>Parameters <strong>uiDTMin</strong><a class="headerlink" href="#parameter-uidtmin" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This parameter is used to define the minimum permissible dead time ( min ).</div>
+<div class="line">It is used to check whether limit values have been exceeded. In the event of a limit value violation, the historical data is not updated.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="parameter-uidtmax">
+<h3>Parameter <strong>uiDTMax</strong><a class="headerlink" href="#parameter-uidtmax" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This parameter is used to define the maximum permissible dead time ( min ).</div>
+<div class="line">It is used to check whether limit values have been exceeded. In the event of a limit value violation, the historical data is not updated.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="parameter-uihtmin">
+<h3>Parameter <strong>uiHTMin</strong><a class="headerlink" href="#parameter-uihtmin" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This parameter is used to define the minimum permissible heating time ( min ).</div>
+<div class="line">It is used to check whether limit values have been exceeded.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="parameter-uihtmax">
+<h3>Parameter <strong>uiHTMax</strong><a class="headerlink" href="#parameter-uihtmax" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This parameter is used to define the maximum permissible heating time ( min ).</div>
+<div class="line">It is used to check whether limit values have been exceeded.</div>
+<div class="line">Each time a limit value violation occurs, the preheating process is stopped and the &#8216;Off / Deactivated&#8217; phase is initiated.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="parameter-todmonfrom-snotice">
+<h3>Parameter <strong>todMonFrom**</strong> - <strong>sNotice</strong><a class="headerlink" href="#parameter-todmonfrom-snotice" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This parameter is used to set the weekly clock. The general functionality is described in detail in the description of the function block &#8216;Clock7d1Ch&#8217;.</div>
+<div class="line"><br /></div>
+</div>
+<p><a class="reference internal" href="../Clock/Clock7d1Ch.html#clock7d1ch"><span class="std std-ref">Clock7d1Ch</span></a></p>
+</div>
+<div class="section" id="globale-variable-gv-optstartheat-rtomin">
+<h3>Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTOMin</span></code><a class="headerlink" href="#globale-variable-gv-optstartheat-rtomin" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This global variable is used to define the minimum permissible outdoor temperature ( °C ).</div>
+<div class="line">It is used for checking and correcting violations of limit values.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="globale-variable-gv-optstartheat-rtomax">
+<h3>Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTOMax</span></code><a class="headerlink" href="#globale-variable-gv-optstartheat-rtomax" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This global variable is used to define the maximum permissible outdoor temperature ( °C ).</div>
+<div class="line">It is used for checking and correcting violations of limit values.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="globale-variable-gv-optstartheat-rtimin">
+<h3>Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTIMin</span></code><a class="headerlink" href="#globale-variable-gv-optstartheat-rtimin" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This global variable is used to define the minimum permissible room temperature ( °C ).</div>
+<div class="line">It is used for checking and correcting violations of limit values.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="globale-variable-gv-optstartheat-rtimax">
+<h3>Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rTIMax</span></code><a class="headerlink" href="#globale-variable-gv-optstartheat-rtimax" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This global variable is used to define the maximum permissible room temperature ( °C ).</div>
+<div class="line">It is used for checking and correcting violations of limit values.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="globale-variable-gv-optstartheat-rdiffsettemp">
+<h3>Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rDiffSetTemp</span></code><a class="headerlink" href="#globale-variable-gv-optstartheat-rdiffsettemp" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This global variable is used to determine the deviation from the room target temperature at the end of the preheating process ( K ).</div>
+<div class="line">It determines to what extent the room temperature must approach the setpoint temperature in day/comfort mode in order to terminate the active preheating process.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="globale-variable-gv-optstartheat-rdtdifftemp">
+<h3>Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rDTDiffTemp</span></code><a class="headerlink" href="#globale-variable-gv-optstartheat-rdtdifftemp" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This global variable is used to define the increase of the room temperature to detect the end of the dead time ( K ).</div>
+<div class="line">It determines how far the room temperature must rise permanently during the dead time in order to initiate the heating time.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="globale-variable-gv-optstartheat-uiphmaxtime">
+<h3>Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.uiPHMaxTime</span></code><a class="headerlink" href="#globale-variable-gv-optstartheat-uiphmaxtime" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This global variable is used to determine the maximum duration of the preheating process.</div>
+<div class="line">It is used for internal calculations.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="globale-variable-gv-optstartheat-rlimitresultwell">
+<h3>Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rLimitResultWell</span></code><a class="headerlink" href="#globale-variable-gv-optstartheat-rlimitresultwell" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This global variable is used to define the limit value &#8216;Good preheating process&#8217; for the Display of the quality of <em>bResult</em>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="globale-variable-gv-optstartheat-rlimitresultnormal">
+<h3>Global variable <code class="docutils literal"><span class="pre">GV_OPTSTARTHEAT.rLimitResultNormal</span></code><a class="headerlink" href="#globale-variable-gv-optstartheat-rlimitresultnormal" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This global variable is used to define the &#8216;Normal preheating process&#8217; limit value for the display of the quality of <em>bResult</em>.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="typische-anwendung">
+<h3>Typical application<a class="headerlink" href="#typische-anwendung" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block can be used as follows:</div>
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/OptStartHeat_Bild_2.PNG" src="../../../_images/OptStartHeat_Bild_2.PNG" />
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="13%" />
+<col width="7%" />
+<col width="17%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="6">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Enable ( Off = FALSE, On = TRUE ), FALSE in case of extension of useful time, sensor fault, etc., please connect externally</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xEnAdapt</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Enable - Adaption ( Off = FALSE, On = TRUE )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xResAdapt</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Reset - Adaption ( Off = FALSE, On = TRUE )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rTo</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Current outdoor temperature</p>
+</td>
+</tr>
+<tr class="row-even"><td>rTi</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Current room temperature</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rSetTemp</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Current setpoint temperature in daytime / comfort mode</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="10">Output</td>
+<td>xDaytime</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Release of the comfort / day mode ( Off = FALSE, On = TRUE )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xProcess</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Enable - Preheating process ( Off = FALSE, On = TRUE )</p>
+</td>
+</tr>
+<tr class="row-even"><td>bState</td>
+<td>BYTE</td>
+<td>0</td>
+<td><p class="first last">Phase of preheating process ( 0=Off/Decativated, 1 = Test time, 2 = Dead time, 3 = Heating time, 4 = End of heating time )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>wError</td>
+<td>WORD</td>
+<td>0</td>
+<td><p class="first last">Error state of the last preheating process</p>
+</td>
+</tr>
+<tr class="row-even"><td>bResult</td>
+<td>BYTE</td>
+<td>0</td>
+<td><p class="first last">Quality of the last preheating process ( 0 = invalid, 1 = good, 2 = normal, 3 = poor )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xActive</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Condition of the clock channel of the weekly clock</p>
+</td>
+</tr>
+<tr class="row-even"><td>uiDeadTime</td>
+<td>UINT</td>
+<td>0</td>
+<td><p class="first last">Display of the current dead time duration ( min )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>uiHeatTime</td>
+<td>UINT</td>
+<td>0</td>
+<td><p class="first last">Display of the current heating time duration ( min )</p>
+</td>
+</tr>
+<tr class="row-even"><td>uiNumber</td>
+<td>UINT</td>
+<td>0</td>
+<td><p class="first last">Display of the total number of successful preheating processes</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rAverageDiff</td>
+<td>REAL</td>
+<td>0.0</td>
+<td><p class="first last">Average absolute room temperature deviation of the last 10 successful preheating processes</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="28">Input</td>
+<td>uiHGMin</td>
+<td>UINT</td>
+<td>30</td>
+<td><p class="first last">Minimum value - heating gradient ( min/K )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>uiHGMax</td>
+<td>UINT</td>
+<td>240</td>
+<td><p class="first last">Maximum value - heating gradient ( min/K )</p>
+</td>
+</tr>
+<tr class="row-even"><td>uiDTMin</td>
+<td>UINT</td>
+<td>10</td>
+<td><p class="first last">Minimum value - Dead time ( min )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>uiDTMax</td>
+<td>UINT</td>
+<td>180</td>
+<td><p class="first last">Maximum value - Dead time ( min )</p>
+</td>
+</tr>
+<tr class="row-even"><td>uiHTMin</td>
+<td>UINT</td>
+<td>15</td>
+<td><p class="first last">Minimum value - heating time ( min )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>uiHTMax</td>
+<td>UINT</td>
+<td>600</td>
+<td><p class="first last">Maximum value - heating time ( min )</p>
+</td>
+</tr>
+<tr class="row-even"><td>todMonFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on point in time - Monday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todMonTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#18:0</td>
+<td><p class="first last">Switch-off point in time - Monday</p>
+</td>
+</tr>
+<tr class="row-even"><td>xMonMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Monday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todTueFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on point in time - Tuesday</p>
+</td>
+</tr>
+<tr class="row-even"><td>todTueTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#18:0</td>
+<td><p class="first last">Switch-off point in time - Tuesday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xTueMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Tuesday</p>
+</td>
+</tr>
+<tr class="row-even"><td>todWedFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on point in time - Wednesday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todWedTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#18:0</td>
+<td><p class="first last">Switch-off point in time - Wednesday</p>
+</td>
+</tr>
+<tr class="row-even"><td>xWedMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Wednesday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todThuFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on point in time - Thursday</p>
+</td>
+</tr>
+<tr class="row-even"><td>todThuTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#18:0</td>
+<td><p class="first last">Switch-off point in time - Thursday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xThuMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Friday</p>
+</td>
+</tr>
+<tr class="row-even"><td>todFriFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on point in time - Friday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todFriTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#18:0</td>
+<td><p class="first last">Switch-off point in time - Friday</p>
+</td>
+</tr>
+<tr class="row-even"><td>xFriMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Friday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todSatFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on point in time 1 - Saturday</p>
+</td>
+</tr>
+<tr class="row-even"><td>todSatTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#18:0</td>
+<td><p class="first last">Switch-off point in time - Saturday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xSatMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Saturday</p>
+</td>
+</tr>
+<tr class="row-even"><td>todSunFrom</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#7:0</td>
+<td><p class="first last">Switch-on point in time - Sunnday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>todSunTo</td>
+<td>TOD</td>
+<td>TIME_OF_DAY#18:0</td>
+<td><p class="first last">Switch-off point in time - Sunnday</p>
+</td>
+</tr>
+<tr class="row-even"><td>xSunMode</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Mode - Switching periods - Sunday</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sNotice</td>
+<td>STRING</td>
+<td>&#8216;Notice&#8217;</td>
+<td><p class="first last">Designation - Time switch</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/FB_Reinit.html">OptStartHeat.FB_Reinit (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mCalcAbsMin.html">OptStartHeat.mCalcAbsMin (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mCalcAverageDiff.html">OptStartHeat.mCalcAverageDiff (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mCalcEspAbsMin.html">OptStartHeat.mCalcEspAbsMin (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mCalcResults.html">OptStartHeat.mCalcResults (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mCheckClock.html">OptStartHeat.mCheckClock (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mInitAverageDiff.html">OptStartHeat.mInitAverageDiff (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mInitCurrentData.html">OptStartHeat.mInitCurrentData (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mInitHistoricalData.html">OptStartHeat.mInitHistoricalData (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mReset.html">OptStartHeat.mReset (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mResetAll.html">OptStartHeat.mResetAll (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-OptStartHeat/mSpClassification.html">OptStartHeat.mSpClassification (METH)</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pou-OptStartHeat/FB_Reinit.html" class="btn btn-neutral float-right" title="OptStartHeat.FB_Reinit (METH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FireDamperMot.html" class="btn btn-neutral float-left" title="FireDamperMot (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

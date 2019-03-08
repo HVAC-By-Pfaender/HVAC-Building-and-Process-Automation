@@ -1,0 +1,64 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fun-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Numeric.MuxBin2Fun`:
+
+
+.. index::
+   single: MuxBin2Fun
+
+.. _`MuxBin2Fun`:
+
+MuxBin2Fun (FUN)
+----------------
+
+FUNCTION MuxBin2Fun : REAL
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Multiplexer für nummerische Eingangsgrössen mit binärer Auswahl ( 2 binäre Eingänge )
+     |
+     | Typische Anwendung: Umschaltung von Temperaturfühlern
+
+*********************
+Funktionsbeschreibung
+*********************
+
+| Diese Funktion liefert die durch die binären Eingänge *xEn1* ( FALSE = nicht aktiv, TRUE = aktiv ) bzw. *xEn2* ( FALSE = nicht aktiv, TRUE = aktiv ) ausgewählte nummerische Eingangsgrösse ( *rValue1* bzw. *rValue2* ) im Format REAL zurück. Der Eingang *xEn1* hat stets die höchste Priorität. Ist kein Eingang aktiv, so wird der Wert 0.0 zurück gegeben.
+
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+------------+------+---------------------------------------------------------------------+
+    | Scope  | Name       | Type | Comment                                                             |
+    +========+============+======+=====================================================================+
+    | Return | MuxBin2Fun | REAL |                                                                     |
+    +--------+------------+------+---------------------------------------------------------------------+
+    | Input  | xEn1       | BOOL | Freigabe / Sperrung *rValue1* ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | xEn2       | BOOL | Freigabe / Sperrung *rValue2* ( FALSE = nicht aktiv, TRUE = aktiv ) |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | rValue1    | REAL | Nummerische Eingangsgrösse 1                                        |
+    +        +------------+------+---------------------------------------------------------------------+
+    |        | rValue2    | REAL | Nummerische Eingangsgrösse 2                                        |
+    +--------+------------+------+---------------------------------------------------------------------+
+
+
+.. last line of fun-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

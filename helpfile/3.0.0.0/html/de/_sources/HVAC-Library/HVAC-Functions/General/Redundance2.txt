@@ -1,0 +1,463 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-General.Redundance2`:
+
+
+.. index::
+   single: Redundance2
+
+.. _`Redundance2`:
+
+Redundance2 (FB)
+----------------
+
+FUNCTION_BLOCK Redundance2
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Redundante Steuerung von zwei gleichartigen Geräten
+     | Einflussfaktoren: Anforderungen, Betriebsstunden, Betriebs- und Störzustände
+     | Typische Anwendung: Festlegung der Führungs- und Folgepumpe
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Redundance2_FB.png
+
+**************
+Schnittstellen
+**************
+
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xEnOne*
+      - BOOL
+      -
+      -
+      - Anforderung - Führungsgerät
+    * - *xEnTwo*
+      - BOOL
+      -
+      -
+      - Anforderung - Führungs- und Folgegerät
+    * - *xFb1*
+      - BOOL
+      -
+      -
+      - Betrieb - Gerät 1
+    * - *xFb2*
+      - BOOL
+      -
+      -
+      - Betrieb - Gerät 2
+    * - *xAlarm1*
+      - BOOL
+      -
+      -
+      - Störung - Gerät 1
+    * - *xAlarm2*
+      - BOOL
+      -
+      -
+      - Störung - Gerät 2
+    * - *uiOperatingHours1*
+      - UDINT
+      -
+      -
+      - Betriebsstunden - Gerät 1
+    * - *uiOperatingHours2*
+      - UDINT
+      -
+      -
+      - Betriebsstunden - Gerät 2
+    * - *xUpdate*
+      - BOOL
+      -
+      -
+      - Eingang - Folgeschaltung nach Betriebsstunden
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *iCurrentSequence*
+      - INT
+      -
+      -
+      - Aktuelle Gerätefolge
+    * - *xCmd1*
+      - BOOL
+      -
+      -
+      - Freigabe - Gerät 1
+    * - *xCmd2*
+      - BOOL
+      -
+      -
+      - Freigabe - Gerät 2
+    * - *xErr*
+      - BOOL
+      -
+      -
+      - Ausgang - Störung
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **eModeRedundance**
+      - eOpModeRedundance
+      - eOpModeRedundance.Auto, eOpModeRedundance.ForceComponent1, eOpModeRedundance.ForceComponent2
+      - eOpModeRedundance.Auto
+      - Betriebsart der Sequenzfestlegung
+    * - **xConOperatingHours**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe - Folgeschaltung nach Betriebsstunden
+    * - **xEnFb**
+      - BOOL
+      -
+      - TRUE
+      - Freigabe - Verwendung der Betriebsmeldungen
+    * - **wTolerance**
+      - WORD
+      -
+      - 100
+      - Grenzwert - Betriebsstundendifferenz
+
+**********************
+Funktionsbeschreibung
+**********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur redundanten Steuerung von zwei gleichartigen Geräten in Abhängigkeit von den Einflußgrößen
+  Anforderungen ( *xEnOne* und *xEnTwo* ), Betriebstunden ( *uiOperatingHours1* und *uiOperatingHours2* ), Betriebszuständen ( *xFb1* und *xFb2* ),
+  Störzuständen ( *xAlarm1* und *xAlarm2* ) und der Betriebsart für die Sequenzfestlegung ( **eModeRedundance** ).
+| Die Freigabe des Führungs- und bei Bedarf des Folgegerätes wird intern festgelegt und unter Berücksichtigung der aktuellen Folge
+  *iCurrentSequence* auf die Geräteausgänge *xCmd1* bzw. *xCmd2* übertragen.
+|
+
+Anforderungen *xEnOne* und *xEnTwo*
+===================================
+| Sie dienen zur Festlegung, ob nur das Führungsgerät oder das Führungs- und das Folgegerät angefordert werden sollen.
+|
+
+ .. list-table::
+    :name: Anforderungen
+    :widths: 300 300 300 300 900
+    :header-rows: 1
+
+    * - *xEnOne*
+      - *xEnTwo*
+      - Führungsgerät
+      - Folgegerät
+      - Hinweis
+    * - FALSE
+      - FALSE
+      - FALSE
+      - FALSE
+      - Keine Anforderung
+    * - TRUE
+      - FALSE
+      - TRUE
+      - FALSE
+      - Anforderung - Führungsgerät
+    * - X
+      - TRUE
+      - TRUE
+      - TRUE
+      - Anforderung - Führungs- und Folgegerät
+
+| Legende: X = Unbestimmt
+
+Ausgang Störung *xErr*
+======================
+| Er zeigt eine Diskrepanz zwischen den Anforderungen und den Störzuständen der Geräte an.
+| In der Funktionstabelle werden die Konstellationen beschrieben, die den Ausgang *xErr* ( = TRUE ) aktivieren, d.h eine Störung anzeigen.
+| In allen übrigen Fällen ist der Ausgang *xErr* nicht aktiv ( = FALSE ).
+
+ .. list-table::
+    :name: Störausgang
+    :widths: 300 300 300 300 300 900
+    :header-rows: 1
+
+    * - *xEnOne*
+      - *xEnTwo*
+      - *xAlarm1*
+      - *xAlarm2*
+      - *xErr*
+      - Hinweis
+    * - TRUE
+      - X
+      - TRUE
+      - TRUE
+      - TRUE
+      - Anforderung - Führungsgerät und beide Geräte gestört
+    * - X
+      - TRUE
+      - TRUE
+      - X
+      - TRUE
+      - Anforderung - Führungs- und Folgegerät und mindestens ein Gerät gestört
+    * - X
+      - TRUE
+      - X
+      - TRUE
+      - TRUE
+      - Anforderung - Führungs- und Folgegerät und mindestens ein Gerät gestört
+
+| Legende: X = Unbestimmt
+
+Ausgang *iCurrentSequence*
+==========================
+| Er zeigt stets die aktuelle Folge der beiden Geräte an.
+| Die erste Ziffer zeigt stets die Gerätenummer des Führungsgerätes an ( Beispiel: *iCurrentSequence* = 1X ... Führungsgerät = Gerät 1 )
+| Die zweite Ziffer zeigt stets die Gerätenummer des Folgegeräts an.   ( Beispiel: *iCurrentSequence* = X2 ... Folgegerät = Gerät 2 )
+
+Sollwert / Parameter **xConOperatingHours**
+===========================================
+| Im Zustand TRUE wird bei jeder Abarbeitung des Funktionsblocks die Folgeschaltung in Abhängigkeit von den Betriebsstunden und Betriebsmeldungen
+  ( bei **xEnFb** = TRUE ) der Geräte 1 und 2 ausgelöst.
+| Im Zustand FALSE kann die Folgeschaltung nur noch durch eine ansteigende Flanke am Eingang *xUpdate* ausgelöst werden.
+|
+
+Sollwert / Parameter **xEnFb**
+==============================
+| Im Zustand TRUE werden in der Folgeschaltung die Betriebszustände der Geräte 1 und 2 ausgewertet und berücksichtigt.
+| Im Zustand FALSE werden in der Folgeschaltung die Geräteausgänge der Geräte 1 und 2 ausgewertet und berücksichtigt.
+
+Sollwert / Parameter **wTolerance**
+===================================
+| Dieser Sollwert bestimmt die maximale Betriebsstundendifferenz vor einer Umschaltung des Führungs- und des Folgegeräts aufgrund der Betriebsstunden.
+|
+
+Sollwert / Parameter **eModeRedundance**
+========================================
+| Dieser Sollwert legt die Betriebsart der Sequenzfestlegung fest. Im Automatikbetrieb erfolgt die Festlegung der Sequenz automatisch.
+| Die Zwangsfestlegung der Sequenz in den Betriebsarten ForceComponent1 bzw. ForceComponent2 erfolgt über eine gezielte Beeinflussung
+  der internen Stände der Betriebsstundenzähler bzw. des Sollwerts / Parameters **wTolerance**.
+| Die Sequenzumschaltung im Störungsfall ist daher nach wie vor gegeben.
+|
+
+ .. list-table::
+    :name: Betriebsart Sequenzfestlegung
+    :widths: 300 300 300 900
+    :header-rows: 1
+
+    * - **eModeRedundance**
+      - Führungsgerät
+      - Folgegerät
+      - Hinweis
+    * - eOpModeRedundance.Auto
+      - Automatische Festlegung
+      - Automatische Festlegung
+      - Automatische Sequenzfestlegung
+    * - eOpModeRedundance.ForceComponent1
+      - Gerät 1
+      - Gerät 2
+      - Erzwungene Sequenz Gerät 1 - 2
+    * - eOpModeRedundance.ForceComponent2
+      - Gerät 2
+      - Gerät 1
+      - Erzwungene Sequenz Gerät 2 - 1
+
+Bestimmung des Führungs- und des Folgegeräts
+============================================
+
+ Umschaltung mit hoher Priorität in Abhängigkeit von den Störzuständen der Geräte 1 und 2
+
+
+ .. list-table::
+    :name: Führungs-/Folgegerät
+    :widths: 300 300 300 300 900
+    :header-rows: 1
+
+    * - *xAlarm1*
+      - *xAlarm2*
+      - Führungsgerät
+      - Folgegerät
+      - Hinweis
+    * - FALSE
+      - FALSE
+      - nicht beeinflusst
+      - nicht beeinflusst
+      - Beide Geräte ohne Störung
+    * - TRUE
+      - FALSE
+      - Gerät 2
+      - Gerät 1
+      - Gerät 1 gestört
+    * - X
+      - TRUE
+      - Gerät 1
+      - Gerät 2
+      - Gerät 2 gestört
+
+| Legende: X = Unbestimmt
+
+
+ Umschaltung mit niedriger Priorität in Abhängigkeit von den Betriebsstunden, Betriebsmeldungen ( **xEnFb** = TRUE )
+ und Freigabeausgänge ( **xEnFb** = FALSE ) der Geräte 1 und 2
+
+
+ Eine Neubewertung und -festlegung mit niedriger Priorität kann dabei jeweils wie folgt ausgelöst werden:
+
+ **xConOperatingHours** = TRUE und / oder ansteigende Flanke am Eingang *xUpdate*
+
+
+ .. list-table::
+    :name: Umschaltung - Zusammenfassung
+    :widths: 300 600 1200 1200
+    :header-rows: 1
+
+    * - **xConOperatingHours**
+      - *xUpdate*
+      - Bedingungen
+      - Führungsgerät
+    * - FALSE
+      - FALSE, TRUE, H/L
+      -
+      - keine Neubewertung
+    * - TRUE
+      - FALSE, TRUE, H/L
+      - gleiche Betriebsmeldungen ( **xEnFb** = TRUE ) oder gleiche Freigabeausgänge ( **xEnFb** = FALSE ) der Geräte
+      - Gerät mit geringerer Betriebsstundenanzahl
+    * - TRUE
+      - FALSE, TRUE, H/L
+      - Ein Gerät in Betrieb ( **xEnFb** = TRUE ) oder ein Gerät freigegeben ( **xEnFb** = FALSE )
+      - Wechsel zum Gerät mit geringerer Betriebsstundenanzahl, falls Betriebsstundendifferenz > **wTolerance**
+    * - FALSE
+      - L/H
+      - *uiOperatingHours1* = *uiOperatingHours2* = 0 ( keine Betriebsstunden vorhanden )
+      - Wechsel des Führungs- mit dem Folgegerät
+    * - FALSE
+      - L/H
+      - *uiOperatingHours1* oder *uiOperatingHours2* > 0
+      - Gerät mit geringerer Betriebsstundenanzahl
+
+| Legende: L/H ... ansteigende Flanke, H/L ... abfallende Flanke
+
+
+Geräteausgänge *xCmd1* und *xCmd2*
+==================================
+
+Die Geräteausgänge werden abschließend wie folgt festgelegt:
+
+Führungsgerät = Gerät 1
+
+*xCmd1* = TRUE: Das Führungsgerät ist angefordert und mindestens ein Gerät ist angefordert und das Gerät 1 ist nicht gestört
+*xCmd1* = FALSE: In allen übrigen Fällen
+
+*xCmd2* = TRUE: Das Folgegerät ist angefordert und mindestens ein Gerät ist angefordert und das Gerät 2 ist nicht gestört
+*xCmd2* = FALSE: In allen übrigen Fällen
+
+Führungsgerät = Gerät 2
+
+*xCmd1* = TRUE: Das Folgegerät ist angefordert und mindestens ein Gerät ist angefordert und das Gerät 1 ist nicht gestört
+*xCmd1* = FALSE:    In allen übrigen Fällen
+
+*xCmd2* = TRUE: Das Führungsgerät ist angefordert und mindestens ein Gerät ist angefordert und das Gerät 2 ist nicht gestört
+*xCmd2* = FALSE:    In allen übrigen Fällen
+
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    | Scope  | Name               | Type                  | Initial                | Comment                                                     |
+    +========+====================+=======================+========================+=============================================================+
+    | Input  | xEnOne             | BOOL                  |                        | Anforderung - Führungsgerät                                 |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xEnTwo             | BOOL                  |                        | Anforderung - Führungs- / Folgegerät                        |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xFb1               | BOOL                  |                        | Betrieb - Gerät 1                                           |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xFb2               | BOOL                  |                        | Betrieb - Gerät 2                                           |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarm1            | BOOL                  |                        | Störung - Gerät 1                                           |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xAlarm2            | BOOL                  |                        | Störung - Gerät 2                                           |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | uiOperatingHours1  | UDINT                 |                        | Betriebsstunden - Gerät 1                                   |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | uiOperatingHours2  | UDINT                 |                        | Betriebsstunden - Gerät 2                                   |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xUpdate            | BOOL                  |                        | Vergleich der Betriebsstunden bei Flanke                    |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | eModeRedundance    | |ioeOpModeRedundance| | eOpModeRedundance.Auto |                                                             |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xConOperatingHours | BOOL                  | TRUE                   | Betriebsart der Sequenzfestlegung                           |
+    |        |                    |                       |                        | | FALSE = Freigabe Folgeschaltung nur durch Eingang xUpdate |
+    |        |                    |                       |                        | | TRUE = Folgeschaltung automatisch nach Betriebsstunden    |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xEnFb              | BOOL                  | TRUE                   | | FALSE = Umschaltung nach Freigabe (xCmd1 und Cmd2)        |
+    |        |                    |                       |                        | | TRUE = Umschaltung nach Betriebsmeldung (xFb1 und xFb2)   |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | wTolerance         | WORD                  | 100                    | Grenzwert - Betriebsstundendifferenz für direkten           |
+    |        |                    |                       |                        | Folgewechsel wenn nur ein Gerät in Betrieb ist              |
+    +--------+--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    | Output | iCurrentSequence   | INT                   |                        | Aktuelle Gerätefolge                                        |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xCmd1              | BOOL                  |                        | Freigabe - Gerät 1                                          |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xCmd2              | BOOL                  |                        | Freigabe - Gerät 2                                          |
+    +        +--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+    |        | xErr               | BOOL                  |                        | Ausgang - Störung                                           |
+    +--------+--------------------+-----------------------+------------------------+-------------------------------------------------------------+
+
+.. |ioeOpModeRedundance| replace:: :ref:`eOpModeRedundance<eOpModeRedundance>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

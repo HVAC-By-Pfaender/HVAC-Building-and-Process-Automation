@@ -1,0 +1,48 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of enum-object.rst template
+.. _`.fld-HVAC Library.fld-Enums.eManBin`:
+
+
+.. Index::
+   single: eManBin
+
+.. _`eManBin`:
+
+eManBin (ENUM)
+--------------
+
+TYPE eManBin :
+
+
+
+.. todo:: Please add documentation for enum: eManBin
+
+
+
+
+
+InOut:
+    +-----------------------+---------+----------+
+    | Name                  | Initial | Comment  |
+    +=======================+=========+==========+
+    | .. _`eManBin.Auto`:   | 0       | Auto     |
+    |                       |         |          |
+    | Auto                  |         |          |
+    +-----------------------+---------+----------+
+    | .. _`eManBin.ManOff`: | 1       | Hand Aus |
+    |                       |         |          |
+    | ManOff                |         |          |
+    +-----------------------+---------+----------+
+    | .. _`eManBin.ManOn`:  | 2       | Hand Ein |
+    |                       |         |          |
+    | ManOn                 |         |          |
+    +-----------------------+---------+----------+
+
+
+.. last line of enum-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,131 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.CoolOutProtection`:
+
+
+.. index::
+   single: CoolOutProtection
+
+.. _`CoolOutProtection`:
+
+CoolOutProtection (FB)
+----------------------
+
+FUNCTION_BLOCK CoolOutProtection
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Aktivierung eines Auskühlschutzbetriebs mit einstellbarer Mindestbetriebsdauer ( Regelgröße: Raumtemperatur )
+     |
+     | Typische Anwendung: Aktivierung des Auskühlschutzbetriebs im Ruhebetrieb einer Lüftungsanlage
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/CoolOutProtection_FB.png
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein steuert die Aktivierung des Auskühlschutzbetriebs ( *xEn* = TRUE ) mit einer einstellbaren Mindestbetriebsdauer **udiMinTime**
+| durch die Vergleich der Raumtemperatur *rRoomTemp* mit dem Schwellwert für den Auskühlschutzbetrieb *rSetPtTempCoolOut*.
+| Die Mindestbetriebsdauer wird immer dann aktiviert, falls die Raumtemperatur *rRoomTemp* den Schwellwert *rSetPtTempCoolOut* um mindestens 0.4K unterschreitet.
+| Am Ausgang *tOffDelay** wird während der Mindestbetriebsdauer die bereits vergangene Mindestbetriebszeit im Bereich 0 - *udiMinTime* dargestellt.
+
+Freigabe / Sperrung des Auskühlschutzbetriebs *xEn*
+===================================================
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 500 500 300 900
+    :header-rows: 1
+
+    * - *xReqAHU*
+      - *rRoomTemp*
+      - Mindestbetriebsdauer aktiv
+      - *xEn*
+      - Hinweise
+    * - TRUE
+      - X
+      - X
+      - FALSE
+      - Auskühlschutzbetrieb über Lüftungsanlage gesperrt
+    * - FALSE
+      - > *rSetPtTempCoolOut* + 0.4
+      - FALSE
+      - FALSE
+      - Auskühlschutzbetrieb über Raumtemperatur gesperrt
+    * - FALSE
+      - < *rSetPtTempCoolOut* - 0.4
+      - FALSE
+      - TRUE
+      - Auskühlschutzbetrieb über Raumtemperatur freigegeben
+    * - FALSE
+      - X
+      - TRUE
+      - TRUE
+      - Auskühlschutzbetrieb über Mindestbetriebszeit freigegeben
+    * - FALSE
+      - < *rSetPtTempCoolOut* - 0.4
+      - TRUE
+      - TRUE
+      - Auskühlschutzbetrieb über Raumtemperatur und Mindestbetriebszeit freigegeben
+
+| Legende: X = beliebig
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------------+-----------+--------------+--------------------------------------------------------------+
+    | Scope  | Name              | Type      | Initial      | Comment                                                      |
+    +========+===================+===========+==============+==============================================================+
+    | Input  | rSetPtTempCoolOut | REAL      |              | Raumsolltemperatur für den Auskühlschutz in °C               |
+    +        +-------------------+-----------+--------------+--------------------------------------------------------------+
+    |        | rRoomTemp         | REAL      |              | Raumtemperatur in °C                                         |
+    +        +-------------------+-----------+--------------+--------------------------------------------------------------+
+    |        | xReqAHU           | BOOL      |              | Freigabe / Sperrung der Lüftungsanlage ( FALSE = Sperrung,   |
+    |        |                   |           |              | TRUE = Freigabe )                                            |
+    +--------+-------------------+-----------+--------------+--------------------------------------------------------------+
+    | Output | xEn               | BOOL      |              | Freigabe / Sperrung des Auskühlschutzbetriebs ( FALSE =      |
+    |        |                   |           |              | Sperrung, TRUE = Freigabe )                                  |
+    +        +-------------------+-----------+--------------+--------------------------------------------------------------+
+    |        | tOffDelay         | TIME      |              | Restzeit der Mindestbetriebszeit                             |
+    +--------+-------------------+-----------+--------------+--------------------------------------------------------------+
+    | Input  | eMinTimeBase      | |ioeTime| | eTime.Minute | Skalierung der Mindestbetriebszeit ( eTime.Second,           |
+    |        |                   |           |              | eTime.Minute, eTime.Hour )                                   |
+    +        +-------------------+-----------+--------------+--------------------------------------------------------------+
+    |        | udiMinTime        | UDINT     | 30           | Mindestbetriebszeit des Auskühlschutzbetriebs ( 0 - 3600.0 s |
+    |        |                   |           |              | )                                                            |
+    +--------+-------------------+-----------+--------------+--------------------------------------------------------------+
+
+.. |ioeTime| replace:: :ref:`eTime<eTime>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

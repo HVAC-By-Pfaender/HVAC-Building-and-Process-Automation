@@ -1,0 +1,192 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Alarming.AlarmCounter`:
+
+
+.. index::
+   single: AlarmCounter
+
+.. _`AlarmCounter`:
+
+AlarmCounter (FB)
+-----------------
+
+FUNCTION_BLOCK AlarmCounter
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Auslesen der aktiven Alarme aus einer vorgegebenen Alarmgruppe oder einer Alarmklasse.
+     |
+     | Typische Anwendung: Anzeige der Anzahl von aktiven Alarme.
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/AlarmCounter_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *sFilterByAlarmGroup*
+      - STRING
+      -
+      -
+      - Anzahl aktiver Alarme nur nach angegebener Alarm-Gruppe filtern. (Leer = Alle Gruppen)
+    * - *sFilterByAlarmClass*
+      - STRING
+      -
+      -
+      - Anzahl aktiver Alarme nur nach angegebener Alarm-Klasse filtern. (Leer = Alle Klassen)
+    * - *xRetryRegistration*
+      - BOOL
+      -
+      -
+      - Registrierung des Alarm-Manager-Clients erneut versuchen
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *uiTotalActiveAlarms*
+      - UINT
+      -
+      -
+      - Anzahl aller aktiven Alarme ohne Filterkriterien
+    * - *uiActiveAlarms*
+      - UINT
+      -
+      -
+      - Anzahl aktiver Alarme im Zustand "Alarmbedingung ist wahr"
+    * - *uiActiveACK*
+      - UINT
+      -
+      -
+      - Anzahl aktiver Alarme im Zustand "Warten auf quittieren"
+    * - *uiWaitingForConfirmation*
+      - UINT
+      -
+      -
+      - Aktueller Status
+    * - *eAlarmCounterState*
+      - eAlmAlarmCounterStates
+      -
+      -
+      - Anzahl aktiver Alarme im Zustand "Warten auf Bestätigung"
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **usiMaxFailedRegistrations**
+      - USINT
+      -
+      - 5
+      - Maximale Anzahl der Fehlversuche der Client-Registrierung für den Alarmzähler
+
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zum Auslesen der Anzahl aktiver Alarme in unterschiedlichen Zuständen.
+| Der Alarmzähler kann gefiltert werden nach einer Alarmgruppe oder einer Alarmklasse, so wie in gemeinsamer Kombination dieser beiden Optionen.
+| Wird kein Filter der verfügbaren Filteroptionen angegeben, werden alle Alarme der jeweiligen Option beim Zähler beachtet.
+|
+|
+| Beispielkonfiguration 1:
+| - Die beiden Eingänge *sFilterByAlarmGroup* und *sFilterByAlarmClass* werden nicht angegeben.
+|
+| Auswirkung der Beispielkonfiguration 1:
+| - Alle Alarme werden unabhängig von der Alarmklasse und Alarmgruppe beachtet.
+|
+| Beispielkonfiguration 2:
+| - Der Eingang *sFilterAlarmClass* wird mit dem STRING "Alarm" belegt und der Eingang *sFilterByAlarmGroup* bleibt unbelegt.
+|
+| Auswirkung der Beispielkonfiguration 2:
+| - Alle Alarme mit der Alarmklasse "Alarm" werden von allen Alarmgruppen angezeigt.
+
+**************
+Visualisierung
+**************
+|
+|
+|
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+---------------------------+----------------------------+---------+------------------------------------------------------------+
+    | Scope  | Name                      | Type                       | Initial | Comment                                                    |
+    +========+===========================+============================+=========+============================================================+
+    | Input  | sFilterByAlarmGroup       | STRING                     |         | Anzahl aktiver Alarme nur nach angegebener Alarm Gruppe    |
+    |        |                           |                            |         | filtern. (Leer = Alle Gruppen)                             |
+    +        +---------------------------+----------------------------+---------+------------------------------------------------------------+
+    |        | sFilterByAlarmClass       | STRING                     |         | Anzahl aktiver Alarme nur nach angegebener Alarm Klasse    |
+    |        |                           |                            |         | filtern. (Leer = Alle Klassen)                             |
+    +        +---------------------------+----------------------------+---------+------------------------------------------------------------+
+    |        | xRetryRegistration        | BOOL                       |         | Registrierung des Alarm Manager Clients erneut versuchen   |
+    +        +---------------------------+----------------------------+---------+------------------------------------------------------------+
+    |        | usiMaxFailedRegistrations | USINT                      | 5       | Maximale Fehlvorgänge der Client Registrierung für den     |
+    |        |                           |                            |         | Alarmzähler                                                |
+    +--------+---------------------------+----------------------------+---------+------------------------------------------------------------+
+    | Output | uiTotalActiveAlarms       | UINT                       |         | Alle aktiven Alarme ohne Filterkriterien                   |
+    +        +---------------------------+----------------------------+---------+------------------------------------------------------------+
+    |        | uiActiveAlarms            | UINT                       |         | Anzahl aktiver Alarme im Zustand "Alarmbedingung ist wahr" |
+    +        +---------------------------+----------------------------+---------+------------------------------------------------------------+
+    |        | uiActiveACK               | UINT                       |         | Anzahl aktiver Alarme im Zustand "Warten auf quittieren"   |
+    +        +---------------------------+----------------------------+---------+------------------------------------------------------------+
+    |        | uiWaitingForConfirmation  | UINT                       |         | Anzahl aktiver Alarme im Zustand "Warten auf Bestätigung"  |
+    +        +---------------------------+----------------------------+---------+------------------------------------------------------------+
+    |        | eAlarmCounterState        | |ioeAlmAlarmCounterStates| |         | Aktueller Status                                           |
+    +--------+---------------------------+----------------------------+---------+------------------------------------------------------------+
+
+.. |ioeAlmAlarmCounterStates| replace:: :ref:`eAlmAlarmCounterStates<eAlmAlarmCounterStates>`
+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

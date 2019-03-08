@@ -1,0 +1,280 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Button.Button4`:
+
+
+.. index::
+   single: Button4
+
+.. _`Button4`:
+
+Button4 (FB)
+------------
+
+FUNCTION_BLOCK Button4
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Schaltelement mit vier Bedieneingängen und vier Schaltausgängen.
+     | Zusätzlich ist ein Gesamtausgang verfügbar.
+     |
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/Button4_FB.png
+
+**************
+Schnittstellen
+**************
+Eingänge
+========
+ .. list-table::
+    :name: Eingänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xButton1*
+      - BOOL
+      -
+      -
+      - Eingang Bedientaste 1
+    * - *xButton2*
+      - BOOL
+      -
+      -
+      - Eingang Bedientaste 2
+    * - *xButton3*
+      - BOOL
+      -
+      -
+      - Eingang Bedientaste 3
+    * - *xButton4*
+      - BOOL
+      -
+      -
+      - Eingang Bedientaste 4
+    * - *xButtonOff*
+      - BOOL
+      -
+      -
+      - Eingang Zentrale Deaktivierung aller Ausgänge
+
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xQ1*
+      - BOOL
+      -
+      -
+      - Schaltausgang 1
+    * - *xQ2*
+      - BOOL
+      -
+      -
+      - Schaltausgang 2
+    * - *xQ3*
+      - BOOL
+      -
+      -
+      - Schaltausgang 3
+    * - *xQ4*
+      - BOOL
+      -
+      -
+      - Schaltausgang 4
+    * - *xQ*
+      - BOOL
+      -
+      -
+      - Gesamtausgang
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **xButton1Visu**
+      - BOOL
+      -
+      - FALSE
+      - Funktion wie *xButton1*
+    * - **xButton2Visu**
+      - BOOL
+      -
+      - FALSE
+      - Funktion wie *xButton2*
+    * - **xButton3Visu**
+      - BOOL
+      -
+      - FALSE
+      - Funktion wie *xButton3*
+    * - **xButton4Visu**
+      - BOOL
+      -
+      - FALSE
+      - Funktion wie *xButton4*
+    * - **xButtonOffVisu**
+      - BOOL
+      -
+      - FALSE
+      - Funktion wie *xButtonOff*
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Die fünf Eingänge für die Bedientasten und die fünf Visutasten werden permanent auf ansteigende Flanken ( = Taste betätigt ) überwacht.
+| Die Schaltausgänge und der Gesamtausgang werden in Abhängigkeit davon, an welchen Eingang eine ansteigende Flanke erkannt wurde, festgelegt.
+| Der Eingang *xButton1* hat dabei die höchste, der Eingang *xButton2* die zweithöchste Priorität, usw.
+| Wird an keinem der vier Eingänge eine ansteigende Flanke erkannt, so verändern sich die Zustände der Ausgänge nicht.
+|
+
+Gesamtausgang *xQ*
+==================
+| Der Gesamtausgang wird aktiviert ( *xQ* = TRUE ), falls mindestens einer der vier Schaltausgänge aktiv ist.
+| Er ist nicht aktiv ( *xQ* = FALSE ), falls keiner der vier Schaltausgänge aktiv ist
+
+ .. list-table::
+    :name: Funktionen
+    :widths: 900 900 900 900 300 300 300 300 900
+    :header-rows: 1
+
+    * - *xButton1*
+      - *xButton2*
+      - *xButton3*
+      - *xButton4*
+      - *xQ1*
+      - *xQ2*
+      - *xQ3*
+      - *xQ4*
+      - Hinweis
+    * - L/H
+      - X
+      - X
+      - X
+      - TRUE
+      - FALSE
+      - FALSE
+      - FALSE
+      - Betätigung - Taste 1
+    * - FALSE, TRUE, H/L
+      - L/H
+      - X
+      - X
+      - FALSE
+      - TRUE
+      - FALSE
+      - FALSE
+      - Betätigung - Taste 2
+    * - FALSE, TRUE, H/L
+      - FALSE, TRUE, H/L
+      - L/H
+      - X
+      - FALSE
+      - FALSE
+      - TRUE
+      - FALSE
+      - Betätigung - Taste 3
+    * - FALSE, TRUE, H/L
+      - FALSE, TRUE, H/L
+      - FALSE, TRUE, H/L
+      - L/H
+      - FALSE
+      - FALSE
+      - FALSE
+      - TRUE
+      - Betätigung - Taste 4
+
+| Legende: X ... nicht relevant, L/H ... ansteigende Flanke, H/L ... abfallende Flanke
+
+Zentrale Deaktivierung aller Ausgänge *xButtonOff* bzw. **xButtonOffVisu**
+==========================================================================
+| Die Ausgänge *xQ1* bis *xQ4* werden deaktiviert ( = FALSE ), falls am Eingang *xButtonOff* oder am Sollwert / Parameter **xButtonOffVisu** eine ansteigende Flanke erkannt wird.
+| ( unabhängig von den aktuellen Zuständen an den Bedieneingängen *xButton1* bis *xButton4* ).
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+----------------+------+---------+-----------------------------------------------+
+    | Scope  | Name           | Type | Initial | Comment                                       |
+    +========+================+======+=========+===============================================+
+    | Input  | xButton1       | BOOL |         | Eingang Bedientaste 1                         |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xButton2       | BOOL |         | Eingang Bedientaste 2                         |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xButton3       | BOOL |         | Eingang Bedientaste 3                         |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xButton4       | BOOL |         | Eingang Bedientaste 4                         |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xButtonOff     | BOOL |         | Eingang Zentrale Deaktivierung aller Ausgänge |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xButtonOffVisu | BOOL | FALSE   | Funktion wie *xButtonOff*                     |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xButton4Visu   | BOOL | FALSE   | Funktion wie *xButton4*                       |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xButton3Visu   | BOOL | FALSE   | Funktion wie *xButton3*                       |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xButton2Visu   | BOOL | FALSE   | Funktion wie *xButton2*                       |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xButton1Visu   | BOOL | FALSE   | Funktion wie *xButton1*                       |
+    +--------+----------------+------+---------+-----------------------------------------------+
+    | Output | xQ1            | BOOL |         | Schaltausgang 1                               |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xQ2            | BOOL |         | Schaltausgang 2                               |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xQ3            | BOOL |         | Schaltausgang 3                               |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xQ4            | BOOL |         | Schaltausgang 4                               |
+    +        +----------------+------+---------+-----------------------------------------------+
+    |        | xQ             | BOOL |         | Gesamtausgang                                 |
+    +--------+----------------+------+---------+-----------------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

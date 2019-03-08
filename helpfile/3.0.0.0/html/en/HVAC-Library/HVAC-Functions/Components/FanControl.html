@@ -1,0 +1,1105 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FanControl (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="FanControl.mQuit (METH)" href="pou-FanControl/mQuit.html" />
+    <link rel="prev" title="FanAnalog.mResetOperatingHours (METH)" href="pou-FanAnalog/mResetOperatingHours.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="Burner3P.html">Burner3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerP.html">BurnerP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerT.html">BurnerT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoolOutProtection.html">CoolOutProtection (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Damper2P.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DamperAnalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuoPump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fan1Speed.html">Fan1Speed (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanAnalog.html">FanAnalog (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">FanControl (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FastHeating.html">FastHeating (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FireDamperMot.html">FireDamperMot (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptStartHeat.html">OptStartHeat (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreRinseOperationValveAnalog.html">PreRinseOperationValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Pump.html">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SequenceSUPTemp.html">SequenceSUPTemp (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SmokeDetector.html">SmokeDetector (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve2P.html">Valve2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve3P.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveAnalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveTherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>FanControl (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Components/FanControl.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-fancontrol"></span><div class="section" id="fancontrol-fb">
+<span id="fancontrol"></span><span id="index-0"></span><h1>FanControl (FB)<a class="headerlink" href="#fancontrol-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK FanControl</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Control of a variable speed fan ( controlled variable: absolute pressure, differential pressure )</div>
+<div class="line">Additional functions: Manual overriding controls, repair switches, operating hours counters, operation monitoring, air shortage monitoring, limit value monitoring</div>
+<div class="line">Typical application: control of a fan with frequency converter</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/FanControl_FB.png" src="../../../_images/FanControl_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block controls a variable-speed fan via a continuous control signal <em>rHA</em>.</div>
+<div class="line">The general release of the fan takes place via the request <em>xEn</em> and the release signal <em>xHB</em>.</div>
+<div class="line">The pressure is controlled by a freely parameterizable PI controller to which the pressure setpoint <em>rSetPoint</em> and the actual pressure value <em>rActValue</em> are fed and from which the control signal of the controller is generated.</div>
+<div class="line"><br /></div>
+<div class="line">Essentially, the following function blocks are used:</div>
+</div>
+<p><a class="reference internal" href="../Control/ControlPI.html#controlpi"><span class="std std-ref">ControlPI</span></a></p>
+<p><a class="reference internal" href="../Binary/ManBin.html#manbin"><span class="std std-ref">ManBin</span></a></p>
+<p><a class="reference internal" href="../Numeric/ManNum.html#mannum"><span class="std std-ref">ManNum</span></a></p>
+<p><a class="reference internal" href="../Numeric/TwoPointFun.html#twopointfun"><span class="std std-ref">TwoPointFun</span></a></p>
+<p><a class="reference internal" href="../Damping/Ramp.html#ramp"><span class="std std-ref">Ramp</span></a></p>
+<p><a class="reference internal" href="../General/CTime.html#ctime"><span class="std std-ref">CTime</span></a></p>
+<p><a class="reference internal" href="../Monitoring/AirShortage.html#airshortage"><span class="std std-ref">AirShortage</span></a></p>
+<p><a class="reference internal" href="../Counter/OperatingHours.html#operatinghours"><span class="std std-ref">OperatingHours</span></a></p>
+</div>
+<div class="section" id="freigabe-ventilator-vor-handubersteuerung-xab">
+<h3>Enable - Fan before manual override <em>xAB</em><a class="headerlink" href="#freigabe-ventilator-vor-handubersteuerung-xab" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The release - fan before manual override <em>xAB</em> is activated ( = TRUE ) if the following conditions are fulfilled at the same time:</div>
+<div class="line"><br /></div>
+<div class="line">Case 1:</div>
+<div class="line"><br /></div>
+<div class="line"><em>xEn</em> = TRUE</div>
+<div class="line"><em>xMSwitch</em> = TRUE</div>
+<div class="line"><strong>xAlarmControl</strong> = FALSE</div>
+<div class="line"><br /></div>
+<div class="line">Case 2:</div>
+<div class="line"><br /></div>
+<div class="line"><em>xEn</em> = TRUE</div>
+<div class="line"><em>xMSwitch</em> = TRUE</div>
+<div class="line"><strong>xAlarmControl</strong> = TRUE</div>
+<div class="line"><em>xAlarm</em> = FALSE</div>
+<div class="line"><br /></div>
+<div class="line">In all other situations the Release of the fan, before manual override <em>xAB</em>, is not activated ( = FALSE ).</div>
+</div>
+</div>
+<div class="section" id="freigabe-ventilator-nach-handubersteuerung-xhb">
+<h3>Enable - Fan after manual override <em>xHB</em><a class="headerlink" href="#freigabe-ventilator-nach-handubersteuerung-xhb" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The release - fan after manual override <em>xHB</em> corresponds to the release - fan before manual override <em>xAB</em>, additionally extended by a manual override module.</div>
+<div class="line">The release can generally only take place if the forced locking of the fan is not active after manual override ( <em>xForce</em> = FALSE ).</div>
+<div class="line">and the collective alarm message 2 is not active ( = FALSE ).</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAB</em></th>
+<th class="head"><strong>eManModeB</strong></th>
+<th class="head"><em>xHB</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eMANBIN.Auto</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>eMANBIN.ManOn</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in manual mode On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANBIN.ManOff</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in manual mode Off</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="meldung-des-reparaturschalters-xmswitch">
+<h3>Repair switch message <em>xMSwitch</em><a class="headerlink" href="#meldung-des-reparaturschalters-xmswitch" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><em>xMSwitch</em> = TRUE:     Repair switch was not triggered ( normal state )</div>
+<div class="line"><em>xMSwitch</em> = FALSE:    Repair switch was triggered ( error condition)</div>
+</div>
+</div>
+<div class="section" id="zwangssperrung-des-ventilators-nach-handubersteuerung-xforce">
+<h3>Forced shut-off of the fan after manual override <em>xForce</em><a class="headerlink" href="#zwangssperrung-des-ventilators-nach-handubersteuerung-xforce" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><em>xForce</em> = FALSE:     no foced locking ( normal state )</div>
+<div class="line"><em>xForce</em> = TRUE:  forced locking ( state of emergency )</div>
+</div>
+</div>
+<div class="section" id="betriebsstunden-und-einschaltvorgange-udioperatinghours-und-udicountfb">
+<h3>Operating hours and switch-on procedures <em>udiOperatingHours</em> and <em>udiCountFb</em><a class="headerlink" href="#betriebsstunden-und-einschaltvorgange-udioperatinghours-und-udicountfb" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The number of operating hours and the number of switch-on processes are recorded ( = counting process active ) if the fan operating message <em>xFb</em> is active and the collective alarm message <em>xAlarm</em> is not active ( = FALSE ) at the same time.</div>
+<div class="line">The results are available at the counter outputs <strong>udiOperatingHours</strong> and <strong>udiCountFb</strong>.</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Write access to the counter readings</p>
+<div class="line-block">
+<div class="line">Via the path &#8216;Instancename._OperatingHours.udiOperatingHours&#8217; or &#8216;Instancename._OperatingHours.udiCountFb&#8217; a write access to both counter readings is possible.</div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Prerequisite for using the FanControl function block</p>
+<div class="line-block">
+<div class="line">For correct function, the use of the function block TimeRead with <em>xEn</em> = TRUE is mandatory.</div>
+</div>
+</div>
+</div>
+<div class="section" id="datum-uhrzeit-des-letzten-betriebs-des-ventilators-dtlastfb">
+<h3>Date / time of the last operation of the fan <em>dtLastFb</em><a class="headerlink" href="#datum-uhrzeit-des-letzten-betriebs-des-ventilators-dtlastfb" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The output <em>dtLastFb</em> provides the current date/time during the counting process.</div>
+<div class="line">At the output <em>dtLastFb</em>, the date/time at the end of the last counting process is available outside the counting process.</div>
+<div class="line">The output <em>dtLastFb</em> outputs the initialization value DT#1970-1-1-1-0.0.0 before the first counting process.</div>
+</div>
+</div>
+<div class="section" id="betriebsuberwachung-xalarmfb">
+<h3>Operation monitoring <em>xAlarmFb</em><a class="headerlink" href="#betriebsuberwachung-xalarmfb" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Operation monitoring can be enabled ( = TRUE ) or disabled ( = FALSE ) by the setpoint / parameter <strong>xFbControl</strong>.</div>
+<div class="line"><br /></div>
+<div class="line">If monitoring is disabled, the alarm message of the operational monitoring <em>xAlarmFb</em> is always disabled ( = FALSE ).</div>
+<div class="line">When monitoring is enabled, the alarm message of the operational monitoring <em>xAlarmFb</em> is activated ( = TRUE ) if the following states are simultaneously present during a minimum duration <strong>udiFbControlTime</strong>:</div>
+<div class="line"><br /></div>
+<div class="line"><em>xHB</em> and <em>xFb</em> = unequal ( release state and operating state do not match )</div>
+<div class="line"><em>eAOO</em>                 = HVACTYPES.eManBin.Auto ( Manual override - Hardware for enabling in automatic )</div>
+<div class="line"><strong>xFbControl</strong>         = TRUE  ( Operation Monitoring is enabled )</div>
+<div class="line"><br /></div>
+<div class="line">The alarm message of the operation monitoring <em>xAlarmFb</em> is reset ( = FALSE ) if at least one of the following conditions is fulfilled:</div>
+<div class="line"><br /></div>
+<div class="line"><em>eAOO</em>                 = HVACTYPES.eManBin.Auto ( switch back to automatic mode of manual override - hardware )</div>
+<div class="line"><em>xQuit</em>                = TRUE  ( reset of monitoring is active )</div>
+<div class="line"><strong>xFbControl</strong>         = FALSE ( operation monitoring disabled )</div>
+</div>
+</div>
+<div class="section" id="luftmangeluberwachung-xalarmpfb">
+<h3>Low air pressure monitoring <em>xAlarmPFb</em><a class="headerlink" href="#luftmangeluberwachung-xalarmpfb" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Air shortage monitoring is performed by evaluating the states at the inputs <em>xPFb</em> or <em>xFb</em>.</div>
+<div class="line"><br /></div>
+<div class="line">The alarm message of the low air pressure monitoring <em>xAlarmPFb</em> is activated ( = TRUE ), if with enabled monitoring ( <strong>xPFbControl</strong> = TRUE ) during the message delay of the low air pressure monitoring <strong>udiPFbControlTime</strong> the input <em>xPFb</em> is permanently not active ( = FALSE ) and the input <em>xPFb</em> is not active ( = FALSE ).</div>
+<div class="line">Input <em>xFb</em> is active ( = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">The alarm message of the low air pressure monitoring <em>xAlarmPFb</em> is deactivated ( = FALSE ) if the conditions for activation are no longer given and at the same time the monitoring is blocked ( <strong>xPFbControl</strong> = FALSE ) and / or the reset of the error messages ( monitoring ) is active ( <em>xQuit</em> = TRUE ).</div>
+</div>
+</div>
+<div class="section" id="sammelstormeldung-1-ausgang-xalarm">
+<h3>Collective alarm message 1 - Output <em>xAlarm</em><a class="headerlink" href="#sammelstormeldung-1-ausgang-xalarm" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective alarm message is activated ( = TRUE ) if at least one of the conditions described below is fulfilled.</div>
+<div class="line"><br /></div>
+<div class="line"><em>xAlarmIn</em>         = TRUE     ( Fan alarm message is active )</div>
+<div class="line"><em>xAlarmFB</em>         = TRUE     ( error from operation monitoring )</div>
+<div class="line"><em>xAlarmPFB</em>        = TRUE     ( error from low air pressure monitoring )</div>
+<div class="line"><em>xMSwitch</em>         = FALSE ( repair-switch in Position Off )</div>
+<div class="line"><em>xAlarmMaxValue</em>   = TRUE  ( maximum value exceeded )</div>
+<div class="line"><em>xAlarmMinValue</em>   = TRUE  ( Minimum value fallen short of )</div>
+<div class="line"><br /></div>
+<div class="line">In all other cases, the collective alarm is not active (= FALSE).</div>
+</div>
+</div>
+<div class="section" id="sammelstormeldung-2">
+<h3>Collective alarm message 2<a class="headerlink" href="#sammelstormeldung-2" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective alarm message is activated ( = TRUE ) if at least one of the conditions described below is fulfilled.</div>
+<div class="line"><br /></div>
+<div class="line"><em>xAlarmIn</em>         = TRUE     ( Fan alarm message is active )</div>
+<div class="line"><em>xAlarmFB</em>         = TRUE     ( error from operation monitoring )</div>
+<div class="line"><em>xAlarmPFB</em>        = TRUE     ( error from low air pressure monitoring )</div>
+<div class="line"><em>xMSwitch</em>         = FALSE ( repair-switch in Position Off )</div>
+<div class="line"><em>xAlarmMaxValue</em>   = TRUE  ( maximum value exceeded )</div>
+<div class="line"><br /></div>
+<div class="line">In all other cases, the collective alarm is not active (= FALSE).</div>
+</div>
+</div>
+<div class="section" id="rucksetzung-der-stormeldungen-xquit">
+<h3>Reset of the alarm messages <em>xQuit</em><a class="headerlink" href="#rucksetzung-der-stormeldungen-xquit" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Each rising edge ( FALSE &gt; TRUE ) at input <em>xQuit</em> deletes any existing alarm messages from the following monitoring devices</div>
+<div class="line"><br /></div>
+<div class="line">Low air pressure monitoring</div>
+<div class="line">Operation monitoring</div>
+<div class="line">Minimum value monitoring</div>
+<div class="line">Maximum value monitoring</div>
+</div>
+</div>
+<div class="section" id="druckregelprozess">
+<h3>Pressure control process<a class="headerlink" href="#druckregelprozess" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">General</div>
+<div class="line"><br /></div>
+<div class="line">The actual pressure value <em>rActValue</em> is scaled by a linear characteristic curve and fed to the PI controller.</div>
+<div class="line">The pressure setpoint <em>rSetPont</em> is filtered by a signal ramp, scaled by a linear characteristic and fed to the PI controller.</div>
+<div class="line">The output signal of the PI controller is filtered by a further signal ramp and fed to the output for the control signal <em>rHA</em>.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Enable</div>
+<div class="line"><br /></div>
+<div class="line">The control process is enabled with a time delay of <strong>udiWaitControl</strong> after the active operating message of the fan ( <em>xFb</em> = TRUE ).</div>
+<div class="line">The control process is disabled without time delay after the fan has been inactive ( <em>xFb</em> = FALSE ).</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Pressure setpoint</div>
+<div class="line"><br /></div>
+<div class="line">The pressure setpoint is set to value 0.0 if the release of the fan is not active ( <em>xHB</em> = FALSE ).</div>
+<div class="line">The pressure setpoint value is taken from the input <em>rSetPoint</em>, filtered by a signal ramp and scaled by a linear function defined by 2 points ( prerequisite: <em>xHB</em> = TRUE ).</div>
+<div class="line">The relevant parameters of the signal ramp can be set individually ( Maximum variation = (<strong>rMaxValue</strong> / 5) per 10s ).</div>
+<div class="line">The relevant parameters of the linear function can be set individually ( input range in Pa: 0.0 - <strong>rMaxValue</strong>, output range in %: 0.0 - 100.0 ).</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Actual print value</div>
+<div class="line"><br /></div>
+<div class="line">The actual pressure value is taken from input <em>rActValue</em> and scaled by a linear function defined by 2 points.</div>
+<div class="line">The relevant parameters of the linear function can be set individually ( input range in Pa: 0.0 - <strong>rMaxValue</strong>, output range in %: 0.0 - 100.0 ).</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Limitation of the control signal of the PI-controller <strong>rYMin</strong> and <strong>rYMax</strong></div>
+<div class="line"><br /></div>
+<div class="line">The control signal of the pressure controller( PI-controller ) is limited by the adjustable limit values <strong>rYMin</strong> and <strong>rYMax</strong> ( minimum value monitoring not active ) or <strong>rSubstitueHA</strong> ( minimum value monitoring active ).</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Signal ramp of the control signal from the PI controller</div>
+<div class="line"><br /></div>
+<div class="line">The control signal from the PI controller is filtered by a signal ramp.</div>
+<div class="line">The relevant parameters of the signal ramp are individually adjustable ( Maximum variation = <strong>rYRampVariation</strong> per <strong>rYRampTime</strong> ).</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Parameters of the PI controller</div>
+<div class="line"><br /></div>
+<div class="line">The essential parameters for the control behaviour can be specified externally. They must be adjusted according to the controlled system.</div>
+<div class="line">A meaningful basic parameterization has already been carried out, which is sufficient in many applications.</div>
+<div class="line"><br /></div>
+<div class="line"><strong>rYMin</strong>             = Lower absolute limit value of the controller output signal</div>
+<div class="line"><strong>rYMax</strong>          = Oberer absoluter Grenzwert des Regler-Ausgangssignals</div>
+<div class="line"><strong>rOffset</strong>       = Setpoint offset - Pressure controller</div>
+<div class="line"><strong>rKp</strong>           = amplification factor - pressure controller</div>
+<div class="line"><strong>rTn</strong>           = reset time - pressure controller in s</div>
+<div class="line"><strong>eAction</strong>       = Direction of action of the pressure controller ( Inverted, Direct )</div>
+<div class="line"><strong>rInitValue</strong>        = Initialization value for the control signal</div>
+<div class="line"><strong>rYDisabled</strong>        = Control signal with inactive pressure controller</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Signals of the PI controller</div>
+<div class="line"><br /></div>
+<div class="line">The signals calculated during the control process (before the signal ramp) are available for checking the control process.</div>
+<div class="line"><br /></div>
+<div class="line"><em>rPiDiff</em>             = Control deviation at pressure controller</div>
+<div class="line"><em>rPiPartP</em>         = Proportional component of the control signal</div>
+<div class="line"><em>rPiPartI</em>            = integral part of the control signal</div>
+<div class="line"><em>xPiLimitActiv</em>   = Status - Limit value exceeded - Control signal ( FALSE = Off, TRUE = On )</div>
+<div class="line"><br /></div>
+<div class="line">Control signal of the controller</div>
+<div class="line"><br /></div>
+<div class="line">If the pressure controller is not enabled, the deactivation value <strong>rYDisabled</strong> is transmitted to the output control signal of the controller (prerequisite: <strong>ePiManModeN</strong> = eMANNUM.Auto ) and limited by the absolute limit values.</div>
+<div class="line">The integral component is set to 0.0.</div>
+<div class="line"><br /></div>
+<div class="line">When the pressure controller is enabled, the control signal of the controller is calculated ( precondition: <strong>ePiManModeN</strong> = eMANNUM.Auto ) and limited by the absolute limit values.</div>
+<div class="line"><br /></div>
+<div class="line">With the basic setting of the direction of action <strong>eAction</strong> ( = eControlMode.Inverted ), a too low actual pressure value ( actual value &lt; setpoint ) causes a continuous increase in the value of the control signal of the controller.</div>
+</div>
+</div>
+<div class="section" id="stellsignal-ventilator-vor-handubersteuerung-raa">
+<h3>Control signal for fan before manual override <em>rAA</em><a class="headerlink" href="#stellsignal-ventilator-vor-handubersteuerung-raa" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The control signal of the fan before manual override <em>rAA</em> is primarily taken from the output signal of the pressure controller after the signal ramp.</div>
+<div class="line">However, this output signal is additionally limited downwards by the lower absolute limit value <strong>rYMin</strong> during the request of the fan ( <a href="#id1"><span class="problematic" id="id2">*</span></a>xHB = TRUE ).</div>
+<div class="line">If the minimum value is fallen short of ( <em>xAlarmMinValue</em> = TRUE ), the control signal before manual override <em>rAA</em> is replaced by the fixed value <strong>rSubstitueHA</strong>.</div>
+</div>
+</div>
+<div class="section" id="stellsignal-ventilator-nach-handubersteuerung-rha">
+<h3>Control signal for fan after manual override <em>rHA</em><a class="headerlink" href="#stellsignal-ventilator-nach-handubersteuerung-rha" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The control signal of the fan after manual override <em>rHA</em> corresponds to the control signal of the fan before manual override <em>rAA</em> additionally extended by a manual override module.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-2">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>rAA</em></th>
+<th class="head"><strong>eManModeN</strong></th>
+<th class="head"><em>rHA</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>X</td>
+<td>eMANNUM.Auto</td>
+<td><em>rAA</em></td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANNUM.Man</td>
+<td><strong>eManValue</strong></td>
+<td><p class="first last">Manual override module in manual mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="betriebsart-fur-das-ausgangssignal-des-reglers-epimanmoden">
+<h3>Operating mode for the output signal of the controller <strong>ePIManModeN</strong><a class="headerlink" href="#betriebsart-fur-das-ausgangssignal-des-reglers-epimanmoden" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The <strong>ePiManModeN</strong> parameter allows the output signal of the pressure controller to be switched from automatic to manual mode and vice versa.</div>
+<div class="line">In manual mode, the output signal of the pressure controller takes over the output signal in manual mode <strong>ePiManValue</strong>.</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="betriebsart-ausgangssignal">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>ePiManModeN</strong></th>
+<th class="head"><p class="first last">Output signal</p>
+</th>
+<th class="head"><p class="first last">Functional Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eMANNUM.Auto</td>
+<td><p class="first last">Signal according to the formula / switch-off value</p>
+</td>
+<td><p class="first last">Automatic operation - Output signal</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eMANNUM.Man</td>
+<td><strong>ePiManValue</strong></td>
+<td><p class="first last">Manual operation - Output signal</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="uberwachung-des-maximaldrucks-xalarmmaxvalue">
+<h3>Monitoring of the maximum pressure <em>xAlarmMaxValue</em><a class="headerlink" href="#uberwachung-des-maximaldrucks-xalarmmaxvalue" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The output <em>xAlarmMaxValue</em> is activated ( = TRUE ) if the current actual pressure value <em>rActValue</em> exceeds the adjustable maximum value <strong>rMaxValue</strong> for a minimum period of 10s.</div>
+<div class="line">The output <em>xAlarmMaxValue</em> is deactivated ( = FALSE ) if the current actual pressure value <em>rActValue</em> falls below the adjustable maximum value <strong>rMaxValue</strong> and simultaneously a rising edge ( FALSE &gt; TRUE ) is detected at the input <em>xQuit</em>.</div>
+</div>
+</div>
+<div class="section" id="uberwachung-des-minimaldrucks-xalarmminvalue">
+<h3>Monitoring of the minimum pressure <em>xAlarmMinValue</em><a class="headerlink" href="#uberwachung-des-minimaldrucks-xalarmminvalue" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The output <em>xAlarmMinValue</em> is activated ( = TRUE ), if during a minimum time period <strong>udiWaitMinValue</strong> ( 1.0 - 600.0 s ) the following conditions are permanently fulfilled at the same time:</div>
+<div class="line"><br /></div>
+<div class="line"><em>xFb</em> = TRUE ( fan is in operation )</div>
+<div class="line"><em>eAO</em> = HVACTYPES.eManNum.Auto ( Operating mode of manual override - Hardware for the control signal in automatic mode )</div>
+<div class="line"><em>rHA</em> &gt; <strong>rMinHAValue</strong> ( Control signal is greater than the minimum value )</div>
+<div class="line"><em>rActValue</em> &lt; <strong>rMinValue</strong> ( actual pressure value is smaller than the minimum value )</div>
+<div class="line">No rising edge ( FALSE &gt; TRUE ) was detected at the input <a href="#id1"><span class="problematic" id="id2">*</span></a>xQuit</div>
+</div>
+<div class="line-block">
+<div class="line">The output <em>xAlarmMinValue</em> is deactivated ( = FALSE ) if the conditions for activation are no longer fulfilled and at the same time a rising edge ( FALSE &gt; TRUE ) is detected at the input <em>xQuit</em>.</div>
+</div>
+</div>
+<div class="section" id="sammelmeldung-automatikbetrieb-xauto">
+<h3>Collective message automatic mode <em>xAuto</em><a class="headerlink" href="#sammelmeldung-automatikbetrieb-xauto" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective message automatic mode <em>xAuto</em> is activated ( = TRUE ) if the following conditions are fulfilled at the same time:</div>
+<div class="line"><br /></div>
+<div class="line">- Eingang <em>eAOO</em> = HVACTYPES.eManBin.Auto</div>
+<div class="line">- Eingang <em>eAO</em> = HVACTYPES.eManNum.Auto</div>
+<div class="line">- Sollwert / Parameter <strong>eManModeB</strong> = eMANBIN.Auto</div>
+<div class="line">- Sollwert / Parameter <strong>eManModeN</strong> = eMANNUM.Auto</div>
+<div class="line">- Sollwert / Parameter <strong>ePiManModeN</strong> = eMANNUM.Auto</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="15%" />
+<col width="14%" />
+<col width="18%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="13">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Fan request ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xForce</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Forced shutdown of the fan after manual override ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating message of the fan ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xPFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Feedback of the low air pressure monitoring ( FALSE = low air pressure, TRUE = no low air pressure )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xMSwitch</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Feedback of the repair switches ( FALSE = switch off, TRUE = switch on )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarmIn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Alarm message of the fan ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-even"><td>eAOO</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td><p class="first last">Operating mode of manual override - Hardware for enabling</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eAO</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eManNum</span></a></td>
+<td>HVACTYPES.eManNum.Auto</td>
+<td><p class="first last">Operating mode of manual override - Hardware for the control signal</p>
+</td>
+</tr>
+<tr class="row-even"><td>rPoti</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Manual value - Manual override - Hardware for the control signal</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rU</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Feedback signal from the fan in %</p>
+</td>
+</tr>
+<tr class="row-even"><td>xQuit</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Reset of the alarm messages ( monitoring ) ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rActValue</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Actual pressure value in Pa</p>
+</td>
+</tr>
+<tr class="row-even"><td>rSetPoint</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Pressure setpoint ( absolute, difference ) in Pa</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="17">Output</td>
+<td>xHB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable - Fan after manual override ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable - Fan before manual override ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rHA</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal - Fan after manual override in %</p>
+</td>
+</tr>
+<tr class="row-even"><td>rAA</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal - Fan before manual override in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarmFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Alarm message for the operation monitoring ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAlarmPFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Alarm message for low air pressure monitoring ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarmMinValue</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Alarm message for the minimum value monitoring ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAlarmMaxValue</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Alarm message for the maximum value monitoring ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>dtLastFb</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of last fan operation</p>
+</td>
+</tr>
+<tr class="row-even"><td>udiOperatingHours</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating hours of the fan</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiCountFb</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of starts of the ventilator</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective alarm message ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAuto</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective message - automatic mode ( FALSE = no automatic mode, TRUE = automatic mode )</p>
+</td>
+</tr>
+<tr class="row-even"><td>rPiDiff</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control deviation at pressure Controller in Pa</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rPiPartP</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Proportional component of the control signal of the pressure controller in %</p>
+</td>
+</tr>
+<tr class="row-even"><td>rPiPartI</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Integral part of the control signal of the pressure controller in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xPiLimitActiv</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Status - limit exceeded - control signal - pressure controller ( FALSE = no exceeding, TRUE = exceeding )</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="31">Input</td>
+<td>rMaxValue</td>
+<td>REAL</td>
+<td>490</td>
+<td><p class="first last">Maximum actual pressure value in Pa</p>
+</td>
+</tr>
+<tr class="row-odd"><td>blanc5</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last"><strong>* Monitoring of the maximum actual pressure value *</strong></p>
+</td>
+</tr>
+<tr class="row-even"><td>rSubstituteHA</td>
+<td>REAL</td>
+<td>30</td>
+<td><p class="first last">Equivalent control signal in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiWaitMinValue</td>
+<td>UDINT</td>
+<td>60</td>
+<td><p class="first last">Waiting time until evaluation of the minimum value in s ( 1.0 - 600.0 s )</p>
+</td>
+</tr>
+<tr class="row-even"><td>rMinHAValue</td>
+<td>REAL</td>
+<td>20</td>
+<td><p class="first last">Lower threshold value of the control signal for the substitute control signal in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rMinValue</td>
+<td>REAL</td>
+<td>20</td>
+<td><p class="first last">Lower threshold value of the actual pressure value for the substitute control signal in Pa</p>
+</td>
+</tr>
+<tr class="row-even"><td>blanc4</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last"><strong>* Monitoring of the minimum value *</strong></p>
+</td>
+</tr>
+<tr class="row-odd"><td>tYRampTime</td>
+<td>TIME</td>
+<td>TIME#1m0s0ms</td>
+<td><p class="first last">Time unit for the maximum change of the control signal in s</p>
+</td>
+</tr>
+<tr class="row-even"><td>rYRampVariation</td>
+<td>REAL</td>
+<td>30</td>
+<td><p class="first last">Maximum change of the control signal per time unit in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>blanc3</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last"><strong>* Ramp for the control signal *</strong></p>
+</td>
+</tr>
+<tr class="row-even"><td>udiWaitControl</td>
+<td>UDINT</td>
+<td>30</td>
+<td><p class="first last">Waiting time until pressure control is enabled in s ( 5.0 - 600.0 s )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>blanc2</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last"><strong>* Waiting time - Enable - Pressure control *</strong></p>
+</td>
+</tr>
+<tr class="row-even"><td>rYMax</td>
+<td>REAL</td>
+<td>100</td>
+<td><p class="first last">Pressure controller - Upper absolute limit value of the control signal in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rYMin</td>
+<td>REAL</td>
+<td>20</td>
+<td><p class="first last">Pressure controller - Lower absolute limit value of the control signal in %</p>
+</td>
+</tr>
+<tr class="row-even"><td>rTn</td>
+<td>REAL</td>
+<td>60</td>
+<td><p class="first last">Pressure controller - reset time in s</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rKp</td>
+<td>REAL</td>
+<td>1</td>
+<td><p class="first last">Pressure controller - Gain factor</p>
+</td>
+</tr>
+<tr class="row-even"><td>rOffset</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Pressure controller - Additive setpoint offset in Pa</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rInitValue</td>
+<td>REAL</td>
+<td>20</td>
+<td><p class="first last">Pressure controller - Initialization value for the control signal in %</p>
+</td>
+</tr>
+<tr class="row-even"><td>rYDisabled</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Pressure controller - Control signal when pressure Controller inactive in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eAction</td>
+<td><a class="reference internal" href="../../Enums/eControlMode.html#econtrolmode"><span class="std std-ref">eControlMode</span></a></td>
+<td>eControlMode.Inverted</td>
+<td><p class="first last">Direction of action of the pressure contrtoller ( Inverted, Direct )</p>
+</td>
+</tr>
+<tr class="row-even"><td>ePiManValue</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Pressure controller - Output signal of the Controller in manual mode in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>ePiManModeN</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eMANNUM</span></a></td>
+<td>eMANNUM.Auto</td>
+<td><p class="first last">Pressure controller - operating mode for the output signal of the controller ( Auto, Man )</p>
+</td>
+</tr>
+<tr class="row-even"><td>blanc1</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last"><strong>* pressure controller *</strong></p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiPFbControlTime</td>
+<td>UDINT</td>
+<td>60</td>
+<td><p class="first last">Signal delay of the low air pressure monitoring in s</p>
+</td>
+</tr>
+<tr class="row-even"><td>xPFbControl</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Release of low air pressure monitoring ( FALSE = blocking, TRUE = release )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarmControl</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Influence of <em>xAlarm</em> on <em>xAB</em> ( FALSE = no influence, TRUE = influence )</p>
+</td>
+</tr>
+<tr class="row-even"><td>udiFbControlTime</td>
+<td>UDINT</td>
+<td>60</td>
+<td><p class="first last">Signal delay of operation monitoring in s ( 0.0 - 300.0 s )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xFbControl</td>
+<td>BOOL</td>
+<td>TRUE</td>
+<td><p class="first last">Enable / disable operation monitoring ( FALSE = Disable, TRUE = Enable )</p>
+</td>
+</tr>
+<tr class="row-even"><td>eManValue</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Control signal in manual mode for control signal <em>rHA</em> in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eManModeN</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eMANNUM</span></a></td>
+<td>eMANNUM.Auto</td>
+<td><p class="first last">Operating mode of manual override for the control signal <em>rHA</em></p>
+</td>
+</tr>
+<tr class="row-even"><td>eManModeB</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td><p class="first last">Operating mode of manual override for the <em>xHB</em> digital output</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pou-FanControl/mQuit.html">FanControl.mQuit (METH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pou-FanControl/mResetOperatingHours.html">FanControl.mResetOperatingHours (METH)</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pou-FanControl/mQuit.html" class="btn btn-neutral float-right" title="FanControl.mQuit (METH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pou-FanAnalog/mResetOperatingHours.html" class="btn btn-neutral float-left" title="FanAnalog.mResetOperatingHours (METH)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

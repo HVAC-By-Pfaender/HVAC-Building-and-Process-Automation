@@ -1,0 +1,790 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BurnerP (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="BurnerT (FB)" href="BurnerT.html" />
+    <link rel="prev" title="Burner3P (FB)" href="Burner3P.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="Burner3P.html">Burner3P (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BurnerP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerT.html">BurnerT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoolOutProtection.html">CoolOutProtection (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Damper2P.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DamperAnalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuoPump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fan1Speed.html">Fan1Speed (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanAnalog.html">FanAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanControl.html">FanControl (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FastHeating.html">FastHeating (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FireDamperMot.html">FireDamperMot (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptStartHeat.html">OptStartHeat (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreRinseOperationValveAnalog.html">PreRinseOperationValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Pump.html">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SequenceSUPTemp.html">SequenceSUPTemp (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SmokeDetector.html">SmokeDetector (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve2P.html">Valve2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve3P.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveAnalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveTherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>BurnerP (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Components/BurnerP.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-burnerp"></span><div class="section" id="burnerp-fb">
+<span id="burnerp"></span><span id="index-0"></span><h1>BurnerP (FB)<a class="headerlink" href="#burnerp-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK BurnerP</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Control of a heat producer ( temperature control via analoge power signal 0.0 - 100.0 % )</div>
+<div class="line"><br /></div>
+<div class="line">Typical application: heat production</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/BurnerP_FB.png" src="../../../_images/BurnerP_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block is used to control a heat producer depending on the requirements of the heat Producer <em>xEn</em>, the flow setpoint temperature <em>rSetPtTemp</em> and the flow temperature <em>rFdT</em>.</div>
+<div class="line">The heat producer is enabled / disabled via output <em>xHB</em> ( FALSE = disable, TRUE = enable ).</div>
+<div class="line">The flow temperature control (analog also boiler temperature control) is carried out by means of a power controller (PI controller) through the analog output <em>rHa</em> in the range from <strong>rYMin</strong> to <strong>rYMax</strong>.</div>
+<div class="line">The control is enabled with a time delay ( setpoint / parameter <strong>udiWaitControl</strong> ) after the operating feedback ( <em>xFb</em> = TRUE ) of the heat producer.</div>
+</div>
+<div class="line-block">
+<div class="line">Essentially, the following function blocks are used:</div>
+</div>
+<p><a class="reference internal" href="../Control/ControlPI.html#controlpi"><span class="std std-ref">ControlPI</span></a></p>
+<p><a class="reference internal" href="../Counter/OperatingHours.html#operatinghours"><span class="std std-ref">OperatingHours</span></a></p>
+<p><a class="reference internal" href="../Binary/ManBin.html#manbin"><span class="std std-ref">ManBin</span></a></p>
+<p><a class="reference internal" href="../Numeric/ManNum.html#mannum"><span class="std std-ref">ManNum</span></a></p>
+</div>
+<div class="section" id="freigabe-sperrung-des-warmeerzeugers">
+<h3>Enabling / disabling of the heat producer<a class="headerlink" href="#freigabe-sperrung-des-warmeerzeugers" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The heat producer is enabled ( <em>xAB</em> = TRUE, <em>xHB</em> = TRUE ( eManModeB = eManBin.Auto )) if the flow temperature <em>rFdT</em> falls below the sum of the flow setpoint temperature <em>rSetPtTemp</em> and setpoint / parameter <strong>rSwitchOnPoint</strong>, the general enable <em>xEn</em> is active ( = TRUE ) at the same time and the minimum downtime is not active.</div>
+<div class="line">The heat producer is disabled ( <em>xAB</em> = FALSE, <em>xHB</em> = FALSE ( eManModeB = eManBin.Auto )) if the flow temperature <em>rFdT</em> exceeds the sum of flow setpoint temperature <em>rSetPtTemp</em> and setpoint / parameter <strong>rSwitchOffPoint</strong> and the general enable <em>xEn</em> is active ( = TRUE ) at the same time.</div>
+<div class="line">Between two consecutive operating cycles, a minimum idle time is always inserted ( duration = <strong>udiTimeMinOff</strong>, display - remaining time: <em>tOnDelay</em> ).</div>
+<div class="line">The minimum idle time begins with the falling edge ( TRUE &gt; FALSE ) at input <em>xFb</em>.</div>
+</div>
+</div>
+<div class="section" id="temperaturregelung-des-warmeerzeugers">
+<h3>Temperature control of the heat producer<a class="headerlink" href="#temperaturregelung-des-warmeerzeugers" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The temperature control is enabled with a time delay ( duration = <strong>udiWaitControl</strong>, display - remaining time: <em>tOnControlDelay</em> ) after the active operating message ( <em>xFb</em> = TRUE ) of the heat generator.</div>
+<div class="line">The temperature control is disabled immediately after the inactive operating message ( <em>xFb</em> = FALSE ) of the heat producer ( power signal - heat producer before manual override <em>rAA</em> in disabled state = <strong>rYDisabled</strong> ).</div>
+<div class="line">The internal power controller ( PI controller, output range: <strong>rYMin</strong> to <strong>rYMax</strong> ) is enabled / disabled with the temperature control. ( Set point = flow set point temperature <em>rSetPtTemp</em>, actual value = flow temperature <em>rFdT</em> ).</div>
+</div>
+<div class="line-block">
+<div class="line">The parameters of the internal power controller can be configured individually:</div>
+<div class="line"><br /></div>
+<div class="line">Power controller - Upper absolute limit value of the output signal in % :   <strong>rYMax</strong></div>
+<div class="line">Power controller - Lower absolute limit value of the output signal in % :  <strong>rYMin</strong></div>
+<div class="line">Power controller - integral time in s : <strong>rTn</strong></div>
+<div class="line">Power controller - amplification factor : <strong>rKp</strong></div>
+<div class="line">Power controller - offset temperature in °C : <strong>rOffset</strong></div>
+<div class="line">Power controller - Initialization value for the output signal in % : <strong>rInitValue</strong></div>
+<div class="line">Power controller - switch-off value in % : <strong>rYDisabled</strong></div>
+<div class="line"><br /></div>
+<div class="line">The output signal of the power controller is supplied directly to the output <em>rAA</em>.</div>
+</div>
+</div>
+<div class="section" id="handubersteuerung-des-digitalen-ausgangs-xhb">
+<h3>Manual override of the digital output <em>xHB</em><a class="headerlink" href="#handubersteuerung-des-digitalen-ausgangs-xhb" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The release / blocking of the heat producer ( <em>xHB</em> ) can either be operated in automatic mode ( eMANBIN.Auto ) or in one of the two manual modes ( eMANBIN.ManOn, eMANBIN.ManOff ).</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAB</em></th>
+<th class="head">eMANBIN</th>
+<th class="head"><em>xHB</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eMANBIN.Auto</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>eMANBIN.ManOn</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in manual mode On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANBIN.ManOff</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in manual mode Off</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="handubersteuerung-des-analogen-ausgangs-rha">
+<h3>Manual override of the analog output <em>rHA</em><a class="headerlink" href="#handubersteuerung-des-analogen-ausgangs-rha" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The output signal of the power controller ( <em>rHA</em> ) can be operated either in automatic mode ( eMANNUM.Auto ) or in manual mode ( eMANNUM.Man ).</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-2">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>rAA</em></th>
+<th class="head">eMANNUM</th>
+<th class="head"><em>rHA</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Values</p>
+</td>
+<td>eMANNUM.Auto</td>
+<td><p class="first last">Values</p>
+</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANNUM.Man</td>
+<td><strong>rManValue</strong></td>
+<td><p class="first last">Manual override module in manual mode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="sammelstorung-xalarm">
+<h3><em>xAlarm</em> collective alarm<a class="headerlink" href="#sammelstorung-xalarm" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective alarm <em>xAlarm</em> is active ( = TRUE ) if the fault message of the heat generator <em>xAlarmIn</em> is active ( = TRUE ).</div>
+<div class="line">In all other cases, the collective alarm fault <em>xAlarm</em> is not active (= FALSE).</div>
+</div>
+</div>
+<div class="section" id="sammelmeldung-automatikbetrieb-xauto">
+<h3>Collective message automatic mode <em>xAuto</em><a class="headerlink" href="#sammelmeldung-automatikbetrieb-xauto" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective message automatic mode <em>xAuto</em> is activated ( = TRUE ) if the following conditions are fulfilled at the same time:</div>
+<div class="line"><br /></div>
+<div class="line">- Eingang <em>eAOO</em> = HVACTYPES.eManBin.Auto</div>
+<div class="line">- Eingang <em>eAO</em> = HVACTYPES.eManNum.Auto</div>
+<div class="line">- Sollwert / Parameter <strong>eManModeB</strong> = eMANBIN.Auto</div>
+<div class="line">- Sollwert / Parameter <strong>eManModeN</strong> = eMANNUM.Auto</div>
+</div>
+</div>
+<div class="section" id="betriebsstundenzahler-warmeerzeuger">
+<h3>Operating hours counter - heat producer<a class="headerlink" href="#betriebsstundenzahler-warmeerzeuger" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The operating hours counter ( <em>udiOperatingHours</em>, <em>udiCountFb</em> ) for the heat producer is active when the operating message is active ( <em>xFb</em> = TRUE ).</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Write access to the counter readings</p>
+<div class="line-block">
+<div class="line">Via the path &#8216;Instancename._OperatingHours.udiOperatingHours&#8217; or &#8216;Instancename._OperatingHours.udiCountFb&#8217; a write access to both counter readings is possible.</div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Prerequisite for using the BurnerP function block</p>
+<div class="line-block">
+<div class="line">For correct function, the use of the function block TimeRead with <em>xEn</em> = TRUE is mandatory.</div>
+</div>
+</div>
+</div>
+<div class="section" id="ruckfuhrung-der-leistung-des-warmeerzeugers-ru">
+<h3>Recirculation of the heat producer output <em>rU</em><a class="headerlink" href="#ruckfuhrung-der-leistung-des-warmeerzeugers-ru" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The current <strong>actual</strong> power of the heat producer can be connected to the <em>rU</em> input.</div>
+<div class="line">This input is currently not used for control purposes.</div>
+</div>
+</div>
+<div class="section" id="ruckfuhrung-des-handwerts-fur-das-leistungssignal-von-der-handubersteuerung-hardware-rpoti">
+<h3>Feedback of the manual value for the power signal from the manual override - Hardware <em>rPoti</em><a class="headerlink" href="#ruckfuhrung-des-handwerts-fur-das-leistungssignal-von-der-handubersteuerung-hardware-rpoti" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The manual value feedback can be connected to the <em>rPoti</em> input.</div>
+<div class="line">This input is currently not used for control purposes.</div>
+</div>
+</div>
+<div class="section" id="nicht-aktiver-zustand-xen-false">
+<h3>Inactive state ( <em>xEn</em> = FALSE )<a class="headerlink" href="#nicht-aktiver-zustand-xen-false" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-3">
+<colgroup>
+<col width="13%" />
+<col width="6%" />
+<col width="13%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xHB</em></th>
+<th class="head"><em>xAB</em></th>
+<th class="head"><em>rHA</em></th>
+<th class="head"><em>rAA</em></th>
+<th class="head"><em>tOnDelay</em></th>
+<th class="head"><em>tOnControlDelay</em></th>
+<th class="head"><em>dtLastFb</em></th>
+<th class="head"><em>udiOperatingHours</em></th>
+<th class="head"><em>udiCountFb</em></th>
+<th class="head"><em>xAlarm</em></th>
+<th class="head"><em>xAuto</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE ( eManModeB = eManBin.Auto )</td>
+<td>FALSE</td>
+<td><strong>rYDisabled</strong> ( eManModeN = eManNum.Auto )</td>
+<td><strong>rYDisabled</strong></td>
+<td><p class="first last">old value</p>
+</td>
+<td><p class="first last">old value</p>
+</td>
+<td><p class="first last">old value</p>
+</td>
+<td><p class="first last">old value</p>
+</td>
+<td><p class="first last">old value</p>
+</td>
+<td><p class="first last">State of <em>xAlarmIn</em></p>
+</td>
+<td><p class="first last">old value</p>
+</td>
+<td><em>xEn</em> = FALSE</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="6%" />
+<col width="15%" />
+<col width="10%" />
+<col width="19%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="9">Input</td>
+<td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Request of the heat producer ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rSetPtTemp</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Flow set temperature in °C</p>
+</td>
+</tr>
+<tr class="row-even"><td>xFb</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating feedback of the heat producer ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rU</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Recirculation of the heat producer output <em>rU</em></p>
+</td>
+</tr>
+<tr class="row-even"><td>xAlarmIn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Fault message of the heat producer ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>eAOO</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eManBin</span></a></td>
+<td>HVACTYPES.eManBin.Auto</td>
+<td><p class="first last">Operating mode of the manual override - Hardware for the output <em>xHB</em></p>
+</td>
+</tr>
+<tr class="row-even"><td>eAO</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eManNum</span></a></td>
+<td>HVACTYPES.eManNum.Auto</td>
+<td><p class="first last">Operating mode of the manual override - Hardware for the output <em>rHA</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>rPoti</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Feedback of the hand value for the power signal from the hand override - Hardware</p>
+</td>
+</tr>
+<tr class="row-even"><td>rFdT</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Flow set temperature in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="11">Output</td>
+<td>xHB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable - Heat producer after manual override ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enable - Heat producer before manual override ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rHA</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Power signal - heat producer after manual override 0.0 - 100.0 %</p>
+</td>
+</tr>
+<tr class="row-even"><td>rAA</td>
+<td>REAL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Power signal - heat producer before manual override 0.0 - 100.0 %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>tOnDelay</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td><p class="first last">Waiting time until the end of the minimum idle time in s</p>
+</td>
+</tr>
+<tr class="row-even"><td>tOnControlDelay</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td><p class="first last">Waiting time until start of temperature control in s</p>
+</td>
+</tr>
+<tr class="row-odd"><td>dtLastFb</td>
+<td>DT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Date / time of the last operation of the heat producer</p>
+</td>
+</tr>
+<tr class="row-even"><td>udiOperatingHours</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Operating hours of the heat producer in h</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiCountFb</td>
+<td>UDINT</td>
+<td>&nbsp;</td>
+<td><p class="first last">Number of starts of the heat producer</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Collective fault message ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAuto</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Automatic message ( FALSE = Off, TRUE = On )</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="14">Input</td>
+<td>rYMax</td>
+<td>REAL</td>
+<td>100</td>
+<td><p class="first last">Power controller - Upper absolute limit value of the output signal in %.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rYMin</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Power controller - Lower absolute limit value of the output signal in %.</p>
+</td>
+</tr>
+<tr class="row-even"><td>rTn</td>
+<td>REAL</td>
+<td>200</td>
+<td><p class="first last">Power controller - reset time in s</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rKp</td>
+<td>REAL</td>
+<td>2</td>
+<td><p class="first last">Power controller - Gain factor</p>
+</td>
+</tr>
+<tr class="row-even"><td>rOffset</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Power controller - offset temperature in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rInitValue</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Power controller - Initialization value for the output signal in %.</p>
+</td>
+</tr>
+<tr class="row-even"><td>rYDisabled</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Power controller - switch-off value in %</p>
+</td>
+</tr>
+<tr class="row-odd"><td>udiWaitControl</td>
+<td>UDINT</td>
+<td>3</td>
+<td><p class="first last">Waiting time until the power controllers are enabled ( <em>xFB</em> = TRUE ) in minutes</p>
+</td>
+</tr>
+<tr class="row-even"><td>rSwitchOffPoint</td>
+<td>REAL</td>
+<td>2.5</td>
+<td><p class="first last">Switch-off point relative to flow set point temperature <em>rSetPtTemp</em> in °C</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rSwitchOnPoint</td>
+<td>REAL</td>
+<td>-2.5</td>
+<td><p class="first last">Switch-on point relative to flow set point temperature <em>rSetPtTemp</em> in °C</p>
+</td>
+</tr>
+<tr class="row-even"><td>udiTimeMinOff</td>
+<td>UDINT</td>
+<td>3</td>
+<td><p class="first last">Minimum idle time of the heat Producer in minutes</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rManValue</td>
+<td>REAL</td>
+<td>0</td>
+<td><p class="first last">Power controller - Output signal - Manual value ( eManModeN = eManNum.Man )</p>
+</td>
+</tr>
+<tr class="row-even"><td>eManModeN</td>
+<td><a class="reference internal" href="../../Enums/eManNum.html#emannum"><span class="std std-ref">eMANNUM</span></a></td>
+<td>eMANNUM.Auto</td>
+<td><p class="first last">Operating mode of manual override for the analog output signal <em>rHA</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>eManModeB</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td><p class="first last">Operating mode of manual override for the <em>xHB</em> digital output</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BurnerT.html" class="btn btn-neutral float-right" title="BurnerT (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Burner3P.html" class="btn btn-neutral float-left" title="Burner3P (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

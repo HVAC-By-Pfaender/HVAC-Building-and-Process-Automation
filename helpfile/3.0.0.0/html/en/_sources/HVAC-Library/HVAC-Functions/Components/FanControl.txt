@@ -1,0 +1,558 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.FanControl`:
+
+
+.. index::
+   single: FanControl
+
+.. _`FanControl`:
+
+FanControl (FB)
+---------------
+
+FUNCTION_BLOCK FanControl
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Regelung eines drehzahlvariablen Ventilators ( Regelgröße: absoluter Druck, Differenzdruck )
+     | Zusatzfunktionen: Handübersteuerungen, Reparaturschalter, Betriebsstundenzähler, Betriebsüberwachung, Luftmangelüberwachung, Grenzwertüberwachungen
+     | Typische Anwendung: Regelung eines Ventilators mit Frequenzumrichter
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/FanControl_FB.png
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein regelt einen drehzahlvariablen Ventilator mittels eines stetigen Stellsignals *rHA*.
+| Die generelle Freigabe des Ventilators erfolgt über die Anforderung *xEn* und das Freigabesignal *xHB*.
+| Die Druckregelung erfolgt mittels eines frei parametrierbaren PI-Reglers, dem der Drucksollwert *rSetPoint*
+  und der Druckistwert *rActValue* zugeführt werden und daraus das Stellsignal des Reglers erzeugt.
+|
+| Es kommen im Wesentlichen folgende Funktionsbausteine zur Anwendung:
+
+:ref:`ControlPI <ControlPI>`
+
+:ref:`ManBin <ManBin>`
+
+:ref:`ManNum <ManNum>`
+
+:ref:`TwoPointFun <TwoPointFun>`
+
+:ref:`Ramp <Ramp>`
+
+:ref:`CTime <CTime>`
+
+:ref:`AirShortage <AirShortage>`
+
+:ref:`OperatingHours <OperatingHours>`
+
+Freigabe - Ventilator vor Handübersteuerung *xAB*
+=================================================
+| Die Freigabe - Ventilator vor Handübersteuerung *xAB* wird aktiviert ( = TRUE ), falls gleichzeitig folgende Bedingungen erfüllt sind:
+|
+| Fall 1:
+|
+| *xEn* = TRUE
+| *xMSwitch* = TRUE
+| **xAlarmControl** = FALSE
+|
+| Fall 2:
+|
+| *xEn* = TRUE
+| *xMSwitch* = TRUE
+| **xAlarmControl** = TRUE
+| *xAlarm* = FALSE
+|
+| In allen übrigen Situationen ist die Freigabe - Ventilator vor Handübersteuerung *xAB* nicht aktiviert ( = FALSE ).
+
+Freigabe - Ventilator nach Handübersteuerung *xHB*
+==================================================
+| Die Freigabe - Ventilator nach Handübersteuerung *xHB* entspricht der Freigabe - Ventilator vor Handübersteuerung *xAB*,
+  zusätzlich erweitert um ein Handübersteuermodul.
+| Die Freigabe kann generell nur dann erfolgen, falls die Zwangssperrung des Ventilators nach Handübersteuerung nicht aktiv ( *xForce* = FALSE )
+| und die Sammelstörmeldung 2 nicht aktiv ( = FALSE ) sind.
+
+ .. list-table::
+    :name: Funktionstabelle_1
+    :widths: 300 300 300 900
+    :header-rows: 1
+
+    * - *xAB*
+      - **eManModeB**
+      - *xHB*
+      - Hinweise
+    * - FALSE
+      - eMANBIN.Auto
+      - FALSE
+      - Handübersteuermodul in Automatik
+    * - TRUE
+      - eMANBIN.Auto
+      - TRUE
+      - Handübersteuermodul in Automatik
+    * - X
+      - eMANBIN.ManOn
+      - TRUE
+      - Handübersteuermodul in Handbetrieb Ein
+    * - X
+      - eMANBIN.ManOff
+      - FALSE
+      - Handübersteuermodul in Handbetrieb Aus
+
+| Legende: X = beliebig
+
+Meldung des Reparaturschalters *xMSwitch*
+=========================================
+| *xMSwitch* = TRUE:     Reparaturschalter wurde nicht ausgelöst ( Normalzustand )
+| *xMSwitch* = FALSE:    Reparaturschalter wurde ausgelöst ( Fehlerzustand )
+
+Zwangssperrung des Ventilators nach Handübersteuerung *xForce*
+==============================================================
+| *xForce* = FALSE:     keine Zwangssperrung ( Normalzustand )
+| *xForce* = TRUE:  Zwangssperrung ( Ausnahmezustand )
+
+Betriebsstunden und Einschaltvorgänge *udiOperatingHours* und *udiCountFb*
+==========================================================================
+| Die Anzahl der Betriebsstunden und der Einschaltvorgänge werden erfasst ( = Zählprozess aktiv ), falls die Betriebsmeldung
+  des Ventilators *xFb* aktiv ist und gleichzeitig die Sammelstörmeldung 2 nicht aktiv ist ( = FALSE ).
+| Die Ergebnisse stehen an den Zählerausgängen **udiOperatingHours** und **udiCountFb** zur Verfügung.
+
+.. topic:: Schreibzugriff auf die Zählerstände
+
+    | Über den Pfad 'Instanzname._OperatingHours.udiOperatingHours' bzw. 'Instanzname._OperatingHours.udiCountFb' ist ein Schreibzugriff auf die beide Zählerstände möglich.
+
+.. topic:: Voraussetzung für den Einsatz des Funktionsbausteins FanControl
+
+    | Zur korrekten Funktion ist der Einsatz des Funktionsbausteins TimeRead mit *xEn* = TRUE erforderlich.
+
+Datum / Uhrzeit des letzten Betriebs des Ventilators *dtLastFb*
+===============================================================
+| Am Ausgang *dtLastFb* steht während des Zählprozesses das aktuelle Datum / die aktuelle Uhrzeit zur Verfügung.
+| Am Ausgang *dtLastFb* steht ausserhalb des Zählprozesses das Datum / die Uhrzeit am Ende des letzten Zählprozesses zur Verfügung.
+| Am Ausgang *dtLastFb* wird vor dem ersten Zählprozess der Initialisierungswert DT#1970-1-1-0.0.0 ausgegeben.
+
+Betriebsüberwachung *xAlarmFb*
+==============================
+| Die Betriebsüberwachung kann durch den Sollwert / Parameter **xFbControl** freigegeben ( = TRUE ) oder gesperrt ( = FALSE ) werden.
+|
+| Bei gesperrter Überwachung wird die Störmeldung der Betriebsüberwachung *xAlarmFb* immer gesperrt ( = FALSE ).
+| Bei freigegebener Überwachung wird die Störmeldung der Betriebsüberwachung *xAlarmFb* aktiviert ( = TRUE ), falls
+  gleichzeitig während einer Mindestzeitdauer **udiFbControlTime** folgende Zustände gegeben sind:
+|
+| *xHB* und *xFb*        = ungleich ( Freigabezustand und Betriebszustand stimmen nicht überein )
+| *eAOO*                 = HVACTYPES.eManBin.Auto ( Handübersteuerung - Hardware für die Freigabe in Automatik )
+| **xFbControl**         = TRUE  ( Betriebsüberwachung ist freigegeben )
+|
+| Die Störmeldung der Betriebsüberwachung *xAlarmFb* wird zurück gesetzt ( = FALSE ), falls mindestens eine der nachfolgenden
+  Bedingungen erfüllt ist:
+|
+| *eAOO*                 = HVACTYPES.eManBin.Auto ( Rückschaltung in den Automatikbetrieb der Handübersteuerung - Hardware )
+| *xQuit*                = TRUE  ( Rücksetzung der Überwachungen ist aktiv )
+| **xFbControl**         = FALSE ( Betriebsüberwachung gesperrt )
+
+Luftmangelüberwachung *xAlarmPFb*
+=================================
+| Die Luftmangelüberwachung erfolgt durch die Auswertung der Zustände an den Eingängen *xPFb* bzw. *xFb*.
+|
+| Die Störmeldung der Luftmangelüberwachung *xAlarmPFb* wird aktiviert ( = TRUE ), falls bei freigegebener Überwachung ( **xPFbControl** = TRUE )
+  während der Meldeverzögerung der Luftmangelüberwachung **udiPFbControlTime** permanent der Eingang *xPFb* nicht aktiv ( = FALSE ) und der
+| Eingang *xFb* aktiv ( = TRUE ) sind.
+|
+| Die Störmeldung der Luftmangelüberwachung *xAlarmPFb* wird deaktiviert ( = FALSE ), falls die Bedingungen zur Aktivierung nicht mehr gegeben sind
+  und gleichzeitig die Überwachung gesperrt ist ( **xPFbControl** = FALSE ) und / oder die Rücksetzung der Störmeldungen ( Überwachungen ) aktiv ist ( *xQuit* = TRUE ).
+
+Sammelstörmeldung 1 - Ausgang *xAlarm*
+======================================
+| Die Sammelstörmeldung wird aktiviert ( = TRUE ), falls mindestens eine der nachfolgend beschriebenen Bedingungen erfüllt ist.
+|
+| *xAlarmIn*         = TRUE     ( Störmeldung des Ventilators ist aktiv )
+| *xAlarmFB*         = TRUE     ( Fehler aus der Betriebüberwachung )
+| *xAlarmPFB*        = TRUE     ( Fehler aus der Luftmangelüberwachung )
+| *xMSwitch*         = FALSE ( Reparaturschalter in Stellung Aus )
+| *xAlarmMaxValue*   = TRUE  ( Maximalwert überschritten )
+| *xAlarmMinValue*   = TRUE  ( Minimalwert unterschritten )
+|
+| In allen übrigen Fällen ist die Sammelstörung nicht aktiv ( = FALSE ).
+
+Sammelstörmeldung 2
+===================
+| Die Sammelstörmeldung wird aktiviert ( = TRUE ), falls mindestens eine der nachfolgend beschriebenen Bedingungen erfüllt ist.
+|
+| *xAlarmIn*         = TRUE     ( Störmeldung des Ventilators ist aktiv )
+| *xAlarmFB*         = TRUE     ( Fehler aus der Betriebüberwachung )
+| *xAlarmPFB*        = TRUE     ( Fehler aus der Luftmangelüberwachung )
+| *xMSwitch*         = FALSE ( Reparaturschalter in Stellung Aus )
+| *xAlarmMaxValue*   = TRUE  ( Maximalwert überschritten )
+|
+| In allen übrigen Fällen ist die Sammelstörung nicht aktiv ( = FALSE ).
+
+Rücksetzung der Störmeldungen *xQuit*
+=====================================
+| Jede ansteigende Flanke ( FALSE > TRUE ) am Eingang *xQuit* löscht eventuell vorhandene Störmeldungen der folgenden Überwachungseinrichtungen
+|
+| Luftmangelüberwachung
+| Betriebsüberwachung
+| Minimalwertüberwachung
+| Maximalwertüberwachung
+
+Druckregelprozess
+=================
+|
+| Allgemeines
+|
+| Der Druckistwert *rActValue* wird durch eine lineare Kennlinie skaliert und dem PI-Regler zugeführt.
+| Der Drucksollwert *rSetPont* wird durch eine Signalrampe gefiltert, durch eine lineare Kennlinie skaliert und dem PI-Regler zugeführt.
+| Das Ausgangssignal des PI-Reglers wird durch eine weitere Signalrampe gefiltert und dem Ausgang für das Stellsignal *rHA* zugeführt.
+|
+|
+| Freigabe
+|
+| Die Freigabe des Regelprozesses erfolgt mit einer Zeitverzögerung von **udiWaitControl** nach der aktiven Betriebsmeldung des Ventilators ( *xFb* = TRUE ).
+| Die Sperrung des Regelprozesses erfolgt ohne Zeitverzögerung nach der inaktiven Betriebsmeldung des Ventilators ( *xFb* = FALSE ).
+|
+|
+| Drucksollwert
+|
+| Der Drucksollwert wird auf Wert 0.0 fixiert, falls die Freigabe des Ventilators nicht aktiv ist ( *xHB* = FALSE ).
+| Der Drucksollwert wird vom Eingang *rSetPoint* übernommen, durch eine Signalrampe gefiltert und durch eine durch 2 Punkte
+  definierte lineare Funktion skaliert ( Voraussetzung: *xHB* = TRUE ).
+| Die relevanten Parameter der Signalrampe sind individuell einstellbar ( Maximale Variation = (**rMaxValue** / 5) pro 10s ).
+| Die relevanten Parameter der linearen Funktion sind individuell einstellbar ( Eingangsbereich in Pa: 0.0 - **rMaxValue**, Ausgangsbereich in %: 0.0 - 100.0 ).
+|
+|
+| Druckistwert
+|
+| Der Druckistwert wird vom Eingang *rActValue* übernommen und durch eine durch 2 Punkte definierte lineare Funktion skaliert.
+| Die relevanten Parameter der linearen Funktion sind individuell einstellbar ( Eingangsbereich in Pa: 0.0 - **rMaxValue**, Ausgangsbereich in %: 0.0 - 100.0 ).
+|
+|
+| Begrenzung des Stellsignals des PI-Reglers **rYMin** und **rYMax**
+|
+| Das Stellsignal des Druckreglers ( PI-Regler ) wird durch die einstellbaren Grenzwerte **rYMin** und **rYMax** ( Minimalwertüberwachung nicht aktiv ) bzw.
+  **rSubstitueHA** ( Minimalwertüberwachung aktiv ) begrenzt.
+|
+|
+| Signalrampe des Stellsignals aus dem PI-Regler
+|
+| Das Stellsignal aus dem PI-Regler wird durch eine Signalrampe gefiltert.
+| Die relevanten Parameter der Signalrampe sind individuell einstellbar ( Maximale Variation = **rYRampVariation** pro **rYRampTime** ).
+|
+|
+| Parameter des PI-Reglers
+|
+| Die für das Regelverhalten wesenlichen Parameter können von außen vorgegeben werden. Sie müssen je nach Regelstrecke angepast werden.
+| Es wurde bereits eine sinnvolle Basisparametrierung vorgenommen, die in vielen Anwendungsfällen ausreichend ist.
+|
+| **rYMin**             = Unterer absoluter Grenzwert des Regler-Ausgangssignals
+| **rYMax**          = Oberer absoluter Grenzwert des Regler-Ausgangssignals
+| **rOffset**       = Sollwertversatz - Druckregler
+| **rKp**           = Verstärkungsfaktor - Druckregler
+| **rTn**           = Nachstellzeit - Druckregler in s
+| **eAction**       = Wirksinnn des Druckreglers ( Invertiert, Direkt )
+| **rInitValue**        = Initialisierungswert für das Stellsignal
+| **rYDisabled**        = Stellsgnal bei inaktivem Druckregler
+|
+|
+| Signale des PI-Reglers
+|
+| Die während des Regelprozesses errechneten Signale ( vor der Signalrampe ) stehen zur Kontrolle des Regelvorgangs zur Verfügung.
+|
+| *rPiDiff*             = Regelabweichung am Druckregler
+| *rPiPartP*         = Proportionalanteil am Stellsignal
+| *rPiPartI*            = Integralanteil am Stellsignal
+| *xPiLimitActiv*   = Status - Grenzwertüberschreitung - Stellsignal ( FALSE = Aus, TRUE = Ein )
+|
+| Stellsignal des Reglers
+|
+| Bei nicht freigegebenem Druckregler wird der Ausschaltwert **rYDisabled** zum Ausgang Stellsignal des Reglers übertragen
+  ( Voraussetzung: **ePiManModeN** = eMANNUM.Auto ) und durch die absoluten Grenzwerte begrenzt.
+| Der Integralanteil wird auf 0.0 gesetzt.
+|
+| Bei freigegebenem Druckregler wird das Stellsignal des Reglers berechnet ( Voraussetzung: **ePiManModeN** = eMANNUM.Auto )
+  und durch die absoluten Grenzwerte begrenzt.
+|
+| Mit der Grundeinstellung des Wirksinns **eAction** ( = eControlMode.Inverted ) bewirkt ein zu geringer Druckistwert ( Istwert < Sollwert )
+  eine stetige Erhöhung des Wertes des Stellsignals des Reglers.
+
+Stellsignal Ventilator vor Handübersteuerung *rAA*
+==================================================
+| Das Stellsignal des Ventilators vor Handübersteuerung *rAA* wird primär vom Ausgangssignal des Druckreglers nach der Signalrampe übernommen.
+| Dieses Ausgangssignal wird jedoch zusätzlich während der Anforderung des Ventilators ( *xHB = TRUE ) durch den unteren absoluter Grenzwert **rYMin** nach unten begrenzt.
+| Im Falle einer Minimalwertunterschreitung ( *xAlarmMinValue* = TRUE ) wird das Stellsignal vor Handübersteuerung *rAA* durch den Fixwert **rSubstitueHA** ersetzt.
+
+Stellsignal Ventilator nach Handübersteuerung *rHA*
+===================================================
+| Das Stellsignal des Ventilators nach Handübersteuerung *rHA* entspricht dem Stellsignal des Ventilators vor Handübersteuerung *rAA*
+  zusätzlich erweitert um ein Handübersteuermodul.
+
+ .. list-table::
+    :name: Funktionstabelle_2
+    :widths: 300 300 300 900
+    :header-rows: 1
+
+    * - *rAA*
+      - **eManModeN**
+      - *rHA*
+      - Hinweise
+    * - X
+      - eMANNUM.Auto
+      - *rAA*
+      - Handübersteuermodul in Automatik
+    * - X
+      - eMANNUM.Man
+      - **eManValue**
+      - Handübersteuermodul in Handbetrieb
+
+| Legende: X = beliebig
+
+Betriebsart für das Ausgangssignal des Reglers **ePIManModeN**
+==============================================================
+| Der Parameter **ePiManModeN** erlaubt die Umschaltung des Ausgangssignals des Druckreglers vom Automatik- in den Handbetrieb und umgekehrt.
+| Im Handbetrieb übernimmt das Ausgangssignal des Druckreglers das Ausgangssignal im Handbetrieb **ePiManValue**.
+
+ .. list-table::
+    :name: Betriebsart - Ausgangssignal
+    :widths: 300 300 900
+    :header-rows: 1
+
+    * - **ePiManModeN**
+      - Ausgangssignal
+      - Funktion
+    * - eMANNUM.Auto
+      - Signal gemäß Formel / Ausschaltwert
+      - Automatikbetrieb - Ausgangssignal
+    * - eMANNUM.Man
+      - **ePiManValue**
+      - Handbetrieb - Ausgangssignal
+
+Überwachung des Maximaldrucks *xAlarmMaxValue*
+==============================================
+| Der Ausgang *xAlarmMaxValue* wird aktiviert ( = TRUE ), falls während einer Mindestzeitdauer von 10s der aktuelle Druckistwert
+  *rActValue* den einstellbaren Maximalwert **rMaxValue** überschreitet.
+| Der Ausgang *xAlarmMaxValue* wird deaktiviert ( = FALSE ), falls der aktuelle Druckistwert *rActValue* den einstellbaren
+  Maximalwert **rMaxValue** unterschreitet und gleichzeitig am Eingang *xQuit* eine ansteigende Flanke ( FALSE > TRUE ) erkannt wird.
+
+Überwachung des Minimaldrucks *xAlarmMinValue*
+==============================================
+| Der Ausgang *xAlarmMinValue* wird aktiviert ( = TRUE ), falls während einer Mindestzeitdauer **udiWaitMinValue** ( 1.0 - 600.0 s )
+  folgende Bedingungen gleichzeitig permanent erfüllt sind:
+|
+| *xFb* = TRUE ( Ventilator ist in Betrieb )
+| *eAO* = HVACTYPES.eManNum.Auto ( Betriebsart der Handübersteuerung - Hardware für das Stellsignal im Automatikbetrieb )
+| *rHA* > **rMinHAValue** ( Stellsignal ist grösser als der Minimalwert )
+| *rActValue* < **rMinValue** ( Druckistwert ist kleiuer als der Minimalwert )
+| Es wurde keine ansteigende Flanke ( FALSE > TRUE ) am Eingang *xQuit* erkannt
+
+| Der Ausgang *xAlarmMinValue* wird deaktiviert ( = FALSE ), falls die Bedingungen für die Aktivierung nicht mehr erfüllt sind
+  und gleichzeitig am Eingang *xQuit* eine ansteigende Flanke ( FALSE > TRUE ) erkannt wird.
+
+Sammelmeldung Automatikbetrieb *xAuto*
+======================================
+| Die Sammelmeldung Automatikbetrieb *xAuto* wird aktiviert ( = TRUE ), falls folgende Bedingungen gleichzeitig erfüllt sind:
+|
+| - Eingang *eAOO* = HVACTYPES.eManBin.Auto
+| - Eingang *eAO* = HVACTYPES.eManNum.Auto
+| - Sollwert / Parameter **eManModeB** = eMANBIN.Auto
+| - Sollwert / Parameter **eManModeN** = eMANNUM.Auto
+| - Sollwert / Parameter **ePiManModeN** = eMANNUM.Auto
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-------------------+------------------+------------------------+--------------------------------------------------------------+
+    | Scope  | Name              | Type             | Initial                | Comment                                                      |
+    +========+===================+==================+========================+==============================================================+
+    | Input  | xEn               | BOOL             |                        | Anforderung des Ventilators ( FALSE = Aus, TRUE = Ein )      |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xForce            | BOOL             | FALSE                  | Zwangssperrung des Ventilators nach Handübersteuerung (      |
+    |        |                   |                  |                        | FALSE = Aus, TRUE = Ein )                                    |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xFb               | BOOL             |                        | Betriebsmeldung des Ventilators ( FALSE = Aus, TRUE = Ein )  |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xPFb              | BOOL             |                        | Rückmeldung der Luftmangelüberwachung ( FALSE = Luftmangel,  |
+    |        |                   |                  |                        | TRUE = kein Luftmangel )                                     |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xMSwitch          | BOOL             | TRUE                   | Rückmeldung der Reparaturschalters ( FALSE = Schalter Aus,   |
+    |        |                   |                  |                        | TRUE = Schalter Ein )                                        |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xAlarmIn          | BOOL             |                        | Störmeldung des Ventilators ( FALSE = Aus, TRUE = Ein )      |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | eAOO              | |ioeManBin|      | HVACTYPES.eManBin.Auto | Betriebsart der Handübersteuerung - Hardware für die         |
+    |        |                   |                  |                        | Freigabe                                                     |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | eAO               | |ioeManNum|      | HVACTYPES.eManNum.Auto | Betriebsart der Handübersteuerung - Hardware für das         |
+    |        |                   |                  |                        | Stellsignal                                                  |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rPoti             | REAL             |                        | Handwert - Handübersteuerung - Hardware für das Stellsignal  |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rU                | REAL             |                        | Rückführsignal vom Ventilator in %                           |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xQuit             | BOOL             | FALSE                  | Rücksetzung der Störmeldungen ( Überwachungen ) ( FALSE =    |
+    |        |                   |                  |                        | Aus, TRUE = Ein )                                            |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rActValue         | REAL             |                        | Druckistwert in Pa                                           |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rSetPoint         | REAL             |                        | Drucksollwert ( absolut, Differenz ) in Pa                   |
+    +--------+-------------------+------------------+------------------------+--------------------------------------------------------------+
+    | Output | xHB               | BOOL             |                        | Freigabe - Ventilator nach Handübersteuerung ( FALSE = Aus,  |
+    |        |                   |                  |                        | TRUE = Ein )                                                 |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xAB               | BOOL             |                        | Freigabe - Ventilator vor Handübersteuerung ( FALSE = Aus,   |
+    |        |                   |                  |                        | TRUE = Ein )                                                 |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rHA               | REAL             |                        | Stellsignal - Ventilator nach Handübersteuerung in %         |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rAA               | REAL             |                        | Stellsignal - Ventilator vor Handübersteuerung in %          |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xAlarmFb          | BOOL             |                        | Störmeldung der Betriebsüberwachung ( FALSE = Aus, TRUE =    |
+    |        |                   |                  |                        | Ein )                                                        |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xAlarmPFb         | BOOL             |                        | Störmeldung der Luftmangelüberwachung ( FALSE = Aus, TRUE =  |
+    |        |                   |                  |                        | Ein )                                                        |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xAlarmMinValue    | BOOL             |                        | Störmeldung der Minimalwertüberwachung ( FALSE = Aus, TRUE = |
+    |        |                   |                  |                        | Ein )                                                        |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xAlarmMaxValue    | BOOL             |                        | Störmeldung der Maximalwertüberwachung ( FALSE = Aus, TRUE = |
+    |        |                   |                  |                        | Ein )                                                        |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | dtLastFb          | DT               |                        | Datum / Uhrzeit des letzten Betriebs des Ventilators         |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | udiOperatingHours | UDINT            |                        | Betriebsstunden des Ventilators                              |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | udiCountFb        | UDINT            |                        | Anzahl der Einschaltungen des Ventilators                    |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xAlarm            | BOOL             |                        | Sammelstörmeldung ( FALSE = Aus, TRUE = Ein )                |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xAuto             | BOOL             |                        | Sammelmeldung - Automatikbetrieb ( FALSE = kein              |
+    |        |                   |                  |                        | Automatikbetrieb, TRUE = Automatikbetrieb )                  |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rPiDiff           | REAL             |                        | Regelabweichung am Druckregler in Pa                         |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rPiPartP          | REAL             |                        | Proportionalanteil am Stellsignal des Druckreglers in %      |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rPiPartI          | REAL             |                        | Integralanteil am Stellsignal des Druckreglers in %          |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xPiLimitActiv     | BOOL             |                        | Status - Grenzwertüberschreitung - Stellsignal -             |
+    |        |                   |                  |                        | Druckregeler ( FALSE = keine berschreitung, TRUE =           |
+    |        |                   |                  |                        | Überschreitung )                                             |
+    +--------+-------------------+------------------+------------------------+--------------------------------------------------------------+
+    | Input  | rMaxValue         | REAL             | 490                    | Maximaler Druckistwert in Pa                                 |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | blanc5            | BOOL             |                        | *** Überwachung des maximalen Druckistwerts ***              |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rSubstituteHA     | REAL             | 30                     | Ersatzstellsignal in %                                       |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | udiWaitMinValue   | UDINT            | 60                     | Wartezeit bis zur Auswertung des Minimalwerts in s ( 1.0 -   |
+    |        |                   |                  |                        | 600.0 s )                                                    |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rMinHAValue       | REAL             | 20                     | Unterer Schwellwert des Stellsignals für das                 |
+    |        |                   |                  |                        | Ersatzstellsignal in %                                       |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rMinValue         | REAL             | 20                     | Unterer Schwellwert des Druckistwerts für das                |
+    |        |                   |                  |                        | Ersatzstellsignal in Pa                                      |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | blanc4            | BOOL             |                        | *** Überwachung des Minimalwerts ***                         |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | tYRampTime        | TIME             | TIME#1m0s0ms           | Zeiteinheit für die maximale Änderung des Stellsignals in s  |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rYRampVariation   | REAL             | 30                     | Maximale Änderung des Stellsignals pro Zeitheinheit in %     |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | blanc3            | BOOL             |                        | *** Rampe für das Stellsignal ***                            |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | udiWaitControl    | UDINT            | 30                     | Wartezeit bis zur Freigabe der Druckregelung in s ( 5.0 -    |
+    |        |                   |                  |                        | 600.0 s )                                                    |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | blanc2            | BOOL             |                        | *** Wartezeit - Freigabe - Druckregelung ***                 |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rYMax             | REAL             | 100                    | Druckregler - Oberer absoluter Grenzwert des Stellsignals in |
+    |        |                   |                  |                        | %                                                            |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rYMin             | REAL             | 20                     | Druckregler - Unterer absoluter Grenzwert des Stellsignals   |
+    |        |                   |                  |                        | in %                                                         |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rTn               | REAL             | 60                     | Druckregler - Nachstellzeit in s                             |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rKp               | REAL             | 1                      | Druckregler - Verstärkungsfaktor                             |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rOffset           | REAL             | 0                      | Druckregler - Additiver Sollwertversatz in Pa                |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rInitValue        | REAL             | 20                     | Druckregler - Initialisierungswert für das Stellsignal in %  |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | rYDisabled        | REAL             | 0                      | Druckregler - Stellsgnal bei inaktivem Druckregler in %      |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | eAction           | |ioeControlMode| | eControlMode.Inverted  | Wirksinnn des Druckregler ( Invertiert, Direkt )             |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | ePiManValue       | REAL             |                        | Druckregler - Ausgangssignal des Reglers im Handbetrieb in % |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | ePiManModeN       | |ioeMANNUM|      | eMANNUM.Auto           | Druckregler - Betriebsart für das Ausgangssignal des Reglers |
+    |        |                   |                  |                        | ( Auto, Man )                                                |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | blanc1            | BOOL             |                        | *** Druckregler ***                                          |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | udiPFbControlTime | UDINT            | 60                     | Meldeverzögerung der Luftmangelüberwachung in s              |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xPFbControl       | BOOL             | TRUE                   | Freigabe der Luftmangelüberwachung ( FALSE = Sperrung, TRUE  |
+    |        |                   |                  |                        | = Freigabe )                                                 |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xAlarmControl     | BOOL             | TRUE                   | Einfluss von *xAlarm* auf *xAB* ( FALSE = kein Einfluss,     |
+    |        |                   |                  |                        | TRUE = Einfluss )                                            |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | udiFbControlTime  | UDINT            | 60                     | Meldeverzögerung der Betriebsüberwachung in s ( 0.0 - 300.0  |
+    |        |                   |                  |                        | s )                                                          |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | xFbControl        | BOOL             | TRUE                   | Freigabe / Sperrung der Betriebsüberwachung ( FALSE =        |
+    |        |                   |                  |                        | Sperrung, TRUE = Freigabe )                                  |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | eManValue         | REAL             |                        | Stellsignal im Handbetrieb für das Stellsignal *rHA* in %    |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | eManModeN         | |ioeMANNUM|      | eMANNUM.Auto           | Betriebsart der Handübersteuerung für das Stellsignal *rHA*  |
+    +        +-------------------+------------------+------------------------+--------------------------------------------------------------+
+    |        | eManModeB         | |ioeMANBIN|      | eMANBIN.Auto           | Betriebsart der Handübersteuerung für den digitalen Ausgang  |
+    |        |                   |                  |                        | *xHB*                                                        |
+    +--------+-------------------+------------------+------------------------+--------------------------------------------------------------+
+
+.. |ioeManBin| replace:: :ref:`eManBin<eManBin>`
+.. |ioeMANBIN| replace:: :ref:`eMANBIN<eManBin>`
+.. |ioeManNum| replace:: :ref:`eManNum<eManNum>`
+.. |ioeControlMode| replace:: :ref:`eControlMode<eControlMode>`
+.. |ioeMANNUM| replace:: :ref:`eMANNUM<eManNum>`
+
+
+
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Components/pou-FanControl/mQuit
+   /HVAC-Library/HVAC-Functions/Components/pou-FanControl/mResetOperatingHours
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

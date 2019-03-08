@@ -1,0 +1,50 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Energy.hxChart.mEx`:
+
+
+.. _`hxChart.mEx`:
+
+hxChart.mEx (METH)
+------------------
+
+METHOD mEx
+
+
+
+
+.. todo:: Please add documentation for method: hxChart.mEx
+
+
+
+
+
+InOut:
+    +--------+-------+------+-----------------------------------------------+
+    | Scope  | Name  | Type | Comment                                       |
+    +========+=======+======+===============================================+
+    | Output | rPsat | REAL | Sättigungsdampfdruck in mBar                  |
+    +        +-------+------+-----------------------------------------------+
+    |        | rPdd  | REAL | Dampfdruck in mBar                            |
+    +        +-------+------+-----------------------------------------------+
+    |        | rHabs | REAL | absolute Feuchte in g Wasserdampf pro kg Luft |
+    +        +-------+------+-----------------------------------------------+
+    |        | rH1xA | REAL | Enthalpie Trockenluft [kJ/kg]                 |
+    +        +-------+------+-----------------------------------------------+
+    |        | rH1xW | REAL | Enthalpie Wassers [kJ/kg]                     |
+    +        +-------+------+-----------------------------------------------+
+    |        | rH1x  | REAL | Enthalpie [kJ/kg]                             |
+    +        +-------+------+-----------------------------------------------+
+    |        | rTabs | REAL | absolute Temperatur  (TA = T + -273.15)       |
+    +        +-------+------+-----------------------------------------------+
+    |        | rTd   | REAL | Taupunkttemperatur in °C                      |
+    +--------+-------+------+-----------------------------------------------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

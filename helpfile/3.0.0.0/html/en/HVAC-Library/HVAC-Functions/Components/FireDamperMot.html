@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FireDamperMot (FB) &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="OptStartHeat (FB)" href="OptStartHeat.html" />
+    <link rel="prev" title="FastHeating (FB)" href="FastHeating.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fld-Components.html">Components</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="Burner3P.html">Burner3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerP.html">BurnerP (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BurnerT.html">BurnerT (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoolOutProtection.html">CoolOutProtection (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Damper2P.html">Damper2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DamperAnalog.html">DamperAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuoPump.html">DuoPump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fan1Speed.html">Fan1Speed (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanAnalog.html">FanAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FanControl.html">FanControl (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FastHeating.html">FastHeating (FB)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">FireDamperMot (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OptStartHeat.html">OptStartHeat (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PreRinseOperationValveAnalog.html">PreRinseOperationValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Pump.html">Pump (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SequenceSUPTemp.html">SequenceSUPTemp (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Shade.html">Shade (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SmokeDetector.html">SmokeDetector (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve2P.html">Valve2P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Valve3P.html">Valve3P (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveAnalog.html">ValveAnalog (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ValveTherm.html">ValveTherm (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/fld-General.html">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+          <li><a href="fld-Components.html">Components</a> &raquo;</li>
+        
+      <li>FireDamperMot (FB)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/Components/FireDamperMot.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="fld-hvac-library-fld-hvac-functions-fld-components-firedampermot"></span><div class="section" id="firedampermot-fb">
+<span id="firedampermot"></span><span id="index-0"></span><h1>FireDamperMot (FB)<a class="headerlink" href="#firedampermot-fb" title="Permalink to this headline">¶</a></h1>
+<p>FUNCTION_BLOCK FireDamperMot</p>
+<div class="section" id="kurzbeschreibung">
+<h2>Short Description<a class="headerlink" href="#kurzbeschreibung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Control of a motorised fire damper with two position feedback signals</div>
+<div class="line">Additional functions: Function test of the fire damper</div>
+<div class="line">Typical application: Control of a fire damper in an HVAC system</div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="darstellung">
+<h2>Portrayal<a class="headerlink" href="#darstellung" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><img alt="../../../_images/FireDamperMot_FB.png" src="../../../_images/FireDamperMot_FB.png" />
+</div></blockquote>
+</div>
+<div class="section" id="funktionsbeschreibung">
+<h2>Functional Description<a class="headerlink" href="#funktionsbeschreibung" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3>General<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">This function block controls a binary motorised fire damper ( <em>xEn</em> = TRUE ), monitors the running times during the opening and closing process and can carry out a complete fire damper test.</div>
+<div class="line">The function block can be operated either in normal mode or in test mode.</div>
+<div class="line">Test mode has a higher priority than normal mode and can be triggered by a rising edge at input <em>xTestEx</em> and / or at setpoint / parameter <strong>xRunTest</strong>.</div>
+</div>
+</div>
+<div class="section" id="freigabe-offnung-schliessung-der-brandschutzklappe-vor-handubersteuerung-xab">
+<h3>Enable opening / closing of fire damper before manual override <em>xAB</em><a class="headerlink" href="#freigabe-offnung-schliessung-der-brandschutzklappe-vor-handubersteuerung-xab" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The opening / closing release of the fire damper before manual override <em>xAB</em> is taken over unchanged from the opening / closing request of the fire damper <em>xEn</em> if the fire damper test is not active.</div>
+</div>
+</div>
+<div class="section" id="freigabe-offnung-schliessung-der-brandschutzklappe-nach-handubersteuerung-xhb">
+<h3>Release of opening / closing of fire damper after manual override <em>xHB</em><a class="headerlink" href="#freigabe-offnung-schliessung-der-brandschutzklappe-nach-handubersteuerung-xhb" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The release opening / closing of the fire damper after manual override <em>xHB</em> corresponds to the release opening / closing of the fire damper before manual override <em>xAB</em> additionally extended by a manual override module</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils" id="funktionstabelle-1">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>xAB</em></th>
+<th class="head"><strong>eManModeB</strong></th>
+<th class="head"><em>xHB</em></th>
+<th class="head"><p class="first last">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FALSE</td>
+<td>eMANBIN.Auto</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-odd"><td>TRUE</td>
+<td>eMANBIN.Auto</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in automatic mode</p>
+</td>
+</tr>
+<tr class="row-even"><td>X</td>
+<td>eMANBIN.ManOn</td>
+<td>TRUE</td>
+<td><p class="first last">Manual override module in manual mode On</p>
+</td>
+</tr>
+<tr class="row-odd"><td>X</td>
+<td>eMANBIN.ManOff</td>
+<td>FALSE</td>
+<td><p class="first last">Manual override module in manual mode Off</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Legend: X = any</div>
+</div>
+</div>
+<div class="section" id="sammelstorung-xalarm">
+<h3><em>xAlarm</em> collective alarm<a class="headerlink" href="#sammelstorung-xalarm" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The collective alarm <em>xAlarm</em> is activated ( = TRUE ) if at least one of the conditions described below is met:</div>
+<div class="line"><br /></div>
+<div class="line">Case 1: The alarm message for the opening feedback <em>xAlarmOpen</em> is active ( = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">Case 2: The alarm message for the closing feedback <em>xAlarmClosed</em> is active ( = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">Case 3: Normal operation is active and at the same time the fire damper is not fully open ( <em>xOpen</em> = FALSE ).</div>
+<div class="line-block">
+<div class="line">( Background: Every fire damper that is not fully opened represents a faulty condition during normal operation ).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">In all other cases, the <em>xAlarm</em> collective fault is not activated (= FALSE).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="freigabe-sperrung-der-stormeldung-fur-die-ruckmeldung-der-offnung-xalarmopen">
+<h3>Enabling / disabling the alarm message for the opening feedback <em>xAlarmOpen</em><a class="headerlink" href="#freigabe-sperrung-der-stormeldung-fur-die-ruckmeldung-der-offnung-xalarmopen" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The monitoring of the running time of the damper during the opening process for an adjustable maximum value ( <strong>tOpen</strong> ) starts if at least one of the following conditions is fulfilled during normal operation:</div>
+<div class="line"><br /></div>
+<div class="line">Case 1: A rising edge ( FALSE &gt; TRUE ) is detected at output <em>xHB</em> ( = rule ).</div>
+<div class="line"><br /></div>
+<div class="line">Case 2: The request for opening is active ( <em>xEn</em> = TRUE ) and at the same time a rising edge ( FALSE &gt; TRUE ) is detected at input <em>xQuit</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Case 3: The output <em>xHB</em> is active ( = TRUE ) and at the same time a falling edge ( TRUE &gt; FALSE ) is detected at the input <em>xOpen</em>.</div>
+<div class="line"><br /></div>
+<div class="line">The alarm message for the opening feedback <em>xAlarmOpen</em> is activated ( = TRUE ) if at least one of the following conditions is fulfilled after the maximum running time <strong>tOpen</strong> has elapsed with active output ( <em>xHB</em> = TRUE ):</div>
+<div class="line"><br /></div>
+<div class="line">Case 1: The feedback of the complete opening is not active ( <em>xOpen</em> = FALSE ) ( = normal case ).</div>
+<div class="line"><br /></div>
+<div class="line">Case 2: The responses <em>xOpen</em> or <em>xClosed</em> have the same state.</div>
+<div class="line"><br /></div>
+<div class="line">The alarm message for the opening feedback <em>xAlarmOpen</em> is deactivated ( = FALSE ) if a rising edge ( FALSE &gt; TRUE ) is detected at the <em>xQuit</em> input.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="freigabe-sperrung-der-stormeldung-fur-die-ruckmeldung-der-schliessung-xalarmclosed">
+<h3>Enabling / disabling the alarm message for the feedback of the closing <em>xAlarmClosed</em><a class="headerlink" href="#freigabe-sperrung-der-stormeldung-fur-die-ruckmeldung-der-schliessung-xalarmclosed" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The monitoring of the running time of the damper during the closing process for an adjustable maximum value ( <strong>tclose</strong> ) starts if at least one of the following conditions is fulfilled during normal operation:</div>
+<div class="line"><br /></div>
+<div class="line">Case 1: A falling edge ( TRUE &gt; FALSE ) is detected at output <em>xHB</em> ( = rule case ).</div>
+<div class="line"><br /></div>
+<div class="line">Case 2: The request for closing is active ( <em>xEn</em> = FALSE ) and at the same time a rising edge ( FALSE &gt; TRUE ) is detected at input <em>xQuit</em>.</div>
+<div class="line"><br /></div>
+<div class="line">The alarm message for the closing feedback <em>xAlarmClosed</em> is activated ( = TRUE ) if at least one of the following conditions is fulfilled after the maximum running time <strong>tClose</strong> has elapsed when the output is not active ( <em>xHB</em> = FALSE ):</div>
+<div class="line"><br /></div>
+<div class="line">Case 1: The feedback of the complete closing is not active ( <em>xClosed</em> = FALSE ) ( = normal case ).</div>
+<div class="line"><br /></div>
+<div class="line">Case 2: The responses <em>xOpen</em> or <em>xClosed</em> have the same state.</div>
+<div class="line"><br /></div>
+<div class="line">The alarm message for the closing feedback <em>xAlarmClosed</em> is deactivated ( = FALSE ) if a rising edge ( FALSE &gt; TRUE ) is detected at input <em>xQuit</em>.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="zeitdauer-der-letzten-vollstandigen-offnung-tlastopen">
+<h3>Duration of the last complete opening <em>tLastOpen</em><a class="headerlink" href="#zeitdauer-der-letzten-vollstandigen-offnung-tlastopen" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The measurement of the duration begins each time at least one of the following conditions is met:</div>
+<div class="line"><br /></div>
+<div class="line">Case 1: A rising edge ( FALSE &gt; TRUE ) is detected at input <em>xOpen</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Case 2: A falling edge ( TRUE &gt; FALSE ) is detected at input <em>xOpen</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Case 3: A rising edge ( FALSE &gt; TRUE ) is detected at input <em>xClosed</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Case 4: A falling edge ( TRUE &gt; FALSE ) is detected at input <em>xClosed</em>. ( general case )</div>
+<div class="line"><br /></div>
+<div class="line">Case 5: A rising edge ( FALSE &gt; TRUE ) is detected at output <em>xHB</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Case 6: A falling edge ( TRUE &gt; FALSE ) is detected at output <em>xHB</em>.</div>
+<div class="line"><br /></div>
+<div class="line">At this output, the runtime is available after each rising edge at the feedback of the complete opening <em>xOpen</em> ( FALSE &gt; TRUE ).</div>
+</div>
+</div>
+<div class="section" id="zeitdauer-der-letzten-vollstandigen-schliessung-tlastclosed">
+<h3>Duration of the last complete closing <em>tLastClosed</em><a class="headerlink" href="#zeitdauer-der-letzten-vollstandigen-schliessung-tlastclosed" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The measurement of the duration begins each time at least one of the following conditions is met:</div>
+<div class="line"><br /></div>
+<div class="line">Case 1: A rising edge ( FALSE &gt; TRUE ) is detected at input <em>xOpen</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Case 2: A falling edge ( TRUE &gt; FALSE ) is detected at input <em>xOpen</em>.    ( general case )</div>
+<div class="line"><br /></div>
+<div class="line">Case 3: A rising edge ( FALSE &gt; TRUE ) is detected at input <em>xClosed</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Case 4: A falling edge ( TRUE &gt; FALSE ) is detected at input <em>xClosed</em>. ( general case )</div>
+<div class="line"><br /></div>
+<div class="line">Case 5: A rising edge ( FALSE &gt; TRUE ) is detected at output <em>xHB</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Case 6: A falling edge ( TRUE &gt; FALSE ) is detected at output <em>xHB</em>.</div>
+<div class="line"><br /></div>
+<div class="line">At this output, the runtime is available after each rising edge at the feedback of the complete closing <em>xClosed</em> ( FALSE &gt; TRUE ).</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="zeitdauer-der-aktuellen-offnung-schliessung-in-truntime">
+<h3>Duration of the current opening / closing in <em>tRunTime</em><a class="headerlink" href="#zeitdauer-der-aktuellen-offnung-schliessung-in-truntime" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">At this output, the current runtime is available during each runtime measurement.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="prufung-der-funktionen-der-brandschutzklappe-testbetrieb">
+<h3>Testing the functions of the fire damper ( test operation )<a class="headerlink" href="#prufung-der-funktionen-der-brandschutzklappe-testbetrieb" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">The test mode is always generally triggered if at least one of the conditions described below is met:</div>
+<div class="line"><br /></div>
+<div class="line">Case 1: A rising edge ( FALSE &gt; TRUE ) is detected at input <em>xTestEx</em>.</div>
+<div class="line"><br /></div>
+<div class="line">Case 2: The active state ( = TRUE ) is detected at the setpoint / parameter <em>xRunTest</em>. The active state is reset immediately after detection ( = FALSE ).</div>
+<div class="line"><br /></div>
+<div class="line">However, the actual test mode is only performed if the feedback of the automatic mode <em>byAU</em> ( 0 = automatic, &gt;0 = manual mode ) contains the value 0 and at the same time the operating mode of the manual override for the digital output <em>xHB</em> signals the automatic mode ( eMANBIN = eMANBIN.Auto ).</div>
+<div class="line"><br /></div>
+<div class="line">In test mode, the fire damper is closed and then opened, each time with running time monitoring.</div>
+<div class="line">At the beginning of the test mode the outputs <em>xAlarmOpen</em>, <em>xAlarmClosed</em> and <em>xTestOK</em> are resetted ( = FALSE ).</div>
+<div class="line"><br /></div>
+<div class="line">Now the control command for closing is triggered and the running time is monitored for exceeding the maximum value <strong>tClosed</strong>.</div>
+<div class="line">If the correct feedback situation ( <em>xClosed</em> = TRUE and <em>xOpen</em> = FALSE ) is reached without exceeding the maximum value, the following is displayed</div>
+<div class="line">the output <em>xAlarmClosed</em> is not activated ( = FALSE ).</div>
+<div class="line">In all other situations the output <em>xAlarmClosed</em> is activated ( = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">Now the control command for the opening is triggered and the running time is monitored for exceeding the maximum value <strong>tOpen</strong>.</div>
+<div class="line">If the correct feedback situation ( <em>xOpen</em> = TRUE and <em>xClosed</em> = FALSE ) is reached without exceeding the maximum value, the following occurs</div>
+<div class="line">the output <em>xAlarmOpen</em> is not activated ( = FALSE ).</div>
+<div class="line">In all other situations the output <em>xAlarmOpen</em> is activated ( = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">The result display for the <em>xTestOK</em> fire damper test is activated ( = test successful ) if neither of the two outputs <em>xAlarmOpen</em> or <em>xAlarmClosed</em> is active ( = TRUE ).</div>
+<div class="line"><br /></div>
+<div class="line">The test mode ends automatically as soon as the fire damper test is completed.</div>
+</div>
+</div>
+<div class="section" id="voraussetzungen">
+<h3>Prerequisites<a class="headerlink" href="#voraussetzungen" title="Permalink to this headline">¶</a></h3>
+<div class="topic">
+<p class="topic-title first">Prerequisite for using the function block FireDamperMot</p>
+<div class="line-block">
+<div class="line">For correct function, the use of the function block TimeRead with <em>xEn</em> = TRUE is mandatory.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisierung">
+<h2>Visualization<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="codesys">
+<h2>Codesys<a class="headerlink" href="#codesys" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>InOut:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="7%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Scope</th>
+<th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Initial</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="9">Input</td>
+<td>sTitle</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">Name of the fire damper</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sLine1</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">Text for line 1</p>
+</td>
+</tr>
+<tr class="row-even"><td>sLine2</td>
+<td>STRING</td>
+<td>&nbsp;</td>
+<td><p class="first last">Text for line 2</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xEn</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Requirement opening / closing of the fire damper ( FALSE = closing, TRUE = opening )</p>
+</td>
+</tr>
+<tr class="row-even"><td>byAU</td>
+<td>BYTE</td>
+<td>0</td>
+<td><p class="first last">Feedback of automatic mode ( 0 = automatic, &gt;0 = manual mode )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xOpen</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Feedback - Fire damper open ( FALSE = not open, TRUE = furnace )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xClosed</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Feedback - Fire damper closed ( FALSE = not closed, TRUE = closed )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xQuit</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Acknowledgement of alarm states ( FALSE &gt; TRUE )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xTestEx</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Requirement of the fire damper test ( FALSE &gt; TRUE )</p>
+</td>
+</tr>
+<tr class="row-odd"><td rowspan="9">Output</td>
+<td>xHB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Release opening / closing of fire damper after manual override (FALSE = closing, TRUE = opening)</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAB</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Release opening / closing of fire damper before manual override (FALSE = closing, TRUE = opening)</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarm</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enabling / disabling the alarm message for the feedback signals ( FALSE = Disable, TRUE = Enable )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xAlarmOpen</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enabling / disabling of the Alarm message for the feedback of the opening ( FALSE = disabling, TRUE = enabling )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xAlarmClosed</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Enabling / disabling of the alarm message for feedback of the closing ( FALSE = Disable, TRUE = Enable )</p>
+</td>
+</tr>
+<tr class="row-even"><td>xTestOK</td>
+<td>BOOL</td>
+<td>&nbsp;</td>
+<td><p class="first last">Result display for the fire damper test ( FALSE = test not successful, TRUE = test successful )</p>
+</td>
+</tr>
+<tr class="row-odd"><td>tLastOpen</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td><p class="first last">Duration of the last complete opening in s</p>
+</td>
+</tr>
+<tr class="row-even"><td>tLastClosed</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td><p class="first last">Duration of the last complete closure in s</p>
+</td>
+</tr>
+<tr class="row-odd"><td>tRunTime</td>
+<td>TIME</td>
+<td>&nbsp;</td>
+<td><p class="first last">Duration of current opening / closing in s</p>
+</td>
+</tr>
+<tr class="row-even"><td rowspan="5">Input</td>
+<td>tOpen</td>
+<td>TIME</td>
+<td>TIME#3m0s0ms</td>
+<td><p class="first last">Maximum time for opening the fire damper in s</p>
+</td>
+</tr>
+<tr class="row-odd"><td>tClose</td>
+<td>TIME</td>
+<td>TIME#25s0ms</td>
+<td><p class="first last">Maximum time duration for closing the fire damper in s</p>
+</td>
+</tr>
+<tr class="row-even"><td>eManModeB</td>
+<td><a class="reference internal" href="../../Enums/eManBin.html#emanbin"><span class="std std-ref">eMANBIN</span></a></td>
+<td>eMANBIN.Auto</td>
+<td><p class="first last">Operating mode of manual override for the <em>xHB</em> digital output</p>
+</td>
+</tr>
+<tr class="row-odd"><td>xRunTest</td>
+<td>BOOL</td>
+<td>FALSE</td>
+<td><p class="first last">Requirement of the fire damper test ( FALSE &gt; TRUE )</p>
+</td>
+</tr>
+<tr class="row-even"><td>_StopWatch</td>
+<td><a class="reference internal" href="../Time/StopWatch.html#stopwatch"><span class="std std-ref">StopWatch</span></a></td>
+<td>&nbsp;</td>
+<td><p class="first last">Access to the internal stop timer</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="OptStartHeat.html" class="btn btn-neutral float-right" title="OptStartHeat (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FastHeating.html" class="btn btn-neutral float-left" title="FastHeating (FB)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

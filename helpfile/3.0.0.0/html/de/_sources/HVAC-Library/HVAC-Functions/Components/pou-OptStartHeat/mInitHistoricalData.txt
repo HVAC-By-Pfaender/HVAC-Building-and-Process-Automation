@@ -1,0 +1,36 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Components.OptStartHeat.mInitHistoricalData`:
+
+
+.. _`OptStartHeat.mInitHistoricalData`:
+
+OptStartHeat.mInitHistoricalData (METH)
+---------------------------------------
+
+METHOD mInitHistoricalData : BOOL
+
+
+
+
+.. todo:: Please add documentation for method: OptStartHeat.mInitHistoricalData
+
+
+
+
+
+InOut:
+    +--------+---------------------+------+
+    | Scope  | Name                | Type |
+    +========+=====================+======+
+    | Return | mInitHistoricalData | BOOL |
+    +--------+---------------------+------+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

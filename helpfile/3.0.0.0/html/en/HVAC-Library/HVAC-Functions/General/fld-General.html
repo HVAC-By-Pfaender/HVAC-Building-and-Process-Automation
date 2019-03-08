@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>General &mdash; HVAC Building and Process Automation V3.0.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'3.0.0.0',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="CDate (FB)" href="CDate.html" />
+    <link rel="prev" title="hxChart.mEx (METH)" href="../Energy/pou-hxChart/mEx.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #289192" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> HVAC Building and Process Automation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../fld-HVAC-Library.html">HVAC Library</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../fld-HVAC-Functions.html">HVAC Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../Alarming/fld-Alarming.html">Alarming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../AutomationPortalConnector.html">AutomationPortalConnector (FB)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Binary/fld-Binary.html">Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Button/fld-Button.html">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Clock/fld-Clock.html">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Components/fld-Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Control/fld-Control.html">Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Counter/fld-Counter.html">Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Damping/fld-Damping.html">Damping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Energy/fld-Energy.html">Energy</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">General</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="CDate.html">CDate (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CTime.html">CTime (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CToD.html">CToD (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MacroInfo.html">MacroInfo (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ManInfo.html">ManInfo (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MuxString2BinFun.html">MuxString2BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MuxString4BinFun.html">MuxString4BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MuxString5BinFun.html">MuxString5BinFun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MuxString5Fun.html">MuxString5Fun (FUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OpModeSelect.html">OpModeSelect (FB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Redundance2.html">Redundance2 (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Monitoring/fld-Monitoring.html">Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Numeric/fld-Numeric.html">Numeric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Setpoint/fld-Setpoint.html">Setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../System-Info/fld-System-Info.html">System Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Time/fld-Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../checkLicense.html">checkLicense (FB)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Functions/fld-Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Enums/fld-Enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalConstants/fld-GlobalConstants.html">GlobalConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GlobalVariables/fld-GlobalVariables.html">GlobalVariables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">HVAC Building and Process Automation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../fld-HVAC-Library.html">HVAC Library</a> &raquo;</li>
+        
+          <li><a href="../fld-HVAC-Functions.html">HVAC Functions</a> &raquo;</li>
+        
+      <li>General</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/HVAC-Library/HVAC-Functions/General/fld-General.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="general">
+<span id="id1"></span><span id="fld-hvac-library-fld-hvac-functions-fld-general"></span><h1>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CDate.html">CDate (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CDate.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CDate.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CDate.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CDate.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CDate.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CDate.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CDate.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CDate.html#allgemeines">General</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CDate.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CDate.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CTime.html">CTime (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CTime.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTime.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTime.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CTime.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CTime.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CTime.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CTime.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CTime.html#allgemeines">General</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CTime.html#visualisierung">Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CTime.html#id3">Portrayal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CTime.html#schnittstellen-visu-element">Interfaces Visu-Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CTime.html#schnittstellen-visu-element-ctime-single-input">Interfaces Visu element CTime_single_input</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CTime.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CToD.html">CToD (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CToD.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CToD.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CToD.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CToD.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CToD.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CToD.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CToD.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CToD.html#allgemeines">General</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CToD.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CToD.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MacroInfo.html">MacroInfo (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MacroInfo.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MacroInfo.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MacroInfo.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#ein-und-ausgange">Inputs and outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MacroInfo.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#eingang-sversion">Input <em>sVersion</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#ein-und-ausgang-xalarm">Input and output <em>xAlarm</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#ein-und-ausgang-xauto">Input and output <em>xAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#ausgang-stitle">Output <em>sTitle</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#ausgang-sline1">Output <em>sLine1</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#ausgang-sline2">Output <em>sLine2</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#ausgang-sinstancename">Output <em>sInstanceName</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MacroInfo.html#ausgang-sinstancepath">Output <em>sInstancePath</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MacroInfo.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MacroInfo.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ManInfo.html">ManInfo (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ManInfo.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ManInfo.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ManInfo.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#ausgange">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ManInfo.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#rucksetzeingang-xresetauto">Reset input <em>xResetAuto</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#statusanzeige-handubersteuerungen-xmanactive"><em>xManActive</em> status display - manual overrides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#anzahl-der-binaren-handubersteuerungen-imanbincounter"><em>iManBinCounter</em> number of binary manual overrides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#anzahl-der-numerischen-handubersteuerungen-imannumcounter"><em>iManNumCounter</em> number of numeric manual overrides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#anzahl-der-handubersteuerungen-an-den-betriebsartenwahlschaltern-imanopcounter">Number of manual overrides on the mode selector switches <em>iManOpCounter</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#anzahl-der-funktionsblocke-im-handbetrieb-imanfbcounter"><em>iManFbCounter</em> number of function blocks in manual mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#anzahl-der-deaktivierten-funktionsfreigaben-iencontrolcounter"><em>iEnControlCounter</em> number of deactivated function enables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#gesamtanzahl-der-handubersteuerungen-imancounter"><em>iManCounter</em> total number of manual overrides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ManInfo.html#udimancounter"><em>udiManCounter</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ManInfo.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ManInfo.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MuxString2BinFun.html">MuxString2BinFun (FUN)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MuxString2BinFun.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MuxString2BinFun.html#funktionsbeschreibung">Functional Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MuxString2BinFun.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MuxString4BinFun.html">MuxString4BinFun (FUN)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MuxString4BinFun.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MuxString4BinFun.html#funktionsbeschreibung">Functional Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MuxString4BinFun.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MuxString5BinFun.html">MuxString5BinFun (FUN)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MuxString5BinFun.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MuxString5BinFun.html#funktionsbeschreibung">Functional Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MuxString5BinFun.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MuxString5Fun.html">MuxString5Fun (FUN)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MuxString5Fun.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MuxString5Fun.html#funktionsbeschreibung">Functional Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MuxString5Fun.html#codesys">Codesys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OpModeSelect.html">OpModeSelect (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OpModeSelect.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OpModeSelect.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OpModeSelect.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="OpModeSelect.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#zustandsvariable-xin">Variable <em>xIn</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#ausgangsvariable-xactive">Output variable xActive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#rucksetzung-in-den-automatikbetrieb">Reset to automatic mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#freigabe-sperrung-der-umschaltung">Enabling/disabling switching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#umschaltverzogerung-ttoggletime">Switching delay <strong>tToggleTime</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#betriebsarten">Operating modes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="OpModeSelect.html#visualisierung">Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#id5">Portrayal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpModeSelect.html#schnittstellen-visu-element-opmodeselect-button">Interfaces Visu element OpModeSelect_Button</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="OpModeSelect.html#codesys">Codesys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pou-OpModeSelect/mSetAuto.html">OpModeSelect.mSetAuto (METH)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pou-OpModeSelect/mSetAuto.html#kurzbeschreibung-methode-msetauto">Kurzbeschreibung Methode (mSetAuto)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Redundance2.html">Redundance2 (FB)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Redundance2.html#kurzbeschreibung">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Redundance2.html#darstellung">Portrayal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Redundance2.html#schnittstellen">Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#eingange">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#ausgange">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#sollwerte-parameter">Setpoints / Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Redundance2.html#funktionsbeschreibung">Functional Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#allgemeines">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#anforderungen-xenone-und-xentwo"><em>xEnOne</em> and <em>xEnTwo</em> requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#ausgang-storung-xerr">Fault output <em>xErr</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#ausgang-icurrentsequence">Output <em>iCurrentSequence</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#sollwert-parameter-xconoperatinghours">Setpoint / Parameter <strong>xConOperatingHours</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#sollwert-parameter-xenfb">Setpoint / Parameter <strong>xEnFb</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#sollwert-parameter-wtolerance">Setpoint / Parameter <strong>wTolerance</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#sollwert-parameter-emoderedundance">Setpoint / parameter <strong>eModeRedundance</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#bestimmung-des-fuhrungs-und-des-folgegerats">Determination of the lead and follower device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Redundance2.html#gerateausgange-xcmd1-und-xcmd2">Device outputs xCmd1 and xCmd2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Redundance2.html#visualisierung">Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Redundance2.html#codesys">Codesys</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CDate.html" class="btn btn-neutral float-right" title="CDate (FB)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Energy/pou-hxChart/mEx.html" class="btn btn-neutral float-left" title="hxChart.mEx (METH)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, HVAC by Pfaender
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

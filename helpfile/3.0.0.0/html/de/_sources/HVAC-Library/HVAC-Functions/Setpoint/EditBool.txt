@@ -1,0 +1,115 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Setpoint.EditBool`:
+
+
+.. index::
+   single: EditBool
+
+.. _`EditBool`:
+
+EditBool (FB)
+-------------
+
+FUNCTION_BLOCK EditBool
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Eingabe eines binären Wertes
+     |
+     | Typische Anwendung: Einschaltung einer Option
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/EditBool_FB.png
+
+**************
+Schnittstellen
+**************
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *xOut*
+      - BOOL
+      -
+      -
+      - Binärer Ausgabewert
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **xSetPoint**
+      - BOOL
+      -
+      - FALSE
+      - Binärer Eingabewert
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Übergabe eines binären Eingabewerts **xSetPoint** und die direkte Übertragung zum
+  binären Ausgabewert *xOut*.
+
+.. topic:: Verhalten bei Spannungsausfall
+
+    | Der binäre Eingabewert **xSetPoint** wird spannungsausfallsicher gespeichert und automatisch wiederhergestellt.
+    |
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+-----------+------+---------+---------------------+
+    | Scope  | Name      | Type | Initial | Comment             |
+    +========+===========+======+=========+=====================+
+    | Input  | xSetPoint | BOOL | FALSE   | Binärer Eingabewert |
+    +--------+-----------+------+---------+---------------------+
+    | Output | xOut      | BOOL |         | Binärer Ausgabewert |
+    +--------+-----------+------+---------+---------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

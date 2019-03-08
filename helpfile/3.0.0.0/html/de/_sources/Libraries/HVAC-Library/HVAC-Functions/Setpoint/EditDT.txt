@@ -1,0 +1,115 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of fb-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Setpoint.EditDT`:
+
+
+.. index::
+   single: EditDT
+
+.. _`EditDT`:
+
+EditDT (FB)
+-----------
+
+FUNCTION_BLOCK EditDT
+
+
+
+
+****************
+Kurzbeschreibung
+****************
+
+     | Eingabe eines Datums und einer Uhrzeit im Format DATE_AND_TIME ( dt#2017-11-21-14:36:00 )
+     |
+     | Typische Anwendung: Festlegung eines Schaltzeitpunkts
+
+***********
+Darstellung
+***********
+  .. image:: /../DocuBilder/EditDT_FB.png
+
+**************
+Schnittstellen
+**************
+Ausgänge
+========
+ .. list-table::
+    :name: Ausgänge
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - *dtOut*
+      - DATE_AND_TIME
+      -
+      -
+      - Ausgabewert im Format DATE_AND_TIME
+
+Sollwerte / Parameter
+=====================
+ .. list-table::
+    :name: Sollwerte / Parameter
+    :widths: 300 150 150 300 900
+    :header-rows: 1
+
+    * - Name
+      - Datentyp
+      - Wertebereich
+      - Initialwert
+      - Funktion
+    * - **dtSetPoint**
+      - DATE_AND_TIME
+      -
+      -
+      - Eingabewert im Format DATE_AND_TIME
+
+*********************
+Funktionsbeschreibung
+*********************
+Allgemeines
+===========
+| Dieser Funktionsbaustein dient zur Übergabe eines Eingabewerts im Format DATE_AND_TIME **dtSetPoint** und die direkte Übertragung zum
+  Ausgabewert im Format DATE_AND_TIME *dtOut*.
+
+.. topic:: Verhalten bei Spannungsausfall
+
+    | Der Eingabewert im Format DATE_AND_TIME **dtSetPoint** wird spannungsausfallsicher gespeichert und automatisch wiederhergestellt.
+    |
+
+**************
+Visualisierung
+**************
+|
+|
+|
+
+*******
+Codesys
+*******
+
+
+
+
+
+InOut:
+    +--------+------------+------+-------------------------------------+
+    | Scope  | Name       | Type | Comment                             |
+    +========+============+======+=====================================+
+    | Input  | dtSetPoint | DT   | Eingabewert im Format DATE_AND_TIME |
+    +--------+------------+------+-------------------------------------+
+    | Output | dtOut      | DT   | Ausgabewert im Format DATE_AND_TIME |
+    +--------+------------+------+-------------------------------------+
+
+
+.. last line of fb-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

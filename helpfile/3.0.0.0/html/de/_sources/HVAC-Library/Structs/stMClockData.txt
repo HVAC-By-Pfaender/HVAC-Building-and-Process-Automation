@@ -1,0 +1,54 @@
+.. first line of object.rst template
+.. first line of dut-object.rst template
+.. first line of struct-object.rst template
+.. _`.fld-HVAC Library.fld-Structs.stMClockData`:
+
+
+.. Index::
+   single: stMClockData
+
+.. _`stMClockData`:
+
+stMClockData (STRUCT)
+---------------------
+
+TYPE stMClockData : STRUCT
+
+
+
+.. todo:: Please add documentation for struct: stMClockData
+
+
+
+
+
+InOut:
+    +----------------+------------------------------+
+    | Name           | Type                         |
+    +================+==============================+
+    | sName          | STRING                       |
+    +----------------+------------------------------+
+    | arClock7d1Ch   | ARRAY [1..32] OF BOOL        |
+    +----------------+------------------------------+
+    | arClocksTON    | ARRAY [1..32] OF TIME_OF_DAY |
+    +----------------+------------------------------+
+    | arClocksTOF    | ARRAY [1..32] OF TIME_OF_DAY |
+    +----------------+------------------------------+
+    | xHoliday       | BOOL                         |
+    +----------------+------------------------------+
+    | xPublicHoliday | BOOL                         |
+    +----------------+------------------------------+
+    | xSwitchTimeS   | BOOL                         |
+    +----------------+------------------------------+
+    | xAllON         | BOOL                         |
+    +----------------+------------------------------+
+    | xAllOFF        | BOOL                         |
+    +----------------+------------------------------+
+
+
+.. last line of struct-object.rst template
+.. last line of dut-object.rst template
+.. last line of object.rst template
+
+
+

@@ -1,0 +1,17 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Counter`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Counter`:
+
+Counter
+=======
+
+.. todo:: Please add documentation for folder: Counter
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Counter/ImpulseCounter
+   /HVAC-Library/HVAC-Functions/Counter/OperatingHours
+   /HVAC-Library/HVAC-Functions/Counter/ServiceCounter
+
+.. last line of folder.rst template

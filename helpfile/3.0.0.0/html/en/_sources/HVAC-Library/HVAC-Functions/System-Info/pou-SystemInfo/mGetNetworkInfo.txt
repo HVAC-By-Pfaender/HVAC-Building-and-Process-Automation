@@ -1,0 +1,31 @@
+.. first line of object.rst template
+.. first line of pou-object.rst template
+.. first line of meth-object.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-System Info.SystemInfo.mGetNetworkInfo`:
+
+
+.. _`SystemInfo.mGetNetworkInfo`:
+
+SystemInfo.mGetNetworkInfo (METH)
+---------------------------------
+
+METHOD mGetNetworkInfo
+
+
+
+
+Beim Aufruf der Mehode, werden die Ausgänge für die Netzwerkinformationen aktualisiert.
+Die Methode wird außerdem auch von der SystemInfo Instanz aufgerufen, sobald der Eingang "xGetNetworkInfo" getriggert wird.
+
+
+
+
+
+
+
+.. last line of meth-object.rst template
+.. last line of pou-object.rst template
+.. last line of object.rst template
+
+
+

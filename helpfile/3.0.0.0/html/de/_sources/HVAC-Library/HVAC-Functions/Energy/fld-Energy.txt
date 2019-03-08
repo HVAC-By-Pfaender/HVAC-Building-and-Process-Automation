@@ -1,0 +1,15 @@
+.. first line of folder.rst template
+.. _`.fld-HVAC Library.fld-HVAC Functions.fld-Energy`:
+
+.. _`fld-HVAC Library.fld-HVAC Functions.fld-Energy`:
+
+Energy
+======
+
+.. todo:: Please add documentation for folder: Energy
+
+.. toctree::
+
+   /HVAC-Library/HVAC-Functions/Energy/hxChart
+
+.. last line of folder.rst template

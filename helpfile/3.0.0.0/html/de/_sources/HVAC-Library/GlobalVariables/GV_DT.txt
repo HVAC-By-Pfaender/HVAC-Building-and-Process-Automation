@@ -1,0 +1,100 @@
+.. first line of object.rst template
+.. first line of gvl-object.rst template
+.. _`.fld-HVAC Library.fld-GlobalVariables.GV_DT`:
+
+
+.. _`GV_DT`:
+
+GV_DT (GVL)
+-----------
+
+Var                             : Datentyp                  //
+
+
+
+
+InOut:
+    +-------------------------------+----------+---------------------------+
+    | Name                          | Type     | Comment                   |
+    +===============================+==========+===========================+
+    | .. _`GV_DT.dtDateAndTime`:    | DT       | Datum und Zeit            |
+    |                               |          |                           |
+    | dtDateAndTime                 |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.udiTimeUTS_SS`:    | UDINT    | Unix Zeitstempel Sekunden |
+    |                               |          |                           |
+    | udiTimeUTS_SS                 |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.udiTimeUTS_MM`:    | UDINT    | Unix Zeitstempel Minuten  |
+    |                               |          |                           |
+    | udiTimeUTS_MM                 |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.udiTimeUTS_HH`:    | UDINT    | Unix Zeitstempel Stunden  |
+    |                               |          |                           |
+    | udiTimeUTS_HH                 |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.udiTimeUTS_DD`:    | UDINT    | Unix Zeitstempel Tage     |
+    |                               |          |                           |
+    | udiTimeUTS_DD                 |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.todTime`:          | TOD      | Zeit                      |
+    |                               |          |                           |
+    | todTime                       |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.udiTime_HHMMSS`:   | UDINT    | Zeit im Format HHMMSS     |
+    |                               |          |                           |
+    | udiTime_HHMMSS                |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.udiTime_HHMM`:     | UDINT    | Zeit im Format HHMM       |
+    |                               |          |                           |
+    | udiTime_HHMM                  |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.datDate`:          | DATE     | Datum                     |
+    |                               |          |                           |
+    | datDate                       |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.udiDate_DDMM`:     | UDINT    | Datum im Format DDMM      |
+    |                               |          |                           |
+    | udiDate_DDMM                  |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.udiDate_DDMMYYYY`: | UDINT    | Datum im Format DDMMYYYY  |
+    |                               |          |                           |
+    | udiDate_DDMMYYYY              |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.uintYear`:         | UINT     | Jahreszahl                |
+    |                               |          |                           |
+    | uintYear                      |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.uintMonth`:        | UINT     | Monat aus Jahr            |
+    |                               |          |                           |
+    | uintMonth                     |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.uiDay`:            | UINT     | Tag des Monats            |
+    |                               |          |                           |
+    | uiDay                         |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.eDofW`:            | |ioeDoW| | Tag der Woche             |
+    |                               |          |                           |
+    | eDofW                         |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.uiHour`:           | UINT     | Stunde                    |
+    |                               |          |                           |
+    | uiHour                        |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.uiMinute`:         | UINT     | Minute                    |
+    |                               |          |                           |
+    | uiMinute                      |          |                           |
+    +-------------------------------+----------+---------------------------+
+    | .. _`GV_DT.uiSecond`:         | UINT     | Sekunde                   |
+    |                               |          |                           |
+    | uiSecond                      |          |                           |
+    +-------------------------------+----------+---------------------------+
+
+.. |ioeDoW| replace:: :ref:`eDoW<eDoW>`
+
+
+
+.. last line of gvl-object.rst template
+.. last line of object.rst template
+
+
