@@ -1,3 +1,12 @@
+### Information
+
+> [!IMPORTANT] 
+> **HVAC by Pfänder** is rebranded to **HVAC by powerIO**.  
+> - All ressources are moved to https://github.com/powerIO-GmbH.  
+> - To find more information about our HVAC solutions checkout the website https://powerio.com.  
+> - For technical ressources visit: https://support.powerio.com.
+
+
 # HVAC Building & Process Automation SL
 
 We offer a complete and immediately ready to use software extension for the cost-free CODESYS development environment. And never having heard of CODESYS is not a reason for you to stop here. Our product contains function modules and macros which are specially developed for the sector and which can be used efficiently and with little learning effort.
